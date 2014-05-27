@@ -16,23 +16,30 @@ As far as we know, we have three flavours of neutrinos and their anti particles 
 .. math::
    \braket{\nu_{l'}}{\nu_l} &= \delta_{l'l} \\
    \braket{\bar\nu_{l'}}{\bar\nu_l} &= \delta_{l'l} \\
-   \braket{\bar\nu_{l'}}{\nu_l} &= 0
+   \braket{\bar\nu_{l'}}{\nu_l} &= 0.
+
+The interesting thing about neutrinos is that it oscillates.
 
 
-Contents:
+Table of Contents:
 
 .. toctree::
    :maxdepth: 2
 
-
+   oscillations.rst
 
 
 Support
 =========
 
+
+
 .. raw:: html
 
    <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+
+
+
 
 
 Footnote
