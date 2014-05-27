@@ -32,6 +32,22 @@ extensions = [
     'sphinx.ext.pngmath',
 ]
 
+
+latex_preamble = r"""
+\usepackage{mathrsfs}
+
+
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ket}[1]{\left| #1\right\rangle}
+\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+\newcommand{\avg}[1]{\left< #1 \right>}
+
+"""
+
+pngmath_latex_preamble = latex_preamble
+latex_elements = {"preamble": latex_preamble}
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
