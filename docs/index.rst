@@ -30,9 +30,12 @@ Contents:
 Support
 =========
 
-<script data-gittip-username="emptymalei"
-        data-gittip-widget="button"
-        src="//gttp.co/v1.js"></script>
+.. raw:: html
+   <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+
+
+Footnote
+=========
 
 
 .. [1] `Cowan–Reines neutrino experiment <https://en.wikipedia.org/wiki/Cowan%E2%80%93Reines_neutrino_experiment>`_
