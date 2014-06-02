@@ -42,8 +42,7 @@ The survival probability is
 
 
 
-.. note::
-   What does wave packet in neutrino oscillation mean?
+.. note:: What does wave packet in neutrino oscillation mean?
 
 
 
