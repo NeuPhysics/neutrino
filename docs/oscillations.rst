@@ -43,9 +43,8 @@ The survival probability is
 
 
 .. admonition:: Question
-   :class: question
+   :class: warning
 
-   Big warning text is red.
    What does wave packet in neutrino oscillation mean?
 
 
