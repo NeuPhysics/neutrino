@@ -1,7 +1,7 @@
 Oscillations
 ==============
 
-.. role:: question
+
 
 Evidence of Oscillations
 ---------------------------
@@ -42,7 +42,7 @@ The survival probability is
 
 
 
-.. question::
+.. note::
    What does wave packet in neutrino oscillation mean?
 
 
