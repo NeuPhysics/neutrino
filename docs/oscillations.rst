@@ -67,12 +67,14 @@ Q&A
 
    A Gaussian wave packet would spread or shrink. The key of this spreading or shrinking is the dispersion relation.
 
-   For non-relativistic Gaussian wave packet :math:`\psi(x,t) = e^{-\alpha(k-k_0)^2}` in momentum basis with dispersion relation :math:`\hbar\omega = \frac{\hbar^2 k^2}{2m}`, the expansion of packet is
+   For **non-relativistic** Gaussian wave packet :math:`\psi(x,t) = e^{-\alpha(k-k_0)^2}` in momentum basis with dispersion relation :math:`\hbar\omega = \frac{\hbar^2 k^2}{2m}`, the expansion of packet is
 
    .. math::
       \Delta x= \sqrt{\alpha^2+\left(\frac{\hbar t}{2m}\right)^2} .
 
    Obviously, the RMS width spreads according to group velocity :math:`v_g = \hbar _0/m`.
+
+   **However, the situation could be different for a relativistic neutrino.**
 
 
 
