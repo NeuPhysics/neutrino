@@ -44,6 +44,34 @@ The survival probability is
 Q&A
 -----
 
+
+.. admonition:: Question
+   :class: warning
+
+   What does the mixing angle mean exactly both in vacuum and matter environment?
+
+
+.. admonition:: Answer
+   :class: note
+
+   There are several ways to illustrate this.
+
+   1. **Rotation angle** in flavour space. For simplicity I use a two component neutrino model.
+
+   .. math::
+      \ket{\nu_1} &= \cos\theta \ket{\nu_e} + \sin \theta \ket{\nu_\mu} \\
+      \ket{\nu_2} & = -\sin\theta \ket{\nu_e} + \cos\theta \ket{\nu_\mu}
+
+   This is a rotation in a plane with a generator :math:`e^{-i\hat \theta}`. **(Make a figure for this.) + (Write down the 3 components model.)**
+
+   2. **Oscillation probability** involves this angle too. It is a suppression of the oscillation probability.
+
+   3. From the view of **quantum states**, this angle determines how the flavour states are composed with mass eigenstates, i.e., the fraction or probability of each mass eiginstates in a flavour state.
+
+
+
+
+
 .. admonition:: Question
    :class: warning
 
