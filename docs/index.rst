@@ -27,6 +27,8 @@ Table of Contents:
    :maxdepth: 2
 
    oscillations.rst
+   mass.rst
+   ref.rst
 
 
 
