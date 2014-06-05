@@ -28,9 +28,9 @@ Results of Experiments
    .. math::
       \lvert\Delta m_{21}^2 \rvert \ll \lvert \Delta m_{31(32)}^2 \rvert.
 
-   By some convention, people would use numbers so that :math:`\Delta m_{21}^2\gt 0` or :math:`m_1\lt m_2`.
+   By some convention, people would use numbers so that :math:`\Delta m_{21}^2 > 0` or :math:`m_1 < m_2`.
 
-   LOL
+
 
 
 
