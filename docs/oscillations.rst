@@ -11,7 +11,27 @@ A lot of experiments have been done to research on neutrino oscillations. In sum
 
 1. Solar neutrinos,
 2. Reactor and accelerator neutrinos,
-3. Atmosphere neutrinos.
+3. Atmospheric neutrinos.
+
+
+Results of Experiments
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. Difference between masses from data
+
+   .. math::
+      \frac{\lvert \Delta m_{21}^2 \rvert}{\lvert \Delta m_{31(32)}^2 \rvert} \approx 0.03 .
+
+   We also have
+
+   .. math::
+      \lvert\Delta m_{21}^2 \rvert \ll \lvert \Delta m_{31(32)}^2 \rvert.
+
+   By some convention, people would use numbers so that :math:`\Delta m_{21}^2\gt 0` or :math:`m_1\lt m_2`.
+
+   LOL
+
 
 
 
@@ -41,8 +61,26 @@ The survival probability is
    P(\nu_l\to\nu_{l'}) = \left\vert \braket{\nu_{l'} }{\nu_l (t)}  \right\vert^2 .
 
 
+
+
+
+
 Q&A
 -----
+
+
+.. admonition:: Question
+   :class: warning
+
+   What are some of the conventions used in liturature?
+
+.. admonition:: Answer
+   :class: note
+
+   1. :math:`\Delta m^2_{ij}=m_i^2-m_j^2`.
+   2. Flavours of left hand neutrinos are mixing of mass eigen states, :math:`\nu_{lL}=\sum_{j=1}^3 U_{lj}\nu_{jL}(x)`.
+
+
 
 
 .. admonition:: Question
@@ -121,6 +159,17 @@ Q&A
 
 
 
+Determine :math:`\vert\Delta m^2\vert` and :math:`\theta`
+----------------------------------------------------------------------
+
+Atmospheric Results
+~~~~~~~~~~~~~~~~~~~~
+
+Accelerator Results
+~~~~~~~~~~~~~~~~~~~~~
+
+Reactor Results
+~~~~~~~~~~~~~~~~~~~~~
 
 
 
