@@ -82,6 +82,20 @@ Q&A
 
 
 
+.. admonition:: Question
+   :class: warning
+
+   Why can we use just quantum mechanics on relativistic neutrinos? In principle one should use quantum field theory or at least relativistic quantum mechanics?
+
+
+.. admonition:: Answer
+   :class: note
+
+
+
+
+
+
 
 .. admonition:: Question
    :class: warning

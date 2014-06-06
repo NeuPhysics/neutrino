@@ -18,3 +18,5 @@ One of the questions we have about the masses of neutrinos is **the generation o
 
 See-saw Mechanism
 ------------------
+
+RH neutrinos term in Lagrangian breaks the symmetry.
