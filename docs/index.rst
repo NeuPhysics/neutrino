@@ -28,6 +28,7 @@ Table of Contents:
 
    mass.rst
    oscillations.rst
+   propagation.rst
    ref.rst
 
 
