@@ -53,12 +53,14 @@ where :math:`U^*_{\alpha j}` is the element of neutrino mixing matrix.
 In ultra relativistic case, we can simply find out the time evolution, which is equivalent to distance evolution,
 
 .. math::
-   \ket{\nu_\alpha(x)} = \sum_j U^*_{\alpha j} G_j(t,t_0) \ket{\nu_j;\tilde p_j}.
+   \ket{\psi(t)} = \sum_j U^*_{\alpha j} G_j(t,t_0) \ket{\nu_j;\tilde p_j}.
 
 The survival probability is
 
 .. math::
-   P(\nu_l\to\nu_{l'}) = \left\vert \braket{\nu_{l'} }{\nu_l (t)}  \right\vert^2 .
+   P(\nu_l\to\nu_{l'}) = \lvert \braket{\nu_{l'} }{\psi (t)}  \rvert^2 .
+
+We can see clearly that the survival probability depends on some parameters.
 
 
 

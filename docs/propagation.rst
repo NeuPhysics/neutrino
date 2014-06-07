@@ -1,5 +1,5 @@
-How Do Neutrino Propagate
-==========================
+How Do Neutrinos Propagate
+===========================
 
 
 
