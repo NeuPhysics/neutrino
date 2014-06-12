@@ -20,6 +20,42 @@ What I can do is to check the following questions.
 3. What if the packet is a combination of Gaussian packets?
 
 
+Wave Packet Treatment
+-----------------------
+
+
+From uncertainty principle we know it's not good enough to treat neutrinos as mono-momentum particles because our measurement measures the momentum with an accuracy and the position of the neutrinos are not completely determined. We have both momentum width and position width which looks a lot like a wave packet.
+
+
+The caveats are
+
+1. What are the energies, momenta, velocities of neutrinos and the average of them?
+2. How to find the amplitude of wave packet? What's the geometry of the wave packet?
+3. The time evolution should reduce to the single particle formalism in some limits.
+
+In principle we need all the information about the generation of neutrinos. However, we can use some unknown paramters to derive the formalism of the wave packets then investigate the unknown paramters.
+
+A wave packet is constructed with a distribution of amplitude at each momentum and position and time.
+
+.. note::
+   A wave packet in wave dynamics is bunch of plane waves that makes a localized packet. For example one of the general form of wave packets is
+
+   .. math::
+      u(x,t) = \frac{1}{\sqrt{2\pi}} \int^{\,\infty}_{-\infty} A(k) ~ e^{i(kx-\omega(k)t)} \,dk .
+
+   Basically, one needs a lot of frequencies/wavenumbers/momenta to construct some localized waves.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
