@@ -55,7 +55,7 @@ Some Questions
 Some questions should be answered in this formalism.
 
 1. What are :math:`\nu_f` and :math:`\nu_m` in this formalism?
-2.
+
 
 
 .. admonition:: Question
@@ -75,6 +75,19 @@ Some questions should be answered in this formalism.
    In other words, as long as we can measure the wave packet in a sense that the position difference is large enough, the wave packet still.
 
 
+.. admonition:: Question
+   :class: warning
+
+   What does decoherence mean then?
+
+.. admonition:: Answer
+   :class: note
+
+   An first idea can be that the wave packets of different mass eigen states are travelling at different speed thus they get very far apart after some travelling time.
+
+   However we should be careful with the wave packet formalism. This treatment is infact an effective treatment in my understanding, to reconcile the fact that the neutrinos are actually not at a definite position and momentum state due to quantum uncertainty principle.
+
+   So any discussion about the decoherence of the wave packets should make clear of the measurements including the production procedure.
 
 
 
