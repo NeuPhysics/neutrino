@@ -49,8 +49,30 @@ A wave packet is constructed with a distribution of amplitude at each momentum a
 As an application of this general wave packet, we can write down the wave packet of neutrinos using an assumed initial distribution over all possible momenta. **The problem is that we have no idea what the amplitude should be.**
 
 
+Some Questions
+~~~~~~~~~~~~~~~
+
+Some questions should be answered in this formalism.
+
+1. What are :math:`\nu_f` and :math:`\nu_m` in this formalism?
+2.
 
 
+.. admonition:: Question
+   :class: warning
+
+   What is :math:`\nu_f`, i.e., the flavour state, in the formalism of wave packet?
+
+
+.. admonition:: Answer
+   :class: note
+
+   In the view of math, the flavour state is a superposition of all mass states,
+
+   .. math::
+      \psi(x,t) = \int_{lower}^{upper} dp_\nu' \sum_m U_{fm} a(p_\pi^m(p_\nu')) \nu_m e^{ip_\nu'x} e^{-i E_m(p_\nu')t}
+
+   In other words, 
 
 
 
