@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     45380,       1224]
-NotebookOptionsPosition[     42442,       1123]
-NotebookOutlinePosition[     42828,       1140]
-CellTagsIndexPosition[     42785,       1137]
+NotebookDataLength[     45647,       1231]
+NotebookOptionsPosition[     42670,       1129]
+NotebookOutlinePosition[     43056,       1146]
+CellTagsIndexPosition[     43013,       1143]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1117,12 +1117,18 @@ space.",
  FontColor->RGBColor[1, 0.5, 0]]], "Text",
  CellChangeTimes->{{3.611604060033432*^9, 3.611604099295821*^9}, {
   3.6116041750332623`*^9, 3.611604231913994*^9}, {3.611604427245646*^9, 
-  3.611604454763256*^9}}]
+  3.611604454763256*^9}}],
+
+Cell["\<\
+The thing I could do is to calculate the correlation function of the two \
+gaussian wave packets. http://arxiv.org/abs/quant-ph/0408050\
+\>", "Text",
+ CellChangeTimes->{{3.611608735019844*^9, 3.611608773231049*^9}}]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1280, 756},
-WindowMargins->{{-1, Automatic}, {Automatic, 0}},
+WindowMargins->{{-6, Automatic}, {Automatic, 0}},
 Magnification:>1.5 Inherited,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -1223,7 +1229,8 @@ Cell[41394, 1095, 116, 1, 45, "Output"]
 Cell[41525, 1099, 297, 5, 76, "Text"],
 Cell[CellGroupData[{
 Cell[41847, 1108, 97, 1, 52, "Subsubsection"],
-Cell[41947, 1111, 467, 8, 105, "Text"]
+Cell[41947, 1111, 467, 8, 105, "Text"],
+Cell[42417, 1121, 225, 4, 76, "Text"]
 }, Open  ]]
 }, Open  ]]
 }
