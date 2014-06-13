@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     39292,       1018]
-NotebookOptionsPosition[     37131,        942]
-NotebookOutlinePosition[     37516,        959]
-CellTagsIndexPosition[     37473,        956]
+NotebookDataLength[     45380,       1224]
+NotebookOptionsPosition[     42442,       1123]
+NotebookOutlinePosition[     42828,       1140]
+CellTagsIndexPosition[     42785,       1137]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -938,10 +938,191 @@ O0SBEr/KcWY1gcRzVcr1DQXa37Wd/iv3/wDjmFwc
  CellChangeTimes->{3.6113313098650618`*^9}]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Neutrinos with the same velocity\
+\>", "Section",
+ CellChangeTimes->{{3.6116034167840433`*^9, 3.611603428459482*^9}}],
+
+Cell["\<\
+Some momentum states can have the same velocity even they are form different \
+wave packets.\
+\>", "Text",
+ CellChangeTimes->{{3.611603433807563*^9, 3.611603491299225*^9}}],
+
+Cell[TextData[{
+ "The velocity for neutrinos can be calculated using this equation: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Gamma]", " ", "m", " ", "v"}], " ", "=", " ", "p"}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.6116034965323753`*^9, 3.611603532435053*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         RowBox[{"v", "^", "2"}]}]]], "m", " ", "v"}], " ", "==", " ", "p"}], 
+    ",", "v"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{"{", 
+   RowBox[{"v", "/.", "%"}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.611603536947815*^9, 3.611603617804793*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     RowBox[{"-", 
+      FractionBox["p", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox["m", "2"], "+", 
+         SuperscriptBox["p", "2"]}]]]}], 
+     FractionBox["p", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["m", "2"], "+", 
+        SuperscriptBox["p", "2"]}]]]}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.611603565364111*^9, 3.611603618254807*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Assume we have neutrino momentum much larger then its mass. ",
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["p", 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox["m", "2"], "+", 
+      SuperscriptBox["p", "2"]}]]], "=", 
+   RowBox[{"1", "/", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{
+       RowBox[{"m", "^", "2"}], "/", 
+       RowBox[{"p", "^", "2"}]}], "+", "1"}]]}]}]],
+  CellChangeTimes->{{3.611603565364111*^9, 3.611603618254807*^9}}],
+ ". This obviously means the mass doesn\[CloseCurlyQuote]t make any \
+difference. Using Taylor series, we have"
+}], "Text",
+ CellChangeTimes->{{3.611603676305519*^9, 3.61160374786244*^9}, {
+  3.611603828370138*^9, 3.611603855530286*^9}, {3.611603891673161*^9, 
+  3.611603904559516*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", "1"}]]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.611603859895585*^9, 3.611603886520474*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "2"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "4"],
+    SeriesData[$CellContext`x, 0, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 2]}, 0, 4, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.611603871707614*^9, 3.611603887130097*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The velocity of neutrinos are, to the first order, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "-", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     FractionBox[
+      SuperscriptBox["m", "2"], 
+      SuperscriptBox["p", "2"]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.611603640018977*^9, 3.6116036720102673`*^9}, {
+  3.6116037040565033`*^9, 3.611603706672728*^9}, {3.6116039812121477`*^9, 
+  3.611604012617353*^9}}],
+
+Cell["\<\
+Numerically, if we have the heaviest mass eigenstate as m=0.3eV, the largest \
+difference between mass eigenstate for 20MeV neutrinos is\
+\>", "Text",
+ CellChangeTimes->{{3.611607221769639*^9, 3.6116072924536543`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "/", "2"}], " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", "0.2", ")"}], "^", "2"}], "/", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"20", " ", 
+      RowBox[{"10", "^", "6"}]}], ")"}], "^", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.611607295378528*^9, 3.61160733007976*^9}}],
+
+Cell[BoxData["5.000000000000001`*^-17"], "Output",
+ CellChangeTimes->{{3.611607325275086*^9, 3.611607330491969*^9}}]
+}, Open  ]],
+
+Cell["\<\
+This is in unit of speed of light. Then I am going to calculate the value, \
+which is about 10^{-8}m/s~10^7 fm/s. With the impression of the width of the \
+wave packet about 10fm, this is a very large speed.\
+\>", "Text",
+ CellChangeTimes->{{3.611607809737606*^9, 3.611607902136327*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Todo", "Subsubsection",
+ CellChangeTimes->{{3.611604646301632*^9, 3.6116046474915247`*^9}}],
+
+Cell[TextData[StyleBox["(It\[CloseCurlyQuote]s really good if I can show how \
+much two wave packets can overlap, which requires some relativistic wave \
+dynamics for an accurate calculation.)\nOr not, I can switch to momentum \
+space.",
+ FontWeight->"Bold",
+ FontColor->RGBColor[1, 0.5, 0]]], "Text",
+ CellChangeTimes->{{3.611604060033432*^9, 3.611604099295821*^9}, {
+  3.6116041750332623`*^9, 3.611604231913994*^9}, {3.611604427245646*^9, 
+  3.611604454763256*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1280, 756},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{-1, Automatic}, {Automatic, 0}},
 Magnification:>1.5 Inherited,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -1016,8 +1197,33 @@ Cell[23687, 647, 272, 8, 80, "Output"]
 Cell[23974, 658, 254, 7, 46, "Text"],
 Cell[CellGroupData[{
 Cell[24253, 669, 225, 6, 43, "Input"],
-Cell[24481, 677, 12610, 260, 379, "Output"]
+Cell[24481, 677, 12610, 260, 345, "Output"]
 }, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37152, 944, 127, 3, 119, "Section"],
+Cell[37282, 949, 182, 4, 46, "Text"],
+Cell[37467, 955, 334, 10, 48, "Text"],
+Cell[CellGroupData[{
+Cell[37826, 969, 447, 14, 107, "Input"],
+Cell[38276, 985, 520, 18, 61, "Output"]
+}, Open  ]],
+Cell[38811, 1006, 743, 21, 103, "Text"],
+Cell[CellGroupData[{
+Cell[39579, 1031, 298, 9, 58, "Input"],
+Cell[39880, 1042, 436, 13, 69, "Output"]
+}, Open  ]],
+Cell[40331, 1058, 489, 15, 67, "Text"],
+Cell[40823, 1075, 228, 4, 76, "Text"],
+Cell[CellGroupData[{
+Cell[41076, 1083, 315, 10, 43, "Input"],
+Cell[41394, 1095, 116, 1, 45, "Output"]
+}, Open  ]],
+Cell[41525, 1099, 297, 5, 76, "Text"],
+Cell[CellGroupData[{
+Cell[41847, 1108, 97, 1, 52, "Subsubsection"],
+Cell[41947, 1111, 467, 8, 105, "Text"]
 }, Open  ]]
 }, Open  ]]
 }

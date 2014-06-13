@@ -46,6 +46,10 @@ A wave packet is constructed with a distribution of amplitude at each momentum a
    Basically, one needs a lot of frequencies/wavenumbers/momenta to construct some localized waves.
 
 
+As an application of this general wave packet, we can write down the wave packet of neutrinos using an assumed initial distribution over all possible momenta. **The problem is that we have no idea what the amplitude should be.**
+
+
+
 
 
 
