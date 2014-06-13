@@ -72,7 +72,7 @@ Some questions should be answered in this formalism.
    .. math::
       \psi(x,t) = \int_{lower}^{upper} dp_\nu' \sum_m U_{fm} a(p_\pi^m(p_\nu')) \nu_m e^{ip_\nu'x} e^{-i E_m(p_\nu')t}
 
-   In other words, 
+   In other words, the 
 
 
 
