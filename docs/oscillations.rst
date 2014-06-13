@@ -93,17 +93,7 @@ Q&A
 .. admonition:: Answer
    :class: note
 
-
-
-
-.. admonition:: Question
-   :class: warning
-
-
-.. adnomition:: Answer
-   :class: note
-
-
+   To be answered.
 
 
 

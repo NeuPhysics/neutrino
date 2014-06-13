@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     45647,       1231]
-NotebookOptionsPosition[     42670,       1129]
-NotebookOutlinePosition[     43056,       1146]
-CellTagsIndexPosition[     43013,       1143]
+NotebookDataLength[     45674,       1232]
+NotebookOptionsPosition[     42697,       1130]
+NotebookOutlinePosition[     43083,       1147]
+CellTagsIndexPosition[     43040,       1144]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -943,9 +943,10 @@ O0SBEr/KcWY1gcRzVcr1DQXa37Wd/iv3/wDjmFwc
 Cell[CellGroupData[{
 
 Cell["\<\
-Neutrinos with the same velocity\
+Neutrinos with the same velocity?\
 \>", "Section",
- CellChangeTimes->{{3.6116034167840433`*^9, 3.611603428459482*^9}}],
+ CellChangeTimes->{{3.6116034167840433`*^9, 3.611603428459482*^9}, 
+   3.611673181822921*^9}],
 
 Cell["\<\
 Some momentum states can have the same velocity even they are form different \
@@ -1208,29 +1209,29 @@ Cell[24481, 677, 12610, 260, 345, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37152, 944, 127, 3, 119, "Section"],
-Cell[37282, 949, 182, 4, 46, "Text"],
-Cell[37467, 955, 334, 10, 48, "Text"],
+Cell[37152, 944, 154, 4, 119, "Section"],
+Cell[37309, 950, 182, 4, 46, "Text"],
+Cell[37494, 956, 334, 10, 48, "Text"],
 Cell[CellGroupData[{
-Cell[37826, 969, 447, 14, 107, "Input"],
-Cell[38276, 985, 520, 18, 61, "Output"]
+Cell[37853, 970, 447, 14, 107, "Input"],
+Cell[38303, 986, 520, 18, 61, "Output"]
 }, Open  ]],
-Cell[38811, 1006, 743, 21, 103, "Text"],
+Cell[38838, 1007, 743, 21, 103, "Text"],
 Cell[CellGroupData[{
-Cell[39579, 1031, 298, 9, 58, "Input"],
-Cell[39880, 1042, 436, 13, 69, "Output"]
+Cell[39606, 1032, 298, 9, 58, "Input"],
+Cell[39907, 1043, 436, 13, 69, "Output"]
 }, Open  ]],
-Cell[40331, 1058, 489, 15, 67, "Text"],
-Cell[40823, 1075, 228, 4, 76, "Text"],
+Cell[40358, 1059, 489, 15, 67, "Text"],
+Cell[40850, 1076, 228, 4, 76, "Text"],
 Cell[CellGroupData[{
-Cell[41076, 1083, 315, 10, 43, "Input"],
-Cell[41394, 1095, 116, 1, 45, "Output"]
+Cell[41103, 1084, 315, 10, 43, "Input"],
+Cell[41421, 1096, 116, 1, 45, "Output"]
 }, Open  ]],
-Cell[41525, 1099, 297, 5, 76, "Text"],
+Cell[41552, 1100, 297, 5, 76, "Text"],
 Cell[CellGroupData[{
-Cell[41847, 1108, 97, 1, 52, "Subsubsection"],
-Cell[41947, 1111, 467, 8, 105, "Text"],
-Cell[42417, 1121, 225, 4, 76, "Text"]
+Cell[41874, 1109, 97, 1, 52, "Subsubsection"],
+Cell[41974, 1112, 467, 8, 105, "Text"],
+Cell[42444, 1122, 225, 4, 76, "Text"]
 }, Open  ]]
 }, Open  ]]
 }
