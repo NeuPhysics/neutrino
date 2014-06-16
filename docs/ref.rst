@@ -11,3 +11,7 @@ Wick C. Haxton & Barry R. Holstein wrote two good reviews of neutrino physics,
 PDG has a complex review of neutrino mass problems
 
 1. `NEUTRINO MASS, MIXING, AND OSCILLATIONS <http://pdg.lbl.gov/2012/reviews/rpp2012-rev-neutrino-mixing.pdf>`_
+
+About coherence:
+
+1. `Coherence of Nuetrino Oscillations in The Wave Packet Approach <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.58.017301>`_ by Giunti & Kim. They gave a simple but elegent way to calculate the decohrence.
