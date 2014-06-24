@@ -70,6 +70,11 @@ To write down this clearly, we need to write down the mixing matrix and propagat
 
 It's easier to write down the propagation in mass eiginstates so the first thing to work out is the mixing matrix.
 
+Suppose we have only a flavour neutrino initially,
+
+.. math::
+   \ket{\psi(0)} = \ket{\nu_a}
+
 
 Mixing Matrix
 `````````````````````````````
@@ -90,12 +95,12 @@ The flavour states can be expressed in terms of mass eigenstates,
 where the matrix
 
 .. math::
-   \mathbf M = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}
+   \mathbf U = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}
 
 is the mixing matrix which is a rotation of basis geometrically. In other words, this matrix is the representation of the rotation :math:`e^{i\hat\theta}`.
 
 
-
+So
 
 
 
@@ -107,8 +112,96 @@ Survival Probability
 With the mixing matrix, the propagation of an initial state of only flavour a is
 
 .. math::
-   \ket{\psi(t)} = 
+   \ket{\psi(t)} = \cos\theta \ket{\nu_1} e^{-i E_1 t} + \sin\theta \ket{\nu_2} e^{-i E_2 t} .
 
+
+To find out the amplitude of flavour a, we need to project the state :math:`\ket{psi(t)}` onto a flavour eigenstate, say, :math:`\ket{\nu_a}`,
+
+.. math::
+   \braket{\nu_a}{\psi(t)} & = \bra{\nu_a}\left( \cos\theta \ket{\nu_1} e^{-i E_1 t} + \sin\theta \ket{\nu_2} e^{-i E_2 t}\right) \\
+   &= \left( \cos\theta \ket{\nu_1}  + \sin\theta \ket{\nu_2} \right) \left( \cos\theta \ket{\nu_1} e^{-i E_1 t} + \sin\theta \ket{\nu_2} e^{-i E_2 t}\right) \\
+   & = \cos&^2\theta e^{-iE_1t} + \sin^2\theta e^{-i E_2 t}
+
+The survival probability is the amplitude squared,
+
+.. math::
+   P_{aa} & = \lvert \braket{\nu_a}{\psi(t)} \rvert ^2 \\
+   & = \lvert \cos&^2\theta e^{-iE_1t} + \sin^2\theta e^{-i E_2 t}  \rvert^2 \\
+   & = \left( \cos&^2\theta e^{-iE_1t} + \sin^2\theta e^{-i E_2 t}  \right)^* \left( \cos&^2\theta e^{-iE_1t} + \sin^2\theta e^{-i E_2 t}  \right) \\
+   & = \cos^4\theta + \sin^4\theta + \cos^2\theta\sin^2\theta e^{i(E_1-E_2)t}+ \sin^2\theta\cos^2\theta e^{-i(E_1-E_2)t} \\
+   & = \cos^4\theta + \sin^4\theta + \cos^2\theta\sin^2\theta e^{i\Delta E t}+ \sin^2\theta\cos^2\theta e^{-i\Delta E t} \\
+   & = \cos^4\theta + \sin^4\theta + 2 \cos^2\theta\sin^2\theta \cos(\Delta E t) \\
+   & = (\cos^2\theta +\sin^2\theta)^2 - 2\cos^2\theta \sin^2\theta  + 2 \cos^2\theta\sin^2\theta \cos(\Delta E t) \\
+   & = 1 - 2 \cos^2\theta \sin^2\theta (1 - \cos(\Delta E t)) \\
+   & = 1 - \sin^2(2\theta) \sin^2\left( \frac{\Delta E t}{2} \right)
+
+with the definition :math:`\Delta E =  E_1-E_2 \approx p_1 + \frac{1}{2}\frac{m_1^2}{p_1} - p_2 - \frac{1}{2}\frac{m_2^2}{p_2}`. We usually calculate the case :math:`p_1=p_2=p` , which takes us to
+
+.. math::
+   \Delta E & \approx \frac{m_1^2 - m_2^2}{2p} \\
+   & = \frac{\delta^2 m}{2p} .
+
+Most of the time we would like to know the oscillation with respect to distance. Using the approximation :math:`t = L` and :math:`\Delta E \approx \frac{m_1^2 - m_2^2}{2p}`, we have
+
+.. math::
+   P_{aa} &= 1 - \sin^2(2\theta) \sin^2\left( \frac{\Delta E L}{2} \right) \\
+   & = 1 -  \sin^2(2\theta) \sin^2\left( \frac{\delta^2m L}{4p} \right) .
+
+This is the survival probability of flavour a neutrino with an initial state of flavour a.
+
+
+There are several things to be noticed,
+
+1. :math:`\theta=0` leads to oscillation free neutrinos.
+2. :math:`\Delta E=0` or :math:`\delta ^2m =0` (in the case of same momentum) also gives us no oscillation.
+3. At :math:`L=0` the survival probability is 1, which means no oscillation is done.
+
+
+
+Hamiltonian
+````````````````````
+
+It's easy to write down the Hamiltonian for the mass state stationary Schrödinger equation. As we have proven, to first order approximation,
+
+.. math::
+   E = p + \frac{1}{2}\frac{m^2}{p}
+
+.. math::
+   \mathbf H_j &= \begin{pmatrix} p + \frac{1}{2}\frac{m_1^2}{p}, 0 \\ 0, p + \frac{1}{2}\frac{m_2^2}{p} \end{pmatrix} \\
+   & = p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2, 0 \\ 0,m_2^2 \end{pmatrix}
+
+However, the Hamiltonian we prefer is the one for flavour eigenstates. To achieve this, we only need to rotate this previous Hamiltonian using the mixing matrix :math:`\mathbf U`.
+
+.. math::
+   \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
+   & =  \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix} \begin{pmatrix} p + \frac{1}{2}\frac{m_1^2}{p}, 0 \\ 0, p + \frac{1}{2}\frac{m_2^2}{p} \end{pmatrix}   \begin{pmatrix}  \cos\theta , -\sin\theta \\ \sin\theta , \cos\theta \end{pmatrix}
+
+
+.. note::
+   The reason we can do this is that this mixing matrix is time and space independent. To see this, we first write down the Schrödinger equation for mass eigenstates,
+
+   .. math::
+      i d_t \ket{Phi_j} = \hat H_j \ket{Phi_j}.
+
+   Applying the mixing matrix,
+
+   .. math::
+      i d_t \mathbf U^{-1} \ket{Phi_\alpha} = \hat H_j  \mathbf U^{-1} \ket{Phi_\alpha}.
+
+   Notice that the mixing matrix, which is a rotation, is orthonormal, :math:`\mathbf U \mathbf U^T=\mathbf I`. Then we have inverse of this matrix is the same as the transpose.
+
+   .. math::
+      i d_t \mathbf U^T \ket{Phi_\alpha} = \hat H_j  \mathbf U^T \ket{Phi_\alpha}.
+
+   Multiply on both sides :math:`\mathbf U` and remember the fact that the mixing matrix is orthonormal, we have
+
+   .. math::
+      i d_t \ket{Phi_\alpha} = \mathbf U \hat H_j  \mathbf U^T \ket{Phi_\alpha}.
+
+   Now we can define the Hamiltonian for flavour states,
+
+   .. math::
+      \mathbf H_{\alpha} = \mathbf U \hat H_j  \mathbf U^T .
 
 
 
