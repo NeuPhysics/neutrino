@@ -39,8 +39,6 @@ Theory
 -------------
 
 
-The Mixing Matrix
-~~~~~~~~~~~~~~~~~~~
 
 
 Neutrinos evolve in mass eigenstates. So we need to describe flavour states :math:`\ket{\nu_\alpha}` using mass eigenstates :math:`\ket{\nu_j}`.
@@ -55,12 +53,68 @@ In ultra relativistic case, we can simply find out the time evolution, which is 
 .. math::
    \ket{\psi(t)} = \sum_j U^*_{\alpha j} G_j(t,t_0) \ket{\nu_j;\tilde p_j}.
 
-The survival probability is
+
+The survival probability means how much neutrinos of a flavour left after some time or distance, which is calculated by
 
 .. math::
    P(\nu_l\to\nu_{l'}) = \lvert \braket{\nu_{l'} }{\psi (t)}  \rvert^2 .
 
 We can see clearly that the survival probability depends on some parameters.
+
+
+Two Flavour Oscillation
+~~~~~~~~~~~~~~~~~~~~~
+
+
+To write down this clearly, we need to write down the mixing matrix and propagator. For simplicity, we calculate the example of two flavour (a, b) oscillation.
+
+It's easier to write down the propagation in mass eiginstates so the first thing to work out is the mixing matrix.
+
+
+Mixing Matrix
+`````````````````````````````
+
+The mixing matrix is an rotation of eigenbasis.
+
+.. figure:: assets/nuetrinoMixingAngle.png
+   :align: center
+   :alt: Two Flavour Neutrino Mixing
+
+   Two flavour neutrino mixing diagram with :math:`\theta` being the mixing angle
+
+The flavour states can be expressed in terms of mass eigenstates,
+
+.. math::
+   \begin{pmatrix}\nu_a \\ \nu_b\end{pmatrix} = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+
+where the matrix
+
+.. math::
+   \mathbf M = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}
+
+is the mixing matrix which is a rotation of basis geometrically. In other words, this matrix is the representation of the rotation :math:`e^{i\hat\theta}`.
+
+
+
+
+
+
+
+Survival Probability
+`````````````````````````````
+
+
+With the mixing matrix, the propagation of an initial state of only flavour a is
+
+.. math::
+   \ket{\psi(t)} = 
+
+
+
+
+
+
+
 
 
 
