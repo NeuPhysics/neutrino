@@ -90,17 +90,17 @@ The mixing matrix is an rotation of eigenbasis.
 The flavour states can be expressed in terms of mass eigenstates,
 
 .. math::
-   \begin{pmatrix}\nu_a \\ \nu_b\end{pmatrix} = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+   \begin{pmatrix}\nu_a \\ \nu_b\end{pmatrix} = \begin{pmatrix}  \cos\theta  & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
 
 where the matrix
 
 .. math::
-   \mathbf U = \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix}
+   \mathbf U = \begin{pmatrix}  \cos\theta  &  \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}
 
 is the mixing matrix which is a rotation of basis geometrically. In other words, this matrix is the representation of the rotation :math:`e^{i\hat\theta}`.
 
 
-So
+
 
 
 
@@ -167,14 +167,15 @@ It's easy to write down the Hamiltonian for the mass state stationary Schröding
    E = p + \frac{1}{2}\frac{m^2}{p}
 
 .. math::
-   \mathbf H_j &= \begin{pmatrix} p + \frac{1}{2}\frac{m_1^2}{p}, 0 \\ 0, p + \frac{1}{2}\frac{m_2^2}{p} \end{pmatrix} \\
-   & = p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2, 0 \\ 0,m_2^2 \end{pmatrix}
+   \mathbf H_j &= \begin{pmatrix} p + \frac{1}{2}\frac{m_1^2}{p} & 0 \\ 0 & p + \frac{1}{2}\frac{m_2^2}{p} \end{pmatrix} \\
+   & = p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix}
 
 However, the Hamiltonian we prefer is the one for flavour eigenstates. To achieve this, we only need to rotate this previous Hamiltonian using the mixing matrix :math:`\mathbf U`.
 
 .. math::
    \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
-   & =  \begin{pmatrix}  \cos\theta , \sin\theta \\ -\sin\theta , \cos\theta \end{pmatrix} \begin{pmatrix} p + \frac{1}{2}\frac{m_1^2}{p}, 0 \\ 0, p + \frac{1}{2}\frac{m_2^2}{p} \end{pmatrix}   \begin{pmatrix}  \cos\theta , -\sin\theta \\ \sin\theta , \cos\theta \end{pmatrix}
+   & =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
+   & = p + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_2^2 + \cos^2\theta m_1^2 \end{pmatrix}
 
 
 .. note::
