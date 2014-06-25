@@ -184,22 +184,22 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
    The reason we can do this is that this mixing matrix is time and space independent. To see this, we first write down the Schrödinger equation for mass eigenstates,
 
    .. math::
-      i d_t \ket{Phi_j} = \hat H_j \ket{Phi_j}.
+      i d_t \ket{\Phi_j} = \hat H_j \ket{\Phi_j}.
 
    Applying the mixing matrix,
 
    .. math::
-      i d_t \mathbf U^{-1} \ket{Phi_\alpha} = \hat H_j  \mathbf U^{-1} \ket{Phi_\alpha}.
+      i d_t \mathbf U^{-1} \ket{\Phi_\alpha} = \hat H_j  \mathbf U^{-1} \ket{\Phi_\alpha}.
 
    Notice that the mixing matrix, which is a rotation, is orthonormal, :math:`\mathbf U \mathbf U^T=\mathbf I`. Then we have inverse of this matrix is the same as the transpose.
 
    .. math::
-      i d_t \mathbf U^T \ket{Phi_\alpha} = \hat H_j  \mathbf U^T \ket{Phi_\alpha}.
+      i d_t \mathbf U^T \ket{\Phi_\alpha} = \hat H_j  \mathbf U^T \ket{\Phi_\alpha}.
 
    Multiply on both sides :math:`\mathbf U` and remember the fact that the mixing matrix is orthonormal, we have
 
    .. math::
-      i d_t \ket{Phi_\alpha} = \mathbf U \hat H_j  \mathbf U^T \ket{Phi_\alpha}.
+      i d_t \ket{\Phi_\alpha} = \mathbf U \hat H_j  \mathbf U^T \ket{\Phi_\alpha}.
 
    Now we can define the Hamiltonian for flavour states,
 
@@ -209,8 +209,22 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
 
 
 
+MSW Effect
+```````````````````````````````
 
-
+.. code:: LaTeX
+   \begin{fmfgraph*}(200,180)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+    \fmflabel{$v_e$}{i2}
+    \fmflabel{$e^-$}{i1}
+    \fmflabel{$v_e$}{o2}
+    \fmflabel{$e^-$}{o1}
+    \fmf{photon,label=$Z$}{v1,v2}
+   \end{fmfgraph*}
 
 
 
