@@ -212,7 +212,7 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
 MSW Effect
 ```````````````````````````````
 
-.. code:: LaTeX
+.. code:: TeX
    \begin{fmfgraph*}(200,180)
     \fmfleft{i1,i2}
     \fmfright{o1,o2}
