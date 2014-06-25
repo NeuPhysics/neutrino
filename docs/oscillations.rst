@@ -141,7 +141,7 @@ with the definition :math:`\Delta E =  E_1-E_2 \approx p_1 + \frac{1}{2}\frac{m_
    \Delta E & \approx \frac{m_1^2 - m_2^2}{2p} \\
    & = \frac{\delta^2 m}{2p} .
 
-Most of the time we would like to know the oscillation with respect to distance. Using the approximation :math:`t = L` and :math:`\Delta E \approx \frac{m_1^2 - m_2^2}{2p}`, we have
+with :math:`\delta^2 m=m_1^2 - m_2^2`. Most of the time we would like to know the oscillation with respect to distance. Using the approximation :math:`t = L` and :math:`\Delta E \approx \frac{m_1^2 - m_2^2}{2p}`, we have
 
 .. math::
    P_{aa} &= 1 - \sin^2(2\theta) \sin^2\left( \frac{\Delta E L}{2} \right) \\
@@ -175,7 +175,9 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
 .. math::
    \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
    & =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
-   & = p + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_2^2 + \cos^2\theta m_1^2 \end{pmatrix}
+   & = p + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_1^2 + \cos^2\theta m_2^2 \end{pmatrix} \\
+   & = p + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta \delta^2m \\ -\frac{1}{2}\sin 2\theta \delta^2m & m_2^2+\delta^2m\sin^2\theta \end{pmatrix}
+
 
 
 .. note::
@@ -202,7 +204,7 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
    Now we can define the Hamiltonian for flavour states,
 
    .. math::
-      \mathbf H_{\alpha} = \mathbf U \hat H_j  \mathbf U^T .
+      \mathbf H_{\alpha} = \mathbf U \mathbf H_j  \mathbf U^T .
 
 
 
