@@ -273,6 +273,16 @@ Neutrinos do interact with matter, mostly electrons in most cases.
    \end{fmfgraph*}
 
 
+The one that is missing is the charged current for :math:`nu_\tau` and :math:`e^{-}` interaction because of lepton number conservation.
+
+The first two diagrams will add two equal terms on the diagonal terms of Hamiltonian, which can be viewed as adding a number times identity matrix thus conserves the eigenstates while shifts the eigenvalues. However, the third diagram will only add a term to the first diagonal term of Hamiltonian.
+
+This symmetry breaking will change the evolution and makes the states more electron neutrino.
+
+This is the MSW effect in short.
+
+
+
 
 
 
