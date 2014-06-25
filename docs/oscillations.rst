@@ -218,6 +218,7 @@ Neutrinos do interact with matter, mostly electrons in most cases.
 .. figure:: assets/nueNeutral.png
 
 .. code:: tex
+
    \begin{fmfgraph*}(200,180)
      \fmfleft{i1,i2}
      \fmfright{o1,o2}
@@ -230,6 +231,50 @@ Neutrinos do interact with matter, mostly electrons in most cases.
      \fmflabel{$e^-$}{o1}
      \fmf{photon,label=$Z$}{v1,v2}
    \end{fmfgraph*}
+
+
+.. figure:: assets/nutaueNeutral.png
+
+
+
+.. code:: tex
+
+   \begin{fmfgraph*}(200,180)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+    \fmflabel{$v_\tau$}{i2}
+    \fmflabel{$e^-$}{i1}
+    \fmflabel{$v_\tau$}{o2}
+    \fmflabel{$e^-$}{o1}
+    \fmf{photon,label=$Z$}{v1,v2}
+   \end{fmfgraph*}
+
+
+
+.. figure:: assets/nueCharged.png
+
+
+.. code:: tex
+
+   \begin{fmfgraph*}(200,180)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+    \fmflabel{$v_e$}{i2}
+    \fmflabel{$e^-$}{i1}
+    \fmflabel{$v_e$}{o1}
+    \fmflabel{$e^-$}{o2}
+    \fmf{photon,label=$W^{-}$}{v1,v2}
+   \end{fmfgraph*}
+
+
+
+
 
 
 
