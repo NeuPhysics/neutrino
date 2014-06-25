@@ -29,6 +29,7 @@ Table of Contents:
    mass.rst
    oscillations.rst
    propagation.rst
+   mastereqn.rst
    ref.rst
 
 
