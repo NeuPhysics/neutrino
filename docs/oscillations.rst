@@ -212,18 +212,22 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
 MSW Effect
 ```````````````````````````````
 
-.. code:: TeX
+Neutrinos do interact with matter, mostly electrons in most cases.
+
+.. figure:: assets/nueNeutral.png
+
+.. code:: tex
    \begin{fmfgraph*}(200,180)
-    \fmfleft{i1,i2}
-    \fmfright{o1,o2}
-    \fmf{fermion}{i1,v1,o1}
-    \fmf{fermion}{i2,v2,o2}
-    \fmf{photon}{v1,v2}
-    \fmflabel{$v_e$}{i2}
-    \fmflabel{$e^-$}{i1}
-    \fmflabel{$v_e$}{o2}
-    \fmflabel{$e^-$}{o1}
-    \fmf{photon,label=$Z$}{v1,v2}
+     \fmfleft{i1,i2}
+     \fmfright{o1,o2}
+     \fmf{fermion}{i1,v1,o1}
+     \fmf{fermion}{i2,v2,o2}
+     \fmf{photon}{v1,v2}
+     \fmflabel{$v_e$}{i2}
+     \fmflabel{$e^-$}{i1}
+     \fmflabel{$v_e$}{o2}
+     \fmflabel{$e^-$}{o1}
+     \fmf{photon,label=$Z$}{v1,v2}
    \end{fmfgraph*}
 
 
