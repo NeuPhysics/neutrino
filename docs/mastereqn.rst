@@ -13,7 +13,9 @@ Quantum Master Equation
 ---------------------------------
 
 
-.. admonition:: How Does Projection Technique Work?
+.. admonition:: Projection Technique
+   :class: note
+   
    First of all define a diagonalizing operator :math:`\hat D` which just keeps the diagonal elements and simply drops the off diagonal elements. We see that :math:`1-\hat D` will element all diagonal elements.
 
    We can define the diagonalized density matrix as :math:`\hat \rho_d = \hat D \hat \rho` and off-diagonalized density matrix as :math:`\hat \rho_{od} = (1-\hat D)\hat \rho`. As an application,
