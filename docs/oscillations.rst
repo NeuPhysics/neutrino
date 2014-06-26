@@ -115,7 +115,7 @@ With the mixing matrix, the propagation of an initial state of only flavour a is
    \ket{\psi(t)} = \cos\theta \ket{\nu_1} e^{-i E_1 t} + \sin\theta \ket{\nu_2} e^{-i E_2 t} .
 
 
-To find out the amplitude of flavour a, we need to project the state :math:`\ket{psi(t)}` onto a flavour eigenstate, say, :math:`\ket{\nu_a}`,
+To find out the amplitude of flavour a, we need to project the state :math:`\ket{\psi(t)}` onto a flavour eigenstate, say, :math:`\ket{\nu_a}`,
 
 .. math::
    \braket{\nu_a}{\psi(t)} & = \bra{\nu_a}\left( \cos\theta \ket{\nu_1} e^{-i E_1 t} + \sin\theta \ket{\nu_2} e^{-i E_2 t}\right) \\
