@@ -35,6 +35,7 @@ extensions = [
 
 latex_preamble = r"""
 \usepackage{mathrsfs}
+\usepackage{color}
 
 
 \newcommand{\bra}[1]{\left\langle #1\right|}
