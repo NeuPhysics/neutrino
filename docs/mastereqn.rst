@@ -15,7 +15,7 @@ Quantum Master Equation
 
 .. admonition:: Projection Technique
    :class: note
-   
+
    First of all define a diagonalizing operator :math:`\hat D` which just keeps the diagonal elements and simply drops the off diagonal elements. We see that :math:`1-\hat D` will element all diagonal elements.
 
    We can define the diagonalized density matrix as :math:`\hat \rho_d = \hat D \hat \rho` and off-diagonalized density matrix as :math:`\hat \rho_{od} = (1-\hat D)\hat \rho`. As an application,
@@ -78,7 +78,7 @@ In our case of neutrinos, random phase condition is not really needed since we u
 In details, we have such a density matrix,
 
 .. math::
-   \mathbf\rho = \begin{pmatrix}\rho_{aa} &}\rho_{ab} \\ }\rho_{ba} & }\rho_{bb}\end{pmatrix} .
+   \mathbf\rho = \begin{pmatrix}\rho_{aa} &\rho_{ab} \\ }\rho_{ba} & }\rho_{bb}\end{pmatrix} .
 
 The quantum master equation we would like to use is
 
