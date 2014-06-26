@@ -78,7 +78,7 @@ In our case of neutrinos, random phase condition is not really needed since we u
 In details, we have such a density matrix,
 
 .. math::
-   \mathbf\rho = \begin{pmatrix}\rho_{aa} &\rho_{ab} \\ }\rho_{ba} & }\rho_{bb}\end{pmatrix} .
+   \mathbf\rho = \begin{pmatrix}\rho_{aa} &\rho_{ab} \\ \rho_{ba} & \rho_{bb}\end{pmatrix} .
 
 The quantum master equation we would like to use is
 
