@@ -98,15 +98,74 @@ Unsteady Precession
 
 
 
+Polarization Vector
+-------------------------------
+
+Polarization (for a two state system) is the difference of the probabilities of finding the system in the two difference normal states (spin up and spin down for example).
+
+
+Density Matrix
+~~~~~~~~~~~~~~~~~~~~
+
+For a two-state system, an example of density matrix is
+
+.. math::
+   \hat \rho = W_1 \ket{\psi_a}\bra{\psi_a} + W_2 \ket{\psi_b}\bra{\psi_b}.
+
+When :math:`\{ \ket{\psi_a}, \ket{\psi_b} \}` basis is chosen, density matrix can be written as a matrix,
+
+.. math::
+   \mathbf \rho = \begin{pmatrix} W_1 & 0 \\ 0 & W_2 \end{pmatrix},
+
+in which the two constants are the probability to find the system in each states respectively and they are called the population.
+
+Rewrite the density matrix with Pauli matrices and identity,
+
+.. math::
+   \mathbf \rho = \frac{1}{2} ( \mathbf I + \vec{\mathbf \sigma} \vec P ).
+
+
+.. note::
+   The reason we have a :math:`\frac{1}{2}` is that by definition polarization vector is
+
+   .. math::
+      \mathbf \rho &= a_0 \mathbf I + \mathbf {\sigma_x} a_x +  \mathbf {\sigma_y} a_y +  \mathbf {\sigma_z} a_z \\
+      & = a_0 \mathbf I + \vec a \vec{\mathbf \sigma}.
+
+   However, trace of density matrix should be 1, which means :math:`\mathrm{Tr} \mathbf \rho = a_0 2 =1` and we can find :math:`a_0=\frac{1}{2}` noting that :math:`\mathrm {Tr}\mathbf \sigma_i = 0`.
+
+
+The important fact is that the values of polarization depends on the choice of basis.
+
+More physical meanings can be obtained by chosing a good basis so that the density matrix is diagonalised by expressing it with components of polarization. [4]_
+
+
+
+Polarization, as the name indicates, is defined as
+
+.. math::
+   P = W_1 - W_2
+
+when it is aligned with on of the basis
 
 
 
 
 
-Isospin
-------------
 
-Neutrino isospin, which is the weak isospin, is :math:`1/2`.
+Neutrino Flavour Isospin
+---------------------------------
+
+Neutrino flavour isospin [3]_
+
+.. math::
+   \mathbf s = \psi^{f\dagger} \frac{\mathbf\sigma}{2} \psi^f,
+
+where
+
+.. math::
+   \psi^f_\nu & = \begin{pmatrix} a_{\nu_e} \\ a_{\nu_x} \end{pmatrix} \\
+   \psi^f_{\bar \nu} & = \begin{pmatrix} - a_{\bar\nu_x} \\ a_{\bar\nu_e} \end{pmatrix}
 
 
 The equation of motion for isospin is
@@ -135,3 +194,5 @@ which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega`
 
 .. [1] Read Carl's lecture notes of *Classical Mechanics* for this derivation.
 .. [2] Refer to `Top <http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec30.pdf>`_ .
+.. [3] `Collective neutrino flavor transformation in supernovae <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.123004>`_
+.. [4] Read quantum statistics book if more is needed.
