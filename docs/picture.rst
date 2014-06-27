@@ -98,20 +98,33 @@ Unsteady Precession
 
 
 
-Bipolar Model
---------------------
+
+
 
 
 
 Isospin
-~~~~~~~~~~
+------------
 
 Neutrino isospin, which is the weak isospin, is :math:`1/2`.
 
 
+The equation of motion for isospin is
 
+.. math::
+   \frac{d}{dt}\mathbf s = \mathbf s \times \mathbf {H^{eff}}.
 
+Previously we have already seen the equations for a spinning top,
 
+.. math::
+   \frac{d}{dt}\vec S  =  \frac{\partial}{\partial t} \vec S  - \vec S \times \vec \Omega,
+
+where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
+
+.. math::
+   \frac{\partial}{\partial t} \vec S  = \vec S \times \vec \Omega,
+
+which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega` corresponds to :math:`\mathbf {H^{eff}}`.
 
 
 
