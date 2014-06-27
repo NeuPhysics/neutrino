@@ -211,6 +211,29 @@ Again we see clearly, no oscillation will apear as long as mixing angle :math:`\
 
 
 
+Since Pauli matrices plus identity forms a complete basis for all 2 by 2 matrices, it our Hamiltonian can be written as
+
+.. math::
+   \mathbf H  &= \frac{\delta^2 m}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
+   & = \frac{\delta^2 m}{4 E} \left( -\cos 2\theta \mathbf{\sigma_z} + \sin 2\theta \mathbf{\sigma_x} \right).
+
+
+.. note::
+   Pauli matrices are
+
+   .. math::
+      \sigma_x = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}
+      \sigma_y = \begin{pmatrix}0 & -i \\ i & 0\end{pmatrix}
+      \sigma_x = \begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}
+
+
+   Or in a more compact way,
+
+   .. math::
+      \sigma_j = \begin{pmatrix} \delta_{j3}&\delta_{j1}-i\delta_{j2}\\ \delta_{j1}+i\delta_{j2}&-\delta_{j3}\end{pmatrix}  .
+
+
+
 
 MSW Effect
 ```````````````````````````````
