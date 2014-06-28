@@ -141,12 +141,12 @@ More physical meanings can be obtained by chosing a good basis so that the densi
 
 
 
-Polarization, as the name indicates, is defined as
+Polarization, as the name indicates, should equal to
 
 .. math::
    P = W_1 - W_2
 
-when it is aligned with on of the basis
+when it is aligned with z direction of Pauli matrices. Polarization vector is not a vector in real space but a vector of an imagined space.
 
 
 
