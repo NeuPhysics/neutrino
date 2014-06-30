@@ -5,6 +5,44 @@ Pictures
 There are several pictures to visualize the oscillations of neutrinos.
 
 
+
+
+
+Neutrino Flavour Isospin
+---------------------------------
+
+Neutrino flavour isospin [3]_
+
+.. math::
+   \mathbf s = \psi^{f\dagger} \frac{\mathbf\sigma}{2} \psi^f,
+
+where
+
+.. math::
+   \psi^f_\nu & = \begin{pmatrix} a_{\nu_e} \\ a_{\nu_x} \end{pmatrix} \\
+   \psi^f_{\bar \nu} & = \begin{pmatrix} - a_{\bar\nu_x} \\ a_{\bar\nu_e} \end{pmatrix}
+
+
+The equation of motion for isospin is
+
+.. math::
+   \frac{d}{dt}\mathbf s = \mathbf s \times \mathbf {H^{eff}}.
+
+Previously we have already seen the equations for a spinning top,
+
+.. math::
+   \frac{d}{dt}\vec S  =  \frac{\partial}{\partial t} \vec S  - \vec S \times \vec \Omega,
+
+where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
+
+.. math::
+   \frac{\partial}{\partial t} \vec S  = \vec S \times \vec \Omega,
+
+which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega` corresponds to :math:`\mathbf {H^{eff}}`.
+
+
+
+
 Coupled Pendulum
 ------------------------
 
@@ -155,40 +193,6 @@ when it is aligned with z direction of Pauli matrices. Polarization vector is no
 
 
 
-
-
-
-Neutrino Flavour Isospin
----------------------------------
-
-Neutrino flavour isospin [3]_
-
-.. math::
-   \mathbf s = \psi^{f\dagger} \frac{\mathbf\sigma}{2} \psi^f,
-
-where
-
-.. math::
-   \psi^f_\nu & = \begin{pmatrix} a_{\nu_e} \\ a_{\nu_x} \end{pmatrix} \\
-   \psi^f_{\bar \nu} & = \begin{pmatrix} - a_{\bar\nu_x} \\ a_{\bar\nu_e} \end{pmatrix}
-
-
-The equation of motion for isospin is
-
-.. math::
-   \frac{d}{dt}\mathbf s = \mathbf s \times \mathbf {H^{eff}}.
-
-Previously we have already seen the equations for a spinning top,
-
-.. math::
-   \frac{d}{dt}\vec S  =  \frac{\partial}{\partial t} \vec S  - \vec S \times \vec \Omega,
-
-where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
-
-.. math::
-   \frac{\partial}{\partial t} \vec S  = \vec S \times \vec \Omega,
-
-which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega` corresponds to :math:`\mathbf {H^{eff}}`.
 
 
 
