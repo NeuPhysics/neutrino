@@ -28,6 +28,7 @@ Table of Contents:
 
    mass.rst
    oscillations.rst
+   collective.rst
    propagation.rst
    picture.rst
    mastereqn.rst

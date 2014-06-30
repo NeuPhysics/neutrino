@@ -63,7 +63,12 @@ with the torque for a top being
    M_z & = 0 .
 
 .. note::
-   :math:`\dot \psi` is the spin of the top itself.
+   :math:`\dot \psi` is the spin of the top itself. More generally, the Euler equation is
+
+   .. math::
+     \mathbf{I} \cdot \dot{\boldsymbol\omega} + \boldsymbol\omega \times \left( \mathbf{I} \cdot \boldsymbol\omega \right) = \mathbf{M}.
+
+
 
 
 Steady Precession
