@@ -6,17 +6,53 @@ The effect of gravitition on neutrino oscillation could be great around a neutro
 The spacetime are distorted around the neutron star.
 
 * Time gradient/delay; Shapiro delay;
-* Space geometry/trajectory; self-interaction :math:`\vec v\cdot \vec v'`
-* Redshift
+* Space geometry/trajectory; self-interaction :math:`\vec v\cdot \vec v'`;
+* Redshift;
+* Tidal effect;
+* Coupling of space and time due to cross terms (might need quantum field theory in curved spacetime);
+* Lense-Thirring effect.
 
 
 Evaluation
 -------------------
 
+The equation of motion in a linear approximation (with respect to  :math:`\kappa`) is
+
+.. math::
+   \frac{d}{d\tau}u_\mu + \left( \kappa h_{\mu\alpha,\beta} u^\alpha u^\beta - \frac{\kappa}{2}h_{\alpha\beta,\mu}u^\alpha u^\beta \right) = 0,
+
+where :math:`\kappa=8\pi G`, :math:`h_{\alpha\beta}` is the metric tensor of the gravitational field, that is,
+
+.. math::
+   g_{\alpha\beta} = \eta_{\alpha\beta} + \kappa h_{\alpha}.
+
+Another useful form is to multiply on both side :math:`m d\tau` and substitute mass terms with 4-momentum :math:`p_\mu = m u_\mu`.
+
+.. math::
+   d p_\mu + \left( \kappa h_{\mu\alpha,\beta} p^\alpha - \frac{\kappa}{2} h_{\alpha\beta,\mu} p^\alpha \right) dx^{\beta} = 0
+
+
 Deflection in The Trajectory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+
+
 For the trajectory of photons, we only need to find out the geodesic. Neutrinos are massive particles which are different from photons. However, the neutrinos we are considering have energy as high as several MeVs or even more while their mass are less than 1eV. In this case, they are relativistic so their trajectory are close to photons'.
+
+The deflection of photons near a star is,
+
+.. math::
+   \delta \approx - \frac{4G M_\ocirc}{bc^2}.
+
+.. admonition:: Derivation
+   :class: note
+
+   Suppose we have a photon coming along z axis from infinite, the deflected angle at infinite is, by first order approximation :math:`\tan\delta \approx \delta`, the change of momentum in x direction over the momentum in z direction,
+
+   .. math::
+      \delta \approx \frac{\Delta p_x}{p_z}.
+
+   
 
 
 
