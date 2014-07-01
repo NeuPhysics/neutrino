@@ -78,10 +78,12 @@ A detailed calculation shows, [1]_
    The deflection angle of a photon starting from a tangent position at :math:`z=rz` with tangent momentum and impact parameter :math:`b`.
 
 
+With an impact parameter of :math:`b=10\text{km}`, the angle will eventually become larger than :math:`0.4`, which is very significant.
 
+.. figure:: assets/deflectionAngle.png
+   :align: center
 
-
-
+   As we can see the angle becomes very big at about 10km.
 
 
 
