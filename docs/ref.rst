@@ -4,9 +4,12 @@ References
 
 Wick C. Haxton & Barry R. Holstein wrote two good reviews of neutrino physics,
 
-1. `Neutrino Physics <http://arxiv.org/abs/hep-ph/9905257v1>`_
-2. `Neutrino Physics: an Update <http://arxiv.org/abs/hep-ph/0306282v1>`_
+* `Neutrino Physics <http://arxiv.org/abs/hep-ph/9905257v1>`_
+* `Neutrino Physics: an Update <http://arxiv.org/abs/hep-ph/0306282v1>`_
 
+A RMP review by S. M. Bilenky and S. T. Petcov
+
+* `Massive neutrinos and neutrino oscillations <http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.59.671>`_
 
 PDG has a complex review of neutrino mass problems
 

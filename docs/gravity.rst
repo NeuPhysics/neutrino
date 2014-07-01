@@ -95,5 +95,19 @@ With an impact parameter of :math:`b=10\text{km}`, the angle will eventually bec
 Refs & Notes
 -------------------
 
+Here is a list of papers on the gravitational effects of neutrino oscillations,
+
+1. `Gravitational Effects on the Neutrino Oscillation <http://arxiv.org/abs/hep-ph/9611231>`_
+2. `Neutrino oscillations in curved spacetime: an heuristic treatment <http://arxiv.org/abs/hep-ph/9610494>`_
+3. `Neutrino Oscillations in Gravitational Field <http://arxiv.org/abs/0906.5556>`_
+4. `Neutrino oscillations in Kerr-Newman space-time <http://arxiv.org/abs/1002.0648>`_
+5. `Neutrino oscillations in strong gravitational fields <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.54.1587>`_ by Dardo Píriz, Mou Roy, and José Wudka
+6. `Can Gravity Distinguish Between Dirac and Majorana Neutrinos? <http://arxiv.org/abs/gr-qc/0605153>`_ (on `PRL <http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.041101>`_ )
+
+
+And related topics
+
+1. `A comparison between matter wave and light wave interferometers for the detection of gravitational waves <http://arxiv.org/abs/gr-qc/0609075>`_
+2. `Matter waves in a gravitational field: An index of refraction for massive particles in general relativity <http://arxiv.org/abs/gr-qc/0107063>`_
 
 .. [1] The MMA file is `here <https://github.com/emptymalei/neutrino/blob/master/MMA/gravitation.nb>`_ .
