@@ -52,7 +52,20 @@ The deflection of photons near a star is,
    .. math::
       \delta \approx \frac{\Delta p_x}{p_z}.
 
-   
+   Momentum in this coordinate system is
+
+   .. math::
+      p^\alpha = (c p^3, 0, 0, p^3).
+
+   Displacement is
+
+   .. math::
+      dx^\beta = (dz/c,0,0,dz).
+
+   Then the change in momentum can be calculated using the equation of motion,
+
+   .. math::
+      \Delta p_1 = - \kappa p^\alpha \int_{-\infty}^{\infty} \left( h_{1\alpha,\beta} - \frac{1}{2} h_{\alpha\beta,1} \right) dx^\beta.
 
 
 
