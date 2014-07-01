@@ -32,6 +32,7 @@ Table of Contents:
    propagation.rst
    picture.rst
    mastereqn.rst
+   gravity.rst
    ref.rst
 
 
