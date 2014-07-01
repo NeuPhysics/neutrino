@@ -1,7 +1,7 @@
-Effect of Gravitition
+Effect of Gravitation
 =====================
 
-The effect of gravitition on neutrino oscillation could be great around a neutron star.
+The effect of gravitation on neutrino oscillation could be great around a neutron star.
 
 The spacetime are distorted around the neutron star.
 
@@ -42,7 +42,7 @@ For the trajectory of photons, we only need to find out the geodesic. Neutrinos 
 The deflection of photons near a star is,
 
 .. math::
-   \delta \approx - \frac{4G M_\ocirc}{bc^2}.
+   \delta \approx - \frac{4G M_\odot}{bc^2}.
 
 .. admonition:: Derivation
    :class: note
@@ -69,6 +69,13 @@ The deflection of photons near a star is,
 
 
 
+A detailed calculation shows, [1]_
+
+
+.. figure:: assets/gravitationDeflection.png
+   :align: center
+
+   The deflection angle of a photon starting from a tangent position at :math:`z=rz` with tangent momentum and impact parameter :math:`b`.
 
 
 
@@ -80,3 +87,6 @@ The deflection of photons near a star is,
 
 Refs & Notes
 -------------------
+
+
+.. [1] The MMA file is `here <https://github.com/emptymalei/neutrino/blob/master/MMA/gravitation.nb>`_ .
