@@ -68,6 +68,11 @@ The deflection of photons near a star is,
       \Delta p_1 = - \kappa p^\alpha \int_{-\infty}^{\infty} \left( h_{1\alpha,\beta} - \frac{1}{2} h_{\alpha\beta,1} \right) dx^\beta.
 
 
+This is the deflection angle of a photon coming from infinite. However, the angle deflected for a photon emitted at tangent is different.
+
+
+.. image:: assets/tangentNeutrinoGravitation.png
+   :align: center
 
 A detailed calculation shows, [1]_
 
