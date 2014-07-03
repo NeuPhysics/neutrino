@@ -300,7 +300,20 @@ Neutrinos do interact with matter, mostly electrons in most cases.
 
 The one that is missing is the charged current for :math:`nu_\tau` and :math:`e^{-}` interaction because of lepton number conservation.
 
-The first two diagrams will add two equal terms on the diagonal terms of Hamiltonian, which can be viewed as adding a number times identity matrix thus conserves the eigenstates while shifts the eigenvalues. However, the third diagram will only add a term to the first diagonal term of Hamiltonian.
+The first two diagrams will add two equal terms on the diagonal terms of Hamiltonian, which can be viewed as adding a number times identity matrix thus conserves the eigenstates while shifts the eigenvalues. However, the third diagram will only add a term to the first diagonal term of Hamiltonian, which is the weak coupling :math:`\Delta = \sqrt{2}G_F n(x)` with :math:`n(x)` being the number density of electrons.
+
+.. admonition:: Weak Interaction
+   :class: note
+
+   We can guess this interaction term using physics picture. This interaction should be proportional to density of electrons with a coupling constant :math:`G_F`. Then check the dimensions.
+
+   .. math::
+      [G_F] &= [E]^{-2} \\
+      [n(x)] & = [E]^3
+
+   So the dimension is right. The missing constant is :math:`\sqrt{2}`.
+
+
 
 This symmetry breaking will change the evolution and makes the states more electron neutrino.
 
@@ -324,7 +337,35 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
 
    which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`nu_1`. By :math:`nu_1` we mean the state with energy :math:`\frac{delta^2m}{4E}` in vacuum.
 
+   We need this intuitive picture to understand MSW effect.
 
+
+The Hamiltonian for neutinos with neutrino-matter interaction is
+
+.. math::
+   \mathbf H = \frac{\delta^2m}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
+
+where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
+
+.. note::
+   As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`
+
+
+.. note::
+   The red part is from the charged current Feynman diagram. We have a :math:`\mathbf\sigma_3` matrix instead of an matrix like
+
+   .. math::
+      \begin{pmatrix}1 & 0 \\ 0 & 0 \end{pmatrix}
+
+   because we rewrite this matrix with Pauli matrices and identy. Then the identities are neglected.
+
+   This can be done properly because Pauli matrice and Identy matrix form a complete basis.
+
+In a more compact form, this Hamiltonian is
+
+.. math::
+   \mathbf H &= \frac{\delta^2m}{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
+   & = \left(\frac{\Delta}{2} -\frac{\delta^2m}{4E}\right) \cos 2\theta \mathbf {\sigma_3 } + \frac{\delta^2m}{4E} \sin 2\theta \mathbf{\sigma_1}
 
 
 
