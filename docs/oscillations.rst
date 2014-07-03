@@ -365,7 +365,7 @@ In a more compact form, this Hamiltonian is
 
 .. math::
    \mathbf H &= \frac{\delta^2m}{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
-   & = \left(\frac{\Delta}{2} -\frac{\delta^2m}{4E}\right) \cos 2\theta \mathbf {\sigma_3 } + \frac{\delta^2m}{4E} \sin 2\theta \mathbf{\sigma_1}
+   & = \left(\frac{\Delta}{2} -\frac{\delta^2m}{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{\delta^2m}{4E} \sin 2\theta \mathbf{\sigma_1}
 
 .. note::
    Eigenvalues of :math:`\mathbf {\sigma_3}` are 1 and -1 with corresponding eigenvectors
@@ -379,6 +379,18 @@ In a more compact form, this Hamiltonian is
       \begin{pmatrix}0\\ 1 \end{pmatrix}.
 
 As we have mentioned, this Hamiltonian is in flavour basis. When mixing angle :math:`\theta \to 0`, the eigenvectors are almost eigenvectors of :math:`\mathbf{\sigma_3}` which are electron neutrinos and x type neutrinos.
+
+
+.. admonition:: Interesting Limits
+   :class: note
+
+   Before we really solve the equation of motion, some interesting limits can be shown here.
+
+   **Interaction :math:`\Delta` is much larger than cacuum mixing terms.** In this case, the Hamiltonian becomes diagonalized and the neutrinos will stay on it's flavour eigenstates in the propagation.
+
+   **Interaction :math:`\Delta` is much smaller than vacuum mixing terms.** The propagation reduces to vacuum case.
+
+
 
 
 To see this effect quantitively, we need to diagonalize this Hamiltonian. Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{nu_L(x)}, \ket{nu_H(x)}\}`,
@@ -402,6 +414,47 @@ This new rotation in matrix form is
       \mathbf {H_{xd}} = \mathbf{U_x^{-1}} \mathbf H \mathbf {U_x}.
 
    The second step is to set the off diagonal elements to zero. By solving the equaions we can find the :math:`\sin 2\theta(x)` and :math:`\cos 2\theta(x)`.
+
+   .. math::
+      \mathbf{H_{xd}} &= \mathbf{U^{-1}_x} \left( A_1 \mathbf{\sigma_1} + A_3 \mathbf{\sigma_3} \right) \\
+      & = \begin{pmatrix} A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) & A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x) \\ A_3 \sin 2\theta(x) + A_1\cos 2\theta(x) &  - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) \end{pmatrix},
+
+   where
+
+   .. math::
+      A_3 &  = \frac{\Delta}{2} - \frac{\delta^2 m}{4E}\cos 2\theta \\
+      A_1 & =  \frac{\delta^2 m}{4E} \sin 2\theta.
+
+   Set the off-diagonal elements to zero,
+
+   .. math::
+      A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x)  = 0
+
+   So the solutions are
+
+   .. math::
+      \sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \\
+      \cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}}.
+
+   **This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.**
+
+
+.. note::
+   As :math:`\Delta \to \infty`, :math:`A_3\to \infty` and :math:`\sin 2\theta(x)` vanishes. Thus the neutrino will stay on flavour eigenstates.
+
+With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos,
+
+.. math::
+   i \hbar \partial_t \ket{\psi_x(t)} = \mathbf H_{xd} \ket{\psi_x(t)}.
+
+We imediately know the propagation is on the heavy-light mass eigenstates under adiabatic condition WITHOUT solving the equation. The eigenvalue of these states are :math:`-\sqrt{A_3^2+A_1^2}` and :math:`\sqrt{A_3^2+A_1^2}`. The absolute value of these solutions grow as :math:`\Delta` becomes large.
+
+
+.. admonition:: Is Adabatic Condition Valid Here?
+   :class: note
+
+   Haxton's paper.
+
 
 
 
