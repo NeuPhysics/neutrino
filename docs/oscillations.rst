@@ -304,7 +304,27 @@ The first two diagrams will add two equal terms on the diagonal terms of Hamilto
 
 This symmetry breaking will change the evolution and makes the states more electron neutrino.
 
-This is the MSW effect in short.
+This is the reason of MSW effect.
+
+The MSW effect itself can be made clear using the example of neutrino oscillations in our sun.
+
+
+.. admonition:: Small Mixing Angle
+   :class: note
+
+   Take two flavour mixing as an example.
+
+   .. math::
+      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+
+   In the small mixing angle limit,
+
+   .. math::
+      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+
+   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`nu_1`. By :math:`nu_1` we mean the state with energy :math:`\frac{delta^2m}{4E}` in vacuum.
+
+
 
 
 
