@@ -340,7 +340,7 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
    We need this intuitive picture to understand MSW effect.
 
 
-The Hamiltonian for neutinos with neutrino-matter interaction is
+The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
 
 .. math::
    \mathbf H = \frac{\delta^2m}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
@@ -366,6 +366,44 @@ In a more compact form, this Hamiltonian is
 .. math::
    \mathbf H &= \frac{\delta^2m}{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
    & = \left(\frac{\Delta}{2} -\frac{\delta^2m}{4E}\right) \cos 2\theta \mathbf {\sigma_3 } + \frac{\delta^2m}{4E} \sin 2\theta \mathbf{\sigma_1}
+
+.. note::
+   Eigenvalues of :math:`\mathbf {\sigma_3}` are 1 and -1 with corresponding eigenvectors
+
+   .. math::
+      \begin{pmatrix}1\\ 0 \end{pmatrix}
+
+   and
+
+   .. math::
+      \begin{pmatrix}0\\ 1 \end{pmatrix}.
+
+As we have mentioned, this Hamiltonian is in flavour basis. When mixing angle :math:`\theta \to 0`, the eigenvectors are almost eigenvectors of :math:`\mathbf{\sigma_3}` which are electron neutrinos and x type neutrinos.
+
+
+To see this effect quantitively, we need to diagonalize this Hamiltonian. Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{nu_L(x)}, \ket{nu_H(x)}\}`,
+
+.. math::
+   \ket{nu_L(x)} &= \cos\theta(x) \ket{nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
+   \ket{nu_H(x)} & =  \sin\theta(x) \ket{nu_e} - \cos\theta(x) \ket{nu_\mu}.
+
+This new rotation in matrix form is
+
+.. math::
+   \begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &= \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{nu_e} \\ \ket{nu_x} \end{pmatrix} \\
+   & = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{nu_e} \\ \ket{nu_x} \end{pmatrix}
+
+.. admonition:: Diagonalize Hamiltonian
+   :class: note
+
+   To diagonilize it, we need to multiply on both sides the rotation matrix and its inverse,
+
+   .. math::
+      \mathbf {H_{xd}} = \mathbf{U_x^{-1}} \mathbf H \mathbf {U_x}.
+
+   The second step is to set the off diagonal elements to zero. By solving the equaions we can find the :math:`\sin 2\theta(x)` and :math:`\cos 2\theta(x)`.
+
+
 
 
 
