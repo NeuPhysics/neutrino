@@ -236,7 +236,7 @@ Since Pauli matrices plus identity forms a complete basis for all 2 by 2 matrice
 
 
 MSW Effect
-```````````````````````````````
+~~~~~~~~~~~~
 
 Neutrinos do interact with matter, mostly electrons in most cases.
 
@@ -386,14 +386,14 @@ As we have mentioned, this Hamiltonian is in flavour basis. When mixing angle :m
 
    Before we really solve the equation of motion, some interesting limits can be shown here.
 
-   **Interaction :math:`\Delta` is much larger than cacuum mixing terms.** In this case, the Hamiltonian becomes diagonalized and the neutrinos will stay on it's flavour eigenstates in the propagation.
+   **Interaction** :math:`\Delta` **is much larger than cacuum mixing terms.** In this case, the Hamiltonian becomes diagonalized and the neutrinos will stay on it's flavour eigenstates in the propagation.
 
-   **Interaction :math:`\Delta` is much smaller than vacuum mixing terms.** The propagation reduces to vacuum case.
-
-
+   **Interaction** :math:`\Delta` **is much smaller than vacuum mixing terms.** The propagation reduces to vacuum case.
 
 
-To see this effect quantitively, we need to diagonalize this Hamiltonian. Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{nu_L(x)}, \ket{nu_H(x)}\}`,
+
+
+To see this effect quantitively, we need to diagonalize this Hamiltonian (**Can we actually diagonalize the equation of motion? NO!**). Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{nu_L(x)}, \ket{nu_H(x)}\}`,
 
 .. math::
    \ket{nu_L(x)} &= \cos\theta(x) \ket{nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
@@ -438,6 +438,8 @@ This new rotation in matrix form is
 
    **This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.**
 
+   **The point is, for equation of motion, we have a differential with respect to position** :math:`x`! **So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and de-diagonalize the Hamiltonian on RHS.**
+
 
 .. note::
    As :math:`\Delta \to \infty`, :math:`A_3\to \infty` and :math:`\sin 2\theta(x)` vanishes. Thus the neutrino will stay on flavour eigenstates.
@@ -445,7 +447,7 @@ This new rotation in matrix form is
 With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos,
 
 .. math::
-   i \hbar \partial_t \ket{\psi_x(t)} = \mathbf H_{xd} \ket{\psi_x(t)}.
+   i \hbar \partial_t \ket{\psi_x(t)} = \mathbf{Extra Matrix From LHS} \mathbf H_{xd} \ket{\psi_x(t)}.
 
 We imediately know the propagation is on the heavy-light mass eigenstates under adiabatic condition WITHOUT solving the equation. The eigenvalue of these states are :math:`-\sqrt{A_3^2+A_1^2}` and :math:`\sqrt{A_3^2+A_1^2}`. The absolute value of these solutions grow as :math:`\Delta` becomes large.
 
@@ -456,7 +458,11 @@ We imediately know the propagation is on the heavy-light mass eigenstates under 
    Haxton's paper.
 
 
+From the two solutions we know there is a gap between the two trajectories. We draw a figure with electron number density as the horizontal axis and energy as the vertical axis.
 
+
+.. image:: assets/msw.png
+   :align: center
 
 
 
