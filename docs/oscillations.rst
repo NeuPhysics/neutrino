@@ -337,7 +337,7 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
 
    which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`nu_1`. By :math:`nu_1` we mean the state with energy :math:`\frac{delta^2m}{4E}` in vacuum.
 
-   We need this intuitive picture to understand MSW effect.
+   We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. **However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.** This is the key idea in physics of MSW effect.
 
 
 The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
@@ -463,6 +463,8 @@ From the two solutions we know there is a gap between the two trajectories. We d
 
 .. image:: assets/msw.png
    :align: center
+
+
 
 
 
