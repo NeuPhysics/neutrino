@@ -461,9 +461,10 @@ We imediately know the propagation is on the heavy-light mass eigenstates under 
 From the two solutions we know there is a gap between the two trajectories. We draw a figure with electron number density as the horizontal axis and energy as the vertical axis.
 
 
-.. image:: assets/msw.png
+.. figure:: assets/msw.png
    :align: center
 
+   `Neutrino physics <http://scitation.aip.org/content/aapt/journal/ajp/68/1/10.1119/1.19368>`_ by Wick C. Haxton and Barry R. Holstein.
 
 
 
