@@ -348,7 +348,7 @@ The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis)
 where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
 
 .. note::
-   As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`
+   As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`.
 
 
 .. note::
@@ -393,17 +393,17 @@ As we have mentioned, this Hamiltonian is in flavour basis. When mixing angle :m
 
 
 
-To see this effect quantitively, we need to diagonalize this Hamiltonian (**Can we actually diagonalize the equation of motion? NO!**). Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{nu_L(x)}, \ket{nu_H(x)}\}`,
+To see this effect quantitively, we need to diagonalize this Hamiltonian (**Can we actually diagonalize the equation of motion? NO!**). Equivalently, we can rewrite it in the basis of mass eigenstates :math:`\{\ket{\nu_L(x)}, \ket{\nu_H(x)}\}`,
 
 .. math::
-   \ket{nu_L(x)} &= \cos\theta(x) \ket{nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
-   \ket{nu_H(x)} & =  \sin\theta(x) \ket{nu_e} - \cos\theta(x) \ket{nu_\mu}.
+   \ket{\nu_L(x)} &= \cos\theta(x) \ket{\nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
+   \ket{\nu_H(x)} & =  \sin\theta(x) \ket{\nu_e} - \cos\theta(x) \ket{\nu_\mu}.
 
 This new rotation in matrix form is
 
 .. math::
-   \begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &= \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{nu_e} \\ \ket{nu_x} \end{pmatrix} \\
-   & = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{nu_e} \\ \ket{nu_x} \end{pmatrix}
+   \begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &= \begin{pmatrix} \cos \theta(x) & -\sin\theta(x) \\ \sin\theta(x) & \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} \\
+   & = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix}
 
 .. admonition:: Diagonalize Hamiltonian
    :class: note
