@@ -447,7 +447,7 @@ This new rotation in matrix form is
 With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos,
 
 .. math::
-   i \hbar \partial_t \ket{\psi_x(t)} = \mathbf{Extra Matrix From LHS} \mathbf H_{xd} \ket{\psi_x(t)}.
+   i \hbar \partial_t \ket{\psi_x(t)} = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{xd} \ket{\psi_x(t)}.
 
 We imediately know the propagation is on the heavy-light mass eigenstates under adiabatic condition WITHOUT solving the equation. The eigenvalue of these states are :math:`-\sqrt{A_3^2+A_1^2}` and :math:`\sqrt{A_3^2+A_1^2}`. The absolute value of these solutions grow as :math:`\Delta` becomes large.
 
