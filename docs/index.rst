@@ -26,6 +26,7 @@ Table of Contents:
 .. toctree::
    :maxdepth: 2
 
+   preliminary.rst
    mass.rst
    oscillations.rst
    collective.rst
