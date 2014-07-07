@@ -490,6 +490,45 @@ From the two solutions we know there is a gap between the two trajectories. We d
 
 
 
+Determine :math:`\vert\Delta m^2\vert` and :math:`\theta`
+----------------------------------------------------------------------
+
+The neutrino experimantal data shows the mixing angles are [1]_
+
+1. :math:`\theta_{23}=39^{\circ}\pm 2 ^{\circ}`;
+2. :math:`\theta_{13}=8.9^{\circ}\pm 0.5^{\circ}`;
+3. :math:`\theta_{12}=34^{\circ}\pm 1^{\circ}`.
+
+Experimental result of the :math:`\delta^2m_{ij}`s are [1]_
+
+1. :math:`\delta^2 m_{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
+2. :math:`\lvert\delta^2 m_{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
+
+
+.. admonition:: Definition of Mass-squared Difference
+   :class: note
+
+   :math:`\delta^2m_{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta^2 m_{31}=\delta^2 m{32}-\delta^2 m_{21}`.
+
+
+As :math:`\lvert \delta^2 m_{21}\rvert\ll \lvert\delta^2 m_{32}\rvert`, we should have :math:`\delta^2 m_{31} \approx \delta^2 m_{32}`.
+
+
+
+Atmospheric Results
+~~~~~~~~~~~~~~~~~~~~
+
+Accelerator Results
+~~~~~~~~~~~~~~~~~~~~~
+
+Reactor Results
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
 
 Q&A
 -----
@@ -598,40 +637,6 @@ Q&A
    **Momentum transfer** for a plan wave case in Born approximation is
 
 
-
-Determine :math:`\vert\Delta m^2\vert` and :math:`\theta`
-----------------------------------------------------------------------
-
-The neutrino experimantal data shows the mixing angles are [1]_
-
-1. :math:`\theta_{23}=39^{\circ}\pm 2 ^{\circ}`;
-2. :math:`\theta_{13}=8.9^{\circ}\pm 0.5^{\circ}`;
-3. :math:`\theta_{12}=34^{\circ}\pm 1^{\circ}`.
-
-Experimental result of the :math:`\delta^2m_{ij}`s are [1]_
-
-1. :math:`\delta^2 m_{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
-2. :math:`\lvert\delta^2 m_{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
-
-
-.. admonition:: Definition of Mass-squared Difference
-   :class: note
-
-   :math:`\delta^2m_{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta^2 m_{31}=\delta^2 m{32}-\delta^2 m_{21}`.
-
-
-As :math:`\lvert \delta^2 m_{21}\rvert\ll \lvert\delta^2 m_{32}\rvert`, we should have :math:`\delta^2 m_{31} \approx \delta^2 m_{32}`.
-
-
-
-Atmospheric Results
-~~~~~~~~~~~~~~~~~~~~
-
-Accelerator Results
-~~~~~~~~~~~~~~~~~~~~~
-
-Reactor Results
-~~~~~~~~~~~~~~~~~~~~~
 
 
 
