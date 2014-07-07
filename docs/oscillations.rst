@@ -48,6 +48,20 @@ Neutrinos evolve in mass eigenstates. So we need to describe flavour states :mat
 
 where :math:`U^*_{\alpha j}` is the element of neutrino mixing matrix.
 
+
+.. admonition:: PMNS Mixing Matrix
+   :class: note
+
+   Pontecorvo-Maki-Nakagawa-Sakata (PMNS) mixing matrix is the product of three rotation matrices, in addition to an extra phase, [1]_
+
+   .. math::
+      \mathbf U &= \mathbf {U_{23}} \times \mathbf {U_{13,\delta}} \times \mathbf {U_{12}} \\
+      & = \begin{pmatrix} 1 & 0 & 0 \\ 0 &\cos\theta_{23} & \sin\theta_{23} \\ 0 -\sin\theta_{23} & \cos\theta_{23} \end{pmatrix}  \begin{pmatrix} \cos\theta_{13} & 0 & e^{i\delta} \sin\theta_{13} \\ 0 & 1 & 0 \\ -e^{i\delta}\sin\theta_{13} & 0 & \cos\theta_{13}  \end{pmatrix} \begin{pmatrix} \cos\theta_{12} & \sin\theta_{12} & 0 \\ -\sin\theta_{12} & \cos \theta_{12} & 0 \\ 0 & 0 & 1 \end{pmatrix}
+
+
+
+
+
 In ultra relativistic case, we can simply find out the time evolution, which is equivalent to distance evolution,
 
 .. math::
@@ -602,6 +616,8 @@ Reactor Results
 
 
 
+Refs & Notes
+------------------
 
 
-.
+.. [1] `Neutrino tomography <http://scitation.aip.org/docserver/fulltext/aapt/journal/ajp/81/9/1.4817314.pdf?expires=1404757170&id=id&accname=389573&checksum=665C4B4FC4EA96902216439ECF5AC17D>`_ by Margaret A. Millhouse & David C. Latimer, American Journal of Physics 81, 646 (2013); `doi: 10.1119/1.4817314 <http://dx.doi.org/10.1119/1.4817314>`_ .
