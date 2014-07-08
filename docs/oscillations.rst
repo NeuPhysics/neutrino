@@ -58,7 +58,20 @@ where :math:`U^*_{\alpha j}` is the element of neutrino mixing matrix.
       \mathbf U &= \mathbf {U_{23}} \times \mathbf {U_{13,\delta}} \times \mathbf {U_{12}} \\
       & = \begin{pmatrix} 1 & 0 & 0 \\ 0 &\cos\theta_{23} & \sin\theta_{23} \\ 0 -\sin\theta_{23} & \cos\theta_{23} \end{pmatrix}  \begin{pmatrix} \cos\theta_{13} & 0 & e^{i\delta} \sin\theta_{13} \\ 0 & 1 & 0 \\ -e^{i\delta}\sin\theta_{13} & 0 & \cos\theta_{13}  \end{pmatrix} \begin{pmatrix} \cos\theta_{12} & \sin\theta_{12} & 0 \\ -\sin\theta_{12} & \cos \theta_{12} & 0 \\ 0 & 0 & 1 \end{pmatrix}
 
+   The :math:`\delta` is the CP violation phase.
 
+   The origin of the phase is from the fact that we need 4 degrees of freedom for this mixing matrix while a convinient way is to write down the SO(3) rotation matrix then put this extra phase here.
+
+
+.. admonition:: More About Phase of Nutrinos
+   :class: note
+
+   The mixing of mass eigenstates is
+
+   .. math::
+      \begin{pmatrix} \nu_e \\ \nu_\mu \\ \nu_\tau  \end{pmatrix} = \begin{pmatrix} e^{i\alpha_1} & 0 & 0 \\ 0 & e^{i\alpha_2} & 0 \\ 0 & 0 & e^{i\alpha_3} \end{pmatrix} \text{Some Unitary Matrix} \begin{pmatrix} 1 & 0 & 0 \\ 0 & e^{i\beta_2} & 0 \\ 0 & 0 & e^{i\beta_3} \end{pmatrix}
+
+   Since the phase of neutrinos can be redefined, we have 3 phases for each flavour and a global phase being arbitary. The first matrix on the RHS can be eliminated. **The third matrix on the RHS is not important for neutrino oscillations so it can be neglected.** (Proof required)
 
 
 
