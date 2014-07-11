@@ -126,7 +126,9 @@ All the Pauli matrices plus identity form a complate basis for 2 by 2 matrices. 
 
 .. math::
    \mathbf H &\to \frac{\delta^2m}{4E} \begin{pmatrix} -\cos 2\theta & \sin 2 \theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
-   & \equiv \begin{pmatrix} -c & s \\ s & c \end{pmatrix},
+   & \equiv \begin{pmatrix} -c & s \\ s & c \end{pmatrix}\\
+   & = -c \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} + s\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+   & = -c \mathbf{\sigma_3} + s \mathbf{ \sigma_1},
 
 where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
 
