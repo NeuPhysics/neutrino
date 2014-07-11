@@ -8,7 +8,7 @@ Neutrino Oscillation And Master Equation
 
 .. admonition:: Answer
    :class: note
-   
+
    The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.
 
 
@@ -90,7 +90,30 @@ The quantum master equation we would like to use is
    \partial_t \hat \rho_d = - i\hat D\hat L \hat \rho_d -  \hat D\hat L \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(1-\hat D)\hat L \hat \rho_d(t') .
 
 
+Vacuum Oscillation Master Equation
+------------------------------------------------
 
+
+Using this projection method, one can find out the master equation for vacuum oscillations.
+
+
+
+
+
+
+Neutrino Oscillation in Matter - A Possible Master Equation Approach
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+Self Interaction Between Neutrinos
+-----------------------------------------------
+
+The neutrino-neutrino interaction Hamiltonian involves the density matrix, which makes it very hard to find a closed equation.
 
 
 .
