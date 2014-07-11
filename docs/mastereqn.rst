@@ -97,6 +97,41 @@ Vacuum Oscillation Master Equation
 Using this projection method, one can find out the master equation for vacuum oscillations.
 
 
+.. admonition:: Pauli Matrices
+   :class: note
+
+   We will use Pauli matrices in the following part. Here is a review of them.
+
+   1. Pauli Matrices,
+
+       .. math::
+          \sigma_1 &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+          \sigma_2 & = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \\
+          \sigma_3 & = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+
+    2. Commutation Relations,
+
+        .. math::
+           [\sigma_1,\sigma_2] &= 2i \sigma_3 \\
+           [\sigma_2,\sigma_3] &= 2i \sigma_1 \\
+           [\sigma_3,\sigma_1] &= 2i \sigma_2.
+
+        The general form is
+
+        .. math::
+           [\sigma_i,\sigma_j] &= 2i \epsilon_{ijk} \sigma_k.
+
+
+All the Pauli matrices plus identity form a complate basis for 2 by 2 matrices. Vacuum oscillation Hamiltonian is
+
+.. math::
+   \mathbf H &\to \frac{\delta^2m}{4E} \begin{pmatrix} -\cos 2\theta & \sin 2 \theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
+   & \equiv \begin{pmatrix} -c & s \\ s & c \end{pmatrix},
+
+where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
+
+
+
 
 
 
