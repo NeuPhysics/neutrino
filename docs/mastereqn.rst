@@ -132,6 +132,21 @@ All the Pauli matrices plus identity form a complate basis for 2 by 2 matrices. 
 
 where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
 
+.. admonition:: Liouville Operator
+   :class: note
+
+   Liouville operator in quantum mechanics is
+
+   .. math::
+      \hat L  =  [H, *],
+
+   where the asterisk is the slot for an operator.
+
+   In the case of vacuum oscillation, we can calculate the following results,
+
+   .. math::
+      \hat L \sigma_1 &= [H, \sigma_1] = 
+
 
 
 
