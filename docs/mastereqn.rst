@@ -157,7 +157,26 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
    **Diagonalized density matrix** :math:`\rho_d=\mathrm {diag}(\rho_1,\rho_2)` is
 
    .. math::
-      \mathrm {\rho_d} &= \begin{pmatrix}  \end{pmatrix} 
+      \mathrm {\rho_d} &= \begin{pmatrix} \rho_1 & 0 \\ 0 & \rho_2 \end{pmatrix} \\
+      & = \frac{1}{2} \left(\begin{pmatrix} \rho_1 -\rho_2 & 0 \\ 0 & \rho_2 -\rho_1 \end{pmatrix} + \begin{pmatrix} \rho_1+\rho_2 & 0 \\ 0 & \rho_1 + \rho_2 \end{pmatrix} \right) \\
+      & = \frac{1}{2}\left( (\rho_1-\rho_2)\sigma_3 + (\rho_1+\rho_2)\mathbf I \right)
+
+   Apply :math:`(1-\mathscr D)\hat L` we get
+
+   .. math::
+      (1-\mathscr D)\hat L \rho_d = i s (\rho_2-\rho_1) \sigma_2.
+
+
+.. admonition:: Exponential Operator
+   :class: note
+
+   Exponential operator is understood when series expansion is done,
+
+   .. math::
+      e^{\hat A} = \hat I + \hat A + \frac{1}{2!}{\hat A}^2 + \frac{1}{3!} {\hat A}^3 +\cdots
+
+
+
 
 
 
