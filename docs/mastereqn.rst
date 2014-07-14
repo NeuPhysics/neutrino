@@ -145,7 +145,20 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
    In the case of vacuum oscillation, we can calculate the following results,
 
    .. math::
-      \hat L \sigma_1 &= [H, \sigma_1] = 
+      \hat L \sigma_1 &= [H, \sigma_1] = -2ic\sigma_2 \\
+      \hat L \sigma_2 &= [H, \sigma_2] = 2ic\sigma_1 + 2is\sigma_3.
+
+   Notice that :math:`\sigma_3` has diagonal terms only. It will dispear when we apply :math:`1-\mathscr D` which removes the diagonal elements, i.e.,
+
+   .. math::
+      (1-\mathscr D)\hat L \sigma_1 &= -2ic\sigma_2 \\
+      (1-\mathscr D)\hat L \sigma_2 &= 2ic\sigma_1.
+
+   **Diagonalized density matrix** :math:`\rho_d=\mathrm {diag}(\rho_1,\rho_2)` is
+
+   .. math::
+      \mathrm {\rho_d} &= \begin{pmatrix}  \end{pmatrix} 
+
 
 
 
