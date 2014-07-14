@@ -164,7 +164,8 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
    Apply :math:`(1-\mathscr D)\hat L` we get
 
    .. math::
-      (1-\mathscr D)\hat L \rho_d = i s (\rho_2-\rho_1) \sigma_2.
+      (1-\mathscr D)\hat L \rho_d &= i s (\rho_2-\rho_1) \sigma_2,\\
+      \mathscr D \hat L \rho_d & = -\frac{1}{2}c (\rho_1+\rho_2)\sigma_3.
 
 
 .. admonition:: Exponential Operator
@@ -179,8 +180,9 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
 Recall that the master equation is
 
 .. math::
-   \partial_t \rho_d(t) = - i \mathscr D \hat L \rho_d - \mathscr D\int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t')
-
+   \partial_t \rho_d(t) &= - i \mathscr D \hat L \rho_d - \mathscr D\int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\
+   & = 
 
 
 
