@@ -209,11 +209,17 @@ We will calculate it term by term and find the pattern.
    T_3 & = -i(1-\mathscr D)\hat L (t-t') (- 4c^2 (t-t')^2 \sigma_2) \\
    & = -2^3c^3(t-t')^3\sigma_1
 
+.. math::
+   T_4 & = -i(1-\mathscr D)\hat L (t-t') (-2^3c^3(t-t')^3\sigma_1) \\
+   & = -i (t-t') (-2^3 c^3(t-t')^3) (-2ic\sigma_2) \\
+   & = 2^4 c^4 (t-t')^4 \sigma_2
+
+
 
 Carry on this calculation we can infer that
 
 .. math::
-   e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &= \sigma_2 + 2c\sigma_1 (t-t') + \frac{1}{2}(- 2^2 c^2 (t-t')^2 \sigma_2) +  \frac{1}{3!}(-2^3c^3(t-t')^3\sigma_1) + \cdots
+   e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &= \sigma_2 + 2c\sigma_1 (t-t') + \frac{1}{2}(- 2^2 c^2 (t-t')^2 \sigma_2) +  \frac{1}{3!}(-2^3c^3(t-t')^3\sigma_1) + 2^4 c^4 (t-t')^4 \sigma_2  +  \cdots
 
 
 
