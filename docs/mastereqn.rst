@@ -13,6 +13,12 @@ Neutrino Oscillation And Master Equation
 
 
 
+.. admonition:: WHY
+   :class: warning
+
+   Why do you need a master equation approach? IDK.
+
+
 Quantum Master Equation
 ---------------------------------
 
@@ -161,6 +167,9 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
       & = \frac{1}{2} \left(\begin{pmatrix} \rho_1 -\rho_2 & 0 \\ 0 & \rho_2 -\rho_1 \end{pmatrix} + \begin{pmatrix} \rho_1+\rho_2 & 0 \\ 0 & \rho_1 + \rho_2 \end{pmatrix} \right) \\
       & = \frac{1}{2}\left( (\rho_1-\rho_2)\sigma_3 + (\rho_1+\rho_2)\mathbf I \right)
 
+   .. note::
+      Actually :math:`\rho_1+\rho_2=1` for such a system. We'll see the proof of this later.
+
    Apply :math:`(1-\mathscr D)\hat L` we get
 
    .. math::
@@ -248,11 +257,25 @@ The master equation we need is
 
 .. math::
    \partial_t \rho_d(t) &= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
-   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s (\rho_2-\rho_1) \left(\sigma_1 \frac{\sin^2(ct)}{c} + \sigma_2 \frac{\sin(2ct)}{2c}\right) \\
-   & =   \frac{1}{2}\left( ic(\rho_1+\rho_2) + s^2 (\rho_2-\rho_1) \frac{\sin(2ct)}{c} 2\right)\sigma_3.
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s \int_0^t  dt' (\rho_2-\rho_1) \left(\sigma_2 \cos(2c(t-t'))\right)   \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 -  i s G(t) \mathscr D \hat L  \sigma_2   \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 G(t) \sigma_3 \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' (\rho_2-\rho_1)  \sigma_3 \cos(2c(t-t')) \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + (\rho_1+\rho_2) \mathbf I \right) \cos(2c(t-t')) \\
+   & = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t'))
 
 
-Without writing down the solution we notice that it shows oscillationary behavior.
+In the calculation, :math:`G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))`.
+
+
+
+.. admonition:: What to Do?
+   :class: warning
+
+   I don't see anything good about this method. What to do next? I can predict that it's also won't cost a lot to solve the MSW effect. But what's the point? These problems are not very hard to solve even using wave function method.
+
+   I am just leaving this result here and move on to other topics.
+
 
 
 

@@ -181,7 +181,11 @@
 <p><img src="_images/math/cff61b0c03fbb63c8da881e80c98aa11773e26cf.png" alt="\mathrm {\rho_d} &amp;= \begin{pmatrix} \rho_1 &amp; 0 \\ 0 &amp; \rho_2 \end{pmatrix} \\
 &amp; = \frac{1}{2} \left(\begin{pmatrix} \rho_1 -\rho_2 &amp; 0 \\ 0 &amp; \rho_2 -\rho_1 \end{pmatrix} + \begin{pmatrix} \rho_1+\rho_2 &amp; 0 \\ 0 &amp; \rho_1 + \rho_2 \end{pmatrix} \right) \\
 &amp; = \frac{1}{2}\left( (\rho_1-\rho_2)\sigma_3 + (\rho_1+\rho_2)\mathbf I \right)"/></p>
-</div><p>Apply <img class="math" src="_images/math/3d3505c8a7bfc6d106d2bb45494d7443f92e4990.png" alt="(1-\mathscr D)\hat L"/> we get</p>
+</div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Actually <img class="math" src="_images/math/5794b9e0382a8504b56122fb35ded02491eb63df.png" alt="\rho_1+\rho_2=1"/> for such a system. We&#8217;ll see the proof of this later.</p>
+</div>
+<p>Apply <img class="math" src="_images/math/3d3505c8a7bfc6d106d2bb45494d7443f92e4990.png" alt="(1-\mathscr D)\hat L"/> we get</p>
 <div class="last math">
 <p><img src="_images/math/82277c562ca1a29f0f6862555bffbc1d36417102.png" alt="(1-\mathscr D)\hat L \rho_d &amp;= i s (\rho_2-\rho_1) \sigma_2,\\
 \mathscr D \hat L \rho_d &amp; = -\frac{1}{2}c (\rho_1+\rho_2)\sigma_3."/></p>
@@ -237,9 +241,13 @@
 </div><p>where <img class="math" src="_images/math/bea1dc9b1c1db3c1e6c31756e3e757a317b7e34c.png" alt="M\equiv 2 c (t-t')"/>.</p>
 <p>The master equation we need is</p>
 <div class="math">
-<p><img src="_images/math/4d6289a2239029815a54b60bd8ccbbcfbb0b5f48.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
-&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s (\rho_2-\rho_1) \left(\sigma_1 \frac{\sin^2(ct)}{c} + \sigma_2 \frac{\sin(2ct)}{2c}\right) \\
-&amp; =   \frac{1}{2}\left( ic(\rho_1+\rho_2) + s^2 (\rho_2-\rho_1) \frac{\sin(2ct)}{c} 2\right)\sigma_3."/></p>
+<p><img src="_images/math/03a235864606fa03058f79670ef0791ba1af86e3.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s \int_0^t  dt' (\rho_2-\rho_1) \left(\sigma_2 \cos(2c(t-t'))\right)   \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 -  i s G(t) \mathscr D \hat L  \sigma_2   \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 G(t) \sigma_3 \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' (\rho_2-\rho_1)  \sigma_3 \cos(2c(t-t')) \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + (\rho_1+\rho_2) \mathbf I \right) \cos(2c(t-t')) \\
+&amp; = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t')) \\"/></p>
 </div><p>Without writing down the solution we notice that it shows oscillationary behavior.</p>
 </div>
 <div class="section" id="neutrino-oscillation-in-matter-a-possible-master-equation-approach">
