@@ -188,7 +188,7 @@ So we need to calculate
 
 .. math::
    e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &= \left[1 -i(1-\mathscr D)\hat L (t-t')  + \frac{1}{2} (-i(1-\mathscr D)\hat L (t-t') )^2 + \frac{1}{3!}(-i(1-\mathscr D)\hat L (t-t') )^3 + \cdots \right]\sigma_2
-   &\equiv T_0 + T_1 + T_2 + T_3 + \cdots .
+   &\equiv T_0 + T_1 + \frac{1}{2} T_2 +  \frac{1}{3!}T_3 + \cdots .
 
 
 We will calculate it term by term and find the pattern.
@@ -198,9 +198,22 @@ We will calculate it term by term and find the pattern.
 
 .. math::
    T_1 &= -i(1-\mathscr D)\hat L (t-t') \sigma_2 \\
-   & = 
+   & = 2c\sigma_1 (t-t')
+
+.. math::
+   T_2 & = -i(1-\mathscr D)\hat L (t-t') (2c\sigma_1 (t-t')) \\
+   & = -i(t-t')^2 2c(-2ic\sigma_2) \\
+   & = - 2^2 c^2 (t-t')^2 \sigma_2
+
+.. math::
+   T_3 & = -i(1-\mathscr D)\hat L (t-t') (- 4c^2 (t-t')^2 \sigma_2) \\
+   & = -2^3c^3(t-t')^3\sigma_1
 
 
+Carry on this calculation we can infer that
+
+.. math::
+   e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &= \sigma_2 + 2c\sigma_1 (t-t') + \frac{1}{2}(- 2^2 c^2 (t-t')^2 \sigma_2) +  \frac{1}{3!}(-2^3c^3(t-t')^3\sigma_1) + \cdots
 
 
 
