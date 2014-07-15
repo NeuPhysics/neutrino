@@ -194,8 +194,8 @@
 </div></div>
 <p>Recall that the master equation is</p>
 <div class="math">
-<p><img src="_images/math/140eab4e7686b5c9c85cd7019682132d230c2749.png" alt="\partial_t \rho_d(t) &amp;= - i \mathscr D \hat L \rho_d - \mathscr D\int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
-&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\"/></p>
+<p><img src="_images/math/a8eaf8724c21f6783acd06a996caa195e65b65e8.png" alt="\partial_t \rho_d(t) &amp;= - i \mathscr D \hat L \rho_d - \mathscr D\hat L \int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D\hat L \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\"/></p>
 </div><p>So we need to calculate</p>
 <div class="math">
 <p><img src="_images/math/4ee7a48ca93475952c776c106536475964229c7f.png" alt="e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \left[1 -i(1-\mathscr D)\hat L (t-t')  + \frac{1}{2} (-i(1-\mathscr D)\hat L (t-t') )^2 + \frac{1}{3!}(-i(1-\mathscr D)\hat L (t-t') )^3 + \cdots \right]\sigma_2\\
@@ -235,10 +235,11 @@
 <div class="math">
 <p><img src="_images/math/e9c0d801e86e7da9ff4feade5e78af637fb5d79c.png" alt="e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \sigma_1 \sin(M) + \sigma_2 \cos(M),"/></p>
 </div><p>where <img class="math" src="_images/math/bea1dc9b1c1db3c1e6c31756e3e757a317b7e34c.png" alt="M\equiv 2 c (t-t')"/>.</p>
-<p>Far before this result one can see that this part is only relavent to off diagonal terms. Thus it goes away after we apply the operator <img class="math" src="_images/math/256b3d71c649ff0cfb9257c2ab35e856505c03d3.png" alt="\mathscr D"/>.</p>
 <p>The master equation we need is</p>
 <div class="math">
-<p><img src="_images/math/2beffb11d6e07e0c5aafe6e60b174fd62618a810.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 ."/></p>
+<p><img src="_images/math/4d6289a2239029815a54b60bd8ccbbcfbb0b5f48.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
+&amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s (\rho_2-\rho_1) \left(\sigma_1 \frac{\sin^2(ct)}{c} + \sigma_2 \frac{\sin(2ct)}{2c}\right) \\
+&amp; =   \frac{1}{2}\left( ic(\rho_1+\rho_2) + s^2 (\rho_2-\rho_1) \frac{\sin(2ct)}{c} 2\right)\sigma_3."/></p>
 </div><p>Without writing down the solution we notice that it shows oscillationary behavior.</p>
 </div>
 <div class="section" id="neutrino-oscillation-in-matter-a-possible-master-equation-approach">

@@ -180,8 +180,8 @@ where :math:`c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta` and similarly for s.
 Recall that the master equation is
 
 .. math::
-   \partial_t \rho_d(t) &= - i \mathscr D \hat L \rho_d - \mathscr D\int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
-   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\
+   \partial_t \rho_d(t) &= - i \mathscr D \hat L \rho_d - \mathscr D\hat L \int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D\hat L \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\
 
 
 So we need to calculate
@@ -244,12 +244,12 @@ Now we see that
 where :math:`M\equiv 2 c (t-t')`.
 
 
-Far before this result one can see that this part is only relavent to off diagonal terms. Thus it goes away after we apply the operator :math:`\mathscr D`.
-
 The master equation we need is
 
 .. math::
-   \partial_t \rho_d(t) &= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 .
+   \partial_t \rho_d(t) &= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
+   & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s (\rho_2-\rho_1) \left(\sigma_1 \frac{\sin^2(ct)}{c} + \sigma_2 \frac{\sin(2ct)}{2c}\right) \\
+   & =   \frac{1}{2}\left( ic(\rho_1+\rho_2) + s^2 (\rho_2-\rho_1) \frac{\sin(2ct)}{c} 2\right)\sigma_3.
 
 
 Without writing down the solution we notice that it shows oscillationary behavior.
