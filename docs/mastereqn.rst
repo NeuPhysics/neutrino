@@ -182,6 +182,22 @@ Recall that the master equation is
 .. math::
    \partial_t \rho_d(t) &= - i \mathscr D \hat L \rho_d - \mathscr D\int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
    & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\
+
+
+So we need to calculate
+
+.. math::
+   e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &= \left[1 -i(1-\mathscr D)\hat L (t-t')  + \frac{1}{2} (-i(1-\mathscr D)\hat L (t-t') )^2 + \frac{1}{3!}(-i(1-\mathscr D)\hat L (t-t') )^3 + \cdots \right]\sigma_2
+   &\equiv T_0 + T_1 + T_2 + T_3 + \cdots .
+
+
+We will calculate it term by term and find the pattern.
+
+.. math::
+   T_0 = \sigma_2
+
+.. math::
+   T_1 &= -i(1-\mathscr D)\hat L (t-t') \sigma_2 \\
    & = 
 
 
