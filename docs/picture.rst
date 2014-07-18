@@ -192,6 +192,38 @@ Polarization, as the name indicates, should equal to
 when it is aligned with z direction of Pauli matrices. Polarization vector is not a vector in real space but a vector of an imagined space.
 
 
+.. admonition:: Take Out The Components
+   :class: note
+
+   ****
+
+   How to project out the components of polarization vector? By multiplying on both sides the Pauli matrices.
+
+   Note that for Pauli matrices
+
+   .. math::
+      \sigma_i \sigma_j = \epsilon_{ijk}\sigma_k + \delta_{ij}\mathbf I.
+
+   Multiplying by :math:`\sigma_j` on both sides of :math:`\rho =  \frac 1 2(\mathbf I+\vec P \cdot\vec \sigma)`, we get
+
+   .. math::
+      \rho \sigma_j  = \frac 1 2(\mathbf I+\vec P \cdot\vec \sigma)\sigma_k.
+
+   Apply the sigma algebra we discussed there, the result of this is
+
+   .. math::
+      \rho \sigma_j = \frac{1}{2}(\sigma_k + P_i \sigma_i \sigma_j) \\
+      2 \rho \sigma_j - \sigma_k &= P_i (\epsilon_{ijk}\sigma_k + \delta_{ij}\mathbf I)
+
+   We know that the trace of any Pauli matrix is zero. Take the trace of the equation,
+
+   .. math::
+      \mathrm{Tr}\sigma_j =  P_j.
+
+   All done.
+
+
+
 
 
 
