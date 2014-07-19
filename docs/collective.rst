@@ -41,10 +41,18 @@ where the vacuum Hamiltonian is
 
 
 
-In `Picture <.picture.html>`_ chapter we have seen the definition of a polarization matrix, which is
+In `Picture <.picture.html>`_ chapter we have seen the definition of a polarization matrix. The components of a polarization vector (**for neutrinos**) is given by
 
 .. math::
-   \mathbf \rho = 
+   P_{\omega,i} &\propto \mathrm{Tr} (\rho_E \sigma_i) \\
+   & = \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\rho_E \sigma_i) .
+
+For anitneutrinos, we have a negative :math:`\omega` which is defined as :math:`\omega = \frac{\delta^2m}{2E}` (neutrinos) and :math:`\omega_{\bar\nu}= - \frac{\delta^2m}{2E}` (anitneutrinos). The polarization is defined as
+
+.. math::
+   P_{\omega,i} = - \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\bar \rho_E \sigma_i) .
+
+
 
 
 
