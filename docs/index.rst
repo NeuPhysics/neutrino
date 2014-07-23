@@ -36,6 +36,7 @@ Table of Contents:
    mastereqn.rst
    gravity.rst
    ref.rst
+   connections.rst
 
 
 
