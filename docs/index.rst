@@ -37,6 +37,7 @@ Table of Contents:
    gravity.rst
    ref.rst
    connections.rst
+   misc.rst
 
 
 
