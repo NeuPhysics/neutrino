@@ -55,7 +55,7 @@ A state is called **right-handed** if helicity is positive, i.e., spin has the s
 Chirality
 ~~~~~~~~~~~~
 
-**Chirality** is the eigenstate of the Dirac :math:`\gamma_5` matrix, which is explicitly,
+**Chirality** is the eigenstate of the Dirac :math:`\gamma_5` matrix, which is explicitly, [1]_
 
 .. math::
    \gamma^5 &= \begin{pmatrix} \mathbf 0 & \mathbf I \\ \mathbf I & \mathbf 0 \end{pmatrix} \\
@@ -65,5 +65,9 @@ Chirality
 
 
 
+
+
 Refs & Notes
 -------------------
+
+.. [1] `*Chirality and Helicity In Depth* by Robert D. Klauber <http://www.quantumfieldtheory.info/ChiralityandHelicityindepth.htm>`_
