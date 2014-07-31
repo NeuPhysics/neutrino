@@ -302,6 +302,14 @@ Since Pauli matrices plus identity forms a complete basis for all 2 by 2 matrice
 MSW Effect
 -------------------
 
+
+.. admonition:: Physics of MSW
+   :class: note
+
+   As neutrinos passing by matter, the effective mass coming from energy change becomes important thus changing it's eigenstates and propagation.
+
+
+
 Neutrinos do interact with matter, mostly electrons in most cases.
 
 .. figure:: assets/nueNeutral.png
