@@ -3,7 +3,13 @@ Collective Behavior
 
 In a dense neutrino environment, neutrino oscillations could exhibit collective behaviors or synchronized behaviors.
 
+The key of such a behavior is the self interaction between neutrinos.
 
+
+.. admonition:: Phonon
+   :class: note
+
+   In solid state physics, phonons are the collective behavior of atom or molecule oscillations. The necessary condition for such a behavior is the interaction between atoms or molecules.
 
 
 
@@ -13,13 +19,39 @@ Equation of Motion in Matter
 --------------------------------------
 
 
+We have already derived the Hamiltonian for vacuum oscillatioin,
 
-The effect of matter, as we have already discussed before, adds an extra term
+.. math::
+   H_v=\frac{\delta^2m}{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
+
+where we would like to define a new matrix,
+
+.. math::
+   \mathbf B = \frac{1}{2}\begin{pmatrix}  -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
+
+so that the vacuum Hamiltonian can be written as
+
+.. math::
+   H_v = \frac{\delta^2m}{2E}\mathbf B
+
+
+The **effect of matter**, as we have already discussed before, adds an extra term
 
 .. math::
    H_m = \sqrt{2}G_F n_e L.
 
-In the most simple case, :math:`L=\frac{1}{2}\sigma_3`. This will cause MSW effect.
+Here we have
+
+.. math::
+   L = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}.
+
+
+
+.. note::
+
+   Previously in the MSW effect section, we have :math:`L=\frac{1}{2}\sigma_3`. The reason, as explained there, is that we can always write down a 2 by 2 matrix using Pauli matrices and indentity matrix and identity matrix only shifts the overall eigenvalue not the eigenvector so we can just drop the identity term.
+
+
 
 
 One other term is the self-interaction of neutrinos, i.e., neutral-current neutrino-neutrino forward exchange scattering,
@@ -36,7 +68,7 @@ The overall Hamiltonian is
 where the vacuum Hamiltonian is
 
 .. math::
-   H_0 &= \frac{\delta^2 m}{2E} B \\
+   H_0 &= \frac{\delta^2 m}{2E} \mathbf B \\
    & = \frac{\delta^2 m}{2E} U \left(\frac{1}{2}\sigma_3 \right) U^\dagger .
 
 

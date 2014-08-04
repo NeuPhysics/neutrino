@@ -224,8 +224,21 @@ when it is aligned with z direction of Pauli matrices. Polarization vector is no
 
 
 
+Neutrino-neutrino Interaction and BCS Theory
+-------------------------------------------------------------
 
+.. admonition::
+   :class: note
 
+   BCS Hamiltonian is
+
+   .. math::
+      \hat H_{BCS} = \sum_k 2 \epsilon_k \hat t_k^0- \lvert G\rvert \hat T^\dagger \hat T
+
+Neutrino self interaction Hamiltonian is
+
+.. math::
+   \hat H = \sum_p \frac{\delta^2m}{2p}\hat B\cdot \vec J_\rho | \frac{\sqrt{2}G_F}{V}\vec J\cdot \vec J.
 
 
 
