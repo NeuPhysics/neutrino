@@ -19,6 +19,10 @@ Equation of Motion in Matter
 --------------------------------------
 
 
+Hamiltonian
+~~~~~~~~~~~~~~~
+
+
 We have already derived the Hamiltonian for vacuum oscillatioin,
 
 .. math::
@@ -73,6 +77,19 @@ where the vacuum Hamiltonian is
 
 
 
+
+
+
+Equation of Motion
+~~~~~~~~~~~~~~~~
+
+
+From the Hamiltonian, Von Neumann equation is
+
+.. math::
+   i \frac{\partial}{\partial t}\rho = \left[ H , \rho\right]
+
+
 In `Picture <.picture.html>`_ chapter we have seen the definition of a polarization matrix. The components of a polarization vector (**for neutrinos**) is given by
 
 .. math::
@@ -85,6 +102,28 @@ For anitneutrinos, we have a negative :math:`\omega` which is defined as :math:`
    P_{\omega,i} = - \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\bar \rho_E \sigma_i) .
 
 
+With all these definitions, Von Neumann equation multiply by :math:`\vec{\sigma} = \sigma_1 \hat e_1 + \sigma_2 \hat e_2 + \sigma_3 \hat e_3`, we have
+
+.. math::
+   i \dot \rho \sum_i \sigma_i \hat e_i = \left[H, \rho\right] \sum_i\sigma_i \hat e_i.
+
+Notice that Pauli matrices are Hermitian and Unitary, we can alway insert the identity :math:`\mathbf I = \sigma_j \sigma_j^\dagger`.
+
+
+.. admonition:: Commutator and Cross Product
+   :class: note
+
+   Commutator of two vectors,
+
+   .. math::
+      \vec A \times \vec B & = (A_2 B_3 - A_3 B_2) \hat e_1 + (A_3 B_1 - A_1 B_2)\hat e_2 + (A_1 B_2 - A_2 B_3)\hat e_3 
+
+
+For component j,
+
+.. math::
+   & i \dot \rho \sigma_j  &= H \rho \sigma_j - \rho H \sigma_j \\
+   & i \dot \rho \sigma_j  &= H \sigma_j \sigma_j^\dagger \rho \sigma_j - \rho \sigma_j\sigma_j^\dagger H \sigma_j \\
 
 
 
