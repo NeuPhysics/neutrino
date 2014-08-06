@@ -141,11 +141,25 @@ Using these we can rewrite the commutator
 
 .. math::
    [H,\rho] & = [\vec H \cdot \vec\sigma, \vec \rho \cdot \vec \sigma] \\
-   & = (H_i \sigma_i \rho_k \sigma_k - \rho_k \sigma_k H_i \sigma_i )\\
-   & = H_i\rho_k \sigma_i\sigma_k - \rho_k H_i \sigma_k \sigma_i \\
-   & =
+   & = \sum_{ik}(H_i \sigma_i \rho_k \sigma_k - \rho_k \sigma_k H_i \sigma_i )\\
+   & = \sum_{ik}(H_i\rho_k \sigma_i\sigma_k - \rho_k H_i \sigma_k \sigma_i) \\
+   & = \sum_{ik} H_i\rho_k (\sigma_i\sigma_k-\sigma_k\sigma_i) \\
+   & = \sum_{ik} H_i \rho_k [\sigma_i,\sigma_k] \\
+   & =  \sum_{ik} H_i \rho_k 2i \epsilon_{ikn}\sigma_n \\
+   & =  2i \sum_{ik}\epsilon_{ikn}\sigma_n H_i \rho_k
+
+Multiply by :math:`\sigma_j` and take the trace, we get,
+
+.. math::
+   \mathrm{Tr}(\sigma_j [H,\rho]) & =  2i \mathrm{Tr}(\sum_{ik}\epsilon_{ikn}\sigma_j\sigma_n H_i \rho_k )\\
+   &= 2i \sum_{ik} \mathrm{Tr}(\epsilon_{ikj} \mathrm I  H_i \rho_k  ) \\
+   & = - 2i \sum_{ik} \epsilon_{jik} H_i\rho_k  \mathrm{Tr}(\mathbf I)
 
 
+The corresponding LHS after these work becomes
+
+.. math::
+   i\mathrm{Tr}(\sigma_j \dot \rho_i \sigma_i) & = i \partial_t \rho_j \mathrm{Tr}( I)
 
 
 
