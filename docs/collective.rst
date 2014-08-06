@@ -116,14 +116,35 @@ Notice that Pauli matrices are Hermitian and Unitary, we can alway insert the id
    Commutator of two vectors,
 
    .. math::
-      \vec A \times \vec B & = (A_2 B_3 - A_3 B_2) \hat e_1 + (A_3 B_1 - A_1 B_2)\hat e_2 + (A_1 B_2 - A_2 B_3)\hat e_3 
+      \vec A \times \vec B & = (A_2 B_3 - A_3 B_2) \hat e_1 + (A_3 B_1 - A_1 B_2)\hat e_2 + (A_1 B_2 - A_2 B_3)\hat e_3
 
 
-For component j,
+.. admonition:: Trace of Pauli Matrices
+   :class: note
+
+   All Pauli matrices have vanishing trace. And what makes our calculation more convinient is that the trace of matrices is invariant under cyclic permutation, that is
+
+   .. math::
+      \mathrm{Tr}(\sigma_i \mathbf H \sigma_j) = \mathrm{Tr}(\mathbf H \sigma_j\sigma_i)
+
+   Notice that to have a non-vanishing trace we need :math:`i=j`. This property really saves our life.
+
+
+As the definition, we have
 
 .. math::
-   & i \dot \rho \sigma_j  &= H \rho \sigma_j - \rho H \sigma_j \\
-   & i \dot \rho \sigma_j  &= H \sigma_j \sigma_j^\dagger \rho \sigma_j - \rho \sigma_j\sigma_j^\dagger H \sigma_j \\
+   \mathbf H &= \vec H\cdot \vec\sigma \\
+   \rho & = \vec \rho \cdot \vec \sigma
+
+
+Using these we can rewrite the commutator
+
+.. math::
+   [H,\rho] & = [\vec H \cdot \vec\sigma, \vec \rho \cdot \vec \sigma] \\
+   & = (H_i \sigma_i \rho_k \sigma_k - \rho_k \sigma_k H_i \sigma_i )\\
+   & = H_i\rho_k \sigma_i\sigma_k - \rho_k H_i \sigma_k \sigma_i \\
+   & =
+
 
 
 
