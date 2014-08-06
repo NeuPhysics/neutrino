@@ -153,13 +153,64 @@ Multiply by :math:`\sigma_j` and take the trace, we get,
 .. math::
    \mathrm{Tr}(\sigma_j [H,\rho]) & =  2i \mathrm{Tr}(\sum_{ik}\epsilon_{ikn}\sigma_j\sigma_n H_i \rho_k )\\
    &= 2i \sum_{ik} \mathrm{Tr}(\epsilon_{ikj} \mathrm I  H_i \rho_k  ) \\
-   & = - 2i \sum_{ik} \epsilon_{jik} H_i\rho_k  \mathrm{Tr}(\mathbf I)
+   & = 2i \sum_{ik} \epsilon_{jik} H_i\rho_k  \mathrm{Tr}(\mathbf I) \\
+   & = 4i \epsilon_{jik}H_i\rho_k.
 
 
 The corresponding LHS after these work becomes
 
 .. math::
-   i\mathrm{Tr}(\sigma_j \dot \rho_i \sigma_i) & = i \partial_t \rho_j \mathrm{Tr}( I)
+   i\mathrm{Tr}(\sigma_j \dot \rho_i \sigma_i) & = i \partial_t \rho_j \mathrm{Tr}( I) \\
+   & = 2i\dot{P_j}
+
+
+The Von Neuman equation becomes
+
+.. math::
+   \dot{\vec P} = 2 \vec H \times \vec P.
+
+We know explicitly what polarization vector is
+
+.. math::
+   P_j = \mathrm{Constant} \mathrm {Tr} (\rho \sigma_j)
+
+for neutrinos while
+
+.. math::
+   \bar P_j = -\mathrm{Constant} \mathrm {Tr} (\bar \rho \sigma_j).
+
+The vectorized Hamiltonian is
+
+.. math::
+   H = H_i\sigma_i.
+
+Multiply by :math:`\sigma_j` and take the trace,
+
+.. math::
+   \mathrm{Tr}(H\sigma_j) = H_j \mathrm{Tr}(\mathbf I),
+
+that is,
+
+.. math::
+   \mathrm{Tr}(H\sigma_j) = 2 H_j.
+
+
+.. admonition:: Hamiltonian
+
+   The Hamiltonian for homogeneous isotropic environment is
+
+   .. math::
+      H &= H_0 + H_m + H_\nu \\
+      & = \omega \mathbf B + \lambda \mathbf L + \sqrt G_F \int_0^\infty dE' (\rho_E' - \bar \rho_E' \).
+
+Then the equation we need becomes
+
+.. math::
+   \dot{\vec P_\omega} = (\omega \vec B + \lambda \vec L + \mu \vec D) \times \vec P_{\omega}.
+
+where :math:`\vec B = \mathrm {Tr}(\mathbf B \vec \sigma)`, :math:`\vec L = \mathrm{Tr}(\mathbf L \vec \sigma)`, :math:`\vec D = \int_{-\infty}^{\infty}d\omega \vec P_\omega`.
+
+
 
 
 
