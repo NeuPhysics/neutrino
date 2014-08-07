@@ -230,7 +230,7 @@ that is,
 
    .. math::
       H &= H_0 + H_m + H_\nu \\
-      & = \omega \mathbf B + \lambda \mathbf L + \sqrt G_F \int_0^\infty dE' (\rho_E' - \bar \rho_E' \).
+      & = \omega \mathbf B + \lambda \mathbf L + \sqrt{ G_F} \int_0^\infty dE' (\rho_E' - \bar \rho_E' \).
 
 Then the equation we need becomes
 
