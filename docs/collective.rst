@@ -12,6 +12,20 @@ The key of such a behavior is the self interaction between neutrinos.
    In solid state physics, phonons are the collective behavior of atom or molecule oscillations. The necessary condition for such a behavior is the interaction between atoms or molecules.
 
 
+Collective Phenomenon
+--------------------------------
+
+Neutrino-neutrino interaction can be described by the following Feymann diagram.
+
+Electron neutrinos can exchange momentum with other neutrinos including itself.
+
+
+
+
+
+
+
+
 
 
 
