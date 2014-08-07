@@ -17,8 +17,23 @@ Collective Phenomenon
 
 Neutrino-neutrino interaction can be described by the following Feymann diagram.
 
-Electron neutrinos can exchange momentum with other neutrinos including itself.
+.. figure:: assets/refractiveFey.png
+   :align: center
 
+   They just exchange their momenta.
+
+Electron neutrinos can exchange momentum with other neutrinos including itself. Suppose we have a muon neutrino moving forward, and vacuum oscillations,
+
+.. figure:: assets/collectiveToyModel.png
+   :align: center
+
+   Toy model
+
+At site 1, electron neutrino becomes muon neutrino after 1 oscillation length and moving top, while the muon neutrino coming from the left becomes electron neutrino. If they interact, their momenta will be exchanged, leaving a muon neutrino moving to the right and carrying the momentum of the neutrino moving up.
+
+After the interaction at site 1, a electron neutrino is moving up and transforms to a muon neutrino at site 2. The interaction at site 1 will be repeated all the way along the trajectory. And we have all muon neutrinos coming out right of the sites which should be electron neutrinos if we only have vacuum oscillation.
+
+This is a toy model of collective oscillation.
 
 
 
