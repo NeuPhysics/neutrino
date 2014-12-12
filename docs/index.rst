@@ -84,7 +84,11 @@ Support
    <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
 
 
+DOI
+===========
 
+.. image:: https://zenodo.org/badge/7726/emptymalei/neutrino.svg
+   :target: http://dx.doi.org/10.5281/zenodo.13219
 
 
 Footnote
