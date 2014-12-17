@@ -6,6 +6,47 @@ There are several pictures to visualize the oscillations of neutrinos.
 
 
 
+Magnetic Spin
+-----------------------------
+
+.. figure:: ./assets/larmor.gif
+   :align: center
+
+   Image source: `Larmor Precession <http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/larmor.html>`_ .
+
+
+Recall that torque of a magnetic spin in a magnetic field is calculated as
+
+.. math::
+   \vec \tau = \vec \mu \times \vec B,
+
+while torque is by definition :math:`\vec \tau = \frac{d}{dt}\vec L`. So we have, for such a system, the equation of motion is
+
+.. math::
+   \frac{d}{dt}\vec L = \vec \mu \times \vec B.
+
+In the case of electron quantum magnetic spin, :math:`\vec \mu` is proportional to the angular momentum :math:`\vec L`, i.e., :math:`\vec \mu = \frac{-e}{2m_e}\vec L\propto \vec L`.
+
+So the equation of motion becomes
+
+.. math::
+   \frac{d}{dt}\vec L \propto \vec L \times \vec B.
+
+
+.. admonition:: Equation of Motion for Neutrino Flavor Polarization Vector
+   :class: note
+
+   That EoM is
+
+   .. math::
+      \frac{d}{dt} \vec P_\omega = (\omega \vec B + \lambda \vec L + \mu \vec D)\times \vec P_\omega ,
+
+   where the quantities can be found in Duan, H., Fuller, G. & Qian, Y.-Z. Collective Neutrino Oscillations. *Annu. Rev. Nucl. Part. Sci.* **60**, 569–594 (2010).
+
+   Now it is clear that the two system has very similar EoM.
+
+
+
 
 
 Neutrino Flavour Isospin
@@ -43,6 +84,10 @@ which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega`
 
 
 
+
+
+
+
 Coupled Pendulum
 ------------------------
 
@@ -67,6 +112,10 @@ Recall that the state of neutrino after time :math:`t` is
    \ket{\psi(t)} = A_1 \ket{\nu_1} e^{-i E_1 t} + A_2 \ket{\nu_2} e^{- i E_2 t},
 
 where :math:`A_1` and :math:`A_2` are determined by initial condition. The real part of this, is exactly the same as the solution to coupled pendulum, where the physics is the transfer from one eigenstate to another.
+
+
+
+
 
 
 
