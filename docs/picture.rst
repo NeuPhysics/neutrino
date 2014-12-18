@@ -35,6 +35,7 @@ So the equation of motion becomes
 
 .. admonition:: Equation of Motion for Neutrino Flavor Polarization Vector
    :class: note
+   :name: EoM4NFPV
 
    That EoM is
 
