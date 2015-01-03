@@ -29,7 +29,11 @@ Linear Stability Analysis
 Bimodal Instability
 ---------------------------
 
+Neutrino oscillatioins are synchronized but with a small amplitude inside a SN core (suppressed by matter effects),[1]_ which basically pin down the flavour transformation. As the flux reaches 
 
+
+
+.. [1] Wolfenstein, L. `Neutrino oscillations in matter. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.17.2369>`_ *Phys. Rev. D* **17**, 23692374 (1978). Or check papers of MSW effect such as Wick Haxton's excellent review.
 
 
 
@@ -42,6 +46,10 @@ Multi-azimuth angle (MAA) instability, first discovered by Georg Raffelt et al, 
 This instability may come from the term that is related to the velocity of neutrinos in the Hamiltonian.
 
 
+
+
+Neutrino Self Interaction and Instability
+--------------------------------------------
 
 
 
