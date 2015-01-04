@@ -1,5 +1,5 @@
 Collective Behavior
-=================
+==================================
 
 In a dense neutrino environment, neutrino oscillations could exhibit collective behaviors or synchronized behaviors.
 
