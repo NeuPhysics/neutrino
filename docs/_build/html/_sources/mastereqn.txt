@@ -13,6 +13,12 @@ Neutrino Oscillation And Master Equation
 
 
 
+.. admonition:: WHY
+   :class: warning
+
+   Why do you need a master equation approach? IDK.
+
+
 Quantum Master Equation
 ---------------------------------
 
@@ -256,10 +262,20 @@ The master equation we need is
    & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 G(t) \sigma_3 \\
    & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' (\rho_2-\rho_1)  \sigma_3 \cos(2c(t-t')) \\
    & = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + (\rho_1+\rho_2) \mathbf I \right) \cos(2c(t-t')) \\
-   & = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t')) \\
+   & = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t'))
 
 
-Without writing down the solution we notice that it shows oscillationary behavior.
+In the calculation, :math:`G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))`.
+
+
+
+.. admonition:: What to Do?
+   :class: warning
+
+   I don't see anything good about this method. What to do next? I can predict that it's also won't cost a lot to solve the MSW effect. But what's the point? These problems are not very hard to solve even using wave function method.
+
+   I am just leaving this result here and move on to other topics.
+
 
 
 

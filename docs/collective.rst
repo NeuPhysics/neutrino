@@ -12,6 +12,23 @@ The key of such a behavior is the self interaction between neutrinos.
    In solid state physics, phonons are the collective behavior of atom or molecule oscillations. The necessary condition for such a behavior is the interaction between atoms or molecules.
 
 
+Backgrounds of collective effect:
+
+1. Matter background
+2. Neutrino background
+   a) sychronized oscillations: neutrino neutrino interaction potential is large compared toordinary oscillation frequencies in vacuum/medium + large asymmetry between neutrino and antineutrino distributions
+   b) bipolar oscillations: neutrino and antineutrino oscillate in opposite directions; non-zero vacuum mixing angle + some conditions of mass hierarchy. neutrino-neutrino interaction ( :math:`\mu=\sqrt{2}G_F n_\nu` ) is larger than vacuum oscillatioin frequency :math:`\omega=\Delta m` . like a torque applys to a top where instabilities happpen as the torque force is too big (top wobbles and flips).
+
+
+.. admonition:: Ref
+   :class: note
+
+   1. Raffelt, G. & Smirnov, A. `Self-induced spectral splits in supernova neutrino fluxes. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.105010>`_ *Phys. Rev. D* **76**, (2007). (This paper includes a very brief summary of sychronized and bipolar.)
+
+
+
+
+
 Collective Phenomenon
 --------------------------------
 
@@ -63,11 +80,13 @@ Bipolar Model
 
 .. figure:: assets/bipolar.png
 
-The neutrinos are generated in two classes with the same number density thus making up two total flavour isospins.
+The neutrinos are generated in two classes with the same number density thus making up two total flavour isospins. Neutrino-neutrino interaction could make the oscillation unstable if it is too large.
 
 
 
 
+
+.. [2] Raffelt, G. & Smirnov, A. `Self-induced spectral splits in supernova neutrino fluxes. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.105010>`_ *Phys. Rev. D* **76**, (2007).
 
 
 

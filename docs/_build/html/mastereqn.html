@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Neutrino 4.14 documentation" href="index.html" />
     <link rel="next" title="Effect of Gravitation" href="gravity.html" />
-    <link rel="prev" title="Pictures" href="picture.html" />
+    <link rel="prev" title="Models" href="models.html" />
 <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-49034078-4']);
@@ -54,7 +54,7 @@
           <a href="gravity.html" title="Effect of Gravitation"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="picture.html" title="Pictures"
+          <a href="models.html" title="Models"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Neutrino 4.14 documentation</a> &raquo;</li> 
       </ul>
@@ -74,6 +74,10 @@
 <div class="note admonition">
 <p class="first admonition-title">Answer</p>
 <p class="last">The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.</p>
+</div>
+<div class="warning admonition">
+<p class="first admonition-title">WHY</p>
+<p class="last">Why do you need a master equation approach? IDK.</p>
 </div>
 <div class="section" id="quantum-master-equation">
 <h2>Quantum Master Equation<a class="headerlink" href="#quantum-master-equation" title="Permalink to this headline">¶</a></h2>
@@ -241,14 +245,19 @@
 </div><p>where <img class="math" src="_images/math/bea1dc9b1c1db3c1e6c31756e3e757a317b7e34c.png" alt="M\equiv 2 c (t-t')"/>.</p>
 <p>The master equation we need is</p>
 <div class="math">
-<p><img src="_images/math/03a235864606fa03058f79670ef0791ba1af86e3.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
+<p><img src="_images/math/12c2f8521ccdcc791f77651adbf2a31b9a147a09.png" alt="\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s \int_0^t  dt' (\rho_2-\rho_1) \left(\sigma_2 \cos(2c(t-t'))\right)   \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 -  i s G(t) \mathscr D \hat L  \sigma_2   \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 G(t) \sigma_3 \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' (\rho_2-\rho_1)  \sigma_3 \cos(2c(t-t')) \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + (\rho_1+\rho_2) \mathbf I \right) \cos(2c(t-t')) \\
-&amp; = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t')) \\"/></p>
-</div><p>Without writing down the solution we notice that it shows oscillationary behavior.</p>
+&amp; = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t'))"/></p>
+</div><p>In the calculation, <img class="math" src="_images/math/25518be42cf8827290ab9d61288d231f784582ce.png" alt="G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))"/>.</p>
+<div class="warning admonition">
+<p class="first admonition-title">What to Do?</p>
+<p>I don&#8217;t see anything good about this method. What to do next? I can predict that it&#8217;s also won&#8217;t cost a lot to solve the MSW effect. But what&#8217;s the point? These problems are not very hard to solve even using wave function method.</p>
+<p class="last">I am just leaving this result here and move on to other topics.</p>
+</div>
 </div>
 <div class="section" id="neutrino-oscillation-in-matter-a-possible-master-equation-approach">
 <h2>Neutrino Oscillation in Matter - A Possible Master Equation Approach<a class="headerlink" href="#neutrino-oscillation-in-matter-a-possible-master-equation-approach" title="Permalink to this headline">¶</a></h2>
@@ -278,8 +287,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="picture.html"
-                        title="previous chapter">Pictures</a></p>
+  <p class="topless"><a href="models.html"
+                        title="previous chapter">Models</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="gravity.html"
                         title="next chapter">Effect of Gravitation</a></p>
@@ -315,7 +324,7 @@
           <a href="gravity.html" title="Effect of Gravitation"
              >next</a> |</li>
         <li class="right" >
-          <a href="picture.html" title="Pictures"
+          <a href="models.html" title="Models"
              >previous</a> |</li>
         <li><a href="index.html">Neutrino 4.14 documentation</a> &raquo;</li> 
       </ul>

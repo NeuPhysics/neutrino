@@ -14,11 +14,31 @@ Reactions Related to Neutrinos
 4. Inverses of beta decays, :math:`\bar\nu + e^- + p \to n` and :math:`n+e^++\nu \to n`.
 
 
+What is a Neutrino Particle?
+-------------------------------------
+
+
+As Wigner said, a physical particle is an irreducible representation of the Poincaré group. A characteristic of Poincaré group is that mass comes in.
+
+A neutrino particle is better recognized as its mass eigenstate.
+
+In QFT, there are 3 different forms of neutrino mass term, left-handed Majorana, right-handed Majorana and Dirac mass terms.
+
+
+
+
+
+
+
+
+
+Chirality and Helicity
+-----------------------------
 
 Helicity
-----------------
+~~~~~~~~~~~~~~
 
-Projection of spin onto direction of momentum,
+**Helicity** is the projection of spin onto direction of momentum,
 
 .. math::
    h = \vec J\cdot\hat p = \vec L\cdot\hat p + \vec S\cdot \hat p = \vec S\cdot \hat p,
@@ -29,7 +49,26 @@ where
    \hat p = \frac{\vec p}{\left|\vec p\right|}
 
 
+A state is called **right-handed** if helicity is positive, i.e., spin has the same direction as momentum.
 
+
+Chirality
+~~~~~~~~~~~~
+
+**Chirality** is the eigenstate of the Dirac :math:`\gamma_5` matrix, which is explicitly, [1]_
+
+.. math::
+   \gamma^5 &= \begin{pmatrix} \mathbf 0 & \mathbf I \\ \mathbf I & \mathbf 0 \end{pmatrix} \\
+   & = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0  \end{pmatrix}.
+
+
+
+Majorana or Dirac
+--------------------------------
+
+
+Double Beta Decay
+~~~~~~~~~~~~~~~~~
 
 
 
@@ -37,3 +76,5 @@ where
 
 Refs & Notes
 -------------------
+
+.. [1] `*Chirality and Helicity In Depth* by Robert D. Klauber <http://www.quantumfieldtheory.info/ChiralityandHelicityindepth.htm>`_

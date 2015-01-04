@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Neutrino 4.14 documentation" href="index.html" />
-    <link rel="next" title="Neutrino Oscillation And Master Equation" href="mastereqn.html" />
+    <link rel="next" title="Models" href="models.html" />
     <link rel="prev" title="How Do Neutrinos Propagate" href="propagation.html" />
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -51,7 +51,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="mastereqn.html" title="Neutrino Oscillation And Master Equation"
+          <a href="models.html" title="Models"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="propagation.html" title="How Do Neutrinos Propagate"
@@ -68,6 +68,31 @@
   <div class="section" id="pictures">
 <h1>Pictures<a class="headerlink" href="#pictures" title="Permalink to this headline">¶</a></h1>
 <p>There are several pictures to visualize the oscillations of neutrinos.</p>
+<div class="section" id="magnetic-spin">
+<h2>Magnetic Spin<a class="headerlink" href="#magnetic-spin" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="_images/larmor.gif" src="_images/larmor.gif" />
+<p class="caption">Image source: <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/larmor.html">Larmor Precession</a> .</p>
+</div>
+<p>Recall that torque of a magnetic spin in a magnetic field is calculated as</p>
+<div class="math">
+<p><img src="_images/math/7d9cecc8df599272a24d3b9add5d524dde76d1e8.png" alt="\vec \tau = \vec \mu \times \vec B,"/></p>
+</div><p>while torque is by definition <img class="math" src="_images/math/d985933268b27cbf7fb182005e74b7c893284d1b.png" alt="\vec \tau = \frac{d}{dt}\vec L"/>. So we have, for such a system, the equation of motion is</p>
+<div class="math">
+<p><img src="_images/math/27da2fc204cdfe3a143ecc0292212eafaf479a6f.png" alt="\frac{d}{dt}\vec L = \vec \mu \times \vec B."/></p>
+</div><p>In the case of electron quantum magnetic spin, <img class="math" src="_images/math/e54f13f0e1446e7d241a95efb605657235970ebe.png" alt="\vec \mu"/> is proportional to the angular momentum <img class="math" src="_images/math/a373a60037f6f868f7caf19a434c29b886418f16.png" alt="\vec L"/>, i.e., <img class="math" src="_images/math/c57e8651ab6afce51ddaedd84f65546fb98d4fde.png" alt="\vec \mu = \frac{-e}{2m_e}\vec L\propto \vec L"/>.</p>
+<p>So the equation of motion becomes</p>
+<div class="math">
+<p><img src="_images/math/db1798812a2f2feb2947aa8eca062e8a174a4d7f.png" alt="\frac{d}{dt}\vec L \propto \vec L \times \vec B."/></p>
+</div><div class="note admonition" id="eom4nfpv">
+<p class="first admonition-title">Equation of Motion for Neutrino Flavor Polarization Vector</p>
+<p>That EoM is</p>
+<div class="math">
+<p><img src="_images/math/dcdd49527387c25bf10d23efcb12df783daebb85.png" alt="\frac{d}{dt} \vec P_\omega = (\omega \vec B + \lambda \vec L + \mu \vec D)\times \vec P_\omega ,"/></p>
+</div><p>where the quantities can be found in Duan, H., Fuller, G. &amp; Qian, Y.-Z. Collective Neutrino Oscillations. <em>Annu. Rev. Nucl. Part. Sci.</em> <strong>60</strong>, 569–594 (2010).</p>
+<p class="last">Now it is clear that the two system has very similar EoM.</p>
+</div>
+</div>
 <div class="section" id="neutrino-flavour-isospin">
 <h2>Neutrino Flavour Isospin<a class="headerlink" href="#neutrino-flavour-isospin" title="Permalink to this headline">¶</a></h2>
 <p>Neutrino flavour isospin <a class="footnote-reference" href="#id6" id="id1">[3]</a></p>
@@ -179,7 +204,32 @@ M_z &amp; = 0 ."/></p>
 <div class="math">
 <p><img src="_images/math/3ce86ac03ff401cfa674b2e401b658c1e8dfae51.png" alt="P = W_1 - W_2"/></p>
 </div><p>when it is aligned with z direction of Pauli matrices. Polarization vector is not a vector in real space but a vector of an imagined space.</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<div class="note admonition">
+<p class="first admonition-title">Take Out The Components</p>
+<p>How to project out the components of polarization vector? By multiplying on both sides the Pauli matrices.</p>
+<p>Note that for Pauli matrices</p>
+<div class="math">
+<p><img src="_images/math/3f497b022227ebb4226f7be11f5192034f733ac9.png" alt="\sigma_i \sigma_j = \epsilon_{ijk}\sigma_k + \delta_{ij}\mathbf I."/></p>
+</div><p>Multiplying by <img class="math" src="_images/math/abd7ccd6997ff1c772ecd6272b19104f59052939.png" alt="\sigma_j"/> on both sides of <img class="math" src="_images/math/e215a94d96cb5bbd37b03da7ae325e9f2b6e4ad7.png" alt="\rho =  \frac 1 2(\mathbf I+\vec P \cdot\vec \sigma)"/>, we get</p>
+<div class="math">
+<p><img src="_images/math/176211a172dbfa4f0e03000f4b48bb1d1be22525.png" alt="\rho \sigma_j  = \frac 1 2(\mathbf I+\vec P \cdot\vec \sigma)\sigma_k."/></p>
+</div><p>Apply the sigma algebra we discussed there, the result of this is</p>
+<div class="math">
+<p><img src="_images/math/7cb1fba96b630b568e78f436cc1344fa60d7a3fc.png" alt="\rho \sigma_j = \frac{1}{2}(\sigma_k + P_i \sigma_i \sigma_j) \\
+2 \rho \sigma_j - \sigma_k &amp;= P_i (\epsilon_{ijk}\sigma_k + \delta_{ij}\mathbf I)"/></p>
+</div><p>We know that the trace of any Pauli matrix is zero. Take the trace of the equation,</p>
+<div class="math">
+<p><img src="_images/math/bef3dbf52a503401cc6ef2ebd011dc33969ec561.png" alt="\mathrm{Tr}\sigma_j =  P_j."/></p>
+</div><p class="last">All done.</p>
+</div>
+</div>
+</div>
+<div class="section" id="neutrino-neutrino-interaction-and-bcs-theory">
+<h2>Neutrino-neutrino Interaction and BCS Theory<a class="headerlink" href="#neutrino-neutrino-interaction-and-bcs-theory" title="Permalink to this headline">¶</a></h2>
+<p>Neutrino self interaction Hamiltonian is</p>
+<div class="math">
+<p><img src="_images/math/8757dac2e06a079e05b0ed528d2ec28a4c58b717.png" alt="\hat H = \sum_p \frac{\delta^2m}{2p}\hat B\cdot \vec J_\rho | \frac{\sqrt{2}G_F}{V}\vec J\cdot \vec J."/></p>
+</div><table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Read Carl&#8217;s lecture notes of <em>Classical Mechanics</em> for this derivation.</td></tr>
@@ -205,7 +255,6 @@ M_z &amp; = 0 ."/></p>
 </table>
 </div>
 </div>
-</div>
 
 
           </div>
@@ -216,6 +265,7 @@ M_z &amp; = 0 ."/></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Pictures</a><ul>
+<li><a class="reference internal" href="#magnetic-spin">Magnetic Spin</a></li>
 <li><a class="reference internal" href="#neutrino-flavour-isospin">Neutrino Flavour Isospin</a></li>
 <li><a class="reference internal" href="#coupled-pendulum">Coupled Pendulum</a></li>
 <li><a class="reference internal" href="#gyroscope-or-spinning-top-picture">Gyroscope or Spinning Top Picture</a><ul>
@@ -230,6 +280,7 @@ M_z &amp; = 0 ."/></p>
 <li><a class="reference internal" href="#density-matrix">Density Matrix</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#neutrino-neutrino-interaction-and-bcs-theory">Neutrino-neutrino Interaction and BCS Theory</a></li>
 </ul>
 </li>
 </ul>
@@ -238,8 +289,8 @@ M_z &amp; = 0 ."/></p>
   <p class="topless"><a href="propagation.html"
                         title="previous chapter">How Do Neutrinos Propagate</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="mastereqn.html"
-                        title="next chapter">Neutrino Oscillation And Master Equation</a></p>
+  <p class="topless"><a href="models.html"
+                        title="next chapter">Models</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/picture.txt"
@@ -269,7 +320,7 @@ M_z &amp; = 0 ."/></p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="mastereqn.html" title="Neutrino Oscillation And Master Equation"
+          <a href="models.html" title="Models"
              >next</a> |</li>
         <li class="right" >
           <a href="propagation.html" title="How Do Neutrinos Propagate"
