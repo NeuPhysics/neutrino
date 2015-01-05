@@ -72,6 +72,45 @@ Double Beta Decay
 
 
 
+States
+--------------------------------------
+
+Wigner Function
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: assets/preliminary/classicalProbDist.jpg
+   :align: center
+
+   A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution. [3]_
+
+Wigner function is an analogue of the classical phase-space probability distribution function though it is not really probability. [3]_ The mean of Wigner function lies in the two quadratures, i.e., space distribution and momentum distribution.
+
+There is a collection of Wigner functions on this site. [3]_
+
+
+.. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
+
+
+
+Statistics
+-------------------------------
+
+Fermi-Dirac distribution
+
+.. math::
+   f(p,\xi) = \frac{1}{1+\exp (p/T-\xi)},
+
+where :math:`\xi=\mu/T` is the degeneracy parameter.
+
+The neutrino-neutrino forward scattering is [2]_
+
+.. math::
+   \nu_\alpha (p) + \nu_\beta (k) \to \nu_\alpha (k)+\nu_\beta (p)
+
+
+
+
+.. [2] Pantaleone (1992), Friedland & Lunardini (2003).
 
 
 Refs & Notes
