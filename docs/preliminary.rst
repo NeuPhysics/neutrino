@@ -87,8 +87,14 @@ Wigner function is an analogue of the classical phase-space probability distribu
 
 There is a collection of Wigner functions on this site. [3]_
 
-
 .. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
+
+.. admonition:: Question
+   :class: warning
+
+   How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.
+
+
 
 
 
@@ -108,9 +114,12 @@ The neutrino-neutrino forward scattering is [2]_
    \nu_\alpha (p) + \nu_\beta (k) \to \nu_\alpha (k)+\nu_\beta (p)
 
 
-
-
 .. [2] Pantaleone (1992), Friedland & Lunardini (2003).
+
+.. admonition:: Question
+   :class: warning
+
+   Meaning of each term in Liouville equation ?
 
 
 Refs & Notes
