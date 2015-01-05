@@ -79,8 +79,11 @@ Bipolar Model
 -----------------------
 
 .. figure:: assets/bipolar.png
+   :align: center
 
-The neutrinos are generated in two classes with the same number density thus making up two total flavour isospins. Neutrino-neutrino interaction could make the oscillation unstable if it is too large.
+   Biplar
+
+The neutrinos are generated in two classes with the same number density thus making up two total flavour isospins. Neutrino-neutrino interaction could make the oscillation unstable if it is too large. [2]_
 
 
 

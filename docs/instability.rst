@@ -42,7 +42,7 @@ Vacuum mixing angle triggers the flavour instability.
 
 
 
-Neutrino oscillatioins are synchronized but with a small amplitude inside a SN core (suppressed by matter effects),[1]_ which basically pin down the flavour transformation. As the flux reaches
+Neutrino oscillatioins are synchronized but with a small amplitude inside a SN core (suppressed by matter effects), [1]_ which basically pin down the flavour transformation. As the flux reaches
 
 
 

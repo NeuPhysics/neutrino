@@ -6,7 +6,7 @@
 Neutrino
 ====================================
 
-Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos was first detected in Cowan–Reines neutrino experiment.[1]_ Later on a lot of neutrino experiments have been carried out.
+Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos was first detected in Cowan–Reines neutrino experiment. [1]_ Later on a lot of neutrino experiments have been carried out.
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/5/57/FirstNeutrinoEventAnnotated.jpg
    :align: center
