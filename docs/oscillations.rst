@@ -631,6 +631,14 @@ The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis)
 
 where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
 
+Define a quantities like :math:`\omega=\frac{\delta^2m}{2E}` for neutrinos ( :math:`\bar\omega = \frac{\delta^2m}{-2E}` for antineutrinos) and :math:`\Delta = \sqrt{2} G_F n(x)` (which might be denoted by :math:`\nu = \sqrt{2}G_F n_\nu` in other lituratures).
+
+
+Using Pauli matrices, I can decompose this to
+
+.. math::
+   \mathbf H = \omega ( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}
+
 .. note::
    As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`.
 
