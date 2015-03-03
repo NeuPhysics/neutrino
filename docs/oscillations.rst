@@ -1,3 +1,5 @@
+.. sectnum::
+
 Oscillations - The Tranditional Way
 ============================
 
@@ -42,7 +44,7 @@ The neutrino experimantal data shows the mixing angles are [1]_
 2. :math:`\theta_{13}=8.9^{\circ}\pm 0.5^{\circ}`;
 3. :math:`\theta_{12}=34^{\circ}\pm 1^{\circ}`.
 
-Experimental result of the :math:`\delta^2m_{ij}`s are [1]_
+Experimental result of the :math:` \delta m^2 _{ij}`s are [1]_
 
 1. :math:`\delta^2 m_{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
 2. :math:`\lvert\delta^2 m_{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
@@ -51,7 +53,7 @@ Experimental result of the :math:`\delta^2m_{ij}`s are [1]_
 .. admonition:: Definition of Mass-squared Difference
    :class: note
 
-   :math:`\delta^2m_{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta^2 m_{31}=\delta^2 m{32}-\delta^2 m_{21}`.
+   :math:` \delta m^2 _{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta^2 m_{31}=\delta^2 m{32}-\delta^2 m_{21}`.
 
 
 As :math:`\lvert \delta^2 m_{21}\rvert\ll \lvert\delta^2 m_{32}\rvert`, we should have :math:`\delta^2 m_{31} \approx \delta^2 m_{32}`.
@@ -209,7 +211,7 @@ with :math:`\delta^2 m=m_1^2 - m_2^2`. Most of the time we would like to know th
 
 .. math::
    P_{aa} &= 1 - \sin^2(2\theta) \sin^2\left( \frac{\Delta E L}{2} \right) \\
-   & = 1 -  \sin^2(2\theta) \sin^2\left( \frac{\delta^2m L}{4p} \right) .
+   & = 1 -  \sin^2(2\theta) \sin^2\left( \frac{ \delta m^2  L}{4p} \right) .
 
 This is the survival probability of flavour a neutrino with an initial state of flavour a.
 
@@ -240,11 +242,11 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
    \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
    & =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
    & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_1^2 + \cos^2\theta m_2^2 \end{pmatrix} \\
-   & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta \delta^2m \\ -\frac{1}{2}\sin 2\theta \delta^2m & m_2^2+\delta^2m\sin^2\theta \end{pmatrix} \\
-   & = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} -\delta^2m\cos 2\theta & \delta^2 m \sin 2\theta \\ \delta^2m\sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
-   & = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} -\delta^2m\cos 2\theta & \delta^2 m \sin 2\theta \\ \delta^2m\sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
+   & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta  \delta m^2  \\ -\frac{1}{2}\sin 2\theta  \delta m^2  & m_2^2+ \delta m^2 \sin^2\theta \end{pmatrix} \\
+   & = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
+   & = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
 
-Again we see clearly, no oscillation will apear as long as mixing angle :math:`\theta=0` or :math:`\delta^2m=0`.
+Again we see clearly, no oscillation will apear as long as mixing angle :math:`\theta=0` or :math:` \delta m^2 =0`.
 
 
 .. note::
@@ -311,7 +313,7 @@ Hamiltonian
 We have already derived the Hamiltonian for vacuum oscillatioin,
 
 .. math::
-   H_v=\frac{\delta^2m}{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
+   H_v=\frac{ \delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix},
 
 where we would like to define a new matrix,
 
@@ -321,7 +323,7 @@ where we would like to define a new matrix,
 so that the vacuum Hamiltonian can be written as
 
 .. math::
-   H_v = \frac{\delta^2m}{2E}\mathbf B
+   H_v = \frac{ \delta m^2 }{2E}\mathbf B
 
 
 The **effect of matter**, as we have already discussed before, adds an extra term
@@ -381,7 +383,7 @@ In `Picture <.picture.html>`_ chapter we have seen the definition of a polarizat
    P_{\omega,i} &\propto \mathrm{Tr} (\rho_E \sigma_i) \\
    & = \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\rho_E \sigma_i) .
 
-For anitneutrinos, we have a negative :math:`\omega` which is defined as :math:`\omega = \frac{\delta^2m}{2E}` (neutrinos) and :math:`\omega_{\bar\nu}= - \frac{\delta^2m}{2E}` (anitneutrinos). The polarization is defined as
+For anitneutrinos, we have a negative :math:`\omega` which is defined as :math:`\omega = \frac{ \delta m^2 }{2E}` (neutrinos) and :math:`\omega_{\bar\nu}= - \frac{ \delta m^2 }{2E}` (anitneutrinos). The polarization is defined as
 
 .. math::
    P_{\omega,i} = - \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\bar \rho_E \sigma_i) .
@@ -619,7 +621,7 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
    .. math::
       \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
 
-   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`nu_1`. By :math:`nu_1` we mean the state with energy :math:`\frac{delta^2m}{4E}` in vacuum.
+   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`\nu_1`. By :math:`\nu_1` we mean the state with energy :math:`\frac{ \delta m^2 }{4E}` in vacuum.
 
    We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. **However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.** This is the key idea in physics of MSW effect.
 
@@ -627,17 +629,17 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
 The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
 
 .. math::
-   \mathbf H = \frac{\delta^2m}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
+   \mathbf H = \frac{ \delta m^2 }{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
 
 where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
 
-Define a quantities like :math:`\omega=\frac{\delta^2m}{2E}` for neutrinos ( :math:`\bar\omega = \frac{\delta^2m}{-2E}` for antineutrinos) and :math:`\Delta = \sqrt{2} G_F n(x)` (which might be denoted by :math:`\nu = \sqrt{2}G_F n_\nu` in other lituratures).
+Define a quantities like :math:`\omega=\frac{ \delta m^2 }{2E}` for neutrinos ( :math:`\bar\omega = \frac{ \delta m^2 }{-2E}` for antineutrinos) and :math:`\Delta = \sqrt{2} G_F n(x)` (which might be denoted by :math:`\nu = \sqrt{2}G_F n_\nu` in other lituratures).
 
 
 Using Pauli matrices, I can decompose this to
 
 .. math::
-   \mathbf H = \omega ( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}
+   \mathbf H = \frac{\omega}{2}= ( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}
 
 .. note::
    As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`.
@@ -656,8 +658,8 @@ Using Pauli matrices, I can decompose this to
 In a more compact form, this Hamiltonian is
 
 .. math::
-   \mathbf H &= \frac{\delta^2m}{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
-   & = \left(\frac{\Delta}{2} -\frac{\delta^2m}{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{\delta^2m}{4E} \sin 2\theta \mathbf{\sigma_1}
+   \mathbf H &= \frac{ \delta m^2 }{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
+   & = \left(\frac{\Delta}{2} -\frac{ \delta m^2 }{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{ \delta m^2 }{4E} \sin 2\theta \mathbf{\sigma_1}
 
 .. note::
    Eigenvalues of :math:`\mathbf {\sigma_3}` are 1 and -1 with corresponding eigenvectors
@@ -708,7 +710,7 @@ This new rotation in matrix form is
    The second step is to set the off diagonal elements to zero. By solving the equaions we can find the :math:`\sin 2\theta(x)` and :math:`\cos 2\theta(x)`.
 
    .. math::
-      \mathbf{H_{xd}} &= \mathbf{U^{-1}_x} \left( A_1 \mathbf{\sigma_1} + A_3 \mathbf{\sigma_3} \right) \\
+      \mathbf{H_{xd}} &= \mathbf{U^{-1}_x} \left( A_1 \mathbf{\sigma_1} + A_3 \mathbf{\sigma_3} \right) \mathbf{ U_x } \\
       & = \begin{pmatrix} A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) & A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x) \\ A_3 \sin 2\theta(x) + A_1\cos 2\theta(x) &  - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) \end{pmatrix},
 
    where
@@ -730,7 +732,7 @@ This new rotation in matrix form is
 
    **This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.**
 
-   **The point is, for equation of motion, we have a differential with respect to position** :math:`x`! **So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and de-diagonalize the Hamiltonian on RHS.**
+   **The point is, for equation of motion, we have a differentiation with respect to position** :math:`x`! **So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and de-diagonalize the Hamiltonian on RHS.**
 
 
 .. note::
@@ -747,7 +749,15 @@ We imediately know the propagation is on the heavy-light mass eigenstates under 
 .. admonition:: Is Adabatic Condition Valid Here?
    :class: note
 
-   Haxton's paper.
+   Haxton's paper. 
+
+   Before going into the system, here is a discussion of adiabatic in thermodynamics.
+
+   
+
+
+
+   
 
 
 From the two solutions we know there is a gap between the two trajectories. We draw a figure with electron number density as the horizontal axis and energy as the vertical axis.
@@ -758,6 +768,26 @@ From the two solutions we know there is a gap between the two trajectories. We d
 
    `Neutrino physics <http://scitation.aip.org/content/aapt/journal/ajp/68/1/10.1119/1.19368>`_ by Wick C. Haxton and Barry R. Holstein.
 
+
+
+
+
+
+
+MSW Refraction, Resonance and More
+---------------------------------------------------------
+
+
+.. admonition:: Hysteresis Loops of Neutrino Oscillations Due to MSW Effect
+   :class: note
+
+   Due to MSW effect, a system that is close to adiabaticity but not exactly adiabaticity could exhibit hysteresis effect, i.e., neutrinos going from high density region to low density region then coming back could form a hysteresis loop.
+
+
+TODO
+
+1. Write down the effective potential :math:`V(x)` which depends on the position. Refractive index is defined as :math:`n_{ref} - 1 = \frac{V}{p}`.
+2. Two characteristic length: :math:`l_v = \frac{4\pi E}{ \delta m^2 }` as the vacuum oscillation length and :math:`l_0=\frac{2\pi}{V}` as the refraction length. As the becomes comparable resonance occurs. For small mixing angle cases, resonance happens when vacuum length is about the length of refraction.
 
 
 
