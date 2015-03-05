@@ -1,3 +1,5 @@
+.. sectnum::
+
 From Neutrinos to Cosmos
 ==========================
 

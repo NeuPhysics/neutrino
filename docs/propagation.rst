@@ -1,3 +1,5 @@
+.. sectnum::
+
 How Do Neutrinos Propagate
 ===========================
 

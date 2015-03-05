@@ -1,3 +1,5 @@
+.. sectnum::
+
 Pictures
 ===============
 

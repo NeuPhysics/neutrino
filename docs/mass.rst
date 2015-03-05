@@ -1,3 +1,5 @@
+.. sectnum::
+
 Masses of Neutrinos
 =====================
 

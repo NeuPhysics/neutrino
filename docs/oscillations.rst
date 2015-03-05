@@ -749,15 +749,15 @@ We imediately know the propagation is on the heavy-light mass eigenstates under 
 .. admonition:: Is Adabatic Condition Valid Here?
    :class: note
 
-   Haxton's paper. 
+   Haxton's paper.
 
    Before going into the system, here is a discussion of adiabatic in thermodynamics.
 
-   
 
 
 
-   
+
+
 
 
 From the two solutions we know there is a gap between the two trajectories. We draw a figure with electron number density as the horizontal axis and energy as the vertical axis.
