@@ -1,5 +1,3 @@
-.. sectnum::
-
 Oscillations - The Tranditional Way
 ============================
 
@@ -246,7 +244,7 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
    & = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
    & = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
 
-Again we see clearly, no oscillation will apear as long as mixing angle :math:`\theta=0` or :math:` \delta m^2 =0`.
+Again we see clearly, no oscillation will apear as long as mixing angle :math:`\theta=0` or :math:`\delta m^2 =0`.
 
 
 .. note::

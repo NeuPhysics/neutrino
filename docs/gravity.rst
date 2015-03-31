@@ -1,5 +1,3 @@
-.. sectnum::
-
 Effect of Gravitation
 =====================
 

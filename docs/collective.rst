@@ -1,5 +1,3 @@
-.. sectnum::
-
 Collective Behavior
 ==================================
 
