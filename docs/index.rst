@@ -27,6 +27,7 @@ Table of Contents:
    :maxdepth: 2
 
    preliminary.rst
+   commensense.rst
    mass.rst
    oscillations.rst
    collective.rst
