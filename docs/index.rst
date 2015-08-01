@@ -28,6 +28,7 @@ Table of Contents:
 
    preliminary.rst
    commonsense.rst
+   math.rst
    mass.rst
    oscillations.rst
    collective.rst
