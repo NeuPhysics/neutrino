@@ -53,7 +53,7 @@ by definition the fixed point in phase space :math:`\{f_i,g_i\}` leads to the re
 Thus the equations can be approximated using Taylor expansion near the point :math:`\{f_i,g_i\}`, since at the fixed points the derivatives are small.
 
 .. math::
-   \frac{d}{dx} &= F(f,g)
+   \frac{d}{dx} &= F(f,g) \\
    & = F(f_i,g_i) + \frac{\partial F(f,g)}{\partial f}\vert_{f=f_i,g=g_i} (f-f_i)+ \frac{\partial F(f,g)}{\partial g}\vert_{f=f_i,g=g_i} (g-g_i)+ \mathcal O(2).
 
 The equations are simplified to linear equations whose coefficient matrix is simply the Jacobian matrix of the original system at the fixed point :math:`\{f_i,g_i \}`. In this example, the coefficient matrix for the linearized system is
