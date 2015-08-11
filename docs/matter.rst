@@ -78,6 +78,15 @@ The one that is missing is the charged current for :math:`nu_\tau` and :math:`e^
 
 The first two diagrams will add two equal terms on the diagonal terms of Hamiltonian, which can be viewed as adding a number times identity matrix thus conserves the eigenstates while shifts the eigenvalues. However, the third diagram will only add a term to the first diagonal term of Hamiltonian, which is the weak coupling :math:`\Delta = \sqrt{2}G_F n(x)` with :math:`n(x)` being the number density of electrons.
 
+
+
+
+.. admonition:: Identity Matrix and Survival Probability
+   :class: note
+
+   Identity matrix shifts the eigenvalues up and down homogeneously which changes the evolution of the state. However, since this is only a phase, the calculation of the survival probability will kill this phase.
+
+
 .. admonition:: Weak Interaction
    :class: note
 
@@ -222,6 +231,21 @@ This new rotation in matrix form is
       \sin 2\theta(x) & = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \\
       \cos 2\theta(x) & = \frac{-A_3}{\sqrt{A_1^2+A_3^2}}.
 
+
+   Plug in :math:`A_1` and :math:`A_3`
+
+   .. math::
+      \sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \left(\frac{\Delta}{\omega} \right)^2+1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v }} \\
+      \cos 2\theta(x)&= \frac{ \cos 2\theta_v - \frac{\Delta}{\omega} }{ \sqrt{ \left( \frac{\Delta}{\omega} \right)^2  +1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v  }}.
+
+   Define :math:`\hat\Delta = \frac{\Delta}{\omega}` with :math:`\omega=\frac{\Delta m^2}{2E}`, which represents the matter interaction strength compared to the vacuum oscillation.
+
+   .. math::
+      \sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
+      \cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \sqrt{\hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v } }.
+
+
+
    **This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.**
 
    **The point is, for equation of motion, we have a differentiation with respect to position** :math:`x`! **So even we diagonalize the Hamiltonian, the equation of motion won't be diagonalized. An extra matrix will occur on the LHS and de-diagonalize the Hamiltonian on RHS.**
@@ -317,21 +341,51 @@ There are three different matrix representatioins that is useful to the calculat
 
    .. math::
       \mathbf{H_{vmv}} = \mathbf{H_{vp}} = \frac{1}{2E}\begin{pmatrix} m_1^2 & 0 & 0 \\ 0 & m_2^2 & 0  \\ 0 & 0 & m_3^2
-      \end{pmatrix},
+      \end{pmatrix}.
+
+   To remove the trace, we can subtract a identity matrix
+
+   .. math::
+      &\mathbf{H}- \frac{m_1^2}{2E}\mathbf{I} \\
+      =& \frac{1}{2E}\begin{pmatrix}
+      m_1^2 & 0 & 0 \\
+      0 & m_2^2 &  0\\
+      0 & 0 & m_3^2
+      \end{pmatrix} - \frac{m_1^2}{2E} \mathbf{I} \\
+      =& \frac{1}{2E} \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & \Delta m_{12}^2 & 0 \\
+      0 & 0 & \Delta m_{13}^2
+      \end{pmatrix}
 
    The interaction in flavor basis is
 
    .. math::
-      \mathbf{V} = \begin{pmatrix} \sqrt{2}G_F n & 0 & 0 \\ 0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix}.
+      \mathbf{V_f} = \begin{pmatrix} \sqrt{2}G_F n & 0 & 0 \\ 0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix}.
 
-   
+   **To write down the Hamiltonian in vacuum mass eigenstates**, we transform the interaction term to vacuum mass eigenstates by
+
+   .. math::
+      \mathbf{V_{vm}} = \mathbf{U^{-1}} \mathbf{V} \mathbf{U},
+
+   where :math:`U` is the PMNS matrix.
+
+   **To write down the Hamiltonian in flavor basis**, we transform the vacuum Hamiltonian to flavor basis **after remove the trace**, which is
+
+   .. math::
+      \mathbf{H_{fv}} = \mathbf{U} \mathbf{H_{vmv}} \mathbf{U^{-1}}.
+
+
+   **We could also write down the Hamiltonian matrix in instantaneous mass eigenstates**, which requires a instantaneous diagonalization.
+
+
 
 
 .. index:: solar neutrinos
 
 
-2 Flavor Solar Neutrino
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 Flavor Neutrino Oscillations and Matter Effect
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. admonition:: Solar Neutrinos
@@ -352,11 +406,86 @@ where :math:`\Delta = \sqrt{2} G_F n` and :math:`n` is the number density of the
 
 
 
+Constant Electron Number Density
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Suppose we have an environment with constant electron number density, the term :math:`- i \mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} )` goes away. All we have is the diagonalized new Hamiltonian :math:`\mathbf{H_{md}}` and the eigenvalues are easily obtained which are
 
+.. math::
+   E_1 &= A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) \\
+   E_2 & = - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) .
 
+The final result for these two eigenvalues are
 
-.. admonition:: Identity Matrix and Survival Probability
+.. math::
+   E_1 &= -\sqrt{ \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2\theta_v. } \\
+   E_2 &= \sqrt{ \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2\theta_v. }.
+
+Meanwhile the eigenstates are denoted as :math:`\ket{\nu_{c1}}`and :math:`\ket{\nu_{c2}}`.
+
+.. admonition:: Two Special Cases
    :class: note
 
-   Identity matrix shifts the eigenvalues up and down homogeneously which changes the evolution of the state. However, since this is only a phase, the calculation of the survival probability will kill this phase.
+   Two special cases,
+
+   1. :math:`\cos 2\theta_v \to 0`;
+   2. :math:`\cos 2\theta_v \to 1`.
+
+
+As for the survival probability for the initial condition that :math:`\Psi(x=0)=\ket{\nu_{c1}}`, the result has the same form as the vacuum case, which is
+
+.. math::
+   P_x(\nu_e,L) = 1 - \sin^2(2\theta_m)\sin^2\left( \frac{\omega_m L}{2} \right) ,
+
+where
+
+.. math::
+   \sin 2\theta(x)  = \frac{\omega\sin 2\theta_v}{\sqrt{ \omega^2+\Delta^2 - 2 \omega \Delta\cos 2\theta_v }}.
+
+:math:`\theta_m = \theta(x)` is the effective mixing angle which in fact doesn't depend on :math:`x` if the matter profile is constant.
+
+
+
+
+.. admonition:: Vacuum Survival Probability
+   :class: note
+
+   As an comparison, the vacuum result is
+
+   .. math::
+      P_x(\nu_e,L) = 1 - \sin^2(2\theta)\sin^2\left( \frac{\omega L}{2} \right) ,
+
+   for all electron flavor initial condition.
+
+
+
+Adiabatic Limit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In some astrophysical environments the electron number density changes very slowly which means the term :math:`\mathbf{U_m^{-1}} \partial_x \mathbf{U_m}` is much smaller than :math:`\mathbf{H_{md}}`. By intuition we would expect that this term could be dropped to the lowest order.
+
+The eigen energies are slowing changing with the position of neutrinos,
+
+.. math::
+   E_1 & = -\frac{\omega}{2}\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v} \\
+   E_2 & = \frac{\omega}{2}\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v}.
+
+When the term :math:`\hat\Delta` is very small :math:`1-2\hat\Delta\cos 2\theta_v` will dominate and the whole term decreases. On the other hand as :math:`\hat\Delta` becomes large, :math:`\hat\Delta^2` will dominate and the whole term grows. Mathematically we could find the region when the part :math:`\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v}` decreases and increases.
+
+
+
+
+
+
+
+
+
+
+
+Refs and Notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Wolfenstein, L. (1978). Neutrino oscillations in matter. Physical Review D, 17(9), 2369–2374. doi:10.1103/PhysRevD.17.2369
+2. Wolfenstein, L. (1979). Neutrino oscillations and stellar collapse. Physical Review D, 20(10), 2634–2635. doi:10.1103/PhysRevD.20.2634
+3. Parke, S. J. (1986). Nonadiabatic Level Crossing in Resonant Neutrino Oscillations. Physical Review Letters, 57(10), 1275–1278. doi:10.1103/PhysRevLett.57.1275
+4. Bethe, H. A. (1986). Possible Explanation of the Solar-Neutrino Puzzle. Physical Review Letters, 56(12), 1305–1308. doi:10.1103/PhysRevLett.56.1305
