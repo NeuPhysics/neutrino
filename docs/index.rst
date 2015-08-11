@@ -11,6 +11,17 @@ Neutrino is one of the most interesting particles in our world. The first propos
 .. image:: https://upload.wikimedia.org/wikipedia/commons/5/57/FirstNeutrinoEventAnnotated.jpg
    :align: center
 
+
+
+
+
+.. admonition:: Solar Neutrino Problem
+   :class: note
+
+   The sun produce neutrinos inside it and the neutrinos propagate out. On the earth we can detect them. The problem was that the detected neutrinos was only one third of the total neutrino flux predicted which causes some people to think that the solar had shut down. The solution, however, is the neutrino oscillation.
+
+
+
 As far as we know, we have three flavours of neutrinos and their anti particles and they are  orthogonal to each other,
 
 .. math::
@@ -31,7 +42,9 @@ Table of Contents:
    math.rst
    mass.rst
    oscillations.rst
+   matter.rst
    collective.rst
+   qualitative.rst
    instability.rst
    propagation.rst
    picture.rst

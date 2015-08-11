@@ -1,4 +1,4 @@
-Oscillations - The Tranditional Way
+Oscillations - In General
 ============================
 
 
