@@ -254,7 +254,7 @@ This new rotation in matrix form is
 .. note::
    As :math:`\Delta \to \infty`, :math:`A_3\to \infty` and :math:`\sin 2\theta(x)` vanishes. Thus the neutrino will stay on flavour eigenstates.
 
-With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos, []_
+With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos,
 
 .. math::
    i \hbar \partial_t \ket{\psi_x(t)} = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{xd} \ket{\psi_x(t)},

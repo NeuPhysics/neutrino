@@ -245,8 +245,6 @@ when it is aligned with z direction of Pauli matrices. Polarization vector is no
 .. admonition:: Take Out The Components
    :class: note
 
-   ****
-
    How to project out the components of polarization vector? By multiplying on both sides the Pauli matrices.
 
    Note that for Pauli matrices
@@ -277,7 +275,7 @@ when it is aligned with z direction of Pauli matrices. Polarization vector is no
 Neutrino-neutrino Interaction and BCS Theory
 -------------------------------------------------------------
 
-.. admonition::
+.. admonition:: BCS
    :class: note
 
    BCS Hamiltonian is

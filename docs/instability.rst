@@ -63,7 +63,7 @@ A small anisotropy leads to a runaway flavor equipartition. [2]_
    .. figure:: assets/instability/multiangleInstability.png
       :align: center
 
-      A figure from Raffelt & Simirnov (2007) shows the instability from anisotropic small perturbations. [2]_ Potential energy grows expotentially, where :math:`-E_1 = \mu/4 \vec{D_1}^2` .
+      A figure from Raffelt & Simirnov (2007) shows the instability from anisotropic small perturbations. Potential energy grows expotentially, where :math:`-E_1 = \mu/4 \vec{D_1}^2` .
 
 
 

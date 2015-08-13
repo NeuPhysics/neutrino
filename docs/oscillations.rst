@@ -89,7 +89,7 @@ where :math:`U^*_{\alpha j}` is the element of neutrino mixing matrix.
 .. admonition:: PMNS Mixing Matrix
    :class: note
 
-   Pontecorvo-Maki-Nakagawa-Sakata (PMNS) mixing matrix is the product of three rotation matrices, in addition to an extra phase, [1]_
+   Pontecorvo-Maki-Nakagawa-Sakata (PMNS) mixing matrix is the product of three rotation matrices, in addition to an extra phase,
 
    .. math::
       \mathbf U &= \mathbf {U_{23}} \times \mathbf {U_{13,\delta}} \times \mathbf {U_{12}} \\

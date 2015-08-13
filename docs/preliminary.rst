@@ -81,7 +81,7 @@ Wigner Function
 .. figure:: assets/preliminary/classicalProbDist.jpg
    :align: center
 
-   A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution. [3]_
+   A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution.
 
 Wigner function is an analogue of the classical phase-space probability distribution function though it is not really probability. [3]_ The mean of Wigner function lies in the two quadratures, i.e., space distribution and momentum distribution.
 
