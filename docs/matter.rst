@@ -496,7 +496,7 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
 
 
 
-.. admonitioin:: Adiabatic Limit of Nuetrino Oscillations in Matter
+.. admonition:: Adiabatic Limit of Nuetrino Oscillations in Matter
    :class: note
 
    Before we move on to higher order corrections, it would be nice to understand this phenomenon.
