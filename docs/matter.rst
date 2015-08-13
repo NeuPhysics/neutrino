@@ -540,7 +540,7 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
          \hat\Delta = 0 \quad\text{or}\quad 2\cos 2\theta_v .
 
 
-      The first condition is trivial which corresponds to vacuum however the second condition $\Delta = 2\cos 2\theta_v \omega$ means the interaction oscillation length is doubled compared to resonance point.
+      The first condition is trivial which corresponds to vacuum however the second condition :math:`\Delta = 2\cos 2\theta_v \omega` means the interaction oscillation length is doubled compared to resonance point.
 
       **Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for :math:`\nu_L(x)`.** At :math:`n(x)\to 0` the oscillation becomes vacuum oscillation.
 
@@ -684,7 +684,7 @@ which means that the previous result can be simplified to
    & =  \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + 2 \lvert A_L^*(x) A_H(x) \rvert \cos\left( 2\phi + \psi_{LH} \right),
 
 
-with the definition that :math:`\psi_{LH}(x)` is the argument of $A_L^*(x)A_H(x)$.
+with the definition that :math:`\psi_{LH}(x)` is the argument of :math:`A_L^*(x)A_H(x)`.
 
 
 However the coefficients :math:`a_L` and :math:`a_H` are still not known yet. The trick is to average over the detection and production position. The average over :math:`x` removes the :math:`\cos` term due to the dependent of :math:`x` for :math:`\phi` and averages :math:`\cos^2\theta_m(x)` to :math:`\frac{1}{2}`, which results in

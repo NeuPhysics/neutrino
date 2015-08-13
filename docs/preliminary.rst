@@ -117,7 +117,7 @@ The neutrino-neutrino forward scattering is [2]_
 .. [2] Pantaleone (1992), Friedland & Lunardini (2003).
 
 .. admonition:: Question
-   :class: warning
+   :class: caution
 
    Meaning of each term in Liouville equation ?
 

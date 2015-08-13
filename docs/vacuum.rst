@@ -43,13 +43,13 @@ in which the energy terms are simplified using the relativistic condition
    **It should be made clear that this is not really decoherence but in the view of wave packet formalism different propagation eigenstates will be far away from each other. As long as we put them together again we can overlap and oscillate again. No quantum decoherence is happening at all.**
 
 
-In general the flavor eigenstates are the mixing of the mass eigenstates with a unitary matrix $\mathbf U$, that is
+In general the flavor eigenstates are the mixing of the mass eigenstates with a unitary matrix :math:`\mathbf U`, that is
 
 .. math::
    \ket{\nu_{\alpha}} =  U_{\alpha i} \ket{\nu_i},
 
 
-where the :math:`\alpha` s are indices for flavor states while the $i$s are indices for mass eigenstates.
+where the :math:`\alpha` s are indices for flavor states while the *i*s are indices for mass eigenstates.
 
 To find out the equation of motion for flavor states, plugin in the initary tranformation,
 
@@ -57,7 +57,7 @@ To find out the equation of motion for flavor states, plugin in the initary tran
    i  U_{\alpha i} \partial_t \ket{\nu_i} =  U_{\alpha i}  H^m_{ij} \ket{\nu_j}.
 
 
-We use index :math:{}^{vm}$ for representation of Hamiltonian in mass eigenstates in vacuum oscillations. Applying the unitary condition of the transformation,
+We use index :math:`{}^{vm}` for representation of Hamiltonian in mass eigenstates in vacuum oscillations. Applying the unitary condition of the transformation,
 
 .. math::
    \mathbf I = \mathbf {U^\dagger} \mathbf U,
@@ -98,7 +98,7 @@ The neutrino states at any time can be written as
    \ket{\Psi(t)}  = X_1 \ket{\nu_1 } e^{-i E_1 t}+ X_2 \ket{ \nu_2 } e^{-i E_2 t},
 
 
-where :math:`X_1` and $X_2$ are the initial conditions which are determined using the neutrino initial states.
+where :math:`X_1` and :math:`X_2` are the initial conditions which are determined using the neutrino initial states.
 
 Survival probalility is the squrare of the projection on an flavor eigenstate,
 
@@ -134,7 +134,7 @@ The survival probability becomes
 
 
 
-:math:`U^{\dagger *}_{i\alpha}` stands for the $i$th row and the :math:`\alpha` th column of the matrix :math:`U^{\dagger *}`.
+:math:`U^{\dagger *}_{i\alpha}` stands for the *i*th row and the :math:`\alpha` th column of the matrix :math:`U^{\dagger *}`.
 
 
 Two Flavor States
@@ -507,6 +507,12 @@ Since the probability for differential flavors of neutrinos are summed to 1 and 
    :align: center
 
    Ternary diagram for inverted hierarchy
+
+
+
+
+
+
 
 
 
