@@ -113,8 +113,8 @@ Support
 DOI
 ===========
 
-.. image:: https://zenodo.org/badge/7726/emptymalei/neutrino.svg
-   :target: http://dx.doi.org/10.5281/zenodo.13219
+.. image:: https://zenodo.org/badge/7726/NeuPhysics/neutrino.svg
+   :target: https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino
 
 
 Footnote
