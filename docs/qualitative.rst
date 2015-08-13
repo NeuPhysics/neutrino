@@ -53,6 +53,46 @@ With the definition of these oscillation lengths, a comparison between them can 
    l_m &=  1.2\times 10^{19}\pi \left( \frac{10^{-14}}{n} \right) \mathrm{GeV^{-1}} = 1.2\times 10^4\pi \left( \frac{10^{-24}\mathrm{cm^{-3}}}{n} \right) .
 
 
+There are relations between energy of neutrinos and the number density of electrons when the two lengths are equal.
+
+.. figure:: assets/qualitative/comparisonVacOscLengthMatterLength.png
+   :align: center
+
+   Comparison of the lengths. The two length are equal if
+
+   .. math::
+      \left(\frac{10^{-14}}{n} \right) = 3.3 \left( \frac{E}{10^{-3}}\right),
+
+   in which :math:`n` is in :math:`\mathrm{GeV^3}` while :math:`E` is in unit of :math:`\mathrm{GeV}`.
+
+
+
+On the other hand, the overall oscillation length in matter is
+
+.. math::
+   l &= \frac{2\pi}{\omega_m} \\
+   & = \frac{2\pi}{\omega \sqrt{ \hat\Delta^2 + 1 - 2 \hat\Delta \cos 2\theta_v }} \\
+   & = \frac{l_v}{ \sqrt{\left(\frac{l_v}{l_m} \right)^2 +1 - 2\frac{l_v}{l_m}\cos 2\theta_v  }} .
+
+
+This expression shows exactly why the different length scales are important.
+
+
+1. :math:`\lvert \frac{l_v}{l_m} \rvert \ll 1 \Rightarrow l\to l_v`, matter effect is minimal.
+2. :math:`\lvert \frac{l_v}{l_m} \rvert \gg 1 \Rightarrow l\to 0`, matter effect kills the oscillations.
+3. :math:`\lvert \frac{l_v}{l_m}\rvert \sim 1 \Rightarrow l\to \frac{l_v}{2\sin\theta_v}`, more interesting region, assuming :math:`\sin\theta_v>0`. To linear approximation,
+
+   .. math::
+      l \approx \frac{l_v}{2\sin\theta_v} \left( 1 -  \frac{l_v/l_m - 1}{2} \right) = \frac{l_v}{4\sin\theta_v} \left( 1 -  \frac{l_v}{l_m } \right) .
+
+   notice that at resonance
+
+   .. math::
+      l = \frac{l_v}{2\sin \theta_v}.
+
+
+
+Another important thing about these lengths is that :math:`l_v` is a function of energy which is that higher energy means longer oscillation length as shown in figure on comparison of vacuum oscillation length with matter length. This is important because we can always find the a energy that is at resonance with the matter density, as long as the energy still makes sure the neutrinos are relativistic. So a spectral swap is possible.
 
 
 
