@@ -549,7 +549,7 @@ General Discussion of Matter Effect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-This part is a very general discussion of the matter effect.[Parke1986]_
+This part is a very general discussion of the matter effect [Parke1986]_.
 
 To work in flavor basis, we use the subscript :math:`{}_{mf}` to denote the flavor basis representation with mass effect. The equation of motion in flavor basis can be written down as
 
