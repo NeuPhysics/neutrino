@@ -473,6 +473,83 @@ The eigen energies are slowing changing with the position of neutrinos,
 When the term :math:`\hat\Delta` is very small :math:`1-2\hat\Delta\cos 2\theta_v` will dominate and the whole term decreases. On the other hand as :math:`\hat\Delta` becomes large, :math:`\hat\Delta^2` will dominate and the whole term grows. Mathematically we could find the region when the part :math:`\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v}` decreases and increases.
 
 
+.. figure:: assets/mswEnergyLevels.jpg
+   :align: center
+
+   Energy Levels for MSW effect. We have the up-down symmetry since we shifted the energy by a constant to remove the identity matrix in the Hamiltonian.
+
+
+The survival probability for the light neutrinos would be
+
+.. math::
+   P_x(\nu_L,L) = 1 - \sin^2(2\theta (x))\sin^2\left( \frac{\omega L}{2} \right) .
+
+
+
+The survival probability for electron flavor neutrino is
+
+.. math::
+   P_x(\nu_e,L) = \frac{1}{2} + \frac{1}{2}\cos 2\theta(x_0) \cos 2\theta_v,
+
+
+if the neutrinos are produced in dense region and the detection happens in vacuum.
+
+
+
+.. admonitioin:: Adiabatic Limit of Nuetrino Oscillations in Matter
+   :class: note
+
+   Before we move on to higher order corrections, it would be nice to understand this phenomenon.
+
+   1. The vacuum oscillation length can be extracted from vacuum oscillation survival probability. It is :math:`L_v = \frac{2\pi}{\omega}`.
+   2. In this problem we have another energy scale which is the interaction, :math:`\Delta`. Here we can define another characteristic length :math:`l_m = \frac{2\pi}{\Delta}`.
+   3. MSW resonance happens when the two character lengths are matching with each other. Another way to put it is that the term :math:`\sin 2\theta(x)` is minimized so that we have the smallest energy gap which leads to :math:`\hat\Delta = \cos 2\theta_v`. Equivalently this is the relation
+
+   .. math::
+      l_0 = l_m\cos 2\theta_v.
+
+   4. At resonance, we have
+
+      .. math::
+         \cos 2\theta(x) &= 1 \\
+         \sin 2\theta(x) &= 0.
+
+
+      This is max mixing of the states which means that at the resonance point
+
+      .. math::
+         \begin{pmatrix} \nu_L(x_{r}) \\ \nu_H(x_{r}) \end{pmatrix} = \frac{\sqrt{2}}{2}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix}\nu_e \\ \nu_x \end{pmatrix}
+
+   5. Resonance conditions corresponds to a resonance density which is given by
+
+      .. math::
+         n_e(x) = \frac{\omega}{\sqrt{2}G_F } \cos 2\theta_v \equiv n_0(E,\Delta m^2) \cos 2\theta_v,
+
+
+      where :math:`n_0(E,\Delta m^2)=\frac{\omega}{\sqrt{2}G_F }` is a characteristic number density which depends on the energy mixing angles and :math:`\Delta m^2` of the neutrinos.
+
+   6. One should notice that if the condition :math:`\sin^2 2\theta(x) = \sin^2 2\theta_v` is satisfied, the survival probability for :math:`\ket{\nu_1}` has the same **the form of** vacuum oscillation survival probability for electron neutrinos. The condition is solved,
+
+      .. math::
+         \hat\Delta^2 + 1 - 2\hat\Delta \cos 2\theta_v = 1,
+
+
+      which leads to
+
+      .. math::
+         \hat\Delta = 0 \quad\text{or}\quad 2\cos 2\theta_v .
+
+
+      The first condition is trivial which corresponds to vacuum however the second condition $\Delta = 2\cos 2\theta_v \omega$ means the interaction oscillation length is doubled compared to resonance point.
+
+      **Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for :math:`\nu_L(x)`.** At :math:`n(x)\to 0` the oscillation becomes vacuum oscillation.
+
+
+First Order Approximation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 
 
 
