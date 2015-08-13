@@ -89,6 +89,13 @@ Questions
 
 
 
+Definition
+==============
+
+.. math::
+   \Delta &= \sqrt{2} G_F n(x) \\
+   \omega &= \frac{\Delta m^2}{2E}
+
 
 
 
