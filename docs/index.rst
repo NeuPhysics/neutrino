@@ -43,12 +43,13 @@ Table of Contents:
    commonsense.rst
    math.rst
    mass.rst
+   propagation.rst
    oscillations.rst
+   vacuum.rst
    matter.rst
    collective.rst
    qualitative.rst
    instability.rst
-   propagation.rst
    picture.rst
    models.rst
    mastereqn.rst
