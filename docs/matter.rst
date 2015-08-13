@@ -545,10 +545,186 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
       **Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for :math:`\nu_L(x)`.** At :math:`n(x)\to 0` the oscillation becomes vacuum oscillation.
 
 
-First Order Approximation
+General Discussion of Matter Effect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+This part is a very general discussion of the matter effect.[Parke1986]_
+
+To work in flavor basis, we use the subscript :math:`{}_{mf}` to denote the flavor basis representation with mass effect. The equation of motion in flavor basis can be written down as
+
+.. math::
+   i\partial_x \Psi_{mf}(x) = \mathbf{H_{mf}} \Psi_{mf}(x)
+
+where
+
+.. math::
+   \mathbf{H_{mf}} =  \left(  \frac{\Delta}{2} -  \frac{\omega}{2} \cos 2\theta_v  \right) \boldsymbol{\sigma_3} + \frac{\omega}{2} \sin 2\theta_v \boldsymbol{\sigma_1}.
+
+
+There are three stages for neutrinos to travel from the core of the sun to vacuum.
+
+1. At the core, electron neutrinos are produced. The electron flavor state should be projected onto heavy and light instantaneous mass eigenstates. What fallows is the that the propagation is adiabatic until the transition happens.
+   As we have seen in adiabatic situation, the states will stay in heavy and light states all along the evolution if the system starts from heavy or light state,
+
+   .. math::
+      \ket{\nu_{a1}(x)} &= \exp(-i \int_0^x \frac{\omega_m(x)}{2} dx )  \ket{\nu_L(x)} \\
+      \ket{\nu_{a2}(x)} &= \exp(i\int_0^x \frac{\omega_m(x)}{2} dx) \ket{\nu_H(x)},
+
+
+   where the heavy and light states are defined in the adiabatic situation previously. **This is what happens before the passing through of the resonance.**
+2. At the resonance point, light instantaneous mass eigenstate has a probability to jump to the heavy state and vice versa.
+   When it comes to the resonance point which is non-adiabatic propagation, the transition between the states :math:`\ket{\nu_L}\to a_L \ket{\nu_L(x)} + a_H \ket{\nu_H(x)} \ket{\nu_1(x)}` and :math:`\ket{\nu_H}\to b_L \ket{\nu_L(x)} + b_H \ket{\nu_H(x)}` will mix the heavy and light state up.
+
+   .. math::
+      \ket{\nu_1(x)} &= a_L \exp(-i \int_{x_r}^x \omega_m(x')/2 dx' )  \ket{\nu_L(x)} + a_H \exp(i\int_{x_r}^x \omega_m(x')/2 dx') \ket{\nu_H(x)}  \\
+      \ket{\nu_2(x)} &= b_L \exp(-i \int_{x_r}^x \omega_m(x')/2 dx' )  \ket{\nu_L(x)} + b_H \exp(i\int_{x_r}^x \omega_m(x')/2 dx') \ket{\nu_H(x)},
+
+   where the relations between the constants are determined using the condition that :math:`\ket{\nu_1(x)}` and :math:`\ket{\nu_2(x)}` are orthonormal, which leads to the conclusion that
+
+   .. math::
+      b_L &= -a_H^* \\
+      b_H &= a_L^* \\
+      \lvert a_L \rvert^2 &=  - \lvert a_H \rvert^2 .
+3. After the resonance point, the heavy and light states will continue on their adiabatic propagation.
+
+.. admonition:: Helpful Notes
+   :class: note
+
+   The relation between :math:`\theta_m` and :math:`\theta_v` is given by
+
+   .. math::
+      \omega_m\sin 2\theta_m =  \omega \sin 2\theta_v.
+
+
+Electron neutrinos are produced in a dense region as :math:`\ket{\nu_e}`, which are partially transformed to other the other neutrinos due to matter and the resonance then it propagates as if it satisfies the adiabatic condition again. The initial state in terms of light and heavy state is
+
+.. math::
+   \ket{\Psi_{m}(x_0)} = \ket{\nu_e}= \cos \theta_m(x_0) \ket{\nu_L(x_0)} + \sin \theta_m(x_0) \ket{\nu_H(x_0)}.
+
+The final state right before the resonance is
+
+.. math::
+   \ket{\Psi_{m}(x_{r-})} = \cos\theta_m(x_{0}) \exp\left( -i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx   \right) \ket{\nu_L(x_{r-})} + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right) \ket{\nu_H(x_{r-})}
+
+After the resonance the state is described by the general jumping
+
+.. math::
+   \ket{\Psi_{m}(x)}= &  \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx   \right)  \left(  a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)  \\
+   & + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)  \left(  -a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)
+
+
+in which the :math:`x_{r-}` is actually :math:`x_r` thus
+
+.. math::
+   \ket{\Psi_{m}(x)}= &  \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right)  \left(  a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)  \\
+   & + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)  \left(  -a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_L(x)}  + a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \ket{\nu_H(x)}  \right)
+
+
+To calculate the survival probability it is easier to use flavor basis, hence we have another form of :math:`\ket{\Psi_m(x)}` which is
+
+.. math::
+   \ket{\Psi_{m}(x)}= &  \left[ \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx'   \right)   a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   &  \left. - \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x')}{2} dx' \right)    a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' )  \right] \ket{\nu_L(x)}\\
+   & + \left[  \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right) a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   & \left. + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)   a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right]  \ket{\nu_H(x)} \\
+   =&  \left[ \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right)   a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   &  \left. - \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)    a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' )  \right] ( \cos\theta_m(x)\ket{\nu_e} - \sin\theta_m(x)\ket{\nu_x} )\\
+   & + \left[  \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x)}{2} dx   \right) a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   & \left. + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r-}} \frac{\omega_m(x)}{2} dx \right)   a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right] ( \sin\theta_m(x)\ket{\nu_e} + \cos\theta_m(x)\ket{\nu_x})
+
+
+
+
+Since :math:`\cos\theta_m`, :math:`\sin\theta_m` and :math:`\omega_m` are real while :math:`a_L` and :math:`a_H` are complex, survival amplitude of electron neutrinos is given by
+
+.. math::
+   &\braket{\Psi_m(0)}{\Psi_m(x)} \\
+   = & \braket{\nu_e}{\Psi_m(x)} \\
+   = &  \left[ \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx'   \right)   a_L \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   &  \left. - \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx' \right)    a_H^* \exp( -i \int_{x_r}^x \frac{\omega_m(x')}{2}dx' )  \right]  \cos\theta_m(x) \\
+   & + \left[  \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx'   \right) a_H \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right. \\
+   & \left. + \sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx' \right)   a_L^* \exp( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' ) \right]  \sin\theta_m(x) \\
+   =& A_L \exp\left( -i \int_{x_r}^{x} \frac{\omega_m(x')}{2} dx'   \right) + A_H \exp\left( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' \right),
+
+
+where the coefficients are
+
+.. math::
+   A_L(x) & = \cos\theta_m(x) \left[ a_L\cos\theta_m(x_0) \exp\left(  -i\int_{x_0}^{x_r} \frac{\omega_m(x')}{2} dx' \right) - a_H^*\sin\theta_m(x_0) \exp\left( i \int_{x_0}^{x_r} \frac{\omega_m(x')}{2}dx' \right)  \right] \\
+   A_H(x) & = \sin\theta_m(x)  \left[ a_H \cos\theta_m(x_0) \exp\left( -i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx'   \right)   + a_L^*\sin\theta_m(x_{0}) \exp\left( i \int_{x_0}^{x_{r}} \frac{\omega_m(x')}{2} dx' \right)    \right]  .
+
+
+
+The detection is in a region where matter density is very small, thus we use :math:`x\to\infty` which means the effective mixing angle becomes vacuum mixing angle. The probability is the square of the amplitude,
+
+.. math::
+   P(\nu_e,x) &= \lvert \braket{\Psi_m(0)}{\Psi_m(x)}  \rvert^2 \\
+   & = \lvert A_L(x) \exp\left( -i \int_{x_r}^{x} \frac{\omega_m(x')}{2} dx'   \right) + A_H(x) \exp\left( i\int_{x_r}^x \frac{\omega_m(x')}{2}dx' \right)  \rvert^2 \\
+   & = \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + A_L^*(x) A_H(x) \exp(2i\phi) + A_H^*(x) A_L(x) \exp(-2i\phi) \\
+   & = \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + 2 \mathbf{Re}( A_L^*(x) A_H(x) \exp(2i\phi) ),
+
+
+where :math:`\phi` is defined as
+
+.. math::
+   \phi = \int_{x_r}^{x} \frac{\omega_m(x')}{2}dx'.
+
+
+Note that for any complex number :math:`(a+ib)e^{i\phi} \equiv \rho e^{i\psi}`,
+
+.. math::
+   (a+ib)e^{i\phi} + c.c.=2 \rho \cos(\psi+\phi),
+
+
+which means that the previous result can be simplified to
+
+.. math::
+   P(\nu_e,x) &=  \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + 2 \mathbf{Re}( A_L^*(x) A_H(x) \exp(2i\phi) ) \\
+   & =  \lvert A_L(x) \rvert^2 + \lvert A_H(x) \rvert^2 + 2 \lvert A_L^*(x) A_H(x) \rvert \cos\left( 2\phi + \psi_{LH} \right),
+
+
+with the definition that :math:`\psi_{LH}(x)` is the argument of $A_L^*(x)A_H(x)$.
+
+
+However the coefficients :math:`a_L` and :math:`a_H` are still not known yet. The trick is to average over the detection and production position. The average over :math:`x` removes the :math:`\cos` term due to the dependent of :math:`x` for :math:`\phi` and averages :math:`\cos^2\theta_m(x)` to :math:`\frac{1}{2}`, which results in
+
+
+.. math::
+   \langle P(\nu_e,x)\rangle_{x} =& \cos^2\theta_m(x) (\lvert a_H\rvert^2 \cos^2\theta_m(x_0) + \lvert a_L\rvert^2 \sin^2\theta_m(x_0) ) \\
+   & + \sin^2\theta_m(x) ( \lvert a_H\rvert^2 \cos^2\theta_m(x_0) + \lvert a_L \rvert^2 \sin^2\theta_m(x_0) ) \\
+   & + ( - \cos^2\theta_m(x) + \sin^2\theta_m(x) ) \cos\theta_m(x_0)\sin\theta_m(x_0) ( a_H a_L e^{-2i\phi'} + \mathrm{c.c}) .
+
+
+Applying the condition that :math:`\lvert a_L \rvert^2 + \lvert a_H \rvert^2 = 1`, the probability becomes
+
+.. math::
+   \langle P(\nu_e,x)\rangle_{x} =& \frac{1}{2} + \frac{1}{2} (1 - 2 \lvert a_H \rvert^2) \cos 2\theta_m(x_0) \cos 2\theta_v - \lvert a_H a_L \rvert \sin 2\theta_m(x_0)\cos 2\theta_v \cos ( 2 \phi' + \psi_{LH} ),
+
+
+where :math:`\psi_{LH}` is the argument of :math:`a_H a_L` and :math:`\phi` is :math:`\int_{x_0}^{x_r} \frac{\omega_m(x')}{2}dx'` .
+
+**The average over production removes the last part.**
+
+Notice that in fact the detection happens in vacuum, which means :math:`\theta_m(x)=\theta_v`.
+
+.. math::
+   \langle \langle P(\nu_e,x)\rangle_{x} \rangle_{x_0}= \frac{1}{2} + \frac{1}{2}(1- 2\lvert a_H \rvert^2) \cos 2\theta_m(x_0) \cos 2\theta_v .
+
+
+**This means that the adiabatic result is of the form**
+
+.. math::
+   P(\nu_e,x)_{\mathrm{adiabatic}} = \frac{1}{2} ( 1+ \cos 2\theta_m \cos 2\theta_v ).
+
+
+Define a transition probability at resonance
+
+.. math::
+   P_r(\nu_L \to \nu_H) = \lvert a_2 \rvert^2,
+
+
+which can be determined by the Landau-Zener transition analytically (first order) to the first order.
 
 
 
@@ -556,6 +732,26 @@ First Order Approximation
 
 
 
+
+
+
+
+
+
+
+.. Writing down the dimensionless equation, I have
+   .. math::
+   i \partial_{\hat x} \Psi_{mf} = \frac{R_S \omega}{2} ( (\hat\Delta - \cos 2\theta_v ) \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} )  \Psi_{mf} .
+
+
+
+
+
+
+
+
+
+.. [Parke1986] Parke, S. J. (1986). Nonadiabatic Level Crossing in Resonant Neutrino Oscillations. Physical Review Letters, 57(10), 1275–1278. doi:10.1103/PhysRevLett.57.1275
 
 
 
