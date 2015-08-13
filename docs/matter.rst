@@ -473,7 +473,7 @@ The eigen energies are slowing changing with the position of neutrinos,
 When the term :math:`\hat\Delta` is very small :math:`1-2\hat\Delta\cos 2\theta_v` will dominate and the whole term decreases. On the other hand as :math:`\hat\Delta` becomes large, :math:`\hat\Delta^2` will dominate and the whole term grows. Mathematically we could find the region when the part :math:`\sqrt{\hat\Delta^2 + 1 - 2 \hat\Delta  \cos 2\theta_v}` decreases and increases.
 
 
-.. figure:: assets/mswEnergyLevels.jpg
+.. figure:: assets/matter/mswEnergyLevels.jpg
    :align: center
 
    Energy Levels for MSW effect. We have the up-down symmetry since we shifted the energy by a constant to remove the identity matrix in the Hamiltonian.

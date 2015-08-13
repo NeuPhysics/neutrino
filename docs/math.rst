@@ -34,7 +34,7 @@ Thus we find the fixed points,
    \nu_e & = 0 \\
    \nu_x & = 0.
 
-If we have only the :math:`i`th function with derivative 0, the line is called the :math:`i`th-nullcline. Thus the fixed points are the interaction points of all the nullclines.
+If we have only the *i*th function with derivative 0, the line is called the *i*th-nullcline. Thus the fixed points are the interaction points of all the nullclines.
 
 
 
