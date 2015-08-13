@@ -185,6 +185,7 @@ Notice that the period of the expression is
 .. math::
    l_v = \frac{2\pi}{E_1 - E_2} = - \frac{4\pi E}{\Delta m_{12}}.
 
+Recall the definition of angular frequency in vacuum :math:`\omega = \frac{\Delta m^2}{2E}`. The relation between period and angular frequency is indeed :math:`\omega = \frac{2\pi}{l_v}` as we should have been defined them.
 
 
 Then the state becomes
@@ -200,8 +201,312 @@ The survival probability for electron neutrinos is
    &= 1- \frac{1}{2}\sin^2 2\theta_v \left(1- \cos\left( \frac{2\pi x}{l_v} \right) \right)
 
 
+The Standard Math for 2 Flavor Neutrino
+--------------------------------------------
+
+**This section is to demonstrate the standard math for differential equations we have learned in first year undergrad. In fact almost all the procedures are not necessary because we get this Hamiltonian in Flavor basis by transform the diagonalized Hamiltonian in mass eigenstates basis using the mixing matrix. Hence this section only works as a review of mathematics.**
+
+To solve a set of first order differential equations, I need the determinant of coefficient matrix. For 2 flavor neutrino oscillations, the equation of motion is
+
+.. math::
+   \partial_x \begin{pmatrix}
+   \nu_e(x) \\ \nu_x(x)
+   \end{pmatrix} = i \frac{\omega}{2} \begin{pmatrix}
+   -\cos 2\theta_v &    \sin 2\theta_v \\   \sin 2\theta_v & \cos 2\theta_v
+   \end{pmatrix} \begin{pmatrix}
+   \nu_e(x) \\ \nu_x(t)
+   \end{pmatrix}.
 
 
+To find the solutions I need the eigenvalues :math:`\lambda` . The determinant of the Hamiltonian is
+
+.. math::
+   &\det \left(  i\frac{\omega}{2} \begin{pmatrix}
+   -\cos 2\theta_v &    \sin 2\theta_v \\   \sin 2\theta_v &  \cos 2\theta_v
+   \end{pmatrix} - \lambda \mathbf{I} \right) \\
+   =& \begin{vmatrix}
+   -i \frac{\omega}{2} \cos 2\theta_v - \lambda & i \frac{\omega}{2} \sin 2\theta_v \\
+   i \frac{\omega}{2} \sin 2\theta_v & i \frac{\omega}{2} \cos 2\theta_v - \lambda
+   \end{vmatrix} .
+
+
+By defining :math:`\lambda' = \lambda/(-i \omega / 2)`, the determinant is
+
+.. math::
+   - \left( \frac{\omega}{2} \right)^2   ( (\cos 2\theta_v - \lambda')(-\cos 2\theta_v - \lambda') - \sin 2\theta_v \sin 2\theta_v ) .
+
+
+The eigenvalues are the solutions to
+
+.. math::
+   - \left( \frac{\omega}{2} \right)^2   ( (\cos 2\theta_v - \lambda')(-\cos 2\theta_v - \lambda') - \sin^2 2\theta_v  ) =0 ,
+
+
+whose solution is
+
+.. math::
+   \lambda' = \pm 1.
+
+
+With the solutions
+
+.. math::
+   \lambda = \pm i \frac{\omega}{2},
+
+
+the eigenvectors can also be solved.
+
+.. math::
+   \begin{pmatrix}
+   \cos 2\theta_v - 1 &  -  \sin 2\theta_v \\  - \sin 2\theta_v & - \cos 2\theta_v -1
+   \end{pmatrix} \begin{pmatrix}
+   \eta_1 \\ \eta_2
+   \end{pmatrix} = \begin{pmatrix}
+   0 \\ 0
+   \end{pmatrix}
+
+
+gives us :math:`\eta_2 = -\tan \theta_v \eta_1`, which means the eigenvectors are
+
+.. math::
+   \begin{pmatrix}
+   1  \\ -\tan\theta_v
+   \end{pmatrix} , \begin{pmatrix}
+   1 \\ \cot \theta_v
+   \end{pmatrix}.
+
+The general solution of the first order differential equations is
+
+.. math::
+   \begin{pmatrix}
+   1 \\ -\tan\theta_v
+   \end{pmatrix} e^{-i \omega x/ 2 } \\
+   \begin{pmatrix}
+   1 \\ \cot \theta_v
+   \end{pmatrix} e^{i  \omega x/ 2 }.
+
+
+Initial condition is
+
+.. math::
+   \begin{pmatrix}
+   1 \\ 0
+   \end{pmatrix},
+
+
+and it determines the final solution
+
+.. math::
+   & \cos^2\theta \begin{pmatrix}
+   1 \\ -\tan\theta_v
+   \end{pmatrix} e^{-i \omega x/ 2 } + \sin^2\theta_v
+   \begin{pmatrix}
+   1 \\ \cot \theta
+   \end{pmatrix} e^{i  \omega x/ 2 } \\
+   = & \begin{pmatrix}
+   \cos^2\theta_v \\ -\sin\theta_v \cos\theta_v
+   \end{pmatrix} e^{-i \omega x/ 2 } +
+   \begin{pmatrix}
+   \sin^2\theta_v \\ \sin\theta_v \cos \theta_v
+   \end{pmatrix} e^{i  \omega x/ 2 }
+
+
+
+The survival probability of electron neutrino is
+
+.. math::
+   P &= \lvert \cos^2\theta_v e^{-i \omega x/2} + \sin^2\theta_v e^{i\omega x/2} \rvert^2 \\
+   & = \lvert \cos^2 \theta_v e^{-i \omega x} + \sin^2 \theta_v \rvert ^2 ,
+
+
+which gets back to the result we had using the previous method.
+
+
+
+This problem can also be solved using numerical methods. Here is a comparison between this analytical result and a numerical result.
+
+
+
+Numerical Results for 2 Flavor Neutrino Oscillations
+------------------------------------------------------------
+
+
+For numerical calculation, the equations should be made dimensionless or seperate out the quantities that is not dimensionless before any calculations.
+
+In 2 flavor neutrino case, the equation of motion to be solved is
+
+.. math::
+   \partial_x  \begin{pmatrix}
+   \nu_e(x) \\ \nu_x(x)
+   \end{pmatrix} = i \frac{\omega}{2} \begin{pmatrix}
+   -\cos 2\theta_v &    \sin 2\theta_v \\   \sin 2\theta_v & \cos 2\theta_v
+   \end{pmatrix} \begin{pmatrix}
+   \nu_e(x) \\ \nu_x(t)
+   \end{pmatrix}.
+
+
+
+.. figure:: assets/vacuum/vacuumOsc.jpg
+   :align: center
+
+   Theoretical and numerical results overlap on all the range completely.
+
+
+
+3 Flavor Oscillations
+------------------------
+
+The vacuum Hamiltonian in mass eigenstate basis is
+
+.. math::
+   \frac{1}{2E}\begin{pmatrix}
+   m_1^2 & 0 & 0 \\
+   0 & m_2^2 &  0\\
+   0 & 0 & m_3^2
+   \end{pmatrix}.
+
+The trick to reduce the parameters is to subtract the :math:`\frac{m_1^2}{2E} \mathbf{I}` from Hamiltonian in mass eigenbasis.
+
+.. math::
+   &\mathbf{H}- \frac{m_1^2}{2E}\mathbf{I} \\
+   =& \frac{1}{2E}\begin{pmatrix}
+   m_1^2 & 0 & 0 \\
+   0 & m_2^2 &  0\\
+   0 & 0 & m_3^2
+   \end{pmatrix} - \frac{m_1^2}{2E} \mathbf{I} \\
+   =& \frac{1}{2E} \begin{pmatrix}
+   0 & 0 & 0 \\
+   0 & \Delta m_{12}^2 & 0 \\
+   0 & 0 & \Delta m_{13}^2
+   \end{pmatrix},
+
+where
+
+.. math::
+   \Delta m_{12}^2 &= m_2^2 - m_1^2, \\
+   \Delta m_{13}^2 &= m_3^2 - m_1^2, \\
+   \Delta m_{23}^2 & = m_3^2 - m_2^2.
+
+Then we define the vacuum Hamiltonian in mass eigenstate basis as
+
+.. math::
+   \mathbf{H_{vm}} = \frac{1}{2E} \begin{pmatrix}
+   0 & 0 & 0 \\
+   0 & \Delta m_{12}^2 & 0 \\
+   0 & 0 & \Delta m_{13}^2
+   \end{pmatrix}
+
+
+To find out the representation of Hamiltonian in flavor basis, we need the PMNS matrix which transforms the mass eigenstates to flavor eigenstates,
+
+.. math::
+   \ket{\nu_\alpha}= \mathbf{U}\ket{\nu_i}.
+
+In general the matrix is
+
+.. math::
+   \mathbf U = \begin{pmatrix}
+   U_{11} & U_{12} & U_{13} \\
+   U_{21} & U_{22} & U_{23} \\
+   U_{31} & U_{32} & U_{33}
+   \end{pmatrix},
+
+with a constraint that it is unitary. To see the function of this matrix, we could use another set of indices,
+
+.. math::
+   \mathbf{U} = \begin{pmatrix}
+   U_{e1} & U_{e2} & U_{e3} \\
+   U_{\mu 1} & U_{\mu 2} & U_{\mu 3}\\
+   U_{\tau 1} & U_{\tau 2} & U_{\tau 3}
+   \end{pmatrix}.
+
+This PMNS matrix is written as
+
+.. math::
+   \mathbf{U} = \left(
+   \begin{array}{ccc}
+    \cos \left(\theta _{12}\right) \cos \left(\theta _{13}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{12}\right) & e^{-i \delta _{\text{CP}}} \sin \left(\theta _{13}\right) \\
+    -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right)-e^{i \delta _{\text{CP}}} \cos \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right)-e^{i \delta _{\text{CP}}} \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{23}\right) \\
+    \sin \left(\theta _{12}\right) \sin \left(\theta _{23}\right)-e^{i \delta _{\text{CP}}} \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right) \sin \left(\theta _{13}\right) & -e^{i \delta _{\text{CP}}} \cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \\
+   \end{array}
+   \right).
+
+
+which is a rotation for 3D with a CP violation phase :math:`\delta`. For simplicity, we first assume tis phase is 0. Then the matrix becomes,
+
+
+.. math::
+   \mathbf{U} = \left(
+   \begin{array}{ccc}
+    \cos \left(\theta _{12}\right) \cos \left(\theta _{13}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{12}\right) & \sin \left(\theta _{13}\right) \\
+    -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right)-\sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \sin \left(\theta _{23}\right) \\
+    \sin \left(\theta _{12}\right) \sin \left(\theta _{23}\right)-\cos \left(\theta _{12}\right) \cos \left(\theta _{23}\right) \sin \left(\theta _{13}\right) & -\cos \left(\theta _{23}\right) \sin \left(\theta _{12}\right) \sin \left(\theta _{13}\right)-\cos \left(\theta _{12}\right) \sin \left(\theta _{23}\right) & \cos \left(\theta _{13}\right) \cos \left(\theta _{23}\right) \\
+   \end{array}
+   \right).
+
+The Hamiltonian in flavor basis is found by applying the transformation that
+
+.. math::
+   \mathbf{H} &= \mathbf{U} \mathbf{H_{vm}} \mathbf{U^{-1}}.
+
+
+
+.. figure:: assets/vacuum/vacOsc3Flavor.jpg
+   :align: center
+
+   Numerical results for vacuum oscillation 3 flavor case. The overall shapes are the same for NH and IH however they differ on small scales.
+
+
+.. figure:: assets/vacuum/vacOscNormInvComp.png
+   :align: center
+
+   Comparison of normal hierarchy and inverted hierarchy.The reason that they are almost the same is that the oscillation length for :math:`\Delta m_{13}^2` is small thus it only changes the oscillation patterns for the small oscillations. Vacuum energy scales in normal hierarchy are
+
+   .. math::
+      \omega_{12} &= \frac{\Delta m_{12}^2}{2E} = 3.8\times 10^{-20}\mathrm{GeV} \\
+      \omega_{13} &= \frac{\Delta m_{13}^2}{2E} = 1.7\times 10^{-18}\mathrm{GeV} \\
+      \omega_{23} &= \frac{\Delta m_{23}^2}{2E} \approx \omega_{13}
+
+   which shows that basically only two scales and the larger one determines the small oscillation.
+
+
+.. figure:: assets/vacuum/vacOscNormInvComp-Invert12.png
+   :align: center
+
+   Comparison of normal hierarchy and inverted hierarchy but with inverted :math:`\Delta m_{12}^2`.
+
+
+
+Ternary Diagram
+--------------------
+
+Since the probability for differential flavors of neutrinos are summed to 1 and can be represented in barycentric coordinates, a ternary plot would be nice to understand what happens in the oscillations.
+
+
+.. figure:: assets/vacuum/vacOsc3FlavorTernary900.png
+   :align: center
+
+   Ternary diagram for vacuum oscillations. The state starts from bottom left, which means that the system has only electron neutrinos. As the neutrino travels, it oscillates in curves. After one period of the beat, it reaches the far end and then oscillates backwards.
+
+.. figure:: assets/vacuum/vacOsc3FlavorTernary300.png
+   :align: center
+
+   Ternary diagram for less oscillation periods
+
+
+
+.. figure:: assets/vacuum/vacOsc3FlavorTernary5000.png
+   :align: center
+
+   Ternary diagram for more oscillation periods
+
+
+
+
+.. figure:: assets/vacuum/Inv-1000-1.png
+   :align: center
+
+   Ternary diagram for inverted hierarchy
 
 
 
