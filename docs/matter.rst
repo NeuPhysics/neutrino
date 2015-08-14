@@ -755,8 +755,282 @@ which can be determined by the Landau-Zener transition analytically (first order
 
 
 
+
+Numerical Results
+-----------------------------
+
+
+2 Flavor Oscillation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The equation of motion in flavor basis is
+
+.. math::
+   i\partial_x \Psi_{mf}(x) = \mathbf{H_{mf}} \Psi_{mf}(x)
+
+
+where
+
+.. math::
+   \mathbf{H_{mf}} =  \left(  \frac{\Delta}{2} -  \frac{\omega}{2} \cos 2\theta_v  \right) \boldsymbol{\sigma_3} + \frac{\omega}{2} \sin 2\theta_v \boldsymbol{\sigma_1}.
+
+
+Writing down the dimensionless equation, we have
+
+.. math::
+   i \partial_{\hat x} \Psi_{mf} = \frac{R_S \omega}{2} ( (\hat\Delta - \cos 2\theta_v ) \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} )  \Psi_{mf} .
+
+
+As for the data of the sun I use a simple exponential distribution. The data is also from the paper by Bahcall. The model using just exponential is not accurate however it is enough to make the point in MSW resonance. So I choose a solar model in which the core density is :math:`n(0) = 10^{-13}\mathrm{GeV}^{3}`. The distribution is
+
+.. math::
+   n =  10^{-13 - 4.3\hat x} \mathrm{GeV}^{3}.
+
+
+The numerical results can be obtains by plugging this density profile into the differential equation solver.
+
+.. figure:: assets/matter/numericalMSW-model-3.png
+   :align: center
+
+   Numerical results for electron flavor neutrino probability and the other flavor neutrino probability when the electron density profile is :math:`10^{-14 - 4.3\hat x} \mathrm{GeV}^{3}`.
+
+
+.. figure:: assets/matter/numericalMSW-model-2flavor-minus13-1.png
+   :align: center
+
+   Number density profile :math:`n(\hat x) =  10^{-13 - 4.3\hat x}\mathrm{GeV^{3}}`.
+
+
+
+
+Three flavor Oscillations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vacuum part of the Hamiltonian is
+
+.. math::
+   \mathbf{H_{mvv}} = \frac{1}{2E} \begin{pmatrix}
+   m_1^2 & 0 & 0 \\
+   0 & m_2^2 & 0 \\
+   0 & 0 & m_3^2
+   \end{pmatrix}.
+
+
+The matter interaction in flavor basis is
+
+.. math::
+   \mathbf{V_{mf}} = \sqrt{2}G_F n \mathrm{diag}{1,0,0}.
+
+
+Thus to work in vacuum mass eigenstates, we need a transformation
+
+.. math::
+   \mathbf{V_{mv}} = \mathbf{U^{-1}}\mathbf{V_{mf}} \mathbf{U}.
+
+
+Then the Hamiltonian becomes
+
+.. math::
+   \mathbf{H_{m}} = \begin{pmatrix}
+   \frac{m_1^2}{2E} + \Delta U_{e1}^2 & \Delta U_{e1} U_{e2} & \Delta U_{e1} U_{e3} \\
+   \Delta U_{e2} U_{e1} & \frac{m_2^2}{2E} + \Delta U_{e2}^2 & \Delta U_{e2} U_{e3} \\
+   \Delta U_{e3} U_{e1} & \Delta U_{e3} U_{e2} & \frac{m_3^2}{2E} + \Delta U_{e3}^2
+   \end{pmatrix}
+
+
+Trace of this Hamiltonian is :math:`\mathrm{Tr}(\mathbf{H_m}) = \frac{m_1^2+m_2^2+m_3^2}{2E}+\Delta`. To find the traceless part, we can use the relation [ohlsson2000]_
+
+.. math::
+   M = M_{traceless}+ \frac{1}{N} \mathrm{Tr}(M) I,
+
+
+where :math:`N` is the rank.
+
+The traceless part of Hamiltonian becomes
+
+.. math::
+   \mathbf{H_{m}} = \begin{pmatrix}
+   \Delta U_{e1}^2 - \frac{1}{3}\Delta + \frac{1}{3}(\frac{m_1^2-m_2^2 + m_1^2-m_3^2}{2E}) & \Delta U_{e1}U_{e2} & \Delta U_{e1} U_{e3} \\
+   \Delta U_{e2} U_{e1} & \Delta U_{e2}^2 -\frac{1}{3}\Delta + \frac{1}{3}\frac{m_2^2 - m_1^2+m_2^2-m_3^2}{2E} & \Delta U_{e2}U_{e3} \\
+   \Delta U_{e1} U_{e3} & \Delta U_{e2} U_{e3} & \Delta U_{e3}^2 -\frac{1}{3} \Delta + \frac{1}{3} \frac{m_3^2 - m_1^2 + m_3^2-m_2^2 }{2E}
+   \end{pmatrix}.
+
+
+Define the following quantities where only two of them are linearly independent
+
+.. math::
+   \Delta m_{12}^2 & = m_2^2 - m_1^2 \\
+   \Delta m_{23}^2 & = m_3^2 - m_2^2 \\
+   \Delta m_{13}^2 & = m_3^2 - m_1^2.
+
+
+
+We define an energy scale related to the radius of the sun
+
+.. math::
+   \epsilon_S = \frac{1}{R_S}.
+
+
+The EoM can be written in a dimensionless manner,
+
+.. math::
+   i\partial_{\hat x} \Psi_{m} =  \begin{pmatrix}
+   \hat\Delta U_{e1}^2 - \frac{1}{3}\hat\Delta + \frac{1}{3}(\frac{\Delta m_{12}^2 + \Delta m_{13}^2}{2E\epsilon_S}) & \hat\Delta U_{e1}U_{e2} & \hat\Delta U_{e1} U_{e3} \\
+   \hat\Delta U_{e2} U_{e1} & \hat\Delta U_{e2}^2 -\frac{1}{3}\hat\Delta + \frac{1}{3}\frac{\Delta m_{12}^2 + \Delta m_{23}^2}{2E\epsilon_S} & \hat\Delta U_{e2}U_{e3} \\
+   \hat\Delta U_{e1} U_{e3} & \hat\Delta U_{e2} U_{e3} & \hat\Delta U_{e3}^2 -\frac{1}{3} \hat\Delta + \frac{1}{3} \frac{\Delta m_{13}^2 + \Delta m_{23}^2 }{2E\epsilon_S}
+   \end{pmatrix},
+
+
+where :math:`\hat\Delta = \Delta/\epsilon_S`.
+
+
+
+The parameters for this calculation in units of :math:`GeV^{\mathrm{some power}}` are
+
+.. math::
+   n(x) &= 10^{-12 - 4.3 x} \\
+   \epsilon_S &= 10^{-24}\\
+   \hat\Delta(x) &= \sqrt{2} G_F n(x)/\epsilon_S\\
+   \Delta m _ {12}^2 &= 7.6\times 10^{-5}\times 10^{-18}\\
+   \Delta m _ {13}^2 &= 2.3\times 10^{-3}\times 10^{-18}\\
+   \Delta m _ {23}^2 &= \Delta m _ {13}^2 - \Delta m _ {12}^2\\
+   E &= 10^{-3}
+
+
+For these parameters there is only resonance for $\Delta m_{13}^2+\Delta m_{23}^2$.
+
+A quick check over the different energy scales.
+
+
+1. Vacuum energy scales in normal hierarchy
+
+   .. math::
+      \omega_{12}&= \frac{\Delta m_{12}^2}{2E} = 3.8\times 10^{-20}\mathrm{GeV}\\
+      \omega_{13}&= \frac{\Delta m_{13}^2}{2E} = 1.7\times 10^{-18}\mathrm{GeV}\\
+      \omega_{23}&= \frac{\Delta m_{23}^2}{2E} \approx \omega_{13}
+
+2. Matter related scale for density profile :math:`10^{-14-4.3\hat x}`
+
+   .. math::
+      \Delta_1 = 1.6\times 10^{-19-4.3\hat x}\in [1.6\times 10^{-23.3},1.6\times 10^{-19}]
+
+3. Matter related scale for density profile :math:`10^{-13-4.3\hat x}`
+
+   .. math::
+      \Delta_1 = 1.6\times 10^{-18-4.3\hat x}\in [1.6\times 10^{-22.3},1.6\times 10^{-18}]
+
+
+
+.. figure:: assets/matter/numericalMSW3Flavor-normalization.png
+   :align: center
+
+   Normalization factor as a function of distance.
+
+
+.. figure:: assets/matter/numericalMSW3Flavor-probabilities.png
+   :align: center
+
+   Probability for each flavor of neutrinos.
+
+
+Applying a number density function :math:`n(x) = 10^{-13 - 4.3 x}` to the system, the small scale oscillations are revived,
+
+.. figure:: assets/matter/numericalMSW3Flavor-2-norm.png
+   :align: center
+
+   Normalization of the states for numerical 3 flavor oscillation in the sun with density profile :math:`10^{-13 - 4.3 x}`.
+
+.. figure:: assets/matter/numericalMSW3Flavor-2-probability.png
+   :align: center
+
+   Numerical results for 3 flavor oscillation in the sun with density profile :math:`10^{-13 - 4.3 x}`.
+
+
+.. figure:: assets/matter/numericalMSW3Flavor-minus14-Inst-Eigen-Energies.png
+   :align: center
+
+   Eigenenergies for density profile :math:`10^{-13 - 4.3 x}`.
+
+
+.. figure:: assets/matter/numericalMSW3Flavor-vac-eigen-prob.png
+   :align: center
+
+   Survival probabilities for different vacuum mass eigenstates for 3 flavor oscillation in the sun with density profile :math:`10^{-13 - 4.3 x}`.
+
+
+
+An interesting notion is the survival probability for the instantaneous eigenstates.
+
+
+.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-1.png
+   :align: center
+
+   Probability for the first instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
+
+.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-2.png
+   :align: center
+
+   Probability for the second instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
+
+.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-3.png
+   :align: center
+
+   Probability for the second instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
+
+Lower matter density will have less suppression on vacuum oscillations.
+
+.. figure:: assets/matter/numericalMSW3Flavor-minus14matter.png
+   :align: center
+
+   Numerical results for 3 flavor oscillation in the sun with density profile :math:`10^{-14 - 4.3 x}`.
+
+
+.. [ohlsson2000] Ohlsson, T., & Snellman, H. (1999). Three flavor neutrino oscillations in matter, 2768(2000), 25. doi:10.1063/1.533270
+
+
+
+Ternary Diagram
+~~~~~~~~~~~~~~~~~~~~~~~
+
+High matter density suppresses the vacuum oscillations which is clearly shown on a ternary diagram.
+
+.. figure:: assets/matter/ternary/mass-1.png
+   :align: center
+
+   Ternary diagram for MSW effect
+
+
+.. figure:: assets/matter/ternary/mass-1-scatter.png
+   :align: center
+
+   Ternary diagram for MSW effect
+
+.. figure:: assets/matter/ternary/matter-vac-eigen-e-1.png
+   :align: center
+
+   Ternary diagram for vacuum eigenstates
+
+
+
+.. figure:: assets/matter/ternary/matter-inst-eigen-e-1.png
+   :align: center
+
+   Ternary diagram for instantaneous eigenstates
+
+
+
+.. figure:: assets/matter/ternary/matter-minus14-1.png
+   :align: center
+
+   Ternary diagram for MSW effect with matter density profile :math:`10^{-14 - 4.3 x}`.
+
+
+
+
+
+
 Refs and Notes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 1. Wolfenstein, L. (1978). Neutrino oscillations in matter. Physical Review D, 17(9), 2369–2374. doi:10.1103/PhysRevD.17.2369
 2. Wolfenstein, L. (1979). Neutrino oscillations and stellar collapse. Physical Review D, 20(10), 2634–2635. doi:10.1103/PhysRevD.20.2634
