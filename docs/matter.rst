@@ -122,7 +122,7 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
    .. math::
       \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
 
-   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`\nu_1`. By :math:`\nu_1` we mean the state with energy :math:`\frac{ \delta m^2 }{4E}` in vacuum.
+   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`\nu_1`. By :math:`\nu_1` we mean the state with energy :math:`\frac{ \Delta m^2 }{4E}` in vacuum.
 
    We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. **However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.** This is the key idea in physics of MSW effect.
 
@@ -130,11 +130,12 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
 The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
 
 .. math::
-   \mathbf H = \frac{ \delta m^2 }{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
+   \mathbf H = \frac{ \D
+   elta m^2 }{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
 
 where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
 
-Define a quantities like :math:`\omega=\frac{ \delta m^2 }{2E}` for neutrinos ( :math:`\bar\omega = \frac{ \delta m^2 }{-2E}` for antineutrinos) and :math:`\Delta = \sqrt{2} G_F n(x)` (which might be denoted by :math:`\nu = \sqrt{2}G_F n_\nu` in other lituratures).
+Define a quantities like :math:`\omega=\frac{ \Delta m^2 }{2E}` for neutrinos ( :math:`\bar\omega = \frac{ \Delta m^2 }{-2E}` for antineutrinos) and :math:`\Delta = \sqrt{2} G_F n(x)` (which might be denoted by :math:`\nu = \sqrt{2}G_F n_\nu` in other lituratures).
 
 
 Using Pauli matrices, I can decompose this to
@@ -159,8 +160,8 @@ Using Pauli matrices, I can decompose this to
 In a more compact form, this Hamiltonian is
 
 .. math::
-   \mathbf H &= \frac{ \delta m^2 }{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
-   & = \left(\frac{\Delta}{2} -\frac{ \delta m^2 }{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{ \delta m^2 }{4E} \sin 2\theta \mathbf{\sigma_1}
+   \mathbf H &= \frac{ \Delta m^2 }{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
+   & = \left(\frac{\Delta}{2} -\frac{ \Delta m^2 }{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{ \Delta m^2 }{4E} \sin 2\theta \mathbf{\sigma_1}
 
 .. note::
    Eigenvalues of :math:`\mathbf {\sigma_3}` are 1 and -1 with corresponding eigenvectors
@@ -324,7 +325,7 @@ MSW Refraction, Resonance and More
 TODO
 
 1. Write down the effective potential :math:`V(x)` which depends on the position. Refractive index is defined as :math:`n_{ref} - 1 = \frac{V}{p}`.
-2. Two characteristic length: :math:`l_v = \frac{4\pi E}{ \delta m^2 }` as the vacuum oscillation length and :math:`l_0=\frac{2\pi}{V}` as the refraction length. As the becomes comparable resonance occurs. For small mixing angle cases, resonance happens when vacuum length is about the length of refraction.
+2. Two characteristic length: :math:`l_v = \frac{4\pi E}{ \Delta m^2 }` as the vacuum oscillation length and :math:`l_0=\frac{2\pi}{V}` as the refraction length. As the becomes comparable resonance occurs. For small mixing angle cases, resonance happens when vacuum length is about the length of refraction.
 
 
 
@@ -755,6 +756,270 @@ which can be determined by the Landau-Zener transition analytically (first order
 
 
 
+Landau-Zener Transition of Neutrinos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+As discussed in the previous subsection, a transition probability between the two states :math:`\ket{\nu_L(x)}` and :math:`\ket{\nu_H(x)}` would change the final survival probabilty. Thus calculating this transition probability will be done in this subsection.
+
+
+Recall that the effective potential is
+
+.. math::
+   \mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) ,
+
+where
+
+.. math::
+   \mathbf{U_m} = \begin{pmatrix} \cos \theta(x) & \sin\theta(x) \\ -\sin\theta(x) & \cos\theta(x) \end{pmatrix} .
+
+
+:math:`\sin\theta(x)` and :math:`\cos\theta(x)` can be found by solving the equations. Plug in the results and applying the trick that
+
+.. math::
+   \partial_x \mathbf{U_m} & = \frac{d \hat\Delta'(x_r)(x-x_r)}{dx} \partial_{ \hat\Delta'(x_r)(x-x_r)} \mathbf{U_m} ,
+
+we have
+
+.. math::
+   \mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
+   & = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 2( 2+(\hat\Delta(x) -1)  ( 2+ (\hat\Delta'(x) - 1)) ) - 2( 1 + (\hat\Delta'(x) - 1) ) \cos 2\theta_v }   \begin{pmatrix}
+   0 & 1 \\
+   -1 & 0
+   \end{pmatrix} .
+
+
+Since we are dealing with resonance which is located at :math:`\hat\Delta =1`, the quantities can be expanded around :math:`\hat\Delta - 1 = 0`.
+
+To keep only first order of in the effective potential, we have to expand around :math:`\hat\Delta = 1`
+
+.. math::
+   \mathbf{V_m(x)} & = - i \hat\Delta'(x_r) \frac{\sin 2\theta_v}{4(\cos 2\theta_v -1)} \left( -1 + (\hat\Delta(x) - 1)  \right)  \begin{pmatrix}
+   0 & 1 \\
+   -1 & 0
+   \end{pmatrix}.
+
+
+.. admonition:: Pauli Matrices
+   :class: note
+
+   The effective potential can be written in terms of :math:`\sigma_2`,
+
+   .. math::
+      \sigma_2 = - i  \begin{pmatrix}
+      0 & 1 \\
+      -1 & 0
+      \end{pmatrix}.
+
+
+
+The equation of motion up to first order of :math:`\hat\Delta` becomes
+
+.. math::
+   i\partial_x\ket{\Psi_m} = (\mathbf{H_{md}} + \mathbf{V_m})\ket{\Psi_m}.
+
+
+We have already solved
+
+.. math::
+   i\partial_x\ket{\Psi_m} = \mathbf{H_{md}} \ket{\Psi_m},
+
+where the eigenstates are :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}` with eigenvalues :math:`\omega_{m1}` and :math:`\omega_{m2}` respectively.
+
+To save typing we define
+
+.. math::
+   v &= -  \hat\Delta'(x_r) \frac{\cot \theta_v}{4} \left( -1 + (\hat\Delta(x_r) - 1)  \right)  \\
+   &\approx   \hat\Delta'(x_r) \frac{\cot \theta_v}{4}
+
+
+so that the effective potential reduces to a simple form
+
+.. math::
+   \mathbf{V_m} = \begin{pmatrix}
+   0 & i v \\
+   -i v & 0
+   \end{pmatrix}.
+
+
+The general solution to the equation we need to solve can be written as
+
+.. math::
+   \ket{\Psi_m} = C_L(x) e^{-i\int \omega_{m1} dx} \ket{\nu_L} + C_H(x) e^{-i\int \omega_{m2} dx} \ket{\nu_H},
+
+
+where
+
+.. math::
+   \omega_{m1} &=-\sqrt{ \frac{\Delta^2 + \omega^2}{4}-\frac{\Delta \omega}{2} \cos 2\theta_v } \\
+   & = -\omega \sqrt{\left( \frac{\hat\Delta^2 + 1}{4} - \frac{\hat\Delta}{2}\cos 2\theta_v \right)} , \\
+   \omega_{m2} & = - \omega_{m1} \equiv \frac{\omega_m}{2}.
+
+
+Hamiltonian applied to this state results in
+
+.. math::
+   \mathbf{H_m} \ket{\Psi_m} =& \omega_{m1} C_L(x) e^{-i\int \omega_{m1}dx} \ket{\nu_L} -ivC_L(x) e^{-i\int \omega_{m1}dx}\ket{\nu_H} \\ &+\omega_{m2}C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_H} + iv C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_L}.
+
+
+Plug the state :math:`\ket{\Psi_m}` into the Schrödinger equation, we have
+
+.. math::
+   \dot C_L(x) &= v C_H(x) e^{  i\int  \omega_m dx} \\
+   \dot C_H(x) & = -v C_L(x) e^{ - i\int \omega_m dx} ,
+
+
+in which :math:`omega_m` is
+
+.. math::
+   \omega_m =  \omega_{m2} - \omega_{m1} = 2\omega_{m2} = \omega\sqrt{ \hat\Delta^2 + 1 - 2 \hat\Delta \cos 2\theta_v } .
+
+
+The boundary condition for such a problem **in general** is
+
+.. math::
+   \ket{\Psi_m(0)} = C_L(0)\ket{\nu_L} + C_H(0) \ket{\nu_H}.
+
+
+**It should be made clear that the problem we will be discussing is the transition from one state :math:`\ket{\nu_L(x)}` to another :math:`\ket{\nu_H(x)}` in first order approximation. That means we will confine this system so that the initial condition is :math:`\ket{\Psi_m(-\infty)} = \ket{\nu_L}`.** In terms of :math:`C_L` and :math:`C_H`,
+
+.. math::
+   C_L(-\infty) &= 0, \\
+   \lvert C_H(-\infty) \rvert^2 & = 1.
+
+
+The first order differential equations of :math:`C_L(x)` and :math:`C_H(x)` can be combined and produce a second order differential equation.
+
+.. math::
+   \ddot C_L - \left(   \frac{\dot v}{v} + i\omega_m \right) \dot C_L + v^2 C_L = 0.
+
+
+**If we use the approximation that :math:`\frac{d \hat\Delta }{dx}` is a constant, where in fact we are assuming that :math:`n(x)` is linearly depending on :math:`x` which means :math:`\hat\Delta` is a linear function of :math:`x`. Thus :math:`v\propto\frac{d\hat\Delta}{dx}` is a constant.** The equation simplifies to
+
+.. math::
+   \ddot C_L - i\omega_m \dot C_L + v^2 C_L = 0,
+
+
+where :math:`v=-\frac{\cot\theta_v}{4} \frac{d\hat\Delta}{dx}` is constant.
+
+
+
+**In the paper by Zener,** [Zener1932]_ we need to do substitution of the function :math:`C_L` so that the equation reduces to Weber equation.
+
+The eigenvalues are not varying very fast and satisfies the condition that
+
+.. math::
+   \omega_m(x) =  \omega_m(x_r) +  \alpha (x-x_r),
+
+where :math:`\alpha = \delta \omega_m(x_r)` is a constant and comes from the first order of the expression.
+
+Define a new variable :math:`W` which is determined by
+
+.. admonition:: The Trick
+   :class: note
+
+   This is done by assuming :math:`C_L=f(x)W` and plugging it back to the equation then set the coefficient of :math:`\dot C_L` to :math:`0`.}
+
+.. math::
+   C_L = e^{ \frac{i}{2}\int \delta \omega_m dx' } W.
+
+
+Then we get a simple equation about :math:`W`,
+
+.. math::
+   \ddot W + \left( v^2 + \frac{i \alpha}{2} + \frac{\alpha^2 }{4} (x - x_r + \frac{2\sin\theta_v}{\alpha})^2  \right) W = 0,
+
+which can be reduced to the standard form of Weber equation with the new parameters which are are found by using a single assumption that :math:`z=g(x- x_r + \frac{2\sin\theta_v}{\alpha})`,
+
+.. math::
+   z &= g \left(x - x_r + \frac{2\sin\theta_v}{ \alpha'} \right) \\
+   \nu &= i \frac{v^2}{\alpha'},
+
+where :math:`g^2\equiv -i\alpha'` ( :math:`g=(1-i)\sqrt{\left\vert \alpha' \right\vert } /\sqrt{2}=\sqrt{\left\vert \alpha' \right\vert }e^{-i\pi/4}` ) and :math:`\alpha' = -\alpha`. The equation we need to solve becomes
+
+.. math::
+   \frac{d^2 W(z)}{dz^2} + \left( \nu +\frac{1}{2} - \frac{1}{4}z^2 \right) W(z) = 0 .
+
+
+
+.. admonition:: Parabolic Cylinder Function
+   :class: note
+
+   .. figure:: assets/matter/weber1.png
+      :align: center
+
+      The parabolic cylinder function :math:`D_\nu(z)` for :math:`\nu=1` (blue) and :math:`\nu=2` (red). But for imaginary $z$ the function blows up.
+
+   The Weber equation has two independent solutions :math:`D_\nu(z)` and :math:`D_{-\nu-1}(iz)`. They are also called Parabolic Cylinder Function on `wolfram mathworld <http://mathworld.wolfram.com/ParabolicCylinderFunction.html>`_.
+
+   Since :math:`D_{\nu}(z)` blows up for the line on complex plane :math:`z\propto e^{-\pi i/4}`, the solution that works is :math:`D_{-\nu-1}(iz)`. Then the solution to :math:`U_L` is
+
+   .. math::
+      U_L(x) = u_{+} D_{-iv^2/\alpha -1} (\frac{1-i}{\sqrt{2}} x) ,
+
+   or
+
+   .. math::
+      U_L(x) = u_- D_{-iv^2/\alpha -1} ( - \frac{1-i}{\sqrt{2}} x) .
+
+   The asymptotic expression for :math:`D_{-\nu-1}` on the line of :math:`e^{-i\pi/4}` and :math:`e^{-3i\pi/4}` at infinite contour radius on complex plane are
+
+   .. math::
+      D_{-\nu-1}(i x e^{-3i\pi/4}) &\to e^{i(\nu+1)\pi/4} e^{i x^2/4} x^{-\nu-1} \\
+      D_{-\nu-1}(i x e^{-i\pi/4}) &\to e^{-i(\nu+1)\pi/4} e^{-i x^2/4} x^{-\nu-1}.
+
+   So the real part of these asymptotic expressions are
+
+   .. math::
+      e^{i\nu\pi/4} x^{-\nu-1} &= e^{-v^2\pi/4\alpha'} x^{-\nu-1} \\
+      e^{-i\nu\pi/4} x^{-\nu-1} &=e^{v^2\pi/4\alpha'} x^{-\nu-1}
+
+   Apply the boundary condition we have the results of the coefficients.
+
+   .. math::
+      \lvert u_+ \rvert = \lvert u_- \rvert = e^{-\gamma \pi/4}\sqrt{\gamma} ,
+
+   where :math:`\gamma = \frac{v^2}{\lvert \alpha \rvert}`.
+
+   What we need to find out is the state at :math:`x\to \infty`, which depends on the asymptotic values of :math:`D_{-\nu-1}`,
+
+   .. math::
+      C_L(x) &\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{i x'^2 /4} x'^\nu  \right) ,
+
+   or
+
+   .. math::
+      C_L & \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{ - i x'^2 /4} x'^\nu   \right).
+
+   The transition rate is determined by :math:`\lvert C_L \rvert^2`
+
+   .. math::
+      \lvert C_L(\infty) \rvert^2 = \gamma e^{-\pi\gamma} \frac{2\pi}{\Gamma(i\gamma +1) \Gamma(-i\gamma +1)} = 2e^{-\pi\gamma}\sinh \pi\gamma = 1-e^{-2\pi\gamma}.
+
+   Now we understand the transition probability is given by
+
+   .. math::
+      P_{tran} = e^{-2\pi\gamma}.
+
+
+Suppose we have the initial condition as :math:`\ket{\Psi_m(x=-\infty)} = \ket{\nu_L}`, the system can jump to :math:`\ket{\nu_H}` since the state at arbitrary position :math:`x` is a mixing of the two states. The probability of jumping is given by [Parke1986]_ [Petcov1987]_
+
+.. math::
+   P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) = \exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert  \frac{d\hat\Delta}{dx} \vert_{x_r} \rvert} \right)
+
+
+The survival probability can be calculated by applying this transition probability to the result we had previously.
+
+**To be clear, if electron neutrinos are produced inside core of our sun, it will be almost the heavy state. Since the interaction with matter is very strong, it transfers to :math:`\ket{\nu_L}` with probability :math:`P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})` due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}`.
+
+
+
+
+.. [Zener1932] Zener, C. (1932). Non-Adiabatic Crossing of Energy Levels. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 137(833), 696–702. doi:10.1098/rspa.1932.0165
+.. [Parke1986] Parke, S. J. (1986). Nonadiabatic Level Crossing in Resonant Neutrino Oscillations. Physical Review Letters, 57(10), 1275–1278. doi:10.1103/PhysRevLett.57.1275
+.. [Petcov1987] Petcov, S. T. (1987). On the non-adiabatic neutrino oscillations in matter. Physics Letters B, 191(3), 299–303. doi:10.1016/0370-2693(87)90259-0
+
+
 
 Numerical Results
 -----------------------------
@@ -897,7 +1162,7 @@ The parameters for this calculation in units of :math:`GeV^{\mathrm{some power}}
    E &= 10^{-3}
 
 
-For these parameters there is only resonance for $\Delta m_{13}^2+\Delta m_{23}^2$.
+For these parameters there is only resonance for :math:`\Delta m_{13}^2+\Delta m_{23}^2`.
 
 A quick check over the different energy scales.
 
