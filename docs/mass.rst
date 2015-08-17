@@ -26,7 +26,7 @@ Lepton mixing matrix, can be written as the product of three matrices which stan
    \mathbf U &= \mathbf {U_{23}} \times \mathbf {U_{13,\delta}} \times \mathbf {U_{12}} \\
    & = \begin{pmatrix} 1 & 0 & 0 \\ 0 &\cos\theta_{23} & \sin\theta_{23} \\ 0 -\sin\theta_{23} & \cos\theta_{23} \end{pmatrix}  \begin{pmatrix} \cos\theta_{13} & 0 & e^{i\delta} \sin\theta_{13} \\ 0 & 1 & 0 \\ -e^{i\delta}\sin\theta_{13} & 0 & \cos\theta_{13}  \end{pmatrix} \begin{pmatrix} \cos\theta_{12} & \sin\theta_{12} & 0 \\ -\sin\theta_{12} & \cos \theta_{12} & 0 \\ 0 & 0 & 1 \end{pmatrix}
 
- 
+
 
 
 
@@ -35,16 +35,3 @@ See-saw Mechanism
 ------------------
 
 RH neutrinos term in Lagrangian breaks the symmetry.
-
-
-
-
-
-
-
-
-
-
-
-
-.

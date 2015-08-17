@@ -44,7 +44,7 @@ Electron neutrinos can exchange momentum with other neutrinos including itself. 
 .. figure:: assets/collectiveToyModel.png
    :align: center
 
-   Toy model
+   Toy model to illustrate the basics of collective behavior.
 
 At site 1, electron neutrino becomes muon neutrino after 1 oscillation length and moving top, while the muon neutrino coming from the left becomes electron neutrino. If they interact, their momenta will be exchanged, leaving a muon neutrino moving to the right and carrying the momentum of the neutrino moving up.
 

@@ -20,10 +20,27 @@ One should notice that charge is unit 1 in natural units since
    F = \frac{Qq}{4\pi r^2}.
 
 
-
-
 The conversion between natural units and SI can be down by using the following relations.
 
 .. math::
    1 \mathrm{GeV} &= 5.08 \times 10^{15} \mathrm {m^{-1}} \\
    1 \mathrm{GeV} &= 1.8\times 10^{-27} \mathrm{kg}
+
+
+Diagrams
+---------------------------
+
+
+.. figure:: assets/commonsense/understandingTernaryDiagram.png
+   :align: center
+
+   The meanings of points and lines in a ternary diagram. From `File:Vol1 Page 380 Image 0001.png@PetroWiki <http://petrowiki.org/File%3AVol1_Page_380_Image_0001.png>`_
+
+
+In this documentation on neutrinos, we have all the readings of a point by looking into the line that goes to the left, which means that for the bottom axis, the left is 0 while the right is 1.
+
+
+Refs and Notes
+------------------
+
+1. `A article about ternary diagram <http://petrowiki.org/Ternary_phase_diagrams>`_ .

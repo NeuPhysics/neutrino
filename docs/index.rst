@@ -54,9 +54,10 @@ Table of Contents:
    models.rst
    mastereqn.rst
    gravity.rst
-   ref.rst
-   connections.rst
+   cosmology.rst
    misc.rst
+   ref.rst
+
 
 
 

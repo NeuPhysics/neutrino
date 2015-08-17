@@ -948,7 +948,7 @@ where :math:`g^2\equiv -i\alpha'` ( :math:`g=(1-i)\sqrt{\left\vert \alpha' \righ
    .. figure:: assets/matter/weber1.png
       :align: center
 
-      The parabolic cylinder function :math:`D_\nu(z)` for :math:`\nu=1` (blue) and :math:`\nu=2` (red). But for imaginary $z$ the function blows up.
+      The parabolic cylinder function :math:`D_\nu(z)` for :math:`\nu=1` (blue) and :math:`\nu=2` (red). But for imaginary :math:`z` the function blows up.
 
    The Weber equation has two independent solutions :math:`D_\nu(z)` and :math:`D_{-\nu-1}(iz)`. They are also called Parabolic Cylinder Function on `wolfram mathworld <http://mathworld.wolfram.com/ParabolicCylinderFunction.html>`_.
 
@@ -1262,32 +1262,31 @@ High matter density suppresses the vacuum oscillations which is clearly shown on
 .. figure:: assets/matter/ternary/mass-1.png
    :align: center
 
-   Ternary diagram for MSW effect
+   Ternary diagram for MSW effect shows that the vacuum oscillations in this case is suppressed. Comparing this with the survival probability, the survival probability for electron neutrino drops to a value and the rapid oscillations start to show up. The drop is the movement in the ternary diagram from the right-bottom cornor to the tau neutrino axis. These rapid oscillations corresponds to the T-shaped tip at the other end of the line.
 
 
 .. figure:: assets/matter/ternary/mass-1-scatter.png
    :align: center
 
-   Ternary diagram for MSW effect
+   Ternary diagram for MSW effect with homogeneously descretized position :math:`x` with matter profile :math:`10^{-13-4.3x}\mathrm{GeV^3}`. We can see clearly that the system stays on the two ends to the line for a longer time that in the middle where the transition happens very quickly. This can also be seen in the survival probability plot.
 
-.. figure:: assets/matter/ternary/matter-vac-eigen-e-1.png
-   :align: center
-
-   Ternary diagram for vacuum eigenstates
-
+.. .. figure:: assets/matter/ternary/matter-vac-eigen-e-1.png
+..    :align: center
+..
+..    Ternary diagram for vacuum eigenstates.
 
 
 .. figure:: assets/matter/ternary/matter-inst-eigen-e-1.png
    :align: center
 
-   Ternary diagram for instantaneous eigenstates
+   Ternary diagram for instantaneous eigenstates with matter profile :math:`10^{-13-4.3x}\mathrm{GeV^3}`. The system starts from almost the second instantaneous state then moves along the state that :math:`\nu_1=0`.
 
 
 
-.. figure:: assets/matter/ternary/matter-minus14-1.png
+.. figure:: assets/matter/ternary/matter-inverted-1.png
    :align: center
 
-   Ternary diagram for MSW effect with matter density profile :math:`10^{-14 - 4.3 x}`.
+   Ternary diagram for MSW effect with inverted hierarchy :math:`\Delta m_{23} = m_3^2 - m_2^2<0`. The shape changes a lot since the frequencies changes a lot.
 
 
 
