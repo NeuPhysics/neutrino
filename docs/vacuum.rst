@@ -510,7 +510,7 @@ Since the probability for differential flavors of neutrinos are summed to 1 and 
 Understanding the Mixing Angles
 ------------------------------------------------------
 
-The mixing angles plays an important role in the amplitude of the oscillations while the energy scales play a role in the periods.
+The mixing angles play important roles in the amplitude of the oscillations while the energy scales play a role in the periods.
 
 
 .. figure:: assets/vacuum/ternary/1000-1.png
