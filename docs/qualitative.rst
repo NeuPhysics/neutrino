@@ -7,6 +7,7 @@ Qualitative Analysis
 Oscillation Period, Frequency and Energy
 ------------------------------------------------------
 
+**The mixing angles plays an important role in the amplitude of the oscillations while the energy scales play a role in the periods.**
 
 In vacuum, 2 flavor oscillations, only one energy scale that is important enough which gives us the oscillation period (oscillation length) and frequency,
 

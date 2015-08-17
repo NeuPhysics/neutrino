@@ -491,24 +491,117 @@ Since the probability for differential flavors of neutrinos are summed to 1 and 
 .. figure:: assets/vacuum/vacOsc3FlavorTernary300.png
    :align: center
 
-   Ternary diagram for less oscillation periods
-
+   Ternary diagram for less oscillation periods. The system starts from the right-bottom corner which is measured to be all electron neutrinos. The period of the spirals is from the energy scale that is related to a small length scale. The system spirals up then spirals back. This is a "period" that is governed by the energy scale that corresponds to a long length scale. Read qualitative method chapter for more about length scales.
 
 
 .. figure:: assets/vacuum/vacOsc3FlavorTernary5000.png
    :align: center
 
-   Ternary diagram for more oscillation periods
-
-
+   Ternary diagram for more oscillation periods. It shows that the system doesn't really go back to the initial state after a "period". This is a three body problem anyway.
 
 
 .. figure:: assets/vacuum/Inv-1000-1.png
    :align: center
 
-   Ternary diagram for inverted hierarchy
+   Ternary diagram for inverted hierarchy. Inverted hierarchy means a period is inverted thus the spirals are in different directions.
 
 
+
+Understanding the Mixing Angles
+------------------------------------------------------
+
+The mixing angles plays an important role in the amplitude of the oscillations while the energy scales play a role in the periods.
+
+
+.. figure:: assets/vacuum/ternary/1000-1.png
+   :align: center
+
+   Neutrino oscillations with the following parameters. This plot works as the base plot which will be compared with. The energy is scaled by a factor so that :math:`\frac{1}{4E}=100\mathrm{eV}`. (This scaling has no physical significance but rescales the period.)
+
+   .. math::
+      \theta_{12} &= 33.36/180*Pi; \\
+      \theta_{13} &= 8.66/180*Pi; \\
+      \theta_{23} &= 40/180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079.
+
+
+
+
+.. figure:: assets/vacuum/ternary/1000-2.png
+   :align: center
+
+   Neutrino oscillations with :math:`\theta_{12}` reduced to half of the value in the base plot. It is clear that :math:`\theta_{12}` plays an imprtatn role in the long period of the oscillatioin. It also obvious that reducing :math:`\theta_{12}` tilts the system to less $\nu_\tau$ state.
+
+   .. math::
+      \theta_{12} &= 33.36/2* 180 * Pi; \\
+      \theta_{13} &= 8.66/180*Pi; \\
+      \theta_{23} &= 40/180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079.
+
+
+
+.. figure:: assets/vacuum/ternary/1000-3.png
+   :align: center
+
+   Neutrino oscillations with :math:`\theta_{13}` reduced to half of the value in the base plot. Reducing :math:`\theta_{13}` shrinks the oscillation amplitude of the rapid oscillation.
+
+   .. math::
+      \theta_{12} &= 33.36/180*Pi; \\
+      \theta_{13} &= 8.66/ 2* 180 *Pi; \\
+      \theta_{23} &= 40/180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079.
+
+
+
+
+.. figure:: assets/vacuum/ternary/1000-4.png
+   :align: center
+
+   Neutrino oscillations with :math:`\theta_{23}` reduced to half of the value in the base plot. Reducing :math:`\theta_{23}` has a complicated effect on the oscillations. But it definitely tilts the system to less :math:`\nu_\tau` state. The suppression on the probability of :math:`\nu_\tau` is dramatic.
+
+   .. math::
+      \theta_{12} &= 33.36/180*Pi; \\
+      \theta_{13} &= 8.66/ 180 *Pi; \\
+      \theta_{23} &= 40/ 2* 180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079.
+
+
+.. figure:: assets/vacuum/ternary/1000-5.png
+   :align: center
+
+   Neutrino oscillations with :math:`\Delta m_{12}^2 = m_2^2- m_1^2` increased compared to the value in base plot. This changes the period of the rapid oscillation.
+
+   .. math::
+      \theta_{12} &= 33.36/180*Pi; \\
+      \theta_{13} &= 8.66/180 *Pi; \\
+      \theta_{23} &= 40/180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079\times 10.
+
+
+
+
+.. figure:: assets/vacuum/ternary/1000-5.png
+   :align: center
+
+   Neutrino oscillation starts with initial state :math:`\Psi(x=0) = \nu_\mu`. The system starts from the top corner.
+
+   .. math::
+      \theta_{12} &= 33.36/180*Pi; \\
+      \theta_{13} &= 8.66/180 *Pi; \\
+      \theta_{23} &= 40/180*Pi;\\
+      \delta_{CP} &= 0;\\
+      m_1^2 &= 0.01;\\
+      m_2^2 &= m1sq + 0.000079.
 
 
 
