@@ -532,7 +532,7 @@ The mixing angles plays an important role in the amplitude of the oscillations w
 .. figure:: assets/vacuum/ternary/1000-2.png
    :align: center
 
-   Neutrino oscillations with :math:`\theta_{12}` reduced to half of the value in the base plot. It is clear that :math:`\theta_{12}` plays an imprtatn role in the long period of the oscillatioin. It also obvious that reducing :math:`\theta_{12}` tilts the system to less $\nu_\tau$ state.
+   Neutrino oscillations with :math:`\theta_{12}` reduced to half of the value in the base plot. It is clear that :math:`\theta_{12}` plays an imprtatn role in the long period of the oscillatioin. It also obvious that reducing :math:`\theta_{12}` tilts the system to less :math:`\nu_\tau` state.
 
    .. math::
       \theta_{12} &= 33.36/2* 180 * Pi; \\
