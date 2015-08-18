@@ -1005,7 +1005,7 @@ where :math:`g^2\equiv -i\alpha'` ( :math:`g=(1-i)\sqrt{\left\vert \alpha' \righ
 Suppose we have the initial condition as :math:`\ket{\Psi_m(x=-\infty)} = \ket{\nu_L}`, the system can jump to :math:`\ket{\nu_H}` since the state at arbitrary position :math:`x` is a mixing of the two states. The probability of jumping is given by [Parke1986]_ [Petcov1987]_
 
 .. math::
-   P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) = \exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\lvert  \frac{d\hat\Delta}{dx} \vert_{x_r} \rvert} \right)
+   P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H}) = \exp \left( -\frac{\pi}{2}\frac{\sin^2 2\theta_v}{\cos 2\theta_v} \frac{\omega}{\left\vert  \frac{d\hat\Delta}{dx} \right\vert_{x_r} } \right)
 
 
 The survival probability can be calculated by applying this transition probability to the result we had previously.
