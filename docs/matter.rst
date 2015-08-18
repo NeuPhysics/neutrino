@@ -881,7 +881,7 @@ The boundary condition for such a problem **in general** is
    \ket{\Psi_m(0)} = C_L(0)\ket{\nu_L} + C_H(0) \ket{\nu_H}.
 
 
-**It should be made clear that the problem we will be discussing is the transition from one state :math:`\ket{\nu_L(x)}` to another :math:`\ket{\nu_H(x)}` in first order approximation. That means we will confine this system so that the initial condition is :math:`\ket{\Psi_m(-\infty)} = \ket{\nu_L}`.** In terms of :math:`C_L` and :math:`C_H`,
+**It should be made clear that the problem we will be discussing is the transition from one state** :math:`\ket{\nu_L(x)}` **to another** :math:`\ket{\nu_H(x)}` **in first order approximation. That means we will confine this system so that the initial condition is** :math:`\ket{\Psi_m(-\infty)} = \ket{\nu_L}`. In terms of :math:`C_L` and :math:`C_H`,
 
 .. math::
    C_L(-\infty) &= 0, \\
@@ -894,7 +894,7 @@ The first order differential equations of :math:`C_L(x)` and :math:`C_H(x)` can 
    \ddot C_L - \left(   \frac{\dot v}{v} + i\omega_m \right) \dot C_L + v^2 C_L = 0.
 
 
-**If we use the approximation that :math:`\frac{d \hat\Delta }{dx}` is a constant, where in fact we are assuming that :math:`n(x)` is linearly depending on :math:`x` which means :math:`\hat\Delta` is a linear function of :math:`x`. Thus :math:`v\propto\frac{d\hat\Delta}{dx}` is a constant.** The equation simplifies to
+**If we use the approximation that** :math:`\frac{d \hat\Delta }{dx}` **is a constant, where in fact we are assuming that** :math:`n(x)` **is linearly depending on** :math:`x` **which means** :math:`\hat\Delta` **is a linear function of** :math:`x`. **Thus** :math:`v\propto\frac{d\hat\Delta}{dx}` **is a constant.** The equation simplifies to
 
 .. math::
    \ddot C_L - i\omega_m \dot C_L + v^2 C_L = 0,
@@ -1010,7 +1010,7 @@ Suppose we have the initial condition as :math:`\ket{\Psi_m(x=-\infty)} = \ket{\
 
 The survival probability can be calculated by applying this transition probability to the result we had previously.
 
-**To be clear, if electron neutrinos are produced inside core of our sun, it will be almost the heavy state. Since the interaction with matter is very strong, it transfers to :math:`\ket{\nu_L}` with probability :math:`P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})` due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}`.
+**To be clear, if electron neutrinos are produced inside core of our sun, it will be almost the heavy state.** Since the interaction with matter is very strong, it transfers to :math:`\ket{\nu_L}` with probability :math:`P(x\to \infty, \ket{\nu_L}\to\ket{\nu_H})` due to the gradient of the matter profile which works as the perturbation. Thus the final state will be a mixing of :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}`.
 
 
 
