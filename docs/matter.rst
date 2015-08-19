@@ -1067,6 +1067,34 @@ The numerical results can be obtains by plugging this density profile into the d
 
 
 
+Since we can easily predict the survival probability using simple theory. Here are some comparision. The following figures are for matter profile :math:`10^{-13-4.3\hat x}\mathrm{GeV^3}` and vacuum oscillation frequency :math:`\omega = 10^{-20} \mathrm{GeV}, 10^{-19} \mathrm{GeV},10^{-18} \mathrm{GeV},10^{-17} \mathrm{GeV}` respectively. As we can see that in this two flavor special case, the problem doesn't dependent on energy and mass difference independently but depends only on :math:`\omega=\frac{\Delta m^2}{2E}`. If we choose :math:`\Delta m^2=7.5\times 10^{-5}\mathrm{eV^2}`, the four figures are corresponding to energies :math:`7.5\mathrm{MeV},0.75\mathrm{MeV},7.5\times 10^{-2}\mathrm{MeV},7.5\times 10^{-3}\mathrm{MeV}`.
+
+.. figure:: assets/matter/compThNu13-1.png
+   :align: center
+
+   The grey line is theoretical survival probability at :math:`\hat x = 1`. In this calculation the vacuum oscillation frequency is set to :math:`\omega = 10^{-20} \mathrm{GeV}`.
+
+.. figure:: assets/matter/compThNu13-2.png
+   :align: center
+
+   The grey line is theoretical survival probability at :math:`\hat x = 1`. In this calculation the vacuum oscillation frequency is set to :math:`\omega = 10^{-19} \mathrm{GeV}`.
+
+
+
+.. figure:: assets/matter/compThNu13-3.png
+   :align: center
+
+   The grey line is theoretical survival probability at :math:`\hat x = 1`. In this calculation the vacuum oscillation frequency is set to :math:`\omega = 10^{-18} \mathrm{GeV}`.
+
+
+
+.. figure:: assets/matter/compThNu13-4.png
+   :align: center
+
+   The grey line is theoretical survival probability at :math:`\hat x = 1`. In this calculation the vacuum oscillation frequency is set to :math:`\omega = 10^{-17} \mathrm{GeV}`.
+
+
+
 
 Three flavor Oscillations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
