@@ -17,7 +17,7 @@ Neutrino is one of the most interesting particles in our world. The first propos
 Neutrino Physics
 ======================================
 
-This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutrino.xyz <http://neutrino.xyz>` .
+This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutrino.xyz <http://neutrino.xyz>`_ .
 
 
 
