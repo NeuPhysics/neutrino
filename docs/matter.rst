@@ -1168,13 +1168,13 @@ The EoM can be written in a dimensionless manner,
 
 .. math::
    i\partial_{\hat x} \Psi_{m} =  \begin{pmatrix}
-   \hat\Delta U_{e1}^2 - \frac{1}{3}\hat\Delta + \frac{1}{3}(\frac{\Delta m_{12}^2 + \Delta m_{13}^2}{2E\epsilon_S}) & \hat\Delta U_{e1}U_{e2} & \hat\Delta U_{e1} U_{e3} \\
-   \hat\Delta U_{e2} U_{e1} & \hat\Delta U_{e2}^2 -\frac{1}{3}\hat\Delta + \frac{1}{3}\frac{\Delta m_{12}^2 + \Delta m_{23}^2}{2E\epsilon_S} & \hat\Delta U_{e2}U_{e3} \\
-   \hat\Delta U_{e1} U_{e3} & \hat\Delta U_{e2} U_{e3} & \hat\Delta U_{e3}^2 -\frac{1}{3} \hat\Delta + \frac{1}{3} \frac{\Delta m_{13}^2 + \Delta m_{23}^2 }{2E\epsilon_S}
+   \tilde\Delta U_{e1}^2 - \frac{1}{3}\tilde\Delta + \frac{1}{3}(\frac{\Delta m_{12}^2 + \Delta m_{13}^2}{2E\epsilon_S}) & \tilde\Delta U_{e1}U_{e2} & \tilde\Delta U_{e1} U_{e3} \\
+   \tilde\Delta U_{e2} U_{e1} & \tilde\Delta U_{e2}^2 -\frac{1}{3}\tilde\Delta + \frac{1}{3}\frac{\Delta m_{12}^2 + \Delta m_{23}^2}{2E\epsilon_S} & \tilde\Delta U_{e2}U_{e3} \\
+   \tilde\Delta U_{e1} U_{e3} & \tilde\Delta U_{e2} U_{e3} & \tilde\Delta U_{e3}^2 -\frac{1}{3} \tilde\Delta + \frac{1}{3} \frac{\Delta m_{13}^2 + \Delta m_{23}^2 }{2E\epsilon_S}
    \end{pmatrix},
 
 
-where :math:`\hat\Delta = \Delta/\epsilon_S`.
+where :math:`\tilde\Delta = \Delta/\epsilon_S`.
 
 
 
@@ -1183,7 +1183,7 @@ The parameters for this calculation in units of :math:`GeV^{\mathrm{some power}}
 .. math::
    n(x) &= 10^{-12 - 4.3 x} \\
    \epsilon_S &= 10^{-24}\\
-   \hat\Delta(x) &= \sqrt{2} G_F n(x)/\epsilon_S\\
+   \tilde\Delta(x) &= \sqrt{2} G_F n(x)/\epsilon_S\\
    \Delta m _ {12}^2 &= 7.6\times 10^{-5}\times 10^{-18}\\
    \Delta m _ {13}^2 &= 2.3\times 10^{-3}\times 10^{-18}\\
    \Delta m _ {23}^2 &= \Delta m _ {13}^2 - \Delta m _ {12}^2\\
