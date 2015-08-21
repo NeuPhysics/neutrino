@@ -28,6 +28,35 @@ Lepton mixing matrix, can be written as the product of three matrices which stan
 
 
 
+.. admonition:: Neutrino Mixing vs Quark Mixing
+   :class: note
+
+   In fact that quarks also has a mixing matrix that mixes the mass eigenstates to produce flavor states. But note that quarks has a mixing matrix of order
+
+   .. math::
+      V_{CKM}\sim \begin{pmatrix}
+      1 & 0.2 & 0.005 \\
+      0.2 & 1 & 0.04 \\
+      0.005 & 0.04 & 1
+      \end{pmatrix},
+
+   while  neutrino has a mixing matrix of order
+
+   .. math::
+      U_{PMNS} \sim \begin{pmatrix}
+      0.8 & 0.5 & ? \\
+      0.4 & 0.6 & 0.7 \\
+      0.4 & 0.6 & 0.7
+      \end{pmatrix}.
+
+   It is obvious that the mixing in neutrino is much larger than quark mixing.
+
+
+
+Experiments
+-----------------------------
+
+The best fit values in 2014 is
 
 
 

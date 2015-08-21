@@ -130,8 +130,7 @@ The MSW effect itself can be made clear using the example of neutrino oscillatio
 The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
 
 .. math::
-   \mathbf H = \frac{ \D
-   elta m^2 }{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
+   \mathbf H = \frac{ \Delta m^2 }{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},
 
 where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.
 
