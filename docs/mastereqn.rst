@@ -26,7 +26,7 @@ Quantum Master Equation
 .. admonition:: Projection Technique
    :class: note
 
-   First of all define a diagonalizing operator :math:`\hat D` which just keeps the diagonal elements and simply drops the off diagonal elements. We see that :math:`1-\hat D` will element all diagonal elements.
+   First of all define a diagonalizing operator :math:`\hat D` which just keeps the diagonal elements and simply drops the off diagonal elements. We see that :math:`1-\hat D` will eliminate all diagonal elements.
 
    We can define the diagonalized density matrix as :math:`\hat \rho_d = \hat D \hat \rho` and off-diagonalized density matrix as :math:`\hat \rho_{od} = (1-\hat D)\hat \rho`. As an application,
 
@@ -266,6 +266,14 @@ The master equation we need is
 
 
 In the calculation, :math:`G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))`.
+
+Plug in the definitions of c and s, we have
+
+.. math::
+   \partial_t\rho_d(t) = \frac{\omega}{4} i \cos 2\theta_v \sigma_3 +  \frac{\omega^2 \sin^2 2\theta_v }{2} \int_0^t dt' (\mathbf I - 2 \rho_d(t'))\cos \left( 2 \cos 2\theta_v (t - t') \right).
+
+This result shows that the equations of different elements are decoupled. This is very important.
+
 
 
 
