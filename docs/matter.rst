@@ -1254,20 +1254,10 @@ Applying a number density function :math:`n(x) = 10^{-13 - 4.3 x}` to the system
 An interesting notion is the survival probability for the instantaneous eigenstates.
 
 
-.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-1.png
+.. figure:: assets/matter/instanEigenstetes-minus13-Grid.png
    :align: center
 
-   Probability for the first instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
-
-.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-2.png
-   :align: center
-
-   Probability for the second instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
-
-.. figure:: assets/matter/numericalMSW3Flavor-Inst-Eigen-prob-3.png
-   :align: center
-
-   Probability for the second instantaneous eigenstate for matter profile :math:`10^{-13 - 4.3 x}`.
+   Probability for the instantaneous eigenstates for matter profile :math:`10^{-13 - 4.3 x}`.
 
 Lower matter density will have less suppression on vacuum oscillations.
 
