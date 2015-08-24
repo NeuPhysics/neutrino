@@ -1238,7 +1238,7 @@ Applying a number density function :math:`n(x) = 10^{-13 - 4.3 x}` to the system
    Numerical results for 3 flavor oscillation in the sun with density profile :math:`10^{-13 - 4.3 x}`.
 
 
-.. figure:: assets/matter/numericalMSW3Flavor-minus14-Inst-Eigen-Energies.png
+.. figure:: assets/matter/numericalMSW3Flavor-minus13-Inst-Eigen-Energies.png
    :align: center
 
    Eigenenergies for density profile :math:`10^{-13 - 4.3 x}`.
