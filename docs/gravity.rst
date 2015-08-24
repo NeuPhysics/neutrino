@@ -33,7 +33,7 @@ Another useful form is to multiply on both side :math:`m d\tau` and substitute m
 
 
 Deflection in The Trajectory
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 

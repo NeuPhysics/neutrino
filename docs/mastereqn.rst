@@ -1,5 +1,5 @@
 Neutrino Oscillation And Master Equation
-==================================
+====================================================================
 
 .. admonition:: Question
    :class: warning

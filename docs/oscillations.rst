@@ -34,7 +34,7 @@ Results of Experiments
 
 
 Determine :math:`\vert\Delta m^2\vert` and :math:`\theta`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The neutrino experimantal data shows the mixing angles are [1]_
 
@@ -127,7 +127,7 @@ We can see clearly that the survival probability depends on some parameters.
 
 
 Two Flavour Oscillation
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 To write down this clearly, we need to write down the mixing matrix and propagator. For simplicity, we calculate the example of two flavour (a, b) oscillation.
