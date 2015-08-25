@@ -776,21 +776,21 @@ where
 :math:`\sin\theta(x)` and :math:`\cos\theta(x)` can be found by solving the equations. Plug in the results and applying the trick that
 
 .. math::
-   \partial_x \mathbf{U_m} & = \frac{d \hat\Delta'(x_r)(x-x_r)}{dx} \partial_{ \hat\Delta'(x_r)(x-x_r)} \mathbf{U_m} ,
+   \partial_x \mathbf{U_m} & = \frac{d \hat\Delta(x)}{dx} \partial_{ \hat\Delta(x)} \mathbf{U_m} ,
 
 we have
 
 .. math::
    \mathbf{V_m} & = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
-   & = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 2( 2+(\hat\Delta(x) -1)  ( 2+ (\hat\Delta'(x) - 1)) ) - 2( 1 + (\hat\Delta'(x) - 1) ) \cos 2\theta_v }   \begin{pmatrix}
+   & = - i \frac{\hat\Delta'(x_r) \sin 2\theta_v}{ 1 + 2 (\hat\Delta(x)-\cos 2\theta_v)^2 - \cos 4\theta_v }   \begin{pmatrix}
    0 & 1 \\
    -1 & 0
    \end{pmatrix} .
 
 
-Since we are dealing with resonance which is located at :math:`\hat\Delta =1`, the quantities can be expanded around :math:`\hat\Delta - 1 = 0`.
+Since we are dealing with resonance which is located at :math:`\hat\Delta =\cos 2\theta_v`, the quantities can be expanded around :math:`\hat\Delta - \cos 2\theta = 0`.
 
-To keep only first order of in the effective potential, we have to expand around :math:`\hat\Delta = 1`
+To keep only first order of in the effective potential, we have to expand around :math:`\hat\Delta = \cos 2\theta_v`
 
 .. math::
    \mathbf{V_m(x)} & = - i \hat\Delta'(x_r) \frac{\sin 2\theta_v}{4(\cos 2\theta_v -1)} \left( -1 + (\hat\Delta(x) - 1)  \right)  \begin{pmatrix}
@@ -828,8 +828,7 @@ where the eigenstates are :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}` with eigen
 To save typing we define
 
 .. math::
-   v &= -  \hat\Delta'(x_r) \frac{\cot \theta_v}{4} \left( -1 + (\hat\Delta(x_r) - 1)  \right)  \\
-   &\approx   \hat\Delta'(x_r) \frac{\cot \theta_v}{4}
+   v &= -  \hat\Delta'(x_r) \frac{1}{2\sin 2\theta} 
 
 
 so that the effective potential reduces to a simple form
@@ -910,7 +909,7 @@ The eigenvalues are not varying very fast and satisfies the condition that
 .. math::
    \omega_m(x) =  \omega_m(x_r) +  \alpha (x-x_r),
 
-where :math:`\alpha = \delta \omega_m(x_r)` is a constant and comes from the first order of the expression.
+where :math:`\alpha = \delta \omega_m'(x_r)` is a constant and comes from the first order of the expression.
 
 Define a new variable :math:`W` which is determined by
 
