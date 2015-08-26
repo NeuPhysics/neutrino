@@ -6,7 +6,7 @@
 Neutrino
 ====================================
 
-Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos was first detected in Cowan–Reines neutrino experiment. [1]_ Later on a lot of neutrino experiments have been carried out.
+Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos were first detected in Cowan–Reines neutrino experiment. [1]_ Later on a lot of neutrino experiments have been carried out.
 
 .. image:: assets/FirstNeutrinoEventAnnotated.jpg
    :align: center
@@ -31,11 +31,11 @@ Some Interesting Facts
 .. admonition:: Solar Neutrino Problem
    :class: note
 
-   The sun produce neutrinos inside it and the neutrinos propagate out. On the earth we can detect them. The problem was that the detected neutrinos was only one third of the total neutrino flux predicted which causes some people to think that the solar had shut down. The solution, however, is the neutrino oscillation.
+   The sun produces neutrinos inside it and the neutrinos are then propagating out through the plasma. On the earth we can detect them. A problem was that the detected neutrinos were only one third of the total neutrino flux predicted which causes some people to think that the sun had shut down. The solution, however, is the neutrino oscillation.
 
 
 
-As far as we know, we have three flavours of neutrinos and their anti particles and they are  orthogonal to each other,
+As far as we know, we have three flavours of neutrinos and their anti-particles which are  orthogonal to each other,
 
 .. math::
    \braket{\nu_{l'}}{\nu_l} &= \delta_{l'l} \\
@@ -78,7 +78,7 @@ Questions
 .. admonition:: Question
    :class: warning
 
-   Is neutrino its own antiparticle? Or is neutrino Majorana or dirac?
+   Is neutrino its own antiparticle? Or is neutrino Majorana or Dirac?
 
 
 .. admonition:: Question
@@ -97,7 +97,7 @@ Questions
 .. admonition:: Question
    :class: warning
 
-   How many different flavours of neutrinos?
+   How many different flavours of neutrinos are there?
 
 
 
