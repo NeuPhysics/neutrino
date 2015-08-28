@@ -317,4 +317,11 @@ Self Interaction Between Neutrinos
 The neutrino-neutrino interaction Hamiltonian involves the density matrix, which makes it very hard to find a closed equation.
 
 
-.
+
+Refs & Notes
+-------------------
+
+Some papers actually use mater equation for its simplicity in physical meanings.
+
+1. Burgess, C. P., & Michaud, D. (1997). Neutrino Propagation in a Fluctuating Sun. Annals of Physics, 256(1), 1–38. doi:10.1006/aphy.1996.5660
+2. Bamert, P., Burgess, C. P., & Michaud, D. (1997). Neutrino Propagation Through Helioseismic Waves, 27. doi:10.1016/S0550-3213(97)00672-X
