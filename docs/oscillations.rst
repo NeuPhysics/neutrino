@@ -172,6 +172,11 @@ is the mixing matrix which is a rotation of basis geometrically. In other words,
 Survival Probability
 `````````````````````````````
 
+Neutrinos are usually produced in electron flavor, which we choose as the initial condition for this example,
+
+\begin{equation*}
+\ket{\psi(t=0)} = \cos\theta \ket{\nu_1} + \sin \theta \ket{\nu_2}.
+\end{equation*}
 
 With the mixing matrix, the propagation of an initial state of only flavour a is
 

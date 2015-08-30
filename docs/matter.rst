@@ -244,6 +244,18 @@ This new rotation in matrix form is
       \sin 2\theta(x)  &= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
       \cos 2\theta(x)&= \frac{ \cos 2\theta_v - \hat\Delta  }{ \sqrt{\hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v } }.
 
+   We also have
+
+   .. math::
+      A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) = -\frac{\omega}{2}\sqrt{\hat \Delta^2 +1 - 2\hat\Delta \cos 2\theta_v},
+
+   which leads to the result of the diagonalized Hamiltonian
+
+   .. math::
+      \mathbf{H_{xd}} = \frac{\omega}{2}\sqrt{\Delta^2 +1 - 2\hat\Delta \cos 2\theta_v} \begin{pmatrix}
+      -1 & 0 \\
+      0 & 1
+      \end{pmatrix}.
 
 
    **This diagonalize the Hamiltonian LOCALLY. It's not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.**
@@ -828,7 +840,7 @@ where the eigenstates are :math:`\ket{\nu_L}` and :math:`\ket{\nu_H}` with eigen
 To save typing we define
 
 .. math::
-   v &= -  \hat\Delta'(x_r) \frac{1}{2\sin 2\theta} 
+   v &= -  \hat\Delta'(x_r) \frac{1}{2\sin 2\theta}
 
 
 so that the effective potential reduces to a simple form
