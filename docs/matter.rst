@@ -554,7 +554,47 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
 
       The first condition is trivial which corresponds to vacuum however the second condition :math:`\Delta = 2\cos 2\theta_v \omega` means the interaction oscillation length is doubled compared to resonance point.
 
-      **Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for :math:`\nu_L(x)`.** At :math:`n(x)\to 0` the oscillation becomes vacuum oscillation.
+      **Nevertheless, we should always remember to check what survival probability the expression is describing. Here we have survival probability for** :math:`\nu_L(x)`. At :math:`n(x)\to 0` the oscillation becomes vacuum oscillation.
+
+
+
+.. admonition:: In The Basis of Vacuum Energy Eigenstates
+   :class: note
+
+   We could also using the basis of vacuum energy eigenstates, in which the vacuum part of the Hamiltonian is
+
+   .. math::
+      \mathbf{H_{vmv}} = \begin{pmatrix}
+      E_1 & 0 \\
+      0 & E_2
+      \end{pmatrix} .
+
+
+   The matter interaction in flavor basis is
+
+   .. math::
+      \mathbf{V_{f}} = \begin{pmatrix}
+      \Delta & 0 \\
+      0 & 0
+      \end{pmatrix}.
+
+   Transform it to vacuum energy eigenstate basis, we have
+
+   .. math::
+      \mathbf{V_{vm}} &= \mathbf{U^{-1}}\mathbf{V_{f}} \mathbf{U} \\
+      & = \Delta \begin{pmatrix}
+      \cos^2\theta_v & \sin\theta_v\cos\theta_v \\
+      \sin\theta_v \cos\theta_v & \sin^2\theta_v
+      \end{pmatrix}.
+
+   The Hamiltonian in this problem becomes
+
+   .. math::
+      \mathbf{H_{vm}} = \begin{pmatrix}
+      \frac{m_1^2}{2E}+\cos^2\theta_v & \Delta \sin\theta_v\cos\theta_v \\
+      \Delta \sin\theta_v \cos\theta_v & \frac{m_2^2}{2E} \Delta \sin^2\theta_v
+      \end{pmatrix}.
+
 
 
 General Discussion of Matter Effect
