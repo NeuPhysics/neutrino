@@ -564,18 +564,29 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
    We could also using the basis of vacuum energy eigenstates, in which the vacuum part of the Hamiltonian is
 
    .. math::
-      \mathbf{H_{vmv}} = \begin{pmatrix}
-      E_1 & 0 \\
-      0 & E_2
+      \mathbf{H_{vmv}} = \frac{1}{2} \begin{pmatrix}
+      E_2 - E_1 & 0 \\
+      0 & E_2 - E_1
+      \end{pmatrix} \equiv  \frac{1}{2} \begin{pmatrix}
+      \Delta E & 0 \\
+      0 & \Delta E
       \end{pmatrix} .
 
 
    The matter interaction in flavor basis is
 
    .. math::
-      \mathbf{V_{f}} = \begin{pmatrix}
+      \begin{pmatrix}
       \Delta & 0 \\
       0 & 0
+      \end{pmatrix}.
+
+   It is more convinient to use the traceless potential
+
+   .. math::
+      \mathbf{V_{f}} = \frac{\Delta}{2}\begin{pmatrix}
+      1 & 0 \\
+      0 & -1
       \end{pmatrix}.
 
    Transform it to vacuum energy eigenstate basis, we have
@@ -583,16 +594,16 @@ if the neutrinos are produced in dense region and the detection happens in vacuu
    .. math::
       \mathbf{V_{vm}} &= \mathbf{U^{-1}}\mathbf{V_{f}} \mathbf{U} \\
       & = \Delta \begin{pmatrix}
-      \cos^2\theta_v & \sin\theta_v\cos\theta_v \\
-      \sin\theta_v \cos\theta_v & \sin^2\theta_v
+      \cos 2\theta_v & \sin 2\theta_v \\
+      \sin 2\theta_v  & - \cos 2\theta_v
       \end{pmatrix}.
 
    The Hamiltonian in this problem becomes
 
    .. math::
       \mathbf{H_{vm}} = \begin{pmatrix}
-      \frac{m_1^2}{2E}+\cos^2\theta_v & \Delta \sin\theta_v\cos\theta_v \\
-      \Delta \sin\theta_v \cos\theta_v & \frac{m_2^2}{2E} \Delta \sin^2\theta_v
+      - \frac{\Delta m^2}{4E}+\cos 2\theta_v & \frac{\Delta}{2} \sin 2\theta_v \\
+      \frac{\Delta}{2} \sin 2\theta_v & \frac{\Delta m^2}{4E} -  \frac{\Delta}{2} \cos 2\theta_v
       \end{pmatrix}.
 
 
