@@ -362,18 +362,98 @@ which decouples the left-handed and right-handed.
    Global symmetry is related to charge, in this case Majorana Lagrangian breaks charge conservation law. So Majorana fermions can only be neutral per charge conservation.
 
 
-The thing is, we could just work with a real spinor! We can choose :math:`\psi_L = \psi_L^*`.
+The thing is, this formalism ensures that the charge conjugatioin of a state is itself.
 
 
 
+Majorana Fermions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+A Majorana fermion is a fermion that obeys the Dirac equation but at the same time doesn't change under charge conjugation, i.e., :math:`C \Psi^* = \Psi`, where :math:`C` is the charge conjugation
+
+.. admonition:: Charge Conjugation Conventions
+   :class: note
+
+   There are at least two different conventions. One is :math:`\Psi^{(c)} = C \Psi^*` while the other is :math:`\Psi^{(c)} = C'\gamma^0 \Psi^*`. In any case, we can prove that in D-P rep., we have
+
+   .. math::
+      C = C'\gamma^0 = i\gamma^2.
+
+   In Majorana rep., we have :math:`C = C'\gamma^0 = I`. From here we can see the importance of Majorana rep..
+
+   The way to find this conjugation operator is to use the fact that we requre an electron (with state :math:`\Psi(p)`) line in Feynmann diagram is equivalent to a positron (with state :math:`\Psi^{(c)}(-p)`) line with opposite momentum so that they have the same charge current. Write down the Dirac equation for both and enforce the to be the same.
+
+
+We can work in Weyl basis to find how to write down a genral state. Suppose we have a state that is composed of two Weyl spinors,
+
+.. math::
+   \Psi = \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix}.
+
+Then we know that in Weyl rep., the charge conjugation is
+
+.. math::
+   C_{W} = i\gamma^0 = \begin{pmatrix} 0 & i\sigma^2 \\  -i\sigma^2 & 0  \end{pmatrix}.
+
+Apply the representation of :math:`\Psi` and :math:`C_{W}` in Weyl basis, we have
+
+.. math::
+   C_W\Psi &=  \begin{pmatrix} 0 & i\sigma^2 \\  -i\sigma^2 & 0  \end{pmatrix} \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} \\
+   & = \begin{pmatrix} i\sigma^2\psi_2 \\ -i\sigma^2 \psi_1 \end{pmatrix}.
+
+The condition for Majorana fermions is :math:`\Psi^{(c)} = \Psi`, which leads to the conclusion that
+
+.. math::
+   \psi_2 = -i\sigma^2\psi_1.
+
+Thus it is possible to have a state that is only composed of one chiral spinor,
+
+.. math::
+   \Psi = \begin{pmatrix} \psi_L \\ -i\sigma^2 \psi_L \end{pmatrix}.
+
+Thus we have decoupled equations for left-handed state and right-handed state.
+
+
+
+Chirality, Helicity and Spin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For a massless particle, chirality is conserved since the equation of motion or Lagrangian doesn't couple left-handed state with right-handed state.
+
+However, if a particle has mass, chirality symmetry is broken.
 
 
 
 
 
 See-saw Mechanism
-------------------
+--------------------
 
-RH neutrinos term in Lagrangian breaks the symmetry.
+
+In general the mass term in Lagrangian can be written as [1]_
+
+.. math::
+   \mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L & m_D \\ m_D & m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .
+
+We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L,R}` and :math:`\nu_{L,R}`.
+
+The idea of see-saw mechanism is to make :math:`\frac{m_R}{m_D}` very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`.
+
+The we have the see-saw mechanism. Large mass of right-handed neutrinos compensate the mass of neutrinos we have observe.
+
+
+
+
+
+
+
+
+Refs & Notes
+----------------------------
+
+
+1. References for Majorana fermions: `Lecture notes by Matthew Schwartz @ Harvard: Lecture 10 Spinors and the Dirac Equation <http://isites.harvard.edu/fs/docs/icb.topic792163.files/10-spinors.pdf>`_ , `Lectures notes by Tong @ DAMPTP <http://www.damtp.cam.ac.uk/user/tong/qft/four.pdf>`_ .
+
+
+
+.. [1] Elliott, S. R., & Franz, M. (2015). Colloquium: Majorana fermions in nuclear, particle, and solid-state physics. Reviews of Modern Physics, 87(March), 137–163. doi:10.1103/RevModPhys.87.137
