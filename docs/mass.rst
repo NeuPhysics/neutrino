@@ -103,7 +103,7 @@ where the second line is for :math:`i\neq j`.
 .. admonition:: Quaternion
    :class: note
 
-   A quaternin is a quantity that can be written as a matrix of the form
+   A quaternion is a quantity that can be written as a matrix of the form
 
    .. math::
       q = \begin{pmatrix}\;z & w \\ -w^* & \;z^*\end{pmatrix}.
