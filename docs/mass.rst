@@ -427,6 +427,15 @@ However, if a particle has mass, chirality symmetry is broken.
 
 
 
+Consequences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
 
 
 See-saw Mechanism
@@ -439,6 +448,25 @@ In general the mass term in Lagrangian can be written as [1]_
    \mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L & m_D \\ m_D & m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .
 
 We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L,R}` and :math:`\nu_{L,R}`.
+
+.. admonition:: Annihilation and Creation
+   :class: note
+
+   A table in Boris Kayser's paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator.
+
+   +-------------------------------+-----------------------+----------------------------+
+   |             Field             | Effect on :math:`nu`  | Effect on :math:`\bar\nu`  |
+   +-------------------------------+-----------------------+----------------------------+
+   |       :math:`\nu_{L,R}`       |      Annihilation     |          Creation          |
+   +-------------------------------+-----------------------+----------------------------+
+   |     :math:`\bar\nu_{L,R}`     |        Creation       |        Annihilation        |
+   +-------------------------------+-----------------------+----------------------------+
+   |    :math:`\nu_{L,R}^{(c)}`    |        Creation       |        Annihilation        |
+   +-------------------------------+-----------------------+----------------------------+
+   | :math:`\bar{\nu_{L,R}^{(c)}}` |      Annihilation     |          Creation          |
+   +-------------------------------+-----------------------+----------------------------+
+
+
 
 The idea of see-saw mechanism is to make :math:`\frac{m_R}{m_D}` very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`.
 
