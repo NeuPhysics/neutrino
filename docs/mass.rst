@@ -88,10 +88,11 @@ Expand the expression we get the requirements for :math:`\vec\alpha` and :math:`
 
 .. math::
    \vec\alpha\cdot\vec \alpha &= 1, \\
-   \{\alpha_i,\alpha_j\} &= 0 \qquad \text{when i\neq j}, \\
+   \{\alpha_i,\alpha_j\} &= 0, \\
    \{\alpha_i,\beta \} & = 0 ,\\
    \beta^2 & = 1.
 
+where the second line is for :math:`i\neq j`.
 
 .. admonition:: Hint
    :class: note
