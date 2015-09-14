@@ -36,7 +36,12 @@ extensions = [
 latex_preamble = r"""
 \usepackage{mathrsfs}
 \usepackage{color}
+\usepackage{amsmath}
+\usepackage{slashed}
 
+\newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
+\newcommand{\overl}[1]{\overset\leftarrow{#1}}
+\newcommand{\overr}[1]{\overset\rightarrow{#1}}
 
 \newcommand{\bra}[1]{\left\langle #1\right|}
 \newcommand{\ket}[1]{\left| #1\right\rangle}

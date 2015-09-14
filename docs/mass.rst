@@ -131,6 +131,8 @@ In fact we have three different representations if we assume :math:`\vec\alpha` 
 .. admonition:: Three representations
    :class: note
 
+   It could be useful to define two four vectors :math:`\sigma^\mu = (\sigma^0, - \sigma^i)` and :math:`\bar\sigma^\mu = (\sigma^0, \sigma^i)`. But all they do is to combine :math:`\gamma^0` and :math:`\gamma^i` into one expression.
+
    * Dirac-Pauli representation
 
    The :math:`\vec\alpha` and :math:`\beta` are
@@ -189,6 +191,7 @@ In fact we have three different representations if we assume :math:`\vec\alpha` 
    .. math::
       \Psi = \begin{pmatrix}  \Psi_R \\ \Psi_L \end{pmatrix}.
 
+   The reason we could have such a simple form of the state is that the chirality operators only take out the upper and lower component of the state. Or in a group theory view, the Poncaré group generators becomes block diagonal and they break up to the generators of :math:`(\frac{1}{2},0)\oplus (0,\frac{1}{2})`. This group theory view also shows that the Dirac representation is reducible and reduces to left and right handed states.
 
    * Majorana representation
 
@@ -205,6 +208,8 @@ In fact we have three different representations if we assume :math:`\vec\alpha` 
 
 
    The chirality operator :math:`P_{R(+)/L(-)} = \frac{1}{2}(1\pm \gamma^5)` won't simplify.
+
+   The generators of the Lorentz group becomes all imaginary so that the transformation matrices can be real.
 
 
 Dirac equation in D-P rep. is
@@ -231,14 +236,21 @@ where we use that fact the a state is
    In both D-P and Weyl rep., we have (Halzen & Martin, excerse 5.6)
 
    .. math::
-      C\gamma^0 = i\gamma^2.
+      C = i\gamma^2.
 
    However, in Majorana basis, we have
 
    .. math::
-      C\gamma^0 = I.
+      C = I.
 
 
+.. admonition:: Parity
+   :class: note
+
+   Parity in Weyl basis is
+
+   .. math::
+      \mathscr{P} = \gamma^0.
 
 
 However, in Majorana basis we can show that the two possible states are in the form
@@ -247,11 +259,112 @@ However, in Majorana basis we can show that the two possible states are in the f
    \Psi_L &= \begin{pmatrix} - i \sigma^2 \psi_L^* \\ \psi_L  \end{pmatrix}, \\
    \Psi_R & = \begin{pmatrix} \psi_R \\ i\sigma^2\psi_R^* \end{pmatrix}.
 
+.. admonition:: Why in this form?
+   :class: note
+
+   Think about spinor transformation. This form is a spinor. In this case a mass term :math:`-i\frac{1}{2}( \psi_L^\dagger \sigma^2 \psi_L^* - \psi_L^T \sigma^2 \psi_L )` becomes :math:`\frac{m}{2}\bar\Psi_L\Psi_L`.
+
+   Also notice that a charge conjugation
+
 The equations becomes
 
 .. math::
    (i\partial_t -\vec p \cdot \vec \sigma) \psi_R - i m_R \sigma^2 \psi_R^* &= 0, \\
    (i\partial_t + \vec p \cdot \vec \sigma) \psi_L - i m_L \sigma^2\psi_L^* & = 0.
+
+
+
+Lagrangian
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. admonition:: Lagrangian and Equation of Motion
+   :class: note
+
+   The Lagrangian with Dirac mass is
+
+   .. math::
+      \mathscr{L}_D = \frac{i}{2} \bar\Psi \overlr{\partial}\Psi - m \bar\Psi \Psi.
+
+   Using action principle,
+
+   .. math::
+      \frac{\partial \mathscr{L}}{\partial \bar\Psi} - \partial_\mu \frac{\partial \mathscr{L}}{\partial( \partial_\mu \bar\Psi)} = 0
+
+   and the fact that
+
+   .. math::
+      \frac{\partial \mathscr{L}}{\partial\bar\Psi} &= \frac{i}{2} \slashed{\partial} \Psi - m \Psi \\
+      \frac{\partial \mathscr{L}}{\partial ( \partial_\mu \bar\Psi)} & = -\frac{i}{2} \gamma^\mu \Psi
+
+   I have the equation of motion,
+
+   .. math::
+      \frac{i}{2} \slashed{\partial}\Psi - m\Psi + \frac{i}{2}\partial_\mu \gamma^\mu\Psi = 0,
+
+   which simplifies to
+
+   .. math::
+      (i\slashed{\partial} - m) \Psi = 0.
+
+   Its conjugate is
+
+   .. math::
+      \bar\Psi (\overset\leftarrow{\slashed{\partial}} + m) = 0.
+
+   **In fact we usually drop a surface term in the Lagrangian.** The reason we can do it is because the equation of motion comes from action pricinple. The action is :math:`S = \int d^4x \mathscr{L}`. Drop or add a surface term to the Lagrangian won't change the equation of motion. The term we would like remove from the Lagrangian is
+
+   .. math::
+      \slashed{\partial} (\bar\Psi \Psi).
+
+   The Lagrangian becomes
+
+   .. math::
+      \mathscr{L}_D = \bar\Psi (i\slashed{\partial} ) \Psi -  m \bar\Psi \Psi.
+
+
+
+
+
+
+Majorana fermions has more significance when we write down the Lagrangian.
+
+But first, the Lagrangian with Dirac mass term is
+
+.. math::
+   \mathscr{L}_D = \bar\Psi (i\slashed{\partial} ) \Psi -  m \bar\Psi \Psi,
+
+where :math:`\bar\Psi = \Psi^\dagger\gamma^0` and :math:`\slashed{\partial} = \gamma^\mu \partial_\mu`. Plugin the Weyl representtaion, we have
+
+.. math::
+   \mathscr{L}_D &= i\begin{pmatrix}\psi_R^\dagger & \psi_L^\dagger \end{pmatrix} \begin{pmatrix} 0 & \sigma^\mu \\  \bar\sigma^\mu & 0 \end{pmatrix} \partial _\mu \begin{pmatrix} \psi_L \\ \psi_R \end{pmatrix} - m\begin{pmatrix}\psi_R^\dagger & \psi_L^\dagger \end{pmatrix}  \begin{pmatrix} \psi_L \\ \psi_R \end{pmatrix} \\
+   & = i\psi_L^\dagger \bar\sigma^\mu \partial _\mu \psi_L + i \psi_R^\dagger \sigma^\mu \partial_\mu \psi_R - m (\psi_R^\dagger \psi_L + \psi_L^\dagger \psi_R).
+
+where :math:`\sigma^\mu = (I,-\sigma^i)` and :math:`\bar\sigma^\mu = (I,\sigma^i)`. **Pay attention to the metric when doing contraction.**
+
+This Lagrangian shows the effect of mass which couples the left-handed state and right-handed state.
+
+It is possible to write down another Lagrangian,
+
+.. math::
+   \mathscr{L}_{M,L} = i\psi_L^\dagger \sigma^\mu \partial_\mu \psi_L + i \frac{1}{2}m( \psi_L^\dagger \sigma^2 \psi_L^* - \psi_L^T \sigma^2 \psi_L),
+
+which decouples the left-handed and right-handed.
+
+.. admonition:: Global Phase Transformation
+   :class: note
+
+   A global phase transformation :math:`\psi\to e^{i\alpha} \psi` will change this Lagrangian since we have
+
+   .. math::
+      \psi_L^T\sigma^2 \psi_L \to e^{2i\alpha}\psi_L^T \sigma^2 \psi_L.
+
+   Global symmetry is related to charge, in this case Majorana Lagrangian breaks charge conservation law. So Majorana fermions can only be neutral per charge conservation.
+
+
+The thing is, we could just work with a real spinor! We can choose :math:`\psi_L = \psi_L^*`.
+
+
 
 
 
