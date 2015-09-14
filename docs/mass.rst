@@ -253,7 +253,7 @@ where we use that fact the a state is
       \mathscr{P} = \gamma^0.
 
 
-However, in Majorana basis we can show that the two possible states are in the form
+A Majorana fermion which has the property that its charge conjugation is the same as itself, can be written as
 
 .. math::
    \Psi_L &= \begin{pmatrix} - i \sigma^2 \psi_L^* \\ \psi_L  \end{pmatrix}, \\
@@ -264,7 +264,10 @@ However, in Majorana basis we can show that the two possible states are in the f
 
    Think about spinor transformation. This form is a spinor. In this case a mass term :math:`-i\frac{1}{2}( \psi_L^\dagger \sigma^2 \psi_L^* - \psi_L^T \sigma^2 \psi_L )` becomes :math:`\frac{m}{2}\bar\Psi_L\Psi_L`.
 
-   Also notice that a charge conjugation
+   This will be proved in later context.
+
+   Also notice that a charge conjugation in Majorana rep. is identity.
+
 
 The equations becomes
 
