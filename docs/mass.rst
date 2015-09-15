@@ -444,7 +444,7 @@ We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L
    A table in Boris Kayser's paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator [2]_.
 
    +-------------------------------+-----------------------+----------------------------+
-   |             Field             | Effect on :math:`nu`  | Effect on :math:`\bar\nu`  |
+   |             Field             | Effect on :math:`\nu`  | Effect on :math:`\bar\nu`  |
    +-------------------------------+-----------------------+----------------------------+
    |       :math:`\nu_{L,R}`       |      Annihilation     |          Creation          |
    +-------------------------------+-----------------------+----------------------------+
