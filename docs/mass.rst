@@ -427,24 +427,14 @@ However, if a particle has mass, chirality symmetry is broken.
 
 
 
-Consequences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
 See-saw Mechanism
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 In general the mass term in Lagrangian can be written as [1]_
 
 .. math::
+   :label: seesaw-mass-lagrangian
    \mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L & m_D \\ m_D & m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .
 
 We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L,R}` and :math:`\nu_{L,R}`.
@@ -452,7 +442,7 @@ We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L
 .. admonition:: Annihilation and Creation
    :class: note
 
-   A table in Boris Kayser's paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator.
+   A table in Boris Kayser's paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator [2]_.
 
    +-------------------------------+-----------------------+----------------------------+
    |             Field             | Effect on :math:`nu`  | Effect on :math:`\bar\nu`  |
@@ -463,16 +453,64 @@ We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L
    +-------------------------------+-----------------------+----------------------------+
    |    :math:`\nu_{L,R}^{(c)}`    |        Creation       |        Annihilation        |
    +-------------------------------+-----------------------+----------------------------+
-   | :math:`\bar{\nu_{L,R}^{(c)}}` |      Annihilation     |          Creation          |
+   | :math:`\bar{\nu_{L,R}}^{(c)}` |      Annihilation     |          Creation          |
    +-------------------------------+-----------------------+----------------------------+
 
 
 
-The idea of see-saw mechanism is to make :math:`\frac{m_R}{m_D}` very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`.
+The idea of see-saw mechanism is to make :math:`\frac{m_R-m_L}{m_D}` very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`.
 
 The we have the see-saw mechanism. Large mass of right-handed neutrinos compensate the mass of neutrinos we have observe.
 
+The reason that :math:`\frac{m_R-m_L}{m_D}` can be large is that :math:`m_D` is of the same masses of other leptons because Dirac masses of leptons comes from the same Higgs field.
 
+
+.. admonition:: Diagonalizing Mass Matrix
+   :class: note
+
+   A mass matrix can be decomposed,
+
+   .. math::
+      \mathscr{M}_\nu = \begin{pmatrix} m_L & m_D \\ m_D & m_R \end{pmatrix} = \begin{pmatrix} 0 & m_D \\ m_D & m_R-m_L \end{pmatrix} + m_L I
+
+   I can find the eigenvalues of the masses, they are
+
+   .. math::
+      m_1 & = m_D^2/m_R \\
+      m_2 & = m_R.
+
+   Then we can find the transformation matrix. At this point we can identify that the see-saw mechanism works.
+
+   To save time, we can just follow Boris [2]_ , diagonalizing the first matrix with :math:`(m_R-m_L)/m_D \gg 1` is done using a unitary matrix
+
+   .. math::
+      Z = \begin{pmatrix} 1 & -\rho \\ \rho & 1  \end{pmatrix} \begin{pmatrix} i & 0 \\ 0 & 1 \end{pmatrix},
+
+   where :math:`\rho=m_D/(m_R-m_L)` is very small.
+
+   The result of the diagonalized mass matrix becomes
+
+   .. math::
+      \mathscr{M}_{\mu,Diag} &= Z^T \mathscr{M}_\nu Z \\
+      & \approx \begin{pmatrix}  -\frac{m_D^2}{m_R-m_L} & 0 \\  0 & 2\frac{m_D^2}{m_R-m_L}+ m_R-m_L  \end{pmatrix} + m_L I.
+
+   **A problem here.**
+
+
+
+
+
+
+Consequences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+The see-saw mass term in :eq:`seesaw-mass-lagrangian` combined with the meaning of the creation and annihilation operators, we know that Majorana mass can annihilate a neutrino or antineutrino then create a antineutrino or neutrino.
+
+.. figure:: assets/mass/dirac-mass-vs-majorana-mass-lines.png
+   :align: center
+
+   Figure 1 in `arXiv:hep-ph/0211134 <http://arxiv.org/abs/hep-ph/0211134>`_ by Boris Kayser. These diagrams illustrate what Dirac mass and Majorana mass do to the neutrinos.
 
 
 
@@ -487,4 +525,6 @@ Refs & Notes
 
 
 
+
 .. [1] Elliott, S. R., & Franz, M. (2015). Colloquium: Majorana fermions in nuclear, particle, and solid-state physics. Reviews of Modern Physics, 87(March), 137–163. doi:10.1103/RevModPhys.87.137
+.. [2] Kayser, B. (2002). Neutrino Mass, Mixing, and Flavor Change. `arXiv:hep-ph/0211134 <http://arxiv.org/abs/hep-ph/0211134>`_ .
