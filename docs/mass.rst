@@ -256,8 +256,8 @@ where we use that fact the a state is
 A Majorana fermion which has the property that its charge conjugation is the same as itself, can be written as
 
 .. math::
-   \Psi_L &= \begin{pmatrix} - i \sigma^2 \psi_L^* \\ \psi_L  \end{pmatrix}, \\
-   \Psi_R & = \begin{pmatrix} \psi_R \\ i\sigma^2\psi_R^* \end{pmatrix}.
+   \Psi_R &= \begin{pmatrix}  i \sigma^2 \psi_R^* \\ \psi_R  \end{pmatrix}, \\
+   \Psi_L & = \begin{pmatrix} \psi_L \\  -i\sigma^2\psi_L^* \end{pmatrix}.
 
 .. admonition:: Why in this form?
    :class: note
@@ -398,21 +398,21 @@ Then we know that in Weyl rep., the charge conjugation is
 .. math::
    C_{W} = i\gamma^0 = \begin{pmatrix} 0 & i\sigma^2 \\  -i\sigma^2 & 0  \end{pmatrix}.
 
-Apply the representation of :math:`\Psi` and :math:`C_{W}` in Weyl basis, we have
+Apply the representation of :math:`\Psi` and :math:`C_{W}` in Weyl basis, and use charge conjugation, we have
 
 .. math::
-   C_W\Psi &=  \begin{pmatrix} 0 & i\sigma^2 \\  -i\sigma^2 & 0  \end{pmatrix} \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} \\
-   & = \begin{pmatrix} i\sigma^2\psi_2 \\ -i\sigma^2 \psi_1 \end{pmatrix}.
+   C_W\Psi^* &=  \begin{pmatrix} 0 & i\sigma^2 \\  -i\sigma^2 & 0  \end{pmatrix} \begin{pmatrix} \psi_1^* \\ \psi_2^* \end{pmatrix} \\
+   & = \begin{pmatrix} i\sigma^2\psi_2^* \\ -i\sigma^2 \psi_1^* \end{pmatrix}.
 
 The condition for Majorana fermions is :math:`\Psi^{(c)} = \Psi`, which leads to the conclusion that
 
 .. math::
-   \psi_2 = -i\sigma^2\psi_1.
+   \psi_2 = -i\sigma^2\psi_1^*.
 
 Thus it is possible to have a state that is only composed of one chiral spinor,
 
 .. math::
-   \Psi = \begin{pmatrix} \psi_L \\ -i\sigma^2 \psi_L \end{pmatrix}.
+   \Psi = \begin{pmatrix} \psi_L \\ -i\sigma^2 \psi_L^* \end{pmatrix}.
 
 Thus we have decoupled equations for left-handed state and right-handed state.
 
@@ -434,7 +434,6 @@ See-saw Mechanism
 In general the mass term in Lagrangian can be written as [1]_
 
 .. math::
-   :label: seesaw-mass-lagrangian
    \mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L & m_D \\ m_D & m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .
 
 We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L,R}` and :math:`\nu_{L,R}`.
