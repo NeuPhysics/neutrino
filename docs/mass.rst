@@ -183,13 +183,14 @@ In fact we have three different representations if we assume :math:`\vec\alpha` 
    In this representation the Dirac equation is
 
    .. math::
-      (i\partial_t - \vec p \cdot \vec \sigma) \Psi_R - m_D\Psi_L &= 0, \\
-      (i\partial_t + \vec p \cdot \vec \sigma) \Psi_L - m_D\Psi_R &= 0.
+      (i\partial_t - \vec p \cdot \vec \sigma) \psi_R - m_D\psi_L &= 0, \\
+      (i\partial_t + \vec p \cdot \vec \sigma) \psi_L - m_D\psi_R &= 0.
+
 
    where we assumed that
 
    .. math::
-      \Psi = \begin{pmatrix}  \Psi_R \\ \Psi_L \end{pmatrix}.
+      \Psi = \begin{pmatrix}  \psi_R \\ \psi_L \end{pmatrix}.
 
    The reason we could have such a simple form of the state is that the chirality operators only take out the upper and lower component of the state. Or in a group theory view, the Poncaré group generators becomes block diagonal and they break up to the generators of :math:`(\frac{1}{2},0)\oplus (0,\frac{1}{2})`. This group theory view also shows that the Dirac representation is reducible and reduces to left and right handed states.
 
@@ -215,13 +216,13 @@ In fact we have three different representations if we assume :math:`\vec\alpha` 
 Dirac equation in D-P rep. is
 
 .. math::
-   (i\partial_t - \vec p \cdot \vec \sigma) \Psi_R - m_D\Psi_L &= 0, \\
-   (i\partial_t + \vec p \cdot \vec \sigma) \Psi_L - m_D\Psi_R &= 0.
+   (i\partial_t - \vec p \cdot \vec \sigma) \psi_R - m_D\psi_L &= 0, \\
+   (i\partial_t + \vec p \cdot \vec \sigma) \psi_L - m_D\psi_R &= 0.
 
 where we use that fact the a state is
 
 .. math::
-   \Psi = \begin{pmatrix}  \Psi_R \\ \Psi_L \end{pmatrix}.
+   \Psi = \begin{pmatrix}  \psi_R \\ \psi_L \end{pmatrix}.
 
 .. admonition:: Charge conjugation
    :class: note

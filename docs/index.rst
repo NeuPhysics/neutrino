@@ -58,6 +58,7 @@ Table of Contents:
    oscillations.rst
    vacuum.rst
    matter.rst
+   matter-spec.rst
    collective.rst
    qualitative.rst
    instability.rst
@@ -109,6 +110,11 @@ Definition
    \Delta &= \sqrt{2} G_F n(x) \\
    \omega &= \frac{\Delta m^2}{2E}
 
+
+Acknowledgement
+====================
+
+I would like to thank my advisor Professor Huaiyu Duan for the support on my research. I would also like to thank Shashank Shalgar, Sajad Abbar for the many useful discussions and tutorials.
 
 
 
