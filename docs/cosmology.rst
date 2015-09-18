@@ -96,11 +96,7 @@ Refs & Notes
 
 
 .. [1] Vogel, P. (2015). How difficult it would be to detect cosmic neutrino background? (Vol. 025001, p. 140003). `doi:10.1063/1.4915587 <http://dx.doi.org/10.1063/1.4915587>`_ .
-
 .. [2]  N. Cabibbo and L. Maiani, `The vanishing of order-G mechanical effects of cosmic massive neutrinos on bulk matter <http://www.sciencedirect.com/science/article/pii/0370269382901277>`_ Phys.Lett. B114, 115 (1982).
-
 .. [3] P. Langacker, J. P. Leveille and J. Sheiman, `On the detection of cosmological neutrinos by coherent scattering <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.27.1228>`_ Phys. Rev. D 27, 1228 (1983)
-
 .. [4] L. Stodolsky, `Speculations on Detection of the "Neutrino Sea" <http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.34.110>`_ Phys. Rev. Lett. 34, 110 (1975); (erratum) Phys. Rev. Lett. 34, 508 (1975).
-
 .. [5] Lewis, R. R. (1980). Coherent detector for low-energy neutrinos. Physical Review D, 21(3), 663–668. doi:10.1103/PhysRevD.21.663.
