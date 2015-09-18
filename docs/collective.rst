@@ -53,6 +53,7 @@ After the interaction at site 1, a electron neutrino is moving up and transforms
 This is a toy model of collective oscillation.
 
 
+.. index:: Spectral Split
 
 Spectral Split
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,6 +75,7 @@ A spectral split phenomenon has been observed in calculations. [1]_
 .. [1] Duan, H., Fuller, G., Carlson, J. & Qian, Y.-Z. `Simulation of coherent nonlinear neutrino flavor transformation in the supernova environment: Correlated neutrino trajectories. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.105014>`_ *Phys. Rev. D* **74**, (2006).
 
 
+.. index:: Bipolar Model
 
 Bipolar Model
 -----------------------
@@ -92,7 +94,7 @@ The neutrinos are generated in two classes with the same number density thus mak
 .. [2] Raffelt, G. & Smirnov, A. `Self-induced spectral splits in supernova neutrino fluxes. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.105010>`_ *Phys. Rev. D* **76**, (2007).
 
 
-
+.. index:: Isotropic Neutrino Gas
 
 Dense Homogeneous Isotropic Neutrino Gas
 ----------------------------------------------------------

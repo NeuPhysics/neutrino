@@ -67,6 +67,8 @@ In QFT, there are 3 different forms of neutrino mass term, left-handed Majorana,
 Chirality and Helicity
 -----------------------------
 
+.. index:: Helicity
+
 Helicity
 ~~~~~~~~~~~~~~
 
@@ -83,6 +85,8 @@ where
 
 A state is called **right-handed** if helicity is positive, i.e., spin has the same direction as momentum.
 
+
+.. index:: Chirality
 
 Chirality
 ~~~~~~~~~~~~
@@ -106,6 +110,8 @@ Double Beta Decay
 
 States
 --------------------------------------
+
+.. index:: Wigner Function
 
 Wigner Function
 ~~~~~~~~~~~~~~~~~~~~~~~~

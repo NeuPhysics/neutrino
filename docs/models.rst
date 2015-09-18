@@ -1,9 +1,9 @@
 Models
-***********************
+================
 
 
 Homogeneous and Isotropic Neutrino Gas
-================================================================================
+------------------------------------------------------------
 
 
 :math:`\vec P_\omega` can be time-independent.
@@ -22,14 +22,14 @@ Anyway the equation we need to solve is then
 
 
 What to expect?
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Without solving the equation, we know that
 
 
 
 Solving Eqns
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. admonition:: What is special in this model?

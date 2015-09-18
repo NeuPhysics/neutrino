@@ -64,6 +64,7 @@ The best fit values in 2014 for the angles in :math:`\pm 1\sigma` are
 
 
 
+.. index:: Majorana Particles
 
 Majorana Particle
 --------------------------

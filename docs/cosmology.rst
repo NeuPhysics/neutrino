@@ -9,6 +9,8 @@ Baryon Asymmetry in the Univserse
 ------------------------------------------------
 
 
+.. index:: Cosmic Neutrino Background
+.. index:: CNB
 
 Cosmic Neutrino Background
 --------------------------------

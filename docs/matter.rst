@@ -817,6 +817,7 @@ which can be determined by the Landau-Zener transition analytically (first order
 .. [Parke1986] Parke, S. J. (1986). Nonadiabatic Level Crossing in Resonant Neutrino Oscillations. Physical Review Letters, 57(10), 1275–1278. doi:10.1103/PhysRevLett.57.1275
 
 
+.. index:: Landau-Zener Transition
 
 Landau-Zener Transition of Neutrinos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

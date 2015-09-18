@@ -19,7 +19,7 @@ Instability of neutrino oscillation means the rapid growth of the oscillations.
 
 
 
-
+.. index:: Linear Stability Analysis
 
 Linear Stability Analysis
 ------------------------------
@@ -27,7 +27,7 @@ Linear Stability Analysis
 
 
 
-
+.. index:: Bimodal Instability
 
 Bimodal Instability
 ---------------------------
@@ -49,6 +49,7 @@ Neutrino oscillatioins are synchronized but with a small amplitude inside a SN c
 .. [1] Wolfenstein, L. `Neutrino oscillations in matter. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.17.2369>`_ *Phys. Rev. D* **17**, 23692374 (1978). Or check papers of MSW effect such as Wick Haxton's excellent review.
 
 
+.. index:: Multi-angle Instability
 
 Multi-angle Instability
 ------------------------------------------------
@@ -87,6 +88,8 @@ This could happen even for a perfectly symmetric emission.
 
 
 .. [3] Raffelt, G., Sarikas, S. & Seixas, D. `Axial Symmetry Breaking in Self-Induced Flavor Conversionof Supernova Neutrino Fluxes. <http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.091101>` *Phys. Rev. Lett.* **111**, (2013).
+
+
 
 Neutrino Self Interaction and Instability
 --------------------------------------------

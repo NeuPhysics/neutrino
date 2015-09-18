@@ -19,6 +19,8 @@ Neutrino Oscillation And Master Equation
    Why do you need a master equation approach? IDK.
 
 
+.. index:: Quantum Master Equation
+
 Quantum Master Equation
 ---------------------------------
 

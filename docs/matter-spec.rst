@@ -1,6 +1,8 @@
 Matter as Driven Energy
 ====================================
 
+.. index:: Rabi Oscillation
+
 .. admonition:: Rabi Oscillation
    :class: note
 

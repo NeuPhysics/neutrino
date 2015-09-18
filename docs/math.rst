@@ -15,7 +15,9 @@ and with matter
    i \frac{d}{dt} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \frac{\Delta m^2}{4E} \begin{pmatrix} \frac{4E}{\Delta m^2} \sqrt{2} G_F n_e - \cos 2\theta   & \sin 2\theta \\  \sin 2\theta  &  \cos 2\theta   \end{pmatrix} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}
 
 
-Qualititative Analysis
+.. index:: Qualitative Analysis
+
+Qualitative Analysis
 -----------------------------------
 
 The vacuum oscillation is determined by autonomous equations. A fixed point of an autonomous system is defined by

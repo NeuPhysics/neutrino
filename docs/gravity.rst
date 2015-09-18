@@ -1,5 +1,5 @@
 Effect of Gravitation
-=====================
+==========================================
 
 The effect of gravitation on neutrino oscillation could be great around a neutron star.
 

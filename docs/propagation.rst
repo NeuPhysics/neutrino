@@ -20,6 +20,8 @@ What I can do is to check the following questions.
 3. What if the packet is a combination of Gaussian packets?
 
 
+.. index:: Wave Packet Treatment
+
 Wave Packet Treatment
 -----------------------
 
