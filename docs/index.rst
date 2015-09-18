@@ -21,11 +21,14 @@ Neutrino is one of the most interesting particles in our world. The first propos
 This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutrino.xyz <http://neutrino.xyz>`_ .
 
 
+Support us:
+
 .. raw:: html
 
    <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
 
 
+DOI
 
 .. image:: https://zenodo.org/badge/7726/NeuPhysics/neutrino.svg
    :target: https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino
@@ -33,7 +36,8 @@ This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutri
 
 
 
-Table of Contents:
+
+
 
 .. toctree::
    :maxdepth: 2

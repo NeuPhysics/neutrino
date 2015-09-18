@@ -121,8 +121,9 @@ There is a collection of Wigner functions on this site. [3]_
 
 .. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
 
+
 .. admonition:: Question
-   :class: warning
+   :class: note
 
    How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.
 
@@ -148,10 +149,11 @@ The neutrino-neutrino forward scattering is [2]_
 
 .. [2] Pantaleone (1992), Friedland & Lunardini (2003).
 
+
 .. admonition:: Question
    :class: caution
 
-   Meaning of each term in Liouville equation ?
+   Meaning of each term in Liouville equation.
 
 
 
@@ -161,27 +163,31 @@ The neutrino-neutrino forward scattering is [2]_
 Questions
 --------------------
 
+
+Here are some great questions about neutrinos.
+
+
 .. admonition:: Question
-   :class: warning
+   :class: note
 
    Is neutrino its own antiparticle? Or is neutrino Majorana or Dirac?
 
 
 .. admonition:: Question
-   :class: warning
+   :class: note
 
    What's the mass hierarchy?
 
 
 .. admonition:: Question
-   :class: warning
+   :class: note
 
    What are the mixing angles?
 
 
 
 .. admonition:: Question
-   :class: warning
+   :class: note
 
    How many different flavours of neutrinos are there?
 
