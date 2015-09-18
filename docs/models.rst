@@ -34,3 +34,5 @@ Solving Eqns
 
 .. admonition:: What is special in this model?
    :class: note
+
+   To be added.

@@ -49,7 +49,7 @@ In general the flavor eigenstates are the mixing of the mass eigenstates with a 
    \ket{\nu_{\alpha}} =  U_{\alpha i} \ket{\nu_i},
 
 
-where the :math:`\alpha` s are indices for flavor states while the *i*s are indices for mass eigenstates.
+where the :math:`\alpha` s are indices for flavor states while the *i* s are indices for mass eigenstates.
 
 To find out the equation of motion for flavor states, plugin in the initary tranformation,
 
@@ -134,7 +134,7 @@ The survival probability becomes
 
 
 
-:math:`U^{\dagger *}_{i\alpha}` stands for the *i*th row and the :math:`\alpha` th column of the matrix :math:`U^{\dagger *}`.
+:math:`U^{\dagger *}_{i\alpha}` stands for the *i* th row and the :math:`\alpha` th column of the matrix :math:`U^{\dagger *}`.
 
 
 Two Flavor States

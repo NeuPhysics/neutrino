@@ -42,10 +42,10 @@ In matter, the interaction with matter :math:`\Delta \equiv \sqrt{2} G_F n` in r
    The oscillation length and frequency in fact is related to the energy scales. As the energy scales match each other, interesting things could happen. In the case of neutrinos, MSW resonance can happen.
 
 
-.. admonition::
+.. admonition:: Fermi Constant
    :class: note
 
-   Fermi constant is :math:`G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}`. The conversion between distance and
+   Fermi constant is :math:`G_F=1.17\times 10^{-5}\mathrm{GeV^{-2}}`. The conversion between distance and energy is given by :math:`1\mathrm{fm}\cdot 197\mathrm{MeV}=1`.
 
 With the definition of these oscillation lengths, a comparison between them can be made. Choose :math:`\Delta m_{21}^2=10^{-4}\times 10^{-18}\mathrm{GeV^{2}}`, we have
 
