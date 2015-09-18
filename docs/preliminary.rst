@@ -1,7 +1,39 @@
 Preliminary
-===========
+======================
+
 
 This chapter is about the preliminary knowledge required by this topic.
+
+
+
+
+
+Some Interesting Facts
+-----------------------------
+
+
+
+
+
+.. admonition:: Solar Neutrino Problem
+   :class: note
+
+   The sun produces neutrinos inside it and the neutrinos are then propagating out through the plasma. On the earth we can detect them. A problem was that the detected neutrinos were only one third of the total neutrino flux predicted which causes some people to think that the sun had shut down. The solution, however, is the neutrino oscillation.
+
+
+
+As far as we know, we have three flavours of neutrinos and their anti-particles which are  orthogonal to each other,
+
+.. math::
+   \braket{\nu_{l'}}{\nu_l} &= \delta_{l'l} \\
+   \braket{\bar\nu_{l'}}{\bar\nu_l} &= \delta_{l'l} \\
+   \braket{\bar\nu_{l'}}{\nu_l} &= 0.
+
+The interesting thing about neutrinos is that it oscillates.
+
+
+
+
 
 
 Reactions Related to Neutrinos
@@ -120,6 +152,42 @@ The neutrino-neutrino forward scattering is [2]_
    :class: caution
 
    Meaning of each term in Liouville equation ?
+
+
+
+
+
+
+Questions
+--------------------
+
+.. admonition:: Question
+   :class: warning
+
+   Is neutrino its own antiparticle? Or is neutrino Majorana or Dirac?
+
+
+.. admonition:: Question
+   :class: warning
+
+   What's the mass hierarchy?
+
+
+.. admonition:: Question
+   :class: warning
+
+   What are the mixing angles?
+
+
+
+.. admonition:: Question
+   :class: warning
+
+   How many different flavours of neutrinos are there?
+
+
+
+
 
 
 Refs & Notes
