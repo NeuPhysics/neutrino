@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Neutrino Physics
+==============================
 
 Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos were first detected in Cowan–Reines neutrino experiment. [1]_ Later on a lot of neutrino experiments have been carried out.
 
