@@ -34,7 +34,7 @@ DOI
    :target: https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino
 
 
-
+Here is also an index: `genindex.html <genindex.html>`_ .
 
 
 
