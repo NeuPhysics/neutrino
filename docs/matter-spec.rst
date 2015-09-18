@@ -91,7 +91,84 @@ Matter as Driven Energy
 In vacuum energy eigenbasis, we can write down the Hamiltonian for neutrino oscillations in matter,
 
 .. math::
-   H =
+   H =  -\frac{\omega}{2} \sigma_1 + U^{-1} V U,
+
+where the transformation matrix was calculated in the previous chapter. The expression for this Hamiltonian, as we plug in the transformation, is
+
+.. math::
+   H = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos(2\theta_v) \sigma_3 + \frac{\lambda}{2}\sin(2\theta) \sigma_1 .
+
+
+.. admonition:: Comparing with The Simple Case of Rabi Oscillation
+   :class: note
+
+   The extra term compared with the Rabi oscillation we worked out is
+
+   .. math::
+      \frac{\lambda}{2}\cos(2\theta_v) \sigma_3,
+
+   which is also the troble since here :math:`\lambda` is time dependent.
+
+
+.. admonition:: Hamiltonian Vector
+   :class: note
+
+   This Hamiltonian forms a vector
+
+   .. math::
+      \vec H = \begin{pmatrix}  0 & \frac{\lambda}{2}\sin(2\theta_v) & 0 & -\frac{\omega}{2} + \frac{\lambda}{2} \cos(2\theta_v)  \end{pmatrix},
+
+   in the complate basis
+
+   .. math::
+      \vec \sigma = \begin{pmatrix}  I & \sigma_1 & \sigma_2 & \sigma_3  \end{pmatrix}.
+
+   So that
+
+   .. math::
+      H = \vec H \cdot \vec \sigma.
+
+
+To solve the problem, we use the ansatz that
+
+.. math::
+   \ket{\psi} = C_1 e^{i\frac{\omega}{2}t} \ket{1} + C_2 e^{-i\frac{\omega}{2}t} \ket{2}.
+
+In the proper basis, we also have
+
+.. math::
+   \sigma_3 \ket{1} &= \ket{1}, \\
+   \sigma_3 \ket{2} & = -\ket{2},\\
+   \sigma_1 \ket{1} & = \ket{2},\\
+   \sigma_1\ket{2} & = \ket{1}.
+
+Plug in these into Schrodinger equation,
+
+.. math::
+   &( i\dot C_1 e^{i\omega t/2} \ket{1} - \frac{\omega}{2} C_1 e^{i\omega t/2} \ket{1} + i\dot C_2 e^{-i\omega t/2} \ket{2} + \frac{\omega}{2} C_2 e^{-i\omega t/2} \ket{1} ) \\
+   &= \left( \frac{\lambda}{2} \cos 2\theta_v - \frac{\omega}{2} \right) C_1 e^{i\omega t/2} \ket{1} - \left( \frac{\lambda}{2}\cos 2\theta_v -\frac{\omega}{2}  \right) C_2 e^{-\omega t/2} \ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_1 e^{i\omega t/2}\ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_2 e^{-i\omega t/2} \ket{1}.
+
+Collect terms we get two equations,
+
+.. math::
+   i \dot C_1 & = \frac{\lambda \cos 2\theta_v}{2} C_1 + \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}, \\
+   i \dot C_2 & = \frac{\lambda \cos 2\theta_v}{2} C_2 + \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}.
+
+
+Write down the expression for :math:`C_1` from the second equation and the expression for :math:`C_2` from the first equation,
+
+.. math::
+   C_1 &= \frac{ i \dot C_2 - \frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}, \\
+   C_2 & = \frac{ i \dot C_1 - \frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }.
+
+
+Combine the two equations we get the equation for :math:`\dot C_1` which is used to get the equation for :math:`C_2`. Simplification can be done and it leads to
+
+.. math::
+   \ddot C_2 + \left( i \lambda \cos 2\theta - \left( \frac{\dot \lambda}{\lambda} + i\omega \right)  \right) \dot C_2 - \left( \frac{i\lambda \cos 2\theta_v}{ 2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) + \frac{\lambda^2}{4} \cos 4\theta_v  \right) C_2 = 0.
+
+
+
 
 
 
