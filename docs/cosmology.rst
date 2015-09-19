@@ -86,6 +86,28 @@ Direct detection experiments using this principle have been proposed to detect C
 
 
 
+A Possible Application of LIGO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Speed with respect to the CMB
+   :class: note
+
+   The earth is moving through the CMB background at a speed of :math:`583,333\mathrm{m/s}`.
+
+
+
+In the paper by Vogel [1]_, the force by these CNB on a sphere of radius
+
+.. math::
+   a_t \approx 2\times 10^{-38} \left( \frac{n_\nu}{\bar n_\nu} \right) \left( \frac{10^{-3}c}{\nu_{\mathrm{relative}}}  \right) \left( \frac{\rho_t}{1\mathrm{g/cm^3}} \right)  \left( \frac{r_t}{\bar\lambda} \right) \mathrm{cm/s^2}.
+
+
+For an approximation, I use :math:`\nu_{relative}=10^{-3}c`, a proper set up of the experiment would be about the order of :math:`a_t\sim 10^{-38}\mathrm{cm/s^2}`.
+
+
+
+
+
 
 
 
