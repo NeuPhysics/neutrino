@@ -77,7 +77,7 @@ Matter as Driven Energy
    the solutions should be
 
    .. math::
-      c_e(t) & = \frac{iA}{\Omega_R} e^{i\Delta t/2} sin(\Omega_R t/2) ,\\
+      c_e(t) & = \frac{iA}{\Omega_R} e^{i\Delta t/2} \sin(\Omega_R t/2) ,\\
       c_g(t) &=  e^{-i\Delta t/2}(\cos(\Omega_R t/2) + \frac{i\Delta}{\Omega_R} \sin(\Omega_R t/2) ),
 
    where we defined :math:`\Delta = \omega_0-\omega` and the Rabi frequency :math:`\Omega_R^2` is defined as :math:`\Omega_R^2 = \Delta^2 + A^2`.
