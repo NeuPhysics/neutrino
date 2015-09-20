@@ -1,6 +1,11 @@
 Matter as Driven Energy
 ====================================
 
+
+Rabi-like Transition
+------------------------------
+
+
 .. index:: Rabi Oscillation
 
 .. admonition:: Rabi Oscillation
@@ -168,6 +173,62 @@ Combine the two equations we get the equation for :math:`\dot C_1` which is used
 
 .. math::
    \ddot C_2 + \left( i \lambda \cos 2\theta - \left( \frac{\dot \lambda}{\lambda} + i\omega \right)  \right) \dot C_2 - \left( \frac{i\lambda \cos 2\theta_v}{ 2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) + \frac{\lambda^2}{4} \cos 4\theta_v  \right) C_2 = 0.
+
+
+
+
+Approximation
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Since the equation doesn't corresponds to a clear and simple physics picture, we need to understand term by term.
+
+.. admonition:: Review of The Hamiltonian
+   :class: note
+
+   The Hamiltonian we are dealing with is
+
+   .. math::
+      H = {\color{green}-\frac{\omega}{2} \sigma_3} + {\color{red}\frac{\lambda}{2} \cos 2\theta_v \sigma_3} + {\color{blue}\frac{\lambda}{2}\sin 2\theta_v \sigma_1},
+
+   where the green term contributes to the two eigenenergies, the red term contributes to the two eigenenergies but with a time or space dependence, the last blue term is the flopping term.
+
+
+One of the obstacles of further approximations to Rabi oscillation is that the term :math:`\frac{\lambda}{2} \cos 2\theta_v` is not much smaller than the flopping term which means it can not be dropped.
+
+For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)`. Also for easy calculation, we define :math:`\omega_\lambda = \beta \omega`. Thus :math:`\alpha` and :math:`\beta` fully describes the periodic matter potential. **For numerical calculations, be careful with units.**
+
+
+
+We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}` and :math:`\omega_\lambda\ll \omega` which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that
+
+.. math::
+   \alpha &\ll 1\\
+   \beta &\\ll 1.
+
+1. The red term :math:`\frac{\lambda}{2} \cos 2\theta_v\sigma_3` works as a modulation of the eigenenergies.
+2. The blue term :math:`\frac{\lambda}{2}\sin 2\theta_v \sigma_1` flips the states with a Rabi flopping rate **approximately**. The rate in this case could be
+
+   .. math::
+      P = \frac{\frac{\lambda_0}{2} \sin 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
+
+   where :math:`\Omega_R` is a function of :math:`x`,
+
+   .. math::
+      \Omega_R^2 = \omega^2 \left( \left(1 - \frac{\omega_\lambda}{\omega}  - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \frac{\omega_\lambda}{\omega} \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v  \right)^2  \right).
+
+   So we define :math:`\hat\Omega_R = \Omega_R/\omega` and :math:`\bar x = \omega x`. The survival probability as an approximation becomes
+
+   .. math::
+      P = \frac{\alpha \sin 2\theta_v}{2 \omega (\hat\Omega_R(\bar x))^2} \sin^2\left( \frac{\hat\Omega_R(\bar x)}{2} \bar x \right).
+
+
+
+
+To verify this approximation, we also need to write down the equation after RWA,
+
+.. math::
+   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0
 
 
 
