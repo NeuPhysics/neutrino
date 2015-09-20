@@ -204,7 +204,7 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 
 .. math::
    \alpha &\ll 1\\
-   \beta &\\ll 1.
+   \beta & \ll 1.
 
 1. The red term :math:`\frac{\lambda}{2} \cos 2\theta_v\sigma_3` works as a modulation of the eigenenergies.
 2. The blue term :math:`\frac{\lambda}{2}\sin 2\theta_v \sigma_1` flips the states with a Rabi flopping rate **approximately**. The rate in this case could be
@@ -228,7 +228,20 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 To verify this approximation, we also need to write down the equation after RWA,
 
 .. math::
-   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0
+   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0 .
+
+
+Meanwhile, the original equations becomes
+
+.. math::
+   i \frac{d C_1}{d \bar x} &= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
+   i \frac{d C_2}{d\bar x} & =  \frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.
+
+
+
+
+
+
 
 
 
