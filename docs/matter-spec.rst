@@ -207,13 +207,6 @@ Combine the two equations we get the equation for :math:`\dot C_1` which is used
 
 
 
-
-
-
-Approximation
-~~~~~~~~~~~~~~~~~~~~~
-
-
 Since the equation doesn't corresponds to a clear and simple physics picture, we need to understand term by term.
 
 .. admonition:: Review of The Hamiltonian
@@ -229,7 +222,34 @@ Since the equation doesn't corresponds to a clear and simple physics picture, we
 
 One of the obstacles of further approximations to Rabi oscillation is that the term :math:`\frac{\lambda}{2} \cos 2\theta_v` is not much smaller than the flopping term which means it can not be dropped.
 
-For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)`. Also for easy calculation, we define :math:`\omega_\lambda = \beta \omega`. Thus :math:`\alpha` and :math:`\beta` fully describes the periodic matter potential. **For numerical calculations, be careful with units.**
+
+
+Numerical Results
+~~~~~~~~~~~~~~~~~~~~~~~
+
+For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)`. Also for easy calculation, we define :math:`\omega_\lambda = \beta \omega`. Thus :math:`\alpha` and :math:`\beta` fully describes the periodic matter potential.
+
+
+The numerical results seems to be **STRANGE**,
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-mma.png
+   :align: center
+
+   Numerical result using Mathematica.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-py.png
+   :align: center
+
+   Numerical result using python.
+
+
+Approximation
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
+We use periodic matter potential :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)` and define :math:`\omega_\lambda = \beta \omega`.
 
 
 
@@ -279,6 +299,13 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 
 
 
+
+This theoretical prediction is shown in the following figure.
+
+.. figure:: assets/matter-spec/matterandrabi-rwa-slow-approx-py.png
+   :align: center
+
+   RWA plus slow periodic perturbation (and probabily more hidden approximations) analytical result.
 
 
 
