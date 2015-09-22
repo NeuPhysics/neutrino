@@ -215,7 +215,8 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
    where :math:`\Omega_R` is a function of :math:`x`,
 
    .. math::
-      \Omega_R^2 = \omega^2 \left( \left(1 - \frac{\omega_\lambda}{\omega}  - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \frac{\omega_\lambda}{\omega} \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v  \right)^2  \right).
+      \Omega_R^2 &= \omega^2 \left( \left(1 - \frac{\omega_\lambda}{\omega}  - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \frac{\omega_\lambda}{\omega} \omega x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v  \right)^2  \right) \\
+      &= \omega^2 \left( \left( 1 - \beta - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \beta \bar x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v \right)^2 \right)
 
    So we define :math:`\hat\Omega_R = \Omega_R/\omega` and :math:`\bar x = \omega x`. The survival probability as an approximation becomes
 
