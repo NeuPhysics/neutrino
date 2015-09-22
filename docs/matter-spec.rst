@@ -190,6 +190,13 @@ Write down the expression for :math:`C_1` from the second equation and the expre
 
    Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won't just simply go away when the moduli are calculated.
 
+   The other view of these equations is to look at the expressions
+
+   .. math::
+      C_1 &= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red}- \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
+      C_2 & = {\color{blue}\frac{ i \dot C_1}{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  } -  {\color{red} \frac{\frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  }.
+
+   It means that the new terms added new mixing contributions to :math:`C_1` and :math:`C_2`. But the idea is that we don't really know whether it is enhencement or reduction.
 
 
 
@@ -257,7 +264,7 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 2. The blue term :math:`\frac{\lambda}{2}\sin 2\theta_v \sigma_1` flips the states with a Rabi flopping rate **approximately**. The rate in this case could be
 
    .. math::
-      P = \frac{(\frac{\lambda_0)^2}{2^2} \sin 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
+      P = \frac{(\frac{\lambda_0)^2}{2^2} \sin^2 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
 
    where :math:`\Omega_R` is a function of :math:`x`,
 
