@@ -169,10 +169,36 @@ Write down the expression for :math:`C_1` from the second equation and the expre
    C_2 & = \frac{ i \dot C_1 - \frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }.
 
 
+.. admonition:: The Equations
+   :class: note
+
+   The equations should be analyzed term by term.
+
+   .. math::
+      i \dot C_1 & = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_1} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}}, \\
+      i \dot C_2 & = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}}.
+
+   The red terms are the new math, without which the equation given a periodic matter potential will be exactly the same as the Rabi flopping we worked out. The red terms works as acuumulated oscillation due to all the values of :math:`C_1` or :math:`C_2`.
+
+   To see this effect more clearly, the solutions with the blue Rabi flopping terms are worked out for both equations.
+
+   .. math::
+      C_1(x) & = {\color{red}C_1(0) \exp\left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda (x') dx' \right)} \\
+      C_2(x) & = {\color{red}C_2(0) \exp \left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}.
+
+   Given initial condition that :math:`C_1(0)=1` and :math:`C_2(0)=0`, we anticiptate the the new red term for :math:`C_2(x)` only works as :math:`C_1(x)` is populted to :math:`C_2(x)` through Rabi flopping.
+
+   Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won't just simply go away when the moduli are calculated.
+
+
+
+
 Combine the two equations we get the equation for :math:`\dot C_1` which is used to get the equation for :math:`C_2`. Simplification can be done and it leads to
 
 .. math::
    \ddot C_2 + \left( i \lambda \cos 2\theta - \left( \frac{\dot \lambda}{\lambda} + i\omega \right)  \right) \dot C_2 - \left( \frac{i\lambda \cos 2\theta_v}{ 2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) + \frac{\lambda^2}{4} \cos 4\theta_v  \right) C_2 = 0.
+
+
 
 
 
@@ -231,7 +257,7 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 2. The blue term :math:`\frac{\lambda}{2}\sin 2\theta_v \sigma_1` flips the states with a Rabi flopping rate **approximately**. The rate in this case could be
 
    .. math::
-      P = \frac{\frac{\lambda_0}{2} \sin 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
+      P = \frac{(\frac{\lambda_0)^2}{2^2} \sin 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
 
    where :math:`\Omega_R` is a function of :math:`x`,
 
