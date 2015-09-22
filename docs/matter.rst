@@ -140,7 +140,7 @@ Define a quantities like :math:`\omega=\frac{ \Delta m^2 }{2E}` for neutrinos ( 
 Using Pauli matrices, I can decompose this to
 
 .. math::
-   \mathbf H = \frac{\omega}{2}= ( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}
+   \mathbf H = \frac{\omega}{2}( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}
 
 .. note::
    As a reminder, :math:`\Delta = \sqrt{2}G_F n(x)`.
@@ -433,7 +433,7 @@ The final result for these two eigenvalues are
    E_1 &= -\sqrt{ \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2\theta_v. } \\
    E_2 &= \sqrt{ \frac{\Delta^2 + \omega^2 }{4} - \frac{\Delta \omega }{2} \cos 2\theta_v. }.
 
-Meanwhile the eigenstates are denoted as :math:`\ket{\nu_{c1}}`and :math:`\ket{\nu_{c2}}`.
+Meanwhile the eigenstates are denoted as :math:`\ket{\nu_{c1}}` and :math:`\ket{\nu_{c2}}`.
 
 .. admonition:: Two Special Cases
    :class: note

@@ -200,6 +200,21 @@ For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambd
 
 
 
+To verify this approximation, we also need to write down the equation after RWA,
+
+.. math::
+   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0 .
+
+
+Meanwhile, the original equations becomes
+
+.. math::
+   i \frac{d C_1}{d \bar x} &= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
+   i \frac{d C_2}{d\bar x} & =  \frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.
+
+
+
+
 We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}` and :math:`\omega_\lambda\ll \omega` which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that
 
 .. math::
@@ -221,22 +236,9 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
    So we define :math:`\hat\Omega_R = \Omega_R/\omega` and :math:`\bar x = \omega x`. The survival probability as an approximation becomes
 
    .. math::
-      P = \frac{\alpha \sin 2\theta_v}{2 \omega (\hat\Omega_R(\bar x))^2} \sin^2\left( \frac{\hat\Omega_R(\bar x)}{2} \bar x \right).
+      P = \frac{(\alpha \sin 2\theta_v)^2}{4 \omega (\hat\Omega_R(\bar x))^2} \sin^2\left( \frac{\hat\Omega_R(\bar x)}{2} \bar x \right).
 
 
-
-
-To verify this approximation, we also need to write down the equation after RWA,
-
-.. math::
-   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0 .
-
-
-Meanwhile, the original equations becomes
-
-.. math::
-   i \frac{d C_1}{d \bar x} &= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
-   i \frac{d C_2}{d\bar x} & =  \frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.
 
 
 
