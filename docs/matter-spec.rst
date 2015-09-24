@@ -203,7 +203,7 @@ Write down the expression for :math:`C_1` from the second equation and the expre
 Combine the two equations we get the equation for :math:`\dot C_1` which is used to get the equation for :math:`C_2`. Simplification can be done and it leads to
 
 .. math::
-   \ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left( i\frac{\dot\lambda \cos 2\theta_v}{ 2}  - i \frac{\lambda \cos 2\theta_v}{2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) - \frac{\lambda^2}{4}   \right) C_2 = 0.
+   \ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left(   \frac{\lambda \cos 2\theta_v}{2} \omega  - \frac{\lambda^2}{4}   \right) C_2 = 0.
 
 
 
