@@ -159,13 +159,13 @@ Collect terms we get two equations,
 
 .. math::
    i \dot C_1 & = \frac{\lambda \cos 2\theta_v}{2} C_1 + \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}, \\
-   i \dot C_2 & = \frac{\lambda \cos 2\theta_v}{2} C_2 + \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}.
+   i \dot C_2 & = -\frac{\lambda \cos 2\theta_v}{2} C_2 + \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}.
 
 
 Write down the expression for :math:`C_1` from the second equation and the expression for :math:`C_2` from the first equation,
 
 .. math::
-   C_1 &= \frac{ i \dot C_2 - \frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}, \\
+   C_1 &= \frac{ i \dot C_2 + \frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}, \\
    C_2 & = \frac{ i \dot C_1 - \frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }.
 
 
@@ -176,7 +176,7 @@ Write down the expression for :math:`C_1` from the second equation and the expre
 
    .. math::
       i \dot C_1 & = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_1} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}}, \\
-      i \dot C_2 & = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}}.
+      i \dot C_2 & = {\color{red}-\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}}.
 
    The red terms are the new math, without which the equation given a periodic matter potential will be exactly the same as the Rabi flopping we worked out. The red terms works as acuumulated oscillation due to all the values of :math:`C_1` or :math:`C_2`.
 
@@ -184,7 +184,7 @@ Write down the expression for :math:`C_1` from the second equation and the expre
 
    .. math::
       C_1(x) & = {\color{red}C_1(0) \exp\left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda (x') dx' \right)} \\
-      C_2(x) & = {\color{red}C_2(0) \exp \left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}.
+      C_2(x) & = {\color{red}C_2(0) \exp \left( \frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}.
 
    Given initial condition that :math:`C_1(0)=1` and :math:`C_2(0)=0`, we anticiptate the the new red term for :math:`C_2(x)` only works as :math:`C_1(x)` is populted to :math:`C_2(x)` through Rabi flopping.
 
@@ -193,7 +193,7 @@ Write down the expression for :math:`C_1` from the second equation and the expre
    The other view of these equations is to look at the expressions
 
    .. math::
-      C_1 &= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red}- \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
+      C_1 &= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red} + \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
       C_2 & = {\color{blue}\frac{ i \dot C_1}{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  } -  {\color{red} \frac{\frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  }.
 
    It means that the new terms added new mixing contributions to :math:`C_1` and :math:`C_2`. But the idea is that we don't really know whether it is enhencement or reduction.
@@ -203,7 +203,7 @@ Write down the expression for :math:`C_1` from the second equation and the expre
 Combine the two equations we get the equation for :math:`\dot C_1` which is used to get the equation for :math:`C_2`. Simplification can be done and it leads to
 
 .. math::
-   \ddot C_2 + \left( i \lambda \cos 2\theta - \left( \frac{\dot \lambda}{\lambda} + i\omega \right)  \right) \dot C_2 - \left( \frac{i\lambda \cos 2\theta_v}{ 2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) + \frac{\lambda^2}{4} \cos 4\theta_v  \right) C_2 = 0.
+   \ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left( i\frac{\dot\lambda \cos 2\theta_v}{ 2}  - i \frac{\lambda \cos 2\theta_v}{2} \left( \frac{\dot\lambda}{\lambda} + i\omega \right) - \frac{\lambda^2}{4}   \right) C_2 = 0.
 
 
 
@@ -256,22 +256,49 @@ We use periodic matter potential :math:`\lambda(x) = \lambda_0 \cos(\omega_\lamb
 To verify this approximation, we also need to write down the equation after RWA,
 
 .. math::
-   - \frac{d^2 C_2}{d\bar x ^2} + \left( -i\alpha \cos(\beta \bar x) \cos 2\theta_v + i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{i}{2} \alpha \cos (\beta \bar x) \cos 2\theta_v ( i  - \beta \tan (\beta \bar x) ) + \frac{\alpha^2}{4} \cos^2 (\beta \bar x) \cos 4\theta_v \right) C_2 = 0 .
+   - \frac{d^2 C_2}{d\bar x ^2} + \left( i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{\alpha}{2} \cos (\beta \bar x)\cos 2\theta_v - \frac{\alpha^2}{4} \cos^2 (\beta \bar x)  \right) C_2 = 0 .
+
+We have the two real equations for it, which is written as a matrix equation.
+
+.. math::
+   \frac{d}{d\bar x}\begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix} =\begin{pmatrix}
+   0 & 0 & 1 & 0 \\
+   0  & 0 & 0 & 1 \\
+   \frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) & 0 & -\beta \tan (\beta\bar x) & -1 \\
+   0 & \frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) & 1 & -\beta \tan (\beta \bar x)
+   \end{pmatrix} \begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix}
+
+where we defined :math:`C_{2P}=\frac{dC_{2}}{d\bar x}`.
+
 
 
 Meanwhile, the original equations becomes
 
 .. math::
    i \frac{d C_1}{d \bar x} &= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
-   i \frac{d C_2}{d\bar x} & =  \frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.
+   i \frac{d C_2}{d\bar x} & =  -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.
 
 To solve them numerically, we could decompose it into four real equations.
 
 .. math::
    - \frac{d C_{1,I}}{d \bar x} &= \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \cos(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \sin(\bar x) \\
    \frac{d C_{1,R}}{d\bar x}& = \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,I} - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \sin(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \cos(\bar x) \\
-   -\frac{d C_{2,I}}{d\bar x}&= \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R}\cos \bar x - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,I}\sin \bar x \\
-   \frac{d C_{2,R}}{d\bar x} & = \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x)  C_{2,I} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} \sin \bar x + \frac{\alpha \sin 2\theta_v}{2}\cos (\beta \bar x) C_{1,I} \cos \bar x .
+   -\frac{d C_{2,I}}{d\bar x}&= -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R}\cos \bar x - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,I}\sin \bar x \\
+   \frac{d C_{2,R}}{d\bar x} & = -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x)  C_{2,I} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} \sin \bar x + \frac{\alpha \sin 2\theta_v}{2}\cos (\beta \bar x) C_{1,I} \cos \bar x .
+
+
+Consequently, we have the matrix equation as the original equations,
+
+.. math::
+   \frac{d}{d\bar x}\begin{pmatrix} C_{1,R}\\ C_{1,I} \\ C_{2,R} \\ C_{2,I} \end{pmatrix} = \frac{1}{2}\begin{pmatrix}
+   0 & \alpha\cos 2\theta_v & - \alpha \sin 2\theta_v\sin \bar x & \alpha \sin 2\theta_v \cos \bar x \\
+   -\alpha\cos 2\theta_v & 0 & -\alpha\sin 2\theta_v \cos \bar x & - \alpha \sin 2\theta_v\sin\bar x \\
+   \alpha \sin 2\theta_v \sin \bar x & \alpha \sin 2\theta_v \cos \bar x & 0 & -\alpha\cos 2\theta_v \\
+   -\alpha \sin 2\theta_v \cos \bar x & \alpha \sin 2\theta_v \sin \bar x & \alpha \cos 2\theta_v & 0
+   \end{pmatrix} \begin{pmatrix} C_{1,R}\\ C_{1,I} \\ C_{2,R} \\ C_{2,I} \end{pmatrix}.
+
+
+
 
 
 We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}` and :math:`\omega_\lambda\ll \omega` which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that
@@ -284,7 +311,7 @@ We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac
 2. The blue term :math:`\frac{\lambda}{2}\sin 2\theta_v \sigma_1` flips the states with a Rabi flopping rate **approximately**. The rate in this case could be
 
    .. math::
-      P = \frac{(\frac{\lambda_0)^2}{2^2} \sin^2 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
+      P = \frac{\frac{\lambda_0^2}{2^2} \sin^2 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),
 
    where :math:`\Omega_R` is a function of :math:`x`,
 
