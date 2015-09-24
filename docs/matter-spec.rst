@@ -232,16 +232,31 @@ For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambd
 
 The numerical results seems to be **STRANGE**,
 
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-mma.png
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-mma.png
    :align: center
 
    Numerical result using Mathematica.
 
 
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-py.png
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-mma.png
+   :align: center
+
+   Numerical result using Mathematica.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-py.png
    :align: center
 
    Numerical result using python.
+
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-py.png
+   :align: center
+
+   Numerical result using python.
+
+
 
 
 Approximation
