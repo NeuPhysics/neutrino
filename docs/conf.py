@@ -20,6 +20,35 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+
+
+# Import alabaster theme
+# import alabaster
+
+# html_theme_path = [alabaster.get_path()]
+html_theme_path = ["_theme",]
+html_theme = 'alabaster'
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        #'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
+
+
+html_theme_options = {
+   'github_user': 'NeuPhysics',
+   'github_repo': 'neutrino',
+   'gratipay_user': 'emptymalei',
+   'analytics_id': 'UA-66327435-2',
+   'description': 'Neutrino Physics',
+
+}
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
