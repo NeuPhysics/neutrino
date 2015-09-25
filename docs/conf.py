@@ -67,6 +67,7 @@ latex_preamble = r"""
 \usepackage{color}
 \usepackage{amsmath}
 \usepackage{slashed}
+\usepackage{graphicx}
 
 \newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
 \newcommand{\overl}[1]{\overset\leftarrow{#1}}

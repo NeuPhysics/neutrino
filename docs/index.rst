@@ -11,6 +11,8 @@ Neutrino is one of the most interesting particles in our world. The first propos
 .. image:: assets/FirstNeutrinoEventAnnotated.jpg
    :align: center
 
+   First neutrino event.
+
 
 
 
@@ -46,6 +48,7 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    commonsense.rst
    math.rst
    mass.rst
+   experiments.rst
    propagation.rst
    oscillations.rst
    vacuum.rst
@@ -62,4 +65,3 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    misc.rst
    ref.rst
    acknowledgement.rst
-   genindex.html

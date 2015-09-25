@@ -9,7 +9,7 @@ There are several pictures to visualize the oscillations of neutrinos.
 Magnetic Spin
 -----------------------------
 
-.. figure:: ./assets/larmor.gif
+.. figure:: ./assets/larmor.png
    :align: center
 
    Image source: `Larmor Precession <http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/larmor.html>`_ .
