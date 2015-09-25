@@ -45,7 +45,6 @@ html_theme_options = {
    'gratipay_user': 'emptymalei',
    'analytics_id': 'UA-66327435-2',
    'description': 'Neutrino Physics',
-
 }
 
 
@@ -58,7 +57,7 @@ html_theme_options = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.pngmath',
+    'sphinx.ext.mathjax',
 ]
 
 

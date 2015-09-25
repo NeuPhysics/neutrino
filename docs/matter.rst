@@ -924,7 +924,7 @@ Hamiltonian applied to this state results in
    \mathbf{H_m} \ket{\Psi_m} =& \omega_{m1} C_L(x) e^{-i\int \omega_{m1}dx} \ket{\nu_L} -ivC_L(x) e^{-i\int \omega_{m1}dx}\ket{\nu_H} \\ &+\omega_{m2}C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_H} + iv C_H(x) e^{-i\int \omega_{m2}dx}\ket{\nu_L}.
 
 
-Plug the state :math:`\ket{\Psi_m}` into the Schrödinger equation, we have
+Plug the state :math:`\ket{\Psi_m}` into the Schrodinger equation, we have
 
 .. math::
    \dot C_L(x) &= v C_H(x) e^{  i\int  \omega_m dx} \\

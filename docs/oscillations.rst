@@ -230,7 +230,7 @@ There are several things to be noticed,
 Hamiltonian
 ````````````````````
 
-It's easy to write down the Hamiltonian for the mass state stationary Schrödinger equation. As we have proven, to first order approximation,
+It's easy to write down the Hamiltonian for the mass state stationary Schrodinger equation. As we have proven, to first order approximation,
 
 .. math::
    E = p + \frac{1}{2}\frac{m^2}{p}
@@ -253,7 +253,7 @@ Again we see clearly, no oscillation will apear as long as mixing angle :math:`\
 
 
 .. note::
-   The reason we can do this is that this mixing matrix is time and space independent. To see this, we first write down the Schrödinger equation for mass eigenstates,
+   The reason we can do this is that this mixing matrix is time and space independent. To see this, we first write down the Schrodinger equation for mass eigenstates,
 
    .. math::
       i d_t \ket{\Phi_j} = \hat H_j \ket{\Phi_j}.
