@@ -125,13 +125,17 @@ Wigner function is an analogue of the classical phase-space probability distribu
 
 There is a collection of Wigner functions on this site. [3]_
 
-.. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
-
 
 .. admonition:: Question
    :class: note
 
    How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.
+
+
+
+.. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
+
+
 
 
 
@@ -150,16 +154,20 @@ where :math:`\xi=\mu/T` is the degeneracy parameter.
 The neutrino-neutrino forward scattering is [2]_
 
 .. math::
-   \nu_\alpha (p) + \nu_\beta (k) \to \nu_\alpha (k)+\nu_\beta (p)
+   \nu_\alpha (p) + \nu_\beta (k) \to \nu_\alpha (k)+\nu_\beta (p).
+
+
+.. admonition:: Question
+   :class: warning
+
+   Meaning of each term in Liouville equation.
+
+
+
 
 
 .. [2] Pantaleone (1992), Friedland & Lunardini (2003).
 
-
-.. admonition:: Question
-   :class: caution
-
-   Meaning of each term in Liouville equation.
 
 
 
