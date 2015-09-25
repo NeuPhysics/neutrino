@@ -26,7 +26,7 @@ import os
 # import alabaster
 
 # html_theme_path = [alabaster.get_path()]
-html_theme_path = ["_theme",]
+html_theme_path = ["_themes",]
 html_theme = 'alabaster'
 html_sidebars = {
     '**': [
