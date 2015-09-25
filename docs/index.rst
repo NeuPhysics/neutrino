@@ -11,7 +11,7 @@ Neutrino is one of the most interesting particles in our world. The first propos
 .. image:: assets/FirstNeutrinoEventAnnotated.jpg
    :align: center
 
-   First neutrino event.
+
 
 
 
