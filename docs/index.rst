@@ -62,3 +62,4 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    misc.rst
    ref.rst
    acknowledgement.rst
+   genindex.html
