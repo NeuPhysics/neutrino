@@ -21,7 +21,7 @@ It is not possible to obtain this result since we do not have enough resolution 
 Nonetheless, in this simple two flavor example, the probability only depends on :math:`\frac{L}{E}`. So we average over :math:`\frac{L}{E}`.[1]_
 
 .. math::
-   \langle P_{\alpha\to\beta}(L/E) \range = \int P_{\alpha\to\beta}(L/E) \phi(L/E) d(L/E),
+   \langle P_{\alpha\to\beta}(L/E) \rangle = \int P_{\alpha\to\beta}(L/E) \phi(L/E) d(L/E),
 
 where :math:`\phi(L/E)` is the distribution.
 
@@ -33,7 +33,7 @@ The practical distribution of :math:`\frac{L}{E}` is Gaussian,[1]_
 which determines the average of the cosine term is[1]_
 
 .. math::
-   \lange \cos \left(\frac{\Delta m^2}{2} \frac{L}{E} \right)\rangle = \cos\left( \frac{\Delta m^2}{2} \langle \frac{L}{E} \rangle \right)\exp\left( -\frac{1}{2}\left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right).
+   \langle \cos \left(\frac{\Delta m^2}{2} \frac{L}{E} \right)\rangle = \cos\left( \frac{\Delta m^2}{2} \langle \frac{L}{E} \rangle \right)\exp\left( -\frac{1}{2}\left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right).
 
 
 .. admonition:: Variance of L/E
@@ -123,7 +123,7 @@ The most stringent constraint for :math:`\sin^2 2\theta_v` happens when the demo
 .. admonition:: Averge of cosine
    :class: note
 
-   In experiments, we have the fact that the change in :math:`\frac{L}{E}` is small compared to the average value :math:`\langle\frac{L}{E}\range`.
+   In experiments, we have the fact that the change in :math:`\frac{L}{E}` is small compared to the average value :math:`\langle\frac{L}{E}\rangle`.
 
    So when we average over the cosine
 
