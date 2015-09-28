@@ -91,12 +91,12 @@ This relation allows us to do a joint analysis of :math:`\sin^2 2\theta_v` and :
    Rewrite
 
    .. math::
-      \sin^2 2\theta_v \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right)   \leq P_{\alpha\to\beta}^{max},
+      \sin^2 2\theta_v \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right)   \leq 2 P_{\alpha\to\beta}^{max},
 
    we have
 
    .. math::
-      \sin^2 2\theta_v    \leq  \frac{P_{\alpha\to\beta}^{max} }{ \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right) }
+      \sin^2 2\theta_v    \leq  \frac{ 2 P_{\alpha\to\beta}^{max} }{ \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right) }
 
 
 
@@ -164,7 +164,7 @@ which is
    \Delta m^2 \langle \frac{L}{E} \rangle \sim 2\pi.
 
 
-.. admonition:: Units of :math:`\Delta m^2  L/E `
+.. admonition:: Units of :math:`\Delta m^2  L/E`
    :class: note
 
    First of all, calculate the following expression,
@@ -173,7 +173,7 @@ which is
       &1 eV^2 \frac{1km}{1GeV} \\
       =& 1eV^2 \frac{10^{18}fm}{10^8 eV} \\
       =& 1eV^2 \frac{10^{18}}{10^8 eV} \frac{1}{197 MeV} \\
-      = \frac{1}{1.97}.
+      =& \frac{1}{1.97}.
 
    Thus we have
 
@@ -203,7 +203,7 @@ In small :math:`\Delta m^2 \langle L/E \rangle` limit, we have the Taylor expans
 Using the Gaussian distribution result, we reach a constraint
 
 .. math::
-   \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{\frac{1}{2} \left(  \right)^2 \langle \left(\frac{L}{E}\right)^2 \rangle}.
+   \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{\frac{1}{2} \left( \frac{\Delta m^2}{2}  \right)^2 \langle \left(\frac{L}{E}\right)^2 \rangle}.
 
 As we have discussed before,
 
@@ -213,7 +213,7 @@ As we have discussed before,
 which leads to
 
 .. math::
-   \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \left(  \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 },
+   \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \left( \frac{\Delta m^2}{2}  \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 },
 
 
 .. admonition:: Giunti's Results
@@ -237,7 +237,7 @@ which leads to
    Then he has
 
    .. math::
-      \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \frac{1}{2} \left(  \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 }.
+      \sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \frac{1}{2} \left( \frac{\Delta m^2}{2} \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 }.
 
 
 
@@ -274,7 +274,7 @@ Sensitivity
 
 For disappearance experiments:
 
-* L :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\nwarrow`;
+* L :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\nearrow`; (going up means sensitivity becomes better; going down means sensitivity becomes worse.)
 * E :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\searrow`.
 
 
