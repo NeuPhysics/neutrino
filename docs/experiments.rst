@@ -396,7 +396,7 @@ Experiments can detect antielectron neutrinos through inverse neutron decay (inv
 .. figure:: assets/experiments/kamLANDOsc.png
    :align: center
 
-   KamLAND detected the oscillation. To calculate the expected flux, the experiment used :math:`L_0 = 180 \mathrm {km}`. The best fit is :math:`\Deltam^2 7.9^{+0.6}_{-0.5} times10^{-5}\mathrm{eV^2}`.  From Giunti figure 12.9.
+   KamLAND detected the oscillation. To calculate the expected flux, the experiment used :math:`L_0 = 180 \mathrm {km}`. The best fit is :math:`\Delta m^2 7.9^{+0.6}_{-0.5} times 10^{-5}\mathrm{eV^2}`.  From Giunti figure 12.9.
 
 .. figure:: assets/experiments/kamLANDResults.png
    :align: center
