@@ -2,7 +2,7 @@ Experiments
 ========================
 
 
-Chapter 7 (section 7.6) and chapter 12 of Giunti's book[1]_ are the good materials to read.
+Chapter 7 (section 7.6) and chapter 12 of Giunti's book [1]_ are the good materials to read.
 
 .. index:: Averaged Transition Probability
 
@@ -16,21 +16,21 @@ In the example of 2 flavor oscillation, the transition probability from :math:`\
 .. math::
    P_{\alpha\to\beta}(L,E) = \frac{1}{2}\sin^2 2\theta_v\left( 1 - \cos\left( \frac{\Delta m^2}{2}\frac{L}{E} \right) \right).
 
-It is not possible to obtain this result since we do not have enough resolution for :math:`L` and :math:`E`. The observed result is the probability averaged over the distribution of :math:`L` and :math:`E`.[1]_
+It is not possible to obtain this result since we do not have enough resolution for :math:`L` and :math:`E`. The observed result is the probability averaged over the distribution of :math:`L` and :math:`E`. [1]_
 
-Nonetheless, in this simple two flavor example, the probability only depends on :math:`\frac{L}{E}`. So we average over :math:`\frac{L}{E}`.[1]_
+Nonetheless, in this simple two flavor example, the probability only depends on :math:`\frac{L}{E}`. So we average over :math:`\frac{L}{E}`. [1]_
 
 .. math::
    \langle P_{\alpha\to\beta}(L/E) \rangle = \int P_{\alpha\to\beta}(L/E) \phi(L/E) d(L/E),
 
 where :math:`\phi(L/E)` is the distribution.
 
-The practical distribution of :math:`\frac{L}{E}` is Gaussian,[1]_
+The practical distribution of :math:`\frac{L}{E}` is Gaussian, [1]_
 
 .. math::
    \phi(\frac{L}{E}) = \frac{1}{\sqrt{2\pi \sigma_{L/E}^2}} \exp\left( -\frac{(L/E - \langle L/E\rangle)^2}{2\sigma_{L/E}^2} \right),
 
-which determines the average of the cosine term is[1]_
+which determines the average of the cosine term is [1]_
 
 .. math::
    \langle \cos \left(\frac{\Delta m^2}{2} \frac{L}{E} \right)\rangle = \cos\left( \frac{\Delta m^2}{2} \langle \frac{L}{E} \rangle \right)\exp\left( -\frac{1}{2}\left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right).
@@ -67,7 +67,7 @@ which in 2 flavor case is
 .. math::
    \sin^2 2\theta_v \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right)   \leq P_{\alpha\to\beta}^{max}
 
-Using Gaussian distribution of :math:`\phi(L/E)`, we have[1]_
+Using Gaussian distribution of :math:`\phi(L/E)`, we have [1]_
 
 .. math::
    P_{\alpha\to\beta} = \frac{1}{2} \sin^2 2\theta_v \left( 1 - \cos \left( \frac{\Delta m^2}{2} \langle \frac{L}{E}\rangle \right) \exp\left( -\frac{1}{2} \left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right) \right) \leq P_{\alpha\to\beta}^{max}.
