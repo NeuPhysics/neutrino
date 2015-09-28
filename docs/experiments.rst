@@ -282,6 +282,142 @@ We have very little control over the production energy of neutrinos though. To h
 
 
 
+Review of Experiments
+-------------------------
+
+
+Through the analysis we know that the most important factors of experiments are
+
+* Basiline :math:`L`;
+* Source neutrino flux;
+* Neutrino energy :math:`E`.
+
+
+Reactor Experiments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What we would like to see in the experiments is the disappearance of the reactor neutrinos. In nuclear fusion we have a lot of :math:`\bar\nu_e` which will oscillate to other flavors. If the detector is sensitive enough we would find out that the detected neutrinos are smaller than the expected neutrinos without oscillation.
+
+The energy of the neutrinos is about 1.8MeV.
+
+
+The first question is how many neutrinos can be detected. If neutrino energy is too high, cross section at detector will be large but neutrino flux per unit energy will be small. The best detection rate is at some certain energy.
+
+
+.. figure:: assets/experiments/reactorDetection.png
+   :align: center
+
+   The best energy of detection. Figure 12.2 in Giunti's book.
+
+
+
+.. admonition:: The Source Flux
+   :class: note
+
+   We can calculate the production of neutrinos by monitoring the power of the nuclear reactor.
+
+
+
+
+.. figure:: assets/experiments/reactorExpBaseline.png
+   :align: center
+
+   The ratio of observed neutrino flux to expected neutrino flux compared in different experiments. The dotted line is the ratio when expected flux calculated from best fit results of :math:`\Delta m^2` and :math:`\sin^2 2\theta_v` extracted from solar neutrino experiments. These experiments more or less lie on the best fit result. Figure 12.3 of Giunti's book.
+
+
+
+
+* :math:`L\sim 10 - 100 m` : short baseline experiment (SBL);
+* CHOOZ and Palo Verde has baseline :math:`L\sim 1km` : long baseline experiment (LBL);
+* KamLAND has baseline :math:`L\sim 200km` : Very long baseline experiment (VLBL).
+
+
+To find the best result of mass squared difference :math:`\Delta m^2`, we need a long baseline like KamLAND.
+
+
+
+.. admonition:: Background
+   :class: note
+
+   One of the background of neutrinos is the cosmic ray. The cosmic neutrino background is much smaller than the reactor neutrino flux.
+
+   .. figure:: assets/experiments/atmosphericNeutrinos.png
+      :align: center
+
+      Production of neutrinos through cosmic rays. We need to shield the hardons. From `wikipedia <https://commons.wikimedia.org/wiki/File:Atmospheric_Collision.svg>`_.
+
+   The background actually can be measured when the nuclear plants are turned off to supply fuel.
+
+
+
+
+
+
+Review of Reactor Experiments
+`````````````````````````````````````
+
+
+Experiments can detect antielectron neutrinos through inverse neutron decay (inverse beta decay),
+
+.. math::
+   \bar\nu_e + p \to n + e^+ .
+
+
+* Late 1970s to the 1990s, SBL experiments with detector mass of order :math:`10^2\mathrm{kg}` got null results, i.e., they didn't find the disappearance of the reactor neutrinos which is :math:`\bar\nu_e`. The reason is that they have short baseline. The result is :math:`\Delta m^2\sim 10^{-2}\mathrm{eV^2}`.
+* LBL experiments gave us better exclusion curves.
+  * **CHOOZ** : 5 tons of detector mass; 1115km and 998m from the two sources.
+  * **Palo Verde** : 12 tons of detector mass; 890m, 890m and 750m from the three sources.
+* **KamLAND**: mostly detects neutrinos from 53 reactors in Japan. 80% neutrinos from reactors at distance between 140km and 215km.  3000 tons of detector mass. Best fit results using KamLAND and solar neutrino is :math:`\Delta m^2 = 7.9^{+0.6}_{0.5}\times 10^{-5}\mathrm{eV^2}` and :math:`\tan^2\theta_v = 0.40^{+0.10}_{-0.07}`, which corresponds to :math:`\sin^2 2\theta_v \sim 0.82`.
+
+
+
+
+
+
+
+.. figure:: assets/experiments/sblResults.png
+   :align: center
+
+   SBL results from Giunti's book (figure 12.5). These experiments showed exclusion curves that extend to :math:`\Delta m^2\sim 10^{-2}\mathrm{eV^2}`.
+
+
+.. figure:: assets/experiments/choozResult.png
+   :align: center
+
+   CHOOZ result from Giunt's book (figure 12.6).
+
+
+.. figure:: assets/experiments/paloVerdeResult.png
+   :align: center
+
+   Palo Verde result from Giunt's book (figure 12.7).
+
+
+.. figure:: assets/experiments/kamLANDOsc.png
+   :align: center
+
+   KamLAND detected the oscillation. To calculate the expected flux, the experiment used :math:`L_0 = 180 \mathrm {km}`. The best fit is :math:`\Deltam^2 7.9^{+0.6}_{-0.5} times10^{-5}\mathrm{eV^2}`.  From Giunti figure 12.9.
+
+.. figure:: assets/experiments/kamLANDResults.png
+   :align: center
+
+   KamLAND result from  Giunt's book (figure 12.10). The left figure is the result of KamLAND while the result is the joint analysis of KamLAND and solar neutrino using 2 neutrino oscillation.
+
+
+
+Accelerator Experiments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+* WB : wide band = wide energy spectrum;
+* NB : narrow band = narrow energy spectrum;
+* OA : off-axis to obtain almost monochromatic beam.
+
+
+
+
+
 
 
 Refs & Notes
