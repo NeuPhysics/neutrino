@@ -274,7 +274,7 @@ Sensitivity
 
 For disappearance experiments:
 
-* L :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\nearrow`; (going up means sensitivity becomes better; going down means sensitivity becomes worse.)
+* L :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\nearrow`; (going up means sensitivity becomes worse; going down means sensitivity becomes better.)
 * E :math:`\searrow` : :math:`(\sin^2 2\theta_v)_s` :math:`\searrow`, :math:`(\Delta m^2)_s` :math:`\searrow`.
 
 
