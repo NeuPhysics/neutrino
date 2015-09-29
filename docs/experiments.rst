@@ -269,7 +269,12 @@ Sensitivity
 .. admonition:: Sensitivity
    :class: note
 
-   :math:`(\sin^2 2\theta_v)_s` and :math:`(\Delta m^2)_s` are better at small values because they means the smallest constraint we can obtain.
+   :math:`(\sin^2 2\theta_v)_s` and :math:`(\Delta m^2)_s` are better at small values because they means the "smallest" constraint we can obtain.
+
+   .. figure:: assets/experiments/exclusionCurveSensitivity.png
+      :align: center
+
+      Sensitivities
 
 
 For disappearance experiments:
