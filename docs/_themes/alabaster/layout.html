@@ -6,6 +6,24 @@
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{#1}',1],                // over left right arrow
+        overl: ['\\overset\leftarrow{#1}',1],
+        overr: ['\\overset\rightarrow{#1}',1],
+        bra: ['\\left\\langle #1\\right|',1],
+        ket: ['\\left| #1\\right\\rangle',1],
+        braket: ['\\langle #1 \\mid #2 \\rangle',2],
+        avg: ['\\left< #1 \\right>',1],
+        bold: ['\\boldsymbol{#1}',1]   // this macro has one parameter
+      }
+    }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 {% endblock %}
 {% set css_files = css_files + ['_static/css/style.css'] %}
 {% set css_files = css_files + ["_static/modify.css"] %}

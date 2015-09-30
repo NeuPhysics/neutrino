@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Matter as Driven Energy &mdash; Neutrino Pi documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'Pi',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Neutrino Pi documentation" href="index.html" />
+    <link rel="next" title="Collective Behavior" href="collective.html" />
+    <link rel="prev" title="Interaction With Matter" href="matter.html" />
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="collective.html" title="Collective Behavior"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="matter.html" title="Interaction With Matter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Neutrino Pi documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="matter-as-driven-energy">
+<h1>Matter as Driven Energy<a class="headerlink" href="#matter-as-driven-energy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rabi-like-transition">
+<h2>Rabi-like Transition<a class="headerlink" href="#rabi-like-transition" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition" id="index-0">
+<p class="first admonition-title">Rabi Oscillation</p>
+<p>Rabi oscillations happens when a driven field is applied to a quantum system. A simple case would be a driven field <img class="math" src="_images/math/e0055dbc2fecd7e532dd34464e907ae211675445.png" alt="-A\cos(\omega t)"/> is applied to a system with Hamiltonian</p>
+<div class="math">
+<p><img src="_images/math/f0b9731a70e1069734c0ab09a842d31c6cc67236.png" alt="H_0 = \begin{pmatrix} \epsilon_1 &amp; 0 \\ 0 &amp; \epsilon_2 \end{pmatrix}."/></p>
+</div><p>The overall Hamiltonian becomes</p>
+<div class="math">
+<p><img src="_images/math/7b59d8858e79f42d3f0d6639d4331b90be9cab06.png" alt="H = -\frac{\omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} - A \cos(\omega t)\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0  \end{pmatrix} ."/></p>
+</div><p>Using Pauli matrices, this can be simplified,</p>
+<div class="math">
+<p><img src="_images/math/3f9de3995094f50deb71dd7fd1415aedefb343f2.png" alt="H = -\frac{\omega_0}{2}\sigma_z - A\cos(\omega t)\sigma_x ."/></p>
+</div><p>An ansatz about the state is that we can always write down the solutions to this system as</p>
+<div class="math">
+<p><img src="_images/math/015a4f6fbeecc5a43160a7c99e31daeb26b448d9.png" alt="\ket{\psi} = c_g(t) e^{-iE_g t}\ket{g} + c_e(t) e^{-i E_e t} \ket{e}."/></p>
+</div><p>We also know that in <img class="math" src="_images/math/12325df71d312c5210ff77b0d09b235f6fab3efa.png" alt="\{\ket{g},\ket{e}\}"/> basis, we have <img class="math" src="_images/math/2a462eb6c83c8ed096ccc42670262af277ed95e4.png" alt="\sigma_z \ket{g}=\ket{g}"/> and <img class="math" src="_images/math/f495ac1d43643061f0fd9896e22a6602d5ff90b7.png" alt="\sigma_z\ket{e}=-\ket{e}"/>. Thus the Schroding equation is reduced to</p>
+<div class="math">
+<p><img src="_images/math/0745f335e4fcb05d828bedb12dff70146fde0290.png" alt="i\partial_t( c_g e^{-iE_gt}\ket{g}+c_e e^{-iE_et}\ket{e} )=(-\frac{\omega}{2}\sigma_z - A\cos(\omega t) \sigma_z)( c_g e^{-iE_gt}\ket{g}+c_e e^{-iE_et}\ket{e} )."/></p>
+</div><p>Simplify the equation and write down the equations for both <img class="math" src="_images/math/b39f0d465a76f3240739b5d92915ac329ba6fadf.png" alt="\ket{g}"/> and <img class="math" src="_images/math/e83795a08886410fd8d4dab9273a753a62e24bf8.png" alt="\ket{e}"/>, I have</p>
+<div class="math">
+<p><img src="_images/math/b0c752ed9643bf78e49265e53973e9a3aba90cd2.png" alt="\dot c_g &amp;= i A\cos(\omega t) c_e e^{i(E_g-E_e) t}, \\
+\dot c_e &amp; = i A\cos(\omega t) c_g e^{-i(E_g-E_e)t}."/></p>
+</div><p>Notice that we can write <img class="math" src="_images/math/daef9405c5f45b52dc36e5dc8ab84e9b39df105a.png" alt="\cos(\omega t)"/> as <img class="math" src="_images/math/95ffdc993a7a4962ab7b4326c489c2d535811652.png" alt="\frac{1}{2}(e^{-i\omega t} + e^{i\omega t})"/>. The equations becomes</p>
+<div class="math">
+<p><img src="_images/math/fce833d75f675c079ab9f4ca8af326ff478c22a9.png" alt="\dot c_g &amp;= \frac{iA}{2}c_e ( e^{i(omega-\omega_0)t} + e^{-i(\omega+\omega_0)t} ), \\
+\dot c_e &amp; = \frac{iA}{2} c_g ( e^{i(\omega+\omega_0)t} + e^{i( \omega_0 - \omega )t} )."/></p>
+</div><p>where I used <img class="math" src="_images/math/91f4984bca7d2abf2a51e4bef852c15cc3545bfe.png" alt="\omega_0 = E_e - E_g"/>. I assume this is larger than 0.</p>
+<p><strong>The rotation wave approximation is that since the term with angular frequency</strong> <img class="math" src="_images/math/76509db685bb8ab86b16be79ba9489763456f9cb.png" alt="\omega+\omega_0"/> <strong>is much larger than</strong> <img class="math" src="_images/math/9f39bd6aa73d92f2268334c44729ee88ec2df2c9.png" alt="\omega_0-\omega"/>. I would drop it and only capture the overall behavior.</p>
+<p>The equation we have is</p>
+<div class="math">
+<p><img src="_images/math/fe2ba22bb3e850c572639a9514b3c33d2bd70ce4.png" alt="\dot c_g &amp; = \frac{iA}{2} c_e e^{-i(\omega_0-\omega)}, \\
+\dot c_e &amp; = \frac{iA}{2} c_g e^{i(\omega_0 - \omega)}."/></p>
+</div><p>So the problem becomes solvable.</p>
+<div class="math">
+<p><img src="_images/math/f3b1d0a4ab3d05a39a8e736231a0ac913f29bdeb.png" alt="\ddot c_e - i(\omega - \omega) \dot c_e + \frac{A^2}{4}c_e = 0."/></p>
+</div><p>The solution to this is simply determined by solving out the characteristic equation, which is</p>
+<div class="math">
+<p><img src="_images/math/808c94aee90d803102cae7ed49b7fb73014bacac.png" alt="\lambda_{\pm} = \frac{(\omega_0 - \omega) \pm \sqrt{ (\omega_0 - \omega)^2 + A^2 } }{2} ."/></p>
+</div><p>The general solution to <img class="math" src="_images/math/6c25b6a2bf5f134ff06efc3b9e938a7eb92a35a8.png" alt="c_e"/> is</p>
+<div class="math">
+<p><img src="_images/math/f85ec051d911693f4f0d850682677525a6e04f11.png" alt="c_e = c_+ e^{i\lambda_+ t} + c_- e^{i\lambda_- t}."/></p>
+</div><p>Suppose we have initial condition that</p>
+<div class="math">
+<p><img src="_images/math/a5d5bbe9a068c412af9c4cd8a9cda2fad47770b1.png" alt="c_g(0) &amp; = 1,\\
+c_e(0) &amp; = 0,"/></p>
+</div><p>the solutions should be</p>
+<div class="math">
+<p><img src="_images/math/1d17d9552f08d4c3fff5c6bc6ca54e76d8358f19.png" alt="c_e(t) &amp; = \frac{iA}{\Omega_R} e^{i\Delta t/2} \sin(\Omega_R t/2) ,\\
+c_g(t) &amp;=  e^{-i\Delta t/2}(\cos(\Omega_R t/2) + \frac{i\Delta}{\Omega_R} \sin(\Omega_R t/2) ),"/></p>
+</div><p>where we defined <img class="math" src="_images/math/d723f6b050788a6d9af5ea6c93056ef5f74740b5.png" alt="\Delta = \omega_0-\omega"/> and the Rabi frequency <img class="math" src="_images/math/7a0ab7fc59b288e8d5e0688ff1377859c27fcc0a.png" alt="\Omega_R^2"/> is defined as <img class="math" src="_images/math/79716d52c7e24237074ae7ac03f5ccfc61a58fd2.png" alt="\Omega_R^2 = \Delta^2 + A^2"/>.</p>
+<p>The probability for the system to stay on a state <img class="math" src="_images/math/e83795a08886410fd8d4dab9273a753a62e24bf8.png" alt="\ket{e}"/> is</p>
+<div class="last math">
+<p><img src="_images/math/f548f0e91791f008d8929956af89c53f0473e7d9.png" alt="P = \frac{A^2}{\Omega_R^2} \sin^2\left( \frac{\Omega_R }{2} t \right)."/></p>
+</div></div>
+<p>In vacuum energy eigenbasis, we can write down the Hamiltonian for neutrino oscillations in matter,</p>
+<div class="math">
+<p><img src="_images/math/479afd46f98fefdd8678de393953f10762f7dac4.png" alt="H =  -\frac{\omega}{2} \sigma_1 + U^{-1} V U,"/></p>
+</div><p>where the transformation matrix was calculated in the previous chapter. The expression for this Hamiltonian, as we plug in the transformation, is</p>
+<div class="math">
+<p><img src="_images/math/1f67d1dae81b63cbd479bebb3cc8e7cdbd0912e3.png" alt="H = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos(2\theta_v) \sigma_3 + \frac{\lambda}{2}\sin(2\theta) \sigma_1 ."/></p>
+</div><div class="note admonition">
+<p class="first admonition-title">Comparing with The Simple Case of Rabi Oscillation</p>
+<p>The extra term compared with the Rabi oscillation we worked out is</p>
+<div class="math">
+<p><img src="_images/math/8409f48bf499347e9738cb9a693fa8db6583c090.png" alt="\frac{\lambda}{2}\cos(2\theta_v) \sigma_3,"/></p>
+</div><p class="last">which is also the troble since here <img class="math" src="_images/math/13693db458d5b49a5cabe839081e730681d8f97c.png" alt="\lambda"/> is time dependent.</p>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Hamiltonian Vector</p>
+<p>This Hamiltonian forms a vector</p>
+<div class="math">
+<p><img src="_images/math/c9f33481d0fafbb637f088896a9ecac40a1068a3.png" alt="\vec H = \begin{pmatrix}  0 &amp; \frac{\lambda}{2}\sin(2\theta_v) &amp; 0 &amp; -\frac{\omega}{2} + \frac{\lambda}{2} \cos(2\theta_v)  \end{pmatrix},"/></p>
+</div><p>in the complate basis</p>
+<div class="math">
+<p><img src="_images/math/8b2d960e1964e235c1efd6037efc30649686c708.png" alt="\vec \sigma = \begin{pmatrix}  I &amp; \sigma_1 &amp; \sigma_2 &amp; \sigma_3  \end{pmatrix}."/></p>
+</div><p>So that</p>
+<div class="last math">
+<p><img src="_images/math/c93ceceda0b04953656e8634d95ab829f66e3cb8.png" alt="H = \vec H \cdot \vec \sigma."/></p>
+</div></div>
+<p>To solve the problem, we use the ansatz that</p>
+<div class="math">
+<p><img src="_images/math/d539c432efbd63b29462009503afe2c5e4e1ef7e.png" alt="\ket{\psi} = C_1 e^{i\frac{\omega}{2}t} \ket{1} + C_2 e^{-i\frac{\omega}{2}t} \ket{2}."/></p>
+</div><p>In the proper basis, we also have</p>
+<div class="math">
+<p><img src="_images/math/9efb7f5ae4071274c59423483af0c925c9017afc.png" alt="\sigma_3 \ket{1} &amp;= \ket{1}, \\
+\sigma_3 \ket{2} &amp; = -\ket{2},\\
+\sigma_1 \ket{1} &amp; = \ket{2},\\
+\sigma_1\ket{2} &amp; = \ket{1}."/></p>
+</div><p>Plug in these into Schrodinger equation,</p>
+<div class="math">
+<p><img src="_images/math/9b572bb0bb1adc68d32a059bdbcb4ddbcf0468b0.png" alt="&amp;( i\dot C_1 e^{i\omega t/2} \ket{1} - \frac{\omega}{2} C_1 e^{i\omega t/2} \ket{1} + i\dot C_2 e^{-i\omega t/2} \ket{2} + \frac{\omega}{2} C_2 e^{-i\omega t/2} \ket{1} ) \\
+&amp;= \left( \frac{\lambda}{2} \cos 2\theta_v - \frac{\omega}{2} \right) C_1 e^{i\omega t/2} \ket{1} - \left( \frac{\lambda}{2}\cos 2\theta_v -\frac{\omega}{2}  \right) C_2 e^{-\omega t/2} \ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_1 e^{i\omega t/2}\ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_2 e^{-i\omega t/2} \ket{1}."/></p>
+</div><p>Collect terms we get two equations,</p>
+<div class="math">
+<p><img src="_images/math/ffc23acb5823b89317f44ee774ec858cd0a4a138.png" alt="i \dot C_1 &amp; = \frac{\lambda \cos 2\theta_v}{2} C_1 + \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}, \\
+i \dot C_2 &amp; = -\frac{\lambda \cos 2\theta_v}{2} C_2 + \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}."/></p>
+</div><p>Write down the expression for <img class="math" src="_images/math/4a8894b2797231072f5f3f3402b53da917a457e9.png" alt="C_1"/> from the second equation and the expression for <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/> from the first equation,</p>
+<div class="math">
+<p><img src="_images/math/33f39543fda66bb0e81dc40a5347658a05ad13b2.png" alt="C_1 &amp;= \frac{ i \dot C_2 + \frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}, \\
+C_2 &amp; = \frac{ i \dot C_1 - \frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }."/></p>
+</div><div class="note admonition">
+<p class="first admonition-title">The Equations</p>
+<p>The equations should be analyzed term by term.</p>
+<div class="math">
+<p><img src="_images/math/5aa37de64872cdf3a1e5b329a319956064e51a0a.png" alt="i \dot C_1 &amp; = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_1} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}}, \\
+i \dot C_2 &amp; = {\color{red}-\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}}."/></p>
+</div><p>The red terms are the new math, without which the equation given a periodic matter potential will be exactly the same as the Rabi flopping we worked out. The red terms works as acuumulated oscillation due to all the values of <img class="math" src="_images/math/4a8894b2797231072f5f3f3402b53da917a457e9.png" alt="C_1"/> or <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/>.</p>
+<p>To see this effect more clearly, the solutions with the blue Rabi flopping terms are worked out for both equations.</p>
+<div class="math">
+<p><img src="_images/math/e1bd1f2499878f94694ff846844a0bc24ce93d20.png" alt="C_1(x) &amp; = {\color{red}C_1(0) \exp\left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda (x') dx' \right)} \\
+C_2(x) &amp; = {\color{red}C_2(0) \exp \left( \frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}."/></p>
+</div><p>Given initial condition that <img class="math" src="_images/math/b6fd02c6cd23850b63facbfc6291cdba77d2ca51.png" alt="C_1(0)=1"/> and <img class="math" src="_images/math/e67ff146c0ac3d79490384d5ad2d372668254098.png" alt="C_2(0)=0"/>, we anticiptate the the new red term for <img class="math" src="_images/math/ecdb72b466389d31f54843d744fc06e1579e811c.png" alt="C_2(x)"/> only works as <img class="math" src="_images/math/7a85c09a16a01d6e2e1e3ef3bf3ac84fa0b92afd.png" alt="C_1(x)"/> is populted to <img class="math" src="_images/math/ecdb72b466389d31f54843d744fc06e1579e811c.png" alt="C_2(x)"/> through Rabi flopping.</p>
+<p>Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won&#8217;t just simply go away when the moduli are calculated.</p>
+<p>The other view of these equations is to look at the expressions</p>
+<div class="math">
+<p><img src="_images/math/6b9f6ad2f7371553aea1f92a3e89c77596613a72.png" alt="C_1 &amp;= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red} + \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
+C_2 &amp; = {\color{blue}\frac{ i \dot C_1}{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  } -  {\color{red} \frac{\frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  }."/></p>
+</div><p class="last">It means that the new terms added new mixing contributions to <img class="math" src="_images/math/4a8894b2797231072f5f3f3402b53da917a457e9.png" alt="C_1"/> and <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/>. But the idea is that we don&#8217;t really know whether it is enhencement or reduction.</p>
+</div>
+<p>Combine the two equations we get the equation for <img class="math" src="_images/math/d488b1548dcd4008569412735f0737314527ad03.png" alt="\dot C_1"/> which is used to get the equation for <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/>. Simplification can be done and it leads to</p>
+<div class="math">
+<p><img src="_images/math/5c73315c8638f38b5487afdf8ddd9f700e634da0.png" alt="\ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left(   \frac{\lambda \cos 2\theta_v}{2} \omega  - \frac{\lambda^2}{4}   \right) C_2 = 0."/></p>
+</div><p>Since the equation doesn&#8217;t corresponds to a clear and simple physics picture, we need to understand term by term.</p>
+<div class="note admonition">
+<p class="first admonition-title">Review of The Hamiltonian</p>
+<p>The Hamiltonian we are dealing with is</p>
+<div class="math">
+<p><img src="_images/math/2139403ca3bbc54383eb25c405865b4e0a328e65.png" alt="H = {\color{green}-\frac{\omega}{2} \sigma_3} + {\color{red}\frac{\lambda}{2} \cos 2\theta_v \sigma_3} + {\color{blue}\frac{\lambda}{2}\sin 2\theta_v \sigma_1},"/></p>
+</div><p class="last">where the green term contributes to the two eigenenergies, the red term contributes to the two eigenenergies but with a time or space dependence, the last blue term is the flopping term.</p>
+</div>
+<p>One of the obstacles of further approximations to Rabi oscillation is that the term <img class="math" src="_images/math/7c796c5e73aee0d2450819e59a319297e9cfc896.png" alt="\frac{\lambda}{2} \cos 2\theta_v"/> is not much smaller than the flopping term which means it can not be dropped.</p>
+<div class="section" id="analytical-attack">
+<h3>Analytical Attack<a class="headerlink" href="#analytical-attack" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="numerical-results">
+<h3>Numerical Results<a class="headerlink" href="#numerical-results" title="Permalink to this headline">¶</a></h3>
+<p>For simplicity we consider periodic matter potential, <img class="math" src="_images/math/e95c88cdda76330a807ca913c76696358a46a520.png" alt="\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)"/>. Also for easy calculation, we define <img class="math" src="_images/math/6bc5144bfa337c5873e48ebfb70f50d245949201.png" alt="\omega_\lambda = \beta \omega"/>. Thus <img class="math" src="_images/math/7c736835c1bc7fd324a1f403b5bd87069c017e4d.png" alt="\alpha"/> and <img class="math" src="_images/math/1e107e274bf2580a38da84d982e9cb56c90f0887.png" alt="\beta"/> fully describes the periodic matter potential.</p>
+<p>The numerical results seems to be <strong>STRANGE</strong>,</p>
+<div class="figure align-center" id="id1">
+<img alt="_images/matterandrabi-numerical-original-c1-mma.png" src="_images/matterandrabi-numerical-original-c1-mma.png" />
+<p class="caption"><span class="caption-text">Numerical result using Mathematica.</span></p>
+</div>
+<div class="figure align-center" id="id2">
+<img alt="_images/matterandrabi-numerical-original-c2-mma.png" src="_images/matterandrabi-numerical-original-c2-mma.png" />
+<p class="caption"><span class="caption-text">Numerical result using Mathematica.</span></p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="_images/matterandrabi-numerical-original-c1-py.png" src="_images/matterandrabi-numerical-original-c1-py.png" />
+<p class="caption"><span class="caption-text">Numerical result using python.</span></p>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="_images/matterandrabi-numerical-original-c2-py.png" src="_images/matterandrabi-numerical-original-c2-py.png" />
+<p class="caption"><span class="caption-text">Numerical result using python.</span></p>
+</div>
+<p>The second order equation of <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/> can also be solved numerically.</p>
+<div class="figure align-center" id="id5">
+<img alt="_images/matterandrabi-numerical-solving-second-c2-py.png" src="_images/matterandrabi-numerical-solving-second-c2-py.png" />
+<p class="caption"><span class="caption-text">Solving the second order equation of <img class="math" src="_images/math/69be42ea2097a5ad0395a41bd8c9a9647595337c.png" alt="C_2"/> numerically.</span></p>
+</div>
+<div class="figure align-center" id="id6">
+<img alt="_images/matterandrabi-numerical-difference-two-first-order-second-c2-py.png" src="_images/matterandrabi-numerical-difference-two-first-order-second-c2-py.png" />
+<p class="caption"><span class="caption-text">The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because <cite>numpy.odeint</cite> is used instead of <cite>numpy.ode</cite>.</span></p>
+</div>
+</div>
+<div class="section" id="approximation">
+<h3>Approximation<a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h3>
+<p>We use periodic matter potential <img class="math" src="_images/math/e95c88cdda76330a807ca913c76696358a46a520.png" alt="\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)"/> and define <img class="math" src="_images/math/6bc5144bfa337c5873e48ebfb70f50d245949201.png" alt="\omega_\lambda = \beta \omega"/>.</p>
+<p>To verify this approximation, we also need to write down the equation after RWA,</p>
+<div class="math">
+<p><img src="_images/math/3a78965946849bf7fe28df156351f5f7c63c5c70.png" alt="- \frac{d^2 C_2}{d\bar x ^2} + \left( i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{\alpha}{2} \cos (\beta \bar x)\cos 2\theta_v - \frac{\alpha^2}{4} \cos^2 (\beta \bar x)  \right) C_2 = 0 ."/></p>
+</div><p>We have the two real equations for it, which is written as a matrix equation.</p>
+<div class="math">
+<p><img src="_images/math/0eaae1eddc0df1e43ec06fa58844c060dca87864.png" alt="\frac{d}{d\bar x}\begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix} =\begin{pmatrix}
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0  &amp; 0 &amp; 0 &amp; 1 \\
+\frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) &amp; 0 &amp; -\beta \tan (\beta\bar x) &amp; -1 \\
+0 &amp; \frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) &amp; 1 &amp; -\beta \tan (\beta \bar x)
+\end{pmatrix} \begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix}"/></p>
+</div><p>where we defined <img class="math" src="_images/math/55b58c1fda137e514800153ab793b5b59de18b52.png" alt="C_{2P}=\frac{dC_{2}}{d\bar x}"/>.</p>
+<p>Meanwhile, the original equations becomes</p>
+<div class="math">
+<p><img src="_images/math/d5b6e82ef60cec183caf9d1d3e675ce4cd5888cf.png" alt="i \frac{d C_1}{d \bar x} &amp;= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
+i \frac{d C_2}{d\bar x} &amp; =  -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}."/></p>
+</div><p>To solve them numerically, we could decompose it into four real equations.</p>
+<div class="math">
+<p><img src="_images/math/40a637430b4ef0eae7aa373a07b1b404973d8298.png" alt="- \frac{d C_{1,I}}{d \bar x} &amp;= \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \cos(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \sin(\bar x) \\
+\frac{d C_{1,R}}{d\bar x}&amp; = \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,I} - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \sin(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \cos(\bar x) \\
+-\frac{d C_{2,I}}{d\bar x}&amp;= -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R}\cos \bar x - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,I}\sin \bar x \\
+\frac{d C_{2,R}}{d\bar x} &amp; = -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x)  C_{2,I} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} \sin \bar x + \frac{\alpha \sin 2\theta_v}{2}\cos (\beta \bar x) C_{1,I} \cos \bar x ."/></p>
+</div><p>Consequently, we have the matrix equation as the original equations,</p>
+<div class="math">
+<p><img src="_images/math/1edb25857fa0cbc9e3530f16864c46cf17998b42.png" alt="\frac{d}{d\bar x}\begin{pmatrix} C_{1,R}\\ C_{1,I} \\ C_{2,R} \\ C_{2,I} \end{pmatrix} = \frac{1}{2}\begin{pmatrix}
+0 &amp; \alpha\cos 2\theta_v &amp; - \alpha \sin 2\theta_v\sin \bar x &amp; \alpha \sin 2\theta_v \cos \bar x \\
+-\alpha\cos 2\theta_v &amp; 0 &amp; -\alpha\sin 2\theta_v \cos \bar x &amp; - \alpha \sin 2\theta_v\sin\bar x \\
+\alpha \sin 2\theta_v \sin \bar x &amp; \alpha \sin 2\theta_v \cos \bar x &amp; 0 &amp; -\alpha\cos 2\theta_v \\
+-\alpha \sin 2\theta_v \cos \bar x &amp; \alpha \sin 2\theta_v \sin \bar x &amp; \alpha \cos 2\theta_v &amp; 0
+\end{pmatrix} \begin{pmatrix} C_{1,R}\\ C_{1,I} \\ C_{2,R} \\ C_{2,I} \end{pmatrix}."/></p>
+</div><p>We first consider the case that <img class="math" src="_images/math/8002bada6571248c0787ec9c2c504e07dbd8f922.png" alt="\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}"/> and <img class="math" src="_images/math/10695da43f0242de6ad843cc6051aa1c1b6b70c9.png" alt="\omega_\lambda\ll \omega"/> which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that</p>
+<div class="math">
+<p><img src="_images/math/00b1529c127d0b228f39dcc561846f35a3286c4f.png" alt="\alpha &amp;\ll 1\\
+\beta &amp; \ll 1."/></p>
+</div><ol class="arabic">
+<li><p class="first">The red term <img class="math" src="_images/math/883370b78a6f6bf86b32f4860f1cb8b52be91c56.png" alt="\frac{\lambda}{2} \cos 2\theta_v\sigma_3"/> works as a modulation of the eigenenergies.</p>
+</li>
+<li><p class="first">The blue term <img class="math" src="_images/math/6e91fb474bcfa5b7588fc408c530eb1364a83e7c.png" alt="\frac{\lambda}{2}\sin 2\theta_v \sigma_1"/> flips the states with a Rabi flopping rate <strong>approximately</strong>. The rate in this case could be</p>
+<div class="math">
+<p><img src="_images/math/b83ba96555df77f1a9f89ebfd9e091447409061b.png" alt="P = \frac{\frac{\lambda_0^2}{2^2} \sin^2 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),"/></p>
+</div><p>where <img class="math" src="_images/math/61bb5cab1ba551fadf009009fd571fe46bcef5d0.png" alt="\Omega_R"/> is a function of <img class="math" src="_images/math/0aaf8790ed8793a49a348d27eec556ae69e415d5.png" alt="x"/>,</p>
+<div class="math">
+<p><img src="_images/math/320f8e7ebe3f628805fed4241dfd6a6f5af4a68a.png" alt="\Omega_R^2 &amp;= \omega^2 \left( \left(1 - \frac{\omega_\lambda}{\omega}  - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \frac{\omega_\lambda}{\omega} \omega x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v  \right)^2  \right) \\
+&amp;= \omega^2 \left( \left( 1 - \beta - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \beta \bar x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v \right)^2 \right)"/></p>
+</div><p>So we define <img class="math" src="_images/math/5404ed19ac72273bc5b590f6c41a330d267c20aa.png" alt="\hat\Omega_R = \Omega_R/\omega"/> and <img class="math" src="_images/math/2eb52fd30fffbd5a479249bfbb9215dc119ab574.png" alt="\bar x = \omega x"/>. The survival probability as an approximation becomes</p>
+<div class="math">
+<p><img src="_images/math/944a929f9e5ef0efb5aee146e91f6ad52f88779c.png" alt="P = \frac{(\alpha \sin 2\theta_v)^2}{4 \omega (\hat\Omega_R(\bar x))^2} \sin^2\left( \frac{\hat\Omega_R(\bar x)}{2} \bar x \right)."/></p>
+</div></li>
+</ol>
+<p>This theoretical prediction is shown in the following figure.</p>
+<div class="figure align-center" id="id7">
+<img alt="_images/matterandrabi-rwa-slow-approx-py.png" src="_images/matterandrabi-rwa-slow-approx-py.png" />
+<p class="caption"><span class="caption-text">RWA plus slow periodic perturbation (and probabily more hidden approximations) analytical result.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="refs-notes">
+<h2>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Neutrino</a></h1>
+
+
+
+<p class="blurb">Neutrino Physics</p>
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=NeuPhysics&repo=neutrino&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>ToC</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preliminary.html">Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commonsense.html">Common Sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Mathematics Related</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mass.html">Masses of Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="propagation.html">How Do Neutrinos Propagate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Matter as Driven Energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rabi-like-transition">Rabi-like Transition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#refs-notes">Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
+</ul>
+
+
+<ul>
+	<li><a href="genindex.html">INDEX</a></li>
+</ul>
+<h3>Links</h3>
+<ul>
+   <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
+   <li class="toctree-l1"><a href="http://interimm.org" style="color:orange;"><i class="fa fa-rocket"></i>&nbsp;星际移民中心</a></li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3>Support Us</h3>
+<p>
+Support us on <a href="https://www.gratipay.com/">Gratipay</a> :
+<script data-gratipay-username="emptymalei"
+        data-gratipay-widget="button"
+        src="//gttp.co/v1.js"></script>
+</p>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" style="border-top:1px solid #B1B4B6;">
+
+<!-- 多说评论框 start -->
+<!--
+  <div class="ds-thread" data-thread-key="" data-title="Matter as Driven Energy &mdash; Neutrino Pi documentation" data-url=""></div>
+-->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sci2fi"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+-->
+<!-- 多说公共JS代码 end -->
+
+<!-- Disqus BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'neuphysics';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Disqus END -->
+
+
+      &copy;2014, Lei Ma. | <a href="citing.html">Licenses</a>
+      |
+      <a href="genindex.html">Index</a>
+      |
+      
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/matter-spec.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-66327435-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
