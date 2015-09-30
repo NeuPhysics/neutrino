@@ -223,6 +223,15 @@ Since the equation doesn't corresponds to a clear and simple physics picture, we
 One of the obstacles of further approximations to Rabi oscillation is that the term :math:`\frac{\lambda}{2} \cos 2\theta_v` is not much smaller than the flopping term which means it can not be dropped.
 
 
+Analytical Attack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
 
 Numerical Results
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -255,6 +264,22 @@ The numerical results seems to be **STRANGE**,
    :align: center
 
    Numerical result using python.
+
+
+
+The second order equation of :math:`C_2` can also be solved numerically.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-solving-second-c2-py.png
+   :align: center
+
+   Solving the second order equation of :math:`C_2` numerically.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-difference-two-first-order-second-c2-py.png
+   :align: center
+
+   The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because `numpy.odeint` is used instead of `numpy.ode`.
 
 
 
