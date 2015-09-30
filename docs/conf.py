@@ -79,7 +79,7 @@ latex_preamble = r"""
 
 """
 
-# pngmath_latex_preamble = latex_preamble
+pngmath_latex_preamble = latex_preamble
 latex_elements = {"preamble": latex_preamble}
 
 
