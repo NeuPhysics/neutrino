@@ -61,23 +61,23 @@ extensions = [
 ]
 
 
-latex_preamble = r"""
-\usepackage{mathrsfs}
-\usepackage{color}
-\usepackage{amsmath}
-\usepackage{slashed}
-\usepackage{graphicx}
+#latex_preamble = r"""
+#\usepackage{mathrsfs}
+#\usepackage{color}
+#\usepackage{amsmath}
+#\usepackage{slashed}
+#\usepackage{graphicx}
 
-\newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
-\newcommand{\overl}[1]{\overset\leftarrow{#1}}
-\newcommand{\overr}[1]{\overset\rightarrow{#1}}
+#\newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
+#\newcommand{\overl}[1]{\overset\leftarrow{#1}}
+#\newcommand{\overr}[1]{\overset\rightarrow{#1}}
 
-\newcommand{\bra}[1]{\left\langle #1\right|}
-\newcommand{\ket}[1]{\left| #1\right\rangle}
-\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
-\newcommand{\avg}[1]{\left< #1 \right>}
+#\newcommand{\bra}[1]{\left\langle #1\right|}
+#\newcommand{\ket}[1]{\left| #1\right\rangle}
+#\newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+#\newcommand{\avg}[1]{\left< #1 \right>}
 
-"""
+#"""
 
 pngmath_latex_preamble = latex_preamble
 latex_elements = {"preamble": latex_preamble}
