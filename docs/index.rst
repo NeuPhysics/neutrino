@@ -53,7 +53,6 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    oscillations.rst
    vacuum.rst
    matter.rst
-   matter-spec.rst
    collective.rst
    qualitative.rst
    instability.rst
