@@ -233,61 +233,10 @@ Analytical Attack
 
 
 
-Numerical Results
-~~~~~~~~~~~~~~~~~~~~~~~
+Numerical Results for Period Matter Potential (NON-PHYSICAL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)`. Also for easy calculation, we define :math:`\omega_\lambda = \beta \omega`. Thus :math:`\alpha` and :math:`\beta` fully describes the periodic matter potential.
-
-
-The numerical results seems to be **STRANGE**,
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-mma.png
-   :align: center
-
-   Numerical result using Mathematica.
-
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-mma.png
-   :align: center
-
-   Numerical result using Mathematica.
-
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-py.png
-   :align: center
-
-   Numerical result using python.
-
-
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-py.png
-   :align: center
-
-   Numerical result using python.
-
-
-
-The second order equation of :math:`C_2` can also be solved numerically.
-
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-solving-second-c2-py.png
-   :align: center
-
-   Solving the second order equation of :math:`C_2` numerically.
-
-
-.. figure:: assets/matter-spec/matterandrabi-numerical-difference-two-first-order-second-c2-py.png
-   :align: center
-
-   The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because `numpy.odeint` is used instead of `numpy.ode`.
-
-
-
-
-Approximation
-~~~~~~~~~~~~~~~~~~~~~
-
-
 
 We use periodic matter potential :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)` and define :math:`\omega_\lambda = \beta \omega`.
 
@@ -340,6 +289,57 @@ Consequently, we have the matrix equation as the original equations,
 
 
 
+The numerical results have periodic stimulated phenomena.
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-mma.png
+   :align: center
+
+   Numerical result using Mathematica.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-mma.png
+   :align: center
+
+   Numerical result using Mathematica.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-py.png
+   :align: center
+
+   Numerical result using python.
+
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-py.png
+   :align: center
+
+   Numerical result using python.
+
+
+
+The second order equation of :math:`C_2` can also be solved numerically.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-solving-second-c2-py.png
+   :align: center
+
+   Solving the second order equation of :math:`C_2` numerically.
+
+
+.. figure:: assets/matter-spec/matterandrabi-numerical-difference-two-first-order-second-c2-py.png
+   :align: center
+
+   The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because `numpy.odeint` is used instead of `numpy.ode`.
+
+
+
+
+Approximation for Period Matter Potential (NON-PHYSICAL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
 
 We first consider the case that :math:`\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}` and :math:`\omega_\lambda\ll \omega` which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that
 
@@ -377,8 +377,39 @@ This theoretical prediction is shown in the following figure.
 
 
 
+Numerical Results for Constant Matter with Periodic Perturbation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using the scaled variable :math:`\bar x = \omega x`, the equations for :math:`C_1` and :math:`C_2` are
+
+.. math::
+   i \frac{C_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_2 e^{-i\omega t}}, \\
+   i \frac{C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_1 e^{i\omega t}},
+
+which gives us the general equation for :math:`C_2`
+
+.. math::
+   \frac{d^2C_2}{d\bar x ^2} - \left( \frac{1}{\lambda} \frac{d\lambda}{d\bar x}  + i \right) \frac{dC_2}{d\bar x} - \left( \frac{1}{2} \frac{\lambda}{\omega} \cos 2\theta_v - \frac{1}{4}\left( \frac{\lambda}{\omega} \right)^2 \right) C_2 = 0.
+
+We will consider the case that matter potential is composed of a constant background potential :math:`\lambda_0` and a periodic perturbative potential :math:`\lambda_1\cos(\beta \bar x)`. Thus the matter potential is :math:`\lambda = \lambda_0 + \lambda_1 \cos(\beta x)`, where :math:`\beta = \frac{\omega_\lambda}{\omega}`.
+
+Define the following variables,
+
+.. math::
+   \alpha_0 & = \frac{\lambda_0}{\omega}, \\
+   \alpha_1 & = \frac{\lambda_1}{\omega}.
+
+The equations for :math:`C_1` and :math:`C_2` becomes
+
+.. math::
+   i \frac{dC_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2 e^{-i\omega t}}, \\
+   i \frac{C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1 e^{i\omega t}}.
 
 
+The equation for :math:`C_2` becomes
+
+.. math::
+   \frac{d^2C_2}{d\bar x^2} + \left( \frac{ \frac{\alpha_1}{\alpha_0} \beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) } - i \right) \frac{dC_2}{d\bar x} + \frac{1}{4} \left( \alpha_0^2 \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)^2 - 2 \alpha_0 \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  \right) \right) C_2 = 0
 
 
 
