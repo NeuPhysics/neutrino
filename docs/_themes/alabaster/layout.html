@@ -10,6 +10,13 @@
     MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
   </script>
   <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
@@ -42,6 +49,7 @@
         ket: ['\\left| \#1\\right\\rangle',1],
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< #1 \\right>',1],
+        slashed: ['\\cancel{#1}',1],
         bold: ['\\boldsymbol{\#1}',1]
       }
     }
