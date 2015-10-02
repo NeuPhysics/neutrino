@@ -452,6 +452,28 @@ As a comparision, we also have the result when :math:`\alpha_1 = 0`.
    Numerical result for the transition probability with a constant matter perturbation, i.e., :math:`\alpha_1=0`. Other parameters are :math:`sin2thetav = 0.917`, :math:`\alpha_0 = 0.1`, :math:`\beta = 0.1`.
 
 
+To go back to flavor basis, we use
+
+.. math::
+   \begin{pmatrix} C_e \\ C_x \end{pmatrix} = \begin{pmatrix} \cos\theta_v & \sin\theta_v \\ -\sin\theta_v & \cos \theta_v \end{pmatrix} \begin{pmatrix} C_1 & C_2 \end{pmatrix}.
+
+Since we have been using initial condition that :math:`\lvert C_1 \rvert^2=1`, the initial electron flavor is :math:`\lvert C_e \rvert^2 = 0.70`.
+
+.. figure:: assets/matter-spec/constantAndPerturbation-electron.png
+   :align: center
+
+   Electron neutrino survival probability.
+
+
+
+.. figure:: assets/matter-spec/constantAndPerturbation-Background-electron.png
+   :align: center
+
+   Electron flavor survival probability for background matter potential only.
+
+
+
+
 
 
 Approximations
