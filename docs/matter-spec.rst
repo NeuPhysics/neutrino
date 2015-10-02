@@ -224,7 +224,7 @@ One of the obstacles of further approximations to Rabi oscillation is that the t
 
 
 Analytical Attack
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 
 
@@ -233,16 +233,20 @@ Analytical Attack
 
 
 
-Numerical Results for Period Matter Potential (NON-PHYSICAL)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Period Matter Potential (NON-PHYSICAL)
+----------------------------------------------------
+
+
 
 For simplicity we consider periodic matter potential, :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)`. Also for easy calculation, we define :math:`\omega_\lambda = \beta \omega`. Thus :math:`\alpha` and :math:`\beta` fully describes the periodic matter potential.
 
 We use periodic matter potential :math:`\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)` and define :math:`\omega_\lambda = \beta \omega`.
 
 
+Numerical Results
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To verify this approximation, we also need to write down the equation after RWA,
+To verify this approximation, we also need to write down the equation for :math:`C_2`,
 
 .. math::
    - \frac{d^2 C_2}{d\bar x ^2} + \left( i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{\alpha}{2} \cos (\beta \bar x)\cos 2\theta_v - \frac{\alpha^2}{4} \cos^2 (\beta \bar x)  \right) C_2 = 0 .
@@ -334,8 +338,8 @@ The second order equation of :math:`C_2` can also be solved numerically.
 
 
 
-Approximation for Period Matter Potential (NON-PHYSICAL)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Approximation
+~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -377,8 +381,8 @@ This theoretical prediction is shown in the following figure.
 
 
 
-Numerical Results for Constant Matter with Periodic Perturbation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Constant Matter with Periodic Perturbation
+----------------------------------------------------------------
 
 Using the scaled variable :math:`\bar x = \omega x`, the equations for :math:`C_1` and :math:`C_2` are
 
@@ -412,6 +416,44 @@ The equation for :math:`C_2` becomes
    \frac{d^2C_2}{d\bar x^2} + \left( \frac{ \frac{\alpha_1}{\alpha_0} \beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) } - i \right) \frac{dC_2}{d\bar x} + \frac{1}{4} \left( \alpha_0^2 \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)^2 - 2 \alpha_0 \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  \right) \right) C_2 = 0
 
 
+.. admonition:: Consistancy Check
+   :align: center
+
+   This result should go back to the non-physical periodic perturbation case when we plug in :math:`\lambda_0 = 0`.
+
+   As we do that, the result is
+
+   .. math::
+      \frac{d^2 C_2}{d\bar x^2} + ( \beta \tan(\beta \bar x) - i ) \frac{dC_2}{d\bar x} + \frac{1}{4} \left( \alpha_1^2 \cos ^2 (\beta \bar x) - 2\alpha_2 \cos (\beta \bar x) \cos 2\theta_v \right) C_2 = 0,
+
+   which indeed is the case we had.
+
+
+
+Numerical Results
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+Approximations
+~~~~~~~~~~~~~~~~~~~~~~
+
+Approximations can be done when :math:`\alpha_1\ll \alpha_0` which means the perturbation is small compared to the background.
+
+Using :math:`\frac{\alpha_1}{\alpha_0}` as a small quantity, apply Taylor expansion and keep only first order, we have
+
+.. math::
+   &\frac{ \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  } \\
+   \approx & \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x), \\
+   & \frac{1}{4} \left( \alpha_1^2 \cos ^2 (\beta \bar x) - 2\alpha_2 \cos (\beta \bar x) \cos 2\theta_v \right)   \\
+   \approx & -\frac{1}{4} \left( 2\cos 2\theta_v - 1 + 2 \left( \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) ( \cos 2\theta_v -1 )  \right) \\
+   \approx & \frac{1}{2} \alpha_0 ( 1 - \cos 2\theta_v ) \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)  - \frac{1}{4} \alpha_0 .
+
+Under this approximation, the equation for :math:`C_2` becomes
+
+.. math::
+   \frac{d^2 C_2}{ d\bar x^2}  + \left( \frac{\alpha_1}{\alpha_0} \sin (\beta \bar x) - i \right) \frac{d C_2}{d\bar x} + \left( \frac{1}{2} \alpha_0 (1 - \cos 2\theta_v) \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) - \frac{1}{4}\alpha_0  \right) C_2 = 0 .
 
 
 
