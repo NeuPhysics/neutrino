@@ -222,6 +222,8 @@ Since the equation doesn't corresponds to a clear and simple physics picture, we
 
 One of the obstacles of further approximations to Rabi oscillation is that the term :math:`\frac{\lambda}{2} \cos 2\theta_v` is not much smaller than the flopping term which means it can not be dropped.
 
+From now on we are going to use :math:`ct=x` since neutrinos has a velocity very close to speed of light which means we can just replace :math:`t` with :math:`x` in natural units.
+
 
 Analytical Attack
 --------------------------
@@ -245,6 +247,9 @@ We use periodic matter potential :math:`\lambda(x) = \lambda_0 \cos(\omega_\lamb
 
 Numerical Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 
 To verify this approximation, we also need to write down the equation for :math:`C_2`,
 
@@ -298,26 +303,26 @@ The numerical results have periodic stimulated phenomena.
 .. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-mma.png
    :align: center
 
-   Numerical result using Mathematica.
+   Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 .. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-mma.png
    :align: center
 
-   Numerical result using Mathematica.
+   Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 .. figure:: assets/matter-spec/matterandrabi-numerical-original-c1-py.png
    :align: center
 
-   Numerical result using python.
+   Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 
 .. figure:: assets/matter-spec/matterandrabi-numerical-original-c2-py.png
    :align: center
 
-   Numerical result using python.
+   Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 
@@ -327,13 +332,13 @@ The second order equation of :math:`C_2` can also be solved numerically.
 .. figure:: assets/matter-spec/matterandrabi-numerical-solving-second-c2-py.png
    :align: center
 
-   Solving the second order equation of :math:`C_2` numerically.
+   Solving the second order equation of :math:`C_2` numerically. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 .. figure:: assets/matter-spec/matterandrabi-numerical-difference-two-first-order-second-c2-py.png
    :align: center
 
-   The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because `numpy.odeint` is used instead of `numpy.ode`.
+   The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because `numpy.odeint` is used instead of `numpy.ode`. sin2thetav = 0.917; cos2thetav = 0.4
 
 
 
@@ -387,8 +392,8 @@ Constant Matter with Periodic Perturbation
 Using the scaled variable :math:`\bar x = \omega x`, the equations for :math:`C_1` and :math:`C_2` are
 
 .. math::
-   i \frac{C_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_2 e^{-i\omega t}}, \\
-   i \frac{C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_1 e^{i\omega t}},
+   i \frac{d C_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_2 e^{-i\bar x}}, \\
+   i \frac{d C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_1 e^{i\bar x}},
 
 which gives us the general equation for :math:`C_2`
 
@@ -406,8 +411,8 @@ Define the following variables,
 The equations for :math:`C_1` and :math:`C_2` becomes
 
 .. math::
-   i \frac{dC_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2 e^{-i\omega t}}, \\
-   i \frac{C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1 e^{i\omega t}}.
+   i \frac{dC_1}{d\bar x} & = {\color{red}\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2 e^{-i\bar x}}, \\
+   i \frac{d C_2}{d\bar x} & = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1 e^{i\bar x}}.
 
 
 The equation for :math:`C_2` becomes
@@ -434,6 +439,19 @@ Numerical Results
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. figure:: assets/matter-spec/constantAndPerturbation-c2.png
+   :align: center
+
+   Numerical result for the transition probability :math:`\left\lvert C_2\right\rvert^2` with parameters :math:`sin2thetav = 0.917`, :math:`\alpha_0 = 0.1`, :math:`\alpha_1 = 0.01 \alpha_0`, :math:`\beta = 0.1`.
+
+As a comparision, we also have the result when :math:`\alpha_1 = 0`.
+
+.. figure:: assets/matter-spec/constantAndPerturbation-Background-c2.png
+   :align: center
+
+   Numerical result for the transition probability with a constant matter perturbation, i.e., :math:`\alpha_1=0`. Other parameters are :math:`sin2thetav = 0.917`, :math:`\alpha_0 = 0.1`, :math:`\beta = 0.1`.
+
+
 
 
 Approximations
@@ -444,16 +462,18 @@ Approximations can be done when :math:`\alpha_1\ll \alpha_0` which means the per
 Using :math:`\frac{\alpha_1}{\alpha_0}` as a small quantity, apply Taylor expansion and keep only first order, we have
 
 .. math::
-   &\frac{ \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  } \\
-   \approx & \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x), \\
+   &\frac{ \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  }
+   \approx  \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x), \\
    & \frac{1}{4} \left( \alpha_1^2 \cos ^2 (\beta \bar x) - 2\alpha_2 \cos (\beta \bar x) \cos 2\theta_v \right)   \\
    \approx & -\frac{1}{4} \left( 2\cos 2\theta_v - 1 + 2 \left( \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) ( \cos 2\theta_v -1 )  \right) \\
-   \approx & \frac{1}{2} \alpha_0 ( 1 - \cos 2\theta_v ) \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)  - \frac{1}{4} \alpha_0 .
+   = & \frac{1}{2} \alpha_0 ( 1 - \cos 2\theta_v ) \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)  - \frac{1}{4} \alpha_0 .
 
 Under this approximation, the equation for :math:`C_2` becomes
 
 .. math::
    \frac{d^2 C_2}{ d\bar x^2}  + \left( \frac{\alpha_1}{\alpha_0} \sin (\beta \bar x) - i \right) \frac{d C_2}{d\bar x} + \left( \frac{1}{2} \alpha_0 (1 - \cos 2\theta_v) \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) - \frac{1}{4}\alpha_0  \right) C_2 = 0 .
+
+
 
 
 
