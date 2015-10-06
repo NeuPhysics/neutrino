@@ -455,7 +455,7 @@ As a comparision, we also have the result when :math:`\alpha_1 = 0`.
 To go back to flavor basis, we use
 
 .. math::
-   \begin{pmatrix} C_e \\ C_x \end{pmatrix} = \begin{pmatrix} \cos\theta_v & \sin\theta_v \\ -\sin\theta_v & \cos \theta_v \end{pmatrix} \begin{pmatrix} C_1 & C_2 \end{pmatrix}.
+   \begin{pmatrix} C_e \\ C_x \end{pmatrix} = \begin{pmatrix} \cos\theta_v & \sin\theta_v \\ -\sin\theta_v & \cos \theta_v \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}.
 
 Since we have been using initial condition that :math:`\lvert C_1 \rvert^2=1`, the initial electron flavor is :math:`\lvert C_e \rvert^2 = 0.70`.
 
