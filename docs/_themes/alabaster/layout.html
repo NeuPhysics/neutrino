@@ -5,6 +5,14 @@
     <link rel="apple-touch-icon" href="{{ pathto('_static/' ~ theme_touch_icon, 1) }}" />
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+
+  {%- if theme_canonical_url %}
+  <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+  {%- endif %}
+
+
+
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});

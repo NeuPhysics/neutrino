@@ -47,6 +47,10 @@ html_theme_options = {
    'description': 'Neutrino Physics',
 }
 
+# theme_canonical_url = 'http://docs.neutrino.xyz/' # Not working, please find themes/theme.conf and change canonical url there.
+#theme_canonical_url = 'http://docs.neutrino.xyz/'
+
+
 
 # -- General configuration ------------------------------------------------
 
