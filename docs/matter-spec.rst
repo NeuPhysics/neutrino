@@ -473,6 +473,50 @@ Since we have been using initial condition that :math:`\lvert C_1 \rvert^2=1`, t
 
 
 
+What Really is the Reason of These Transition?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As a comparison, we would like to see how is the system deviating from adiabatic. In adiabatic limit, we have a light state and a heavy state, which means we have a wavefunction
+
+.. math::
+   \begin{pmatrix} \nu_L(x) \\ \nu_H(x) \end{pmatrix}.
+
+The relation between the wave function in this basis and the wave function in flavor basis is
+
+.. math::
+   \begin{pmatrix} \nu_L(x) \\ \nu_H(x) \end{pmatrix} = \mathbf{U^{-1}}(x) \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}.
+
+
+Meanwhile,
+
+.. math::
+   \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \mathbf{U} \begin{pmatrix} \nu_1 \\ \nu_2 \end{pmatrix},
+
+where the rotation matrix :math:`\mathbf{U}` relates vacuum eigenbasis wave function to the flavor basis wave function.
+
+Survival probability of the heavier state in vacuum basis is given by
+
+.. math::
+   P_{\nu_1\to\nu_2} = \left\lvert \cos(\theta_v- \theta(x)) \nu_L(0) - \sin(\theta_v - \theta(x)) \nu_H(0)  \right\rvert^2,
+
+where
+
+.. math::
+   \nu_L(0) &= \cos(\theta_v - \theta(0)) \\
+   \nu_H(0) & = -\sin(\theta_v - \theta(0)),
+
+given initial condition that in vacuum basis that
+
+.. math::
+   \nu_1(0) &= 1\\
+   \nu_2(0) & = 0.
+
+
+.. figure:: assets/matter-spec/matterandrabi-constantAndPerturbation-adiabatic-c2.png
+   :align: center
+
+   Adiabatic result given the same parameters and initial condition, i.e., :math:`\left\lvert C_2\right\rvert^2`, :math:`sin2thetav = 0.917`, :math:`\alpha_0 = 0.1`, :math:`\alpha_1 = 0.01 \alpha_0`, :math:`\beta = 0.1`.
+
 
 
 
