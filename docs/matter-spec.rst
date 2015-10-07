@@ -541,7 +541,10 @@ Under this approximation, the equation for :math:`C_2` becomes
 
 
 
+.. figure:: assets/matter-spec/matterandrabi-constantAndPerturbation-c2-small-perturbation.png
+   :align: center
 
+   Small pertubation approximation numerical result. Parameters used are :math:`sin2thetav = 0.917`, :math:`\alpha_0 = 0.1`, :math:`\alpha_1 = 0.01 \alpha_0`, :math:`\beta = 0.1`.
 
 
 
