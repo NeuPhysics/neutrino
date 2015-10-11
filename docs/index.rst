@@ -30,10 +30,7 @@ Support us:
    <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
 
 
-DOI
-
-.. image:: https://zenodo.org/badge/7726/NeuPhysics/neutrino.svg
-   :target: https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino
+[DOI: 10.5281/zenodo.27814](https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino)
 
 
 Here is also an index: `genindex.html <genindex.html>`_ .

@@ -23,7 +23,7 @@ In big bang cosmology, neutrinos became independent when the expansion rate whic
 
    The weak interaction cross section is approximately :math:`\sigma\sim G_F^2 (kT)^2` and neutrino density drops according to :math:`n_\nu \sim (kT)^3`. As we can imagine, the weak interaction time scale for neutrinos is given by :math:`t_\nu \sim \frac{1}{n_\nu \sigma} \sim \frac{1}{G_F^2(kT)^5}`. [1]_
 
-The neutrinos decouple when we have the rate are comparable, which is
+The neutrinos decouple when we have the rates comparable, which is
 
 .. math::
    \Gamma_H = \Gamma_W.
@@ -86,6 +86,38 @@ Direct detection experiments using this principle have been proposed to detect C
 
 
 
+Resonant Absorption of Cosmic-Ray
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+This method was proposed by T. Weiler [6]_ .
+
+The basic idea is to look at the :math:`\nu \bar\nu` annihilation on the Z resonance.
+
+
+
+
+.. admonition:: Background
+   :class: note
+
+   **Estimation of neutrino chemical potential** is done using the limit that neutrino energy density should be less than the total energy density of the universe.
+
+   To calculate the energy density of the neutrinos we need the phase space density which requires the distribution. In this paper, Weiler used the Fermi-Dirac distribution assuming :math:`m\ll T`. (This approximation is explained in J. Bernstein and G. Feinberg, Phys. Lett. 101B, 39 (1981).)
+
+   .. math::
+      f_{\nu_i}(p) = \frac{1}{ \exp\left( p/T_d - \bar \mu_i \right) +1 },
+
+   where :math:`\nu_i` as the subscript means the flavor of the neutrinos, :math:`T_d` is the temperature at decoupling of neutrinos, :math:`\bar\mu_i` is the chemical potential
+
+
+
+
+
+
+
+
+
+
 A Possible Application of LIGO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,6 +135,11 @@ In the paper by Vogel [1]_, the force by these CNB on a sphere of radius
 
 
 For an approximation, I use :math:`\nu_{relative}=10^{-3}c`, a proper set up of the experiment would be about the order of :math:`a_t\sim 10^{-38}\mathrm{cm/s^2}`.
+
+A simple back-of-the-envelope estimation by assuming an constant acceleceration due to the CNB on the mirrors shows it is not possible to detect the effect of CNB modulation of the shift of the mirrors under current technology.
+
+
+
 
 
 
@@ -124,3 +161,4 @@ Refs & Notes
 .. [3] P. Langacker, J. P. Leveille and J. Sheiman, `On the detection of cosmological neutrinos by coherent scattering <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.27.1228>`_ Phys. Rev. D 27, 1228 (1983)
 .. [4] L. Stodolsky, `Speculations on Detection of the "Neutrino Sea" <http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.34.110>`_ Phys. Rev. Lett. 34, 110 (1975); (erratum) Phys. Rev. Lett. 34, 508 (1975).
 .. [5] Lewis, R. R. (1980). Coherent detector for low-energy neutrinos. Physical Review D, 21(3), 663–668. doi:10.1103/PhysRevD.21.663.
+.. [6] Weiler, T. (1982). Resonant Absorption of Cosmic-Ray Neutrinos by the Relic-Neutrino Background. Physical Review Letters, 49(3), 234–237. doi:10.1103/PhysRevLett.49.234
