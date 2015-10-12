@@ -1,6 +1,7 @@
 Matter as Driven Energy
 ====================================
 
+**This is part of my research. I put them here because I believe in open is the key of reseach.**
 
 Rabi-like Transition
 ------------------------------
