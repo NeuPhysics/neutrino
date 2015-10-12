@@ -90,7 +90,7 @@ Resonant Absorption of Cosmic-Ray
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-This method was proposed by T. Weiler [6]_ .
+This method was proposed by T. Weiler [6]_ . **This section works as the note of his paper.**
 
 The basic idea is to look at the :math:`\nu \bar\nu` annihilation on the Z resonance.
 
@@ -107,7 +107,98 @@ The basic idea is to look at the :math:`\nu \bar\nu` annihilation on the Z reson
    .. math::
       f_{\nu_i}(p) = \frac{1}{ \exp\left( p/T_d - \bar \mu_i \right) +1 },
 
-   where :math:`\nu_i` as the subscript means the flavor of the neutrinos, :math:`T_d` is the temperature at decoupling of neutrinos, :math:`\bar\mu_i` is the chemical potential
+   where :math:`\nu_i` as the subscript means the flavor of the neutrinos, :math:`T_d` is the temperature at decoupling of neutrinos, :math:`\bar\mu_i` is the chemical potential, antineutrinos have chemical potential :math:`-\bar\nu_i`.
+
+   The next step is to implement cosmic expansion into this distribution. Comsic expansion will affect the momentum of the neutrinos,
+
+   .. math::
+      \frac{p(a_d)}{p(a)} = \frac{a}{a_d},
+
+   where :math:`a` is the scale factor and subscript :math:`{}_d` means the value at decoupling.
+
+   Define a new quantity :math:`\beta = \frac{a}{a_d}`, we can rewrite the distribution at any moment,
+
+   .. math::
+      f_{\nu_i}(p(a)) = \frac{1}{ \exp\left( \beta p(a) - \bar \mu_i \right) +1 }.
+
+   Using this distribution we can calculate the number density of neutrinos as well as the energy density of neutrinos or any statistical quantities,
+
+   .. math::
+      n_{\nu_i} (\bar \mu_i) &= \frac{1}{(2\pi)^3} \int d^3p f_{\nu_i}(p(a)) \\
+      u_{\nu_i} & = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}(p(a)) + f_{\bar\nu_i}(p(a)) \right).
+
+   Cosmic background neutrinos are nonrelativistic. To see this we need to compare the temperature of neutrinos and their mass. The masses are less than 1eV while the temperature from estimation using scale factor is actually :math:`1/\beta = \frac{T_{\gamma_0}}{2.7K}\times 1.66\times 10^{-4} \mathrm{eV}`, which is much smaller than eV scale. [6]_
+
+
+
+
+
+.. admonition:: A Simple Estimation of Neutrino Mass Constraint
+   :class: note
+
+   Using the fact that neutrino energy density should be less than the total energy density of the universe, we could have a very simple upper limit constraint for neutrino mass. [6]_
+
+   As we have seen the neutrino energy density can be written as a function of chemical potential :math:`\bar\mu_i` and mass :math:`m_i`. To do the esitmation, we set chemical potential to 0 and use **degenerate neutrino gas**,
+
+   .. math::
+      \sum_i m_i \leq \frac{\rho_0}{2 n_\nu(0)} \sim 200 eV,
+
+   where we considered the antineutrinos which brings the factor 2.
+
+   We also have
+
+   .. math::
+      n_\nu(0) = \frac{3\xi(3) }{4\pi^2 \beta_0^3} = 53 \mathrm{cm}^{-3},
+
+   which differs from the modern results but the order of magnitude is correct. This is a good estimation.
+
+
+
+
+
+.. admonition:: Distribution and Temperature
+   :class: note
+
+   One thing to notice is that temperature works similar as scale factor. The way to map temperature is to use the temperature of radiation. Temperature of radiation is given by [6]_
+
+   .. math::
+      T_\gamma = \eta \left( \frac{a_d}{a} T_d \right),
+
+   where :math:`\eta = \left( \frac{11}{4} \right)^{1/3}`, from which we can solve out the factor :math:`\beta`,
+
+   .. math::
+      \beta = \frac{\eta}{T_\gamma}.
+
+   Put in the numbers, we have :math:`\beta = \frac{2.7K}{T_{\gamma_0}} 6.25\times 10^{3} eV^{-1}`.
+
+   Now we have a distribution that is related to the temperature of radiation.
+
+
+.. admonition:: Mean-Free-Path
+   :class: note
+
+   As an estimation, the mean-free-path is given by
+
+   .. math::
+      \lambda \sim \frac{1}{n \sigma},
+
+   where :math:`n` is the number density of background particles and :math:`\sigma` is the cross section of the interaction.
+
+   The mean-free-path of cosmic ray among CNB is related to the cross section of weak interaction :math:`\sigma_W` which in turn is related to the mass of the weak interaction boson :math:`M_W` ,
+
+   .. math::
+      \lambda &\sim \frac{1}{n_{\nu}\sigma_W} \\
+      & \sim \frac{1}{n_{\nu} \frac{G_F^2}{\pi} \frac{s}{1+\frac{s}{M_W^2}} }\\
+      & \sim \frac{1}{n_{\nu} \frac{G_F^2}{\pi} s }.
+
+   In center of mass frame, :math:`s` is calculated to be :math:`E\left\langle \epsilon \right\rangle`, where :math:`E` is the energy of the cosmic ray and :math:`\left\langle \epsilon \right\rangle` is the average energy of CNB. Notice that :math:`n_{\nu} \left\langle \epsilon \right\rangle = \rho_{\nu}` where :math:`\rho_{\nu}` is the energy density of CNB [6]_ ,
+
+   .. math::
+      \lambda &\sim \frac{1}{n_{\nu} \frac{G_F^2}{\pi} E\left\langle \epsilon \right\rangle }\\
+      & \sim &\sim \frac{1}{\rho_{\nu} \frac{G_F^2}{\pi} E }\\
+      & > \frac{\pi}{ 2G_F^2 E\rho_0},
+
+   in which we use the fact that :math:`\rho_{\nu} < \rho_0`.
 
 
 
@@ -115,6 +206,65 @@ The basic idea is to look at the :math:`\nu \bar\nu` annihilation on the Z reson
 
 
 
+**Can we find signature of CNB in cosmic rays?** One way to think about this question, as stated in Weiler's paper, is to think about what is the requirement for us to detect the scattering of cosmic rays by CNB. The most general constraint is that the mean-free-path should be smaller than the Hubble radius, otherwise the effect would have a scale larger than the Hubble radius which can not be detected now.
+
+To apply this constraint, Weiler found that
+
+.. math::
+   E > \frac{\pi}{2 G_F^2 \rho_0 H_0^{-1}} \gtrsim 10^{14} GeV.
+
+But we do not see cosmic rays from far away at such energies because the universe is opaque to such particles, unless we have much higher density of CNB. In fact Weiler shows that we need at least :math:`10^4` times of the current number density to see the effect.
+
+.. admonition:: Why Opaque
+   :class: note
+
+   For electrons, inverse Compton scattering with electromagnetic background in the unvierse is efficient enough to decrease the energy of them. [6]_
+
+   Photomeson production is responsible for the elimination of protons.
+
+   Due to the magnetic field of the galaxies, stars, or even planets, charged cosmic rays will produce synchrotron radiation and lose energy.
+
+
+
+**Resonant absorption of cosmic ray lepton by CNB** can produce a effect in opacity. [6]_
+
+.. admonition:: Resonant Absorption
+   :class: note
+
+   Suppose the background particle is not in a certain energy state but rather in a distribution of states, the scattering integration would be different. In a simple case as Breit-Wigner form, the cross section is related to the resoant width of the background particles.
+
+Using Breit-Wigner form, [6]_
+
+.. math::
+   \bar\sigma = \int ds \frac{\sigma(s)}{M_R^2} = \frac{16\pi^2 S \Gamma(R\to l\nu)}{M_R^3},
+
+where :math:`S` is the spin average factor, i.e., the number of outgoing spin states divided by the number of incoming spin states, :math:`R\to l\nu` means this is about a process for a resonant state to leptons and neutrinos, :math:`\Gamma` represents the width of the resonant states.
+
+Weiler shows in his paper that
+
+.. math::
+   \frac{\Gamma(R\to l\nu)}{ M_R } \gtrsim \frac{ G_F M_R^2 }{ S n_\nu/ 50 \mathrm{cm}^{-3} }.
+
+
+
+.. admonition:: More Explainations
+   :class: note
+
+   More here.
+
+
+
+:math:`W^{\pm}` and :math:`Z` are the candidates for such resonant states.
+
+
+
+Then we calculate the opacity and the transmission probability of cosmic rays for different energys.
+
+
+.. figure:: assets/cosmology/weiler-resonat-absorption-of-cosmic-rays-cnb.png
+   :align: center
+
+   From Weiler paper.
 
 
 
