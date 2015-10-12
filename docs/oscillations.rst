@@ -42,7 +42,7 @@ The neutrino experimantal data shows the mixing angles are [1]_
 2. :math:`\theta_{13}=8.9^{\circ}\pm 0.5^{\circ}`;
 3. :math:`\theta_{12}=34^{\circ}\pm 1^{\circ}`.
 
-Experimental result of the :math:`\delta m^2 _{ij}`s are [1]_
+Experimental result of the :math:`\delta m^2 _{ij}` s are [1]_
 
 1. :math:`\delta^2 m_{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
 2. :math:`\lvert\delta^2 m_{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
