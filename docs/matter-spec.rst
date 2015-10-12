@@ -422,7 +422,7 @@ The equation for :math:`C_2` becomes
 
 
 .. admonition:: Consistancy Check
-   :align: center
+   :class: note
 
    This result should go back to the non-physical periodic perturbation case when we plug in :math:`\lambda_0 = 0`.
 
