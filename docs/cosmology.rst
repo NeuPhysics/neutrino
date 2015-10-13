@@ -102,7 +102,7 @@ The basic idea is to look at the :math:`\nu \bar\nu` annihilation on the Z reson
 
    **Estimation of neutrino chemical potential** is done using the limit that neutrino energy density should be less than the total energy density of the universe.
 
-   To calculate the energy density of the neutrinos we need the phase space density which requires the distribution. In this paper, Weiler used the Fermi-Dirac distribution assuming :math:`m\ll T`. (This approximation is explained in J. Bernstein and G. Feinberg, Phys. Lett. 101B, 39 (1981).)
+   To calculate the energy density of the neutrinos we need the phase space density which requires the distribution. In this paper, Weiler used the Fermi-Dirac distribution assuming :math:`m\ll T`. (The reason is that we are looking at a distribution generated at early universe. This approximation is explained in J. Bernstein and G. Feinberg, Phys. Lett. 101B, 39 (1981).)
 
    .. math::
       f_{\nu_i}(p) = \frac{1}{ \exp\left( p/T_d - \bar \mu_i \right) +1 },
@@ -260,11 +260,12 @@ Weiler shows in his paper that
 
 Then we calculate the opacity and the transmission probability of cosmic rays for different energys.
 
+Suppose we have a source of antineutrinos at redshift :math:`z`, the antineutrino energy we recieved is :math:`E`, then the source energy must be :math:`E(z+1)`. The resonant scattering, should, if any, happen between the energy range :math:`E\sim E(z+1)`.
 
 .. figure:: assets/cosmology/weiler-resonat-absorption-of-cosmic-rays-cnb.png
    :align: center
 
-   From Weiler paper.
+   From Weiler paper. The bottom horizontal axis is the recieved energy of the antineutrinos, the vertical axis is the transmission probability. The energy is in units of :math:`M_Z^2/2m` where :math:`M_Z` is the mass of the Z boson and :math:`m` is the mass of neutrinos. The top horizontal axis is the nearest possible source of antineutrinos. If we detect antineutrino energy just at the resonance, the nearest possible source for such a resonant scattering is just in front of us.
 
 
 
