@@ -76,6 +76,8 @@ Here is a `table <assets/cosmology/refractive-index-all-flavor.tgn>`_ of the ref
 
 
 
+
+
 Detection
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -83,6 +85,14 @@ Detection
 Since the Earth is moving in the CNB, it has been suggested that we detect the dipole moment of CNB. Neutrinos ahead of the moving velocity will go cross an object on the Earth then generate a tiny force on the object. We might try to detect the force and compare it with the theoretical prediction, even though it is very hard.
 
 Direct detection experiments using this principle have been proposed to detect CNB [2]_ [3]_ [4]_. However these proposals are without the reach of current technology. [1]_
+
+
+
+.. admonition:: How Hard to Detect
+   :class: note
+
+   The number density of CNB neutrinos is about :math:`10^2\mathrm{cm}^{-3}`, which is comparable to the number density of CMB photons. CMB photons are so hard to detect, even though it is electromagnetic interaction. Now we are talking about weak interaction.
+
 
 
 
