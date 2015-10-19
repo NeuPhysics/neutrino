@@ -41,7 +41,7 @@ There are three most used bases, vacuum basis which diagonalizes the vacuum Hami
   where :math:`\omega = \delta m^2 /2E` is the vacuum frequency of neutrinos.
 
 
-.. admonition:: Rotation Twice
+.. admonition:: Rotate Twice
    :class: note
 
    A rotation from vacuum basis to flavor basis then to matter basis is simply the addition of the two rotation, i.e.,
@@ -80,6 +80,59 @@ Similarly, the flavor basis Hamiltonian :math:`H_f` can also be calculated from 
    :class: hint
 
    To write clean code, it is better to define and test there rotations first.
+
+
+
+
+Rotating Basis
+-------------------------
+
+
+In vacuum basis, Hamiltonian is
+
+.. math::
+   H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,
+
+where we have got a contribution of :math:`\sigma_3` from matter interaction. By carefully defining a transformation that removes this contribution, we can define a new basis in which the wavefunction is :math:`\Psi_b`, which is related to the vacuum basis wavefunction in the following way,
+
+.. math::
+   \begin{pmatrix}\psi_{v1} \\ \psi_{v2} \end{pmatrix}  = \begin{pmatrix}
+   e^{-i \eta(x) x} & 0 \\  0 & e^{i \eta(x) x}
+   \end{pmatrix} \begin{pmatrix}\psi_{b1} \\ \psi_{b2} \end{pmatrix},
+
+where :math:`\eta(x)` is a function of position. We can find the requirement of it by plug the wavefunction into Schrodinger equation, which results in
+
+.. math::
+   \eta + x \frac{d\eta }{dx} = \frac{\lambda}{2} \cos 2\theta_v.
+
+The general solution is
+
+.. math::
+   \eta(x) = \frac{Constant}{x} + \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau,
+
+where the constant can always be set to 0, which tells us that
+
+.. math::
+   \eta(x) = \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau .
+
+
+.. admonition:: Constant Matter Density
+   :class: note
+
+   As a check, for constant :math:`\lambda`, we have
+
+   .. math::
+      \eta(x) = \frac{\cos 2\theta_v }{2x} \lambda ( x-1 ).
+
+
+In this new basis, the Hamiltonian becomes
+
+.. math::
+   H_b &= - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \begin{pmatrix} 0 & e^{i 2\eta(x) x} \\ e^{ - i 2\eta(x) x} & 0  \end{pmatrix} \\
+   & =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.
+
+
+
 
 
 
