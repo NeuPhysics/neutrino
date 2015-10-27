@@ -279,6 +279,27 @@ Suppose we have a source of antineutrinos at redshift :math:`z`, the antineutrin
 
 
 
+
+Spectulations on Detection of the "Neutrino Sea"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+　
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 A Possible Application of LIGO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
