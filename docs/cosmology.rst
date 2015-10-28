@@ -284,6 +284,130 @@ Spectulations on Detection of the "Neutrino Sea"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 　
+L. Stodolsky wrote a paper back in 1974 where he investigated several ideas of detecting CNB.
+
+The interaction between neutrinos and electrons is spin dependent. Different spin states experience different interaction. This feature could possibly be used to detect CNB.
+
+
+.. figure:: assets/cosmology/neutrino-electron-feynman.png
+   :align: center
+
+   Neutrino electron interaction. The left is charged current while the right is neutral current.
+
+
+The Lagrangian for such interactions is
+
+.. math::
+   \mathscr{L}_{eff} =& -\frac{G_F}{\sqrt{2}} \{ {\color{red} [ \bar \nu_e \gamma^\rho (1-\gamma^5) e ] [\bar e \gamma_\rho (1-\gamma^5) \nu_e]  } \\
+   &+ {\color{blue} [ \bar \nu_e \gamma^\rho (1-\gamma^5) \nu_e ] [\bar e \gamma_\rho (g_V^l-g_A^l\gamma^5) e ]  } \}
+
+Red term is for charged current which exchanges the charge and blue term is for neutral current processes.
+
+
+.. admonition:: Fierz Transformation
+   :class: note
+
+   In the context of weak interaction, for a Lagrangian,
+
+   .. math::
+      \mathscr{L}(\Psi_1,\Psi_2,\Psi_3,\Psi_4) = [ \bar\Psi_1 \gamma^\mu ( 1 - \gamma^5 ) \Psi_2  ] [ \bar \Psi_3 \gamma_\mu ( 1-\gamma^5 ) \Psi_4 ],
+
+   exchange the field $\Psi_2$ and $\Psi_4$ doesn't change the result.
+
+   The Lagrangian is called V-A theory because people define
+
+   .. math::
+      \mathscr{L}^V(\Psi_1, \Psi_2,\Psi_3,\Psi_4) &= [ \bar\Psi_1 \gamma^\mu \Psi_2 ] [ \bar\Psi_3 \gamma_\mu \Psi_4 ] ,\\
+      \mathscr{L}^A (\Psi_1, \Psi_2,\Psi_3,\Psi_4) &= [ \bar\Psi_1 \gamma^\mu \gamma^5 \Psi_2 ]  [ \bar\Psi_3 \gamma_\mu \gamma^5 \Psi_4 ] .
+
+   The questionis how big the difference between neutral current only processes (such as muon or tau neutrinos and electrons interactions), and charged current plus neutral current processees (such as electron neutrino and electron interactions). To see this, we can apply Fierz transformation to the Lagrangian,
+
+   .. math::
+      \mathscr{L}_{eff} = -\frac{G_F}{\sqrt{2}} [ \bar \nu_e \gamma^\rho (1-\gamma^5) \nu_e ] [ \bar e \gamma_\rho ( (1+g_V^l) - (1+g_A^l) \gamma^5 ) e ]  .
+
+   As we can see the difference is not so big. We can do estimations for electron neutrino and electron interaction only which is also a good approximation for other interactions.
+
+
+
+To calculate the spin dependent energy, we should first estimate the current density of CNB neutrinos,
+
+.. math::
+   \vec J = 2\rho \frac{\vec v }{ \sqrt{1-v^2} },
+
+
+where :math:`v` is the velocity of electrons with respect to the CNB.
+
+Using this current density, we calculate the energy related to the two different helicity states of electrons,
+
+The interaction energies for two different helicity states are,
+
+.. math::
+   \frac{G_F}{\sqrt{2}} \vec \sigma\cdot \vec J = \pm \sqrt{2}G_F \rho \frac{ v}{\sqrt{1-v^2}}.
+
+which is similar to magnetic monent and B field interaction.
+
+The next question, down this derivation, is the number density of CNB neutrinos :math:`\rho`, which is estimated as
+
+.. math::
+   \rho \propto p_F^3.
+
+
+Thus the energy split due to different helicity is
+
+.. math::
+   \Delta E = 2\sqrt{2}G_F \rho \frac{\vec v }{\sqrt{1-v^2}} = 0.6\times 10^{-24} \left( \frac{p_F}{eV}\right)^3 \frac{v}{\sqrt{1-v^2}} eV.
+
+The Fermi momentum is gained from
+
+* Beta decay: :math:`p_F\leq 60 eV`;
+* Cosmological: :math:`p_F\leq 0.75\times 10^{-2} eV`,
+
+which leads to
+
+.. math::
+   \Delta E \sim 10^{-19}  eV ~ to ~ 10^{-30}   eV.
+
+
+
+Is this small? Can we detect it? There are three different ideas given by Stodolsky,
+
+* electrons with mixed helicity states which develop different phases due to propagation,
+* ferromagnetic material of 1 ton has :math:`10^{27}` polarized spins which can experience a torque,
+* He3 mixed to low temperature He4 can retain spin polarization for a long time which can be used to detect the phase difference.
+
+
+The idea behind electron as detector is
+
+* electron Beams with equally $\pm$ helicity states,
+* + and - states have different energies = two different frequencies,
+* phase difference between the two states to be detected.
+
+The phase difference is calculated as
+
+.. math::
+   \phi &\sim \Delta E t  \sim 2\sqrt{2}G_F \rho z \\
+   & \sim 3\times 10^{-20} \left( \frac{p_F}{eV} \right)^3 rad/cm,
+
+which is roughly :math:`\left( \frac{p_F}{eV} \right)^3 rad` for a light year travel.
+
+This means we need to build very rapid electrons and maintain the spin polarization for a long time or we can use the fact that the Earth is moving with a velocity of :math:`250 km/s` around the center of the galaxy. For the second choice we need to build a box of electrons which can retain the spin for a long time. Since the estimation also works for neutral current, the idea of He3 comes in.
+
+The second method is to use a big chunk of ferromagnetic material, which contains a lot of palorized electrons thus is going to experience a torque due to the CNB.
+
+The torque for 1 ton ferromagnetic material is
+
+.. math::
+   \left( \frac{p_F}{eV}\right)^3 eV,
+
+which is such small. Besides, we need to consider external magnetic field since this is a big block of ferromagnetic material. The author did propose to devise a method to measure this small torque using gravitational wave detectors, in our current view, LIGO.
+
+
+
+
+
+
+
+
 
 
 
