@@ -406,24 +406,6 @@ which is such small. Besides, we need to consider external magnetic field since 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 A Possible Application of LIGO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -445,7 +427,7 @@ For an approximation, I use :math:`\nu_{relative}=10^{-3}c`, a proper set up of 
 A simple back-of-the-envelope estimation by assuming an constant acceleceration due to the CNB on the mirrors shows it is not possible to detect the effect of CNB modulation of the shift of the mirrors under current technology.
 
 
-
+But we could alway use other approach like the one proposed by L. Stodolsky.
 
 
 
