@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Basis &mdash; Neutrino Pi documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'Pi',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Neutrino Pi documentation" href="index.html" />
+    <link rel="next" title="Interaction With Matter" href="msw.html" />
+    <link rel="prev" title="Vacuum Oscillation" href="vacuum.html" />
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link rel="canonical" href="http://docs.neutrino.xyz/basis.html"/>
+
+
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      processEscapes: true
+    }
+  });
+</script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{\#1}',1],
+        overl: ['\\overset\leftarrow{\#1}',1],
+        overr: ['\\overset\rightarrow{\#1}',1],
+        bra: ['\\left\\langle \#1\\right|',1],
+        ket: ['\\left| \#1\\right\\rangle',1],
+        braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+        avg: ['\\left< \#1 \\right>',1],
+        slashed: ['\\cancel{\#1}',1],
+        bold: ['\\boldsymbol{\#1}',1]
+      }
+    }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="msw.html" title="Interaction With Matter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vacuum.html" title="Vacuum Oscillation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Neutrino Pi documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="basis">
+<h1>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h1>
+<p>Calculating neutrino oscillations requires a lot of rotations between different bases.</p>
+<div class="section" id="rotation-of-states">
+<h2>Rotation of States<a class="headerlink" href="#rotation-of-states" title="Permalink to this headline">¶</a></h2>
+<p>There are three most used bases, vacuum basis which diagonalizes the vacuum Hamiltonian, flavor basis where the flavor states stay, and instataneous matter basis which diagonializes the Hamiltonian with constant matter interaction or the instataneous matter interaction.</p>
+<ul>
+<li><p class="first">The rotation from vacuum basis wavefunction <span class="math">\(\Psi_v\)</span> to flavor basis <span class="math">\(\Psi_f\)</span> is</p>
+<div class="math">
+\[\Psi_f = R_{v2f}(\theta_v) \Psi_v,\]</div>
+<p>where the rotation is</p>
+<div class="math">
+\[\begin{split}R_{v2f}(\theta_v) = \begin{pmatrix} \cos\theta_v &amp; \sin \theta_v \\ -\sin \theta_v &amp; \cos \theta_v \end{pmatrix}.\end{split}\]</div>
+</li>
+<li><p class="first">The rotation from matter basis wavefunction <span class="math">\(\Psi_m\)</span> to flavor basis wavefunction <span class="math">\(\Psi_f\)</span> is</p>
+<div class="math">
+\[\Psi_f = R_{m2f}(\theta_m) \Psi_m,\]</div>
+<p>where the roation is</p>
+<div class="math">
+\[\begin{split}R_{m2f}(\theta_m) = \begin{pmatrix} \cos\theta_m &amp; \sin \theta_m \\ -\sin \theta_m &amp; \cos \theta_m \end{pmatrix}.\end{split}\]</div>
+<p>The matter mixing angle is determined by the matter potential <span class="math">\(\lambda = \sqrt{2}G_F n_e\)</span>,</p>
+<div class="math">
+\[\tan\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},\]</div>
+<p>where <span class="math">\(\omega = \delta m^2 /2E\)</span> is the vacuum frequency of neutrinos.</p>
+</li>
+</ul>
+<div class="note admonition">
+<p class="first admonition-title">Rotate Twice</p>
+<p>A rotation from vacuum basis to flavor basis then to matter basis is simply the addition of the two rotation, i.e.,</p>
+<div class="last math">
+\[\begin{split}R_{v2f2m}(\theta_v,\theta_m) = \begin{pmatrix} \cos(\theta_v - \theta_m) &amp; \sin ( \theta_v - \theta_m ) \\ -\sin (\theta_v-\theta_m) &amp; \cos (\theta_v - \theta_m) \end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="rotation-of-hamiltonian">
+<h2>Rotation of Hamiltonian<a class="headerlink" href="#rotation-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="first admonition-title">Vacuum Basis Hamiltonian</p>
+<div class="last math">
+\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.\]</div>
+</div>
+<p>Given the vacuum basis Hamiltonian <span class="math">\(H_v\)</span>, we can rotation it to flavor basis by using the rotation <span class="math">\(R_{v2f}(\theta_v)\)</span></p>
+<div class="math">
+\[H_f = R_{v2f}(\theta_v) H_v R_{v2f}^{-1}(\theta_v).\]</div>
+<p>Similarly, the flavor basis Hamiltonian <span class="math">\(H_f\)</span> can also be calculated from matter basis Hamiltonian <span class="math">\(H_m\)</span> ,</p>
+<div class="math">
+\[H_f = = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).\]</div>
+<div class="hint admonition">
+<p class="first admonition-title">Numerical Calculation of The Rotations</p>
+<p class="last">To write clean code, it is better to define and test there rotations first.</p>
+</div>
+</div>
+<div class="section" id="rotating-basis">
+<h2>Rotating Basis<a class="headerlink" href="#rotating-basis" title="Permalink to this headline">¶</a></h2>
+<p>In vacuum basis, Hamiltonian is</p>
+<div class="math">
+\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,\]</div>
+<p>where we have got a contribution of <span class="math">\(\sigma_3\)</span> from matter interaction. By carefully defining a transformation that removes this contribution, we can define a new basis in which the wavefunction is <span class="math">\(\Psi_b\)</span>, which is related to the vacuum basis wavefunction in the following way,</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix}\psi_{v1} \\ \psi_{v2} \end{pmatrix}  = \begin{pmatrix}
+e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
+\end{pmatrix} \begin{pmatrix}\psi_{b1} \\ \psi_{b2} \end{pmatrix},\end{split}\]</div>
+<p>where <span class="math">\(\eta(x)\)</span> is a function of position. We can find the requirement of it by plug the wavefunction into Schrodinger equation, which results in</p>
+<div class="math">
+\[\eta + x \frac{d\eta }{dx} = \frac{\lambda}{2} \cos 2\theta_v.\]</div>
+<p>The general solution is</p>
+<div class="math">
+\[\eta(x) = \frac{Constant}{x} + \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau,\]</div>
+<p>where the constant can always be set to 0, which tells us that</p>
+<div class="math">
+\[\eta(x) = \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau .\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Constant Matter Density</p>
+<p>As a check, for constant <span class="math">\(\lambda\)</span>, we have</p>
+<div class="last math">
+\[\eta(x) = \frac{\cos 2\theta_v }{2x} \lambda ( x-1 ).\]</div>
+</div>
+<p>In this new basis, the Hamiltonian becomes</p>
+<div class="math">
+\[\begin{split}H_b &amp;= - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{i 2\eta(x) x} \\ e^{ - i 2\eta(x) x} &amp; 0  \end{pmatrix} \\
+&amp; =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.\end{split}\]</div>
+</div>
+<div class="section" id="refs-notes">
+<h2>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Neutrino</a></h1>
+
+
+
+<p class="blurb">Neutrino Physics</p>
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=NeuPhysics&repo=neutrino&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+    
+
+<p>
+<a href="https://travis-ci.org/NeuPhysics/neutrino">
+    <img
+        alt="https://secure.travis-ci.org/NeuPhysics/neutrino.png?branch=master"
+        src="https://secure.travis-ci.org/NeuPhysics/neutrino.png?branch=master"
+    >
+</a>
+</p>
+<h3>ToC</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preliminary.html">Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commonsense.html">Common Sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">Mathematics Related</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mass.html">Masses of Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="propagation.html">How Do Neutrinos Propagate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Basis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rotation-of-states">Rotation of States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rotation-of-hamiltonian">Rotation of Hamiltonian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rotating-basis">Rotating Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#refs-notes">Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
+</ul>
+
+
+<ul>
+	<li><a href="genindex.html">INDEX</a></li>
+</ul>
+<h3>Links</h3>
+<ul>
+   <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
+   <li class="toctree-l1"><a href="http://openmetric.org/physics" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
+   <li class="toctree-l1"><a href="http://interimm.org" style="color:orange;"><i class="fa fa-rocket"></i>&nbsp;星际移民中心</a></li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3>Support Us</h3>
+<p>
+Support us on <a href="https://www.gratipay.com/">Gratipay</a> :
+<script data-gratipay-username="emptymalei"
+        data-gratipay-widget="button"
+        src="//gttp.co/v1.js"></script>
+</p>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" style="border-top:1px solid #B1B4B6;">
+
+<!-- 多说评论框 start -->
+<!--
+  <div class="ds-thread" data-thread-key="" data-title="Basis &mdash; Neutrino Pi documentation" data-url=""></div>
+-->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sci2fi"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+-->
+<!-- 多说公共JS代码 end -->
+
+<!-- Disqus BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'neuphysics';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Disqus END -->
+
+
+      &copy;2014, Lei Ma. | <a href="index.html">Licenses</a>
+      |
+      <a href="genindex.html">Index</a>
+      |
+      
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/basis.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-66327435-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
