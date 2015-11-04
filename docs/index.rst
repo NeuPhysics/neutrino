@@ -49,8 +49,9 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    propagation.rst
    oscillations.rst
    vacuum.rst
-   matter.rst
    basis.rst
+   msw.rst
+   parametric.rst
    collective.rst
    qualitative.rst
    instability.rst
