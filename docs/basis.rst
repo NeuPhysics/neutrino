@@ -51,18 +51,28 @@ There are three most used bases, vacuum basis which diagonalizes the vacuum Hami
 
 
 
+Rotation of Pauli Matrices
+--------------------------------------------------
+
+
+Rotate :math:`\sigma_1` from vacuum basis to flavor basis,
+
+.. math::
+   &R_{v2f}(\theta) \sigma_1 R_{v2f}^{\dagger} \\
+   =& \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1.
+
+
+Rotate :math:`\sigma_3` from vacuum basis to flavor basis,
+
+
+.. math::
+   &R_{v2f}(\theta) \sigma_3 R_{v2f}^{\dagger} \\
+   =&  \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} \\
+   =& \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1.
+
 
 Rotation of Hamiltonian
 --------------------------
-
-
-
-
-.. admonition:: Vacuum Basis Hamiltonian
-   :class: note
-
-   .. math::
-      H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.
 
 
 Given the vacuum basis Hamiltonian :math:`H_v`, we can rotation it to flavor basis by using the rotation :math:`R_{v2f}(\theta_v)`
@@ -73,13 +83,47 @@ Given the vacuum basis Hamiltonian :math:`H_v`, we can rotation it to flavor bas
 Similarly, the flavor basis Hamiltonian :math:`H_f` can also be calculated from matter basis Hamiltonian :math:`H_m` ,
 
 .. math::
-   H_f = = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).
+   H_f = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).
+
+
+
+.. admonition:: Vacuum Basis Hamiltonian
+   :class: note
+
+   The Hamiltonian in this basis is composed of vacuum Hamiltonian which is diagonalized and the matter potential rotated from flavor basis,
+
+   .. math::
+      H_v &= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix}  \sigma_3 \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \\
+      &= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.
+
+
+
+
+.. admonition:: Flavor Basis Hamiltonian
+   :class: note
+
+   .. math::
+      H_f = - \frac{\omega}{2} \cos 2\theta \sigma_3 +  \frac{\omega}{2} \sin 2\theta \sigma_1 +  \frac{\lambda}{2} \sigma_3.
+
+
+
+As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basis.
+
+.. math::
+   H_f &= \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix}\\
+   &= \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} + \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} \\
+   & = \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
+   & = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
+   & = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .
+
 
 
 .. admonition:: Numerical Calculation of The Rotations
    :class: hint
 
    To write clean code, it is better to define and test there rotations first.
+
+
 
 
 
