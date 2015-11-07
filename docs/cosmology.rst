@@ -430,6 +430,50 @@ A simple back-of-the-envelope estimation by assuming an constant acceleceration 
 But we could alway use other approach like the one proposed by L. Stodolsky.
 
 
+Neutrino Capture on Unstable Nuclei
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+A nulei :math:`A_Z` that captures a electron neutrino will become :math:`A_{Z+1}`,
+
+.. math::
+   A_Z + \nu_e \to A_{Z+1} + m_e.
+
+Since a nutron is transformed into a proton through :math:`\nu_e + n\to e^- + p^+`, releasing energy :math:`Q` which is called the :math:`Q` value,
+
+.. math::
+   Q = m(A_Z) + m_{\nu_e} - m(A_{Z+1}) - m_e .
+
+By definition, :math:`Q` is the sumation of the kinetic energy difference of electrons and neutrinos,
+
+.. math::
+   K_{e^-} - K_{\nu_e} = Q.
+
+The beta decay :math:`Q` value of :math:`A_Z \to A_{Z+1} + e^- + \bar \nu_e` is given by
+
+.. math::
+   Q_\beta &= m(A_Z) - m(A_{Z+1}) - m_{e^-} - m_{\nu_e} \\
+   & = Q - m_{\nu_e} - m_{\nu_e}\\
+   &= Q - 2 m_{\nu_e} .
+
+The kinetic energy of electrons is
+
+.. math::
+   K_{e^-} &= Q + K_{\nu_e} \\
+   &= Q_\beta + 2 m_{\nu_e} + K_{\nu_e}.
+
+The key point comes next. In beta decay, the maximum electron kinetic energy is given by :math:`Q_\beta`, which means that even in a beta decay beckground, the electrons that is responsible for the neutrino capture is still distinguishable because their energy is larger than the the beta decay electrons' energy. The difference is as large as :math:`2 m_{\nu_e} + K_{\nu_e}` or :math:`2 m_{\nu_e}` as we are talking about CNB neutrino with :math:`K_{\nu_e}\to 0`.
+
+
+Even though it sounds feasible at this level, here are several questions to ask.
+
+* What nuclei should we use?
+* How many of such nuclei is needed? Can we produce them? Is is feasible to build a detector with so many such nuclei?
+
+
+The first question is related to cross section and life time. Large cross section and a suitable life time of the unstable nuclei :math:`A_Z` are needed. We also need to make sure that the signal we want can be seperated from the background beta decay signal.
+
+
 
 
 
