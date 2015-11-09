@@ -312,7 +312,7 @@ Red term is for charged current which exchanges the charge and blue term is for 
    .. math::
       \mathscr{L}(\Psi_1,\Psi_2,\Psi_3,\Psi_4) = [ \bar\Psi_1 \gamma^\mu ( 1 - \gamma^5 ) \Psi_2  ] [ \bar \Psi_3 \gamma_\mu ( 1-\gamma^5 ) \Psi_4 ],
 
-   exchange the field $\Psi_2$ and $\Psi_4$ doesn't change the result.
+   exchange the field :math:`\Psi_2` and :math:`\Psi_4` doesn't change the result.
 
    The Lagrangian is called V-A theory because people define
 
@@ -378,7 +378,7 @@ Is this small? Can we detect it? There are three different ideas given by Stodol
 
 The idea behind electron as detector is
 
-* electron Beams with equally $\pm$ helicity states,
+* electron Beams with equally :math:`\pm` helicity states,
 * + and - states have different energies = two different frequencies,
 * phase difference between the two states to be detected.
 
