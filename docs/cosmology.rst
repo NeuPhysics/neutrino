@@ -427,12 +427,14 @@ For an approximation, I use :math:`\nu_{relative}=10^{-3}c`, a proper set up of 
 A simple back-of-the-envelope estimation by assuming an constant acceleceration due to the CNB on the mirrors shows it is not possible to detect the effect of CNB modulation of the shift of the mirrors under current technology.
 
 
-But we could alway use other approach like the one proposed by L. Stodolsky.
+But we could alway use other approach like the one proposed by L. Stodolsky. [4]_
+
 
 
 Neutrino Capture on Unstable Nuclei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This is from the paper by Vogel. [1]_
 
 A nulei :math:`A_Z` that captures a electron neutrino will become :math:`A_{Z+1}`,
 
@@ -474,7 +476,25 @@ Even though it sounds feasible at this level, here are several questions to ask.
 The first question is related to cross section and life time. Large cross section and a suitable life time of the unstable nuclei :math:`A_Z` are needed. We also need to make sure that the signal we want can be seperated from the background beta decay signal.
 
 
+**We can estimate the material needed for such a detector using cross section of beta decay.** The meaning of cross section is almost the reaction rate divided by the initial flux, in more accurate language,
 
+.. math::
+   \sigma = \frac{\text{Reaction Rate} R }{ \text{Initla Flux} } \times \text{# of Final States}.
+
+Reaction rate means number of reactions per unit time, which is what we need to calculate the required mass of detector. The reaction rate of capture on tritium is calculated using [1]_
+
+.. math::
+   R &= \sigma\times n_\nu \times v_\nu \\
+   &= 1.8 \times 10^{-32} \frac{n_\nu}{\langle n_\nu \rangle} \mathrm{s}^{-1},
+
+where :math:`\frac{n_\nu}{\langle n_\nu \rangle}` accounts for the fact that the number density of CNB neutrinos at the detector (Earth) might be larger than the average in the whole universe due to gravity of our galaxy or some other effects. We also used the cross section of neutrino capture on tritium :math:`\sigma=1.5\times 10^{-41}\frac{m_\nu}{1\mathrm{eV}} \mathrm{cm}^2`.
+
+We estimate the reactions for tritium :math:`\mathrm{{}^3H}` mass :math:`m_t` during time :math:`t`,
+
+.. math::
+   N_R &= \frac{m_t}{\mu m_p} R t \\
+   & = \frac{1\mathrm{kg}}{3 m_p} R \times 1\mathrm{year} \frac{m_t}{1\mathrm{kg}} \frac{t}{1\mathrm{year}}\\
+   & = 6\times 10^{26} \times 1.8 \times 10^{-32} \frac{n_\nu}{\langle n_\nu \rangle} \mathrm{s}^{-1} \times 3\times 10^7 \mathrm{s} \frac{m_t}{1\mathrm{kg}} \frac{t}{1\mathrm{year}}
 
 
 
