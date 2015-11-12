@@ -161,19 +161,45 @@
 \[\begin{split}R_{v2f2m}(\theta_v,\theta_m) = \begin{pmatrix} \cos(\theta_v - \theta_m) &amp; \sin ( \theta_v - \theta_m ) \\ -\sin (\theta_v-\theta_m) &amp; \cos (\theta_v - \theta_m) \end{pmatrix}.\end{split}\]</div>
 </div>
 </div>
+<div class="section" id="rotation-of-pauli-matrices">
+<h2>Rotation of Pauli Matrices<a class="headerlink" href="#rotation-of-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<p>Rotate <span class="math">\(\sigma_1\)</span> from vacuum basis to flavor basis,</p>
+<div class="math">
+\[\begin{split}&amp;R_{v2f}(\theta) \sigma_1 R_{v2f}^{\dagger} \\
+=&amp; \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1.\end{split}\]</div>
+<p>Rotate <span class="math">\(\sigma_3\)</span> from vacuum basis to flavor basis,</p>
+<div class="math">
+\[\begin{split}&amp;R_{v2f}(\theta) \sigma_3 R_{v2f}^{\dagger} \\
+=&amp;  \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+=&amp; \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1.\end{split}\]</div>
+</div>
 <div class="section" id="rotation-of-hamiltonian">
 <h2>Rotation of Hamiltonian<a class="headerlink" href="#rotation-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
-<div class="note admonition">
-<p class="first admonition-title">Vacuum Basis Hamiltonian</p>
-<div class="last math">
-\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.\]</div>
-</div>
 <p>Given the vacuum basis Hamiltonian <span class="math">\(H_v\)</span>, we can rotation it to flavor basis by using the rotation <span class="math">\(R_{v2f}(\theta_v)\)</span></p>
 <div class="math">
 \[H_f = R_{v2f}(\theta_v) H_v R_{v2f}^{-1}(\theta_v).\]</div>
 <p>Similarly, the flavor basis Hamiltonian <span class="math">\(H_f\)</span> can also be calculated from matter basis Hamiltonian <span class="math">\(H_m\)</span> ,</p>
 <div class="math">
-\[H_f = = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).\]</div>
+\[H_f = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Vacuum Basis Hamiltonian</p>
+<p>The Hamiltonian in this basis is composed of vacuum Hamiltonian which is diagonalized and the matter potential rotated from flavor basis,</p>
+<div class="last math">
+\[\begin{split}H_v &amp;= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}  \sigma_3 \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \\
+&amp;= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.\end{split}\]</div>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Flavor Basis Hamiltonian</p>
+<div class="last math">
+\[H_f = - \frac{\omega}{2} \cos 2\theta \sigma_3 +  \frac{\omega}{2} \sin 2\theta \sigma_1 +  \frac{\lambda}{2} \sigma_3.\]</div>
+</div>
+<p>As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basis.</p>
+<div class="math">
+\[\begin{split}H_f &amp;= \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}\\
+&amp;= \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} + \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+&amp; = \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
+&amp; = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
+&amp; = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .\end{split}\]</div>
 <div class="hint admonition">
 <p class="first admonition-title">Numerical Calculation of The Rotations</p>
 <p class="last">To write clean code, it is better to define and test there rotations first.</p>
@@ -234,18 +260,6 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 </p>
 
 
-
-
-    
-
-<p>
-<a href="https://travis-ci.org/NeuPhysics/neutrino">
-    <img
-        alt="https://secure.travis-ci.org/NeuPhysics/neutrino.png?branch=master"
-        src="https://secure.travis-ci.org/NeuPhysics/neutrino.png?branch=master"
-    >
-</a>
-</p>
 <h3>ToC</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="preliminary.html">Preliminary</a></li>
@@ -258,6 +272,7 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Basis</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rotation-of-states">Rotation of States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rotation-of-pauli-matrices">Rotation of Pauli Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rotation-of-hamiltonian">Rotation of Hamiltonian</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rotating-basis">Rotating Basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#refs-notes">Refs &amp; Notes</a></li>

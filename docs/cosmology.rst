@@ -539,7 +539,7 @@ So we need a detector of tritium mass of the order 100 gram or more.
 
 **The problems, though, are also significant.**
 
-1. Seperate the CNB neutrino capture from the beta decay background requires a hell good of precision in energy detection. If the energy resolution is not enough to resolve a :math:`2m_\nu` energy difference, then the signal is hardly seperatable.
+1. Separate the CNB neutrino capture from the beta decay background requires a hell good of precision in energy detection. If the energy resolution is not enough to resolve a :math:`2m_\nu` energy difference, then the signal is hardly seperable.
 2. Tritium molecules capture a neutrino and become a :math:`t He^3` which has rotational and vibrational energy about :math:`0.36\mathrm{eV}`. This will cause a restriction on the energy resolution.
 3. Emitted electrons can be scattered by the tritium thus causing a energy redistribution.
 

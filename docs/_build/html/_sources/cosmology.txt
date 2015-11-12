@@ -312,7 +312,7 @@ Red term is for charged current which exchanges the charge and blue term is for 
    .. math::
       \mathscr{L}(\Psi_1,\Psi_2,\Psi_3,\Psi_4) = [ \bar\Psi_1 \gamma^\mu ( 1 - \gamma^5 ) \Psi_2  ] [ \bar \Psi_3 \gamma_\mu ( 1-\gamma^5 ) \Psi_4 ],
 
-   exchange the field $\Psi_2$ and $\Psi_4$ doesn't change the result.
+   exchange the field :math:`\Psi_2` and :math:`\Psi_4` doesn't change the result.
 
    The Lagrangian is called V-A theory because people define
 
@@ -378,7 +378,7 @@ Is this small? Can we detect it? There are three different ideas given by Stodol
 
 The idea behind electron as detector is
 
-* electron Beams with equally $\pm$ helicity states,
+* electron Beams with equally :math:`\pm` helicity states,
 * + and - states have different energies = two different frequencies,
 * phase difference between the two states to be detected.
 
@@ -427,8 +427,151 @@ For an approximation, I use :math:`\nu_{relative}=10^{-3}c`, a proper set up of 
 A simple back-of-the-envelope estimation by assuming an constant acceleceration due to the CNB on the mirrors shows it is not possible to detect the effect of CNB modulation of the shift of the mirrors under current technology.
 
 
-But we could alway use other approach like the one proposed by L. Stodolsky.
+But we could alway use other approach like the one proposed by L. Stodolsky. [4]_
 
+
+
+Neutrino Capture on Unstable Nuclei
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is from the paper by Vogel. [1]_
+
+
+.. figure:: assets/cosmology/bdecay.jpg
+   :align: center
+
+   Beta decay. From `KATRIN <https://www.katrin.kit.edu/79.php>`_
+
+A nulei :math:`A_Z` that captures a electron neutrino will become :math:`A_{Z+1}`,
+
+.. math::
+   A_Z + \nu_e \to A_{Z+1} + e^-.
+
+Since a nutron is transformed into a proton through :math:`\nu_e + n\to e^- + p^+`, releasing energy :math:`Q` which is called the :math:`Q` value,
+
+.. math::
+   Q = m(A_Z) + m_{\nu_e} - m(A_{Z+1}) - m_e .
+
+By definition, :math:`Q` is the sumation of the kinetic energy difference of electrons and neutrinos,
+
+.. math::
+   K_{e^-} - K_{\nu_e} = Q,
+
+since we have the conservation of energy
+
+.. math::
+   m(A_Z) + m_{\nu_e} + K_{\nu_e} - m(A_{Z+1}) - m_e -K_{e^-} =0 .
+
+The beta decay :math:`Q` value of :math:`A_Z \to A_{Z+1} + e^- + \bar \nu_e` is given by
+
+.. math::
+   Q_\beta &= m(A_Z) - m(A_{Z+1}) - m_{e^-} - m_{\nu_e} \\
+   & = Q - m_{\nu_e} - m_{\nu_e}\\
+   &= Q - 2 m_{\nu_e} .
+
+The kinetic energy of electrons is
+
+.. math::
+   K_{e^-} &= Q + K_{\nu_e} \\
+   &= Q_\beta + 2 m_{\nu_e} + K_{\nu_e}.
+
+
+.. figure:: assets/cosmology/beta_spectrum_of_RaE.jpg
+   :align: center
+
+   Beta dacay spectrum. From `File:Beta spectrum of RaE.jpg@Wikipedia <https://commons.wikimedia.org/wiki/File:Beta_spectrum_of_RaE.jpg>`_
+
+The key point comes next. In beta decay, the maximum electron kinetic energy is given by :math:`Q_\beta`, which means that even in a beta decay beckground, the electrons that is responsible for the neutrino capture is still distinguishable because their energy is larger than the the beta decay electrons' energy. The difference is as large as :math:`2 m_{\nu_e} + K_{\nu_e}` or :math:`2 m_{\nu_e}` as we are talking about CNB neutrino with :math:`K_{\nu_e}\to 0`.
+
+
+Even though it sounds feasible at this level, here are several questions to ask.
+
+* What nuclei should we use?
+* How many of such nuclei is needed? Can we produce them? Is is feasible to build a detector with so many such nuclei?
+
+
+The first question is related to cross section and life time. Large cross section and a suitable life time of the unstable nuclei :math:`A_Z` are needed. We also need to make sure that the signal we want can be seperated from the background beta decay signal.
+
+Anyway, what do we choose to use as the detector? Tritium.
+
+.. figure:: assets/cosmology/spectrum_rdax_1200x678.jpg
+   :align: center
+
+   Tritum decay spectrum. From `KATRIN <https://www.katrin.kit.edu/79.php>`_
+
+Tritum decay has a very clean and small tail. Since it is relatively light, the decay is more sensitive to neutrino mass. The life time is 12.3 years which is not too long nor too short.
+
+
+
+**We can estimate the material needed for such a detector using cross section of beta decay.** The meaning of cross section is almost the reaction rate divided by the initial flux, in more accurate language,
+
+.. math::
+   \sigma = \frac{\text{Reaction Rate} R }{ \text{Initla Flux} } \times \text{# of Final States}.
+
+
+
+Reaction rate means number of reactions per unit time, which is what we need to calculate the required mass of detector. The reaction rate of capture on tritium is calculated using [1]_
+
+.. math::
+   R &= \sigma\times n_\nu \times v_\nu \\
+   &= 1.8 \times 10^{-32} \frac{n_\nu}{\langle n_\nu \rangle} \mathrm{s}^{-1},
+
+where :math:`\frac{n_\nu}{\langle n_\nu \rangle}` accounts for the fact that the number density of CNB neutrinos at the detector (Earth) might be larger than the average in the whole universe due to gravity of our galaxy or some other effects. We also used the cross section of neutrino capture on tritium :math:`\sigma=1.5\times 10^{-41}\frac{m_\nu}{1\mathrm{eV}} \mathrm{cm}^2`.
+
+.. figure:: assets/cosmology/localEnhencementOfNeutrinoNumberDensity.png
+   :align: center
+
+   Local enhencement of neutrino number density. From `Formaggio's talk at int <http://www.int.washington.edu/talks/WorkShops/int_10_44W/People/Formaggio_J/Formaggio.pdf>`_
+
+We estimate the reactions for tritium :math:`\mathrm{{}^3H}` mass :math:`m_t` during time :math:`t`,
+
+.. math::
+   N_R &= \frac{m_t}{\mu m_p} R t \\
+   & = \frac{1\mathrm{kg}}{3 m_p} R \times 1\mathrm{year} \frac{m_t}{1\mathrm{kg}} \frac{t}{1\mathrm{year}}\\
+   & = 6\times 10^{26} \times 1.8 \times 10^{-32} \frac{n_\nu}{\langle n_\nu \rangle} \mathrm{s}^{-1} \times 3\times 10^7 \mathrm{s} \frac{m_t}{1\mathrm{kg}} \frac{t}{1\mathrm{year}}
+
+
+For tritium, the result is that :math:`100\mathrm{g}` will result in about 83 events per year if we use :math:`n_\nu/\langle n_\nu \rangle =10`.
+
+So we need a detector of tritium mass of the order 100 gram or more.
+
+
+
+**The problems, though, are also significant.**
+
+1. Separate the CNB neutrino capture from the beta decay background requires a hell good of precision in energy detection. If the energy resolution is not enough to resolve a :math:`2m_\nu` energy difference, then the signal is hardly seperable.
+2. Tritium molecules capture a neutrino and become a :math:`t He^3` which has rotational and vibrational energy about :math:`0.36\mathrm{eV}`. This will cause a restriction on the energy resolution.
+3. Emitted electrons can be scattered by the tritium thus causing a energy redistribution.
+
+.. admonition:: Other Background
+   :class: note
+
+   Solar neutrino of pp reaction is not a issue because the energy range 0eV to 10eV only has a neutrino number density :math:`10^6\mathrm{cm}^{-2} \mathrm{s}^{-1}`. This is less than 1 percent of the effective flux of CNB. [9]_
+
+As for the resolution problem, we can estimate the requirement. [8]_
+
+To calculate number the events in a energy interval, we only need to integrate the rate over the F-D distribution. The ratio of the events from captured CNB neutrino and events of beta decay is
+
+.. math::
+   \frac{N_\nu}{N_\beta} \sim \frac{n_\nu}{\Delta^3},
+
+where :math:`\Delta` is the width of the resolution. The actual result is [1]_
+
+.. math::
+   \frac{N_\nu}{N_\beta} \sim 2.5\times 10^{-11} \times \frac{n_\nu}{\langle n_\nu \rangle} \times \frac{1}{ (\Delta/1\mathrm{eV})^3 }.
+
+A more precise numerical calculation assuming mass of neutrino :math:`m_\nu=1\mathrm{eV}` and resolution :math:`\Delta = 0.5\mathrm{eV}` shows that we need at least a resolution that satisfies :math:`m_\nu/\Delta > 2` where :math:`n_\nu/\langle n_\nu \rangle = 50` is used. [9]_
+
+.. figure:: assets/cosmology/energyResolutionAndSignal.png
+   :align: center
+
+   Seperation of signals for :math:`n_\nu/\langle n_\nu \rangle = 50`. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).
+
+
+.. figure:: assets/cosmology/resolutionRequirement4DifferentMass.png
+   :align: center
+
+   For the signal strength :math:`N_\nu/N_\beta` to be 1, the relation of mass and resolution. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).
 
 
 
@@ -450,3 +593,6 @@ Refs & Notes
 .. [4] L. Stodolsky, `Speculations on Detection of the "Neutrino Sea" <http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.34.110>`_ Phys. Rev. Lett. 34, 110 (1975); (erratum) Phys. Rev. Lett. 34, 508 (1975).
 .. [5] Lewis, R. R. (1980). Coherent detector for low-energy neutrinos. Physical Review D, 21(3), 663–668. doi:10.1103/PhysRevD.21.663.
 .. [6] Weiler, T. (1982). Resonant Absorption of Cosmic-Ray Neutrinos by the Relic-Neutrino Background. Physical Review Letters, 49(3), 234–237. doi:10.1103/PhysRevLett.49.234
+.. [7] `arXiv:1304.5632 [nucl-th] <http://arxiv.org/abs/1304.5632>`_ .
+.. [8] A. G. Cocco, G. Magnano and M. Mesina, JCAP 0706, 015 (2007). 22.
+.. [9] R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).
