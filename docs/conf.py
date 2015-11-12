@@ -294,14 +294,14 @@ latex_docclass = {
 }
 
 latex_additional_files = [
-    'tex/puthesis.cls',
-    'tex/preamble._tex',
-    'tex/footer._tex',
-    'tex/sphinx.sty',
-    'tex/Makefile',
-#    'tex/refstyle.bst',
+    'config/tex/puthesis.cls',
+    'config/tex/preamble._tex',
+    'config/tex/footer._tex',
+    'config/tex/sphinx.sty',
+    'config/tex/Makefile',
+#    'config/tex/refstyle.bst',
 #    'refs.bib',
-    'tex/ccicons.sty',
+    'config/tex/ccicons.sty',
 ]
 
 
