@@ -7,7 +7,7 @@ Common Sense
 Units
 -------------------
 
-Natural units makes the calculation of neutrinos convinient. The consequences are
+Natural units makes the calculation of neutrinos convenient. The consequences are
 
 1. The energy-mass-momentum relations becomes :math:`E^2 = p^2 + m^2`. Thus mass :math:`m`, momentum :math:`\mathbf p` and energy :math:`E` have the same units.
 2. Angular momentum in quantum mechanics is :math:`L_z = m\hbar` where :math:`m` is a number. :math:`\hbar` is of unit angular momentum.

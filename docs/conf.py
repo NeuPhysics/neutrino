@@ -102,7 +102,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Neutrino'
-copyright = u'2014, Lei Ma'
+copyright = u'2015, Lei Ma'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -242,6 +242,14 @@ htmlhelp_basename = 'Neutrinodoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
+
+## I grabbed from https://github.com/jterrace/sphinxtr/blob/master/conf.py for this additional_preamble config
+
+# ADDITIONAL_PREAMBLE = """
+#\input{preamble._tex}
+#\usepackage{sphinx}
+#"""
+
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
     'papersize': 'letterpaper',
@@ -250,14 +258,14 @@ latex_elements = {
     'pointsize': '12pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+#'preamble': ADDITIONAL_PREAMBLE,
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Neutrino.tex', u'Neutrino Documentation',
+  ('index', 'neutrino.tex', u'Neutrino Notes',
    u'Lei Ma', 'manual'),
 ]
 
@@ -280,6 +288,23 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_domain_indices = True
+
+latex_docclass = {
+    'manual': 'puthesis',
+}
+
+latex_additional_files = [
+    'tex/puthesis.cls',
+    'tex/preamble._tex',
+    'tex/footer._tex',
+    'tex/sphinx.sty',
+    'tex/Makefile',
+#    'tex/refstyle.bst',
+#    'refs.bib',
+    'tex/ccicons.sty',
+]
+
+
 
 
 # -- Options for manual page output ---------------------------------------
@@ -322,10 +347,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Neutrino'
+epub_title = u'neutrino'
 epub_author = u'Lei Ma'
 epub_publisher = u'Lei Ma'
-epub_copyright = u'2014, Lei Ma'
+epub_copyright = u'2015, Lei Ma'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
