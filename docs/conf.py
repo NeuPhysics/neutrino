@@ -295,8 +295,8 @@ latex_docclass = {
 
 latex_additional_files = [
     'config/tex/puthesis.cls',
-    'config/tex/preamble._tex',
-    'config/tex/footer._tex',
+#    'config/tex/preamble._tex',
+#    'config/tex/footer._tex',
     'config/tex/sphinx.sty',
     'config/tex/Makefile',
 #    'config/tex/refstyle.bst',
