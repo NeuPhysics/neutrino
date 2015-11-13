@@ -8,15 +8,17 @@ Neutrino Physics
 
 Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos were first detected in Cowan–Reines neutrino experiment. [1]_ Later on a lot of neutrino experiments have been carried out.
 
-.. image:: assets/FirstNeutrinoEventAnnotated.jpg
-   :align: center
-
-
-
-
-
 
 .. [1] `Cowan–Reines neutrino experiment <https://en.wikipedia.org/wiki/Cowan%E2%80%93Reines_neutrino_experiment>`_
+
+
+.. figure:: assets/FirstNeutrinoEventAnnotated.jpg
+   :align: center
+
+   First detection of neutrino
+
+
+
 
 
 
