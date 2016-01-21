@@ -60,6 +60,7 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    picture.rst
    models.rst
    mastereqn.rst
+   astrophysics.rst
    gravity.rst
    cosmology.rst
    misc.rst
