@@ -128,11 +128,14 @@ As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basi
 
 
 
-Rotating Basis
--------------------------
+Examples of Rotating Basis
+-------------------------------------
 
 
-In vacuum basis, Hamiltonian is
+Rotate From Vacuum to Another Basis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In vacuum basis, Hamiltonian with matter interaction is
 
 .. math::
    H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,
@@ -144,10 +147,49 @@ where we have got a contribution of :math:`\sigma_3` from matter interaction. By
    e^{-i \eta(x) x} & 0 \\  0 & e^{i \eta(x) x}
    \end{pmatrix} \begin{pmatrix}\psi_{b1} \\ \psi_{b2} \end{pmatrix},
 
-where :math:`\eta(x)` is a function of position. We can find the requirement of it by plug the wavefunction into Schrodinger equation, which results in
+where :math:`\eta(x)` is a function of position. We can find the requirement of it by plugging the wavefunction into Schrodinger equation, which results in
 
 .. math::
    \eta + x \frac{d\eta }{dx} = \frac{\lambda}{2} \cos 2\theta_v.
+
+
+.. admonition:: Derivation of :math:`\eta`
+   :class: note
+
+   Plug the transformation into Schrodinger equation,
+
+   .. math::
+      \mathrm{LHS} &= i \frac{d}{dx} \left[  \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \right] \\
+      & = i \begin{pmatrix}  - i \eta(x) e^{-i \eta(x) x} - i x \frac{d\eta(x)}{dx} e^{-i \eta(x) x}  & 0 \\  0 & i\eta(x) e^{i\eta(x) x} + i x \frac{d\eta(x)}{dx} e^{i\eta(x)x}  \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}   +  i \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x}  \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}
+
+   Multiplying on both sides of the equation the Hermitian conjugate of the transformation matrix
+
+   .. math::
+      \begin{pmatrix} e^{i\eta(x)x} & 0 \\ 0 & e^{-i \eta(x)x} \end{pmatrix},
+
+   the two sides becomes
+
+   .. math::
+      \begin{pmatrix} e^{i\eta(x)x} & 0 \\ 0 & e^{-i \eta(x)x} \end{pmatrix}\mathrm{LHS} & = i \begin{pmatrix} - i\eta{x} - i x \frac{d\eta(x)}{dx} &  0 \\ 0 & i \eta(x) + i x \frac{d\eta(x)}{dx} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+      \begin{pmatrix} e^{i\eta(x)x} & 0 \\ 0 & e^{-i \eta(x)x} \end{pmatrix} \mathrm{RHS} & = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \cos 2\theta_v \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 & e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} & 0 \end{pmatrix}  \right)  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} .
+
+   We choose the condition that
+
+   .. math::
+      \eta(x) + x \frac{d\eta(x)}{dx} = \frac{\lambda(x)}{2} \cos 2\theta_v,
+
+   which removes the second term in the Hamiltonian in vacuum basis. Finally we have the equation of motion in this new basis
+
+   .. math::
+      i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 & e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} & 0 \end{pmatrix} \right) \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.
+
+
+   We could even remove all the :math:`\sigma_3` terms using this method by choosing
+
+   .. math::
+      \eta(x) + x \frac{d\eta(x)}{dx} = -\frac{\omega}{2} + \frac{\lambda(x)}{2} \cos 2\theta_v.
+
+
 
 The general solution is
 
@@ -176,7 +218,7 @@ In this new basis, the Hamiltonian becomes
    & =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.
 
 
-
+**However, it should be noticed that the equation is not completely  since the roation is position dependent
 
 
 
