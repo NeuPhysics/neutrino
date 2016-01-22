@@ -220,7 +220,60 @@ In this new basis, the Hamiltonian becomes
    & =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.
 
 
-**However, it should be noticed that the equation is not completely  since the roation is position dependent
+
+
+Constant Matter Eigen Basis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For a Hamiltonian with matter interection,
+
+.. math::
+   H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,
+
+where :math:`\lambda(x) = \lambda_0 + \lambda_1(x)`. We rotate it into constant matter basis where the Hamiltonian is diagonalized with only :math:`\lambda_0`,
+
+.. math::
+   H_m = R_{v2m} H_v R_{v2m}^\dagger,
+
+where :math:`U` rotates the state from vacuum basis to constant matter basis.
+
+In general the Hamiltonian after the rotation is written in a form
+
+.. math::
+   H_m = H_0 + R_{f2m}^\dagger \lambda_{1,f}(x) R_{f2m},
+
+in which :math:`R_{f2m}` is the rotation from flavor basis to constant matter basis and :math:`\lambda_{1,f}` is the perturbation of matter profile in flavor basis. We also have
+
+.. math::
+   H_0 = \begin{pmatrix} \omega_{m1} & 0 \\ 0 & \omega_{m2} \end{pmatrix}
+
+and
+
+.. math::
+   \lambda_{1,f}(x) = \begin{pmatrix} \delta\lambda & 0 \\ 0 & 0  \end{pmatrix}.
+
+
+.. admonition:: Another Form of Matter Potential
+   :class: hint
+
+   For the perturbation we could also make it traceless without changing the probabilities.
+
+
+
+
+
+.. admonition:: Position Dependent Rotation
+   :class: hint
+
+   If the rotation is position dependent, i.e., the matter profile :math:`\lambda_0` is not position independent, we have, in general,
+
+   .. math::
+      H_m = H_0 - i R_{f2m}^\dagger \frac{d}{dx} R_{f2m} + R_{f2m}^\dagger \lambda_1(x) R_{f2m}.
+
+   In the case of discussion here, :math:`\frac{d}{dx} R_{f2m}=0`.
+
+
+
 
 
 
