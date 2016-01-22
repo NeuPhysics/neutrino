@@ -110,11 +110,12 @@ Similarly, the flavor basis Hamiltonian :math:`H_f` can also be calculated from 
 As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basis.
 
 .. math::
-   H_f &= \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix}\\
-   &= \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} + \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} \\
-   & = \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
-   & = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
-   & = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .
+   H_f =& \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix}\\
+   =& \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} \\
+   &+ \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta & \sin \theta \\ -\sin \theta & \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos\theta \end{pmatrix} \\
+   =& \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
+   =& -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
+   =& -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .
 
 
 
@@ -159,8 +160,9 @@ where :math:`\eta(x)` is a function of position. We can find the requirement of 
    Plug the transformation into Schrodinger equation,
 
    .. math::
-      \mathrm{LHS} &= i \frac{d}{dx} \left[  \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \right] \\
-      & = i \begin{pmatrix}  - i \eta(x) e^{-i \eta(x) x} - i x \frac{d\eta(x)}{dx} e^{-i \eta(x) x}  & 0 \\  0 & i\eta(x) e^{i\eta(x) x} + i x \frac{d\eta(x)}{dx} e^{i\eta(x)x}  \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}   +  i \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x}  \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}
+      \mathrm{LHS} =& i \frac{d}{dx} \left[  \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \right] \\
+      =& i \begin{pmatrix}  - i \eta(x) e^{-i \eta(x) x} - i x \frac{d\eta(x)}{dx} e^{-i \eta(x) x}  & 0 \\  0 & i\eta(x) e^{i\eta(x) x} + i x \frac{d\eta(x)}{dx} e^{i\eta(x)x}  \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+      & +  i \begin{pmatrix} e^{-i\eta(x) x} & 0 \\  0 & e^{i\eta(x) x}  \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}
 
    Multiplying on both sides of the equation the Hermitian conjugate of the transformation matrix
 
@@ -191,7 +193,7 @@ where :math:`\eta(x)` is a function of position. We can find the requirement of 
 
 
 
-The general solution is
+The general solution of :math:`\eta(x)` is
 
 .. math::
    \eta(x) = \frac{Constant}{x} + \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau,
