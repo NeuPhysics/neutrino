@@ -36,7 +36,7 @@ There are three most used bases, vacuum basis which diagonalizes the vacuum Hami
   The matter mixing angle is determined by the matter potential :math:`\lambda = \sqrt{2}G_F n_e`,
 
   .. math::
-     \tan\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},
+     \tan 2\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},
 
   where :math:`\omega = \delta m^2 /2E` is the vacuum frequency of neutrinos.
 
