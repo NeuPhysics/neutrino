@@ -24,6 +24,7 @@ Neutrino is one of the most interesting particles in our world. The first propos
 
 This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutrino.xyz <http://neutrino.xyz>`_ .
 
+Key steps of some research is hosted on bitbucket as private repository `here <https://bitbucket.org/neuphysics/neutrino-reseaching>`_ . Login to view the most current research if you have access to it.
 
 Support us:
 
@@ -54,6 +55,7 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    basis.rst
    msw.rst
    parametric.rst
+   matter-driven.rst
    collective.rst
    qualitative.rst
    instability.rst
