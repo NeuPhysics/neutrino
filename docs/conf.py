@@ -75,7 +75,7 @@ latex_preamble = r"""
 
 % Fix figure too large problem
 %http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
-\setkeys{Gin}{width=.85\csname Gin@nat@width\endcsname,keepaspectratio}
+\setkeys{Gin}{width=.70\csname Gin@nat@width\endcsname,keepaspectratio}
 %\let\ORIincludegraphics\includegraphics
 %\renewcommand{\includegraphics}[2][]{\ORIincludegraphics[width=0.85,#1]{#2}}
 
