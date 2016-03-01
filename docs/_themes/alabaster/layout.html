@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -58,7 +58,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });

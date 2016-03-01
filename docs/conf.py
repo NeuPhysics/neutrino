@@ -77,7 +77,7 @@ latex_preamble = r"""
 %http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
 %\setkeys{Gin}{width=.85\csname Gin@nat@width\endcsname,keepaspectratio}
 \let\ORIincludegraphics\includegraphics
-\renewcommand{\includegraphics}[2][]{\ORIincludegraphics[scale=0.75,#1]{#2}}
+\renewcommand{\includegraphics}[2][]{\ORIincludegraphics[width=0.85,#1]{#2}}
 
 % Adding Math Equations to Section Titles Leads to Error
 %https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
