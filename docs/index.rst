@@ -28,12 +28,6 @@ Key steps of some research is hosted on bitbucket as private repository `here <h
 
 
 
-.. figure:: assets/neutrino-cheat-sheet.png
-   :align: center
-
-   Neutrino cheat sheet. PDF file can be downloaded `here <https://github.com/emptymalei/poster>`_.
-
-
 Support us:
 
 .. raw:: html
@@ -74,5 +68,6 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    gravity.rst
    cosmology.rst
    misc.rst
+   cheatsheet.rst
    ref.rst
    acknowledgement.rst

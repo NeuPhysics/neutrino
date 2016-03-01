@@ -26,6 +26,24 @@
 \usepackage{slashed}
 \usepackage{graphicx}
 
+% Fix figure too large problem
+%http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
+%\setkeys{Gin}{width=.85\csname Gin@nat@width\endcsname,keepaspectratio}
+\let\ORIincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\ORIincludegraphics[scale=0.75,#1]{#2}}
+
+% Adding Math Equations to Section Titles Leads to Error
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{etoolbox}
+\robustify\(
+\robustify\)
+
+% fix Footnotes Numbering Does Not Reset on Every Page
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+
 \newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
 \newcommand{\overl}[1]{\overset\leftarrow{#1}}
 \newcommand{\overr}[1]{\overset\rightarrow{#1}}
@@ -164,11 +182,6 @@ Neutrino is one of the most interesting particles in our world. The first propos
 This project is part of \href{http://neutrino.xyz}{NeuPhysics} . Try \href{http://neutrino.xyz}{http://neutrino.xyz} .
 
 Key steps of some research is hosted on bitbucket as private repository \href{https://bitbucket.org/neuphysics/neutrino-reseaching}{here} . Login to view the most current research if you have access to it.
-\begin{figure}[htbp]
-\centering
-
-\includegraphics{{neutrino-cheat-sheet}.png}
-\end{figure}
 
 Support us:
 
@@ -5871,6 +5884,23 @@ Why is solar neutrinos consists of almost 1/3 of each flavor?
 
 \section{Refs \& Notes}
 \label{misc:refs-notes}
+
+\chapter{Neutrino Physics Cheat Sheet}
+\label{cheatsheet:neutrino-physics-cheat-sheet}\label{cheatsheet::doc}\begin{figure}[htbp]
+\centering
+\capstart
+
+\includegraphics{{neutrino-cheat-sheet}.png}
+\caption{Neutrino cheat sheet. PDF file can be downloaded from \href{https://github.com/emptymalei/poster}{https://github.com/emptymalei/poster} .}\end{figure}
+
+
+\section{Refs \& Notes}
+\label{cheatsheet:refs-notes}\begin{enumerate}
+\item {} 
+\href{https://github.com/emptymalei/poster}{https://github.com/emptymalei/poster}
+
+\end{enumerate}
+
 
 \chapter{References}
 \label{ref:references}\label{ref::doc}
