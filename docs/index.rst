@@ -68,3 +68,10 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    misc.rst
    ref.rst
    acknowledgement.rst
+
+
+
+.. figure:: assets/neutrino-cheat-sheet.png
+   :align: center
+
+   Neutrino cheat sheet. PDF file can be downloaded `here <https://github.com/emptymalei/poster>`_.
