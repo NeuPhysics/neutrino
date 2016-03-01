@@ -150,7 +150,7 @@
 \[\begin{split}R_{m2f}(\theta_m) = \begin{pmatrix} \cos\theta_m &amp; \sin \theta_m \\ -\sin \theta_m &amp; \cos \theta_m \end{pmatrix}.\end{split}\]</div>
 <p>The matter mixing angle is determined by the matter potential <span class="math">\(\lambda = \sqrt{2}G_F n_e\)</span>,</p>
 <div class="math">
-\[\tan\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},\]</div>
+\[\tan 2\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},\]</div>
 <p>where <span class="math">\(\omega = \delta m^2 /2E\)</span> is the vacuum frequency of neutrinos.</p>
 </li>
 </ul>
@@ -195,19 +195,22 @@
 </div>
 <p>As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basis.</p>
 <div class="math">
-\[\begin{split}H_f &amp;= \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}\\
-&amp;= \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} + \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
-&amp; = \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
-&amp; = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
-&amp; = -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .\end{split}\]</div>
+\[\begin{split}H_f =&amp; \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}\\
+=&amp; \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+&amp;+ \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+=&amp; \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
+=&amp; -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
+=&amp; -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .\end{split}\]</div>
 <div class="hint admonition">
 <p class="first admonition-title">Numerical Calculation of The Rotations</p>
 <p class="last">To write clean code, it is better to define and test there rotations first.</p>
 </div>
 </div>
-<div class="section" id="rotating-basis">
-<h2>Rotating Basis<a class="headerlink" href="#rotating-basis" title="Permalink to this headline">¶</a></h2>
-<p>In vacuum basis, Hamiltonian is</p>
+<div class="section" id="examples-of-rotating-basis">
+<h2>Examples of Rotating Basis<a class="headerlink" href="#examples-of-rotating-basis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rotate-from-vacuum-to-another-basis">
+<h3>Rotate From Vacuum to Another Basis<a class="headerlink" href="#rotate-from-vacuum-to-another-basis" title="Permalink to this headline">¶</a></h3>
+<p>In vacuum basis, Hamiltonian with matter interaction is</p>
 <div class="math">
 \[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,\]</div>
 <p>where we have got a contribution of <span class="math">\(\sigma_3\)</span> from matter interaction. By carefully defining a transformation that removes this contribution, we can define a new basis in which the wavefunction is <span class="math">\(\Psi_b\)</span>, which is related to the vacuum basis wavefunction in the following way,</p>
@@ -215,10 +218,34 @@
 \[\begin{split}\begin{pmatrix}\psi_{v1} \\ \psi_{v2} \end{pmatrix}  = \begin{pmatrix}
 e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 \end{pmatrix} \begin{pmatrix}\psi_{b1} \\ \psi_{b2} \end{pmatrix},\end{split}\]</div>
-<p>where <span class="math">\(\eta(x)\)</span> is a function of position. We can find the requirement of it by plug the wavefunction into Schrodinger equation, which results in</p>
+<p>where <span class="math">\(\eta(x)\)</span> is a function of position. We can find the requirement of it by plugging the wavefunction into Schrodinger equation, which results in</p>
 <div class="math">
 \[\eta + x \frac{d\eta }{dx} = \frac{\lambda}{2} \cos 2\theta_v.\]</div>
-<p>The general solution is</p>
+<div class="note admonition">
+<p class="first admonition-title">Derivation of <span class="math">\(\eta\)</span></p>
+<p>Plug the transformation into Schrodinger equation,</p>
+<div class="math">
+\[\begin{split}\mathrm{LHS} =&amp; i \frac{d}{dx} \left[  \begin{pmatrix} e^{-i\eta(x) x} &amp; 0 \\  0 &amp; e^{i\eta(x) x} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \right] \\
+=&amp; i \begin{pmatrix}  - i \eta(x) e^{-i \eta(x) x} - i x \frac{d\eta(x)}{dx} e^{-i \eta(x) x}  &amp; 0 \\  0 &amp; i\eta(x) e^{i\eta(x) x} + i x \frac{d\eta(x)}{dx} e^{i\eta(x)x}  \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+&amp; +  i \begin{pmatrix} e^{-i\eta(x) x} &amp; 0 \\  0 &amp; e^{i\eta(x) x}  \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}\end{split}\]</div>
+<p>Multiplying on both sides of the equation the Hermitian conjugate of the transformation matrix</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix},\end{split}\]</div>
+<p>the two sides becomes</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix}\mathrm{LHS} &amp; = i \begin{pmatrix} - i\eta{x} - i x \frac{d\eta(x)}{dx} &amp;  0 \\ 0 &amp; i \eta(x) + i x \frac{d\eta(x)}{dx} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix} \mathrm{RHS} &amp; = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \cos 2\theta_v \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} &amp; 0 \end{pmatrix}  \right)  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} .\end{split}\]</div>
+<p>We choose the condition that</p>
+<div class="math">
+\[\eta(x) + x \frac{d\eta(x)}{dx} = \frac{\lambda(x)}{2} \cos 2\theta_v,\]</div>
+<p>which removes the second term in the Hamiltonian in vacuum basis. Finally we have the equation of motion in this new basis</p>
+<div class="math">
+\[\begin{split}i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} &amp; 0 \end{pmatrix} \right) \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.\end{split}\]</div>
+<p>We could even remove all the <span class="math">\(\sigma_3\)</span> terms using this method by choosing</p>
+<div class="last math">
+\[\eta(x) + x \frac{d\eta(x)}{dx} = -\frac{\omega}{2} + \frac{\lambda(x)}{2} \cos 2\theta_v.\]</div>
+</div>
+<p>The general solution of <span class="math">\(\eta(x)\)</span> is</p>
 <div class="math">
 \[\eta(x) = \frac{Constant}{x} + \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau,\]</div>
 <p>where the constant can always be set to 0, which tells us that</p>
@@ -234,6 +261,37 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 <div class="math">
 \[\begin{split}H_b &amp;= - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{i 2\eta(x) x} \\ e^{ - i 2\eta(x) x} &amp; 0  \end{pmatrix} \\
 &amp; =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.\end{split}\]</div>
+</div>
+<div class="section" id="constant-matter-eigen-basis">
+<h3>Constant Matter Eigen Basis<a class="headerlink" href="#constant-matter-eigen-basis" title="Permalink to this headline">¶</a></h3>
+<p>For a Hamiltonian with matter interection,</p>
+<div class="math">
+\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,\]</div>
+<p>where <span class="math">\(\lambda(x) = \lambda_0 + \lambda_1(x)\)</span>. We rotate it into constant matter basis where the Hamiltonian is diagonalized with only <span class="math">\(\lambda_0\)</span>,</p>
+<div class="math">
+\[H_m = R_{v2m} H_v R_{v2m}^\dagger,\]</div>
+<p>where <span class="math">\(U\)</span> rotates the state from vacuum basis to constant matter basis.</p>
+<p>In general the Hamiltonian after the rotation is written in a form</p>
+<div class="math">
+\[H_m = H_0 + R_{f2m}^\dagger \lambda_{1,f}(x) R_{f2m},\]</div>
+<p>in which <span class="math">\(R_{f2m}\)</span> is the rotation from flavor basis to constant matter basis and <span class="math">\(\lambda_{1,f}\)</span> is the perturbation of matter profile in flavor basis. We also have</p>
+<div class="math">
+\[\begin{split}H_0 = \begin{pmatrix} \omega_{m1} &amp; 0 \\ 0 &amp; \omega_{m2} \end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math">
+\[\begin{split}\lambda_{1,f}(x) = \begin{pmatrix} \delta\lambda &amp; 0 \\ 0 &amp; 0  \end{pmatrix}.\end{split}\]</div>
+<div class="hint admonition">
+<p class="first admonition-title">Another Form of Matter Potential</p>
+<p class="last">For the perturbation we could also make it traceless without changing the probabilities.</p>
+</div>
+<div class="hint admonition">
+<p class="first admonition-title">Position Dependent Rotation</p>
+<p>If the rotation is position dependent, i.e., the matter profile <span class="math">\(\lambda_0\)</span> is not position independent, we have, in general,</p>
+<div class="math">
+\[H_m = H_0 - i R_{f2m}^\dagger \frac{d}{dx} R_{f2m} + R_{f2m}^\dagger \lambda_1(x) R_{f2m}.\]</div>
+<p class="last">In the case of discussion here, <span class="math">\(\frac{d}{dx} R_{f2m}=0\)</span>.</p>
+</div>
+</div>
 </div>
 <div class="section" id="refs-notes">
 <h2>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
@@ -274,18 +332,20 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 <li class="toctree-l2"><a class="reference internal" href="#rotation-of-states">Rotation of States</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rotation-of-pauli-matrices">Rotation of Pauli Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rotation-of-hamiltonian">Rotation of Hamiltonian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rotating-basis">Rotating Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-of-rotating-basis">Examples of Rotating Basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#refs-notes">Refs &amp; Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
@@ -300,7 +360,7 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 <h3>Links</h3>
 <ul>
    <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
-   <li class="toctree-l1"><a href="http://openmetric.org/physics" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
+   <li class="toctree-l1"><a href="http://physics.openmetric.org" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
    <li class="toctree-l1"><a href="http://interimm.org" style="color:orange;"><i class="fa fa-rocket"></i>&nbsp;星际移民中心</a></li>
 </ul>
 <div id="searchbox" style="display: none" role="search">
@@ -373,8 +433,8 @@ var duoshuoQuery = {short_name:"sci2fi"};
       <a href="genindex.html">Index</a>
       |
       
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
       <a href="_sources/basis.txt"

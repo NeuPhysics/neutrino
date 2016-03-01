@@ -71,8 +71,10 @@ The deflection of photons near a star is,
 This is the deflection angle of a photon coming from infinite. However, the angle deflected for a photon emitted at tangent is different.
 
 
-.. image:: assets/tangentNeutrinoGravitation.png
+.. figure:: assets/tangentNeutrinoGravitation.png
    :align: center
+
+   neutrino gravitatioin
 
 A detailed calculation shows, [1]_
 

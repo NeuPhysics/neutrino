@@ -252,7 +252,7 @@ This new rotation in matrix form is
    which leads to the result of the diagonalized Hamiltonian
 
    .. math::
-      \mathbf{H_{xd}} = \frac{\omega}{2}\sqrt{\Delta^2 +1 - 2\hat\Delta \cos 2\theta_v} \begin{pmatrix}
+      \mathbf{H_{xd}} = \frac{\omega}{2}\sqrt{\hat\Delta^2 +1 - 2\hat\Delta \cos 2\theta_v} \begin{pmatrix}
       -1 & 0 \\
       0 & 1
       \end{pmatrix}.

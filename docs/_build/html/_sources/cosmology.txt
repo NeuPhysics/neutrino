@@ -497,7 +497,7 @@ Anyway, what do we choose to use as the detector? Tritium.
 .. figure:: assets/cosmology/spectrum_rdax_1200x678.jpg
    :align: center
 
-   Tritum decay spectrum. From `KATRIN <https://www.katrin.kit.edu/79.php>`_
+   Tritum decay spectrum. From KATRIN.
 
 Tritum decay has a very clean and small tail. Since it is relatively light, the decay is more sensitive to neutrino mass. The life time is 12.3 years which is not too long nor too short.
 

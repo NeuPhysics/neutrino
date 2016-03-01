@@ -126,14 +126,16 @@ Wigner function is an analogue of the classical phase-space probability distribu
 There is a collection of Wigner functions on this site. [3]_
 
 
+
+.. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
+
+
+
 .. admonition:: Question
    :class: note
 
    How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.
 
-
-
-.. [3] `http://www.iqst.ca/quantech/wigner.php <http://www.iqst.ca/quantech/wigner.php>`_
 
 
 

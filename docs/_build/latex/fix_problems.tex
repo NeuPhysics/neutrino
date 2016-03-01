@@ -1,0 +1,15 @@
+% Adding Math Equations to Section Titles Leads to Error
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{etoolbox}
+\robustify\(
+\robustify\)
+
+% fix Footnotes Numbering Does Not Reset on Every Page
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+% Fix figure too large problem
+%http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
+\usepackage{graphicx}
+\setkeys{Gin}{width=.75\csname Gin@nat@width\endcsname,keepaspectratio}

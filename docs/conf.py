@@ -73,6 +73,22 @@ latex_preamble = r"""
 \usepackage{slashed}
 \usepackage{graphicx}
 
+% Fix figure too large problem
+%http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
+\setkeys{Gin}{width=.75\csname Gin@nat@width\endcsname,keepaspectratio}
+
+% Adding Math Equations to Section Titles Leads to Error
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{etoolbox}
+\robustify\(
+\robustify\)
+
+% fix Footnotes Numbering Does Not Reset on Every Page
+%https://www.topbug.net/blog/2015/12/10/a-collection-of-issues-about-the-latex-output-in-sphinx-and-the-solutions/
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+
 \newcommand{\overlr}[1]{\overset\leftrightarrow{#1}}
 \newcommand{\overl}[1]{\overset\leftarrow{#1}}
 \newcommand{\overr}[1]{\overset\rightarrow{#1}}
