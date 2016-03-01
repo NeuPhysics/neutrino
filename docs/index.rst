@@ -26,6 +26,14 @@ This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutri
 
 Key steps of some research is hosted on bitbucket as private repository `here <https://bitbucket.org/neuphysics/neutrino-reseaching>`_ . Login to view the most current research if you have access to it.
 
+
+
+.. figure:: assets/neutrino-cheat-sheet.png
+   :align: center
+
+   Neutrino cheat sheet. PDF file can be downloaded `here <https://github.com/emptymalei/poster>`_.
+
+
 Support us:
 
 .. raw:: html
@@ -68,10 +76,3 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    misc.rst
    ref.rst
    acknowledgement.rst
-
-
-
-.. figure:: assets/neutrino-cheat-sheet.png
-   :align: center
-
-   Neutrino cheat sheet. PDF file can be downloaded `here <https://github.com/emptymalei/poster>`_.
