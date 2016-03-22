@@ -44,27 +44,23 @@ Here is also an index: `genindex.html <genindex.html>`_ .
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-   preliminary.rst
-   commonsense.rst
-   math.rst
+   preliminary/index.rst
    mass.rst
    experiments.rst
-   propagation.rst
-   oscillations.rst
-   vacuum.rst
+   oscillations/index.rst
    basis.rst
-   matter/matter.rst
-   collective/collective.rst
+   matter/index.rst
+   collective/index.rst
    qualitative.rst
    instability.rst
    picture.rst
-   models/models.rst
-   statistical-physics/statistical-physics.rst
-   astrophysics/astrophysics.rst
+   models/index.rst
+   statistical-physics/index.rst
+   astrophysics/index.rst
    gravity.rst
-   cosmology/cosmology.rst
+   cosmology/index.rst
    misc.rst
    cheatsheet.rst
    ref.rst

@@ -8,17 +8,30 @@ img.math {
 
 /* Toggle Environment Begin */
 
-.toggle .header {
-    display: block;
-    clear: both;
+.toggle {
+    background: none repeat scroll 0 0 #e7f2fa;
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
 }
 
-.toggle .header:after {
+.toggle .admonition-title {
+    display: block;
+    clear: both;
+    cursor: pointer;
+    font-size: 110% !important;
+}
+
+.toggle .admonition-title:after {
     content: " ▼";
 }
 
-.toggle .header.open:after {
+.toggle .admonition-title.open:after {
     content: " ▲";
+}
+
+.toggle p:last-child {
+    margin-bottom: 0;
 }
 
 /* Toggle Environment End */

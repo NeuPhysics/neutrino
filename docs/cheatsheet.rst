@@ -1,4 +1,4 @@
-Neutrino Physics Cheat Sheet
+Neutrino Cheat Sheet
 ==========================================================
 
 
