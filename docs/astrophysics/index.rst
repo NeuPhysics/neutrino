@@ -1,21 +1,12 @@
 Astrophysics
 ====================
 
-Many astrophysical phenomena and neutrinos are very closed reltated.
-
-
-Supernova
------------------------
-
-One of the theories for the supernova explosion is that the neutrinos heat up the stalled shock.
+Many astrophysical phenomena and neutrinos are very closed reltated. As an example, one of the theories for the supernova explosion is that the neutrinos heat up the stalled shock.
 
 
 
 
+.. toctree::
+   :maxdepth: 2
 
-
-
-
-
-Refs & Notes
------------------
+   stars-as-neutrino-factories.rst
