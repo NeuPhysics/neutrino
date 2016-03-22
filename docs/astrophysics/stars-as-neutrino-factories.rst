@@ -94,8 +94,8 @@ pp chain and CNO cycle are the most important nuclear reactions in a star. Throu
 .. math::
    \begin{align}
    &\mathrm{p+p\to {}^2H + e^+ +\nu_e},  & \mathrm{\leq 0.422MeV}\\
-   &\mathrm{{}^7Be + e^- \to {}^7Li + \nu_e} , &\text{0.862MeV for 90\%}\\
-   &&\qquad \text{0.384MeV for 10\%} \\
+   &\mathrm{{}^7Be + e^- \to {}^7Li + \nu_e} , &\text{0.862MeV for 90%}\\
+   &&\qquad \text{0.384MeV for 10%} \\
    &\mathrm{{}^8B \to {}^8Be^* +e^+ +\nu_e},  & \mathrm{\leq 15 MeV}
    \end{align}
 
@@ -177,11 +177,13 @@ Inside our Sun, two additional reactions also produce neutrinos which are called
 
 
 * pep neutrinos are produced in
+
   .. math::
      \mathrm{p + e^- + p \to {}^2H +\nu_e},
 
   which is only has a branching ratio 0.4\% instead of the 99.6\% of pp reaction.
 * hep neutrinos are produced in
+
   .. math::
      \mathrm{ {}^3He + p \to {}^4He + e^+ \nu_e },
 
