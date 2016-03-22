@@ -142,223 +142,215 @@ pp chain and CNO cycle are the most important nuclear reactions in a star. Throu
 
 
 
+.. _fig-cno_cycle:
 
-\begin{figure}[!hbtp]
-\centering
-\includegraphics[width=\columnwidth]{assets/stars-as-neutrino-factories/cno_cycle.png}
-\caption{CNO cycle illustration.\cite{Adelberger2011a}}
-\label{fig:cno_cycle}
-\end{figure}
+.. figure:: assets/stars-as-neutrino-factories/cno_cycle.png
+   :align: center
+
+   CNO cycle illustration.\cite{Adelberger2011a
 
 
 Solar neutrinos are mostly produced in pp reaction, Be electron capture and B decay, which are called pp neutrinos, Be neutrinos and B neutrinos. Even without knowledge of the detailed reactions, the conservation of lepton numbers will lead to the overall neutrino production
 
-\begin{equation}
-\mathrm{4p+2e^- \to {}^4He + 2\nu_e },
-\end{equation}
+.. math::
+   \mathrm{4p+2e^- \to {}^4He + 2\nu_e },
+
 
 where it is important to notice that two neutrinos are produced in each reaction. This overall reaction can either be pp chain or CNO cycle.
 
-Using this simple relation, we can estimate the neutrino flux emitted by our sun. Given the kinetic energy produced in each reaction is the difference between the initial masses and the final masses, $Q_{pp}=4m_p+2m_e-m_{He4}=26.7\mathrm{MeV}$ where the mass of neutrinos are neglected since they are small compared with every other particle. On average, each neutrino carries away $0.2\mathrm{MeV}$ energy and the rest will be mostly in the form of thermal energy $Q_\gamma=26.3\mathrm{MeV}$. Number flux of thermal photons near Earth can be calculated using the solar constant $S_0$,
+Using this simple relation, we can estimate the neutrino flux emitted by our sun. Given the kinetic energy produced in each reaction is the difference between the initial masses and the final masses, :math:`Q_{pp}=4m_p+2m_e-m_{He4}=26.7\mathrm{MeV}` where the mass of neutrinos are neglected since they are small compared with every other particle. On average, each neutrino carries away 0.2MeV energy and the rest will be mostly in the form of thermal energy :math:`Q_\gamma=26.3\mathrm{MeV}`. Number flux of thermal photons near Earth can be calculated using the solar constant :math:`S_0`,
 
-\begin{equation}
-\Phi_\gamma = \frac{S_0}{Q_\gamma}.
-\end{equation}
+.. math::
+   \Phi_\gamma = \frac{S_0}{Q_\gamma}.
 
-Since we know each reaction produces 2 neutrinos while producing $Q_\gamma$, which means that the number flux of neutrinos near Earth is roughly twice of the number flux of photons, i.e.,
 
-\begin{equation}
-\Phi_\nu = 2 \Phi_\gamma \approx 6\times 10^{10} \mathrm{cm^{-2}s^{-1}}.
-\end{equation}
+Since we know each reaction produces 2 neutrinos while producing :math:`Q_\gamma`, which means that the number flux of neutrinos near Earth is roughly twice of the number flux of photons, i.e.,
+
+.. math::
+   \Phi_\nu = 2 \Phi_\gamma \approx 6\times 10^{10} \mathrm{cm^{-2}s^{-1}}.
+
 
 
 For such a large flux, understanding the role in stellar nuclear reaction and spectra is important.
 
 Inside our Sun, two additional reactions also produce neutrinos which are called pep and hep neutrinos.
 
-\begin{itemize}
-\item pep neutrinos are produced in
-\begin{equation}
-\mathrm{p + e^- + p \to {}^2H +\nu_e},
-\end{equation}
-which is only has a branching ratio 0.4\% instead of the 99.6\% of pp reaction.
-\item hep neutrinos are produced in
-\begin{equation}
-\mathrm{ {}^3He + p \to {}^4He + e^+ \nu_e },
-\end{equation}
-which has a branching ratio of $2\times 10^{-5}\%$. As a comparison, the $\mathrm{{}^3He + {}^3He}$ has a branching ratio $85\%$ and $\mathrm{{}^3He + {}^4He}$ has a branching ratio $15\%$.
 
-\end{itemize}
+* pep neutrinos are produced in
+  .. math::
+     \mathrm{p + e^- + p \to {}^2H +\nu_e},
+
+  which is only has a branching ratio 0.4\% instead of the 99.6\% of pp reaction.
+* hep neutrinos are produced in
+  .. math::
+     \mathrm{ {}^3He + p \to {}^4He + e^+ \nu_e },
+
+  which has a branching ratio of :math:`2\times 10^{-5}\%`. As a comparison, the :math:`\mathrm{{}^3He + {}^3He}` has a branching ratio 85% and :math:`\mathrm{{}^3He + {}^4He}` has a branching ratio 15%.
 
 
 
-
-
-
-
-
-
-
-
-
-
-\subsection{Neutrino Oscillation}
+Neutrino Oscillation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Neutrinos are special particles that their flavor eigenstates are not the propagation eigenstates, which leads to neutrino flavor oscillations. Since neutrinos with different flavor interact with matter with different cross section, we need to investigate the neutrino flavor carefully. Even though only electron flavor neutrinos are produced, what we detect on Earth is different in flavor, which depends on two phenomena, neutrino vacuum oscillation and Mikheyev–Smirnov–Wolfenstein effect.
 
-\subsubsection{Vacuum Oscillation}
+Vacuum Oscillation
+`````````````````````````````````
 
-To understand the neutrino vacuum oscillation phenomenon, we use two flavor neutrino as an example. In vacuum, propagation states are mass eigenstates, which is different from flavor eigenstates. The wave function in flavor eigenstates basis is related to wave function in mass eigenstates through an unitary matrix $\mathbf U$,
+To understand the neutrino vacuum oscillation phenomenon, we use two flavor neutrino as an example. In vacuum, propagation states are mass eigenstates, which is different from flavor eigenstates. The wave function in flavor eigenstates basis is related to wave function in mass eigenstates through an unitary matrix :math:`\mathbf U`,
 
-\begin{equation}
-\Psi_f = \mathbb{U}_{\alpha i}\Psi_{v},
-\end{equation}
+.. math::
+   \Psi_f = \mathbb{U}_{\alpha i}\Psi_{v},
 
-where $\Psi_f$ is wave function in flavor basis and $\Psi_v$ is the wave function in vacuum mass eigenstate basis. The rotation matrix is
 
-\begin{equation}
-U = \begin{pmatrix} \cos\theta_v & \sin \theta_v \\ -\sin \theta_v & \cos \theta_v \end{pmatrix}.
-\end{equation}
+where :math:`\Psi_f` is wave function in flavor basis and :math:`\Psi_v` is the wave function in vacuum mass eigenstate basis. The rotation matrix is
+
+.. math::
+   U = \begin{pmatrix} \cos\theta_v & \sin \theta_v \\ -\sin \theta_v & \cos \theta_v \end{pmatrix}.
+
 
 In vacuum basis, the Hamiltonian is free propagation, which is given by
 
-\begin{equation}
-H_v^{(v)} = \begin{pmatrix} E_1 & 0 \\
-0 & E_2
-\end{pmatrix},
-\end{equation}
+.. math::
+   H_v^{(v)} = \begin{pmatrix} E_1 & 0 \\
+   0 & E_2
+   \end{pmatrix},
+
 
 where
 
-\begin{align}
-E_i^{(v)} & = \sqrt{m_i^2 + p_i^2 } \\
-& = p_i \sqrt{\frac{m_i^2}{p_i^2} + 1} \\
-& \approx p_i + \frac{1}{2} \frac{m_i^2}{p_i}.
-\end{align}
+.. math::
+   E_i^{(v)} & = \sqrt{m_i^2 + p_i^2 } \\
+   & = p_i \sqrt{\frac{m_i^2}{p_i^2} + 1} \\
+   & \approx p_i + \frac{1}{2} \frac{m_i^2}{p_i}.
 
-We assume the neutrinos have almost the same momentum, which is true since their mass is small, i.e., $p_i \approx E$. To first order, the Hamiltonian becomes
 
-\begin{align*}
-H_v^{(v)} &= \frac{1}{2E} \begin{pmatrix}
-m_1^2 & 0 \\
-0 & m_2^2
-\end{pmatrix} + p \mathbb{I}\\
-& =  \frac{1}{4E} \begin{pmatrix}
-m_1^2 - m_2^2 & 0 \\
-0 & m_2^2 - m_1^2
-\end{pmatrix} \\
-&\phantom{=}+ \frac{m_2^2 + m_1^2}{4E} \begin{pmatrix}
-1 & 0 \\
-0 & 1
-\end{pmatrix} + \mathbf{I},
-\end{align*}
+We assume the neutrinos have almost the same momentum, which is true since their mass is small, i.e., :math:`p_i \approx E`. To first order, the Hamiltonian becomes
 
-where the identity matrices only give us an overall phase so we drop them. With the definition that $\Delta m^2 = m_2^2 - m_1^2$ The vacuum Hamiltonian in vacuum basis is simplify
+.. math::
+   H_v^{(v)} &= \frac{1}{2E} \begin{pmatrix}
+   m_1^2 & 0 \\
+   0 & m_2^2
+   \end{pmatrix} + p \mathbb{I}\\
+   & =  \frac{1}{4E} \begin{pmatrix}
+   m_1^2 - m_2^2 & 0 \\
+   0 & m_2^2 - m_1^2
+   \end{pmatrix} \\
+   &\phantom{=}+ \frac{m_2^2 + m_1^2}{4E} \begin{pmatrix}
+   1 & 0 \\
+   0 & 1
+   \end{pmatrix} + \mathbf{I},
 
-\begin{equation}
-H_v^{(v)} =  \frac{\Delta m^2}{4E} \begin{pmatrix}
--1 & 0 \\
-0 & 1
-\end{pmatrix},
-\end{equation}
+
+where the identity matrices only give us an overall phase so we drop them. With the definition that :math:`\Delta m^2 = m_2^2 - m_1^2` The vacuum Hamiltonian in vacuum basis is simplify
+
+.. math::
+   H_v^{(v)} =  \frac{\Delta m^2}{4E} \begin{pmatrix}
+   -1 & 0 \\
+   0 & 1
+   \end{pmatrix},
+
 
 which leads to the simple solution for the wave function in vacuum basis
 
-\begin{equation}
-\Psi_v(t)^{(v)} = \begin{pmatrix}
-c_1(0) e^{i\Delta m^2 t } \\
-c_2(0) e^{ -i\Delta m^2 t }
-\end{pmatrix},
-\end{equation}
+.. math::
+   \Psi_v(t)^{(v)} = \begin{pmatrix}
+   c_1(0) e^{i\Delta m^2 t } \\
+   c_2(0) e^{ -i\Delta m^2 t }
+   \end{pmatrix},
 
 where the initial condition is
 
-\begin{equation}
-\Psi_v(0)^{(v)} = \begin{pmatrix}
-c_1(0) \\
-c_2(0)
-\end{pmatrix}.
-\end{equation}
+.. math::
+   \Psi_v(0)^{(v)} = \begin{pmatrix}
+   c_1(0) \\
+   c_2(0)
+   \end{pmatrix}.
+
 
 In flavor basis, the wave function at anytime is
 
-\begin{align}
-\Psi_f(t) &= \mathbf{U}\Psi_v(t) \\
-& = \begin{pmatrix} \cos\theta_v & \sin \theta_v \\ -\sin \theta_v & \cos \theta_v \end{pmatrix} \begin{pmatrix} c_1(0) e^{i\Delta m^2 t } \\
-c_2(0) e^{ -i\Delta m^2 t }    \end{pmatrix} .
-\end{align}
+.. math::
+   \Psi_f(t) &= \mathbf{U}\Psi_v(t) \\
+   & = \begin{pmatrix} \cos\theta_v & \sin \theta_v \\ -\sin \theta_v & \cos \theta_v \end{pmatrix} \begin{pmatrix} c_1(0) e^{i\Delta m^2 t } \\
+   c_2(0) e^{ -i\Delta m^2 t }    \end{pmatrix} .
+
 
 As seen in the nuclear reactions in the solar core, electron neutrinos are most abundant flavor. Initial condition is assumed to be electron flavor in the calculation which leads to the survival probability of electron flavor
 
-\begin{equation}
-P(\nu_e,t) = \Psi_f(0)^\dagger \Psi_f(t) = 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 t}{4E} \right).
-\end{equation}
-
-Since neutrinos travel with velocity approximately the speed of light, we use $L = t$ where $L$ is the distance travelled. The survival probability is
-
-\begin{equation}
-P(\nu_e,L) =  1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right).
-\end{equation}
+.. math::
+   P(\nu_e,t) = \Psi_f(0)^\dagger \Psi_f(t) = 1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 t}{4E} \right).
 
 
-The important parameter is the oscillation length of the neutrino flavor conversion. Here we have the oscillation frequency $\omega = \frac{\Delta m^2}{2E}$.
+Since neutrinos travel with velocity approximately the speed of light, we use :math:`L = t` where L is the distance travelled. The survival probability is
 
-(Need a figure about the oscillation lengh here.)
+.. math::
+   P(\nu_e,L) =  1-\sin^2(2\theta_v)\sin^2\left( \frac{\Delta m^2 L}{4E} \right).
 
 
 
-\subsubsection{Mikheyev - Smirnov - Wolfenstein Effect}
+The important parameter is the oscillation length of the neutrino flavor conversion. Here we have the oscillation frequency :math:`\omega = \frac{\Delta m^2}{2E}`.
+
+
+.. todo::
+
+   Need a figure about the oscillation lengh here.
+
+
+
+Mikheyev - Smirnov - Wolfenstein Effect
+```````````````````````````````````````````````
 
 The nature of neutrino oscillation means that flavor conversion occurs as long as their propagation eigenstates are not flavor eigenstates. We expect neutrino propagation eigenstates in matter are different from flavor states in general.\cite{wolf78} Using the fact that neutral current interactions between different flavor neutrinos and matter is independent of flavor, we only include the charged current, which will produce a effective potential for electron flavor. In flavor basis, the effective potential is
 
-\begin{equation}
-V=\frac{\sqrt{2}G_F n_e}{2} \sigma_3,
-\end{equation}
+.. math::
+   V=\frac{\sqrt{2}G_F n_e}{2} \sigma_3,
 
-where $G_F$ is Fermi constant, $n_e$ is number density of electrons. We also removed the identity in this matrix since it doesn't change our survival probability. The Hamiltonian with matter effect is the combination of vacuum oscillation and matter effect, which is, in flavor basis, explicitly,
 
-\begin{equation}
-H_m = \frac{ \Delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} + \frac{\sqrt{2}G_F n_e}{2} \sigma_3,
-\end{equation}
+where :math:`G_F` is Fermi constant, $n_e$ is number density of electrons. We also removed the identity in this matrix since it doesn't change our survival probability. The Hamiltonian with matter effect is the combination of vacuum oscillation and matter effect, which is, in flavor basis, explicitly,
+
+.. math::
+   H_m = \frac{ \Delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix} + \frac{\sqrt{2}G_F n_e}{2} \sigma_3,
+
 
 where we used the result of flavor basis vacuum oscillation Hamiltonian
 
-\begin{align}
-H_v^{(f)}& = \mathbf{U} H_v^{(v)}\mathbf{U^\dagger} \\
-&= \frac{ \Delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix}.
-\end{align}
+.. math::
+   H_v^{(f)}& = \mathbf{U} H_v^{(v)}\mathbf{U^\dagger} \\
+   &= \frac{ \Delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v & \sin 2 \theta_v \\ \sin 2\theta_v & \cos 2\theta_v  \end{pmatrix}.
 
-Applying Pauli matrices and $\lambda = \frac{\sqrt{2}G_F n_e}{2}$ to this total Hamiltonian, it is rewritten as
 
-\begin{equation}
-H_m = \left(\frac{\lambda}{2} -\frac{ \omega }{2} \cos 2\theta_v \right) \boldsymbol{\sigma}_3  + \frac{ \omega }{2} \sin 2\theta_v \boldsymbol{\sigma}_1.
-\end{equation}
+Applying Pauli matrices and :math:`\lambda = \frac{\sqrt{2}G_F n_e}{2}` to this total Hamiltonian, it is rewritten as
+
+.. math::
+   H_m = \left(\frac{\lambda}{2} -\frac{ \omega }{2} \cos 2\theta_v \right) \boldsymbol{\sigma}_3  + \frac{ \omega }{2} \sin 2\theta_v \boldsymbol{\sigma}_1.
+
 
 Due to the off-diagonal terms in the Hamiltonian, the system will experience oscillations in flavor. A resonance, i.e., maximum mixing, dominates the system when the diagonal terms becomes zero,
 
-\begin{equation}
-\frac{\lambda}{2} -\frac{ \omega }{2} \cos 2\theta_v  = 0,
-\end{equation}
+.. math::
+   \frac{\lambda}{2} -\frac{ \omega }{2} \cos 2\theta_v  = 0,
+
 
 which gives us the MSW resonance condition.
 
-The importance of matter effect to our understanding of solar neutrinos is that it modifies the oscillation, which depends on the matter profile. For a solar mass star, we have almost adiabatic evolution of the neutrinos, which means that the instantaneous eigenstates and eigenvectors of Hamiltonian is good enough for the time dependent Schr\"{o}dinger equation.
+The importance of matter effect to our understanding of solar neutrinos is that it modifies the oscillation, which depends on the matter profile. For a solar mass star, we have almost adiabatic evolution of the neutrinos, which means that the instantaneous eigenstates and eigenvectors of Hamiltonian is good enough for the time dependent Schrodinger equation.
 
 
 For simplicity, we define the vacuum frequency and the hatted quantities
 
-\begin{align}
-\omega &= \frac{\Delta m^2}{2E} \\
-\hat\lambda & = \frac{\lambda}{\omega}.
-\end{align}
+.. math::
+   \omega &= \frac{\Delta m^2}{2E} \\
+   \hat\lambda & = \frac{\lambda}{\omega}.
+
 
 The eigenstates, derived by diagonalizing the Hamiltonian, are
 
-\begin{align}
-E_1 &= \frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }\\
-E_2 &= -\frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }.
-\end{align}
+.. math::
+   E_1 &= \frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }\\
+   E_2 &= -\frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }.
+
 
 
 \begin{figure}
