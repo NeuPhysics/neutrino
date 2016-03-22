@@ -10,3 +10,4 @@ Many astrophysical phenomena and neutrinos are very closed reltated. As an examp
    :maxdepth: 2
 
    stars-as-neutrino-factories.rst
+   supernova.rst

@@ -47,8 +47,8 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    :maxdepth: 3
 
    preliminary/index.rst
-   mass.rst
-   experiments.rst
+   mass/index.rst
+   experiments/index.rst
    oscillations/index.rst
    basis.rst
    matter/index.rst

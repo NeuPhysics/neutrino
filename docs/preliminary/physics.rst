@@ -5,11 +5,77 @@ Physics
 Reactions Related to Neutrinos
 -----------------------------------------
 
+Before we actually reach a list of reactions, here are some most common examples which neutrinos participate in.
+
 
 1. Beta decays, :math:`n\to p + e^- +\bar \nu` and :math:`p\to n + e^+ +\nu`
 2. Electron capture and positron capture, :math:`e^- + p\to n+\nu` and :math:`e^+ + n \to p + \bar \nu`.
 3. Inverse beta decays, :math:`\nu+ n \to p+e^-` and :math:`\bar\nu + p \to n + e^+`.
 4. Inverses of beta decays, :math:`\bar\nu + e^- + p \to n` and :math:`n+e^++\nu \to n`.
+
+As for a list of possible reactions, here we have this table.
+
+.. figure:: assets/physics/neutrino-related-reactions.png
+   :align: center
+
+   Neutrino related nuclear or leptonic reactions.
+
+
+Another view of this is through drawing Feynman diagrams. There are six different kinds of Feynman diagrams that is related to neutrinos,
+
+* Elastic scattering
+* Quasi-elastic scattering
+* Resonance
+* Deep inelastic scattering
+* Coherent neutral current neutrino-neucleus elastic scattering
+* Neutrino-neutrino self-interaction.
+
+Examples of elastic scattering:
+
+.. image:: assets/physics/elastic-scattering-cc.png
+   :width: 45%
+.. image:: assets/physics/elastic-scattering-nc.png
+   :width: 45%
+
+.. image:: assets/physics/tau-neutrino-and-electron-nc.png
+   :width: 45%
+.. image:: assets/physics/elastic-scattering-neutrino-different-family.png
+   :width: 45%
+
+
+
+
+Example of quasi-elastic scattering
+
+.. image:: assets/physics/quasi-elastic-scattering-neutrinos.png
+   :width: 45%
+
+Example of resonance
+
+.. image:: assets/physics/resonance-neutrinos.png
+   :width: 45%
+
+
+Example of deep inelastic scattering
+
+.. image:: assets/physics/deep-inelastic-scattering-neutrinos.png
+   :width: 45%
+
+
+Example of coherent neutral current scattering
+
+.. image:: assets/physics/coherent-nc-neutrinos.png
+   :width: 45%
+
+
+
+
+
+
+
+
+
+
 
 
 What is a Neutrino Particle?
@@ -21,9 +87,6 @@ As Wigner said, a physical particle is an irreducible representation of the Poin
 A neutrino particle is better recognized as its mass eigenstate.
 
 In QFT, there are 3 different forms of neutrino mass term, left-handed Majorana, right-handed Majorana and Dirac mass terms.
-
-
-
 
 
 
@@ -135,3 +198,11 @@ The neutrino-neutrino forward scattering is [2]_
 
 
 .. [2] Pantaleone (1992), Friedland & Lunardini (2003).
+
+
+
+
+Refs & Notes
+-------------------
+
+.. [1] `*Chirality and Helicity In Depth* by Robert D. Klauber <http://www.quantumfieldtheory.info/ChiralityandHelicityindepth.htm>`_

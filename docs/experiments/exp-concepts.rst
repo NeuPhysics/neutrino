@@ -1,5 +1,5 @@
-Experiments
-========================
+Concepts in Experiments
+===============================================
 
 
 Chapter 7 (section 7.6) and chapter 12 of Giunti's book [1]_ are the good materials to read.
