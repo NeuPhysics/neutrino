@@ -55,18 +55,16 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    oscillations.rst
    vacuum.rst
    basis.rst
-   msw.rst
-   parametric.rst
-   matter-driven.rst
-   collective.rst
+   matter/matter.rst
+   collective/collective.rst
    qualitative.rst
    instability.rst
    picture.rst
-   models.rst
-   mastereqn.rst
-   astrophysics.rst
+   models/models.rst
+   statistical-physics/statistical-physics.rst
+   astrophysics/astrophysics.rst
    gravity.rst
-   cosmology.rst
+   cosmology/cosmology.rst
    misc.rst
    cheatsheet.rst
    ref.rst

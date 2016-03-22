@@ -53,7 +53,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -96,7 +96,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -160,7 +162,7 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="collective.html#index-1">Bipolar Model</a>
+  <dt><a href="collective/collective.html#index-1">Bipolar Model</a>
   </dt>
 
   </dl></td>
@@ -174,13 +176,13 @@
   </dt>
 
       
-  <dt><a href="cosmology.html#index-1">CNB</a>
+  <dt><a href="cosmology/cosmology.html#index-1">CNB</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="cosmology.html#index-0">Cosmic Neutrino Background</a>
+  <dt><a href="cosmology/cosmology.html#index-0">Cosmic Neutrino Background</a>
   </dt>
 
   </dl></td>
@@ -210,7 +212,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="collective.html#index-2">Isotropic Neutrino Gas</a>
+  <dt><a href="collective/collective.html#index-2">Isotropic Neutrino Gas</a>
   </dt>
 
   </dl></td>
@@ -220,7 +222,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="msw.html#index-3">Landau-Zener Transition</a>
+  <dt><a href="matter/msw.html#index-3">Landau-Zener Transition</a>
   </dt>
 
   </dl></td>
@@ -240,7 +242,7 @@
   </dt>
 
       
-  <dt><a href="msw.html#index-0">MSW effect</a>, <a href="msw.html#index-1">[1]</a>
+  <dt><a href="matter/msw.html#index-0">MSW effect</a>, <a href="matter/msw.html#index-1">[1]</a>
   </dt>
 
   </dl></td>
@@ -256,7 +258,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="parametric.html#index-0">Parametric Resonance</a>
+  <dt><a href="matter/parametric.html#index-0">Parametric Resonance</a>
   </dt>
 
   </dl></td>
@@ -272,7 +274,7 @@
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="mastereqn.html#index-0">Quantum Master Equation</a>
+  <dt><a href="statistical-physics/master-eqn.html#index-0">Quantum Master Equation</a>
   </dt>
 
   </dl></td>
@@ -282,7 +284,7 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="matter-driven.html#index-0">Rabi Oscillation</a>
+  <dt><a href="matter/matter-driven.html#index-0">Rabi Oscillation</a>
   </dt>
 
   </dl></td>
@@ -292,13 +294,13 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="msw.html#index-2">solar neutrinos</a>
+  <dt><a href="matter/msw.html#index-2">solar neutrinos</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="collective.html#index-0">Spectral Split</a>
+  <dt><a href="collective/collective.html#index-0">Spectral Split</a>
   </dt>
 
   </dl></td>
@@ -352,19 +354,18 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astrophysics/astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology/cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -168,14 +170,14 @@
 </table>
 <div class="figure align-center" id="id7">
 <img alt="_images/multiangleInstability.png" src="_images/multiangleInstability.png" />
-<p class="caption"><span class="caption-text">A figure from Raffelt &amp; Simirnov (2007) shows the instability from anisotropic small perturbations. Potential energy grows expotentially, where <span class="math">\(-E_1 = \mu/4 \vec{D_1}^2\)</span> .</span></p>
+<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">A figure from Raffelt &amp; Simirnov (2007) shows the instability from anisotropic small perturbations. Potential energy grows expotentially, where <span class="math">\(-E_1 = \mu/4 \vec{D_1}^2\)</span> .</span></p>
 </div>
 </div>
 <div class="section" id="maa">
 <h2>MAA<a class="headerlink" href="#maa" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center" id="id8">
 <img alt="_images/sphericalAngles.png" src="_images/sphericalAngles.png" />
-<p class="caption"><span class="caption-text">A sphere on wikipedia <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Azimuth-Altitude_schematic.svg">File:Azimuth-Altitude schematic.svg</a></span></p>
+<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">A sphere on wikipedia <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Azimuth-Altitude_schematic.svg">File:Azimuth-Altitude schematic.svg</a></span></p>
 </div>
 <p>Multi-azimuth angle (MAA) instability, first discovered by Georg Raffelt et al, in the work <a class="reference external" href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.091101">Axial Symmetry Breaking in Self-Induced Flavor Conversion of Supernova Neutrino Fluxes</a> , <a class="footnote-reference" href="#id6" id="id5">[3]</a> is an intrinsic symmetry breaking. The point is to allow angle modes to evolve independently.</p>
 <p>This instability may come from the term that is related to the velocity of neutrinos in the Hamiltonian.</p>
@@ -227,10 +229,8 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Instability</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#linear-stability-analysis">Linear Stability Analysis</a></li>
@@ -242,12 +242,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

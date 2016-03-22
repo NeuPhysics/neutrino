@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -175,17 +177,17 @@
 <p>This is the deflection angle of a photon coming from infinite. However, the angle deflected for a photon emitted at tangent is different.</p>
 <div class="figure align-center" id="id3">
 <img alt="_images/tangentNeutrinoGravitation.png" src="_images/tangentNeutrinoGravitation.png" />
-<p class="caption"><span class="caption-text">neutrino gravitatioin</span></p>
+<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">neutrino gravitatioin</span></p>
 </div>
 <p>A detailed calculation shows, <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
 <div class="figure align-center" id="id4">
 <img alt="_images/gravitationDeflection.png" src="_images/gravitationDeflection.png" />
-<p class="caption"><span class="caption-text">The deflection angle of a photon starting from a tangent position at <span class="math">\(z=rz\)</span> with tangent momentum and impact parameter <span class="math">\(b\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text">The deflection angle of a photon starting from a tangent position at <span class="math">\(z=rz\)</span> with tangent momentum and impact parameter <span class="math">\(b\)</span>.</span></p>
 </div>
 <p>With an impact parameter of <span class="math">\(b=10\text{km}\)</span>, the angle will eventually become larger than <span class="math">\(0.4\)</span>, which is very significant.</p>
 <div class="figure align-center" id="id5">
 <img alt="_images/deflectionAngle.png" src="_images/deflectionAngle.png" />
-<p class="caption"><span class="caption-text">As we can see the angle becomes very big at about 10km.</span></p>
+<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text">As we can see the angle becomes very big at about 10km.</span></p>
 </div>
 </div>
 </div>
@@ -245,15 +247,13 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Effect of Gravitation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#evaluation">Evaluation</a></li>
@@ -262,6 +262,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parametric Resonance &mdash; Neutrino Pi documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'Pi',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Neutrino Pi documentation" href="../index.html" />
+    <link rel="up" title="Interaction With Matter" href="matter.html" />
+    <link rel="next" title="Matter as Driven Energy" href="matter-driven.html" />
+    <link rel="prev" title="MSW Effect" href="msw.html" />
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link rel="canonical" href="http://docs.neutrino.xyz/matter/parametric.html"/>
+
+
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      processEscapes: true
+    }
+  });
+</script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{\#1}',1],
+        overl: ['\\overset\leftarrow{\#1}',1],
+        overr: ['\\overset\rightarrow{\#1}',1],
+        bra: ['\\left\\langle \#1\\right|',1],
+        ket: ['\\left| \#1\\right\\rangle',1],
+        braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+        avg: ['\\left< \#1 \\right>',1],
+        slashed: ['\\cancel{\#1}',1],
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
+      }
+    }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="matter-driven.html" title="Matter as Driven Energy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="msw.html" title="MSW Effect"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Neutrino Pi documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="matter.html" accesskey="U">Interaction With Matter</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parametric-resonance">
+<h1>Parametric Resonance<a class="headerlink" href="#parametric-resonance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="index-0">
+<span id="id1"></span><h2>Parametric Resonance<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="evolution-operator">
+<h3>Evolution Operator<a class="headerlink" href="#evolution-operator" title="Permalink to this headline">¶</a></h3>
+<p>For constant matter density, the state after a propagation of distance <span class="math">\(X\)</span> is given by the evolution operator,</p>
+<div class="math">
+\[\Psi^{f}(x_0+X) = \mathscr{U}^{m} (X) \Psi^f(x_0),\]</div>
+<p>where <span class="math">\(\mathscr{U}^{m}\)</span> is the evolution operator in flavor basis, which is obtained directly using</p>
+<div class="math">
+\[\mathscr{U}^m (x) = \exp\left(  -i H^f x \right),\]</div>
+<p>or from a rotation of evolution operator in matter basis.</p>
+<p>The Hamiltonian in flavor basis is simply written in terms of Pauli matrices,</p>
+<div class="math">
+\[H^f = \frac{\omega}{2} \left( \sin 2\theta \sigma_1 + (\hat\lambda - \cos 2\theta) \sigma_3 \right),\]</div>
+<p>which, fortunately, can be simplified to a vector product of the Pauli matrices vector and another vector. To find out the other vector, we define</p>
+<div class="math">
+\[\vec \sigma = \left( \sigma_1, \sigma_2,\sigma_3 \right).\]</div>
+<p>Then we require</p>
+<div class="math">
+\[H^f \equiv \frac{\omega_m}{2} \vec n\cdot \vec \sigma .\]</div>
+<p>Compare this expression with the previous result for <span class="math">\(H^f\)</span>, we solve</p>
+<div class="math">
+\[\vec n = \frac{\omega}{\omega_m } \left( \sin 2\theta ,  0 , \hat\lambda  - \cos 2\theta  \right),\]</div>
+<p>where <span class="math">\(\vec n\)</span> is indeed a unit vector.</p>
+<p>Using this new simplified expression for Hamiltonian, we have</p>
+<div class="math">
+\[\begin{split}\mathscr{U}^m (x) &amp;= \exp\left( -i H^f x \right) \\
+&amp; = \exp \left( - i \frac{\omega_m}{2} x \vec n\cdot \vec \sigma \right).\end{split}\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Euler&#8217;s Formula for Pauli Matrices</p>
+<div class="math">
+\[e^{i \phi \vec n \cdot \vec \sigma} = I \cos \phi + i \vec n \cdot \vec \sigma \sin \phi.\]</div>
+<p class="last">To prove it, Taylor expansion of the exponential and anticommutation relations are needed.</p>
+</div>
+<p>Using Euler&#8217;s formula, we obtain the expanded form of the evolution operator,</p>
+<div class="math">
+\[\mathscr{U}^m (x) = I \cos \left( \frac{\omega_m}{2} x \right) - i \vec n \cdot \vec \sigma \sin \left( \frac{\omega_m}{2} x \right),\]</div>
+<p>where we can define a phase function for simplicity, :math:<a href="#id2"><span class="problematic" id="id3">`</span></a>phi(x) =  frac{omega_m}{2} x <a href="#id4"><span class="problematic" id="id5">`</span></a>. The evolution becomes</p>
+<div class="math">
+\[\mathscr{U}^m (x) = I \cos \phi(x) - i \vec n \cdot \vec \sigma \sin \phi(x).\]</div>
+</div>
+<div class="section" id="two-slabs">
+<h3>Two Slabs<a class="headerlink" href="#two-slabs" title="Permalink to this headline">¶</a></h3>
+<p>For two slabs with different matter potential right next to each other, the evolution operator for the two slabs is simply the multiplication of the two evolution operator for each slab,</p>
+<div class="math">
+\[\mathscr{U}^f (X_1+X_2) = \mathscr{U}^f(X_2)\mathscr{U}^f(X_1),\]</div>
+<p>where <span class="math">\(X_1\)</span> and <span class="math">\(X_2\)</span> are the thickness of the slabs.</p>
+<p>Apply the formalism of Pauli matrices, we have</p>
+<div class="math">
+\[\begin{split}\mathscr{U}^f (X_1+X_2) &amp;= \left( I \cos \phi(X_2) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \right)  \left( I \cos \phi(X_1) - i \vec n_1 \cdot \vec \sigma \sin \phi(X_1) \right) \\
+&amp; = \cos \phi(X_2)\cos \phi(X_1) - i\vec n _1 \cdot \vec \sigma \cos\phi(X_2) \sin \phi(X_1) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \cos \phi(X_1) - (\vec n_2 \cdot \vec \sigma)(\vec n_1 \cdot \vec \sigma) \sin \phi (X_2) \sin \phi(X_1).\end{split}\]</div>
+<p>Notice that</p>
+<div class="math">
+\[\begin{split}&amp;(\vec n_2 \cdot \vec \sigma)(\vec n_1 \cdot \vec \sigma)  \\
+=&amp; \frac{\omega}{\omega_{m1}}\frac{\omega}{\omega_{m2}}( \sin 2\theta \sigma_1 + ( \hat\lambda_{m2} - \cos 2\theta ) \sigma_3 )( \sin 2\theta \sigma_1 + (\hat\lambda_{m1} -\cos 2\theta ) \sigma_3 ) \\
+=&amp; \frac{\omega}{\omega_{m1}}\frac{\omega}{\omega_{m2}} ( \sin 2\theta \sin 2\theta + \cos 2\theta \cos 2\theta + \hat \lambda_{m1}\hat\lambda_{m2} - \hat\lambda_{m1} \cos 2\theta - \hat\lambda_{m2}\cos 2\theta - \sin 2\theta \sigma_1 (\hat\lambda_{m1}- \cos 2\theta) \sigma_3  -  (\hat\lambda_{m2}- \cos 2\theta) \sigma_3 \sin 2\theta \sigma_1 ) \\
+=&amp; \vec n_1 \cdot \vec n_2 + i \vec n_1 \times \vec n_2 \sigma_2.\end{split}\]</div>
+<p>Thus the result for the evolution operator is</p>
+<div class="math">
+\[\begin{split}\mathscr{U}^f (X_1+X_2) &amp; = \cos \phi(X_2)\cos \phi(X_1) - i\vec n _1 \cdot \vec \sigma \cos\phi(X_2) \sin \phi(X_1) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \cos \phi(X_1) - (\vec n_1 \cdot \vec n_2 + \vec n_1 \times \vec n_2) \sin \phi (X_2) \sin \phi(X_1) \\
+&amp; = \cos \phi(X_1) \cos \phi(X_2) - \sin \phi(X_1)\sin \phi(X_2) \vec n_1\cdot \vec n_2  - i \vec \sigma\cdot ( \sin \phi(X_1) \cos \phi(X_2) \vec n_1 + \cos \phi(X_1) \sin \phi(X_2) \vec n_2 -  \sin \phi (X_1) \sin \phi(X_2) \vec n_1 \times \vec n_2 )\\
+&amp; \equiv R - i \vec \sigma \cdot \vec I,\end{split}\]</div>
+<p>where</p>
+<div class="math">
+\[\begin{split}R &amp;= \cos \phi(X_1) \cos \phi(X_2) - \sin \phi(X_1)\sin \phi(X_2) \vec n_1\cdot \vec n_2 \\
+\vec I &amp; = \sin \phi(X_1) \cos \phi(X_2) \vec n_1 + \cos \phi(X_1) \sin \phi(X_2) \vec n_2 -  \sin \phi (X_1) \sin \phi(X_2) \vec n_1 \times \vec n_2.\end{split}\]</div>
+<p>To carry out the calculation of multiple periods of such, it is easier to rewrite the evolution operator into exponential form. To do so we need to define</p>
+<div class="math">
+\[\begin{split}R &amp; = \cos \Phi ,\\
+\vec N &amp; = \frac{\vec I}{\lvert \vec I \rvert},\\
+\lvert \vec I \rvert &amp; = \sin \Phi.\end{split}\]</div>
+<p>Using these representations, we can easily apply Euler&#8217;s formula backwards,</p>
+<div class="math">
+\[\mathscr{U}^f(X_1+X_2) = \exp \left( -i (\vec N \cdot  \vec \sigma) \Phi \right).\]</div>
+<p>For a lot of such potentials right next to each other, we have</p>
+<div class="math">
+\[\mathscr{U}^f(k(X_1+X_2)) = \exp \left( -i k (\vec N \cdot  \vec \sigma) \Phi \right).\]</div>
+<p>This is verified in Giunti&#8217;s book.</p>
+<p>Then we can calculate the transition probability, which is given in Giunti&#8217;s book,</p>
+<div class="math">
+\[P_{\nu_e\to\nu_\mu} (k(X_1+X_2) ) = \left( 1 - \frac{I_3^2}{\lvert \vec I \rvert^2}  \right) \sin^2 k\Phi ,\]</div>
+<p>which gives us the resonance condition <span class="math">\(I_3=0\)</span>, i.e.,</p>
+<div class="math">
+\[\frac{\tan \phi(X_1)}{\tan \phi(X_2)} = -\frac{\cos 2\theta_{m2}}{\cos 2\theta_{m1}},\]</div>
+<p>with <span class="math">\(\phi(X_i)=\frac{\omega_{mi}}{2}X_i\)</span>.</p>
+</div>
+</div>
+<div class="section" id="refs-and-notes">
+<h2>Refs and Notes<a class="headerlink" href="#refs-and-notes" title="Permalink to this headline">¶</a></h2>
+<p>I did some calculations based on Giunti&#8217;s book so that I can really understand each step of the derivations.</p>
+<ol class="arabic simple">
+<li>Giunti, C., &amp; Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Neutrino</a></h1>
+
+
+
+<p class="blurb">Neutrino Physics</p>
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=NeuPhysics&repo=neutrino&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>ToC</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preliminary.html">Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commonsense.html">Common Sense</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math.html">Mathematics Related</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mass.html">Masses of Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments.html">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../propagation.html">How Do Neutrinos Propagate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations.html">Oscillations - In General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vacuum.html">Vacuum Oscillation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basis.html">Basis</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="matter.html">Interaction With Matter</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="matter.html#matter-related-neutrino-oscillations">Matter Related Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collective/collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qualitative.html">Qualitative Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instability.html">Instability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../picture.html">Pictures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics.html">Astrophysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity.html">Effect of Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmology.html">Neutrinos and Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">Acknowledgement</a></li>
+</ul>
+
+
+<ul>
+	<li><a href="genindex.html">INDEX</a></li>
+</ul>
+<h3>Links</h3>
+<ul>
+   <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
+   <li class="toctree-l1"><a href="http://physics.openmetric.org" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
+   <li class="toctree-l1"><a href="http://interimm.org" style="color:orange;"><i class="fa fa-rocket"></i>&nbsp;星际移民中心</a></li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3>Support Us</h3>
+<p>
+Support us on <a href="https://www.gratipay.com/">Gratipay</a> :
+<script data-gratipay-username="emptymalei"
+        data-gratipay-widget="button"
+        src="//gttp.co/v1.js"></script>
+</p>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" style="border-top:1px solid #B1B4B6;">
+
+<!-- 多说评论框 start -->
+<!--
+  <div class="ds-thread" data-thread-key="" data-title="Parametric Resonance &mdash; Neutrino Pi documentation" data-url=""></div>
+-->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sci2fi"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+-->
+<!-- 多说公共JS代码 end -->
+
+<!-- Disqus BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'neuphysics';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Disqus END -->
+
+
+      &copy;2015, Lei Ma. | <a href="index.html">Licenses</a>
+      |
+      <a href="genindex.html">Index</a>
+      |
+      
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/matter/parametric.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-66327435-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

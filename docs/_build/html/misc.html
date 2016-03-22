@@ -28,7 +28,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Neutrino Pi documentation" href="index.html" />
-    <link rel="next" title="References" href="ref.html" />
+    <link rel="next" title="Neutrino Physics Cheat Sheet" href="cheatsheet.html" />
     <link rel="prev" title="Neutrinos and Cosmology" href="cosmology.html" />
 <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -114,7 +116,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="ref.html" title="References"
+          <a href="cheatsheet.html" title="Neutrino Physics Cheat Sheet"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="cosmology.html" title="Neutrinos and Cosmology"
@@ -175,15 +177,13 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
@@ -193,6 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#refs-notes">Refs &amp; Notes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

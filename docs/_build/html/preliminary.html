@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -191,7 +193,7 @@
 <span id="index-2"></span><h3>Wigner Function<a class="headerlink" href="#wigner-function" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id8">
 <img alt="_images/classicalProbDist.jpg" src="_images/classicalProbDist.jpg" />
-<p class="caption"><span class="caption-text">A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution.</span></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution.</span></p>
 </div>
 <p>Wigner function is an analogue of the classical phase-space probability distribution function though it is not really probability. <a class="footnote-reference" href="#id4" id="id2">[3]</a> The mean of Wigner function lies in the two quadratures, i.e., space distribution and momentum distribution.</p>
 <p>There is a collection of Wigner functions on this site. <a class="footnote-reference" href="#id4" id="id3">[3]</a></p>
@@ -309,19 +311,18 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

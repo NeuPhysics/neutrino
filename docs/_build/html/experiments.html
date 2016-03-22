@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -188,7 +190,7 @@
 </div>
 <div class="figure align-center" id="id8">
 <span id="index-1"></span><img alt="_images/sinSquare2thetaVSDeltamSquare.png" src="_images/sinSquare2thetaVSDeltamSquare.png" />
-<p class="caption"><span class="caption-text">A figure grabbed from Giunti&#8217;s book <em>Fundamentals of Neutrino Physics and Astrophysics</em> section 7.6. As we mentioned, we have a relation between <span class="math">\(\sin^2 2\theta_v\)</span> and <span class="math">\(\Delta m^2\)</span>, which is given as the black solid lines in the figures. The regions that have larger values of <span class="math">\(\sin ^2 2\theta_v\)</span> are excluded. Thus the solid lines are called exclusion curve.</span></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">A figure grabbed from Giunti&#8217;s book <em>Fundamentals of Neutrino Physics and Astrophysics</em> section 7.6. As we mentioned, we have a relation between <span class="math">\(\sin^2 2\theta_v\)</span> and <span class="math">\(\Delta m^2\)</span>, which is given as the black solid lines in the figures. The regions that have larger values of <span class="math">\(\sin ^2 2\theta_v\)</span> are excluded. Thus the solid lines are called exclusion curve.</span></p>
 </div>
 </div>
 <div class="section" id="the-stringent-constraint-of-mixing-angle">
@@ -287,7 +289,7 @@
 <p><span class="math">\((\sin^2 2\theta_v)_s\)</span> and <span class="math">\((\Delta m^2)_s\)</span> are better at small values because they means the &#8220;smallest&#8221; constraint we can obtain.</p>
 <div class="last figure align-center" id="id9">
 <img alt="_images/exclusionCurveSensitivity.png" src="_images/exclusionCurveSensitivity.png" />
-<p class="caption"><span class="caption-text">Sensitivities</span></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Sensitivities</span></p>
 </div>
 </div>
 <p>For disappearance experiments:</p>
@@ -312,7 +314,7 @@
 <p>The first question is how many neutrinos can be detected. If neutrino energy is too high, cross section at detector will be large but neutrino flux per unit energy will be small. The best detection rate is at some certain energy.</p>
 <div class="figure align-center" id="id10">
 <img alt="_images/reactorDetection.png" src="_images/reactorDetection.png" />
-<p class="caption"><span class="caption-text">The best energy of detection. Figure 12.2 in Giunti&#8217;s book.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The best energy of detection. Figure 12.2 in Giunti&#8217;s book.</span></p>
 </div>
 <div class="note admonition">
 <p class="first admonition-title">The Source Flux</p>
@@ -320,7 +322,7 @@
 </div>
 <div class="figure align-center" id="id11">
 <img alt="_images/reactorExpBaseline.png" src="_images/reactorExpBaseline.png" />
-<p class="caption"><span class="caption-text">The ratio of observed neutrino flux to expected neutrino flux compared in different experiments. The dotted line is the ratio when expected flux calculated from best fit results of <span class="math">\(\Delta m^2\)</span> and <span class="math">\(\sin^2 2\theta_v\)</span> extracted from solar neutrino experiments. These experiments more or less lie on the best fit result. Figure 12.3 of Giunti&#8217;s book.</span></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">The ratio of observed neutrino flux to expected neutrino flux compared in different experiments. The dotted line is the ratio when expected flux calculated from best fit results of <span class="math">\(\Delta m^2\)</span> and <span class="math">\(\sin^2 2\theta_v\)</span> extracted from solar neutrino experiments. These experiments more or less lie on the best fit result. Figure 12.3 of Giunti&#8217;s book.</span></p>
 </div>
 <ul class="simple">
 <li><span class="math">\(L\sim 10 - 100 m\)</span> : short baseline experiment (SBL);</li>
@@ -333,7 +335,7 @@
 <p>One of the background of neutrinos is the cosmic ray. The cosmic neutrino background is much smaller than the reactor neutrino flux.</p>
 <div class="figure align-center" id="id12">
 <img alt="_images/atmosphericNeutrinos.png" src="_images/atmosphericNeutrinos.png" />
-<p class="caption"><span class="caption-text">Production of neutrinos through cosmic rays. We need to shield the hardons. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Atmospheric_Collision.svg">wikipedia</a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Production of neutrinos through cosmic rays. We need to shield the hardons. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Atmospheric_Collision.svg">wikipedia</a>.</span></p>
 </div>
 <p class="last">The background actually can be measured when the nuclear plants are turned off to supply fuel.</p>
 </div>
@@ -351,23 +353,23 @@
 </ul>
 <div class="figure align-center" id="id13">
 <img alt="_images/sblResults.png" src="_images/sblResults.png" />
-<p class="caption"><span class="caption-text">SBL results from Giunti&#8217;s book (figure 12.5). These experiments showed exclusion curves that extend to <span class="math">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">SBL results from Giunti&#8217;s book (figure 12.5). These experiments showed exclusion curves that extend to <span class="math">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</span></p>
 </div>
 <div class="figure align-center" id="id14">
 <img alt="_images/choozResult.png" src="_images/choozResult.png" />
-<p class="caption"><span class="caption-text">CHOOZ result from Giunt&#8217;s book (figure 12.6).</span></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">CHOOZ result from Giunt&#8217;s book (figure 12.6).</span></p>
 </div>
 <div class="figure align-center" id="id15">
 <img alt="_images/paloVerdeResult.png" src="_images/paloVerdeResult.png" />
-<p class="caption"><span class="caption-text">Palo Verde result from Giunt&#8217;s book (figure 12.7).</span></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Palo Verde result from Giunt&#8217;s book (figure 12.7).</span></p>
 </div>
 <div class="figure align-center" id="id16">
 <img alt="_images/kamLANDOsc.png" src="_images/kamLANDOsc.png" />
-<p class="caption"><span class="caption-text">KamLAND detected the oscillation. To calculate the expected flux, the experiment used <span class="math">\(L_0 = 180 \mathrm {km}\)</span>. The best fit is <span class="math">\(\Delta m^2 7.9^{+0.6}_{-0.5} times 10^{-5}\mathrm{eV^2}\)</span>.  From Giunti figure 12.9.</span></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">KamLAND detected the oscillation. To calculate the expected flux, the experiment used <span class="math">\(L_0 = 180 \mathrm {km}\)</span>. The best fit is <span class="math">\(\Delta m^2 7.9^{+0.6}_{-0.5} times 10^{-5}\mathrm{eV^2}\)</span>.  From Giunti figure 12.9.</span></p>
 </div>
 <div class="figure align-center" id="id17">
 <img alt="_images/kamLANDResults.png" src="_images/kamLANDResults.png" />
-<p class="caption"><span class="caption-text">KamLAND result from  Giunt&#8217;s book (figure 12.10). The left figure is the result of KamLAND while the result is the joint analysis of KamLAND and solar neutrino using 2 neutrino oscillation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">KamLAND result from  Giunt&#8217;s book (figure 12.10). The left figure is the result of KamLAND while the result is the joint analysis of KamLAND and solar neutrino using 2 neutrino oscillation.</span></p>
 </div>
 </div>
 </div>
@@ -437,19 +439,18 @@
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

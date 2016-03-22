@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -174,7 +176,7 @@ G(f,g) &amp; = 0.\end{split}\]</div>
 <p>Define <span class="math">\(p=\mathrm{Tr}(\mathbf{J}(f_i,g_i))\)</span> and <span class="math">\(q=\mathrm{det}(\mathbf{J}(f_i,g_i))\)</span> then the systems can be categorized into 3 different categories given the case that the fixed point isa hyperbolic one.</p>
 <div class="figure align-center" id="id2">
 <img alt="_images/fixedpoints-massoudmalek.png" src="_images/fixedpoints-massoudmalek.png" />
-<p class="caption"><span class="caption-text">A diagram that shows the different categorizations given p and q values. Repellers and saddle points are unstable points but attractors are stable. Or in simple ways, given the eigenvalues of the Jacobian <span class="math">\(\lambda_1, \lambda_2\)</span>, <span class="math">\(Re(\lambda_1)&gt;0, Re(\lambda_2)&gt;0\)</span> gives us a repeller, <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&lt;0\)</span> gives us an attractor while <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&gt;0\)</span> gives us the saddle point.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A diagram that shows the different categorizations given p and q values. Repellers and saddle points are unstable points but attractors are stable. Or in simple ways, given the eigenvalues of the Jacobian <span class="math">\(\lambda_1, \lambda_2\)</span>, <span class="math">\(Re(\lambda_1)&gt;0, Re(\lambda_2)&gt;0\)</span> gives us a repeller, <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&lt;0\)</span> gives us an attractor while <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&gt;0\)</span> gives us the saddle point.</span></p>
 </div>
 <table class="docutils footnote" frame="void" id="id1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -220,19 +222,18 @@ G(f,g) &amp; = 0.\end{split}\]</div>
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmology.html">Neutrinos and Cosmology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>

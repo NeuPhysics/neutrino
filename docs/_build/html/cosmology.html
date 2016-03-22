@@ -54,7 +54,7 @@
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
   </script>
   <script type="text/x-mathjax-config">
   MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
@@ -97,7 +97,9 @@
         braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
         avg: ['\\left< \#1 \\right>',1],
         slashed: ['\\cancel{\#1}',1],
-        bold: ['\\boldsymbol{\#1}',1]
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
       }
     }
   });
@@ -299,7 +301,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>Suppose we have a source of antineutrinos at redshift <span class="math">\(z\)</span>, the antineutrino energy we recieved is <span class="math">\(E\)</span>, then the source energy must be <span class="math">\(E(z+1)\)</span>. The resonant scattering, should, if any, happen between the energy range <span class="math">\(E\sim E(z+1)\)</span>.</p>
 <div class="figure align-center" id="id34">
 <img alt="_images/weiler-resonat-absorption-of-cosmic-rays-cnb.png" src="_images/weiler-resonat-absorption-of-cosmic-rays-cnb.png" />
-<p class="caption"><span class="caption-text">From Weiler paper. The bottom horizontal axis is the recieved energy of the antineutrinos, the vertical axis is the transmission probability. The energy is in units of <span class="math">\(M_Z^2/2m\)</span> where <span class="math">\(M_Z\)</span> is the mass of the Z boson and <span class="math">\(m\)</span> is the mass of neutrinos. The top horizontal axis is the nearest possible source of antineutrinos. If we detect antineutrino energy just at the resonance, the nearest possible source for such a resonant scattering is just in front of us.</span></p>
+<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text">From Weiler paper. The bottom horizontal axis is the recieved energy of the antineutrinos, the vertical axis is the transmission probability. The energy is in units of <span class="math">\(M_Z^2/2m\)</span> where <span class="math">\(M_Z\)</span> is the mass of the Z boson and <span class="math">\(m\)</span> is the mass of neutrinos. The top horizontal axis is the nearest possible source of antineutrinos. If we detect antineutrino energy just at the resonance, the nearest possible source for such a resonant scattering is just in front of us.</span></p>
 </div>
 </div>
 <div class="section" id="spectulations-on-detection-of-the-neutrino-sea">
@@ -310,7 +312,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>The interaction between neutrinos and electrons is spin dependent. Different spin states experience different interaction. This feature could possibly be used to detect CNB.</p>
 <div class="figure align-center" id="id35">
 <img alt="_images/neutrino-electron-feynman.png" src="_images/neutrino-electron-feynman.png" />
-<p class="caption"><span class="caption-text">Neutrino electron interaction. The left is charged current while the right is neutral current.</span></p>
+<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Neutrino electron interaction. The left is charged current while the right is neutral current.</span></p>
 </div>
 <p>The Lagrangian for such interactions is</p>
 <div class="math">
@@ -400,7 +402,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>This is from the paper by Vogel. <a class="footnote-reference" href="#id25" id="id19">[1]</a></p>
 <div class="figure align-center" id="id36">
 <img alt="_images/bdecay.jpg" src="_images/bdecay.jpg" />
-<p class="caption"><span class="caption-text">Beta decay. From <a class="reference external" href="https://www.katrin.kit.edu/79.php">KATRIN</a></span></p>
+<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">Beta decay. From <a class="reference external" href="https://www.katrin.kit.edu/79.php">KATRIN</a></span></p>
 </div>
 <p>A nulei <span class="math">\(A_Z\)</span> that captures a electron neutrino will become <span class="math">\(A_{Z+1}\)</span>,</p>
 <div class="math">
@@ -425,7 +427,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 &amp;= Q_\beta + 2 m_{\nu_e} + K_{\nu_e}.\end{split}\]</div>
 <div class="figure align-center" id="id37">
 <img alt="_images/beta_spectrum_of_RaE.jpg" src="_images/beta_spectrum_of_RaE.jpg" />
-<p class="caption"><span class="caption-text">Beta dacay spectrum. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Beta_spectrum_of_RaE.jpg">File:Beta spectrum of RaE.jpg&#64;Wikipedia</a></span></p>
+<p class="caption"><span class="caption-number">Fig. 80 </span><span class="caption-text">Beta dacay spectrum. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Beta_spectrum_of_RaE.jpg">File:Beta spectrum of RaE.jpg&#64;Wikipedia</a></span></p>
 </div>
 <p>The key point comes next. In beta decay, the maximum electron kinetic energy is given by <span class="math">\(Q_\beta\)</span>, which means that even in a beta decay beckground, the electrons that is responsible for the neutrino capture is still distinguishable because their energy is larger than the the beta decay electrons&#8217; energy. The difference is as large as <span class="math">\(2 m_{\nu_e} + K_{\nu_e}\)</span> or <span class="math">\(2 m_{\nu_e}\)</span> as we are talking about CNB neutrino with <span class="math">\(K_{\nu_e}\to 0\)</span>.</p>
 <p>Even though it sounds feasible at this level, here are several questions to ask.</p>
@@ -437,7 +439,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>Anyway, what do we choose to use as the detector? Tritium.</p>
 <div class="figure align-center" id="id38">
 <img alt="_images/spectrum_rdax_1200x678.jpg" src="_images/spectrum_rdax_1200x678.jpg" />
-<p class="caption"><span class="caption-text">Tritum decay spectrum. From KATRIN.</span></p>
+<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">Tritum decay spectrum. From KATRIN.</span></p>
 </div>
 <p>Tritum decay has a very clean and small tail. Since it is relatively light, the decay is more sensitive to neutrino mass. The life time is 12.3 years which is not too long nor too short.</p>
 <p><strong>We can estimate the material needed for such a detector using cross section of beta decay.</strong> The meaning of cross section is almost the reaction rate divided by the initial flux, in more accurate language,</p>
@@ -450,7 +452,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>where <span class="math">\(\frac{n_\nu}{\langle n_\nu \rangle}\)</span> accounts for the fact that the number density of CNB neutrinos at the detector (Earth) might be larger than the average in the whole universe due to gravity of our galaxy or some other effects. We also used the cross section of neutrino capture on tritium <span class="math">\(\sigma=1.5\times 10^{-41}\frac{m_\nu}{1\mathrm{eV}} \mathrm{cm}^2\)</span>.</p>
 <div class="figure align-center" id="id39">
 <img alt="_images/localEnhencementOfNeutrinoNumberDensity.png" src="_images/localEnhencementOfNeutrinoNumberDensity.png" />
-<p class="caption"><span class="caption-text">Local enhencement of neutrino number density. From <a class="reference external" href="http://www.int.washington.edu/talks/WorkShops/int_10_44W/People/Formaggio_J/Formaggio.pdf">Formaggio&#8217;s talk at int</a></span></p>
+<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Local enhencement of neutrino number density. From <a class="reference external" href="http://www.int.washington.edu/talks/WorkShops/int_10_44W/People/Formaggio_J/Formaggio.pdf">Formaggio&#8217;s talk at int</a></span></p>
 </div>
 <p>We estimate the reactions for tritium <span class="math">\(\mathrm{{}^3H}\)</span> mass <span class="math">\(m_t\)</span> during time <span class="math">\(t\)</span>,</p>
 <div class="math">
@@ -479,11 +481,11 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <p>A more precise numerical calculation assuming mass of neutrino <span class="math">\(m_\nu=1\mathrm{eV}\)</span> and resolution <span class="math">\(\Delta = 0.5\mathrm{eV}\)</span> shows that we need at least a resolution that satisfies <span class="math">\(m_\nu/\Delta &gt; 2\)</span> where <span class="math">\(n_\nu/\langle n_\nu \rangle = 50\)</span> is used. <a class="footnote-reference" href="#id33" id="id24">[9]</a></p>
 <div class="figure align-center" id="id40">
 <img alt="_images/energyResolutionAndSignal.png" src="_images/energyResolutionAndSignal.png" />
-<p class="caption"><span class="caption-text">Seperation of signals for <span class="math">\(n_\nu/\langle n_\nu \rangle = 50\)</span>. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).</span></p>
+<p class="caption"><span class="caption-number">Fig. 83 </span><span class="caption-text">Seperation of signals for <span class="math">\(n_\nu/\langle n_\nu \rangle = 50\)</span>. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).</span></p>
 </div>
 <div class="figure align-center" id="id41">
 <img alt="_images/resolutionRequirement4DifferentMass.png" src="_images/resolutionRequirement4DifferentMass.png" />
-<p class="caption"><span class="caption-text">For the signal strength <span class="math">\(N_\nu/N_\beta\)</span> to be 1, the relation of mass and resolution. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).</span></p>
+<p class="caption"><span class="caption-number">Fig. 84 </span><span class="caption-text">For the signal strength <span class="math">\(N_\nu/N_\beta\)</span> to be 1, the relation of mass and resolution. From R. Lazauskas, P. Vogel and C. Volpe, J. Phys. G 35, 025001 (2008).</span></p>
 </div>
 </div>
 </div>
@@ -595,15 +597,13 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 <li class="toctree-l1"><a class="reference internal" href="oscillations.html">Oscillations - In General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vacuum.html">Vacuum Oscillation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basis.html">Basis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="msw.html">Interaction With Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="parametric.html">Parametric Resonance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matter-driven.html">Matter as Driven Energy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collective.html">Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matter/matter.html">Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collective/collective.html">Collective Behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qualitative.html">Qualitative Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instability.html">Instability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="picture.html">Pictures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mastereqn.html">Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/statistical-physics.html">Neutrino Oscillations and Statistical Physics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astrophysics.html">Astrophysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gravity.html">Effect of Gravitation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Neutrinos and Cosmology</a><ul>
@@ -613,6 +613,7 @@ u_{\nu_i} &amp; = \frac{1}{(2\pi)^3} \int d^3p \sqrt{p^2+m_i^2} \left( f_{\nu_i}
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="misc.html">MISC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">Neutrino Physics Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 </ul>
