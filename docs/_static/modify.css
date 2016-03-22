@@ -5,3 +5,20 @@
 img.math {
     width: inherit;
 }
+
+/* Toggle Environment Begin */
+
+.toggle .header {
+    display: block;
+    clear: both;
+}
+
+.toggle .header:after {
+    content: " ▼";
+}
+
+.toggle .header.open:after {
+    content: " ▲";
+}
+
+/* Toggle Environment End */
