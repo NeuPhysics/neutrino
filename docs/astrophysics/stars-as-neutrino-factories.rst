@@ -89,7 +89,7 @@ One of the neutrino factories is the stellar core. Numerous nuclear reactions as
 Nuclear Reactions in Sun and Neutrino Flux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-pp chain and CNO cycle are the most important nuclear reactions in a star. Through different stages of its life, a star experience different nuclear reactions. Figure :ref:`fig-pp_Chain_Branching` shows the dominant energy source of solar mass stars. In order to calculate the neutrino spectrum we need the neutrino production rate in each reaction and the branching ratios. The processes that emits neutrinos are the red reactions in Fig :ref:`fig-pp_Chain_Branching`, which explicitly are
+pp chain and CNO cycle are the most important nuclear reactions in a star. Through different stages of its life, a star experience different nuclear reactions. :numref:`fig-pp_Chain_Branching` shows the dominant energy source of solar mass stars. In order to calculate the neutrino spectrum we need the neutrino production rate in each reaction and the branching ratios. The processes that emits neutrinos are the red reactions in :numref:`fig-pp_Chain_Branching`, which explicitly are
 
 .. math::
    \begin{align}
@@ -105,7 +105,7 @@ pp chain and CNO cycle are the most important nuclear reactions in a star. Throu
 .. figure:: assets/stars-as-neutrino-factories/pp-chain-branching.png
    :align: center
 
-    pp chain with branching ratio1
+   pp chain with branching ratio1
 
 
 .. admonition:: LaTeX Code for The Diagram
@@ -137,7 +137,7 @@ pp chain and CNO cycle are the most important nuclear reactions in a star. Throu
               edge from parent node [right] {16.70\%  } }};
       \end{tikzpicture}
       \end{adjustbox}
-      \caption{ pp chain with branching ratio\cite{Altmann2001} }
+      \caption{ pp chain with branching ratio. From Altmann 2001. }
       \end{figure*}
 
 
@@ -147,7 +147,7 @@ pp chain and CNO cycle are the most important nuclear reactions in a star. Throu
 .. figure:: assets/stars-as-neutrino-factories/cno_cycle.png
    :align: center
 
-   CNO cycle illustration.\cite{Adelberger2011a
+   CNO cycle illustration. From Adelberger 2011
 
 
 Solar neutrinos are mostly produced in pp reaction, Be electron capture and B decay, which are called pp neutrinos, Be neutrinos and B neutrinos. Even without knowledge of the detailed reactions, the conservation of lepton numbers will lead to the overall neutrino production
@@ -302,7 +302,7 @@ The important parameter is the oscillation length of the neutrino flavor convers
 Mikheyev - Smirnov - Wolfenstein Effect
 ```````````````````````````````````````````````
 
-The nature of neutrino oscillation means that flavor conversion occurs as long as their propagation eigenstates are not flavor eigenstates. We expect neutrino propagation eigenstates in matter are different from flavor states in general.\cite{wolf78} Using the fact that neutral current interactions between different flavor neutrinos and matter is independent of flavor, we only include the charged current, which will produce a effective potential for electron flavor. In flavor basis, the effective potential is
+The nature of neutrino oscillation means that flavor conversion occurs as long as their propagation eigenstates are not flavor eigenstates. We expect neutrino propagation eigenstates in matter are different from flavor states in general. [wolf78]_ Using the fact that neutral current interactions between different flavor neutrinos and matter is independent of flavor, we only include the charged current, which will produce a effective potential for electron flavor. In flavor basis, the effective potential is
 
 .. math::
    V=\frac{\sqrt{2}G_F n_e}{2} \sigma_3,
@@ -362,8 +362,8 @@ The eigenstates, derived by diagonalizing the Hamiltonian, are
 
 
 
-Figure :ref:`fig-mswEnergyLevels` shows the two energy levels. For very high matter density, which interact with electron neutrinos more through charged current, electron flavor is composed almost with heavy propagation eigenstate. However, as the matter density becomes lower, the heavy propagation state will be gradually transformed to the other flavors since electron flavor in vacuum is composed mostly the light mass state. The resonance, which is the closest point of energy levels, happens at density :math:`n_e = 2\omega \cos(2\theta_v)/\sqrt{2}G_F` which depends on :math:`\omega = \Delta m^2/2E`. Neutrinos with different energies have different resonance, which will significantly reshape the neutrino spectra for different flavors. More explicitly, the conversion of flavor is shown in
-Figure :ref:`fig-msw_and_density` which is taken from Smirnov. [Smirnov2003]_ Since we are discussion adiabatic evolution, the probability of each energy eigenstates doesn't change, as the boxes of each energy eigenstates shown in Figure :ref:`fig-msw_and_density` doesn't change in size. The extreme dense case shows that matter converts a lot of electron flavor to muon flavor.
+:numref:`fig-mswEnergyLevels` shows the two energy levels. For very high matter density, which interact with electron neutrinos more through charged current, electron flavor is composed almost with heavy propagation eigenstate. However, as the matter density becomes lower, the heavy propagation state will be gradually transformed to the other flavors since electron flavor in vacuum is composed mostly the light mass state. The resonance, which is the closest point of energy levels, happens at density :math:`n_e = 2\omega \cos(2\theta_v)/\sqrt{2}G_F` which depends on :math:`\omega = \Delta m^2/2E`. Neutrinos with different energies have different resonance, which will significantly reshape the neutrino spectra for different flavors. More explicitly, the conversion of flavor is shown in
+:numref:`fig-msw_and_density` which is taken from Smirnov. [Smirnov2003]_ Since we are discussion adiabatic evolution, the probability of each energy eigenstates doesn't change, as the boxes of each energy eigenstates shown in :numref:`fig-msw_and_density` doesn't change in size. The extreme dense case shows that matter converts a lot of electron flavor to muon flavor.
 
 
 
@@ -377,7 +377,7 @@ Figure :ref:`fig-msw_and_density` which is taken from Smirnov. [Smirnov2003]_ Si
 
 
 
-In summary, even though only electron flavor neutrinos are produced in the core of a solar mass star, the neutrino flavor conversion to the other flavors is enhanced by matter interaction, in addition to the vacuum oscillation. However, the actual neutrino flavor conversion is much more complicated than just MSW effect and almost impossible to calculate without knowing the very exact matter profile of the Sun even with the time-dependent small perturbations to the density. As an approximation, MSW transition is good enough for the solar neutrinos.\cite{Lopes2013a} In the case of the sun, the flavor conversion is calculated by Ilídio Lopes and shown in Figure :ref:`fig-solar_neutrino_flavor_conversion`.\cite{Lopes2013}
+In summary, even though only electron flavor neutrinos are produced in the core of a solar mass star, the neutrino flavor conversion to the other flavors is enhanced by matter interaction, in addition to the vacuum oscillation. However, the actual neutrino flavor conversion is much more complicated than just MSW effect and almost impossible to calculate without knowing the very exact matter profile of the Sun even with the time-dependent small perturbations to the density. As an approximation, MSW transition is good enough for the solar neutrinos. [Lopes2013a]_ In the case of the sun, the flavor conversion is calculated by Ilídio Lopes and shown in :numref:`fig-solar_neutrino_flavor_conversion`. [Lopes2013]_
 
 
 .. _fig-solar_neutrino_flavor_conversion:
@@ -385,7 +385,7 @@ In summary, even though only electron flavor neutrinos are produced in the core 
 .. figure:: assets/stars-as-neutrino-factories/solar_neutrino_flavor_conversion.png
    :align: center
 
-   Neutrino flavor conversion of the Sun. Color meaning refer to Figure :ref:`fig-solar_neutrino_spectra_flavor_conversion`.\cite{Lopes2013}
+   Neutrino flavor conversion of the Sun. Color meaning refer to :numref:`fig-solar_neutrino_spectra_flavor_conversion`. [Lopes2013]_
 
 
 
@@ -407,9 +407,9 @@ where :math:`{}_{\alpha}` stands for flavor and E is the energy of neutrinos. To
 Neutrino Spectrum with Thermal and Relativistic Modifications
 ---------------------------------------------------------------------------------
 
-For each reaction, the spectral shape of solar neutrinos are mostly spectrum inferred from lab experiments, with modifications of thermal motion and slight modifications from relativistic effect.\cite{Bahcall1991}
+For each reaction, the spectral shape of solar neutrinos are mostly spectrum inferred from lab experiments, with modifications of thermal motion and slight modifications from relativistic effect. [Bahcall1991]_
 
-In the lab experiments, we only have low energy nuclei and less dens environment, while in the solar core, the temperature is high and the density is large. The first question to ask is whether the neutrino production is modified by a thermal equilibrium environment or it is too fast that no equilibrium can not be maintained by the electromagnetic scattering. The answer is that the neutrino production is in equilibrium which ensures the equilibrium statistics of the neutrino spectra.\cite{Bahcall1991} The two quantities that is related to this problem is the characteristic time of neutrino production and the characteristic electromagnetic scattering. The time scale of electromagnetic scattering is \cite{Bahcall1991}
+In the lab experiments, we only have low energy nuclei and less dens environment, while in the solar core, the temperature is high and the density is large. The first question to ask is whether the neutrino production is modified by a thermal equilibrium environment or it is too fast that no equilibrium can not be maintained by the electromagnetic scattering. The answer is that the neutrino production is in equilibrium which ensures the equilibrium statistics of the neutrino spectra. [Bahcall1991]_ The two quantities that is related to this problem is the characteristic time of neutrino production and the characteristic electromagnetic scattering. The time scale of electromagnetic scattering is [Bahcall1991]_
 
 .. math::
    \tau_{EM} \sim 10^{-12} \mathrm{s} \left( \frac{E}{20\mathrm{keV}} \right)^{3/2}\left( \frac{150 \mathrm{g \cdot cm^{-3}} }{\rho} \right),
@@ -448,7 +448,7 @@ where E is the energy of ions which is in a bath of p plasma and :math:`\rho` is
 
 This huge difference between :math:`\tau_{EM}` and :math:`\tau_{neutrino}` keeps the thermal equilibrium of the ions that produces neutrinos.
 
-Therefore we consider the neutrino spectra of all the reactions with thermal motions of the nuclei in a thermal bath. John Bahcall explained thermal corrections to neutrino spectra of beta decay using a simple argument that\cite{Bahcall1991}
+Therefore we consider the neutrino spectra of all the reactions with thermal motions of the nuclei in a thermal bath. John Bahcall explained thermal corrections to neutrino spectra of beta decay using a simple argument that [Bahcall1991]_
 
 .. math::
    F(q) dq = \int F_{lab}(q') dq' f(v_z) dv_z,
@@ -480,16 +480,16 @@ Since the core temperature is not high enough to make the heavy nuclei relativis
    F(q) = F_{lab}(q) (1 + \int_{\infty}^{v_m} f(v_z) dv_z).
 
 
-Thus the correction depends on the energy of neutrinos. The correction only plays a role when the energy of neutrino is close to endpoint energy of the beta decay. The energy of the neutrinos will be blue-shifted beyond the beta decay spectrum endpoint in lab experiments. However, the correction is as small as :math:`10^{-6}` of the lab spectrum in the case of solar core.\cite{Bahcall1991}
+Thus the correction depends on the energy of neutrinos. The correction only plays a role when the energy of neutrino is close to endpoint energy of the beta decay. The energy of the neutrinos will be blue-shifted beyond the beta decay spectrum endpoint in lab experiments. However, the correction is as small as :math:`10^{-6}` of the lab spectrum in the case of solar core. [Bahcall1991]_
 
-The other correction is due to the gravitational redshift. Combining the thermal correction and gravitational redshift, we get the neutrino spectrum that should be observed on the Earth. As an example, John Bahcall calculated the pp reaction spectrum, which is given in Figure :ref:`fig-bahcall_pp_nu_spectrum`.
+The other correction is due to the gravitational redshift. Combining the thermal correction and gravitational redshift, we get the neutrino spectrum that should be observed on the Earth. As an example, John Bahcall calculated the pp reaction spectrum, which is given in :numref:`fig-bahcall_pp_nu_spectrum`.
 
 .. _fig-bahcall_pp_nu_spectrum:
 
 .. figure:: assets/stars-as-neutrino-factories/bahcall_pp_nu_spectrum.png
    :align: center
 
-   Comparison of pp reaction neutrino spectrum in the lab experiments and predicted solar spectrum.\cite{Bahcall1991} The correction is very small. The picture for this phenomenon is that the endpoint energy is the nuclear reaction energy released plus the thermal energy.
+   Comparison of pp reaction neutrino spectrum in the lab experiments and predicted solar spectrum. From Bahcall 1991. The correction is very small. The picture for this phenomenon is that the endpoint energy is the nuclear reaction energy released plus the thermal energy.
 
 
 
@@ -497,17 +497,17 @@ Solar Neutrino Spectra
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-This overall spectra are the summation of neutrinos produced at different radius where the temperature and density are different. One of them is the fact that nuclear reactions happen at different rates when the temperature changes. Adelberger et al calculated the stellar energy contribution of pp chain and CN cycle at different temperatures.\cite{Adelberger2011a}
+This overall spectra are the summation of neutrinos produced at different radius where the temperature and density are different. One of them is the fact that nuclear reactions happen at different rates when the temperature changes. Adelberger et al calculated the stellar energy contribution of pp chain and CN cycle at different temperatures. [Adelberger2011]_
 
 .. _fig-pp_chain_vs_cno:
 
 .. figure:: assets/stars-as-neutrino-factories/pp_chain_vs_cno.png
    :align: center
 
-   The contribution to the luminosity by pp chain and CNO cycle as a function of temperature.\cite{Adelberger2011a} The black dot is at the solar core temperature. :math:`L_{\odot}` is solar luminosity. In high mass stars where the temperature is high, CN cycle is the dominant source of energy. Thus for a large mass star we expect the neutrinos from CNO cycle would have a larger flux with respect to neutrinos from pp chain.
+   The contribution to the luminosity by pp chain and CNO cycle as a function of temperature. From Adelberger 2011. The black dot is at the solar core temperature. :math:`L_{\odot}` is solar luminosity. In high mass stars where the temperature is high, CN cycle is the dominant source of energy. Thus for a large mass star we expect the neutrinos from CNO cycle would have a larger flux with respect to neutrinos from pp chain.
 
 
-Standard solar model produces a complete set of neutrino spectra from different reactions, which is shown in Figure :ref:`fig-solar_neutrino_spectra_flavor_conversion`. The total neutrino spectrum we expect from the sun is the superposition of all the neutrino spectra from different reactions. From Figure :ref:`fig-pp_chain_vs_cno` we expect the pp chain neutrino flux is $2\sim 3$ orders of magnitude larger than CNO cycle neutrino flux, which is checked in Figure :ref:`fig-solar_neutrino_spectra_flavor_conversion`. Meanwhile, another interesting question to look into is the neutrino production at different radius. Since nuclear reaction rates depend on temperature and density, neutrino flux generated at different radius inside the Sun is very different. A calculation done by Ilídio Lopes shows that most neutrinos are produced at 0.05 radius of the Sun, which is in Figure :ref:`fig-solar_neutrino_production_radius`.\cite{Lopes2013}
+Standard solar model produces a complete set of neutrino spectra from different reactions, which is shown in :numref:`fig-solar_neutrino_spectra_flavor_conversion`. The total neutrino spectrum we expect from the sun is the superposition of all the neutrino spectra from different reactions. From :numref:`fig-pp_chain_vs_cno` we expect the pp chain neutrino flux is $2\sim 3$ orders of magnitude larger than CNO cycle neutrino flux, which is checked in :numref:`fig-solar_neutrino_spectra_flavor_conversion`. Meanwhile, another interesting question to look into is the neutrino production at different radius. Since nuclear reaction rates depend on temperature and density, neutrino flux generated at different radius inside the Sun is very different. A calculation done by Ilídio Lopes shows that most neutrinos are produced at 0.05 radius of the Sun, which is in :numref:`fig-solar_neutrino_production_radius`. [Lopes2013]_
 
 
 
@@ -519,7 +519,7 @@ Standard solar model produces a complete set of neutrino spectra from different 
 .. figure:: assets/stars-as-neutrino-factories/solar_neutrino_spectra_flavor_conversion.jpg
    :align: center
 
-   Solar neutrino spectra with flavor conversion. Solid lines are spectra without flavor conversion while the dashed lines are spectra with flavor conversion. The difference comes from the neutrino mixing. Figure taken from Ilidio Lopes.\cite{Lopes2013,Lopes2013a} The neutrino flavor conversion is calculated using MSW transition.
+   Solar neutrino spectra with flavor conversion. Solid lines are spectra without flavor conversion while the dashed lines are spectra with flavor conversion. The difference comes from the neutrino mixing. Figure taken from Ilidio Lopes. From I. Lopes and S. Turck-Chieze 2013, I. Lopes 2013. The neutrino flavor conversion is calculated using MSW transition.
 
 
 
@@ -530,7 +530,7 @@ Standard solar model produces a complete set of neutrino spectra from different 
 .. figure:: assets/stars-as-neutrino-factories/solar_neutrino_production_radius.png
    :align: center
 
-   Solar neutrino flux at different radius. Color meaning refer to Figure :ref:`fig-solar_neutrino_spectra_flavor_conversion`.
+   Solar neutrino flux at different radius. Color meaning refer to :numref:`fig-solar_neutrino_spectra_flavor_conversion`.
 
 
 
@@ -542,19 +542,19 @@ Supernova Neutrinos and Conclusion
 
 The solar neutrino spectra is not very different from lab experiments since solar neutrino flux is not high enough to interact with solar medium significantly. However, in a supernova explosion, :math:`10^{58}` neutrinos are released from the proto-neutron star, which is of radius :math:`10\mathrm{km}`, in a few seconds. The huge number density of neutrinos and large density of matter have a huge effect on the neutrino spectra, especially for different flavors since matter has a huge effect on flavor conversion as we have already seen in MSW effect. The matter effect will be much more than MSW since the violent matter motion. In addition, neutrino neutrino interaction will be efficient because of the high neutrino number density.
 
-Apart from the emission of neutrinos from nuclear reactions of electron capture and positron emission in the solar interior, supernova environment also gives rise to Bremsstrahlung pair neutrino production, electron-positron neutrino pair production, which brings all three flavors and also anti-neutrinos into the spectra. However, even the with the presence of intensive interaction between neutrinos and the leptons and hadrons, which thermalize the neutrinos in the supernova core, the neutrino spectrum escaping from the supernova core is not completely Fermi-Dirac spectrum. Nonetheless, it is possible to parametrize it using nominal Fermi-Dirac distribution,\cite{ysuzuki2004}
+Apart from the emission of neutrinos from nuclear reactions of electron capture and positron emission in the solar interior, supernova environment also gives rise to Bremsstrahlung pair neutrino production, electron-positron neutrino pair production, which brings all three flavors and also anti-neutrinos into the spectra. However, even the with the presence of intensive interaction between neutrinos and the leptons and hadrons, which thermalize the neutrinos in the supernova core, the neutrino spectrum escaping from the supernova core is not completely Fermi-Dirac spectrum. Nonetheless, it is possible to parametrize it using nominal Fermi-Dirac distribution, [raffelt2004]_
 
 .. math::
    f(E)\propto \frac{E^2}{1+\exp ( E/kT - \mu )}.
 
 
-However, numerical results show that there is a deviation from this Fermi-Dirac distribution.\cite{Totani1998,Keil2003} Keil Mathias and Georg Raffelt showed that it is good enough to approximate the neutrino spectrum from supernova in Monte Carlo simulations using the so called "alpha fit",
+However, numerical results show that there is a deviation from this Fermi-Dirac distribution. [Totani1998]_  [Keil2003]_ Keil Mathias and Georg Raffelt showed that it is good enough to approximate the neutrino spectrum from supernova in Monte Carlo simulations using the so called "alpha fit",
 
 .. math::
    f(E)\propto E^\alpha \exp\left( -(\alpha+1)\frac{E}{\langle E\rangle} \right),
 
 
-where :math:`\langle E\rangle` is the average energy, or the first moment of energy. The values from Monte Carlo simulations falls into the range :math:`\alpha = 2.5\sim 5`, which clearly shows the spectra are pinched as explained in Figure :ref:`fig-neutrino_spectra_sn_simulations`. Detection of deviation from nominal Fermi-Dirac distribution will show evidence of core-collapse information.
+where :math:`\langle E\rangle` is the average energy, or the first moment of energy. The values from Monte Carlo simulations falls into the range :math:`\alpha = 2.5\sim 5`, which clearly shows the spectra are pinched as explained in :numref:`fig-neutrino_spectra_sn_simulations`. Detection of deviation from nominal Fermi-Dirac distribution will show evidence of core-collapse information.
 
 .. _fig-neutrino_spectra_sn_simulations:
 
@@ -579,5 +579,12 @@ In this review, we presented the solar neutrino production, thermal modification
 Refs & Notes
 ------------------
 
-.. [Smirnov2003] A. Y. Smirnov, “The MSW effect and Solar Neutrinos,” , 23
-(2003), arXiv:0305106 [hep-ph].
+.. [Smirnov2003] A. Y. Smirnov, “The MSW effect and Solar Neutrinos,” , 23 (2003), arXiv:0305106 [hep-ph].
+.. [Adelberger2011] E. Adelberger and A. Garcia, “Solar fusion cross sections. II. The pp chain and CNO cycles,” Reviews of Modern Physics 83 (2011), arXiv:arXiv:1004.2318v3.
+.. [wolf78] L. Wolfenstein, “Neutrino oscillations in matter,” Physical Review D 17, 2369–2374 (1978).
+.. [lopes2013a] I. Lopes, “Probing the Sun's inner core using solar neutrinos: A new diagnostic method,” Physical Review D 88, 045006 (2013).
+.. [lopes2013] I. Lopes and S. Turck-Chieze, “Solar Neutrino Physics Oscillations: Sensitivity To the Electronic Density in the Sun’S Core,” The Astrophysical Journal 765, 14 (2013).
+.. [raffelt2004] G. G. Raffelt, M. T. Keil, R. Buras, H.-T. Janka, and M. Rampp, “Supernova neutrinos: Flavor-dependent fluxes and spectra,” in Neutrino oscillations and their origin. Proceedings, 4th International Workshop, NOON2003, Kanazawa, Japan, February 10-14, 2003 (2003) pp. 380–387, arXiv:astro-ph/0303226 [astro-ph]
+.. [Bahcall1991] J. N. Bahcall, “Shapes of solar neutrino spectra: Unconventional tests of the standard electroweak model,” Phys. Rev. D44, 1644–1651 (1991).
+.. [Totani1998] T. Totani, K. Sato, H. E. Dalhed, and J. R. Wilson, “Future Detection of Supernova Neutrino Burst and Explosion Mechanism,” The Astrophysical Journal 496, 216–225 (1998).
+.. [] 0M. T. Keil, Supernova Neutrino Spectra and Applications to Flavor Oscillations, Ph.D. thesis (2003), arXiv:0308228 [astro-ph].
