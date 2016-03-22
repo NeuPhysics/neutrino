@@ -292,7 +292,7 @@ It is possible to write down another Lagrangian,
 .. math::
    \mathscr{L}_{M,L} = i\psi_L^\dagger \sigma^\mu \partial_\mu \psi_L + i \frac{1}{2}m( \psi_L^\dagger \sigma^2 \psi_L^* - \psi_L^T \sigma^2 \psi_L),
 
-which decouples the left-handed and right-handed.
+which **decouples the left-handed and right-handed**.
 
 .. admonition:: Global Phase Transformation
    :class: note
