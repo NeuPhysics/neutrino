@@ -45,6 +45,8 @@ Here is also an index: `genindex.html <genindex.html>`_ .
 
 .. toctree::
    :maxdepth: 3
+   :caption: Table of Contents
+   :numbered:
 
    preliminary/index.rst
    mass/index.rst
