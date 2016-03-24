@@ -47,6 +47,7 @@ Thus we have the oscillation angular frequency written as
 
 .. math::
    \omega_v = 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 3.75\times 10^{-17}\mathrm{MeV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}.
+   :label: common-sense-eqn-omega-v-si-unit
 
 Vacuum oscillation equation of motion is
 
@@ -68,6 +69,7 @@ Another important situation is the 2 flavor neutrino oscillation in constant mat
 
 .. math::
    \omega_m = \omega_v \sqrt{ \frac{\lambda_c}{\omega_v}^2 + 1 - 2 \frac{\lambda_c}{\omega_v}\cos 2\theta_v }.
+   :label: common-sense-eqn-omega-m
 
 Meanwhile, the effective mixing angle :math:`\theta_m` is determined by
 
@@ -88,6 +90,14 @@ To reverse the process and find out the actual SI unit distance after the numeri
 
 .. math::
    x = \frac{\hat x}{\omega_m}.
+   :label: common-sense-eqn-actual-distance-constant-matter
+
+The procedure will be the following.
+
+1. Calculate :math:`\omega_v` using :eq:`common-sense-eqn-omega-v-si-unit`.
+2. Calculate :math:`\hat\lambda_c = \frac{\lambda_c}{\omega_v}`.
+3. Calculate :math:`\omega_m` using :eq:`common-sense-eqn-omega-m`.
+4. Find out the actual distance using :eq:`common-sense-eqn-actual-distance-constant-matter`.
 
 
 
