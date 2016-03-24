@@ -64,6 +64,33 @@ where :math:`\hat x = \omega_v x`. This could be convinient for numerical calcul
    x = \frac{\hat x}{\omega_v} = \frac{\hat x}{  1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} } = \frac{\hat x}{0.190} \mathrm{km} \frac{7.5\times 10^{-5}\mathrm{eV}^2}{\delta m^2}  \frac{E}{1\mathrm{MeV}}.
 
 
+Another important situation is the 2 flavor neutrino oscillation in constant matter background :math:`\lambda_c = \sqrt{2}G_F n_e`. The energy scale is :math:`\omega_m` which is calculated using
+
+.. math::
+   \omega_m = \omega_v \sqrt{ \frac{\lambda_c}{\omega_v}^2 + 1 - 2 \frac{\lambda_c}{\omega_v}\cos 2\theta_v }.
+
+Meanwhile, the effective mixing angle :math:`\theta_m` is determined by
+
+.. math::
+   \tan 2\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \frac{\lambda}{\omega_v} }.
+
+As we would like to scale the equation of motion like what we did for vacuum equation of motion, i.e.,
+
+.. math::
+   i \frac{d}{d\hat x} \Psi = \frac{1}{2}(-\cos 2\theta_m \boldsymbol{\sigma_3} + \sin 2\theta_m \boldsymbol{\sigma_1}\Psi ,
+
+we find out the scaled distance
+
+.. math::
+   \hat x = \omega_m x.
+
+To reverse the process and find out the actual SI unit distance after the numerical calculation, we use
+
+.. math::
+   x = \frac{\hat x}{\omega_m}.
+
+
+
 Diagrams
 ~~~~~~~~~~~~~~~
 
