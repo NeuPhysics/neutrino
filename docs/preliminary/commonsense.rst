@@ -31,7 +31,37 @@ Useful Conversions in Neutrino Physics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+Using natural units, length = time = 1/energy, thus we could scale quantities using energy, or whatever convinient energy or length scale we have.
 
+In vacuum oscillations, the energy scale is the oscillation frequency :math:`\omega_v`. The length can be scaled using this energy scale. However, it is only convinient when we can restore the actually length in SI units. To fulfill it, we write down the conversion here. For two flavor oscillation, oscillation angular frequency is given by
+
+.. math::
+   \omega_v = \frac{\delta m^2}{2E} =  \frac{7.5\times 10^{-5}\mathrm{eV}^2}{2\times 1\mathrm{MeV}} \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} .
+
+On the other hand, electro-volt is related to length through the useful formula
+
+.. math::
+   197\mathrm{MeV}\cdot \mathrm{fm} = \hbar c = 1.
+
+Thus we have the oscillation angular frequency written as
+
+.. math::
+   \omega_v = 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 3.75\times 10^{-17}\mathrm{MeV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}.
+
+Vacuum oscillation equation of motion is
+
+.. math::
+   i\frac{d}{d x} \Psi = \frac{\omega_v}{2}(-\cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1}) \Psi,
+
+which can be scaled using the energy scale
+
+.. math::
+   i\frac{d}{d \hat x} \Psi = \frac{1}{2}(-\cos 2\theta_v \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1}\Psi ,
+
+where :math:`\hat x = \omega_v x`. This could be convinient for numerical calculations, which, however, requires the relation
+
+.. math::
+   x = \frac{\hat x}{\omega_v} = \frac{\hat x}{  1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} } = \frac{\hat x}{0.190} \mathrm{km} \frac{7.5\times 10^{-5}\mathrm{eV}^2}{\delta m^2}  \frac{E}{1\mathrm{MeV}}.
 
 
 Diagrams

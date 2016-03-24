@@ -39,17 +39,17 @@ The neutrino experimantal data shows the mixing angles are [1]_
 
 Experimental result of the :math:`\delta m^2 _{ij}` s are [1]_
 
-1. :math:`\delta^2 m_{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
-2. :math:`\lvert\delta^2 m_{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
+1. :math:`\delta m^2 _{21}=7.5^{+0.3}_{-0.2}\times 10^{-5}eV^2`;
+2. :math:`\lvert\delta m^2 _{32}\rvert =2.4^{+0.1}_{-0.1}\times 10^{-3}eV^2`.
 
 
 .. admonition:: Definition of Mass-squared Difference
    :class: note
 
-   :math:`\delta m^2 _{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta^2 m_{31}=\delta^2 m{32}-\delta^2 m_{21}`.
+   :math:`\delta m^2 _{ij}=m_i^2-m_j^2`. Obviously, :math:`\delta m^2 _{31}=\delta m^2 {32}-\delta m^2 _{21}`.
 
 
-As :math:`\lvert \delta^2 m_{21}\rvert\ll \lvert\delta^2 m_{32}\rvert`, we should have :math:`\delta^2 m_{31} \approx \delta^2 m_{32}`.
+As :math:`\lvert \delta m^2 _{21}\rvert\ll \lvert\delta m^2 _{32}\rvert`, we should have :math:`\delta m^2 _{31} \approx \delta m^2 _{32}`.
 
 
 
@@ -203,9 +203,9 @@ with the definition :math:`\Delta E =  E_1-E_2 \approx p_1 + \frac{1}{2}\frac{m_
 
 .. math::
    \Delta E & \approx \frac{m_1^2 - m_2^2}{2p} \\
-   & = \frac{\delta^2 m}{2p} .
+   & = \frac{\delta m^2 }{2p} .
 
-with :math:`\delta^2 m=m_1^2 - m_2^2`. Most of the time we would like to know the oscillation with respect to distance. Using the approximation :math:`t = L` and :math:`\Delta E \approx \frac{m_1^2 - m_2^2}{2p}`, we have
+with :math:`\delta m^2 =m_1^2 - m_2^2`. Most of the time we would like to know the oscillation with respect to distance. Using the approximation :math:`t = L` and :math:`\Delta E \approx \frac{m_1^2 - m_2^2}{2p}`, we have
 
 .. math::
    P_{aa} &= 1 - \sin^2(2\theta) \sin^2\left( \frac{\Delta E L}{2} \right) \\
@@ -240,9 +240,9 @@ However, the Hamiltonian we prefer is the one for flavour eigenstates. To achiev
    \mathbf H_{\alpha} & = \mathbf U \hat H_j  \mathbf U^T \\
    & =  \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix} \left( p \mathbf I + \frac{1}{2p}\begin{pmatrix} m_1^2 & 0 \\ 0 & m_2^2 \end{pmatrix} \right)   \begin{pmatrix}  \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \\
    & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} \cos^2\theta m_1^2 + \sin^2\theta m_2^2 & -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 \\ -\sin\theta\cos\theta m_1^2 + \sin\theta\cos\theta m_2^2 & \sin^2\theta m_1^2 + \cos^2\theta m_2^2 \end{pmatrix} \\
-   & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta^2 m \sin^2\theta & -\frac{1}{2}\sin 2\theta  \delta m^2  \\ -\frac{1}{2}\sin 2\theta  \delta m^2  & m_2^2+ \delta m^2 \sin^2\theta \end{pmatrix} \\
-   & = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix} \right) \\
-   & = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta^2 m \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta^2 m\cos 2\theta \end{pmatrix}
+   & = p \mathbf I + \frac{1}{2p} \begin{pmatrix} m_1^2 - \delta m^2  \sin^2\theta & -\frac{1}{2}\sin 2\theta  \delta m^2  \\ -\frac{1}{2}\sin 2\theta  \delta m^2  & m_2^2+ \delta m^2 \sin^2\theta \end{pmatrix} \\
+   & = p \mathbf I + \frac{1}{2p} \left( \frac{1}{2}(m_1^2+m_2^2) \mathbf I -   \frac{1}{2}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta m^2  \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta m^2 \cos 2\theta \end{pmatrix} \right) \\
+   & = \left(p + \frac{m_1^2+m_2^2}{4p} \right)\mathbf I - \frac{1}{4p}\begin{pmatrix} - \delta m^2 \cos 2\theta & \delta m^2  \sin 2\theta \\  \delta m^2 \sin 2\theta & \delta m^2 \cos 2\theta \end{pmatrix}
 
 Again we see clearly, no oscillation will apear as long as mixing angle :math:`\theta=0` or :math:`\delta m^2 =0`.
 
@@ -278,8 +278,19 @@ Again we see clearly, no oscillation will apear as long as mixing angle :math:`\
 Since Pauli matrices plus identity forms a complete basis for all 2 by 2 matrices, it our Hamiltonian can be written as
 
 .. math::
-   \mathbf H  &= \frac{\delta^2 m}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
-   & = \frac{\delta^2 m}{4 E} \left( -\cos 2\theta \mathbf{\sigma_z} + \sin 2\theta \mathbf{\sigma_x} \right).
+   \mathbf H  &= \frac{-\delta m^2}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
+   & = \frac{-\delta m^2}{4 E} \left( -\cos 2\theta \boldsymbol{\sigma_z} + \sin 2\theta \boldsymbol{\sigma_x} \right).
+
+To be explicit, :math:`\delta m^2 = \delta m_{12}^2= m_1^2 - m_2^2`. The trandition is always
+
+.. math::
+   \delta m_{i,j}^2 = m_i^2 - m_j^2.
+
+In two flavor oscillations, most literature use :math:`\Delta m^2 \equiv \delta m_{21}^2` so that we don't have the negative sign in front of the Hamiltonian here. So be it,
+
+.. math::
+   \mathbf H  &= \frac{\Delta m^2}{4E}\begin{pmatrix} -\cos 2\theta & \sin 2\theta \\ \sin 2\theta & \cos 2\theta \end{pmatrix} \\
+   & = \frac{\Delta m^2}{4 E} \left( -\cos 2\theta \boldsymbol{\sigma_z} + \sin 2\theta \boldsymbol{\sigma_x} \right).
 
 
 .. note::
@@ -357,8 +368,8 @@ The overall Hamiltonian is
 where the vacuum Hamiltonian is
 
 .. math::
-   H_0 &= \frac{\delta^2 m}{2E} \mathbf B \\
-   & = \frac{\delta^2 m}{2E} U \left(\frac{1}{2}\sigma_3 \right) U^\dagger .
+   H_0 &= \frac{\delta m^2 }{2E} \mathbf B \\
+   & = \frac{\delta m^2 }{2E} U \left(\frac{1}{2}\sigma_3 \right) U^\dagger .
 
 
 
@@ -379,12 +390,12 @@ In `Picture <.picture.html>`_ chapter we have seen the definition of a polarizat
 
 .. math::
    P_{\omega,i} &\propto \mathrm{Tr} (\rho_E \sigma_i) \\
-   & = \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\rho_E \sigma_i) .
+   & = \frac{1}{n_\nu} \frac{\lvert \delta m^2  \rvert}{2\omega^2} \times  \mathrm{Tr} (\rho_E \sigma_i) .
 
 For anitneutrinos, we have a negative :math:`\omega` which is defined as :math:`\omega = \frac{ \delta m^2 }{2E}` (neutrinos) and :math:`\omega_{\bar\nu}= - \frac{ \delta m^2 }{2E}` (anitneutrinos). The polarization is defined as
 
 .. math::
-   P_{\omega,i} = - \frac{1}{n_\nu} \frac{\lvert \delta^2 m \rvert}{2\omega^2} \times  \mathrm{Tr} (\bar \rho_E \sigma_i) .
+   P_{\omega,i} = - \frac{1}{n_\nu} \frac{\lvert \delta m^2  \rvert}{2\omega^2} \times  \mathrm{Tr} (\bar \rho_E \sigma_i) .
 
 
 With all these definitions, Von Neumann equation multiply by :math:`\vec{\sigma} = \sigma_1 \hat e_1 + \sigma_2 \hat e_2 + \sigma_3 \hat e_3`, we have
