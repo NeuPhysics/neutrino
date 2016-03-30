@@ -223,3 +223,4 @@ I did some calculations based on Giunti's book so that I can really understand e
 
 1. Giunti, C., & Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001
 2. Krastev, P. I., & Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. http://doi.org/10.1016/0370-2693(89)91206-9
+3. Loreti, F. N., & Balantekin, A. B. (1994). Neutrino oscillations in noisy media. Physical Review D, 50(8), 4762–4770. http://doi.org/10.1103/PhysRevD.50.4762

@@ -1,15 +1,16 @@
-Pictures
-===============
+Some Useful Physics Pictures
+=============================================
 
 
 There are several pictures to visualize the oscillations of neutrinos.
 
+.. index:: Magnetic Spin
 
 
 Magnetic Spin
 -----------------------------
 
-.. figure:: ./assets/larmor.png
+.. figure:: ./assets/basics/larmor.png
    :align: center
 
    Image source: `Larmor Precession <http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/larmor.html>`_ .
@@ -28,6 +29,8 @@ while torque is by definition :math:`\vec \tau = \frac{d}{dt}\vec L`. So we have
 In the case of electron quantum magnetic spin, :math:`\vec \mu` is proportional to the angular momentum :math:`\vec L`, i.e., :math:`\vec \mu = \frac{-e}{2m_e}\vec L\propto \vec L`.
 
 So the equation of motion becomes
+
+.. _magnetic-spin-angular-momentum-eom:
 
 .. math::
    \frac{d}{dt}\vec L \propto \vec L \times \vec B.
@@ -50,41 +53,6 @@ So the equation of motion becomes
 
 
 
-Neutrino Flavour Isospin
----------------------------------
-
-Neutrino flavour isospin [3]_
-
-.. math::
-   \mathbf s = \psi^{f\dagger} \frac{\mathbf\sigma}{2} \psi^f,
-
-where
-
-.. math::
-   \psi^f_\nu & = \begin{pmatrix} a_{\nu_e} \\ a_{\nu_x} \end{pmatrix} \\
-   \psi^f_{\bar \nu} & = \begin{pmatrix} - a_{\bar\nu_x} \\ a_{\bar\nu_e} \end{pmatrix}
-
-
-The equation of motion for isospin is
-
-.. math::
-   \frac{d}{dt}\mathbf s = \mathbf s \times \mathbf {H^{eff}}.
-
-Previously we have already seen the equations for a spinning top,
-
-.. math::
-   \frac{d}{dt}\vec S  =  \frac{\partial}{\partial t} \vec S  - \vec S \times \vec \Omega,
-
-where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
-
-.. math::
-   \frac{\partial}{\partial t} \vec S  = \vec S \times \vec \Omega,
-
-which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega` corresponds to :math:`\mathbf {H^{eff}}`.
-
-
-
-
 
 
 
@@ -93,7 +61,10 @@ Coupled Pendulum
 ------------------------
 
 
-.. figure:: assets/coupledPendulum.png
+.. figure:: assets/basics/coupledPendulum.png
+   :align: center
+
+   Coupled pendulum
 
 
 The equation of motion is
@@ -164,8 +135,10 @@ Steady Precession
 
 A steady precession maintains the angle :math:`\theta`.
 
-.. figure:: assets/gyroscopeSteadyPrecession.png
+.. figure:: assets/basics/gyroscopeSteadyPrecession.png
    :align: center
+
+   Gyroscope steady precession
 
 
 Now we have :math:`\dot \theta =0` so the Euler's equations reduces to,
@@ -186,7 +159,10 @@ Now define :math:`\Omega  = \dot \phi` and :math:`\omega = \dot \psi`. Our appro
 Unsteady Precession
 `````````````````````````````````````
 
-.. figure:: assets/spinningTop.png
+.. figure:: assets/basics/spinningTop.png
+   :align: center
+
+   Spin tops
 
 
 
@@ -230,7 +206,7 @@ Rewrite the density matrix with Pauli matrices and identity,
 
 The important fact is that the values of polarization depends on the choice of basis.
 
-More physical meanings can be obtained by chosing a good basis so that the density matrix is diagonalised by expressing it with components of polarization. [4]_
+More physical meanings can be obtained by chosing a good basis so that the density matrix is diagonalised by expressing it with components of polarization. [3]_
 
 
 
@@ -296,5 +272,4 @@ Neutrino self interaction Hamiltonian is
 
 .. [1] Read Carl's lecture notes of *Classical Mechanics* for this derivation.
 .. [2] Refer to `Top <http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec30.pdf>`_ .
-.. [3] `Collective neutrino flavor transformation in supernovae <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.123004>`_
-.. [4] Read quantum statistics book if more is needed.
+.. [3] Read quantum statistics book if more is needed.
