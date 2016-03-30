@@ -52,18 +52,15 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    mass/index.rst
    experiments/index.rst
    oscillations/index.rst
-   basis.rst
    matter/index.rst
    collective/index.rst
-   qualitative.rst
-   instability.rst
-   picture.rst
+   instability/index.rst
+   pictures/index.rst
    models/index.rst
    statistical-physics/index.rst
    astrophysics/index.rst
-   gravity.rst
+   gravity/index.rst
    cosmology/index.rst
-   misc.rst
-   cheatsheet.rst
+   misc/index.rst
    ref.rst
    acknowledgement.rst
