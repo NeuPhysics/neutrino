@@ -4,6 +4,37 @@ MSW Effect
 ===================
 
 
+
+.. admonition:: Brief Summary of MSW Resonance
+   :class: note
+
+   The Hamiltonian for matter effect is
+
+   .. math::
+      \mathbf H(x) = \left(\frac{\lambda(x)}{2} -\frac{ \omega_v }{2} \cos 2\theta_v\right) \boldsymbol {\sigma_3 } + \frac{ \omega_v }{2} \sin 2\theta_v \boldsymbol{\sigma_1},
+
+   where :math:`\lambda(x)=\sqrt{2}G_F n_e(x)` is the matter potential and :math:`\omega_v=\frac{\Delta m^2}{2E}` is the vacuum oscillation angular frequency. MSW resonance happens when the diagonal terms disappear, i.e.,
+
+   .. math::
+      \lambda = \omega_v \cos 2\theta_v.
+
+   What does it mean? The angular frequency in matter is
+
+   .. math::
+      \omega_m = \omega_v\sqrt{ (\frac{\lambda}{\omega_v} - \cos^2 2\theta_v)^2 + \sin^2 2\theta_v  },
+
+   So the condition for MSW resonance also minimizes the oscillation angular frequency in matter. An investigation into the effective mixing angles in matter :math:`\theta_m` shows that resonance condition also maximizes the :math:`\sin 2\theta_m`. In summary, the MSW resonance happens when
+
+   * diagonal elements of Hamiltonian in flavor basis vanish;
+   * energy split is minimized;
+   * angular frequency is minimized;
+   * oscillation length is maximized;
+   * :math:`\sin 2\theta_m` is maximized.
+
+
+
+
+
 The symmetry breaking between neutral current and charged current will change the evolution and makes the states more electron neutrino.
 
 This is the reason of MSW effect.

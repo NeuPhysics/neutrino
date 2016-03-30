@@ -6,6 +6,55 @@ Parametric Resonance
 Parametric Resonance
 --------------------------------------
 
+Parametric resonance is the enhenced oscillation due to matter profile fluctions. The resonance is triggered by the synchronization between the averaged eigen oscillations and the oscillations of the fluctuations in matter profile. In other words, [krastev1989]_
+
+.. math::
+   \int_0^{2\pi/k} \omega_m(x) d x = 2\pi n, n = 1,2,3,\cdots
+
+where :math:`2\pi/k` is the periodic length of matter perturbation.
+
+
+Given matter profile :math:`\lambda(x) = \lambda_0 (1 + A \sin(k x))`, we could solve the condition assuming the matter perturbation wavelength is much smaller than the oscillation length in matter. The result is
+
+.. math::
+   \omega_m = n k,
+
+where we choose :math:`\omega_m` to be the averaged value along the matter fluctuation period.
+
+
+
+Picture
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. [krastev1989] Krastev, P. I., & Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. http://doi.org/10.1016/0370-2693(89)91206-9
+
+
+
+
+
+
+
+
+Castle Wall Potential
+----------------------------------------------
+
+
 
 Evolution Operator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -173,3 +222,5 @@ Refs and Notes
 I did some calculations based on Giunti's book so that I can really understand each step of the derivations.
 
 1. Giunti, C., & Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001
+2. Krastev, P. I., & Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. http://doi.org/10.1016/0370-2693(89)91206-9
+3. Loreti, F. N., & Balantekin, A. B. (1994). Neutrino oscillations in noisy media. Physical Review D, 50(8), 4762–4770. http://doi.org/10.1103/PhysRevD.50.4762

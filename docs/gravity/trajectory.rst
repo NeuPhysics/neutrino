@@ -71,7 +71,7 @@ The deflection of photons near a star is,
 This is the deflection angle of a photon coming from infinite. However, the angle deflected for a photon emitted at tangent is different.
 
 
-.. figure:: assets/tangentNeutrinoGravitation.png
+.. figure:: assets/trajectory/tangentNeutrinoGravitation.png
    :align: center
 
    neutrino gravitatioin
@@ -79,7 +79,7 @@ This is the deflection angle of a photon coming from infinite. However, the angl
 A detailed calculation shows, [1]_
 
 
-.. figure:: assets/gravitationDeflection.png
+.. figure:: assets/trajectory/gravitationDeflection.png
    :align: center
 
    The deflection angle of a photon starting from a tangent position at :math:`z=rz` with tangent momentum and impact parameter :math:`b`.
@@ -87,7 +87,7 @@ A detailed calculation shows, [1]_
 
 With an impact parameter of :math:`b=10\text{km}`, the angle will eventually become larger than :math:`0.4`, which is very significant.
 
-.. figure:: assets/deflectionAngle.png
+.. figure:: assets/trajectory/deflectionAngle.png
    :align: center
 
    As we can see the angle becomes very big at about 10km.
