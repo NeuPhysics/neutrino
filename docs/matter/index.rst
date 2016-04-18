@@ -10,7 +10,7 @@ Interaction With Matter
 
 
 
-Neutrinos do interact with matter, mostly electrons in most cases.
+Neutrinos do interact with matter, through charged current and neutral current weak interaction.
 
 .. image:: assets/matter/neutral-current.png
    :width: 50%
@@ -63,9 +63,7 @@ Neutrinos do interact with matter, mostly electrons in most cases.
 
 
 
-The one that is missing is the charged current for :math:`nu_\tau` and :math:`e^{-}` interaction because of lepton number conservation.
-
-The first two diagrams will add two equal terms on the diagonal terms of Hamiltonian, which can be viewed as adding a number times identity matrix thus conserves the eigenstates while shifts the eigenvalues. However, the third diagram will only add a term to the first diagonal term of Hamiltonian, which is the weak coupling :math:`\Delta = \sqrt{2}G_F n(x)` with :math:`n(x)` being the number density of electrons.
+For neutral current, all the three flavors interact with electrons and nucleus in the same way, which will produce a term proportional to identity as potential. Terms proportional to identity in Hamiltonian will only cause a global phase thus we don't really care. But for charged current, we have only electron flavor interact with electrons. This charged current interaction will only add a term to the first diagonal term of Hamiltonian as potential, which is the weak coupling :math:`\Delta = \sqrt{2}G_F n(x)` with :math:`n(x)` being the number density of electrons and :math:`G_F` is the Fermi constant.
 
 
 
