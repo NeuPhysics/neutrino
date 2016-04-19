@@ -256,6 +256,55 @@ From the two solutions we know there is a gap between the two trajectories. We d
 
 
 
+Solar Neutrinos and MSW Effect
+------------------------------------------------------
+
+.. figure:: assets/matter/clorine-detector-solar-neutrinos.jpg
+   :align: center
+
+   Solar neutrino problem: chlorine detector (Homestake experiment) results and theory predictions. SNU: 1 event for :math:`10^{36}` target atoms per second. Source: `Kenneth R. Lang (2010) <https://ase.tufts.edu/cosmos/view_picture.asp?id=585>`_
+
+
+.. figure:: assets/matter/msw-and-density.png
+   :align: center
+
+   MSW effect of solar neutrinos.
+
+
+Hamiltonian with matter effect is
+
+.. math::
+   \mathbf{H} = \frac{\lambda(x) - \omega_{\mathrm v} \cos 2\theta_{\mathrm v}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm v} \sin 2\theta_{\mathrm v}}{2} \boldsymbol{\sigma_1}
+
+and new basis is defined
+
+.. math::
+   \begin{pmatrix}
+   \ket{\nu_{\mathrm{e}}} \\
+   \ket{\nu_{\mu}}
+   \end{pmatrix} =
+   \begin{pmatrix}
+   \cos\theta_{\mathrm m} & \sin\theta_{\mathrm m} \\
+   -\sin\theta_{\mathrm m} & \cos\theta_{\mathrm m}
+   \end{pmatrix}\begin{pmatrix}
+   \ket{\nu_{\mathrm{L}}} \\
+   \ket{\nu_{\mathrm{H}}}.
+   \end{pmatrix}
+
+Now we have two states in this matter basis, the heavy state and the light state. When we talk about adabatic propagation, we mean the system doesn't jump between these heave and light states.
+
+In the figure, we have dense matter on the left while the matter desnity approaching vacuum on the right. Upper bar means the probability of finding the system to be in heavy state and the lower bar means in light state. As the matter profile doesn't change too fast, the system undergoes adiabatic propagation and the length of the bars doesn't change. For example, if the system starts with completely heavy state , it will always remain on heavy state.
+
+Since almost all neutrinos produced in the sun are electron neutrinos, and electron flavor neutrinos experience a big potential, electron flavor almost means heavy state. So we have the system starts with a state that is mostly heavy state and it remains this way. However, during the propagation, heavy state is going to have less electron flavor until some point, we have equal mixing which is MSW resonance. As it approaches vacuum, we have only about 1/3 of the probability to find the neutrinos to be on electron flavor state.
+
+
+
+
+
+
+
+
+
 .. index:: MSW effect
 
 MSW Refraction, Resonance and More
