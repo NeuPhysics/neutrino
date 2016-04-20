@@ -4,62 +4,88 @@ MSW Effect
 ===================
 
 
-
 .. admonition:: Brief Summary of MSW Resonance
    :class: note
 
    The Hamiltonian for matter effect is
 
    .. math::
-      \mathbf H(x) = \left(\frac{\lambda(x)}{2} -\frac{ \omega_v }{2} \cos 2\theta_v\right) \boldsymbol {\sigma_3 } + \frac{ \omega_v }{2} \sin 2\theta_v \boldsymbol{\sigma_1},
+      \mathbf H(x) = \left(\frac{\lambda(x)}{2} -\frac{ \omega_{\mathrm{v}} }{2} \cos 2\theta_{\mathrm{v}}\right) \boldsymbol {\sigma_3 } + \frac{ \omega_{\mathrm{v}} }{2} \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1},
 
-   where :math:`\lambda(x)=\sqrt{2}G_F n_e(x)` is the matter potential and :math:`\omega_v=\frac{\Delta m^2}{2E}` is the vacuum oscillation angular frequency. MSW resonance happens when the diagonal terms disappear, i.e.,
-
-   .. math::
-      \lambda = \omega_v \cos 2\theta_v.
-
-   What does it mean? The angular frequency in matter is
+   where :math:`\lambda(x)=\sqrt{2}G_F n_e(x)` is the matter potential and :math:`\omega_{\mathrm{v}}=\frac{\Delta m^2}{2E}` is the vacuum oscillation angular frequency. MSW resonance happens when the diagonal terms disappear, i.e.,
 
    .. math::
-      \omega_m = \omega_v\sqrt{ (\frac{\lambda}{\omega_v} - \cos^2 2\theta_v)^2 + \sin^2 2\theta_v  },
+      \lambda = \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}.
 
-   So the condition for MSW resonance also minimizes the oscillation angular frequency in matter. An investigation into the effective mixing angles in matter :math:`\theta_m` shows that resonance condition also maximizes the :math:`\sin 2\theta_m`. In summary, the MSW resonance happens when
+   What does it mean?
+
+   Now think about the vacuum Hamiltonian in **flavor basis**,
+
+   .. math::
+      \mathbf{H}_{\mathrm{vacuum}} = -\frac{\omega_{\mathrm{v}} \cos 2\theta_\mathrm{v}}{2}\boldsymbol{\sigma_3} + \frac{\omega_{\mathrm{v}} \sin 2\theta_\mathrm{v}}{2}\boldsymbol{\sigma_1}.
+
+   We actually spot this similarity between matter Hamiltonian and vacuum Hamiltonian. Thus we define new oscillation frequency :math:`\omega_{\mathrm{m}}` and mixing angle :math:`\theta_{\mathrm{m}}`,
+
+   .. math::
+      \omega_{\mathrm{m}} &= \omega_{\mathrm{v}}\sqrt{ (\frac{\lambda}{\omega_{\mathrm{v}}} - \cos^2 2\theta_{\mathrm{v}})^2 + \sin^2 2\theta_{\mathrm{v}}  },
+      \tan 2\theta_{\mathrm{m}} & = \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} - ( \lambda/\omega_{\mathrm{v}} )^2   },
+
+   so that the Hamiltonian has the form
+
+   .. math::
+      \mathbf{H}(x) = -\frac{\omega_{\mathrm{m}} \cos 2 \theta_{\mathrm{m}}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{m}} \sin 2\theta_{\mathrm{m}} }{2} \boldsymbol{\sigma_1}.
+
+   What are the significances of :math:`\theta_{\mathrm{m}}` and :math:`\omega_{\mathrm{m}}`? We can look at them in constant matter profile, which means they are constant. In such a case we can find a basis in which the Hamiltonian is diagonalized.
+
+   .. math::
+      \mathbf{H}_{\mathrm{diagonalized}} = - \frac{\omega_{\mathrm{m}}}{2}\boldsymbol{\sigma_3}.
+
+   So :math:`\omega_{\mathrm{m}}` is the oscillation frequency in matter. **However, a caveat is that Hamiltonian with matter interaction is not always diagonalizable. Noneless, we know for constant matter profile and adiabatic approximation, diagonalizing the Hamiltonian is doable.**
+
+   So the condition for MSW resonance also minimizes the oscillation angular frequency in matter.
+
+   This basis, which we call matter basis :math:`\{\ket{\nu_{\mathrm{L}}}, \ket{\nu_{\mathrm{H}}}\}`, is related to flavor basis through this rotation,
+
+   .. math::
+      \begin{pmatrix}
+      \ket{\nu_{\mathrm{e}}} \\
+      \ket{\nu_{\mathrm{x}}}
+      \end{pmatrix} = \begin{pmatrix}
+      \cos \theta_{\mathrm{m}} & \sin \theta_{\mathrm{m}} \\
+      -\sin \theta_{\mathrm{m}} & \cos \theta_{\mathrm{m}}
+      \end{pmatrix}
+      \begin{pmatrix}
+      \ket{\nu_{\mathrm{L}}}\\
+      \ket{\nu_{\mathrm{H}}}
+      \end{pmatrix}.
+
+   An investigation into the effective mixing angles in matter :math:`\theta_{\mathrm{m}}` shows that resonance condition also maximizes the :math:`\sin 2\theta_m`. The reason is that :math:`\lambda(x)}{2} -\frac{ \omega_{\mathrm{v}} =0` will make :math:`\tan 2\theta_{\mathrm{m}}` infinity. Then we have :math:`2\theta_{\mathrm{m}}=\frac{\pi}{2}` which means :math:`\sin 2\theta_{\mathrm{m}} = 1`.
+
+   We also notice :math:`\theta_{\mathrm{m}}=\frac{\pi}{4}` will also lead to equal mixing, i.e., electron flavor state consists of equal fraction of light state and heavy state.
+
+   **In summary, the MSW resonance happens when**
 
    * diagonal elements of Hamiltonian in flavor basis vanish;
-   * energy split is minimized;
-   * angular frequency is minimized;
-   * oscillation length is maximized;
-   * :math:`\sin 2\theta_m` is maximized.
+   * energy split between heavy and light states is minimized;
+   * flavor oscillation (angular) frequency is minimized or oscillation length is maximized;
+   * mixing angle in matter :math:`\theta_{\mathrm{m}}=\frac{\pi}{4}`;
+   * equal mixing happens;
+   * :math:`\sin 2\theta_m` is maximized which means the oscillation amplitude happens.
+
+   There are more about MSW effect, which is related to non-adiabatic conversion. Read the main text for more information.
 
 
 
+An Introduction to MSW Effect
+------------------------------------------
 
+First of all, MSW means Mikheyev–Smirnov–Wolfenstein.
 
 The symmetry breaking between neutral current and charged current will change the evolution and makes the states more electron neutrino.
 
 This is the reason of MSW effect.
 
 In other words, the first requirement of MSW effect is that the electrons interacts with neutrinos and makes it in a specific state that is heavy if the electron density is strong enough. Meanwhile, if the mixing angle is not that large, a level crossing could happen making the state a light state as the density becomes vacuum. The other requirement, which is obvious, is that the density change should be adiabatic, the meaning of which is the density profile of matter gently reduces to vacuum, leaving enough reaction time for the neutrinos.
-
-The MSW effect itself can be made clear using the example of neutrino oscillations in our sun.
-
-
-.. admonition:: Small Mixing Angle
-   :class: note
-
-   Take two flavour mixing as an example.
-
-   .. math::
-      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
-
-   In the small mixing angle limit,
-
-   .. math::
-      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
-
-   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`\nu_1`. By :math:`\nu_1` we mean the state with energy :math:`\frac{ \Delta m^2 }{4E}` in vacuum.
-
-   We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. **However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.** This is the key idea in physics of MSW effect.
 
 
 The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is
@@ -259,6 +285,30 @@ From the two solutions we know there is a gap between the two trajectories. We d
 Solar Neutrinos and MSW Effect
 ------------------------------------------------------
 
+The MSW effect itself can be made clear using the example of neutrino oscillations in our sun. In fact it is responsible for the missing solar neutrino problem.
+
+
+.. admonition:: Small Mixing Angle Limit
+   :class: note
+
+   Just for fun.
+
+   Take two flavour mixing as an example.
+
+   .. math::
+      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta & \sin\theta \\ -\sin\theta  & \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+
+   In the small mixing angle limit,
+
+   .. math::
+      \begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 & \theta \\ -\theta  & 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}
+
+   which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate :math:`\nu_1`. By :math:`\nu_1` we mean the state with energy :math:`\frac{ \Delta m^2 }{4E}` in vacuum.
+
+   We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. **However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.** This is the key idea in physics of MSW effect.
+
+
+
 .. figure:: assets/matter/clorine-detector-solar-neutrinos.jpg
    :align: center
 
@@ -268,7 +318,7 @@ Solar Neutrinos and MSW Effect
 .. figure:: assets/matter/msw-and-density.png
    :align: center
 
-   MSW effect of solar neutrinos.
+   MSW effect of solar neutrinos. This figure is adapted from Smirnov 2003.
 
 
 Hamiltonian with matter effect is
@@ -298,7 +348,12 @@ In the figure, we have dense matter on the left while the matter desnity approac
 Since almost all neutrinos produced in the sun are electron neutrinos, and electron flavor neutrinos experience a big potential, electron flavor almost means heavy state. So we have the system starts with a state that is mostly heavy state and it remains this way. However, during the propagation, heavy state is going to have less electron flavor until some point, we have equal mixing which is MSW resonance. As it approaches vacuum, we have only about 1/3 of the probability to find the neutrinos to be on electron flavor state.
 
 
+If we discuss more about this phenomenon, we have situations such as not so large density.
 
+.. figure:: assets/matter/msw_and_density.png
+   :align: center
+
+   MSW conversion for different matter profiles. Smirnov 2003.
 
 
 
@@ -307,7 +362,7 @@ Since almost all neutrinos produced in the sun are electron neutrinos, and elect
 
 .. index:: MSW effect
 
-MSW Refraction, Resonance and More
+MSW Refraction, Resonance and Non-adiabacity
 ---------------------------------------------------------
 
 
