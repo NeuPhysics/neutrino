@@ -59,7 +59,7 @@ MSW Effect
       \ket{\nu_{\mathrm{H}}}
       \end{pmatrix}.
 
-   An investigation into the effective mixing angles in matter :math:`\theta_{\mathrm{m}}` shows that resonance condition also maximizes the :math:`\sin 2\theta_m`. The reason is that :math:`\lambda(x)}{2} -\frac{ \omega_{\mathrm{v}} =0` will make :math:`\tan 2\theta_{\mathrm{m}}` infinity. Then we have :math:`2\theta_{\mathrm{m}}=\frac{\pi}{2}` which means :math:`\sin 2\theta_{\mathrm{m}} = 1`.
+   An investigation into the effective mixing angles in matter :math:`\theta_{\mathrm{m}}` shows that resonance condition also maximizes the :math:`\sin 2\theta_m`. The reason is that :math:`\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  =0` will make :math:`\tan 2\theta_{\mathrm{m}}` infinity. Then we have :math:`2\theta_{\mathrm{m}}=\frac{\pi}{2}` which means :math:`\sin 2\theta_{\mathrm{m}} = 1`.
 
    We also notice :math:`\theta_{\mathrm{m}}=\frac{\pi}{4}` will also lead to equal mixing, i.e., electron flavor state consists of equal fraction of light state and heavy state.
 
