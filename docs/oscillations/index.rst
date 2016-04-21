@@ -24,5 +24,6 @@ The interesting thing about neutrinos is that it oscillates.
    :maxdepth: 2
 
    propagation.rst
+   two-flavor-three-flavor.rst
    oscillations.rst
    vacuum.rst

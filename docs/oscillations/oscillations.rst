@@ -53,6 +53,9 @@ As :math:`\lvert \delta m^2 _{21}\rvert\ll \lvert\delta m^2 _{32}\rvert`, we sho
 
 
 
+.. [1] `Neutrino tomography <http://scitation.aip.org/docserver/fulltext/aapt/journal/ajp/81/9/1.4817314.pdf?expires=1404757170&id=id&accname=389573&checksum=665C4B4FC4EA96902216439ECF5AC17D>`_ by Margaret A. Millhouse & David C. Latimer, American Journal of Physics 81, 646 (2013); `doi: 10.1119/1.4817314 <http://dx.doi.org/10.1119/1.4817314>`_ .
+
+
 Atmospheric Results
 ``````````````````````````````
 
@@ -67,8 +70,8 @@ Reactor Results
 
 
 
-Vacuum Theory
----------------------
+Hamiltonian, Equation of Motion and Solution
+----------------------------------------------------------------------
 
 
 
@@ -121,7 +124,7 @@ The survival probability means how much neutrinos of a flavour left after some t
 We can see clearly that the survival probability depends on some parameters.
 
 
-Two Flavour Oscillation
+Two-flavour Vacuum Oscillations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -222,8 +225,8 @@ There are several things to be noticed,
 
 
 
-Hamiltonian
-````````````````````
+Hamiltonian in Flavor Basis
+````````````````````````````````````````
 
 It's easy to write down the Hamiltonian for the mass state stationary Schrodinger equation. As we have proven, to first order approximation,
 
@@ -311,7 +314,7 @@ In two flavor oscillations, most literature use :math:`\Delta m^2 \equiv \delta 
 
 
 
-Equation of Motion in Matter
+Matter Effect - An Introduction
 --------------------------------------
 
 
@@ -635,16 +638,3 @@ Q&A
    :class: note
 
    **Momentum transfer** for a plan wave case in Born approximation is
-
-
-
-
-
-
-
-
-Refs & Notes
-------------------
-
-
-.. [1] `Neutrino tomography <http://scitation.aip.org/docserver/fulltext/aapt/journal/ajp/81/9/1.4817314.pdf?expires=1404757170&id=id&accname=389573&checksum=665C4B4FC4EA96902216439ECF5AC17D>`_ by Margaret A. Millhouse & David C. Latimer, American Journal of Physics 81, 646 (2013); `doi: 10.1119/1.4817314 <http://dx.doi.org/10.1119/1.4817314>`_ .

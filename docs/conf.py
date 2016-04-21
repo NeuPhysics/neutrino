@@ -67,11 +67,16 @@ extensions = [
 
 
 latex_preamble = r"""
+\usepackage{hyperref}
 \usepackage{mathrsfs}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{slashed}
 \usepackage{graphicx}
+\usepackage{minted}
+
+
 
 % Fix figure too large problem
 %http://tex.stackexchange.com/questions/83020/set-standard-default-scaling-of-includegraphics
