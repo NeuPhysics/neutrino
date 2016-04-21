@@ -74,7 +74,6 @@ latex_preamble = r"""
 \usepackage{amssymb}
 \usepackage{slashed}
 \usepackage{graphicx}
-\usepackage{minted}
 
 
 
