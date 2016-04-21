@@ -1,5 +1,6 @@
 Evidence of Oscillations
----------------------------
+=================================
+
 
 
 A lot of experiments have been done to research on neutrino oscillations. In summary there are three types,
@@ -10,7 +11,7 @@ A lot of experiments have been done to research on neutrino oscillations. In sum
 
 
 Results of Experiments
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 
 1. Difference between masses from data
@@ -57,13 +58,13 @@ As :math:`\lvert \delta m^2 _{21}\rvert\ll \lvert\delta m^2 _{32}\rvert`, we sho
 
 
 Atmospheric Results
-``````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Accelerator Results
-```````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Reactor Results
-`````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
