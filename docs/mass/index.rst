@@ -4,10 +4,10 @@ Masses of Neutrinos
 
 Neutrino masses are still not determined completely. However we have some possible patterns.
 
-.. figure:: assets/massPatterns.png
+.. figure:: assets/neutrino-mass-theta23.png
    :align: center
 
-   Source: http://projects.fnal.gov/nuss/lectures/RabiM_1.pdf
+   Source: Mena, O., & Parke, S. (2004). Unified graphical summary of neutrino mixing parameters. Physical Review D, 69(11), 117301. doi:10.1103/PhysRevD.69.117301
 
 
 
