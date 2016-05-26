@@ -26,7 +26,9 @@ in which the energy terms are simplified using the relativistic condition
 
    Assuming the mass of a neutrino is 1eV with energy 10MeV, we will get a speed of :math:`1-10^{-14}` c. This :math:`10^{-14}` c will make a difference about :math:`3\mu\mathrm{ m}` in 1s.
 
-   Will decoherence happen due to this? For high energy neutrinos this won't be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach.Because the different mass eigenstates will become decoherent gradually along the path.
+   Will decoherence happen due to this? For high energy neutrinos this won't be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach. Because the different mass eigenstates will become decoherent gradually along the path.
+
+   Nussinov (1976) discussed that solar neutrino wave packet coherence length is about :math:`10^{-6}\mathrm{cm}`.
 
    A estimation of the decoherence length is
 
