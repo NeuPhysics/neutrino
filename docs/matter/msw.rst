@@ -1408,6 +1408,16 @@ High matter density suppresses the vacuum oscillations which is clearly shown on
    Ternary diagram for MSW effect with inverted hierarchy :math:`\Delta m_{23} = m_3^2 - m_2^2<0`. The shape changes a lot since the frequencies changes a lot.
 
 
+MSW Triangle
+-----------------------
+
+
+Finally, one of the interesting things about MSW effect is that we could find a triangle where the survival probability is low.
+
+.. figure:: assets/msw/msw-triangle.png
+   :align: center
+
+   Code and illustration for the calculation can be downloaded on github https://github.com/NeuPhysics/codebase/blob/master/ipynb/matter/msw_triangle.ipynb .
 
 
 
