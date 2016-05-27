@@ -93,5 +93,6 @@ For neutral current, all the three flavors interact with electrons and nucleus i
    :maxdepth: 2
 
    msw.rst
+   msw-derivation.rst
    parametric.rst
    matter-driven.rst
