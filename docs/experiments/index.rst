@@ -8,3 +8,4 @@ Experiments
 
    neutrino-sources.rst
    exp-concepts.rst
+   exp-list.rst
