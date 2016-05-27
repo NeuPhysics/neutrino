@@ -15,6 +15,31 @@ and with matter
    i \frac{d}{dt} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \frac{\Delta m^2}{4E} \begin{pmatrix} \frac{4E}{\Delta m^2} \sqrt{2} G_F n_e - \cos 2\theta   & \sin 2\theta \\  \sin 2\theta  &  \cos 2\theta   \end{pmatrix} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}
 
 
+.. index:: Equation Solving
+
+Equation Solving
+-------------------------------
+
+
+Logarithmic Perturbation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Balantekin et al 1988 [Balantekin1988]_ used this method to solve equation
+
+.. math::
+   - \frac{d^2}{dx^2} \psi_e - \left( \frac{1}{4}\left( \lambda(x) - \omega_v \cos 2\theta_v  \right)^2 + i \frac{1}{2}\frac{d}{dx} \left( \lambda(x) - \omega_v \cos 2\theta_v  \right) \right) \psi_e - (\omega_v \cos 2\theta_v)^2 \psi_e = 0
+
+
+for small mixing angle. This is done by expand the system on a small parameter :math:`g = 1- \cos 2\theta_v` and assuming the solution has the form :math:`\psi_e = \exp\left( S(x) \right)`. [Dasgupa2007]_
+
+
+
+.. [Balantekin1988] A. B.  Balantekin,  S. H.  Fricke,  and  P. J.  Hatchell,  Phys.Rev. D38, 935 (1988)
+.. [Dasgupa2007] Dasgupta, B., & Dighe, A. (2007). Phase effects in neutrino conversions during a supernova shock wave. Physical Review D, 75(9), 093002. doi:10.1103/PhysRevD.75.093002
+
+
+
+
 .. index:: Qualitative Analysis
 
 Qualitative Analysis
