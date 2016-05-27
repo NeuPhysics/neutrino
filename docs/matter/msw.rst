@@ -1407,6 +1407,16 @@ High matter density suppresses the vacuum oscillations which is clearly shown on
 
    Ternary diagram for MSW effect with inverted hierarchy :math:`\Delta m_{23} = m_3^2 - m_2^2<0`. The shape changes a lot since the frequencies changes a lot.
 
+Experiments
+-----------------------
+
+MSW effect is verified by serveral experiments, SNO, Borexino and many others.
+
+.. figure:: assets/msw/msw-experiments.png
+   :align: center
+
+   Comparison of MSW prediction and experiments. The uncertainties of MSW prediction line are on on mixing angles. Figure from `Haxton et al 2013 <https://arxiv.org/abs/1208.5723>`_.
+
 
 MSW Triangle
 -----------------------
