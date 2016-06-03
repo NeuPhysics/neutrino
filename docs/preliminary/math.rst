@@ -1,6 +1,21 @@
 Mathematics Related
 =================================================
 
+
+
+Pauli Matrices
+-------------------------------
+
+
+Some useful transformations about Pauli matrices:
+
+.. math::
+   \begin{pmatrix}
+
+   \end{pmatrix}
+
+
+
 The Equations
 --------------------------------
 
