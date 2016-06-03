@@ -6,13 +6,35 @@ Mathematics Related
 Pauli Matrices
 -------------------------------
 
+.. math::
+   \sigma_1 &= \begin{pmatrix} 0 & 1 \\ 1 & 0   \end{pmatrix} \\
+   \sigma_2 &= \begin{pmatrix} 0 & -i \\ i & 0   \end{pmatrix} \\
+   \sigma_3 &= \begin{pmatrix} 1 & 0 \\ 0 & -1   \end{pmatrix}
 
 Some useful transformations about Pauli matrices:
 
-.. math::
-   \begin{pmatrix}
+Given a transformation
 
-   \end{pmatrix}
+.. math::
+   \mathbf{U} =
+   \begin{pmatrix}
+   cos \theta & \sin \theta \\
+   -\sin \theta & \cos \theta
+   \end{pmatrix},
+
+Pauli matrices transform in the following way
+
+.. math::
+   \mathbf{U}^\dagger \sigma_3 \mathbf{U} &= \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 \\
+   \mathbf{U}^\dagger \sigma_1 \mathbf{U} &= -\sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 \\
+   \mathbf{U}^\dagger \sigma_2 \mathbf{U} &= \sigma_2.
+
+
+
+
+
+
+
 
 
 
