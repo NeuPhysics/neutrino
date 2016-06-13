@@ -5,18 +5,38 @@ The Hamiltonian in flavor basis with matter interaction for neutrino is
 
 
 .. math::
-   H = \frac{1}{2} ( {\color{red}\lambda} - \omega_v \cos 2\theta_v ) \sigma_3 + \frac{1}{2} \omega_v \sin 2\theta_v,
-where :math:`\omega_v = \frac{\Delta m^2}{2E}`. For antineutrino, the Hamiltonian it obeys is
+   H = \frac{1}{2} ( {\color{red}\lambda} - \omega_v \cos 2\theta_v ) \sigma_3 + \frac{1}{2} \omega_v \sin 2\theta_v \sigma_1  + H_{\nu\nu},
+
+where :math:`\omega_v = \frac{\Delta m^2}{2E}`, :math:`\lambda=\sqrt{2}G_F n_e` is the matter profile, and :math:`H_{\nu\nu}` is the neutrino-neutrino interaction. This Hamiltonian can be written in a way that the physics is clearer,
 
 .. math::
-   \bar H = \frac{1}{2} ( {\color{red}-\lambda } - \omega_v \cos 2\theta_v ) \sigma_3 + \frac{1}{2} \omega_v \sin 2\theta_v.
+   H = H_v + H_m + H_{\nu\nu},
 
-For reference purpose, the neutrino-neutrino interaction for neutrino is
+where
 
 .. math::
-   H_{\nu\nu} = \sqrt{2}G_F \int\mathrm{d}^3 \mathbf{p}' ( 1 - \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) (\rho_{\mathbf{p}'} - \bar\rho_{ \mathbf{p}' }),
+   H_v &= \frac{1}{2} ( -\omega_v \cos 2\theta_v \sigma_3 + \omega_v \sin 2\theta_v \sigma_1 ) \\
+   H_m &= \frac{1}{2} \lambda \sigma_3 \\
+   H_{\nu\nu} &=\sqrt{2}G_F \int\mathrm{d}^3 \mathbf{p}' ( 1 - \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) (\rho_{\mathbf{p}'} - \bar\rho_{ \mathbf{p}' }),
 
-where :math:`\rho`'s are the density matrices.
+where :math:`\rho`'s are the density matrices for neutrinos and :math:`\bar\rho`'s are the density matrix for antineutrinos, and :math:`\hat{\mathbf{p}} = \frac{\vec p}{E}`. As descretization is used in numerical calculation, another form of the self-interaction is useful,
+
+.. math::
+   H_{\nu\nu}(t,\vec p, E) = \sqrt{2}G_F \sum_{\vec p} ( 1- \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) ( \rho_{\vec p'}(t) - \bar \rho^*_{\vec p'}(t) ).
+
+
+
+For antineutrino, the Hamiltonian it obeys is
+
+.. math::
+   \bar H = H_v - H_m - H^*_{\nu\nu}.
+
+
+With the Hamiltonian, the equation of motion for neutrinos is simply
+
+.. math::
+   i \frac{d}{dt} \rho = \left[ H, \rho \right].
+
 
 
 Neutrino Flavour Isospin
