@@ -1,6 +1,11 @@
 Flavor Isospin
 ======================================
 
+.. admonition:: Notations
+   :class: warning
+
+   In this part we use bold symbols for vectors because the subscript with a over arrow is too ugly to read.
+
 The Hamiltonian in flavor basis with matter interaction for neutrino is
 
 
@@ -22,7 +27,7 @@ where
 where :math:`\rho`'s are the density matrices for neutrinos and :math:`\bar\rho`'s are the density matrix for antineutrinos, and :math:`\hat{\mathbf{p}} = \frac{\vec p}{E}`. As descretization is used in numerical calculation, another form of the self-interaction is useful,
 
 .. math::
-   H_{\nu\nu}(t,\vec p, E) = \sqrt{2}G_F \sum_{\vec p} ( 1- \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) ( \rho_{\vec p'}(t) - \bar \rho^*_{\vec p'}(t) ).
+   H_{\nu\nu}(t,\mathbf p, E) = \sqrt{2}G_F \sum_{\mathbf p} ( 1- \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) ( \rho_{\mathbf p'}(t) - \bar \rho^*_{\mathbf p'}(t) ).
 
 
 
@@ -51,59 +56,122 @@ Neutrino Flavour Isospin
 Neutrino flavour isospin [duan2006]_
 
 .. math::
-   \vec s = \Psi^{\dagger} \frac{\boldsymbol\sigma}{2} \Psi,
+   \mathbf s = \Psi^{\dagger} \frac{\boldsymbol\sigma}{2} \Psi,
 
 where in flavor basis
 
 .. math::
    \Psi = \begin{pmatrix} \psi_e \\ \psi_x \end{pmatrix}.
 
+Another way of looking at this relation is that the density matrix for single particle can be writen in terms of polarization :math:`\mathbf P`,
+
+.. math::
+   \rho = \frac{1}{2} ( 1 +  \boldsymbol{\sigma} \cdot \matbbf P ).
+
+As for a system of multiple particles, we can always extract the information of particle number density :math:`n` out of density matrix,
+
+.. math::
+   \rho &= n_\nu \frac{1}{2} \left( 1 +  \boldsymbol{\sigma} \cdot \mathbf P'  \right) \\
+   &= \frac{n_\nu}{2} + n_\nu \boldsymbol{\sigma} \cdot \frac{ \mathbf P'}{2} \\
+   & \equiv  \frac{n_\nu}{2} + n_\nu' \boldsymbol{\sigma} \cdot \mathbf{s},
+   :label: density-matrix-flavor-isospin
+
+where :math:`\mathbf{s}` is the so called flavor isospin and will be defined later, and :math:`n_\nu'` is effective neutrino density distribution. In the case of vacuum oscillation of homogeneous systems, :math:`n_\nu'=n_\nu` and :math:`\mathbf s = \mathbf P /2`. However, in more complicated systems such as systems with inhomogeneous angular distribution of neutrinos, the angular distribution should be taken into account.
+
+
 We also find the component of Hamiltonian in :math:`\{ I, \sigma_1,\sigma_2,\sigma_3 \}` basis. However, in this specific problem, we only need :math:`\{\sigma_1,\sigma_2,\sigma_3 \}` since we already removed the identity from Hamiltonian. With this convention, we define the Hamiltonian vector :math:`\vec H` using
 
 .. math::
-   H = -\frac{\boldsymbol{\sigma} }{2}\cdot \vec H.
+   H = -\frac{\boldsymbol{\sigma} }{2}\cdot \mathbf H.
 
-In order to have a look at the effect of different components, we also define :math:`\vec H_{v}` and :math:`\vec H_m`,
-
-.. math::
-   H_v &= - \frac{\boldsymbol{\sigma}}{2} \cdot \vec H_v \\
-   H_m &= - \frac{\boldsymbol{\sigma} }{2} \cdot \vec H_m.
-
-Not the equation of motion becomes
+In order to have a look at the effect of different components, we also define :math:`\mathbf H_{v}` and :math:`\mathbf H_m`,
 
 .. math::
-   \frac{d}{dx} \vec s = \vec s \times \vec H.
+   H_v &= - \frac{\boldsymbol{\sigma}}{2} \cdot \mathbf H_v \\
+   H_m &= - \frac{\boldsymbol{\sigma} }{2} \cdot \mathbf H_m.
+
+Note the equation of motion becomes
+
+.. math::
+   \frac{d}{dx} \mathbf s = \mathbf s \times \mathbf H.
+
 
 .. admonition:: Deriving Equation of Flavor Isospin
    :class: note
 
    Here in this formalism we just plugin to compare with the original equation of motion.
 
-   However, a more systematic and rigorous method is given in [duan2006]_ .
+   However, a more systematic and rigorous method is given in [duan2006]_ . What's different here is that the author used the definition :math:`H_v = - \omega_v \frac{\boldsymbol{\sigma}}{2} \cdot \mathbf H` which means :math:`\mathbf H` in that paper is normalized but here we do not do that.
+
+   Nonethless, EoM for flavor isospin can be derived using brute force. As a first step, we write donw the equation of motion for density matrix,
+
+   .. math::
+      i \frac{d}{dt}\rho = [H,\rho].
+
+   Using :numref:`density-matrix-flavor-isospin`, we rewrite the equation using flavor isospin
+
+   .. math::
+      i\frac{d}{dt} \left( \frac{n_\nu}{2} + n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) = [H, \frac{n_\nu}{2} + n_\nu' \boldsymbol \sigma \cdot \mathbf s].
+
+   We assume that number densities :math:`n_\nu` and :math:`n_\nu'` are conserved,
+
+   .. math::
+      i n_\nu' \frac{d}{dt} \mathbf s = -\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) + \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right)\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) ,
+
+   where :math:`n_\nu'` can be eliminated on both sides. To simplify the equation, we write donw the component form of the dot products,
+
+   .. math::
+      i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &= \frac{1}{2} \left(  \boldsymbol \sigma_i \mathbf s_i \boldsymbol \sigma_j \mathbf H_j - \boldsymbol \sigma_i  \mathbf H_i \boldsymbol \sigma_j \mathbf s_j  \right) \\
+      i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &= \frac{1}{2} \left(  \boldsymbol \sigma_i  \boldsymbol \sigma_j \mathbf s_i \mathbf H_j - \boldsymbol \sigma_i  \boldsymbol \sigma_j \mathbf H_i \mathbf s_j  \right).
+
+   The products of Pauli matrices is calculated in the following way
+
+   .. math::
+      \boldsymbol \sigma_i  \boldsymbol \sigma_j = i \epsilon_{ijk} \boldsymbol \sigma_k + \delta_{ij} I,
+
+   which lead to a simplified equation of motion
+
+   .. math::
+      i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &= \frac{1}{2} \left(  i\epsilon_{ijk}  \boldsymbol \sigma_k \mathbf s_i \mathbf H_j - i\epsilon_{ijk} \boldsymbol \sigma_k \mathbf H_i \mathbf s_j  \right) + \frac{1}{2}\left( \delta_{ij}I \mathbf s_i \mathbf H_j - \delta_{ij}I \mathbf s_j \mathbf H_i \right) \\
+      i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &= i\boldsymbol \sigma_k \frac{1}{2} \left(  \epsilon_{ijk}   \mathbf s_i \mathbf H_j - \epsilon_{ijk}  \mathbf H_i \mathbf s_j  \right) \\
+      \frac{d}{dt} \mathbf s_k &= \epsilon_{ijk}   \mathbf s_i \mathbf H_j,
+
+   where the permutation property :math:`\epsilon_{jik} = - \epsilon_{ijk}` has been used. In the language of cross product, we have
+
+   .. math::
+      \frac{d}{dt}\mathbf s = \mathbf s\times \mathbf H.
 
 
 
 
 
-Previously we have already seen the equations for a spinning in magnetic field :ref:`magnetic-spin-angular-momentum-eom`,
-
-.. math::
-   \frac{d}{dt}\vec L = \gamma \vec L \times \vec B,
-
-where :math:`\gamma = \frac{-e}{2m_e}`.
 
 
-Another interesting analogy comes from the equation of motion for a spinning top
+.. admonition:: Analogies and Pictures
+   :class: hint
 
-.. math::
-   \frac{d}{dt}\vec S  =  \frac{\partial}{\partial t} \vec S  - \vec S \times \vec \Omega,
 
-where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
+   Previously we have already seen the equations for a spinning in magnetic field :ref:`magnetic-spin-angular-momentum-eom`,
 
-.. math::
-   \frac{\partial}{\partial t} \vec S  = \vec S \times \vec \Omega,
+   .. math::
+      \frac{d}{dt}\mathbf L = \gamma \mathbf L \times \mathbf B,
 
-which is similar to the neutrino isospin equation of motion. :math:`\vec \Omega` corresponds to :math:`\vec H`.
+   where :math:`\gamma = \frac{-e}{2m_e}`.
+
+
+   Another interesting analogy comes from the equation of motion for a spinning top
+
+   .. math::
+      \frac{d}{dt}\mathbf S  =  \frac{\partial}{\partial t} \mathbf S  - \mathbf S \times \mathbf \Omega,
+
+   where :math:`\vec\Omega = \vec n \dot\phi`. Consider conservation of momentum, we have
+
+   .. math::
+      \frac{\partial}{\partial t} \mathbf S  = \mathbf S \times \mathbf \Omega,
+
+   which is similar to the neutrino isospin equation of motion. :math:`\mathbf \Omega` corresponds to :math:`\mathbf H`.
+
+
 
 Graphical Representation of Flavor Isospin
 ------------------------------------------------------
