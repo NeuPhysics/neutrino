@@ -58,10 +58,16 @@ Neutrino flavour isospin [duan2006]_
 .. math::
    \mathbf s = \Psi^{\dagger} \frac{\boldsymbol\sigma}{2} \Psi,
 
+
 where in flavor basis
 
 .. math::
    \Psi = \begin{pmatrix} \psi_e \\ \psi_x \end{pmatrix}.
+
+.. admonition:: Why the 1/2
+   :class: hint
+
+   The reason to choose have 1/2 in the definition of flavor isospin :math:`\mathbf s = \Psi^{\dagger} \frac{\boldsymbol\sigma}{2} \Psi` is to make sure the length of the vector is 1/2, just like spin 1/2.
 
 Another way of looking at this relation is that the density matrix for single particle can be writen in terms of polarization :math:`\mathbf P`,
 
@@ -91,6 +97,18 @@ We also find the component of Hamiltonian in :math:`\{ I, \sigma_1,\sigma_2,\sig
 .. math::
    H = -\frac{\boldsymbol{\sigma} }{2}\cdot \mathbf H.
 
+.. admonition:: Why 1/2 and Minus
+   :class: hint
+
+   The 1/2 in the definition is to make sure the final equation of motion is clean as :eq:`neutrino-flavor-isospin-equation-of-motion-general`. **Without this 1/2, we would have**
+
+   .. math::
+      \frac{d}{dx} \mathbf s = \frac{1}{2}\mathbf s \times \mathbf H,
+
+   which is **NOT** good enough compared to the one we would have with the 1/2.
+
+   The minus sign is to revert the whole system so that it is easier to deal with, such as :numref:`flavor-isospin-graphics-vacuum-only`. **Without this minus sign**, for normal hierarchy of :math:`\delta m_{12}` and neutrinos, we would have the vacuum Hamiltonian vector almost pointing downward and the matter effect pointing upward, which are not so convinient.
+
 In order to have a look at the effect of different components, we also define :math:`\mathbf H_{v}` and :math:`\mathbf H_m`,
 
 .. math::
@@ -101,6 +119,7 @@ Note the equation of motion becomes
 
 .. math::
    \frac{d}{dx} \mathbf s = \mathbf s \times \mathbf H.
+   :label: neutrino-flavor-isospin-equation-of-motion-general
 
 
 .. admonition:: Deriving Equation of Flavor Isospin
@@ -180,31 +199,64 @@ Note the equation of motion becomes
 
 
 
+
+
 Graphical Representation of Flavor Isospin
 ------------------------------------------------------
 
 To have more understanding in the flavor isospin picture, we prefer to visualize it by putting up a 3-dimensional coordinate system. As a first step, we need to know what does a vector mean in such a system.
+
+.. admonition:: Why 3D Coordinate System
+   :class: note
+
+   In principle we need a 4D coordinate system. However, the component of identity of the Hamiltonian doesn't play a role here. Thus only the three component of Pauli matrices are needed.
+
 
 .. figure:: assets/flavor-isospin/isospin-space.png
    :align: center
 
    Isospin space. :download:`Geogebra file  <assets/flavor-isospin/isospin-space.ggb>`.
 
-First of all, we need to understand the component on the black vertical axis. The definition of flavor iosospin
+First of all, we need to understand the component of flavor isospin projected on the black vertical axis. Apply the definition of flavor iosospin we can calculate the z component of it
 
 .. math::
-   \vec s_z = \Psi^\dagger \sigma_3 \Psi = \lvert \psi_e \rvert ^2 - \lvert \psi_x \rvert^2,
+   \mathbf s_z = \frac{1}{2}\Psi^\dagger \sigma_3 \Psi = \frac{1}{2} \lvert \psi_e \rvert ^2 - \lvert \psi_x \rvert^2,
 
-which means the difference between electron flaor and the other flavor. Thus on this axis, +1 means all electron flavor, while -1 means all the other flavor.
+which means the difference between electron flaor and the other flavor. Thus on this axis, +1/2 means all electron flavor, while -1/2 means all the other flavor.
 
-Let's start from electron flavor. If mixing angle is zero, no oscilltion or mixing hahhepns.
+Vacuum Oscillation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Basis
+   :class: warning
+
+   Since we are talking about vectors and matrices, basis is always the concern.
+
+   In the following discussion, we use flavor basis since flavor isospin is the name of the vector we are interested in, even though this formalism can be done in any basis.
+
+Vacuum oscillation equation of motion is
+
+.. math::
+   \frac{d}{dt}\mathbf s = \mathbf{s}\times \mathbf H_v,
+
+where in flavor basis the components of :math:`\mathbf H_v` is
+
+.. math::
+   \mathbf H_v = \begin{pmatrix} -\omega_v\sin 2\theta_v \\ 0 \\ \omega_v\cos 2\theta_v   \end{pmatrix}
+
+Let's start from electron flavor. If mixing angle is zero, the Hamiltonian vector will be on z axis and is aligned with initial state of flavor isospin. Recall the equation of motion is procession-like, thus :math:`\frac{d}{dt}\mathbf s= \mathbf{s}\times \mathbf H_v = \boldsymbol 0` and no flavor oscilltion or flavor mixing happens.
 
 .. figure:: assets/flavor-isospin/zero-mixing-angle-isospin-graph.png
    :align: center
 
    Flavor isospin vector when mixing angle is zero. :download:`Geogebra file  <assets/flavor-isospin/zero-mixing-angle-isospin-graph.ggb>`.
 
-Alternative, we can look at another limit, which is :math:`\theta_v = \frac{\pi}{4}`. In this case, the mixing should be maximium, i.e., the flavor conversion should be complete at some point.
+.. admonition:: Different Initial Condition
+   :class: hint
+
+   Even with initial condition that is not on z axis, since procession will be along this Hamiltonian which is on z axis (where we assumed that the mixing angle is zero), and flavor content (which is determined by the projection on z axis) won't change.
+
+Alternative, we can look at another limit, which is :math:`\theta_v = \frac{\pi}{4}`. The precession will be around x axis, thus the projection of flavor isospin vector will be oscillating from 1/2 (all electron flavor) to 0 (equal flavor content) then to -1/2 (all the other flavor) and back. In this case, the mixing should be maximium, i.e., the flavor conversion should be complete at some point.
 
 .. _pi-over-four-mixing-angle-isospin-graph:
 
@@ -223,15 +275,36 @@ In general we can graphically represent any oscillations of flavor isospin using
    Graphical representation of vacuum Hamiltonian. :download:`Geogebra file  <assets/flavor-isospin/flavor-isospin-graphics-vacuum-only.ggb>`.
 
 
+
+Oscillations in Matter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 Vacuum is easy to understand, so is neutrino oscillations in constant matter potential. We could always define new mixing angles :math:`\theta_m` in matter and effective angular frequency :math:`\omega_m` so that the Hamiltonian with constant matter potential becomes
 
 .. math::
    H = \frac{\omega_m}{2} \cos 2\theta_m \sigma_3 + \frac{\omega_m}{2} \sin 2\theta_m \sigma_1,
 
-which has exactly the same form as vacuum Hamiltonian. So we expect the constant matter potential oscillation graph to be exactly the same as vacuum oscillation.
+which has exactly the same form as vacuum Hamiltonian. So we expect the constant matter potential oscillation graph to be exactly the same as vacuum oscillation, but with different effective mixing angles.
 
 
 As for changing matter potential, we can only analyze a few cases. More can be analyzed if we also plot out the components of Hamiltonian, as in :numref:`oscillation-isospin-graph-msw`.
+
+.. admonition:: Equation of Motion
+   :class: hint
+
+   The equation of motion is
+
+   .. math::
+      \frac{d}{dt} \mathbf s = \mathbf s\times ( \mathbf H_v + \mathbf H_m ),
+
+   where in flavor basis
+
+   .. math::
+      \mathbf H_v &= \begin{pmatrix} \omega_v\sin 2\theta_v \\ 0 \\ -\omega_v\cos 2\theta_v   \end{pmatrix} \\
+      \mathbf H_m & = \begin{pmatrix} 0 \\ 0 \\ -\lambda \end{pmatrix}.
+
+   When translated to the graph, :math:`\mathbf H_m` is a vector pointing downward.
 
 .. _oscillation-isospin-graph-msw:
 
@@ -248,7 +321,7 @@ For very small matter density and very large matter density, we have vacuum osci
 .. figure:: assets/flavor-isospin/oscillation-isospin-graph-msw-change.png
    :align: center
 
-   Neutrino oscillations for very small matter density (a) and very large matter density (b). :download:`Geogebra file  <assets/flavor-isospin/oscillation-isospin-graph-msw-change.ggb>`.
+   Neutrino oscillations for (a) very small matter density and (b) very large matter density. :download:`Geogebra file  <assets/flavor-isospin/oscillation-isospin-graph-msw-change.ggb>`.
 
 
 Now imagine a slow adiabatic process from :numref:`oscillation-isospin-graph-msw-change` (a) to (b). At first, the oscillation is almost around vacuum Hamiltonian vector. As matter becomes dense, the matter Hamiltonian vector becomes dominating, which flips the oscillation axis. Somewhere in between, we would have a Hamiltonian vector which points horizontally, almost like :numref:`pi-over-four-mixing-angle-isospin-graph`. This is where the MSW resonance (maximium flavor conversion) happens.
