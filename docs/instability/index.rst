@@ -6,3 +6,4 @@ Instability
 
    self-interaction-instability.rst
    instabilities-list.rst
+   bimodal.rst
