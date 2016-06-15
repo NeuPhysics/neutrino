@@ -66,7 +66,7 @@ where in flavor basis
 Another way of looking at this relation is that the density matrix for single particle can be writen in terms of polarization :math:`\mathbf P`,
 
 .. math::
-   \rho = \frac{1}{2} ( 1 +  \boldsymbol{\sigma} \cdot \matbbf P ).
+   \rho = \frac{1}{2} ( 1 +  \boldsymbol{\sigma} \cdot \mathbf P ).
 
 As for a system of multiple particles, we can always extract the information of particle number density :math:`n` out of density matrix,
 
@@ -108,7 +108,7 @@ Note the equation of motion becomes
    .. math::
       i \frac{d}{dt}\rho = [H,\rho].
 
-   Using :numref:`density-matrix-flavor-isospin`, we rewrite the equation using flavor isospin
+   Using :eq:`density-matrix-flavor-isospin`, we rewrite the equation using flavor isospin
 
    .. math::
       i\frac{d}{dt} \left( \frac{n_\nu}{2} + n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) = [H, \frac{n_\nu}{2} + n_\nu' \boldsymbol \sigma \cdot \mathbf s].
