@@ -71,12 +71,19 @@ Another way of looking at this relation is that the density matrix for single pa
 As for a system of multiple particles, we can always extract the information of particle number density :math:`n` out of density matrix,
 
 .. math::
-   \rho &= n_\nu \frac{1}{2} \left( 1 +  \boldsymbol{\sigma} \cdot \mathbf P'  \right) \\
-   &= \frac{n_\nu}{2} + n_\nu \boldsymbol{\sigma} \cdot \frac{ \mathbf P'}{2} \\
+   \rho &= n_\nu \frac{1}{2} \left( 1 +  \boldsymbol{\sigma} \cdot \mathbf P  \right) \\
+   &= \frac{n_\nu}{2} + n_\nu \boldsymbol{\sigma} \cdot \frac{ \mathbf P}{2} \\
    & \equiv  \frac{n_\nu}{2} + n_\nu' \boldsymbol{\sigma} \cdot \mathbf{s},
    :label: density-matrix-flavor-isospin
 
-where :math:`\mathbf{s}` is the so called flavor isospin and will be defined later, and :math:`n_\nu'` is effective neutrino density distribution. In the case of vacuum oscillation of homogeneous systems, :math:`n_\nu'=n_\nu` and :math:`\mathbf s = \mathbf P /2`. However, in more complicated systems such as systems with inhomogeneous angular distribution of neutrinos, the angular distribution should be taken into account.
+where :math:`\mathbf{s}` is the so called flavor isospin and will be defined later, and :math:`n_\nu'` is effective neutrino density distribution. In the case of vacuum oscillation of homogeneous systems, :math:`n_\nu'=n_\nu` and :math:`\mathbf s = \mathbf P /2`.
+
+.. admonition:: What is Effective Neutrino Density Distribution
+   :class: warning
+
+   JUST A GUESS AT THIS MOMENT:
+
+   However, in more complicated systems such as systems with inhomogeneous angular distribution of neutrinos, the angular distribution should be taken into account.
 
 
 We also find the component of Hamiltonian in :math:`\{ I, \sigma_1,\sigma_2,\sigma_3 \}` basis. However, in this specific problem, we only need :math:`\{\sigma_1,\sigma_2,\sigma_3 \}` since we already removed the identity from Hamiltonian. With this convention, we define the Hamiltonian vector :math:`\vec H` using
