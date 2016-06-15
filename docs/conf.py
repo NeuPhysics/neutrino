@@ -125,7 +125,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Neutrino'
-copyright = u'2015, Lei Ma'
+copyright = u'2016, Lei Ma'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
