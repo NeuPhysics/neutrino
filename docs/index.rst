@@ -58,6 +58,7 @@ Here is also an index: `genindex.html <genindex.html>`_ .
    pictures/index.rst
    models/index.rst
    statistical-physics/index.rst
+   geometric-phase/index.rst
    astrophysics/index.rst
    gravity/index.rst
    cosmology/index.rst
