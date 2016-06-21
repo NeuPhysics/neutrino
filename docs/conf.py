@@ -377,7 +377,7 @@ texinfo_documents = [
 epub_title = u'neutrino'
 epub_author = u'Lei Ma'
 epub_publisher = u'Lei Ma'
-epub_copyright = u'2015, Lei Ma'
+epub_copyright = u'2016, Lei Ma'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
