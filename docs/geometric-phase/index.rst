@@ -8,3 +8,4 @@ Geometric Phase
    :maxdepth: 2
 
    review.rst
+   neutrino-oscillations-berry-phase.rst
