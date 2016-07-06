@@ -129,7 +129,7 @@ Note the equation of motion becomes
 
    However, a more systematic and rigorous method is given in [duan2006]_ . What's different here is that the author used the definition :math:`H_v = - \omega_v \frac{\boldsymbol{\sigma}}{2} \cdot \mathbf H` which means :math:`\mathbf H` in that paper is normalized but here we do not do that.
 
-   Nonethless, EoM for flavor isospin can be derived using brute force. As a first step, we write donw the equation of motion for density matrix,
+   Nonethless, EoM for flavor isospin can be derived using brute force. As a first step, we write down the equation of motion for density matrix,
 
    .. math::
       i \frac{d}{dt}\rho = [H,\rho].
@@ -144,7 +144,7 @@ Note the equation of motion becomes
    .. math::
       i n_\nu' \frac{d}{dt} \mathbf s = -\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) + \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right)\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) ,
 
-   where :math:`n_\nu'` can be eliminated on both sides. To simplify the equation, we write donw the component form of the dot products,
+   where :math:`n_\nu'` can be eliminated on both sides. To simplify the equation, we write down the component form of the dot products,
 
    .. math::
       i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &= \frac{1}{2} \left(  \boldsymbol \sigma_i \mathbf s_i \boldsymbol \sigma_j \mathbf H_j - \boldsymbol \sigma_i  \mathbf H_i \boldsymbol \sigma_j \mathbf s_j  \right) \\
