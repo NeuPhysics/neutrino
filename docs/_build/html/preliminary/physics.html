@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1.2. Physics &mdash; Neutrino 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Neutrino 0.1.1 documentation" href="../index.html" />
+    <link rel="up" title="1. Preliminary" href="index.html" />
+    <link rel="next" title="1.3. Mathematics Related" href="math.html" />
+    <link rel="prev" title="1.1. Common Sense" href="commonsense.html" />
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link rel="canonical" href="http://docs.neutrino.xyz/preliminary/physics.html"/>
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      processEscapes: true
+    }
+  });
+</script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{\#1}',1],
+        overl: ['\\overset\leftarrow{\#1}',1],
+        overr: ['\\overset\rightarrow{\#1}',1],
+        bra: ['\\left\\langle \#1\\right|',1],
+        ket: ['\\left| \#1\\right\\rangle',1],
+        braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+        avg: ['\\left< \#1 \\right>',1],
+        slashed: ['\\cancel{\#1}',1],
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
+      }
+    }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="math.html" title="1.3. Mathematics Related"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="commonsense.html" title="1.1. Common Sense"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Neutrino 0.1.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">1. Preliminary</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="physics">
+<h1>1.2. Physics<a class="headerlink" href="#physics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reactions-related-to-neutrinos">
+<h2>1.2.1. Reactions Related to Neutrinos<a class="headerlink" href="#reactions-related-to-neutrinos" title="Permalink to this headline">¶</a></h2>
+<p>Before we actually reach a list of reactions, here are some most common examples which neutrinos participate in.</p>
+<ol class="arabic simple">
+<li>Beta decays, <span class="math">\(n\to p + e^- +\bar \nu\)</span> and <span class="math">\(p\to n + e^+ +\nu\)</span></li>
+<li>Electron capture and positron capture, <span class="math">\(e^- + p\to n+\nu\)</span> and <span class="math">\(e^+ + n \to p + \bar \nu\)</span>.</li>
+<li>Inverse beta decays, <span class="math">\(\nu+ n \to p+e^-\)</span> and <span class="math">\(\bar\nu + p \to n + e^+\)</span>.</li>
+<li>Inverses of beta decays, <span class="math">\(\bar\nu + e^- + p \to n\)</span> and <span class="math">\(n+e^++\nu \to n\)</span>.</li>
+</ol>
+<p>As for a list of possible reactions, here we have this table.</p>
+<div class="figure align-center" id="id8">
+<img alt="../_images/neutrino-related-reactions1.png" src="../_images/neutrino-related-reactions1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Neutrino related nuclear or leptonic reactions.</span></p>
+</div>
+<p>Another view of this is through drawing Feynman diagrams. There are six different kinds of Feynman diagrams that is related to neutrinos,</p>
+<ul class="simple">
+<li>Elastic scattering</li>
+<li>Quasi-elastic scattering</li>
+<li>Resonance</li>
+<li>Deep inelastic scattering</li>
+<li>Coherent neutral current neutrino-neucleus elastic scattering</li>
+<li>Neutrino-neutrino self-interaction.</li>
+</ul>
+<p>Examples of elastic scattering:</p>
+<a class="reference internal image-reference" href="../_images/elastic-scattering-cc.png"><img alt="../_images/elastic-scattering-cc.png" src="../_images/elastic-scattering-cc.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/elastic-scattering-nc.png"><img alt="../_images/elastic-scattering-nc.png" src="../_images/elastic-scattering-nc.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/tau-neutrino-and-electron-nc.png"><img alt="../_images/tau-neutrino-and-electron-nc.png" src="../_images/tau-neutrino-and-electron-nc.png" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../_images/elastic-scattering-neutrino-different-family.png"><img alt="../_images/elastic-scattering-neutrino-different-family.png" src="../_images/elastic-scattering-neutrino-different-family.png" style="width: 45%;" /></a>
+<p>Example of quasi-elastic scattering</p>
+<a class="reference internal image-reference" href="../_images/quasi-elastic-scattering-neutrinos.png"><img alt="../_images/quasi-elastic-scattering-neutrinos.png" src="../_images/quasi-elastic-scattering-neutrinos.png" style="width: 45%;" /></a>
+<p>Example of resonance</p>
+<a class="reference internal image-reference" href="../_images/resonance-neutrinos.png"><img alt="../_images/resonance-neutrinos.png" src="../_images/resonance-neutrinos.png" style="width: 45%;" /></a>
+<p>Example of deep inelastic scattering</p>
+<a class="reference internal image-reference" href="../_images/deep-inelastic-scattering-neutrinos.png"><img alt="../_images/deep-inelastic-scattering-neutrinos.png" src="../_images/deep-inelastic-scattering-neutrinos.png" style="width: 45%;" /></a>
+<p>Example of coherent neutral current scattering</p>
+<a class="reference internal image-reference" href="../_images/coherent-nc-neutrinos.png"><img alt="../_images/coherent-nc-neutrinos.png" src="../_images/coherent-nc-neutrinos.png" style="width: 45%;" /></a>
+</div>
+<div class="section" id="what-is-a-neutrino-particle">
+<h2>1.2.2. What is a Neutrino Particle?<a class="headerlink" href="#what-is-a-neutrino-particle" title="Permalink to this headline">¶</a></h2>
+<p>As Wigner said, a physical particle is an irreducible representation of the Poincaré group. A characteristic of Poincaré group is that mass comes in.</p>
+<p>A neutrino particle is better recognized as its mass eigenstate.</p>
+<p>In QFT, there are 3 different forms of neutrino mass term, left-handed Majorana, right-handed Majorana and Dirac mass terms.</p>
+</div>
+<div class="section" id="chirality-and-helicity">
+<h2>1.2.3. Chirality and Helicity<a class="headerlink" href="#chirality-and-helicity" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="helicity">
+<span id="index-0"></span><h3>1.2.3.1. Helicity<a class="headerlink" href="#helicity" title="Permalink to this headline">¶</a></h3>
+<p><strong>Helicity</strong> is the projection of spin onto direction of momentum,</p>
+<div class="math">
+\[h = \vec J\cdot\hat p = \vec L\cdot\hat p + \vec S\cdot \hat p = \vec S\cdot \hat p,\]</div>
+<p>where</p>
+<div class="math">
+\[\hat p = \frac{\vec p}{\left|\vec p\right|}\]</div>
+<p>A state is called <strong>right-handed</strong> if helicity is positive, i.e., spin has the same direction as momentum.</p>
+</div>
+<div class="section" id="chirality">
+<span id="index-1"></span><h3>1.2.3.2. Chirality<a class="headerlink" href="#chirality" title="Permalink to this headline">¶</a></h3>
+<p><strong>Chirality</strong> is the eigenstate of the Dirac <span class="math">\(\gamma_5\)</span> matrix, which is explicitly, <a class="footnote-reference" href="#id7" id="id1">[1]</a></p>
+<div class="math">
+\[\begin{split}\gamma^5 &amp;= \begin{pmatrix} \mathbf 0 &amp; \mathbf I \\ \mathbf I &amp; \mathbf 0 \end{pmatrix} \\
+&amp; = \begin{pmatrix} 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 1 \\ 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0  \end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="majorana-or-dirac">
+<h2>1.2.4. Majorana or Dirac<a class="headerlink" href="#majorana-or-dirac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="double-beta-decay">
+<h3>1.2.4.1. Double Beta Decay<a class="headerlink" href="#double-beta-decay" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="states">
+<h2>1.2.5. States<a class="headerlink" href="#states" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wigner-function">
+<span id="index-2"></span><h3>1.2.5.1. Wigner Function<a class="headerlink" href="#wigner-function" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id9">
+<img alt="../_images/classicalProbDist.jpg" src="../_images/classicalProbDist.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">A ensemble of classical harmonic oscillators can be described using such phase-space probability distribution.</span></p>
+</div>
+<p>Wigner function is an analogue of the classical phase-space probability distribution function though it is not really probability. <a class="footnote-reference" href="#id4" id="id2">[3]</a> The mean of Wigner function lies in the two quadratures, i.e., space distribution and momentum distribution.</p>
+<p>There is a collection of Wigner functions on this site. <a class="footnote-reference" href="#id4" id="id3">[3]</a></p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> <a class="reference external" href="http://www.iqst.ca/quantech/wigner.php">http://www.iqst.ca/quantech/wigner.php</a></td></tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>.. admonition:: Question</dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">class:</th><td class="field-body">note</td>
+</tr>
+</tbody>
+</table>
+<p class="last">How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="statistics">
+<h2>1.2.6. Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h2>
+<p>Fermi-Dirac distribution</p>
+<div class="math">
+\[f(p,\xi) = \frac{1}{1+\exp (p/T-\xi)},\]</div>
+<p>where <span class="math">\(\xi=\mu/T\)</span> is the degeneracy parameter.</p>
+<p>The neutrino-neutrino forward scattering is <a class="footnote-reference" href="#id6" id="id5">[2]</a></p>
+<div class="math">
+\[\nu_\alpha (p) + \nu_\beta (k) \to \nu_\alpha (k)+\nu_\beta (p).\]</div>
+<div class="warning admonition">
+<p class="first admonition-title">Question</p>
+<p class="last">Meaning of each term in Liouville equation.</p>
+</div>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td>Pantaleone (1992), Friedland &amp; Lunardini (2003).</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="refs-notes">
+<h2>1.2.7. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.quantumfieldtheory.info/ChiralityandHelicityindepth.htm">*Chirality and Helicity In Depth* by Robert D. Klauber</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Neutrino</a></h1>
+
+
+
+<p class="blurb">Neutrino Physics</p>
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=NeuPhysics&repo=neutrino&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>ToC</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Preliminary</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.2. Physics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reactions-related-to-neutrinos">1.2.1. Reactions Related to Neutrinos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-a-neutrino-particle">1.2.2. What is a Neutrino Particle?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chirality-and-helicity">1.2.3. Chirality and Helicity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#majorana-or-dirac">1.2.4. Majorana or Dirac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#states">1.2.5. States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#statistics">1.2.6. Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refs-notes">1.2.7. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">1.3. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="questions.html">1.4. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mass/index.html">2. Masses of Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/index.html">3. Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations/index.html">4. Oscillations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collective/index.html">6. Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instability/index.html">7. Instability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pictures/index.html">8. Pictures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/index.html">9. Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/index.html">10. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geometric-phase/index.html">11. Geometric Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics/index.html">12. Astrophysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">13. Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmology/index.html">14. Neutrinos and Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">15. Other Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref.html">16. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">17. Acknowledgement</a></li>
+</ul>
+
+
+<ul>
+	<li><a href="genindex.html">INDEX</a></li>
+</ul>
+<h3>Links</h3>
+<ul>
+   <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
+   <li class="toctree-l1"><a href="http://physics.openmetric.org" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
+   <li class="toctree-l1"><a href="http://neutrino.xyz/neutrino-map" style="color:orange;"><i class="fa fa-map-signs"></i>&nbsp;Neutrino Map</a></li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>Bug Report and Chat</h3>
+<p>
+
+<a href="https://github.com/NeuPhysics/neutrino/issues"><img src="https://img.shields.io/badge/GitHub-Issues-blue.svg"></a><br><br>
+
+
+
+<a href="https://gitter.im/NeuPhysics/neutrino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank"><img src="https://badges.gitter.im/NeuPhysics/neutrino.svg"></a>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" style="border-top:1px solid #B1B4B6;">
+
+<!-- 多说评论框 start -->
+<!--
+  <div class="ds-thread" data-thread-key="" data-title="1.2. Physics &mdash; Neutrino 0.1.1 documentation" data-url=""></div>
+-->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sci2fi"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+-->
+<!-- 多说公共JS代码 end -->
+
+<!-- Disqus BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'neuphysics';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Disqus END -->
+
+
+      &copy;2016, Lei Ma. | <a href="index.html">Licenses</a>
+      |
+      <a href="/genindex.html">Index</a>
+      |
+      
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/preliminary/physics.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-66327435-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

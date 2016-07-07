@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>15.1. Basis &mdash; Neutrino 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Neutrino 0.1.1 documentation" href="../index.html" />
+    <link rel="up" title="15. Other Topics" href="index.html" />
+    <link rel="next" title="15.2. Qualitative Analysis" href="qualitative.html" />
+    <link rel="prev" title="15. Other Topics" href="index.html" />
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link rel="canonical" href="http://docs.neutrino.xyz/misc/basis.html"/>
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      processEscapes: true
+    }
+  });
+</script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{\#1}',1],
+        overl: ['\\overset\leftarrow{\#1}',1],
+        overr: ['\\overset\rightarrow{\#1}',1],
+        bra: ['\\left\\langle \#1\\right|',1],
+        ket: ['\\left| \#1\\right\\rangle',1],
+        braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+        avg: ['\\left< \#1 \\right>',1],
+        slashed: ['\\cancel{\#1}',1],
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
+      }
+    }
+  });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+ 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="qualitative.html" title="15.2. Qualitative Analysis"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="15. Other Topics"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Neutrino 0.1.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">15. Other Topics</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="basis">
+<h1>15.1. Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h1>
+<p>Calculating neutrino oscillations requires a lot of rotations between different bases.</p>
+<div class="section" id="rotation-of-states">
+<h2>15.1.1. Rotation of States<a class="headerlink" href="#rotation-of-states" title="Permalink to this headline">¶</a></h2>
+<p>There are three most used bases, vacuum basis which diagonalizes the vacuum Hamiltonian, flavor basis where the flavor states stay, and instataneous matter basis which diagonializes the Hamiltonian with constant matter interaction or the instataneous matter interaction.</p>
+<ul>
+<li><p class="first">The rotation from vacuum basis wavefunction <span class="math">\(\Psi_v\)</span> to flavor basis <span class="math">\(\Psi_f\)</span> is</p>
+<div class="math">
+\[\Psi_f = R_{v2f}(\theta_v) \Psi_v,\]</div>
+<p>where the rotation is</p>
+<div class="math">
+\[\begin{split}R_{v2f}(\theta_v) = \begin{pmatrix} \cos\theta_v &amp; \sin \theta_v \\ -\sin \theta_v &amp; \cos \theta_v \end{pmatrix}.\end{split}\]</div>
+</li>
+<li><p class="first">The rotation from matter basis wavefunction <span class="math">\(\Psi_m\)</span> to flavor basis wavefunction <span class="math">\(\Psi_f\)</span> is</p>
+<div class="math">
+\[\Psi_f = R_{m2f}(\theta_m) \Psi_m,\]</div>
+<p>where the roation is</p>
+<div class="math">
+\[\begin{split}R_{m2f}(\theta_m) = \begin{pmatrix} \cos\theta_m &amp; \sin \theta_m \\ -\sin \theta_m &amp; \cos \theta_m \end{pmatrix}.\end{split}\]</div>
+<p>The matter mixing angle is determined by the matter potential <span class="math">\(\lambda = \sqrt{2}G_F n_e\)</span>,</p>
+<div class="math">
+\[\tan 2\theta_m = \frac{\sin 2\theta_v}{\cos 2\theta_v - \lambda/\omega},\]</div>
+<p>where <span class="math">\(\omega = \delta m^2 /2E\)</span> is the vacuum frequency of neutrinos.</p>
+</li>
+</ul>
+<div class="note admonition">
+<p class="first admonition-title">Rotate Twice</p>
+<p>A rotation from vacuum basis to flavor basis then to matter basis is simply the addition of the two rotation, i.e.,</p>
+<div class="last math">
+\[\begin{split}R_{v2f2m}(\theta_v,\theta_m) = \begin{pmatrix} \cos(\theta_v - \theta_m) &amp; \sin ( \theta_v - \theta_m ) \\ -\sin (\theta_v-\theta_m) &amp; \cos (\theta_v - \theta_m) \end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="rotation-of-pauli-matrices">
+<h2>15.1.2. Rotation of Pauli Matrices<a class="headerlink" href="#rotation-of-pauli-matrices" title="Permalink to this headline">¶</a></h2>
+<p>Rotate <span class="math">\(\sigma_1\)</span> from vacuum basis to flavor basis,</p>
+<div class="math">
+\[\begin{split}&amp;R_{v2f}(\theta) \sigma_1 R_{v2f}^{\dagger} \\
+=&amp; \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1.\end{split}\]</div>
+<p>Rotate <span class="math">\(\sigma_3\)</span> from vacuum basis to flavor basis,</p>
+<div class="math">
+\[\begin{split}&amp;R_{v2f}(\theta) \sigma_3 R_{v2f}^{\dagger} \\
+=&amp;  \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+=&amp; \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1.\end{split}\]</div>
+</div>
+<div class="section" id="rotation-of-hamiltonian">
+<h2>15.1.3. Rotation of Hamiltonian<a class="headerlink" href="#rotation-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<p>Given the vacuum basis Hamiltonian <span class="math">\(H_v\)</span>, we can rotation it to flavor basis by using the rotation <span class="math">\(R_{v2f}(\theta_v)\)</span></p>
+<div class="math">
+\[H_f = R_{v2f}(\theta_v) H_v R_{v2f}^{-1}(\theta_v).\]</div>
+<p>Similarly, the flavor basis Hamiltonian <span class="math">\(H_f\)</span> can also be calculated from matter basis Hamiltonian <span class="math">\(H_m\)</span> ,</p>
+<div class="math">
+\[H_f = R_{m2f}(\theta_m) H_m R_{v2f}^{-1}(\theta_m).\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Vacuum Basis Hamiltonian</p>
+<p>The Hamiltonian in this basis is composed of vacuum Hamiltonian which is diagonalized and the matter potential rotated from flavor basis,</p>
+<div class="last math">
+\[\begin{split}H_v &amp;= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}  \sigma_3 \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \\
+&amp;= -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1.\end{split}\]</div>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Flavor Basis Hamiltonian</p>
+<div class="last math">
+\[H_f = - \frac{\omega}{2} \cos 2\theta \sigma_3 +  \frac{\omega}{2} \sin 2\theta \sigma_1 +  \frac{\lambda}{2} \sigma_3.\]</div>
+</div>
+<p>As a consistancy check, we now rotate Hamiltonian in vacuum basis to flavor basis.</p>
+<div class="math">
+\[\begin{split}H_f =&amp; \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} H_v \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix}\\
+=&amp; \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_3 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+&amp;+ \frac{\lambda}{2} \sin 2\theta \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \sigma_1 \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
+=&amp; \left(-\frac{\omega}{2} + \frac{\lambda}{2} \cos 2\theta \right) ( \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 ) + \frac{\lambda}{2}\sin 2\theta ( \sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 ) \\
+=&amp; -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2} ( \cos^2 2\theta + \sin ^2 2\theta ) \sigma_3 \\
+=&amp; -\frac{\omega}{2} \cos 2\theta \sigma_3 + \frac{\omega}{2}\sin 2\theta \sigma_1 + \frac{\lambda}{2}\sigma_3 .\end{split}\]</div>
+<div class="hint admonition">
+<p class="first admonition-title">Numerical Calculation of The Rotations</p>
+<p class="last">To write clean code, it is better to define and test there rotations first.</p>
+</div>
+</div>
+<div class="section" id="examples-of-rotating-basis">
+<h2>15.1.4. Examples of Rotating Basis<a class="headerlink" href="#examples-of-rotating-basis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rotate-from-vacuum-to-another-basis">
+<h3>15.1.4.1. Rotate From Vacuum to Another Basis<a class="headerlink" href="#rotate-from-vacuum-to-another-basis" title="Permalink to this headline">¶</a></h3>
+<p>In vacuum basis, Hamiltonian with matter interaction is</p>
+<div class="math">
+\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,\]</div>
+<p>where we have got a contribution of <span class="math">\(\sigma_3\)</span> from matter interaction. By carefully defining a transformation that removes this contribution, we can define a new basis in which the wavefunction is <span class="math">\(\Psi_b\)</span>, which is related to the vacuum basis wavefunction in the following way,</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix}\psi_{v1} \\ \psi_{v2} \end{pmatrix}  = \begin{pmatrix}
+e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
+\end{pmatrix} \begin{pmatrix}\psi_{b1} \\ \psi_{b2} \end{pmatrix},\end{split}\]</div>
+<p>where <span class="math">\(\eta(x)\)</span> is a function of position. We can find the requirement of it by plugging the wavefunction into Schrodinger equation, which results in</p>
+<div class="math">
+\[\eta + x \frac{d\eta }{dx} = \frac{\lambda}{2} \cos 2\theta_v.\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Derivation of <span class="math">\(\eta\)</span></p>
+<p>Plug the transformation into Schrodinger equation,</p>
+<div class="math">
+\[\begin{split}\mathrm{LHS} =&amp; i \frac{d}{dx} \left[  \begin{pmatrix} e^{-i\eta(x) x} &amp; 0 \\  0 &amp; e^{i\eta(x) x} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \right] \\
+=&amp; i \begin{pmatrix}  - i \eta(x) e^{-i \eta(x) x} - i x \frac{d\eta(x)}{dx} e^{-i \eta(x) x}  &amp; 0 \\  0 &amp; i\eta(x) e^{i\eta(x) x} + i x \frac{d\eta(x)}{dx} e^{i\eta(x)x}  \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+&amp; +  i \begin{pmatrix} e^{-i\eta(x) x} &amp; 0 \\  0 &amp; e^{i\eta(x) x}  \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}\end{split}\]</div>
+<p>Multiplying on both sides of the equation the Hermitian conjugate of the transformation matrix</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix},\end{split}\]</div>
+<p>the two sides becomes</p>
+<div class="math">
+\[\begin{split}\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix}\mathrm{LHS} &amp; = i \begin{pmatrix} - i\eta{x} - i x \frac{d\eta(x)}{dx} &amp;  0 \\ 0 &amp; i \eta(x) + i x \frac{d\eta(x)}{dx} \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}  \\
+\begin{pmatrix} e^{i\eta(x)x} &amp; 0 \\ 0 &amp; e^{-i \eta(x)x} \end{pmatrix} \mathrm{RHS} &amp; = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \cos 2\theta_v \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} &amp; 0 \end{pmatrix}  \right)  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} .\end{split}\]</div>
+<p>We choose the condition that</p>
+<div class="math">
+\[\eta(x) + x \frac{d\eta(x)}{dx} = \frac{\lambda(x)}{2} \cos 2\theta_v,\]</div>
+<p>which removes the second term in the Hamiltonian in vacuum basis. Finally we have the equation of motion in this new basis</p>
+<div class="math">
+\[\begin{split}i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} = \left( - \frac{\omega}{2} \sigma_3 + \frac{\lambda(x)}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{2i\eta(x)x} \\ e^{-2i\eta(x)x} &amp; 0 \end{pmatrix} \right) \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.\end{split}\]</div>
+<p>We could even remove all the <span class="math">\(\sigma_3\)</span> terms using this method by choosing</p>
+<div class="last math">
+\[\eta(x) + x \frac{d\eta(x)}{dx} = -\frac{\omega}{2} + \frac{\lambda(x)}{2} \cos 2\theta_v.\]</div>
+</div>
+<p>The general solution of <span class="math">\(\eta(x)\)</span> is</p>
+<div class="math">
+\[\eta(x) = \frac{Constant}{x} + \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau,\]</div>
+<p>where the constant can always be set to 0, which tells us that</p>
+<div class="math">
+\[\eta(x) = \frac{1}{x} \int_1^x \frac{\cos 2\theta_v}{2} \lambda(\tau) d\tau .\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Constant Matter Density</p>
+<p>As a check, for constant <span class="math">\(\lambda\)</span>, we have</p>
+<div class="last math">
+\[\eta(x) = \frac{\cos 2\theta_v }{2x} \lambda ( x-1 ).\]</div>
+</div>
+<p>In this new basis, the Hamiltonian becomes</p>
+<div class="math">
+\[\begin{split}H_b &amp;= - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{i 2\eta(x) x} \\ e^{ - i 2\eta(x) x} &amp; 0  \end{pmatrix} \\
+&amp; =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.\end{split}\]</div>
+</div>
+<div class="section" id="constant-matter-eigen-basis">
+<h3>15.1.4.2. Constant Matter Eigen Basis<a class="headerlink" href="#constant-matter-eigen-basis" title="Permalink to this headline">¶</a></h3>
+<p>For a Hamiltonian with matter interection,</p>
+<div class="math">
+\[H_v = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos 2\theta_v \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \sigma_1,\]</div>
+<p>where <span class="math">\(\lambda(x) = \lambda_0 + \lambda_1(x)\)</span>. We rotate it into constant matter basis where the Hamiltonian is diagonalized with only <span class="math">\(\lambda_0\)</span>,</p>
+<div class="math">
+\[H_m = R_{v2m} H_v R_{v2m}^\dagger,\]</div>
+<p>where <span class="math">\(U\)</span> rotates the state from vacuum basis to constant matter basis.</p>
+<p>In general the Hamiltonian after the rotation is written in a form</p>
+<div class="math">
+\[H_m = H_0 + R_{f2m}^\dagger \lambda_{1,f}(x) R_{f2m},\]</div>
+<p>in which <span class="math">\(R_{f2m}\)</span> is the rotation from flavor basis to constant matter basis and <span class="math">\(\lambda_{1,f}\)</span> is the perturbation of matter profile in flavor basis. We also have</p>
+<div class="math">
+\[\begin{split}H_0 = \begin{pmatrix} \omega_{m1} &amp; 0 \\ 0 &amp; \omega_{m2} \end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="math">
+\[\begin{split}\lambda_{1,f}(x) = \begin{pmatrix} \delta\lambda &amp; 0 \\ 0 &amp; 0  \end{pmatrix}.\end{split}\]</div>
+<div class="hint admonition">
+<p class="first admonition-title">Another Form of Matter Potential</p>
+<p class="last">For the perturbation we could also make it traceless without changing the probabilities.</p>
+</div>
+<div class="hint admonition">
+<p class="first admonition-title">Position Dependent Rotation</p>
+<p>If the rotation is position dependent, i.e., the matter profile <span class="math">\(\lambda_0\)</span> is not position independent, we have, in general,</p>
+<div class="math">
+\[H_m = H_0 - i R_{f2m}^\dagger \frac{d}{dx} R_{f2m} + R_{f2m}^\dagger \lambda_1(x) R_{f2m}.\]</div>
+<p class="last">In the case of discussion here, <span class="math">\(\frac{d}{dx} R_{f2m}=0\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="refs-notes">
+<h2>15.1.5. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Neutrino</a></h1>
+
+
+
+<p class="blurb">Neutrino Physics</p>
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=NeuPhysics&repo=neutrino&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>ToC</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mass/index.html">2. Masses of Neutrinos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/index.html">3. Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations/index.html">4. Oscillations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collective/index.html">6. Collective Behavior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instability/index.html">7. Instability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pictures/index.html">8. Pictures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/index.html">9. Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/index.html">10. Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geometric-phase/index.html">11. Geometric Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics/index.html">12. Astrophysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">13. Gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmology/index.html">14. Neutrinos and Cosmology</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">15. Other Topics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">15.1. Basis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rotation-of-states">15.1.1. Rotation of States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotation-of-pauli-matrices">15.1.2. Rotation of Pauli Matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotation-of-hamiltonian">15.1.3. Rotation of Hamiltonian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples-of-rotating-basis">15.1.4. Examples of Rotating Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refs-notes">15.1.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qualitative.html">15.2. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cheatsheet.html">15.3. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">15.4. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ref.html">16. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">17. Acknowledgement</a></li>
+</ul>
+
+
+<ul>
+	<li><a href="genindex.html">INDEX</a></li>
+</ul>
+<h3>Links</h3>
+<ul>
+   <li class="toctree-l1"><a href="http://neutrino.xyz" style="color:orange;"><i class="fa fa-globe"></i>&nbsp;Neutrino Physics</a></li>
+   <li class="toctree-l1"><a href="http://physics.openmetric.org" style="color:orange;"><i class="fa fa-fire"></i>&nbsp;Physics Notes</a></li>
+   <li class="toctree-l1"><a href="http://neutrino.xyz/neutrino-map" style="color:orange;"><i class="fa fa-map-signs"></i>&nbsp;Neutrino Map</a></li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3>Bug Report and Chat</h3>
+<p>
+
+<a href="https://github.com/NeuPhysics/neutrino/issues"><img src="https://img.shields.io/badge/GitHub-Issues-blue.svg"></a><br><br>
+
+
+
+<a href="https://gitter.im/NeuPhysics/neutrino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank"><img src="https://badges.gitter.im/NeuPhysics/neutrino.svg"></a>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" style="border-top:1px solid #B1B4B6;">
+
+<!-- 多说评论框 start -->
+<!--
+  <div class="ds-thread" data-thread-key="" data-title="15.1. Basis &mdash; Neutrino 0.1.1 documentation" data-url=""></div>
+-->
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!--
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sci2fi"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+-->
+<!-- 多说公共JS代码 end -->
+
+<!-- Disqus BEGIN -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'neuphysics';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Disqus END -->
+
+
+      &copy;2016, Lei Ma. | <a href="index.html">Licenses</a>
+      |
+      <a href="/genindex.html">Index</a>
+      |
+      
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/misc/basis.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-66327435-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
