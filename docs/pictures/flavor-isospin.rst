@@ -74,6 +74,68 @@ Another way of looking at this relation is that the density matrix for single pa
 .. math::
    \rho = \frac{1}{2} ( 1 +  \boldsymbol{\sigma} \cdot \mathbf P ).
 
+
+.. admonition:: Relation to Wave Function
+   :class: note
+
+   The density matrix is defined as
+
+   .. math::
+      \rho = \Psi^\dagger \Psi,
+
+   which can be combined with the definition of polarization, so that
+
+   .. math::
+      \Psi^\dagger \Psi = \frac{1}{2} ( 1 +  \boldsymbol{\sigma} \cdot \mathbf P ).
+
+   Plug in the Pauli matrices, we have
+
+   .. math::
+      \begin{pmatrix}
+      \psi_e^*\psi_2 & \psi_e\psi_x^* \\
+      \psi_x\psi_e^* & \psi_x^*\psi_x
+      \end{pmatrix} = \frac{1}{2}\left(
+      \begin{pmatrix}
+      1 & 0 \\
+      0 & 1
+      \end{pmatrix} + P_1\sigma_1 + P_2\sigma_2 + P_3 \sigma_3
+      \right),
+
+   which is equivalent to four equations
+
+   .. math::
+      1 + P_3 &= 2\psi_e^*\psi_e \\
+      1 - P_3 &= 2\psi_x^*\psi_x \\
+      P_1 - i P_2 & = 2 \psi_e \psi_x^* \\
+      P_1 + i P_2 & = 2 \psi_e^* \psi_x ,
+
+   together with the normalization
+
+   .. math::
+      \psi_e^*\psi_e + \psi_x^*\psi_x = 1,
+
+   we can solve the polarization vector,
+
+   .. math::
+      \vec P = \begin{pmatrix}
+      \psi_e^* \psi_x + \psi_e \psi_x^* \\
+      -i(\psi_e^* \psi_x - \psi_e \psi_x^*) \\
+      \psi_e^* \psi_e - \psi_x^* \psi_x
+      \end{pmatrix} = \begin{pmatrix}
+      \psi_e^* \psi_x + (\psi_e^* \psi_x)^* \\
+      -i(\psi_e^* \psi_x - (\psi_e^* \psi_x)^*) \\
+      \lvert\psi_e\rvert^2 - \lvert \psi_x \rvert^2
+      \end{pmatrix} = \begin{pmatrix}
+      2\mathrm{Re}\left(\psi_e^* \psi_x \right) \\
+      -2 i(\psi_e^* \psi_x - (\psi_e^* \psi_x)^*) \\
+      \lvert\psi_e\rvert^2 - \lvert \psi_x \rvert^2
+      \end{pmatrix} = \begin{pmatrix}
+      2\mathrm{Re}\left(\psi_e^* \psi_x \right) \\
+      2 \mathrm{Im}(\psi_e^* \psi_x ) \\
+      \lvert\psi_e\rvert^2 - \lvert \psi_x \rvert^2
+      \end{pmatrix}
+
+
 As for a system of multiple particles, we can always extract the information of particle number density :math:`n` out of density matrix,
 
 .. math::
