@@ -32,6 +32,29 @@ Pauli matrices transform in the following way
 
 
 
+In general, Pauli matrices is not invariant under unitary transformation. One of the ways to look at it is to write the unitary transformation using Pauli matrices, :math:`U = n_i\sigma_i`.
+
+.. math::
+   U^\dagger \sigma_l  U &= n_i^* \sigma_i^\dagger \sigma_l n_j \sigma_j \\
+   & = n_i^* n_j \sigma_i \sigma_l \sigma_j \\
+   & = n_i^* n_j \sigma_i( \sigma_j \sigma_l + 2i\epsilon_{ijk}\sigma_k )\\
+   & = n_i^* n_j ( \sigma_i \sigma_j \sigma_l + 2i\epsilon_{ljk} \sigma_i\sigma_k ) \\
+   & = n_i^* n_j \sigma_i \sigma_j \sigma_l  + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.
+
+For unitary U, we have
+
+.. math::
+   I &= U^\dagger U \\
+   & = n_i^* n_j \sigma_i \sigma_j.
+
+Thus
+
+
+.. math::
+   U^\dagger \sigma_l  U &= \sigma_l + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.
+
+The second term can be rewritten using the properties of Pauli matrices and Levi-Civita symbol but no significant simplification is shown.
+
 
 
 
