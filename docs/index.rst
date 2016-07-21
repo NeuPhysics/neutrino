@@ -28,18 +28,22 @@ Key steps of some research is hosted on bitbucket as private repository `here <h
 
 
 
-Support us:
+Support me:
 
-.. raw:: html
+.. image:: assets/tips-neutrino-orange.svg
+   :target: https://gratipay.com/~emptymalei/
 
-   <script data-gittip-username="emptymalei" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
 
+Cite this doc:
 
-`DOI: 10.5281/zenodo.27814 <https://zenodo.org/badge/latestdoi/7726/NeuPhysics/neutrino>`_
+.. image:: https://zenodo.org/badge/doi/10.5281/zenodo.27814.svg
+   :target: http://dx.doi.org/10.5281/zenodo.27814
+
 
 
 Here is also an index: `genindex.html <genindex.html>`_ .
 
+Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :download:`sitemap.xml.gz <assets/sitemap.xml.gz>` .
 
 
 

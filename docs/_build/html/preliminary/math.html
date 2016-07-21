@@ -62,7 +62,26 @@
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  <html lang="en">
+
+
+  
+  <meta name="description" content="Neutrinos the amazing particles, physics about neutrino oscillations">
+  
+
+
+  
+  <meta name="keywords" content="neutrino, neutrino physics">
+  
+
+
+  
+  <meta name="author" content="Lei Ma">
+  
   <link rel="canonical" href="http://docs.neutrino.xyz/preliminary/math.html"/>
+
+
 
 
 
@@ -166,6 +185,21 @@ cos \theta &amp; \sin \theta \\
 \[\begin{split}\mathbf{U}^\dagger \sigma_3 \mathbf{U} &amp;= \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1 \\
 \mathbf{U}^\dagger \sigma_1 \mathbf{U} &amp;= -\sin 2\theta \sigma_3 + \cos 2\theta \sigma_1 \\
 \mathbf{U}^\dagger \sigma_2 \mathbf{U} &amp;= \sigma_2.\end{split}\]</div>
+<p>In general, Pauli matrices is not invariant under unitary transformation. One of the ways to look at it is to write the unitary transformation using Pauli matrices, <span class="math">\(U = n_i\sigma_i\)</span>.</p>
+<div class="math">
+\[\begin{split}U^\dagger \sigma_l  U &amp;= n_i^* \sigma_i^\dagger \sigma_l n_j \sigma_j \\
+&amp; = n_i^* n_j \sigma_i \sigma_l \sigma_j \\
+&amp; = n_i^* n_j \sigma_i( \sigma_j \sigma_l + 2i\epsilon_{ijk}\sigma_k )\\
+&amp; = n_i^* n_j ( \sigma_i \sigma_j \sigma_l + 2i\epsilon_{ljk} \sigma_i\sigma_k ) \\
+&amp; = n_i^* n_j \sigma_i \sigma_j \sigma_l  + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.\end{split}\]</div>
+<p>For unitary U, we have</p>
+<div class="math">
+\[\begin{split}I &amp;= U^\dagger U \\
+&amp; = n_i^* n_j \sigma_i \sigma_j.\end{split}\]</div>
+<p>Thus</p>
+<div class="math">
+\[\begin{split}U^\dagger \sigma_l  U &amp;= \sigma_l + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.\end{split}\]</div>
+<p>The second term can be rewritten using the properties of Pauli matrices and Levi-Civita symbol but no significant simplification is shown.</p>
 </div>
 <div class="section" id="the-equations">
 <h2>1.3.2. The Equations<a class="headerlink" href="#the-equations" title="Permalink to this headline">¶</a></h2>
@@ -270,7 +304,7 @@ G(f,g) &amp; = 0.\end{split}\]</div>
 </p>
 
 
-<h3>ToC</h3>
+<h3>Contents</h3>
 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Preliminary</a><ul class="current">

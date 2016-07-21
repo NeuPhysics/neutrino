@@ -6,10 +6,31 @@
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
+  <html lang="en">
+
+
+  {% if theme_html_description %}
+  <meta name="description" content={{ theme_html_description }}>
+  {% endif %}
+
+
+  {% if theme_html_description %}
+  <meta name="keywords" content={{ theme_html_keywords }}>
+  {% endif %}
+
+
+  {% if theme_html_author %}
+  <meta name="author" content={{ theme_html_author }}>
+  {% endif %}
+
+
+
 
   {%- if theme_canonical_url %}
   <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {%- endif %}
+
+
 
 
 
