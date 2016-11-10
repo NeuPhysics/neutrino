@@ -28,3 +28,7 @@ border: solid 2px lightgrey !important;
 border-radius: 4px !important;
 background: none !important;
 }
+
+div.math.has-jax {
+overflow: auto;
+}
