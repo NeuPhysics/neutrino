@@ -27,8 +27,8 @@ MSW Effect
    We actually spot this similarity between matter Hamiltonian and vacuum Hamiltonian. Thus we define new oscillation frequency :math:`\omega_{\mathrm{m}}` and mixing angle :math:`\theta_{\mathrm{m}}`,
 
    .. math::
-      \omega_{\mathrm{m}} &= \omega_{\mathrm{v}}\sqrt{ (\frac{\lambda}{\omega_{\mathrm{v}}} - \cos^2 2\theta_{\mathrm{v}})^2 + \sin^2 2\theta_{\mathrm{v}}  },
-      \tan 2\theta_{\mathrm{m}} & = \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} - ( \lambda/\omega_{\mathrm{v}} )^2   },
+      \omega_{\mathrm{m}} &= \omega_{\mathrm{v}}\sqrt{ (\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}})^2 + \sin^2 2\theta_{\mathrm{v}}  },\\
+      \tan 2\theta_{\mathrm{m}} & = \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} -  \lambda/\omega_{\mathrm{v}}    },
 
    so that the Hamiltonian has the form
 
