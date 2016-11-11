@@ -237,4 +237,11 @@ where :math:`M` is the coefficient matrix that generate the equations we previou
    \end{pmatrix}.
 
 
-Linear stability analysi basically becomes finding the eigenvalues of matrix :math:`M`.
+We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega r}`. By put the assumption back into the equation we obtain
+
+.. math::
+   -\Omega \delta_0 = M\cdot \delta_0.
+
+Linear stability analysis basically becomes finding the eigenvalues of matrix :math:`M`. A negative imaginary part in :math:`\Omega` means the solution can grow exponentially.
+
+For this four-beam model, the eigenvalues can be found analytically by Mathematica, eventhough the solution is a bit tedious. We work out the example using unit of :math:`\omega_v`, i.e., :math:`\hat \lambda=\lambda/\omega_v` and :math:`\hat\mu = \mu/\omega_v`.
