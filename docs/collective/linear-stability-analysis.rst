@@ -128,6 +128,8 @@ Four-Beam Line Model
 
 
 
+.. _four-beams-model-geometry:
+
 .. figure:: assets/collective/four-beams-model-geometry.png
    :align: center
 
@@ -245,3 +247,79 @@ We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega r}`. B
 Linear stability analysis basically becomes finding the eigenvalues of matrix :math:`M`. A negative imaginary part in :math:`\Omega` means the solution can grow exponentially.
 
 For this four-beam model, the eigenvalues can be found analytically by Mathematica, eventhough the solution is a bit tedious. We work out the example using unit of :math:`\omega_v`, i.e., :math:`\hat \lambda=\lambda/\omega_v` and :math:`\hat\mu = \mu/\omega_v`.
+
+
+
+Neutrino Line Model
+-------------------------
+
+Neutrino line model is discussed in [duan2015]_.
+
+The equation of motion is
+
+.. math::
+   i\partial_t \rho + i \hat v \cdot \vec \nabla \rho = \left[ H, \rho \right],
+
+where Hamiltonian
+
+.. math::
+   H = H_v + H_m + H_{\nu\nu}.
+
+We discuss the equilibrium case so that the time dependent part vanishes.
+
+For the line model, we have only two directions :math:`x` and :math:`z`, thus the density matrix depends on these two directions, i.e., :math:`\rho(x,z)`. Since all the neutrinos emitted from a line located at :math:`z=0`, we can Fourier decompose the density matrix :math:`\rho(x,z)` in the x direction
+
+.. math::
+   \rho(x,z) = \sum_m e^{i m k_0 x} \rho_m(z),
+
+where :math:`k_0` is determined by the size of the line :math:`L`,
+
+.. math::
+   k_0 = \frac{2\pi}{L}.
+
+
+As we plug it back into the equation of motion, left hand side becomes
+
+.. math::
+   &i \hat v \cdot \nabla \rho(x,z) \\
+   =& i v_x \partial_x \rho(x,z) + i v_z \partial_z \rho(x,z) \\
+   =& i v_x \partial_x \sum_m e^{i m k_0 x} \rho_m(z) + i v_z \partial_z \sum_m e^{i m k_0 x} \rho_m(z) \\
+   =& \sum_m e^{i m k_0 x} \left( i v_x (i m k_0) \rho_m(z) + i v_z \partial_z \rho_m(z) \right).
+
+The vacuum Hamiltonian and matter Hamiltonian are
+
+.. math::
+   H_v =& -\frac{1}{2}\eta \omega_v \sigma_3 \\
+   \bar H_v =& \frac{1}{2}\eta \omega_v \sigma_3 \\
+   H_m =& \frac{1}{2} \lambda \sigma_3.
+
+The neutrino-neutrino interaction becomes
+
+.. math::
+   H_{\nu\nu}^{i} =& \sum_j \sqrt{2} G_F n_\nu^{j} (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^{j}(x,z)\\
+   =& \sum_m e^{im k_0 x} \left( \sum_j \sqrt{2} G_F n_\nu^{j} (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho_m(z) \right),
+
+where :math:`\beta^{j}` indicates if the beam is neutrino or antineutrino,
+
+.. math::
+   \beta^{j} =\begin{cases}
+   1 & \qquad \text{neutrinos}\\
+   -1 & \qquad \text{antineutrinos}.
+   \end{cases}
+
+To save keystroke we define
+
+.. math::
+   \mu = \sqrt{2}G_F n_{\nu},
+
+where :math:`n_\nu` is the number density of the neutrinos.
+
+So we can write down the equation of motion for each beam, using the decomposed density matrix. It's easily noticed that the equation is not coupled between Fourier modes of the density matrix.
+
+For simplicity, we first solve the four beams case, c.f. :numref:`four-beams-model-geometry`, with :math:`\bar n_{\nu} = \alpha n_{\nu}`. The equation of motion for neutrino beam i reads
+
+.. math::
+   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho_m(z) .
+
+
+.. [duan2015] Duan, H., & Shalgar, S. (2015). `Flavor instabilities in the neutrino line model. <http://doi.org/10.1016/j.physletb.2015.05.057>`_ Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics, 747, 139–143.
