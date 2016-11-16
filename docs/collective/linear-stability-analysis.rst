@@ -253,7 +253,7 @@ For this four-beam model, the eigenvalues can be found analytically by Mathemati
 Neutrino Line Model
 -------------------------
 
-Neutrino line model is discussed in [duan2015]_.
+Neutrino line model is discussed in [duan2015]_. We'll follow the paper.
 
 The equation of motion is
 
@@ -319,7 +319,176 @@ So we can write down the equation of motion for each beam, using the decomposed 
 For simplicity, we first solve the four beams case, c.f. :numref:`four-beams-model-geometry`, with :math:`\bar n_{\nu} = \alpha n_{\nu}`. The equation of motion for neutrino beam i reads
 
 .. math::
-   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho_m(z) .
+   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + [\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_m(z),\rho^i_m(z) ].
+
+We have all the modes decoupled from each other. However, the different beams are coupled to each other for the same mode. Thus the equations for mode :math:`m` can be combined into a single matrix differential equation, which is tedious to write down.
+
+To analyze the instability, we apply the tricks in linear stability analysis, and define the perturbed density matrice
+
+.. math::
+   \rho^i_m =& \begin{pmatrix}
+   1 & \epsilon^i_m \\
+   {\epsilon^i_m}^* & 0
+   \end{pmatrix}\\
+   \bar\rho^i_m =&\begin{pmatrix}
+   1 & \bar\epsilon^i_m \\
+   {\bar\epsilon^i_m}^* & 0
+   \end{pmatrix}.
+
+The only unknow functions are :math:`\epsilon^i_m` and :math:`\bar\epsilon^i_m`.
+
+We analyze the four beams model which has only one left beam and one right beam for neutrinos and antineutrinos, with the same geometry shown in :numref:`four-beams-model-geometry`. The equations for the perturbations becomes
+
+.. math::
+   iv_z\partial_z \epsilon^i_m - m k_0 v_x \epsilon^i_m = \frac{1}{2}(\lambda - \beta^i \eta \omega_v) 2\epsilon^i_m + \sum_j \mu \alpha^j(1-\hat v^i\cdot \hat v^j) \beta^j (\epsilon^i_m - \epsilon^j_m),
+
+where we have unified the notation of :math:`\epsilon` and :math:`\bar\epsilon`. For the four beams model, the equations becomes
+
+.. math::
+   i v_z \partial_z \epsilon^L_m  =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m - \mu \alpha^L (1-\cos(\bar\theta^L-\theta^L)) (\epsilon^L_m - \bar\epsilon^L_m) + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^L_m- \epsilon^R_m) - \mu \alpha^R (1-\cos(\bar\theta^R - \theta^L)) (\epsilon^L_m-\bar\epsilon^R_m)\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(\bar\theta^L-\theta^L))(\bar\epsilon^L_m - \epsilon^L_m) + \mu (1-\cos(\bar\theta^L_m - \theta^R))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha^R (1- \cos(\bar\theta^L - \bar\theta^R) ) (\bar\epsilon^L_m - \bar\epsilon^R)\\
+   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^R_m - \epsilon^L_m) - \mu \alpha^L (1 - \cos(\theta^R-\bar\theta^L)) (\epsilon^R_m -\bar \epsilon^L_m) -\mu\alpha^R (1-\cos(\theta^R - \bar\theta^R) ) (\epsilon^R_m - \bar\epsilon^R_m) \\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(\bar\theta^R - \theta^L) ) (\bar\epsilon^R_m - \epsilon^L) - \mu \alpha^L (1 - \cos(\bar\theta^R -\theta^L) ) (\bar\epsilon^R_m - \bar\epsilon^L_m) + \mu (1- \cos(\bar\theta^R -\theta^R)) (\bar\epsilon^R_m - \epsilon^R_m),
+
+where
+
+.. math::
+   \theta^R =& \pi-\theta_L\\
+   \bar\theta^R =& \pi - \bar\theta^L.
+
+For simplicity we consider the case :math:`\theta^L = \theta^R \equiv\theta` and :math:`\alpha^L=\alpha^R`. Then the equations becomes
+
+.. math::
+   iv_z \partial_z \epsilon^L_m =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m + \mu (1-\cos(2\theta)) (\epsilon^L_m- \epsilon^R_m) - \mu \alpha (1-\cos(2\theta)) (\epsilon^L_m-\bar\epsilon^R_m)\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(2\theta))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha (1- \cos(2\theta) ) (\bar\epsilon^L_m - \bar\epsilon^R)\\
+   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \mu (1-\cos(2\theta)) (\epsilon^R_m - \epsilon^L_m) - \mu \alpha (1 - \cos(2\theta)) (\epsilon^R_m -\bar \epsilon^L_m) \\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(2\theta) ) (\bar\epsilon^R_m - \epsilon^L) - \mu \alpha (1 - \cos(2\theta) ) (\bar\epsilon^R_m - \bar\epsilon^L_m).
+
+For convinience we define
+
+.. math::
+   \chi = \mu(1-\cos(2\theta)),
+
+so that the equations are
+
+.. math::
+   iv_z \partial_z \epsilon^L_m =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi \right) \epsilon^L_m - \chi  \epsilon^R_m + \alpha \chi \bar\epsilon^R_m\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v) + (1-\alpha)\chi \right) \bar\epsilon^L_m - \chi \epsilon^R_m + \alpha \chi  \bar\epsilon^R\\
+   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi \right) \epsilon^R_m - \chi \epsilon^L_m + \alpha \chi \bar \epsilon^L_m \\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi \right) \bar\epsilon^R_m - \chi \epsilon^L + \alpha \chi \bar\epsilon^L_m.
+
+
+Construct a vector
+
+.. math::
+   \begin{pmatrix}
+   \epsilon^L_m \\
+   \bar\epsilon^L_m\\
+   \epsilon^R_m \\
+   \bar\epsilon^R_m
+   \end{pmatrix},
+   :label: eqn-vector-of-functions-to-be-solved-lsa
+
+from which we develop the matrix equation
+
+.. math::
+   i\partial_z\begin{pmatrix}
+   \epsilon^L_m \\
+   \bar\epsilon^L_m\\
+   \epsilon^R_m \\
+   \bar\epsilon^R_m
+   \end{pmatrix} = \frac{1}{v_z} \begin{pmatrix}
+   m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi  & 0 & -\chi & \alpha \chi \\
+   0 & m k_0 v_x + (\lambda + \eta \omega_v) + (1-\alpha)\chi & -\chi & \alpha \chi \\
+   -\chi & \alpha \chi &   m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
+   -\chi & \alpha \chi & 0 & m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
+   \end{pmatrix}\begin{pmatrix}
+   \epsilon^L_m \\
+   \bar\epsilon^L_m\\
+   \epsilon^R_m \\
+   \bar\epsilon^R_m
+   \end{pmatrix}.
+
+We define
+
+.. math::
+   \Upsilon = \frac{1}{v_z} \begin{pmatrix}
+   m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi  & 0 & -\chi & \alpha \chi \\
+   0 & m k_0 v_x + (\lambda + \eta \omega_v ) + (1-\alpha)\chi & -\chi & \alpha \chi \\
+   -\chi & \alpha \chi &   m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
+   -\chi & \alpha \chi & 0 & m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
+   \end{pmatrix}.
+
+This non-Hermitian 'Hamiltonian' matrix :math:`\Upsilon` introduces many new features in the evolutions of the perturbations since the eigenvalues of it are not garanteed to be real. Any imaginary part of the eigenvalues of it will give us exponential increase.
+
+.. admonition:: Plus-Minus Modes
+   :class: toggle
+
+   In the paper [duan2015]_ the authors introduced the definition
+
+   .. math::
+      D^{\pm}_m =& \frac{1}{2} (\epsilon^L_m \pm \epsilon^R_m) - \frac{\alpha}{2} (\bar\epsilon^L_m\pm \bar\epsilon^R_m)\\
+      S^{\pm}_m =&  \frac{1}{2} (\epsilon^L_m \pm \epsilon^R_m) + \frac{\alpha}{2} (\bar\epsilon^L_m\pm \bar\epsilon^R_m).
+
+   The vector of functions to be solve is
+
+   .. math::
+      \begin{pmatrix}
+      D^+_m\\
+      S^+_m \\
+      D^-_m\\
+      S^-_m
+      \end{pmatrix}.
+
+   This is simply a transformation of the vector we have, i.e., Eq. :eq:`eqn-vector-of-functions-to-be-solved-lsa`. The transformation matrix is
+
+   .. math::
+      \mathcal R=\frac{1}{2}\begin{pmatrix}
+      1 & -\alpha & 1 & -\alpha \\
+      1 & -\alpha & -1 & \alpha \\
+      1 & \alpha & 1 & \alpha \\
+      1 & \alpha & -1 & -\alpha
+      \end{pmatrix},
+
+   so that
+
+   .. math::
+      \begin{pmatrix}
+      D^+_m\\
+      S^+_m \\
+      D^-_m\\
+      S^-_m
+      \end{pmatrix} = \mathcal R \begin{pmatrix}
+      \epsilon^L_m \\
+      \bar\epsilon^L_m\\
+      \epsilon^R_m \\
+      \bar\epsilon^R_m
+      \end{pmatrix}.
+
+
+   We can find the corresponding 'Hamiltonian' matrix for the new vector by applying
+
+   .. math::
+      \mathcal R \Upsilon \mathcal R^{-1}.
+
+   What I get is
+
+   .. math::
+      \mathcal R \Upsilon \mathcal R^{-1}=\frac{1}{v_z}\begin{pmatrix}
+      \lambda + m k_0 v_x & 0 & -\eta \omega_v & 0 \\
+      0 & 2(1-\alpha)\chi + \lambda + m k_0 v_x & 0 & - \eta\omega_v\\
+      - (1+\alpha)\chi -\eta \omega_v & 0 & (1-\alpha)\chi + \lambda + m k_0 v_x & 0\\
+      0 & (1+\alpha)\chi - \eta \omega_v & 0 & (1-\alpha)\chi + \lambda + m k_0 v_x
+      \end{pmatrix},
+
+
+   which is actually different from the one in the paper [duan2015]_.
+
+   **What now?**
+
+
+
+
 
 
 .. [duan2015] Duan, H., & Shalgar, S. (2015). `Flavor instabilities in the neutrino line model. <http://doi.org/10.1016/j.physletb.2015.05.057>`_ Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics, 747, 139–143.
