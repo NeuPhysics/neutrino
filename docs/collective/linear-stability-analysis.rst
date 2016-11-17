@@ -319,7 +319,7 @@ So we can write down the equation of motion for each beam, using the decomposed 
 For simplicity, we first solve the four beams case, c.f. :numref:`four-beams-model-geometry`, with :math:`\bar n_{\nu} = \alpha n_{\nu}`. The equation of motion for neutrino beam i reads
 
 .. math::
-   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + [\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_m(z),\rho^i_m(z) ].
+   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_{m'}\left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_{m'}(z),\rho^i_{m-m'}(z) \right].
 
 We have all the modes decoupled from each other. However, the different beams are coupled to each other for the same mode. Thus the equations for mode :math:`m` can be combined into a single matrix differential equation, which is tedious to write down.
 
@@ -337,18 +337,52 @@ To analyze the instability, we apply the tricks in linear stability analysis, an
 
 The only unknow functions are :math:`\epsilon^i_m` and :math:`\bar\epsilon^i_m`.
 
-We analyze the four beams model which has only one left beam and one right beam for neutrinos and antineutrinos, with the same geometry shown in :numref:`four-beams-model-geometry`. The equations for the perturbations becomes
+.. admonition:: Useful Commutation Relations
+   :class: hint
+
+   With the perturbed form of density matrix, we have several simple commutation relations.
+
+   .. math::
+      [\sigma_3,\rho_m^i] =& \begin{pmatrix}
+      0 & 2\epsilon_m^i \\
+      2{\epsilon_m^i}^* & 0
+      \end{pmatrix} \\
+      [\rho_{m'}^j,\rho_{m-m'}^i] = & \begin{pmatrix}
+      -\epsilon^i_{m-m'} {\epsilon_{m'}^j}^* + \epsilon^j_{m'} {\epsilon_{m-m'}^i}^* & \epsilon_{m-m'}^i - \epsilon_{m'}^j \\
+      -{\epsilon_{m-m'}^i}^* + {\epsilon_{m'}^j}^* &  \epsilon^i_{m-m'} {\epsilon_{m'}^j}^* - \epsilon^j_{m'} {\epsilon_{m-m'}^i}^* \\
+      \end{pmatrix}.
+
+
+We analyze the four beams model which has only one left beam and one right beam for neutrinos and antineutrinos, with the same geometry shown in :numref:`four-beams-model-geometry`. The equation of motion calculated from the linearized density matrix is
 
 .. math::
-   iv_z\partial_z \epsilon^i_m - m k_0 v_x \epsilon^i_m = \frac{1}{2}(\lambda - \beta^i \eta \omega_v) 2\epsilon^i_m + \sum_j \mu \alpha^j(1-\hat v^i\cdot \hat v^j) \beta^j (\epsilon^i_m - \epsilon^j_m),
+   i v_z \partial_z \begin{pmatrix}
+   1 & \epsilon_m^i \\
+   {\epsilon_m^i}^* & 0
+   \end{pmatrix} = m k_0 v_x \begin{pmatrix}
+   1 & \epsilon_m^i \\
+   {\epsilon_m^i}^* & 0
+   \end{pmatrix}  + \frac{1}{2}\left( \lambda - \beta^i \eta \omega_v \right) \begin{pmatrix}
+   0 & 2\epsilon_m^i \\
+   2{\epsilon_m^i}^* & 0
+   \end{pmatrix} + \sum_j \sum_{m'} \mu \alpha^j (1-\hat v^i\cdot \hat v^j) \beta^j \begin{pmatrix}
+   -\epsilon^i_{m-m'} {\epsilon_{m'}^j}^* + \epsilon^j_{m'} {\epsilon_{m-m'}^i}^* & \epsilon_{m-m'}^i - \epsilon_{m'}^j \\
+   -{\epsilon_{m-m'}^i}^* + {\epsilon_{m'}^j}^* &  \epsilon^i_{m-m'} {\epsilon_{m'}^j}^* - \epsilon^j_{m'} {\epsilon_{m-m'}^i}^* \\
+   \end{pmatrix}
+
+
+For the purpose of linear stability analysis, one the off-diagonal elements are needed. The equations for the perturbations becomes
+
+.. math::
+   iv_z\partial_z \epsilon^i_m - m k_0 v_x \epsilon^i_m = \frac{1}{2}(\lambda - \beta^i \eta \omega_v) 2\epsilon^i_m + \sum_j\sum_{m'} \mu \alpha^j(1-\hat v^i\cdot \hat v^j) \beta^j (\epsilon^i_{m-m'} - \epsilon^j_{m'}),
 
 where we have unified the notation of :math:`\epsilon` and :math:`\bar\epsilon`. For the four beams model, the equations becomes
 
 .. math::
    i v_z \partial_z \epsilon^L_m  =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m - \mu \alpha^L (1-\cos(\bar\theta^L-\theta^L)) (\epsilon^L_m - \bar\epsilon^L_m) + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^L_m- \epsilon^R_m) - \mu \alpha^R (1-\cos(\bar\theta^R - \theta^L)) (\epsilon^L_m-\bar\epsilon^R_m)\\
-   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(\bar\theta^L-\theta^L))(\bar\epsilon^L_m - \epsilon^L_m) + \mu (1-\cos(\bar\theta^L_m - \theta^R))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha^R (1- \cos(\bar\theta^L - \bar\theta^R) ) (\bar\epsilon^L_m - \bar\epsilon^R)\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(\bar\theta^L-\theta^L))(\bar\epsilon^L_m - \epsilon^L_m) + \mu (1-\cos(\bar\theta^L_m - \theta^R))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha^R (1- \cos(\bar\theta^L - \bar\theta^R) ) (\bar\epsilon^L_m - \bar\epsilon_m^R)\\
    i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^R_m - \epsilon^L_m) - \mu \alpha^L (1 - \cos(\theta^R-\bar\theta^L)) (\epsilon^R_m -\bar \epsilon^L_m) -\mu\alpha^R (1-\cos(\theta^R - \bar\theta^R) ) (\epsilon^R_m - \bar\epsilon^R_m) \\
-   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(\bar\theta^R - \theta^L) ) (\bar\epsilon^R_m - \epsilon^L) - \mu \alpha^L (1 - \cos(\bar\theta^R -\theta^L) ) (\bar\epsilon^R_m - \bar\epsilon^L_m) + \mu (1- \cos(\bar\theta^R -\theta^R)) (\bar\epsilon^R_m - \epsilon^R_m),
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(\bar\theta^R - \theta^L) ) (\bar\epsilon^R_m - \epsilon_m^L) - \mu \alpha^L (1 - \cos(\bar\theta^R -\theta^L) ) (\bar\epsilon^R_m - \bar\epsilon^L_m) + \mu (1- \cos(\bar\theta^R -\theta^R)) (\bar\epsilon^R_m - \epsilon^R_m),
 
 where
 
