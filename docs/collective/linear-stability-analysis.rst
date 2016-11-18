@@ -237,6 +237,7 @@ where :math:`M` is the coefficient matrix that generate the equations we previou
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix}.
+   :label: eqn-linearized-eom-perturbations-in-general-1
 
 
 We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega r}`. By put the assumption back into the equation we obtain
@@ -267,6 +268,8 @@ where Hamiltonian
 
 We discuss the equilibrium case so that the time dependent part vanishes.
 
+
+
 For the line model, we have only two directions :math:`x` and :math:`z`, thus the density matrix depends on these two directions, i.e., :math:`\rho(x,z)`. Since all the neutrinos emitted from a line located at :math:`z=0`, we can Fourier decompose the density matrix :math:`\rho(x,z)` in the x direction
 
 .. math::
@@ -276,6 +279,13 @@ where :math:`k_0` is determined by the size of the line :math:`L`,
 
 .. math::
    k_0 = \frac{2\pi}{L}.
+
+
+Equivalently, we can linearize the equation first then Fourier transform the perturbations. Both methods works.
+
+
+Fourier Transform of Density Matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 As we plug it back into the equation of motion, left hand side becomes
@@ -319,7 +329,13 @@ So we can write down the equation of motion for each beam, using the decomposed 
 For simplicity, we first solve the four beams case, c.f. :numref:`four-beams-model-geometry`, with :math:`\bar n_{\nu} = \alpha n_{\nu}`. The equation of motion for neutrino beam i reads
 
 .. math::
-   i v_z \partial_z \rho_m^i(z) - m k_0 v_x \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_{m'}\left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_{m'}(z),\rho^i_{m-m'}(z) \right].
+   i v_z \partial_z \rho_m^i(z) - m k_0 v_x^i \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_{m'}\left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_{m'}(z),\rho^i_{m-m'}(z) \right].
+   :label: eqn-fourier-modes-density-matrix-eom
+
+.. admonition:: Horizontal Speed :math:`v_x^i`
+   :class: warning
+
+   Please notice that the horizontal speed :math:`v_x^i` has a different sign for left beam and right beam.
 
 We have all the modes decoupled from each other. However, the different beams are coupled to each other for the same mode. Thus the equations for mode :math:`m` can be combined into a single matrix differential equation, which is tedious to write down.
 
@@ -359,7 +375,7 @@ We analyze the four beams model which has only one left beam and one right beam 
    i v_z \partial_z \begin{pmatrix}
    1 & \epsilon_m^i \\
    {\epsilon_m^i}^* & 0
-   \end{pmatrix} = m k_0 v_x \begin{pmatrix}
+   \end{pmatrix} = m k_0 v_x^i \begin{pmatrix}
    1 & \epsilon_m^i \\
    {\epsilon_m^i}^* & 0
    \end{pmatrix}  + \frac{1}{2}\left( \lambda - \beta^i \eta \omega_v \right) \begin{pmatrix}
@@ -374,29 +390,20 @@ We analyze the four beams model which has only one left beam and one right beam 
 For the purpose of linear stability analysis, one the off-diagonal elements are needed. The equations for the perturbations becomes
 
 .. math::
-   iv_z\partial_z \epsilon^i_m - m k_0 v_x \epsilon^i_m = \frac{1}{2}(\lambda - \beta^i \eta \omega_v) 2\epsilon^i_m + \sum_j\sum_{m'} \mu \alpha^j(1-\hat v^i\cdot \hat v^j) \beta^j (\epsilon^i_{m-m'} - \epsilon^j_{m'}),
+   iv_z\partial_z \epsilon^i_m - m k_0 v_x^i \epsilon^i_m = \frac{1}{2}(\lambda - \beta^i \eta \omega_v) 2\epsilon^i_m + \sum_j\sum_{m'} \mu \alpha^j(1-\hat v^i\cdot \hat v^j) \beta^j (\epsilon^i_{m-m'} - \epsilon^j_{m'}),
 
-where we have unified the notation of :math:`\epsilon` and :math:`\bar\epsilon`. For the four beams model, the equations becomes
+where we have unified the notation of :math:`\epsilon` and :math:`\bar\epsilon`. For the four beams model, the equations can be written down explicitly in principle. However, we could imagine the space it's gonna take.
 
-.. math::
-   i v_z \partial_z \epsilon^L_m  =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m - \mu \alpha^L (1-\cos(\bar\theta^L-\theta^L)) (\epsilon^L_m - \bar\epsilon^L_m) + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^L_m- \epsilon^R_m) - \mu \alpha^R (1-\cos(\bar\theta^R - \theta^L)) (\epsilon^L_m-\bar\epsilon^R_m)\\
-   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(\bar\theta^L-\theta^L))(\bar\epsilon^L_m - \epsilon^L_m) + \mu (1-\cos(\bar\theta^L_m - \theta^R))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha^R (1- \cos(\bar\theta^L - \bar\theta^R) ) (\bar\epsilon^L_m - \bar\epsilon_m^R)\\
-   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \mu (1-\cos(\theta^R-\theta^L)) (\epsilon^R_m - \epsilon^L_m) - \mu \alpha^L (1 - \cos(\theta^R-\bar\theta^L)) (\epsilon^R_m -\bar \epsilon^L_m) -\mu\alpha^R (1-\cos(\theta^R - \bar\theta^R) ) (\epsilon^R_m - \bar\epsilon^R_m) \\
-   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(\bar\theta^R - \theta^L) ) (\bar\epsilon^R_m - \epsilon_m^L) - \mu \alpha^L (1 - \cos(\bar\theta^R -\theta^L) ) (\bar\epsilon^R_m - \bar\epsilon^L_m) + \mu (1- \cos(\bar\theta^R -\theta^R)) (\bar\epsilon^R_m - \epsilon^R_m),
 
-where
+For simplicity we consider the case :math:`\theta^L = \theta^R \equiv\theta` and :math:`\alpha^L=\alpha^R`. We also have :math:`v_x^R=\bar v_x^R= -v_x^L= -\bar v_x^L \equiv -v_x`.
+
+Then the equations becomes
 
 .. math::
-   \theta^R =& \pi-\theta_L\\
-   \bar\theta^R =& \pi - \bar\theta^L.
-
-For simplicity we consider the case :math:`\theta^L = \theta^R \equiv\theta` and :math:`\alpha^L=\alpha^R`. Then the equations becomes
-
-.. math::
-   iv_z \partial_z \epsilon^L_m =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m + \mu (1-\cos(2\theta)) (\epsilon^L_m- \epsilon^R_m) - \mu \alpha (1-\cos(2\theta)) (\epsilon^L_m-\bar\epsilon^R_m)\\
-   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \mu (1-\cos(2\theta))(\bar\epsilon^L_m - \epsilon^R_m) - \mu \alpha (1- \cos(2\theta) ) (\bar\epsilon^L_m - \bar\epsilon^R)\\
-   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \mu (1-\cos(2\theta)) (\epsilon^R_m - \epsilon^L_m) - \mu \alpha (1 - \cos(2\theta)) (\epsilon^R_m -\bar \epsilon^L_m) \\
-   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \mu (1-\cos(2\theta) ) (\bar\epsilon^R_m - \epsilon^L) - \mu \alpha (1 - \cos(2\theta) ) (\bar\epsilon^R_m - \bar\epsilon^L_m).
+   iv_z \partial_z \epsilon^L_m =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m + \sum_{m'} \left( \mu (1-\cos(2\theta)) (\epsilon^L_{m-m'}- \epsilon^R_{m'}) - \mu \alpha (1-\cos(2\theta)) (\epsilon^L_{m-m'}-\bar\epsilon^R_{m'}) \right)\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \sum_{m'}\left( \mu (1-\cos(2\theta))(\bar\epsilon^L_{m-m'} - \epsilon^R_{m'}) - \mu \alpha (1- \cos(2\theta) ) (\bar\epsilon^L_{m-m'} - \bar\epsilon^R_{m'}) \right)\\
+   i v_z \partial_z \epsilon^R_m =& \left( - m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \sum_{m'}\left(\mu (1-\cos(2\theta)) (\epsilon^R_{m-m'} - \epsilon^L_{m'}) - \mu \alpha (1 - \cos(2\theta)) (\epsilon^R_{m-m'} -\bar \epsilon^L_{m'}) \right)\\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  -m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \sum_{m'} \left( \mu (1-\cos(2\theta) ) (\bar\epsilon^R_{m-m'} - \epsilon^L_{m'}) - \mu \alpha (1 - \cos(2\theta) ) (\bar\epsilon^R_{m-m'} - \bar\epsilon^L_{m'}) \right).
 
 For convinience we define
 
@@ -406,11 +413,33 @@ For convinience we define
 so that the equations are
 
 .. math::
+   iv_z \partial_z \epsilon^L_m = & \left( m k_0 v_x  + (\lambda - \eta \omega_v) \right) \epsilon^L_m + \sum_{m'} \left( \chi (\epsilon^L_{m-m'}- \epsilon^R_{m'}) -  \alpha \chi (\epsilon^L_{m-m'}-\bar\epsilon^R_{m'}) \right)\\
+   iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^L_m + \sum_{m'}\left( \chi (\bar\epsilon^L_{m-m'} - \epsilon^R_{m'}) - \alpha \chi (\bar\epsilon^L_{m-m'} - \bar\epsilon^R_{m'}) \right)\\
+   i v_z \partial_z \epsilon^R_m =& \left( -m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \sum_{m'}\left( \chi (\epsilon^R_{m-m'} - \epsilon^L_{m'}) - \alpha \chi (\epsilon^R_{m-m'} -\bar \epsilon^L_{m'}) \right)\\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  -m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \sum_{m'} \left( \chi (\bar\epsilon^R_{m-m'} - \epsilon^L_{m'}) -  \alpha \chi (\bar\epsilon^R_{m-m'} - \bar\epsilon^L_{m'}) \right).
+
+
+**We actually have a problem. What are those couplings between different modes?** Are these couplings really first order?
+
+
+Fourier Transform Perturbations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+The other idea is to linearize the equations first then Fourier transform only the perturbations. The result for the equations of perturbations can be obtained directly from Eq. (:eq:`eqn-fourier-modes-density-matrix-eom`),
+
+.. math::
+   i v_z \partial_z \rho^i(z)  = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho^i(z) \right] + \left[ \lambda \sigma_3/2, \rho^i(z) \right] + \left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j(z),\rho^i(z) \right].
+
+We linearize the equation first before Fourier decomposition is applied. The linearized equation is basically :eq:`eqn-linearized-eom-perturbations-in-general-1`, with different notations. Then we Fourier transform the equations,
+
+.. math::
    iv_z \partial_z \epsilon^L_m =&  \left( m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi \right) \epsilon^L_m - \chi  \epsilon^R_m + \alpha \chi \bar\epsilon^R_m\\
    iv_z \partial_z \bar\epsilon^L_m =& \left( m k_0 v_x + (\lambda + \eta \omega_v) + (1-\alpha)\chi \right) \bar\epsilon^L_m - \chi \epsilon^R_m + \alpha \chi  \bar\epsilon^R\\
-   i v_z \partial_z \epsilon^R_m =& \left( m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi \right) \epsilon^R_m - \chi \epsilon^L_m + \alpha \chi \bar \epsilon^L_m \\
-   iv_z \partial_z \bar\epsilon^R_m =& \left(  m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi \right) \bar\epsilon^R_m - \chi \epsilon^L + \alpha \chi \bar\epsilon^L_m.
+   i v_z \partial_z \epsilon^R_m =& \left( -m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi \right) \epsilon^R_m - \chi \epsilon^L_m + \alpha \chi \bar \epsilon^L_m \\
+   iv_z \partial_z \bar\epsilon^R_m =& \left(  -m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi \right) \bar\epsilon^R_m - \chi \epsilon^L + \alpha \chi \bar\epsilon^L_m.
 
+The reason we have no coupling between different modes is that linearized equation of motion is linear to all the perturbations.
 
 Construct a vector
 
@@ -434,8 +463,8 @@ from which we develop the matrix equation
    \end{pmatrix} = \frac{1}{v_z} \begin{pmatrix}
    m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi  & 0 & -\chi & \alpha \chi \\
    0 & m k_0 v_x + (\lambda + \eta \omega_v) + (1-\alpha)\chi & -\chi & \alpha \chi \\
-   -\chi & \alpha \chi &   m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
-   -\chi & \alpha \chi & 0 & m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
+   -\chi & \alpha \chi &   -m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
+   -\chi & \alpha \chi & 0 & -m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
    \end{pmatrix}\begin{pmatrix}
    \epsilon^L_m \\
    \bar\epsilon^L_m\\
@@ -446,14 +475,14 @@ from which we develop the matrix equation
 We define
 
 .. math::
-   \Upsilon = \frac{1}{v_z} \begin{pmatrix}
+   \Upsilon_m = \frac{1}{v_z} \begin{pmatrix}
    m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi  & 0 & -\chi & \alpha \chi \\
    0 & m k_0 v_x + (\lambda + \eta \omega_v ) + (1-\alpha)\chi & -\chi & \alpha \chi \\
-   -\chi & \alpha \chi &   m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
-   -\chi & \alpha \chi & 0 & m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
+   -\chi & \alpha \chi &   -m k_0 v_x + (\lambda - \eta \omega_v ) + (1-\alpha)\chi & 0 \\
+   -\chi & \alpha \chi & 0 &  -m k_0 v_x + (\lambda + \eta \omega_v) +(1-\alpha)\chi
    \end{pmatrix}.
 
-This non-Hermitian 'Hamiltonian' matrix :math:`\Upsilon` introduces many new features in the evolutions of the perturbations since the eigenvalues of it are not garanteed to be real. Any imaginary part of the eigenvalues of it will give us exponential increase.
+This non-Hermitian 'evolution' matrix :math:`\Upsilon_m` introduces many new features in the evolutions of the perturbations since the eigenvalues of it are not garanteed to be real. Any imaginary part of the eigenvalues of it will give us exponential increase.
 
 .. admonition:: Plus-Minus Modes
    :class: toggle
@@ -479,8 +508,8 @@ This non-Hermitian 'Hamiltonian' matrix :math:`\Upsilon` introduces many new fea
    .. math::
       \mathcal R=\frac{1}{2}\begin{pmatrix}
       1 & -\alpha & 1 & -\alpha \\
-      1 & -\alpha & -1 & \alpha \\
       1 & \alpha & 1 & \alpha \\
+      1 & -\alpha & -1 & \alpha \\
       1 & \alpha & -1 & -\alpha
       \end{pmatrix},
 
@@ -503,26 +532,42 @@ This non-Hermitian 'Hamiltonian' matrix :math:`\Upsilon` introduces many new fea
    We can find the corresponding 'Hamiltonian' matrix for the new vector by applying
 
    .. math::
-      \mathcal R \Upsilon \mathcal R^{-1}.
+      \Lambda_m = \mathcal R \Upsilon_m \mathcal R^{-1}.
 
    What I get is
 
    .. math::
-      \mathcal R \Upsilon \mathcal R^{-1}=\frac{1}{v_z}\begin{pmatrix}
-      \lambda + m k_0 v_x & 0 & -\eta \omega_v & 0 \\
-      0 & 2(1-\alpha)\chi + \lambda + m k_0 v_x & 0 & - \eta\omega_v\\
-      - (1+\alpha)\chi -\eta \omega_v & 0 & (1-\alpha)\chi + \lambda + m k_0 v_x & 0\\
-      0 & (1+\alpha)\chi - \eta \omega_v & 0 & (1-\alpha)\chi + \lambda + m k_0 v_x
+      \Lambda_m = \mathcal R \Upsilon_m \mathcal R^{-1}=\frac{1}{v_z}\begin{pmatrix}
+      \lambda  & - \eta \omega_v & m k_0 v_x & 0 \\
+      - (1+\alpha)\chi -\eta \omega_v & (1-\alpha)\chi + \lambda & 0 & m k_0 v_x \\
+      m k_0 v_x & 0 & 2(1-\alpha)\chi + \lambda & -\eta\omega_v\\
+      0 & m k_0 v_x & (1+\alpha)\chi - \eta \omega_v & (1-\alpha)\chi + \lambda
       \end{pmatrix},
 
 
-   which is actually different from the one in the paper [duan2015]_.
-
-   **What now?**
+   which is the same as the form derived in the paper [duan2015]_.
 
 
+We can easily find the eigenvalues for the matrix :math:`Uplison_m` or :math:`\Lambda_m`. Any **imaginary part** (not real part because we have an extra i in the equation) of the eigenvalue will lead to exponential growth of the perturbations.
+
+.. figure:: assets/linear-stability-analysis/linear-stability-analysis-kappa-line-four-beams.png
+   :align: center
+
+   Maximum of imaginary part of the eigenvalues of matrix :math:`\Upsilon_m` for different :math:`\chi` and :math:`m`. This amazing result says that larger neutrino density leads to the instability on smaller scales. This result is for :math:`\alpha=0.8`, :math:`v_z=1/2`, :math:`k_0=2\pi/L=2\pi/(20\pi/\omega_v)`, and :math:`\lambda=0`.
 
 
+.. admonition:: Eigenvalues of :math:`\Upsilon_m` and :math:`\Lambda_m` are the same
+   :class: hint
+
+   The reason is that the determinant of the following two matrice are the same,
+
+   .. math::
+      \lvert \Upsilon_m \rvert = \lvert \mathcal R \Upsilon_m \mathcal R^{-1} \rvert,
+
+   since determinant has cyclic permutation symmetric.
+
+
+We also notice that matter has no effect on this phenomenon because we can remove matter effect by minus a matrix :math:`\frac{1}{v_z}\lambda \mathbf I` from matrix :math:`\Upsilon_m`, while the eigenvalues is not changed. What's more important, the evolution of the perturbation doesn't change under such a manipulation.
 
 
 .. [duan2015] Duan, H., & Shalgar, S. (2015). `Flavor instabilities in the neutrino line model. <http://doi.org/10.1016/j.physletb.2015.05.057>`_ Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics, 747, 139–143.
