@@ -268,21 +268,56 @@ where :math:`M` is the coefficient matrix that generates the equations we previo
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-1
 
-Notice that we have the equation with r as the variable, which is not very convenient. Even we solve the equation, it is very hard to interpretate the solutions since r is different at the same height z. So we have to rewrite the equation into one with vertical height z as the variable.
+Notice that we have the equation with r as the variable, which is not very convenient. Even we solve the equation, it is very hard to interpretate the solutions since r is different at the same height z. So we have to rewrite the equation into one with vertical height z as the variable using :math:`i\partial_r = i \sin \theta \partial_z + i \cos \theta \partial_x`. Be very careful with the sign of :math:`+ i \cos \theta \partial_x`. In the four beam case, we have
 
-We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega r}`. By put the assumption back into the equation we obtain
+.. math::
+   i \partial_r^L = & i \sin \theta_1 \partial_z + i \cos \theta_1 \partial_x \\
+   i\bar\partial_r^L=& i \sin \theta_2 \partial_z + i \cos \theta_2 \partial_x \\
+   i \bar\partial_r^R =& i\sin \theta_2 \partial_z - i \cos \theta_2 \partial_x \\
+   i \partial_r^R =& i\sin \theta_1 \partial_z - i\cos\theta_1 \partial_x.
+
+The equation for the perturbations becomes
+
+.. math::
+.. math::
+   i \partial_z \begin{pmatrix}
+   \sin \theta_1 \delta^L \\ \sin \theta_2\bar\delta^L \\ \sin \theta_2\delta^R \\ \sin \theta_1\bar\delta^R
+   \end{pmatrix} + i \partial_x \begin{pmatrix}
+   \cos \theta_1\delta^L \\ \cos \theta_2\bar\delta^L \\ - \cos \theta_2\delta^R \\ -\cos\theta_1\bar\delta^R
+   \end{pmatrix} =
+   \begin{pmatrix}
+   \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v & -\alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\alpha \mu(1+\cos(\theta_1 + \theta_2)) & -\mu(1+\cos(2\theta_1)) \\
+   - \mu(1-\cos(\theta_1 - \theta_2)) & \lambda + \mu (1-\cos(\theta_1-\theta_2)) + \alpha \mu (1+\cos(2\theta_2)) + \mu (1+\cos(\theta_1+\theta_2)) + \eta \omega_v & -\alpha \mu(1+\cos(2 \theta_2)) & -\mu(1+\cos(\theta_1 + \theta_2)) \\
+   -\mu(1+\cos(\theta_1 + \theta_2)) & -\alpha \mu(1+\cos(2\theta_2)) &
+   \lambda + \mu(1-\cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v  & -\mu (1 - \cos (\theta_1-\theta_2)) \\
+   -\mu(1+\cos(2\theta_1)) & -\alpha\mu (1+ \cos(\theta_1+\theta_2)) & -\alpha \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) + \eta \omega_v
+   \end{pmatrix}
+   \begin{pmatrix}
+   \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
+   \end{pmatrix}.
+   :label: eqn-linearized-eom-perturbations-in-general-2
+
+If we are using a model that is homogeneous in x direction, the derivative is gone. We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega z}`. By put the assumption back into the equation we obtain
 
 .. math::
    -\Omega \delta_0 = M\cdot \delta_0.
 
 Linear stability analysis basically becomes finding the eigenvalues of matrix :math:`M`. A negative imaginary part in :math:`\Omega` means the solution can grow exponentially.
 
+.. admonition:: Some Questions
+   :class: warning
+
+   1. Even if we assume homogenous in x direction, will it be stable under small perturbations? I guess it also is not that easy to say since the equation of motion in x direction is somewhat similar to the equation in z direction, we might have some instability in x direction.
+   2. Is there any interpretation of the solution as a function of r?
+
+
+
 For this four-beam model, the eigenvalues can be found analytically by Mathematica, eventhough the solution is a bit tedious. We work out the example using unit of :math:`\omega_v`, i.e., :math:`\hat \lambda=\lambda/\omega_v` and :math:`\hat\mu = \mu/\omega_v`.
 
 
 
-Neutrino Line Model
--------------------------
+Neutrino Line Model with Fourier Analysis
+--------------------------------------------------
 
 Neutrino line model is discussed in [duan2015]_. We'll follow the paper.
 
