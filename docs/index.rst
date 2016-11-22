@@ -36,8 +36,8 @@ Support me:
 
 Cite this doc:
 
-.. image:: /assets/zenodo.27814-blue.svg
-   :target: http://dx.doi.org/10.5281/zenodo.27814
+.. image:: /assets/zenodo.167903-blue.svg
+   :target: https://zenodo.org/record/167903
 
 
 
