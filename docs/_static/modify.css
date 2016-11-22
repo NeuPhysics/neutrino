@@ -9,10 +9,11 @@ img.math {
 /* Toggle Environment Begin */
 
 .toggle {
-    background: none repeat scroll 0 0 #e7f2fa;
+    background: none repeat scroll 0 0 #ffffff;
     padding: 12px;
     line-height: 24px;
     margin-bottom: 24px;
+    border: 1px solid #86c6f5;
 }
 
 .toggle .admonition-title {
@@ -20,6 +21,10 @@ img.math {
     clear: both;
     cursor: pointer;
     font-size: 110% !important;
+}
+
+.toggle .admonition-title.open {
+    text-align: center;
 }
 
 .toggle .admonition-title:after {
@@ -35,3 +40,9 @@ img.math {
 }
 
 /* Toggle Environment End */
+
+.sidebar-btn {
+   margin: 0.5em 0 0.5em 0;
+   background: none;
+   border: none;
+}

@@ -127,6 +127,18 @@ TeX: {
     </script>
 <!-- Toggle Environment End -->
 
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
@@ -153,7 +165,7 @@ TeX: {
 
 
 
-  
+
  
   </head>
   <body role="document">
@@ -282,7 +294,7 @@ TeX: {
 
 
 <ul>
-	<li><a href="genindex.html">INDEX</a></li>
+	<li><a href="genindex.html" style="text-decoration: none;"><img src="https://img.shields.io/badge/Neutrino-Index-blue.svg?style=flat-square"></li>
 </ul>
 <h3>Links</h3>
 <ul>
@@ -305,12 +317,20 @@ TeX: {
 <script type="text/javascript">$('#searchbox').show(0);</script><h3>Bug Report and Chat</h3>
 <p>
 
-<a href="https://github.com/NeuPhysics/neutrino/issues"><img src="https://img.shields.io/badge/GitHub-Issues-blue.svg"></a><br><br>
+<button class="sidebar-btn">
+<a href="https://github.com/NeuPhysics/neutrino/issues"><img src="https://img.shields.io/badge/issues-GitHub-orange.svg?style=flat-square"></a>
+</button>
 
 
 
-<a href="https://gitter.im/NeuPhysics/neutrino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank"><img src="https://badges.gitter.im/NeuPhysics/neutrino.svg"></a>
+<button class="js-gitter-toggle-chat-button sidebar-btn">
+<a href="https://gitter.im/NeuPhysics/neutrino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank"><img src="https://img.shields.io/badge/chat-on%20gitter-blue.svg?style=flat-square"></a>
+</button>
 
+
+<button class="sidebar-btn">
+<a href="https://gratipay.com/~emptymalei/"><img src="https://img.shields.io/badge/tips-neutrino-4c924c.svg?style=flat-square"></a>
+</button>
         </div>
       </div>
       <div class="clearer"></div>
@@ -358,6 +378,8 @@ var duoshuoQuery = {short_name:"sci2fi"};
       &copy;2016, Lei Ma. | <a href="index.html">Licenses</a>
       |
       <a href="/genindex.html">Index</a>
+      |
+      Sitemap<a href="assets/sitemap.xml">.xml</a><a href="assets/sitemap.xml.gz">.gz</a>
       |
       
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>

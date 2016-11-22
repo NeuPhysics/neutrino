@@ -94,6 +94,18 @@ TeX: {
     });
     </script>
 <!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
 {{ super() }} {% endblock %}
 
 {% set css_files = css_files + ["_static/modify.css"] %}

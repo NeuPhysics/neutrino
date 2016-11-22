@@ -22,26 +22,29 @@ Neutrino is one of the most interesting particles in our world. The first propos
 
 
 
-This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Try `http://neutrino.xyz <http://neutrino.xyz>`_ .
+This project is part of `NeuPhysics <http://neutrino.xyz>`_ . Just click the link already and see what's going on.
 
-Key steps of some research is hosted on bitbucket as private repository `here <https://bitbucket.org/neuphysics/neutrino-reseaching>`_ . Login to view the most current research if you have access to it.
+Notes of some research is hosted on bitbucket as private repository `here <https://bitbucket.org/neuphysics/neutrino-reseaching>`_ . Login to view the most current research if you have access to it.
 
 
 
 Support me:
 
-.. image:: assets/tips-neutrino-orange.svg
+.. image:: assets/tips-neutrino-4c924c.svg
    :target: https://gratipay.com/~emptymalei/
 
 
 Cite this doc:
 
-.. image:: https://zenodo.org/badge/doi/10.5281/zenodo.27814.svg
+.. image:: /assets/zenodo.27814-blue.svg
    :target: http://dx.doi.org/10.5281/zenodo.27814
 
 
 
-Here is also an index: `genindex.html <genindex.html>`_ .
+Here is also an index:
+
+.. image:: /assets/Neutrino-Index-blue.svg
+   :target: /genindex.html
 
 Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :download:`sitemap.xml.gz <assets/sitemap.xml.gz>` .
 
