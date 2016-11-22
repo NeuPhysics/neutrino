@@ -1,13 +1,8 @@
 Neutrino Oscillation And Master Equation
 ====================================================================
 
-.. admonition:: Question
-   :class: warning
-
-   Why do we think about master equation?
-
-.. admonition:: Answer
-   :class: note
+.. admonition:: Why do we think about master equation?
+   :class: hint
 
    The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.
 

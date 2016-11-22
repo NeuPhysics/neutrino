@@ -7,6 +7,7 @@ Some General Discussion
 
 
 
+
 Equation of Motion
 ---------------------
 
@@ -25,11 +26,23 @@ The Hamiltonian is composed of three different terms,
 where
 
 .. math::
-   H_v =& -\frac{1}{2}\eta \omega_0 \sigma_3\\
+   H_v =& -\frac{1}{2}\beta\eta \omega_0 \sigma_3\\
    H_m =& \frac{1}{2} \sqrt{2}G_F n_e \sigma_3 \\
-   H_{\nu\nu} =& \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\rho(\omega,\hat v') (1-\hat v \cdot \hat v'),
+   H_{\nu\nu} =& \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\beta(\hat v')\rho(\omega,\hat v') (1-\hat v \cdot \hat v'),
 
-where :math:`\eta=\pm 1` for Normal Hierarchy and Inverted Hierarchy respectively. In other words, the vacuum frequency is :math:`\omega_v = \eta \omega_0`. Please note that in this notion,
+where :math:`\eta=\pm 1` for Normal Hierarchy and Inverted Hierarchy respectively, :math:`\beta=1` for neutrinos and :math:`\beta=-1` for antineutrinos. In other words, the vacuum frequency is :math:`\omega_v = \eta \omega_0`. :math:`\beta(\hat v')` indicates wether the density matrix :math:`\rho(\omega,\hat v')` is for neutrinos or antineutrinos. If :math:`\rho(\omega,\hat v')` is for antineutrinos, :math:`\beta(\hat v')=-1`, otherwise :math:`\beta(\hat v')=1`. More explicitly, the neutrino-neutrino interaction Hamiltonian is
+
+.. math::
+   H_v =& \begin{cases}
+   -\frac{1}{2}\eta \omega_0 \sigma_3 & \text{for neutrinos}\\
+   \frac{1}{2}\eta \omega_0 \sigma_3 & \text{for antineutrinos}
+   \end{cases}\\
+   H_{\nu\nu} =& \begin{cases}
+   \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\rho(\omega,\hat v') (1-\hat v \cdot \hat v') & \text{interacting with neutrinos} \\
+   - \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') &  \text{interacting with antineutrinos}
+   \end{cases}
+
+Please note that in this notion,
 
 1. :math:`\omega_0` **is meant to be the absolute value of the frequency**, since :math:`\eta` takes care of the signs.
 2. the integral in :math:`H_{\nu\nu}` must take care of both interactions with neutrinos and anti-neutrinos, thus the density matrix is not only for neutrinos.
@@ -51,7 +64,17 @@ For the simplicity of notions, we define some new quantities.
    .. math::
       \bar f(\hat v) = \frac{n(\omega,\hat v)}{\bar n_{total}},
 
-   where :math:`\bar n_{total}` is the total number density of anti-neutrinos
+   where :math:`\bar n_{total}` is the total number density of anti-neutrinos.
+
+   In fact, the direction of momentum :math:`\hat v` depends only on an angle for line models, hence :math:`f(\theta)`. With this definition, we know that the number density of neutrinos within an angle :math:`[\theta, \theta + d\theta]` can be calculated
+
+   .. math::
+      n_{total} f(\theta) d\theta.
+
+   Similarly, the the number density of antineutrinos within angle :math:`[\theta, \theta+d\theta]` is
+
+   .. math::
+      \bar n_{total} \bar f(\theta) d\theta.
 
 3. Total number density of neutrinos and anti-neutrinos are related through a asymmetry parameter
 
@@ -62,10 +85,10 @@ With the two definitions we simplify the matter effect and neutrino self-interac
 
 .. math::
    H_m =& \frac{1}{2} \lambda \sigma_3 \\
-   H_{\nu\nu} =& \sqrt{2}G_F n_{total} \int d\omega d\Omega_{\hat v'} f(\omega,hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   & + \sqrt{2}G_F \bar n_{total} \int d\omega d\Omega_{\hat v'} \bar f(\omega,hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   =& \frac{1}{2}\mu \int d\omega d\Omega_{\hat v'} f(\omega,hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   & + \frac{1}{2}\alpha \mu \int d\omega d\Omega_{\hat v'} \bar f(\omega,hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') ,
+   H_{\nu\nu} =& \sqrt{2}G_F n_{total} \int d\omega d\Omega_{\hat v'} f(\omega,\hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
+   & - \sqrt{2}G_F \bar n_{total} \int d\omega d\Omega_{\hat v'} \bar f(\omega,\hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
+   =& \frac{1}{2}\mu \int d\omega d\Omega_{\hat v'} f(\omega, \hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
+   & - \frac{1}{2}\alpha \mu \int d\omega d\Omega_{\hat v'} \bar f(\omega, \hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') ,
 
 where
 
@@ -89,7 +112,7 @@ Suppose we have a Hamiltonian in flavor basis of the form
 .. math::
    H = \begin{pmatrix}
    -h_0 & h \\
-   h^* & h0
+   h^* & h_0
    \end{pmatrix},
 
 the commutator of Hamiltonian and density matrix is
@@ -118,11 +141,12 @@ Four-Beam Line Model
    .. math::
       \lambda =& \sqrt{2} G_F n_e \\
       \eta = & \pm 1\\
+      \beta =& \pm 1 \\
       \omega_v =& \lvert \Delta m^2/2E \rvert \\
       \mu =& \sqrt{2} G_F n_{\nu_e}\\
       n_{\bar\nu_e} = & \alpha n_{\nu_e}.
 
-   :math:`\eta` is determines the hierarchy of the neutrinos. :math:`\eta=+1` means normal hierarchy, and :math:`\eta=-1` means inverted hierarchy.
+   :math:`\eta` is determines the hierarchy of the neutrinos. :math:`\eta=+1` means normal hierarchy, and :math:`\eta=-1` means inverted hierarchy. :math:`\beta` takes care of the sign for the vacuum term and self-interaction term. For the vacuum term, :math:`\beta=(-)1` for (anti)neutrinos. For the self-interaction term, :math:`\beta=(-)1` if the beam is interacting with (anti)neutrinos.
 
    We use :math:`{}^L` to denote the beam on the left, :math:`{}^R` to denote the beam on the right, and :math:`\bar{\delta}` to denote that the beam is composed of anti-neutrinos.
 
@@ -202,9 +226,14 @@ First of all, we find the Hamiltonian,
 The neutrino self interaction term requires some elabration on it. We take the left neutrino beam as an example. It experiences interactions with three beams, :math:`\{\bar\rho^L, \bar\theta^L, \alpha\}`, :math:`\{\bar\rho^R, \bar\theta^R, \alpha\}`, as well as :math:`\{ \rho^R, \theta^R, 1\}`. So :math:`H_{\nu\nu}^L` should have three terms,
 
 .. math::
-   H_{\nu\nu}^L = & \mu \alpha (1-\cos(\theta_1-\theta_2)) \bar\rho^L + \mu \alpha (1-\cos(\theta_1+\theta_2))\bar\rho^R + \mu (1-\cos 2\theta_1) \rho^R.
+   H_{\nu\nu}^L =  -\mu \alpha (1-\cos(\theta_1-\theta_2)) \bar\rho^L - \mu \alpha (1+\cos(\theta_1+\theta_2))\bar\rho^R + \mu (1+\cos 2\theta_1) \rho^R.
 
-This procedure can be down for all other beams easily. Or we can use the power of the All Mighty Mathematica.
+This procedure works for all other beams. Or we can use the power of the All Mighty Mathematica.
+
+.. math::
+   \bar H_{\nu\nu}^L = & \mu (1-\cos(\theta_1 - \theta_2)) \rho^L - \mu \alpha (1+\cos(2\theta_2)) \bar\rho^R + \mu (1+\cos(\theta_1+\theta_2)) \rho^R \\
+   \bar H_{\nu\nu}^R = & \mu (1 + \cos(\theta_1 + \theta_2)) \rho^L -\mu \alpha (1 + \cos(2\theta_2)) \bar \rho^L + \mu (1 - \cos(\theta_1-\theta_2))\rho^R \\
+   H_{\nu\nu} ^R = & \mu (1 + \cos(2\theta_1)) \rho^L - \mu \alpha(1 + \cos(\theta_1 + \theta_2)) \bar \rho^L - \mu (1 - \cos(\theta_1 - \theta_2)) \bar\rho^R.
 
 The equation of motion is reduced to one equation about :math:`\delta`'s for each beam.
 
@@ -221,7 +250,7 @@ and :math:`h` is determined by the expression of :math:`H_{\nu\nu}`. Then we rew
 .. math::
    i \partial_r \delta = M \cdot \delta,
 
-where :math:`M` is the coefficient matrix that generate the equations we previously derived. This procedure can be done by Mathematica.
+where :math:`M` is the coefficient matrix that generates the equations we previously derived. This procedure can be done by Mathematica.
 
 .. math::
    i \partial_r \begin{pmatrix}
@@ -229,16 +258,17 @@ where :math:`M` is the coefficient matrix that generate the equations we previou
    \end{pmatrix} =
    \begin{pmatrix}
    \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v & -\alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\alpha \mu(1+\cos(\theta_1 + \theta_2)) & -\mu(1+\cos(2\theta_1)) \\
-   - \mu(1-\cos(\theta_1 - \theta_2)) & \lambda + \mu (1-\cos(\theta_1-\theta_2)) + \alpha \mu (1+\cos(2\theta_2)) + \mu (1+\cos(\theta_1+\theta_2)) -\eta \omega_v & -\alpha \mu(1+\cos(2 \theta_2)) & -\mu(1+\cos(\theta_1 + \theta_2)) \\
+   - \mu(1-\cos(\theta_1 - \theta_2)) & \lambda + \mu (1-\cos(\theta_1-\theta_2)) + \alpha \mu (1+\cos(2\theta_2)) + \mu (1+\cos(\theta_1+\theta_2)) + \eta \omega_v & -\alpha \mu(1+\cos(2 \theta_2)) & -\mu(1+\cos(\theta_1 + \theta_2)) \\
    -\mu(1+\cos(\theta_1 + \theta_2)) & -\alpha \mu(1+\cos(2\theta_2)) &
    \lambda + \mu(1-\cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v  & -\mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(2\theta_1)) & -\alpha\mu (1+ \cos(\theta_1+\theta_2)) & -\alpha \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v
+   -\mu(1+\cos(2\theta_1)) & -\alpha\mu (1+ \cos(\theta_1+\theta_2)) & -\alpha \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) + \eta \omega_v
    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-1
 
+Notice that we have the equation with r as the variable, which is not very convenient. Even we solve the equation, it is very hard to interpretate the solutions since r is different at the same height z. So we have to rewrite the equation into one with vertical height z as the variable.
 
 We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega r}`. By put the assumption back into the equation we obtain
 
