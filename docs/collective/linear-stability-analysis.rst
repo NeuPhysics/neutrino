@@ -233,7 +233,7 @@ This procedure works for all other beams. Or we can use the power of the All Mig
 .. math::
    \bar H_{\nu\nu}^L = & \mu (1-\cos(\theta_1 - \theta_2)) \rho^L - \mu \alpha (1+\cos(2\theta_2)) \bar\rho^R + \mu (1+\cos(\theta_1+\theta_2)) \rho^R \\
    \bar H_{\nu\nu}^R = & \mu (1 + \cos(\theta_1 + \theta_2)) \rho^L -\mu \alpha (1 + \cos(2\theta_2)) \bar \rho^L + \mu (1 - \cos(\theta_1-\theta_2))\rho^R \\
-   H_{\nu\nu} ^R = & \mu (1 + \cos(2\theta_1)) \rho^L - \mu \alpha(1 + \cos(\theta_1 + \theta_2)) \bar \rho^L - \mu (1 - \cos(\theta_1 - \theta_2)) \bar\rho^R.
+   H_{\nu\nu} ^R = & \mu (1 + \cos(2\theta_1)) \rho^L - \mu \alpha(1 + \cos(\theta_1 + \theta_2)) \bar \rho^L - \mu\alpha (1 - \cos(\theta_1 - \theta_2)) \bar\rho^R.
 
 The equation of motion is reduced to one equation about :math:`\delta`'s for each beam.
 
@@ -257,11 +257,10 @@ where :math:`M` is the coefficient matrix that generates the equations we previo
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix} =
    \begin{pmatrix}
-   \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v & -\alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\alpha \mu(1+\cos(\theta_1 + \theta_2)) & -\mu(1+\cos(2\theta_1)) \\
-   - \mu(1-\cos(\theta_1 - \theta_2)) & \lambda + \mu (1-\cos(\theta_1-\theta_2)) + \alpha \mu (1+\cos(2\theta_2)) + \mu (1+\cos(\theta_1+\theta_2)) + \eta \omega_v & -\alpha \mu(1+\cos(2 \theta_2)) & -\mu(1+\cos(\theta_1 + \theta_2)) \\
-   -\mu(1+\cos(\theta_1 + \theta_2)) & -\alpha \mu(1+\cos(2\theta_2)) &
-   \lambda + \mu(1-\cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v  & -\mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(2\theta_1)) & -\alpha\mu (1+ \cos(\theta_1+\theta_2)) & -\alpha \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) + \eta \omega_v
+   \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
+   - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
+   -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
+   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) 
    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
@@ -286,12 +285,11 @@ The equation for the perturbations becomes
    \cos \theta_1\delta^L \\ \cos \theta_2\bar\delta^L \\ - \cos \theta_2\delta^R \\ -\cos\theta_1\bar\delta^R
    \end{pmatrix} =
    \begin{pmatrix}
-   \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v & -\alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\alpha \mu(1+\cos(\theta_1 + \theta_2)) & -\mu(1+\cos(2\theta_1)) \\
-   - \mu(1-\cos(\theta_1 - \theta_2)) & \lambda + \mu (1-\cos(\theta_1-\theta_2)) + \alpha \mu (1+\cos(2\theta_2)) + \mu (1+\cos(\theta_1+\theta_2)) + \eta \omega_v & -\alpha \mu(1+\cos(2 \theta_2)) & -\mu(1+\cos(\theta_1 + \theta_2)) \\
-   -\mu(1+\cos(\theta_1 + \theta_2)) & -\alpha \mu(1+\cos(2\theta_2)) &
-   \lambda + \mu(1-\cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) - \eta \omega_v  & -\mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(2\theta_1)) & -\alpha\mu (1+ \cos(\theta_1+\theta_2)) & -\alpha \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \mu(1+\cos(2\theta_1)) + \alpha \mu (1 - \cos(\theta_1-\theta_2)) + \alpha \mu (1 + \cos(\theta_1+\theta_2)) + \eta \omega_v
-   \end{pmatrix}
+   \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
+   - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
+   -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
+   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) 
+    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix}.
