@@ -53,6 +53,28 @@ After the interaction at site 1, a electron neutrino is moving up and transforms
 This is a toy model of collective oscillation.
 
 
+
+Why Do We Care About Collective Oscillations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When we are close to the surface to the protoneutron star, the neutrino number density and matter density are high, so that the collective oscillation could be suppressed. On the other hand, if we are too far away from the protoneutron star, the number density of neutrinos are too small for significant collective oscillations. [duan2010]_
+
+
+.. figure:: assets/collective/regions-of-different-oscillations-nh.png
+   :align: center
+
+   Regions for different neutrino oscillations for a supernova, for normal hierarchy. Figure from [duan2010]_
+
+
+.. figure:: assets/collective/regions-of-different-oscillations-ih.png
+   :align: center
+
+   Regions for different neutrino oscillations for a supernova, for inverted hierarchy. Figure from [duan2010]_
+
+
+
+.. [duan2010] Duan, H., Fuller, G. M., & Qian, Y.-Z. (2010). `Collective Neutrino Oscillations. <http://doi.org/10.1146/annurev.nucl.012809.104524>`_
+
 .. index:: Spectral Split
 
 Spectral Split
