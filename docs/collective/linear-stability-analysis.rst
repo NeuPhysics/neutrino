@@ -1,6 +1,17 @@
 Linear Stability Analysis
 ========================================
 
+
+.. admonition:: Tips about Matrices
+   :class: note
+
+   Here are some conclusions about matrices.
+
+   0. Skew symmetric = anti-symmetric.
+   1. Eigenvalues of symmetric matrix are real.
+   2. Eigenvalues of skew-symmetric matrix are either 0 or imaginary.
+
+
 Some General Discussion
 -------------------------
 
@@ -260,7 +271,7 @@ where :math:`M` is the coefficient matrix that generates the equations we previo
    \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
    - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
    -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) 
+   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2))
    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
@@ -288,7 +299,7 @@ The equation for the perturbations becomes
    \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
    - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
    -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) 
+   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2))
     \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
