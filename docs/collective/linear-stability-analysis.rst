@@ -1,5 +1,10 @@
 Linear Stability Analysis
-========================================
+*********************************
+
+
+Some General Discussion
+============================
+
 
 
 .. admonition:: Tips about Matrices
@@ -12,99 +17,96 @@ Linear Stability Analysis
    2. Eigenvalues of skew-symmetric matrix are either 0 or imaginary.
 
 
-Some General Discussion
--------------------------
 
 
 
 
-
-Equation of Motion
----------------------
-
-
-The equation of motion is the liouville's equation
-
-.. math::
-   i \partial_t \rho = [H,\rho].
+First Approach
+======================
 
 
-The Hamiltonian is composed of three different terms,
+For some references, please read [chakraborty2016]_.
 
-.. math::
-   H = H_v + H_m + H_{\nu\nu},
 
-where
+The conventions used in [chakraborty2016]_ are
 
-.. math::
-   H_v =& -\frac{1}{2}\beta\eta \omega_0 \sigma_3\\
-   H_m =& \frac{1}{2} \sqrt{2}G_F n_e \sigma_3 \\
-   H_{\nu\nu} =& \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\beta(\hat v')\rho(\omega,\hat v') (1-\hat v \cdot \hat v'),
-
-where :math:`\eta=\pm 1` for Normal Hierarchy and Inverted Hierarchy respectively, :math:`\beta=1` for neutrinos and :math:`\beta=-1` for antineutrinos. In other words, the vacuum frequency is :math:`\omega_v = \eta \omega_0`. :math:`\beta(\hat v')` indicates wether the density matrix :math:`\rho(\omega,\hat v')` is for neutrinos or antineutrinos. If :math:`\rho(\omega,\hat v')` is for antineutrinos, :math:`\beta(\hat v')=-1`, otherwise :math:`\beta(\hat v')=1`. More explicitly, the neutrino-neutrino interaction Hamiltonian is
-
-.. math::
-   H_v =& \begin{cases}
-   -\frac{1}{2}\eta \omega_0 \sigma_3 & \text{for neutrinos}\\
-   \frac{1}{2}\eta \omega_0 \sigma_3 & \text{for antineutrinos}
-   \end{cases}\\
-   H_{\nu\nu} =& \begin{cases}
-   \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\rho(\omega,\hat v') (1-\hat v \cdot \hat v') & \text{interacting with neutrinos} \\
-   - \sqrt{2}G_F \int d\omega d\Omega_{\hat v'} n(\omega,\hat v')\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') &  \text{interacting with antineutrinos}
-   \end{cases}
-
-Please note that in this notion,
-
-1. :math:`\omega_0` **is meant to be the absolute value of the frequency**, since :math:`\eta` takes care of the signs.
-2. the integral in :math:`H_{\nu\nu}` must take care of both interactions with neutrinos and anti-neutrinos, thus the density matrix is not only for neutrinos.
-
-For the simplicity of notions, we define some new quantities.
-
-1. We define :math:`\lambda` to measure the matter interactions
+1. Equation of motion:
 
    .. math::
-      \lambda = \sqrt{2} G_F n_e.
+      i(\partial_t + \mathbf v^{(i)} \cdot \mathbf\nabla)\rho^{(i)} = [ H^{(i)},\rho^{(i)} ].
 
-2. Angle distribution of number density is defined as
-
-   .. math::
-      f(\hat v) = \frac{n(\omega,\hat v)}{n_{total}},
-
-   where :math:`n_{total}` is the total number density of neutrinos for all energies. It can also be defined for anti-neutrinos
+2. Linearized density matrix
 
    .. math::
-      \bar f(\hat v) = \frac{n(\omega,\hat v)}{\bar n_{total}},
+      \rho = \frac{1}{2}\begin{pmatrix}
+      1 & \epsilon \\
+      \epsilon^* & -1
+      \end{pmatrix}.
+      :label: eqn-density-matrix-lsa-traceless
 
-   where :math:`\bar n_{total}` is the total number density of anti-neutrinos.
-
-   In fact, the direction of momentum :math:`\hat v` depends only on an angle for line models, hence :math:`f(\theta)`. With this definition, we know that the number density of neutrinos within an angle :math:`[\theta, \theta + d\theta]` can be calculated
-
-   .. math::
-      n_{total} f(\theta) d\theta.
-
-   Similarly, the the number density of antineutrinos within angle :math:`[\theta, \theta+d\theta]` is
+   In general, the density matrix can be decomposed into trace part and traceless part,
 
    .. math::
-      \bar n_{total} \bar f(\theta) d\theta.
+      \rho = \frac{1}{2}\mathrm{Tr}(\rho) \boldsymbol{I} + \frac{1}{2}\begin{pmatrix}
+      a-\mathrm{Tr}(\rho) & \epsilon \\
+      \epsilon^* & (1-a)-\mathrm{Tr}(\rho)
+      \end{pmatrix}.
 
-3. Total number density of neutrinos and anti-neutrinos are related through a asymmetry parameter
+   The trace part is a constant, thus we drop it and redefine the density matrix as the traceless part.
 
    .. math::
-      \alpha = \frac{\bar n_{total} }{n_{total}}.
+      \rho = \frac{1}{2}\begin{pmatrix}
+      a & \epsilon \\
+      \epsilon^* & -a
+      \end{pmatrix},
 
-With the two definitions we simplify the matter effect and neutrino self-interaction
+   where :math:`a=1` if we start from all electron flavor.
 
-.. math::
-   H_m =& \frac{1}{2} \lambda \sigma_3 \\
-   H_{\nu\nu} =& \sqrt{2}G_F n_{total} \int d\omega d\Omega_{\hat v'} f(\omega,\hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   & - \sqrt{2}G_F \bar n_{total} \int d\omega d\Omega_{\hat v'} \bar f(\omega,\hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   =& \frac{1}{2}\mu \int d\omega d\Omega_{\hat v'} f(\omega, \hat v)\rho(\omega,\hat v') (1-\hat v \cdot \hat v') \\
-   & - \frac{1}{2}\alpha \mu \int d\omega d\Omega_{\hat v'} \bar f(\omega, \hat v)\bar\rho(\omega,\hat v') (1-\hat v \cdot \hat v') ,
+3. The fact that the number densities are different for different beams could be included in the density matrix or the coefficient in fron of it. In the paper by Chakraborty, Hansen, Izaguirre, and Raffelt ([chakraborty2016]_) they include this difference in densities in the density matrix, **which I find not so intuitive**. So I would choose to define the density matrix similar to the single particle ones and define
 
-where
+   .. math::
+      \alpha\mu = \sqrt{2}G_F  \alpha n_{\nu},
 
-.. math::
-   \mu = 2\sqrt{2} G_F n_{total}.
+   where :math:`\alpha` accounts for the differences in the densities for each beam.
+
+4. The commutator of a general traceless Hamiltonian
+
+   .. math::
+      H = \begin{pmatrix}
+      -h_0 & h \\
+      h^* & h_0
+      \end{pmatrix}
+
+   and density matrix Eq. (:eq:`eqn-density-matrix-lsa-traceless`) is
+
+   .. math::
+      [H,\rho] = \frac{1}{2}\begin{pmatrix}
+      -h \epsilon^* + \epsilon h^* &   2h + 2 \epsilon h_0 \\
+      -2 h_0 \epsilon^* - 2 h^* & h \epsilon^* - \epsilon h^*
+      \end{pmatrix}.
+
+
+
+
+.. [chakraborty2016] Chakraborty, S., Hansen, R. S., Izaguirre, I., & Raffelt, G. (2016). `Self-induced neutrino flavor conversion without flavor mixing, (10), 17. <http://doi.org/10.1088/1475-7516/2016/03/042>`_
+
+
+
+Second Approach
+=======================
+
+In this approach, we use conventions of the following.
+
+1. Linearized density matrix
+
+   .. math::
+      \rho = \begin{pmatrix}
+      1 & \delta \\
+      \delta^* & 0
+      \end{pmatrix}
+
+2. Equation of motion without time de
+
 
 
 Linearize the EoM
