@@ -300,10 +300,7 @@ where :math:`M` is the coefficient matrix that generates the equations we previo
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix} =
    \begin{pmatrix}
-   \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
-   - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
-   -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2))
+   
    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
