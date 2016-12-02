@@ -77,13 +77,48 @@ The conventions used in [chakraborty2016]_ are
       h^* & h_0
       \end{pmatrix}
 
-   and density matrix Eq. (:eq:`eqn-density-matrix-lsa-traceless`) is
+   and density matrix Eq. :eq:`eqn-density-matrix-lsa-traceless` is
 
    .. math::
       [H,\rho] = \frac{1}{2}\begin{pmatrix}
       -h \epsilon^* + \epsilon h^* &   2h + 2 \epsilon h_0 \\
       -2 h_0 \epsilon^* - 2 h^* & h \epsilon^* - \epsilon h^*
       \end{pmatrix}.
+
+
+   Thus the linearized equation for the perturbation for beam i is
+
+   .. math::
+      i(\partial_t+\mathbf v^{(i)}\cdot \boldsymbol \nabla) \epsilon^{(i)} =  2h^{(i)} + 2 \epsilon^{(i)} h_0^{(i)}.
+      :label: eqn-equation-of-motion-raffelt-convention-general
+
+   We only need to find :math:`h_0^{(i)}` and :math:`h^{(i)}` for each beam.
+
+
+With the equation of motion :eq:`eqn-equation-of-motion-raffelt-convention-general`, we would like to Fourier transform it
+
+.. math::
+   \epsilon^{(i)} = \int d\Omega \int d^3 k Q(\Omega,\mathbf k) e^{-i(\Omega t- \mathbf k \cdot \mathbf r)},
+
+where :math:`Q(\Omega,\mathbf k)` becomes the functions we need to solve, since the equation is linear to :math:`\epsilon`. To be specific,
+
+.. math::
+   \Omega Q^{(i)} - \mathbf v^{(i)}\cdot \mathbf k Q^{(i)} = 2 \mathbf A^{(i)}_{ij} Q^{(j)} + 2 h_0 Q^{(i)},
+
+where :math:`\mathbf A^{(i)}_{ij}` is the coupling matrix due to :math:`h`. For example,
+
+.. math::
+   h^{(1)} =& a Q^{(1)} + b Q^{(2)} \\
+   h^{(2)} =& c Q^{(1)} + d Q^{(2)}
+
+
+means
+
+.. math::
+   \mathbf A = \begin{pmatrix}
+   a & b \\
+   c & d
+   \end{pmatrix}.
 
 
 
@@ -124,16 +159,16 @@ Suppose we have a Hamiltonian in flavor basis of the form
 
 .. math::
    H = \begin{pmatrix}
-   -h_0 & h \\
-   h^* & h_0
+   -h_1 & h \\
+   h^* & h_2
    \end{pmatrix},
 
 the commutator of Hamiltonian and density matrix is
 
 .. math::
    [H,\rho] = \begin{pmatrix}
-   \delta^* h - \delta h^* &  - h - 2 \delta h_0 \\
-   2\delta h_0 + h^* & -\delta^* h + \delta h^*
+   \delta^* h - \delta h^* &  - h + \delta (h_1-h_2) \\
+   (h_2-h_1)\delta^* + h^* & -\delta^* h + \delta h^*
    \end{pmatrix}.
 
 We linearize the equation by keeping only the first order terms of :math:`\delta`. For this purpose, we need to calculate the neutrino self-interaction :math:`H_{\nu\nu}`.
@@ -251,14 +286,9 @@ This procedure works for all other beams. Or we can use the power of the All Mig
 The equation of motion is reduced to one equation about :math:`\delta`'s for each beam.
 
 .. math::
-   i \partial_r \delta = - h - 2 \delta h_0,
+   i \partial_r \delta = - h + \delta (h_1-h_2),
 
-where
-
-.. math::
-   h_0 =& \frac{1}{2}\eta \omega_v - \frac{1}{2}\lambda,
-
-and :math:`h` is determined by the expression of :math:`H_{\nu\nu}`. Then we rewrite the equation into the form
+where :math:`h_1`, :math:`h_2` are determined by both :math:`H_v`, :math:`H_m`, and the self-interaction term :math:`H_{\nu\nu}`. :math:`h` is determined by the expression of :math:`H_{\nu\nu}`. Then we rewrite the equation into the form
 
 .. math::
    i \partial_r \delta = M \cdot \delta,
@@ -502,7 +532,7 @@ Fourier Transform Perturbations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-The other idea is to linearize the equations first then Fourier transform only the perturbations. The result for the equations of perturbations can be obtained directly from Eq. (:eq:`eqn-fourier-modes-density-matrix-eom`),
+The other idea is to linearize the equations first then Fourier transform only the perturbations. The result for the equations of perturbations can be obtained directly from Eq. :eq:`eqn-fourier-modes-density-matrix-eom`,
 
 .. math::
    i v_z \partial_z \rho^i(z)  = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho^i(z) \right] + \left[ \lambda \sigma_3/2, \rho^i(z) \right] + \left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j(z),\rho^i(z) \right].
