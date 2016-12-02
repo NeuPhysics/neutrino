@@ -300,12 +300,13 @@ where :math:`M` is the coefficient matrix that generates the equations we previo
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix} =
    \begin{pmatrix}
-   
+
    \end{pmatrix}
    \begin{pmatrix}
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-1
+
 
 Notice that we have the equation with r as the variable, which is not very convenient. Even we solve the equation, it is very hard to interpretate the solutions since r is different at the same height z. So we have to rewrite the equation into one with vertical height z as the variable using :math:`i\partial_r = i \sin \theta \partial_z + i \cos \theta \partial_x`. Be very careful with the sign of :math:`+ i \cos \theta \partial_x`. In the four beam case, we have
 
@@ -334,6 +335,53 @@ The equation for the perturbations becomes
    \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-2
+
+
+
+.. admonition:: Mathematica Code
+   :class: toggle
+
+   The Mathematica code that describes the matrix M' in equation
+
+   .. math::
+      i\partial_z \boldsymbol\delta = \mathbf{M'}\boldsymbol\delta
+
+
+   is
+
+      transMatrix[eta_, mk_, mu_, alpha_, theta1_, theta2_, lambda_, omegav_: 0] := Module[{},
+
+         (* theta1 for neutrinos, theta2 for antineutrinos *)
+
+         {
+         {lambda + mu - 2 alpha mu - eta omegav + mu Cos[2 theta1] +
+             2 alpha mu Sin[theta1] Sin[theta2],
+            alpha mu - alpha mu Cos[theta1 - theta2], -mu -
+             mu Cos[2 theta1], alpha mu + alpha mu Cos[theta1 + theta2]}/
+           Sin[theta1] + mk Cot[theta1] {1, 0, 0, 0},
+         {-mu + mu Cos[theta1] Cos[theta2] + mu Sin[theta1] Sin[theta2],
+            lambda + 2 mu - alpha mu + eta omegav -
+             alpha mu Cos[2 theta2] - 2 mu Sin[theta1] Sin[theta2], -mu -
+             mu Cos[theta1] Cos[theta2] + mu Sin[theta1] Sin[theta2],
+            alpha mu + alpha mu Cos[2 theta2]}/Sin[theta2] +
+         mk Cot[theta2] {0, 1, 0, 0},
+         {-mu - mu Cos[2 theta1],
+            alpha mu + alpha mu Cos[theta1] Cos[theta2] -
+             alpha mu Sin[theta1] Sin[theta2],
+            lambda + mu - 2 alpha mu - eta omegav + mu Cos[2 theta1] +
+             2 alpha mu Sin[theta1] Sin[theta2],
+            alpha mu - alpha mu Cos[theta1] Cos[theta2] -
+             alpha mu Sin[theta1] Sin[theta2]}/Sin[theta1] -
+         mk Cot[theta1] {0, 0, 1, 0},
+         {-mu - mu Cos[theta1] Cos[theta2] + mu Sin[theta1] Sin[theta2],
+            alpha mu + alpha mu Cos[2 theta2], -mu +
+             mu Cos[theta1] Cos[theta2] + mu Sin[theta1] Sin[theta2],
+            lambda + 2 mu - alpha mu + eta omegav -
+             alpha mu Cos[2 theta2] - 2 mu Sin[theta1] Sin[theta2]}/
+           Sin[theta2] - mk Cot[theta2] {0, 0, 0, 1}
+         }
+      ]
+
 
 If we are using a model that is homogeneous in x direction, the derivative is gone. We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega z}`. By put the assumption back into the equation we obtain
 
