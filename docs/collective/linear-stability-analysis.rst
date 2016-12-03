@@ -136,8 +136,8 @@ In this approach, we use conventions of the following.
 
    .. math::
       \rho = \begin{pmatrix}
-      1 & \delta \\
-      \delta^* & 0
+      1 & \epsilon \\
+      \epsilon^* & 0
       \end{pmatrix}
 
 2. Equation of motion without time de
@@ -151,8 +151,8 @@ To linear the EoM we start from a state where almost all neutrinos are in one fl
 
 .. math::
    \rho = \begin{pmatrix}
-   1 & \delta \\
-   \delta^* & 0
+   1 & \epsilon \\
+   \epsilon^* & 0
    \end{pmatrix}.
 
 Suppose we have a Hamiltonian in flavor basis of the form
@@ -167,8 +167,8 @@ the commutator of Hamiltonian and density matrix is
 
 .. math::
    [H,\rho] = \begin{pmatrix}
-   \delta^* h - \delta h^* &  - h + \delta (h_1-h_2) \\
-   (h_2-h_1)\delta^* + h^* & -\delta^* h + \delta h^*
+   \epsilon^* h - \epsilon h^* &  - h + \epsilon (h_1-h_2) \\
+   (h_2-h_1)\epsilon^* + h^* & -\epsilon^* h + \epsilon h^*
    \end{pmatrix}.
 
 We linearize the equation by keeping only the first order terms of :math:`\delta`. For this purpose, we need to calculate the neutrino self-interaction :math:`H_{\nu\nu}`.
@@ -196,7 +196,7 @@ Four-Beam Line Model
 
    :math:`\eta` is determines the hierarchy of the neutrinos. :math:`\eta=+1` means normal hierarchy, and :math:`\eta=-1` means inverted hierarchy. :math:`\beta` takes care of the sign for the vacuum term and self-interaction term. For the vacuum term, :math:`\beta=(-)1` for (anti)neutrinos. For the self-interaction term, :math:`\beta=(-)1` if the beam is interacting with (anti)neutrinos.
 
-   We use :math:`{}^L` to denote the beam on the left, :math:`{}^R` to denote the beam on the right, and :math:`\bar{\delta}` to denote that the beam is composed of anti-neutrinos.
+   We use :math:`{}^L` to denote the beam on the left, :math:`{}^R` to denote the beam on the right, and :math:`\bar{\epsilon}` to denote that the beam is composed of anti-neutrinos.
 
 
 
@@ -218,16 +218,16 @@ where :math:`\rho` is the density matrix of the beam, :math:`\theta` is the angl
 In the four-beam case, we define the system using the following three lists of parameters,
 
 .. math::
-   \delta =& \{\delta^L, \bar\delta^L, \delta^R, \bar\delta^R\}\\
+   \epsilon =& \{\epsilon^L, \bar\epsilon^L, \epsilon^R, \bar\epsilon^R\}\\
    \theta =& \{1, \alpha, \alpha, 1\}\\
    \alpha =& \{ \theta_1, \theta_2, \pi-\theta_2,\pi-\theta_1 \},
 
-where the :math:`\delta`'s are used to construct the perturbed density matrix,
+where the :math:`\epsilon`'s are used to construct the perturbed density matrix,
 
 .. math::
    \rho^L = \begin{pmatrix}
-   1 & \delta^L \\
-   \delta^{L*} & 0
+   1 & \epsilon^L \\
+   \epsilon^{L*} & 0
    \end{pmatrix}
 
 
@@ -246,20 +246,20 @@ where the :math:`\delta`'s are used to construct the perturbed density matrix,
 
    .. math::
       \rho^{X} = \begin{pmatrix}
-      1 & \delta^{X} \\
-      \delta^{X*} & 0
+      1 & \epsilon^{X} \\
+      \epsilon^{X*} & 0
       \end{pmatrix}.
 
 So we can now write down the equation of motion for the system with this perturbed density.
 
-.. admonition:: :math:`\delta` as a vector
+.. admonition:: :math:`\epsilon` as a vector
    :class: toggle
 
    In fact, as we'll derive the linearized equations, :math:`\delta` is used as a vector
 
    .. math::
-      \delta = \begin{pmatrix}
-      \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
+      \epsilon = \begin{pmatrix}
+      \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
       \end{pmatrix}.
 
 
@@ -286,27 +286,14 @@ This procedure works for all other beams. Or we can use the power of the All Mig
 The equation of motion is reduced to one equation about :math:`\delta`'s for each beam.
 
 .. math::
-   i \partial_r \delta = - h + \delta (h_1-h_2),
+   i \partial_r \epsilon = - h + \epsilon (h_1-h_2),
 
 where :math:`h_1`, :math:`h_2` are determined by both :math:`H_v`, :math:`H_m`, and the self-interaction term :math:`H_{\nu\nu}`. :math:`h` is determined by the expression of :math:`H_{\nu\nu}`. Then we rewrite the equation into the form
 
 .. math::
-   i \partial_r \delta = M \cdot \delta,
+   i \partial_r \boldsymbol\epsilon = \mathbf M \cdot \boldsymbol\delta,
 
 where :math:`M` is the coefficient matrix that generates the equations we previously derived. This procedure can be done by Mathematica.
-
-.. math::
-   i \partial_r \begin{pmatrix}
-   \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
-   \end{pmatrix} =
-   \begin{pmatrix}
-
-   \end{pmatrix}
-   \begin{pmatrix}
-   \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
-   \end{pmatrix}.
-   :label: eqn-linearized-eom-perturbations-in-general-1
-
 
 Notice that we have the equation with r as the variable, which is not very convenient. Even we solve the equation, it is very hard to interpretate the solutions since r is different at the same height z. So we have to rewrite the equation into one with vertical height z as the variable using :math:`i\partial_r = i \sin \theta \partial_z + i \cos \theta \partial_x`. Be very careful with the sign of :math:`+ i \cos \theta \partial_x`. In the four beam case, we have
 
@@ -318,21 +305,20 @@ Notice that we have the equation with r as the variable, which is not very conve
 
 The equation for the perturbations becomes
 
+
 .. math::
-.. math::
-   i \partial_z \begin{pmatrix}
-   \sin \theta_1 \delta^L \\ \sin \theta_2\bar\delta^L \\ \sin \theta_2\delta^R \\ \sin \theta_1\bar\delta^R
-   \end{pmatrix} + i \partial_x \begin{pmatrix}
-   \cos \theta_1\delta^L \\ \cos \theta_2\bar\delta^L \\ - \cos \theta_2\delta^R \\ -\cos\theta_1\bar\delta^R
+   i \partial_r \begin{pmatrix}
+   \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
    \end{pmatrix} =
    \begin{pmatrix}
-   \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2)) & \alpha \mu(1-\cos(\theta_1 - \theta_2)) & -\mu(1+\cos(2\theta_1)) & \alpha \mu(1+\cos(\theta_1 + \theta_2))  \\
-   - \mu\alpha (1-\cos(\theta_1 - \theta_2)) & \lambda  + \eta \omega_v + \mu\alpha (1-\cos(\theta_1-\theta_2)) -  \mu (1+\cos(2 \theta_2)) + \mu (1 + \cos(\theta_1+\theta_2)) & - \mu(1+\cos(\theta_1 + \theta_2)) & \alpha \mu (1+\cos(\theta_1 + \theta_2)) \\
-   -\mu(1 + \cos(2\theta_1 )) & \alpha \mu (1 + \cos(\theta_1 + \theta_2)) & \lambda - \eta \omega_v + \mu(1+\cos(2\theta_1)) - \alpha \mu (1 - \cos(\theta_1 - \theta_2)) - \alpha \mu (1 + \cos(\theta_1+\theta_2))   &  \alpha \mu (1 - \cos (\theta_1-\theta_2)) \\
-   -\mu(1+\cos(\theta_1+\theta_2)) & \alpha\mu (1+ \cos(2\theta_2)) & - \mu (1-\cos(\theta_1-\theta_2)) & \lambda + \eta \omega_v + \mu(1 - \cos(\theta_1-\theta_2)) - \alpha \mu (1 + \cos(2\theta_2)) + \mu (1 + \cos(\theta_1+\theta_2))
-    \end{pmatrix}
+   \frac{\lambda + \mu - 2 \alpha \mu - \eta \omega_v + \mu \cos(2 \theta_1) + 2 \alpha \mu \sin(\theta_1) \sin (\theta_2)}{\sin(\theta_1)} - i \cot(\theta_1)\partial_x  &
+   \frac{\alpha \mu - \alpha \mu \cos (\theta_1 - \theta_2)}{\sin(\theta_1)} & \frac{-\mu - \mu \cos (2 \theta_1)}{\sin(\theta_1)} & \frac{\alpha \mu + \alpha \mu \cos (\theta_1 + \theta_2))}{\sin(\theta_1)} \\
+   \frac{-\mu + \mu \cos(\theta_1) \cos(\theta_2) + \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)}  &   \frac{\lambda + 2 \mu - \alpha \mu + \eta \omega_v - \alpha \mu \cos(2 \theta_2) - 2 \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)} -i \cot(\theta_2) \partial_x & \frac{-\mu - \mu \cos(\theta_1) \cos(\theta_2) + \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)}  &  \frac{\alpha \mu + \alpha \mu \cos(2 \theta_2)}{\sin(\theta_2)}  \\
+   \frac{-\mu-\mu \cos(2 \theta_1)}{\sin(\theta_1)} & \frac{\alpha \mu + \alpha \mu \cos(\theta_1) \cos(\theta_2)- \alpha \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_1)} & \frac{\lambda+\mu-2 \alpha \mu-\eta \omega_v+\mu \cos(2 \theta_1)+2 \alpha \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_1)} +i \cot(2\theta_1)\partial_x & \frac{\alpha \mu-\alpha \mu \cos(\theta_1) \cos(\theta_2)-\alpha \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_1)} \\
+   \frac{-\mu - \mu \cos(\theta_1) \cos(\theta_2) + \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)} & \frac{\alpha \mu + \alpha \mu \cos(2 \theta_2)}{\sin(\theta_2)} & \frac{-\mu + \mu \cos(\theta_1) \cos(\theta_2) + \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)} & \frac{\lambda + 2 \mu - \alpha \mu + \eta \omega_v - \alpha \mu \cos(2 \theta_2) - 2 \mu \sin(\theta_1) \sin(\theta_2)}{\sin(\theta_2)} +i \cot(\theta_2)\partial_x
+   \end{pmatrix}
    \begin{pmatrix}
-   \delta^L \\ \bar\delta^L \\ \delta^R \\ \bar\delta^R
+   \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-2
 
