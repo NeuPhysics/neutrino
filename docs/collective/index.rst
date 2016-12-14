@@ -9,3 +9,4 @@ Collective Behavior
    equation-of-motion.rst
    intuitions.rst
    linear-stability-analysis.rst
+   symmetries.rst
