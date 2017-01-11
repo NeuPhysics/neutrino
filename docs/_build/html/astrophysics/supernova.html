@@ -194,8 +194,42 @@ TeX: {
   <div class="section" id="supernova">
 <h1>12.2. Supernova<a class="headerlink" href="#supernova" title="Permalink to this headline">¶</a></h1>
 <p>One astonishing fact about core collapse supernova is that almost all (99%) of the gravitational binding energy will be transfered to neutrinos.</p>
+<p>Features of Type II supernova from observation in astronomy are listed below <a class="reference internal" href="#kent" id="id1">[Kent]</a>.</p>
+<ol class="arabic simple">
+<li>They have asymmetic remnants,</li>
+<li>The elements are not uniformly distributed in the remanants,</li>
+<li>Neutron stars obtained high velocities from somewhere,</li>
+<li>...</li>
+</ol>
+<div class="section" id="supernova-explosion">
+<h2>12.2.1. Supernova Explosion<a class="headerlink" href="#supernova-explosion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bounce-to-explode">
+<h3>12.2.1.1. Bounce to Explode<a class="headerlink" href="#bounce-to-explode" title="Permalink to this headline">¶</a></h3>
+<p>The first idea about core collapse supernova model is to facilitated the idea of bounce on the surface of proto-neutron star.</p>
+<p>It should be notice that heat capacity is negative for a star balanced by nuclear fusion until other short range repulsive forces is comparable with grativational force.</p>
+<p>Thus we expect a violent destiny in the end of some stars when the fusion is not suffient to fight the gravitational force leading to a runaway process. The star collapses.</p>
+<p>However, collapse of the star is usually countered by other forces such as nuclear strong forces. When the core reaches nuclear density which is the limit of compression of nuclear materials, a bounce occurs.</p>
+</div>
+<div class="section" id="but">
+<h3>12.2.1.2. But<a class="headerlink" href="#but" title="Permalink to this headline">¶</a></h3>
+<p>However, the bounce alone is not enough. The shock of the explosion will stall and fall back onto the proto-neutron star. More energy should be deposited into the shock in order to revive it. Hence neutrino heating is introduced.</p>
+<p>Numerical simulations show that simple models of neutrino heating is still not sufficient. To revive the shock, we have to develop more models.</p>
+<ol class="arabic simple">
+<li>Is the energy density in the shock more distributed or concentrated in small regions? This is related to <strong>convection</strong> and the <strong>angular distribution of neutrinos</strong>.</li>
+<li>Do we have more electron flavor neutrinos at the shock? Electron flavor neutrinos are the primary source of neutrino energy deposition into the shock. This is related to the <strong>neutrino flavor conversion</strong>.</li>
+<li>Numerically, neutrino transport in supernova is very hard if flavor oscillations are considered. One of the trick is to estimate the flavor conversion at different distances then implement it as a flavor profile in the simulation.</li>
+</ol>
+</div>
+<div class="section" id="other-models">
+<h3>12.2.1.3. Other Models<a class="headerlink" href="#other-models" title="Permalink to this headline">¶</a></h3>
+<p>Adam Burrows et al developed a mechanism that allows protoneutron star to vibrate and explode the star <a class="reference internal" href="#burrows2006" id="id2">[Burrows2006]</a>. In their model, neutrino energy deposition is not necessary.</p>
+</div>
+</div>
+<div class="section" id="boltzmann-equation">
+<h2>12.2.2. Boltzmann Equation<a class="headerlink" href="#boltzmann-equation" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="neutrino-oscillations">
-<h2>12.2.1. Neutrino Oscillations<a class="headerlink" href="#neutrino-oscillations" title="Permalink to this headline">¶</a></h2>
+<h2>12.2.3. Neutrino Oscillations<a class="headerlink" href="#neutrino-oscillations" title="Permalink to this headline">¶</a></h2>
 <p>In a supernova explosion, many effects come into neutrino oscillations.</p>
 <ol class="arabic simple" start="0">
 <li>Vacuum oscillations;</li>
@@ -209,6 +243,21 @@ TeX: {
 </ol>
 </li>
 </ol>
+</div>
+<div class="section" id="refs-notes">
+<h2>12.2.4. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils citation" frame="void" id="kent" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Kent]</a></td><td><a class="reference external" href="http://www.slac.stanford.edu/econf/C0805263/Slides/Budge.pdf">Supernova Theory: Simulation and Neutrino Fluxes by Kent G. Budge</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="burrows2006" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Burrows2006]</a></td><td>Burrows, A., Livne, E., Dessart, L., Ott, C. D., &amp; Murphy, J. (2006). <a class="reference external" href="http://doi.org/10.1086/500174">A New Mechanism for Core‐Collapse Supernova Explosions</a>. The Astrophysical Journal, 640(2), 878–890.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -249,7 +298,10 @@ TeX: {
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">12. Astrophysics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="stars-as-neutrino-factories.html">12.1. Stars as Neutrino Factories</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">12.2. Supernova</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#neutrino-oscillations">12.2.1. Neutrino Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supernova-explosion">12.2.1. Supernova Explosion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boltzmann-equation">12.2.2. Boltzmann Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neutrino-oscillations">12.2.3. Neutrino Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refs-notes">12.2.4. Refs &amp; Notes</a></li>
 </ul>
 </li>
 </ul>
