@@ -5,12 +5,15 @@ One astonishing fact about core collapse supernova is that almost all (99%) of t
 
 
 
-Features of Type II supernova from observation in astronomy are listed below [Kent]_.
+Features of Type II supernova from observation in astronomy are listed below [Budge]_.
 
 1. They have asymmetic remnants,
 2. The elements are not uniformly distributed in the remanants,
 3. Neutron stars obtained high velocities from somewhere,
 4. ...
+
+
+We are most interested in neutrinos. From the view of observations, our detectors in the solar system can detect neutrino flux with energy spectrum and time evolution.
 
 
 
@@ -53,8 +56,26 @@ Other Models
 Adam Burrows et al developed a mechanism that allows protoneutron star to vibrate and explode the star [Burrows2006]_. In their model, neutrino energy deposition is not necessary.
 
 
-Boltzmann Equation
+Efforts
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Budge mentioned that several directions are being explored for more successful supernova models. [Budge]_
+
+1. Hydrodynamics,
+2. Boltzmann transport,
+3. General relativity corrections,
+4. Neutrino physics.
+
+
+
+
+
+Boltzmann Transport
 ------------------------------------
+
+
+
+
 
 
 
@@ -80,5 +101,5 @@ Refs & Notes
 -----------------------------
 
 
-.. [Kent] `Supernova Theory: Simulation and Neutrino Fluxes by Kent G. Budge <http://www.slac.stanford.edu/econf/C0805263/Slides/Budge.pdf>`_
+.. [Budge] `Supernova Theory: Simulation and Neutrino Fluxes by Kent G. Budge <http://www.slac.stanford.edu/econf/C0805263/Slides/Budge.pdf>`_
 .. [Burrows2006] Burrows, A., Livne, E., Dessart, L., Ott, C. D., & Murphy, J. (2006). `A New Mechanism for Core‐Collapse Supernova Explosions <http://doi.org/10.1086/500174>`_. The Astrophysical Journal, 640(2), 878–890. 
