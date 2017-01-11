@@ -56,6 +56,18 @@ Astrophysics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+.. admonition:: Will Neutrino Emission Apply Pressure to the Surface of Neutron Stars?
+   :class: toggle
+
+   Neutron star or proto-neutron star emits a huge amount of neutrinos. The total number can reach the order :math:`10^{58}`.
+
+   The first thought would be estimate the momentum density at the surface of neutron star using the total number. However, it turns out to be unnecessary.
+
+   We consider two limits.
+
+   The first one is the early stage that the proto-neutron star is transparant to neutrinos. The emission is isotropic so the net pressure on proto-neutron star is around 0.
+
+   The second stage is when the neutron star becomes opaque to neutrinos (above certain energy). The bounce of neutrinos within the neutron star is random so the net pressure is also around 0.
 
 
 

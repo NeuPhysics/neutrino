@@ -477,7 +477,7 @@ A_H(x) &amp; = \sin\theta_m(x)  \left[ a_H \cos\theta_m(x_0) \exp\left( -i \int_
 &amp; + ( - \cos^2\theta_m(x) + \sin^2\theta_m(x) ) \cos\theta_m(x_0)\sin\theta_m(x_0) ( a_H a_L e^{-2i\phi'} + \mathrm{c.c}) .\end{split}\]</div>
 <p>Applying the condition that <span class="math">\(\lvert a_L \rvert^2 + \lvert a_H \rvert^2 = 1\)</span>, the probability becomes</p>
 <div class="math">
-\[\begin{split}\langle P(\nu_e,x)\rangle_{x} =&amp; \frac{1}{2} + \frac{1}{2} (1 - 2 \lvert a_H \rvert^2) \cos 2\theta_m(x_0) \cos 2\theta_v - \lvert a_H a_L \rvert \sin 2\theta_m(x_0)\cos 2\theta_v \cos ( 2 \phi' + \psi_{LH} ),\end{split}\]</div>
+\[\langle P(\nu_e,x)\rangle_{x} =&amp; \frac{1}{2} + \frac{1}{2} (1 - 2 \lvert a_H \rvert^2) \cos 2\theta_m(x_0) \cos 2\theta_v - \lvert a_H a_L \rvert \sin 2\theta_m(x_0)\cos 2\theta_v \cos ( 2 \phi' + \psi_{LH} ),\]</div>
 <p>where <span class="math">\(\psi_{LH}\)</span> is the argument of <span class="math">\(a_H a_L\)</span> and <span class="math">\(\phi\)</span> is <span class="math">\(\int_{x_0}^{x_r} \frac{\omega_m(x')}{2}dx'\)</span> .</p>
 <p><strong>The average over production removes the last part.</strong></p>
 <p>Notice that in fact the detection happens in vacuum, which means <span class="math">\(\theta_m(x)=\theta_v\)</span>.</p>
@@ -502,13 +502,13 @@ A_H(x) &amp; = \sin\theta_m(x)  \left[ a_H \cos\theta_m(x_0) \exp\left( -i \int_
 <p>As discussed in the previous subsection, a transition probability between the two states <span class="math">\(\ket{\nu_L(x)}\)</span> and <span class="math">\(\ket{\nu_H(x)}\)</span> would change the final survival probabilty. Thus calculating this transition probability will be done in this subsection.</p>
 <p>Recall that the effective potential is</p>
 <div class="math">
-\[\begin{split}\mathbf{V_m} &amp; = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) ,\end{split}\]</div>
+\[\mathbf{V_m} &amp; = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) ,\]</div>
 <p>where</p>
 <div class="math">
 \[\begin{split}\mathbf{U_m} = \begin{pmatrix} \cos \theta(x) &amp; \sin\theta(x) \\ -\sin\theta(x) &amp; \cos\theta(x) \end{pmatrix} .\end{split}\]</div>
 <p><span class="math">\(\sin\theta(x)\)</span> and <span class="math">\(\cos\theta(x)\)</span> can be found by solving the equations. Plug in the results and applying the trick that</p>
 <div class="math">
-\[\begin{split}\partial_x \mathbf{U_m} &amp; = \frac{d \hat\Delta(x)}{dx} \partial_{ \hat\Delta(x)} \mathbf{U_m} ,\end{split}\]</div>
+\[\partial_x \mathbf{U_m} &amp; = \frac{d \hat\Delta(x)}{dx} \partial_{ \hat\Delta(x)} \mathbf{U_m} ,\]</div>
 <p>we have</p>
 <div class="math">
 \[\begin{split}\mathbf{V_m} &amp; = -i\mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \\
@@ -541,7 +541,7 @@ A_H(x) &amp; = \sin\theta_m(x)  \left[ a_H \cos\theta_m(x_0) \exp\left( -i \int_
 <p>where the eigenstates are <span class="math">\(\ket{\nu_L}\)</span> and <span class="math">\(\ket{\nu_H}\)</span> with eigenvalues <span class="math">\(\omega_{m1}\)</span> and <span class="math">\(\omega_{m2}\)</span> respectively.</p>
 <p>To save typing we define</p>
 <div class="math">
-\[\begin{split}v &amp;= -  \hat\Delta'(x_r) \frac{1}{2\sin 2\theta}\end{split}\]</div>
+\[v &amp;= -  \hat\Delta'(x_r) \frac{1}{2\sin 2\theta}\]</div>
 <p>so that the effective potential reduces to a simple form</p>
 <div class="math">
 \[\begin{split}\mathbf{V_m} = \begin{pmatrix}
@@ -629,10 +629,10 @@ e^{-i\nu\pi/4} x^{-\nu-1} &amp;=e^{v^2\pi/4\alpha'} x^{-\nu-1}\end{split}\]</div
 <p>where <span class="math">\(\gamma = \frac{v^2}{\lvert \alpha \rvert}\)</span>.</p>
 <p>What we need to find out is the state at <span class="math">\(x\to \infty\)</span>, which depends on the asymptotic values of <span class="math">\(D_{-\nu-1}\)</span>,</p>
 <div class="math">
-\[\begin{split}C_L(x) &amp;\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{i x'^2 /4} x'^\nu  \right) ,\end{split}\]</div>
+\[C_L(x) &amp;\to \sqrt{\gamma} e^{-\gamma \pi/4} \left(  e^{3\pi (\nu+1)i/4} e^{-ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{i x'^2 /4} x'^\nu  \right) ,\]</div>
 <p>or</p>
 <div class="math">
-\[\begin{split}C_L &amp; \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{ - i x'^2 /4} x'^\nu   \right).\end{split}\]</div>
+\[C_L &amp; \to \sqrt{\gamma} e^{-\gamma \pi/4} \left(   e^{-3\pi (\nu+1)i/4} e^{ix'^2/4} x'^{-\nu-1} + \frac{\sqrt{2\pi}}{ \Gamma (\nu+1) } e^{i \pi\nu/4} e^{ - i x'^2 /4} x'^\nu   \right).\]</div>
 <p>The transition rate is determined by <span class="math">\(\lvert C_L \rvert^2\)</span></p>
 <div class="math">
 \[\lvert C_L(\infty) \rvert^2 = \gamma e^{-\pi\gamma} \frac{2\pi}{\Gamma(i\gamma +1) \Gamma(-i\gamma +1)} = 2e^{-\pi\gamma}\sinh \pi\gamma = 1-e^{-2\pi\gamma}.\]</div>
@@ -695,7 +695,7 @@ e^{-i\nu\pi/4} x^{-\nu-1} &amp;=e^{v^2\pi/4\alpha'} x^{-\nu-1}\end{split}\]</div
 <li class="toctree-l1"><a class="reference internal" href="../oscillations/index.html">4. Oscillations</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Interaction With Matter</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="msw.html">5.1. MSW Effect</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.2. MSW Refraction, Resonance and Non-adiabacity</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. MSW Refraction, Resonance and Non-adiabacity</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#flavor-neutrino-oscillations-and-matter-effect">5.2.1. 2 Flavor Neutrino Oscillations and Matter Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#constant-electron-number-density">5.2.2. Constant Electron Number Density</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adiabatic-limit">5.2.3. Adiabatic Limit</a></li>
@@ -739,9 +739,6 @@ e^{-i\nu\pi/4} x^{-\nu-1} &amp;=e^{v^2\pi/4\alpha'} x^{-\nu-1}\end{split}\]</div
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3>Bug Report and Chat</h3>
 <p>
@@ -811,8 +808,8 @@ var duoshuoQuery = {short_name:"sci2fi"};
       Sitemap<a href="assets/sitemap.xml">.xml</a><a href="assets/sitemap.xml.gz">.gz</a>
       |
       
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="../_sources/matter/msw-derivation.txt"
