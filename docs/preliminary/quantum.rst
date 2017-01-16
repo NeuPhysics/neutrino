@@ -74,7 +74,7 @@ where
    Rabi frequency :math:`w` will be generalized to the generalized Rabi frequency
 
    .. math::
-      R=\sqrt{\sqrt{w^2+\omega^2}},
+      R=\sqrt{w^2+\omega^2},
 
    at which frequency the final system is oscillating.
 
@@ -146,4 +146,7 @@ Here we introduce a system with Hamiltonian
    w e^{-ikt} & \omega_0
    \end{pmatrix} .
 
-To solve the Schrodinger equation, we can go to the corotating frame.
+To solve the Schrodinger equation, we can go to the corotating frame. The solution to it is very similar to time independent case, with a detuning shifted by :math:`-k` instead of :math:`\delta`. In other words, in the time dependent Rabi system :math:`-k` is equivalent to :math:`\delta` in the time independent system. Thus the detuning becomes
+
+.. math::
+   \omega = \omega_0 - k.
