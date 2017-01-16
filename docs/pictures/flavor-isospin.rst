@@ -239,7 +239,7 @@ Note the equation of motion becomes
    :class: hint
 
 
-   Previously we have already seen the equations for a spinning in magnetic field :ref:`magnetic-spin-angular-momentum-eom`,
+   Previously we have already seen the equations for a spinning in magnetic field (:any:`magnetic-spin-angular-momentum-eom`),
 
    .. math::
       \frac{d}{dt}\mathbf L = \gamma \mathbf L \times \mathbf B,
@@ -334,7 +334,7 @@ In general we can graphically represent any oscillations of flavor isospin using
 .. figure:: assets/flavor-isospin/flavor-isospin-graphics-vacuum-only.png
    :align: center
 
-   Graphical representation of vacuum Hamiltonian. :download:`Geogebra file  <assets/flavor-isospin/flavor-isospin-graphics-vacuum-only.ggb>`.
+   Graphical representation of vacuum Hamiltonian.
 
 
 

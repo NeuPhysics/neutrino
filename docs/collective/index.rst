@@ -9,4 +9,5 @@ Collective Behavior
    equation-of-motion.rst
    intuitions.rst
    linear-stability-analysis.rst
+   fast-modes.rst
    symmetries.rst

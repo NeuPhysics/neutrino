@@ -33,7 +33,7 @@ In such reactions, charged current weak interaction plays a role which takes a d
 
 
 
-More generally, positron emission and electron capture are also neutrino related nuclear reactions which is explained in table :ref:`table:Neutrino_Reactions`. In the context of astrophysics, (anti-)neutrinos also participate in nuclear reaction chains in stars, synthesis of heavy and rare elements and more.
+More generally, positron emission and electron capture are also neutrino related nuclear reactions which is explained in table :ref:`table-Neutrino_Reactions`. In the context of astrophysics, (anti-)neutrinos also participate in nuclear reaction chains in stars, synthesis of heavy and rare elements and more.
 
 
 .. _table-Neutrino_Reactions:
@@ -575,19 +575,15 @@ In this review, we presented the solar neutrino production, thermal modification
 
 
 
-
-
-
-
 Refs & Notes
 ------------------
 
 .. [Smirnov2003] A. Y. Smirnov, “The MSW effect and Solar Neutrinos,” , 23 (2003), arXiv:0305106 [hep-ph].
 .. [Adelberger2011] E. Adelberger and A. Garcia, “Solar fusion cross sections. II. The pp chain and CNO cycles,” Reviews of Modern Physics 83 (2011), arXiv:arXiv:1004.2318v3.
 .. [wolf78] L. Wolfenstein, “Neutrino oscillations in matter,” Physical Review D 17, 2369–2374 (1978).
-.. [lopes2013a] I. Lopes, “Probing the Sun's inner core using solar neutrinos: A new diagnostic method,” Physical Review D 88, 045006 (2013).
-.. [lopes2013] I. Lopes and S. Turck-Chieze, “Solar Neutrino Physics Oscillations: Sensitivity To the Electronic Density in the Sun’S Core,” The Astrophysical Journal 765, 14 (2013).
+.. [Lopes2013a] I. Lopes, “Probing the Sun's inner core using solar neutrinos: A new diagnostic method,” Physical Review D 88, 045006 (2013).
+.. [Lopes2013] I. Lopes and S. Turck-Chieze, “Solar Neutrino Physics Oscillations: Sensitivity To the Electronic Density in the Sun’S Core,” The Astrophysical Journal 765, 14 (2013).
 .. [raffelt2004] G. G. Raffelt, M. T. Keil, R. Buras, H.-T. Janka, and M. Rampp, “Supernova neutrinos: Flavor-dependent fluxes and spectra,” in Neutrino oscillations and their origin. Proceedings, 4th International Workshop, NOON2003, Kanazawa, Japan, February 10-14, 2003 (2003) pp. 380–387, arXiv:astro-ph/0303226 [astro-ph]
 .. [Bahcall1991] J. N. Bahcall, “Shapes of solar neutrino spectra: Unconventional tests of the standard electroweak model,” Phys. Rev. D44, 1644–1651 (1991).
 .. [Totani1998] T. Totani, K. Sato, H. E. Dalhed, and J. R. Wilson, “Future Detection of Supernova Neutrino Burst and Explosion Mechanism,” The Astrophysical Journal 496, 216–225 (1998).
-.. [] 0M. T. Keil, Supernova Neutrino Spectra and Applications to Flavor Oscillations, Ph.D. thesis (2003), arXiv:0308228 [astro-ph].
+.. [Keil2003] 0M. T. Keil, Supernova Neutrino Spectra and Applications to Flavor Oscillations, Ph.D. thesis (2003), arXiv:0308228 [astro-ph].

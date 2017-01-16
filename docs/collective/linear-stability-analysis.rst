@@ -62,7 +62,7 @@ The conventions used in [chakraborty2016]_ are
 
    where :math:`a=1` if we start from all electron flavor.
 
-3. The fact that the number densities are different for different beams could be included in the density matrix or the coefficient in fron of it. In the paper by Chakraborty, Hansen, Izaguirre, and Raffelt ([chakraborty2016]_) they include this difference in densities in the density matrix, **which I find not so intuitive**. So I would choose to define the density matrix similar to the single particle ones and define
+3. The fact that the number densities are different for different beams could be included in the density matrix or the coefficient in fron of it. In the paper by Chakraborty, Hansen, Izaguirre, and Raffelt [chakraborty2016]_ they include this difference in densities in the density matrix, **which I find not so intuitive**. So I would choose to define the density matrix similar to the single particle ones and define
 
    .. math::
       \alpha\mu = \sqrt{2}G_F  \alpha n_{\nu},
@@ -320,7 +320,7 @@ The equation for the perturbations becomes
    \begin{pmatrix}
    \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
    \end{pmatrix}.
-   :label: eqn-linearized-eom-perturbations-in-general-2
+   :label: eqn-linearized-eom-perturbations-in-general-1
 
 
 
@@ -334,6 +334,8 @@ The equation for the perturbations becomes
 
 
    is
+
+   .. code-block:: text
 
       transMatrix[eta_, mk_, mu_, alpha_, theta1_, theta2_, lambda_, omegav_: 0] := Module[{},
 

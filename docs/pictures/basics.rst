@@ -5,7 +5,7 @@ Some Useful Physics Pictures
 There are several pictures to visualize the oscillations of neutrinos.
 
 .. index:: Magnetic Spin
-
+.. _magnetic-spin-angular-momentum-eom:
 
 Magnetic Spin
 -----------------------------
@@ -30,7 +30,7 @@ In the case of electron quantum magnetic spin, :math:`\vec \mu` is proportional 
 
 So the equation of motion becomes
 
-.. _magnetic-spin-angular-momentum-eom:
+
 
 .. math::
    \frac{d}{dt}\vec L \propto \vec L \times \vec B.

@@ -375,6 +375,7 @@ In general the mass term in Lagrangian can be written as [1]_
 
 .. math::
    \mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L & m_D \\ m_D & m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .
+   :label: eqn-seesaw-mass-lagrangian
 
 We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L,R}` and :math:`\nu_{L,R}`.
 
@@ -444,7 +445,7 @@ Consequences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-The see-saw mass term in :eq:`seesaw-mass-lagrangian` combined with the meaning of the creation and annihilation operators, we know that Majorana mass can annihilate a neutrino or antineutrino then create a antineutrino or neutrino.
+The see-saw mass term in :eq:`eqn-seesaw-mass-lagrangian` combined with the meaning of the creation and annihilation operators, we know that Majorana mass can annihilate a neutrino or antineutrino then create a antineutrino or neutrino.
 
 .. figure:: assets/mass/dirac-mass-vs-majorana-mass-lines.png
    :align: center
