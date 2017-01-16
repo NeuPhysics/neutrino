@@ -67,7 +67,7 @@ extensions = [
 ]
 
 
-latex_preamble = r"""
+latex_preamble_data = r"""
 \usepackage{hyperref}
 \usepackage{mathrsfs}
 \usepackage{color}
@@ -108,8 +108,8 @@ latex_preamble = r"""
 
 """
 
-pngmath_latex_preamble = latex_preamble
-latex_elements = {"preamble": latex_preamble}
+pngmath_latex_preamble = latex_preamble_data
+latex_elements = {"preamble": latex_preamble_data}
 
 
 # Add any paths that contain templates here, relative to this directory.

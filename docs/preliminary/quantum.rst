@@ -130,4 +130,4 @@ which means the energy levels are linear to :math:`\omega`. At :math:`\omega=0` 
 References of Rabi System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. A very short and concise introduction: ` Rabi Model <http://www.pa.msu.edu/~mmoore/Lect7_RabiModel.pdf>`_ by Michael G. Moore at MSU.
+1. A very short and concise introduction: `Rabi Model <http://www.pa.msu.edu/~mmoore/Lect7_RabiModel.pdf>`_ by Michael G. Moore at MSU.
