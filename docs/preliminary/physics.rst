@@ -152,7 +152,9 @@ Wigner Function
 
 Wigner function is an analogue of the classical phase-space probability distribution function though it is not really probability. [3]_ The mean of Wigner function lies in the two quadratures, i.e., space distribution and momentum distribution.
 
+
 There is a collection of Wigner functions on this site. [3]_
+
 
 
 
@@ -160,10 +162,10 @@ There is a collection of Wigner functions on this site. [3]_
 
 
 
-.. admonition:: Question
+.. admonition:: Question
    :class: note
 
-   How do one describe a system of neutrinos using Wigner function? What is the effect of statistics.
+   How do one describe a system of neutrinos using Wigner function? The effect of statistics?
 
 
 
@@ -192,6 +194,7 @@ The neutrino-neutrino forward scattering is [2]_
    :class: warning
 
    Meaning of each term in Liouville equation.
+
 
 
 
