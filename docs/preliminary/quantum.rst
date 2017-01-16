@@ -3,8 +3,8 @@ Quantum Physics Basics
 
 
 
-Two Level Systems
-------------------
+Time Independent Two Level Systems
+------------------------------------
 
 
 In general a quantum two level system can be described using Schrodinger equation
@@ -131,3 +131,19 @@ References of Rabi System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. A very short and concise introduction: `Rabi Model <http://www.pa.msu.edu/~mmoore/Lect7_RabiModel.pdf>`_ by Michael G. Moore at MSU.
+
+
+Time Dependent Two Level System
+--------------------------------
+
+The previous calculations are for time independent perturbations. For time dependent perturbations, the situation would be drastically different.
+
+Here we introduce a system with Hamiltonian
+
+.. math::
+   H = \frac{1}{2}\begin{pmatrix}
+   -\omega_0  & w e^{i k t} \\
+   w e^{-ikt} & \omega_0
+   \end{pmatrix} .
+
+To solve the Schrodinger equation, we can go to the corotating frame.
