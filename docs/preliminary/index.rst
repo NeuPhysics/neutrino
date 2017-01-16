@@ -18,5 +18,6 @@ Here are some facts about standard model neutrinos.
 
    commonsense.rst
    physics.rst
+   quantum.rst
    math.rst
    questions.rst

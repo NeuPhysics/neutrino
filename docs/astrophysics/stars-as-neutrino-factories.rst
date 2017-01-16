@@ -295,7 +295,7 @@ Since neutrinos travel with velocity approximately the speed of light, we use :m
 The important parameter is the oscillation length of the neutrino flavor conversion. Here we have the oscillation frequency :math:`\omega = \frac{\Delta m^2}{2E}`.
 
 
-.. admonition::
+.. admonition:: Oscillation Length
    :class: warning
 
    Need a figure about the oscillation lengh here.
