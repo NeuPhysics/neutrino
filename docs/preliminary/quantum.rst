@@ -145,8 +145,49 @@ Here we introduce a system with Hamiltonian
    -\omega_0  & w e^{i k t} \\
    w e^{-ikt} & \omega_0
    \end{pmatrix} .
+   :label: eqn-rabi-time-dependent-two-level-hamiltonian
 
 To solve the Schrodinger equation, we can go to the corotating frame. The solution to it is very similar to time independent case, with a detuning shifted by :math:`-k` instead of :math:`\delta`. In other words, in the time dependent Rabi system :math:`-k` is equivalent to :math:`\delta` in the time independent system. Thus the detuning becomes
 
 .. math::
    \omega = \omega_0 - k.
+
+
+References of Time Dependent Rabi System
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. `Rabi Oscillations <https://aqpl.mc2.chalmers.se/~gojo71/KvantInfo/Rabi.pdf>`_ by Thilo Bauch and Goran Johansson.
+
+
+Bloch Sphere and Bloch Vectors
+--------------------------------------------------
+
+
+A two level system density matrix can be expanded using identity matrix and Pauli matrix,
+
+.. math::
+   \rho = \frac{1}{2}(1 + \mathbf P \cdot \boldsymbol \sigma),
+
+as defined in :ref:`neutrino-flavor-isospin`. The vector :math:`\mathbf P` represents the vector of state in Bloch sphere.
+
+We can also project the Hamiltonian into this space,
+
+.. math::
+   H = - \frac{\boldsymbol \sigma}{2} \cdot \mathbf H.
+
+We take the :eq:`eqn-rabi-time-dependent-two-level-hamiltonian` as an example. A simple derivation shows that the equation of motion for the Bloch vector or the flavor isospin vector is precession
+
+.. math::
+   \dot {\mathbf P}  = \mathbf P \times \mathbf H,
+
+where
+
+.. math::
+   \mathbf H = \begin{pmatrix}
+   -w \cos(kt)\\
+   w\sin(kt)\\
+   \omega_0
+   \end{pmatrix}.
+
+We identify this vector as a rotation around z axis. It also becomes obvious that the so called time indepedent case is literally :eq:`eqn-rabi-time-dependent-two-level-hamiltonian` in a corotating frame.

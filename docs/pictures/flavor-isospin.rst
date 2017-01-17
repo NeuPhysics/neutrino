@@ -44,6 +44,8 @@ With the Hamiltonian, the equation of motion for neutrinos is simply
 
 
 
+.. _neutrino-flavor-isospin:
+
 Neutrino Flavour Isospin
 ---------------------------------
 
