@@ -1,4 +1,4 @@
-Matter as Driven Energy
+Matter as Driving Energy
 ====================================
 
 
@@ -85,7 +85,7 @@ Rabi-like Transition
 .. admonition:: Rabi Oscillation
    :class: note
 
-   Rabi oscillations happens when a driven field is applied to a quantum system. A simple case would be a driven field :math:`-A\cos(\omega t)` is applied to a system with Hamiltonian
+   Rabi oscillations happens when a driving field is applied to a quantum system. A simple case would be a driving field :math:`-A\cos(\omega t)` is applied to a system with Hamiltonian
 
    .. math::
       H_0 = \begin{pmatrix} \epsilon_1 & 0 \\ 0 & \epsilon_2 \end{pmatrix}.
