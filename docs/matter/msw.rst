@@ -357,6 +357,20 @@ If we discuss more about this phenomenon, we have situations such as not so larg
 
 
 
+Visualizing the Solar Neutrino Flavor Oscillations
+----------------------------------------------------------
+
+Applying the flavor isospin method (:ref:`neutrino-flavor-isospin`), we can visualize the flavor conversions.
+
+
+.. image:: assets/msw/matter-effect-large-density.png
+   :width: 32%
+.. image:: assets/msw/matter-effect-adiabatic.png
+   :width: 32%
+.. image:: assets/msw/matter-effect-adiabatic-3.png
+   :width: 32%
+
+
 
 
 

@@ -1,4 +1,4 @@
-{% set page_width = '940px' %}
+{% set max_page_width = theme_max_page_width %}
 {% set sidebar_width = '220px' %}
 
 {% set theme_sidebar_header = theme_sidebar_header or theme_gray_1 %}
@@ -27,7 +27,7 @@ body {
 }
 
 div.document {
-    width: {{ page_width }};
+    max-width: {{ max_page_width }};
     margin: 30px auto 0 auto;
 }
 
@@ -55,7 +55,7 @@ div.body {
 }
 
 div.footer {
-    width: {{ page_width }};
+    max-width: {{ max_page_width }};
     margin: 20px auto 30px auto;
     font-size: 14px;
     color: {{ theme_footer_text }};
