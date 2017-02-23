@@ -51,7 +51,7 @@ Thus
 
 
 .. math::
-   U^\dagger \sigma_l  U &= \sigma_l + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.
+   U^\dagger \sigma_l  U = \sigma_l + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.
 
 The second term can be rewritten using the properties of Pauli matrices and Levi-Civita symbol but no significant simplification is shown.
 

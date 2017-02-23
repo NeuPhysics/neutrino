@@ -15,29 +15,37 @@
 import sys
 import os
 
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '_themes/'))
+
+# Only for bootstrap theme. comment it when using other themes
+import sphinx_bootstrap_theme
+
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
-
+sys.path.append(os.path.abspath('exts'))
 
 
 # Import alabaster theme
 # import alabaster
 
 # html_theme_path = [alabaster.get_path()]
-html_theme_path = ["_themes",]
-html_theme = 'alabaster'
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        #'relations.html',
-        'searchbox.html',
-        #'donate.html',
-        'chat.html',
-    ]
-}
+# html_theme_path = ["_themes",]
+# html_theme = 'alabaster'
+# html_sidebars = {
+#     '**': [
+#         'about.html',
+#         'navigation.html',
+#         #'relations.html',
+#         'searchbox.html',
+#         #'donate.html',
+#         'chat.html',
+#     ]
+# }
+
 
 
 html_theme_options = {
@@ -64,6 +72,7 @@ html_theme_options = {
 extensions = [
     'sphinx.ext.mathjax',
 #    'numfig',
+    "math_dollar"
 ]
 
 
@@ -111,6 +120,17 @@ latex_preamble_data = r"""
 pngmath_latex_preamble = latex_preamble_data
 latex_elements = {"preamble": latex_preamble_data}
 
+
+rst_prolog = """
+.. role:: strike
+   :class: strike
+
+.. role:: highlight-text
+   :class: highlight-text
+
+.. |nbsp| unicode:: 0xA0
+   :trim:
+"""
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -179,6 +199,67 @@ pygments_style = 'sphinx'
 
 numfig = True
 
+html_theme = 'bootstrap'
+
+html_theme_options = {
+    # Choose Bootstrap version.
+    # Values: "3" (default) or "2" (in quotes)
+    'bootstrap_version': "3",
+
+    # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "Chapters",
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    'navbar_pagenav_name': "Sections",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    # 'source_link_position': "footer",
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing with "" (default) or the name of a valid theme
+    # such as "amelia" or "cosmo". Previously "flatly".
+    'bootswatch_theme': "readable",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "false",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "footer",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    # 'navbar_class': "navbar navbar-inverse",
+    'navbar_class': "navbar navbar-inverse",
+
+   # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': 2,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+   # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': True,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': True,
+
+}
+
+# For bootstrap theme:
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+# bootswatch_theme = "cosmo"
+
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -199,7 +280,7 @@ numfig = True
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = 'Neutrino Notes'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
