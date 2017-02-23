@@ -206,7 +206,7 @@ Note the equation of motion becomes
    We assume that number densities :math:`n_\nu` and :math:`n_\nu'` are conserved,
 
    .. math::
-      i n_\nu' \frac{d}{dt} \mathbf s = -\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) + \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right)\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) ,
+      i n_\nu' \mathbf \sigma \cdot \frac{d}{dt} \mathbf s = -\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right) + \left(  n_\nu' \boldsymbol \sigma \cdot \mathbf s \right)\left(\frac{\boldsymbol \sigma}{2} \cdot \mathbf H \right) ,
 
    where :math:`n_\nu'` can be eliminated on both sides. To simplify the equation, we write down the component form of the dot products,
 
