@@ -13,9 +13,9 @@ Interaction With Matter
 Neutrinos do interact with matter, through charged current and neutral current weak interaction.
 
 .. image:: assets/matter/neutral-current.png
-   :width: 50%
+   :width: 49%
 .. image:: assets/matter/charged-current.png
-   :width: 50%
+   :width: 49%
 
 .. admonition:: **TeX Code** for Neutral Current Interaction
    :class: toggle

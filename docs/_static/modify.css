@@ -1,3 +1,188 @@
+
+
+/* Remove the grey background image */
+
+html {
+background: none !important;
+}
+body {
+   padding-top: 0 !important;
+}
+
+a {
+   color: #a31 !important;
+}
+a:hover {
+   text-decoration: underline !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none !important;
+    color: #fff !important;
+    background-color: #a31 !important;
+}
+
+div.header {
+margin-bottom: 20px;
+}
+
+/* Top Nav color */
+
+div.topnav {
+border-bottom: solid 2px !important;
+border-top: solid 2px !important;
+padding: 10px !important;
+}
+
+/*  For messange box */
+
+div.note {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px lightgrey !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+
+.alert-info {
+color: black !important;
+background-color: white !important;
+}
+
+.alert {
+color: black !important;
+}
+
+div.important {
+border: solid 2px #4183c4 !important;
+border-radius: 4px !important;
+padding: 10px 15px 10px 50px !important;
+background: none !important;
+}
+
+div.warning {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px orange !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+div.hint {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px #37D612 !important;
+border-radius: 4px !important;
+}
+
+div.admonition-laws {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px #28344C !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+div.math {
+text-align:center;
+}
+
+
+.figure>p.caption {
+color: grey;
+border-left: 5px solid grey;
+border-right: 5px solid grey;
+background: #E2DFDF;
+padding: 10px;
+margin: 10px;
+}
+
+
+
+/*.highlit {
+padding: 2px 4px;
+/*font-size: 90%;*/
+/*font-weight: bold;*/
+color: #4B648C;
+background-color: #EDFFF0;
+white-space: nowrap;
+border-radius: 4px;
+}
+*/
+
+/* Toggle Environment Begin */
+
+.toggle {
+    background: none repeat scroll 0 0 #e7f2fa;
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.toggle .admonition-title {
+    display: block;
+    clear: both;
+    cursor: pointer;
+    font-size: 110% !important;
+}
+
+.toggle .admonition-title:after {
+    content: " ▼";
+}
+
+.toggle .admonition-title.open:after {
+    content: " ▲";
+}
+
+.toggle p:last-child {
+    margin-bottom: 0;
+}
+
+/* Toggle Environment End */
+
+
+.strike {
+  text-decoration: line-through;
+}
+
+/* Highlight Text */
+
+.highlight-text {
+padding: 2px 4px;
+/*font-size: 90%;*/
+/*font-weight: bold;*/
+color: #4B648C;
+background-color: #c3ffcd;
+/*white-space: nowrap;*/
+border-radius: 4px;
+display: inline;
+}
+
+
+
+/* For disqus thread*/
+
+#disqus_thread {
+max-width:1170px;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#sourcelink {
+padding-top:15px;padding-bottom:15px;
+float:left;
+color:#777777;
+}
+#sourcelink>a {
+color:#777777;
+text-decoration:none;
+}
+
+.dropdown-menu {
+min-width: 260px !important;
+}
+
+
+/* Some tiny fix */
 .math {
   text-align:center;
 }
