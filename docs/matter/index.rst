@@ -96,3 +96,4 @@ For neutral current, all the three flavors interact with electrons and nucleus i
    msw-derivation.rst
    parametric.rst
    matter-driven.rst
+   distorted-phase-effect.rst
