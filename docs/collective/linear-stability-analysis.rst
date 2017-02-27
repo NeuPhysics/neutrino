@@ -2,6 +2,14 @@ Linear Stability Analysis
 *********************************
 
 
+.. admonition:: Reading List
+   :class: toggle
+
+   1. Banerjee, A., Dighe, A., & Raffelt, G. (2011). `Linearized flavor-stability analysis of dense neutrino streams <https://doi.org/10.1103/PhysRevD.84.053013>`_. Physical Review D - Particles, Fields, Gravitation and Cosmology, 84(5), 1–19.
+   2. Izaguirre, I., Raffelt, G., & Tamborra, I. (2017). `Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach <https://doi.org/10.1103/PhysRevLett.118.021101>`_. Physical Review Letters, 118(2), 21101.
+
+   
+
 Some General Discussion
 ============================
 
