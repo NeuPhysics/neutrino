@@ -103,6 +103,7 @@ In fact, we have another identity
 .. math::
    1 - \mathbf r_1 \cdot \mathbf r_2 = 4\pi Y_0^0  +  \frac{4\pi}{3} r_1 r_2 \left[ {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) + {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2)  \right]
 
+It is helpful analytical derivations of terms related inner product of vectors (even four vectors) and decompose them into different spherical modes.
 
 
 The Equations
