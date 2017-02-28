@@ -57,7 +57,51 @@ The second term can be rewritten using the properties of Pauli matrices and Levi
 
 
 
+Spherical Harmonics
+--------------------------------
 
+
+.. figure:: assets/math/558px-3D_Spherical.svg.png
+   :align: center
+
+   Physicists' convention of spherical coordinate system. By Andeggs, Public Domain, `Link <https://commons.wikimedia.org/w/index.php?curid=7478049>`_.
+
+A vector in spherical coordinates is
+
+.. math::
+   \mathbf r = \begin{pmatrix} r\sin\theta \cos \phi & r\sin\theta \sin \phi & r\cos\theta \end{pmatrix}.
+
+
+Suppose we have two vectors :math:`r_1` and :math:`r_2`. Multiplication of them becomes
+
+.. math::
+   \mathbf r_1 \cdot \mathbf r_2 &= r_1 r_2 \left[\sin\theta_1 \sin\theta_2\left( \cos\phi_1 \cos\phi_2 +   \sin\phi_1\sin\phi_2 \right) +  \cos \theta_1 \cos\theta_2\right]\\
+   &=r_1 r_2 \left[\sin\theta_1 \sin\theta_2 \cos(\phi_1-\phi_2) +  \cos \theta_1 \cos\theta_2\right]
+
+Meanwhile, we can expand the inner product using spherical harmonics. I steal the expression from `wikipedia <https://en.wikipedia.org/wiki/Table_of_spherical_harmonics>`_:
+
+.. math::
+   Y_{0}^{0}(\theta,\varphi)&={1\over 2}\sqrt{1\over \pi} & \\
+   Y_{1}^{-1}(\theta,\varphi) &=  {1\over 2}\sqrt{3\over 2\pi}\cdot e^{-i\varphi}\cdot\sin\theta &= {1\over 2}\sqrt{3\over 2\pi} \cdot{(x-iy)\over r} \\
+   Y_{1}^{ 0}(\theta,\varphi) &=  {1\over 2}\sqrt{3\over  \pi}\cdot     \cos\theta &= {1\over 2}\sqrt{3\over  \pi} \cdot{z\over r} \\
+   Y_{1}^{ 1}(\theta,\varphi) &= - {1\over 2}\sqrt{3\over 2\pi}\cdot e^{i\varphi}\cdot \sin\theta &= -{1\over 2}\sqrt{3\over 2\pi} \cdot{(x+iy)\over r}
+
+Then we notice that
+
+.. math::
+   {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2) &= 3\times \frac{1}{4\pi} \frac{x_1 x_2 + y_1 y_2}{r_1 r_2} \\
+   {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) &= 3\times\frac{1}{4\pi} \frac{z_1z_2}{r_1r_2}.
+
+
+The inner product of two vectors becomes
+
+.. math::
+   \mathbf r_1 \cdot \mathbf r_2 = \frac{4\pi}{3} r_1 r_2 \left[ {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) + {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2)  \right].
+
+In fact, we have another identity
+
+.. math::
+   1 - \mathbf r_1 \cdot \mathbf r_2 = 4\pi Y_0^0  +  \frac{4\pi}{3} r_1 r_2 \left[ {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) + {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2)  \right]
 
 
 

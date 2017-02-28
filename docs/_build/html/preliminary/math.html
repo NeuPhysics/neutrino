@@ -303,12 +303,13 @@ TeX: {
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">1.4. Mathematics Related</a><ul>
 <li><a class="reference internal" href="#pauli-matrices">1.4.1. Pauli Matrices</a></li>
-<li><a class="reference internal" href="#the-equations">1.4.2. The Equations</a></li>
-<li><a class="reference internal" href="#equation-solving">1.4.3. Equation Solving</a><ul>
-<li><a class="reference internal" href="#logarithmic-perturbation">1.4.3.1. Logarithmic Perturbation</a></li>
+<li><a class="reference internal" href="#spherical-harmonics">1.4.2. Spherical Harmonics</a></li>
+<li><a class="reference internal" href="#the-equations">1.4.3. The Equations</a></li>
+<li><a class="reference internal" href="#equation-solving">1.4.4. Equation Solving</a><ul>
+<li><a class="reference internal" href="#logarithmic-perturbation">1.4.4.1. Logarithmic Perturbation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#qualitative-analysis">1.4.4. Qualitative Analysis</a></li>
+<li><a class="reference internal" href="#qualitative-analysis">1.4.5. Qualitative Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -389,8 +390,38 @@ cos \theta &amp; \sin \theta \\
 \[U^\dagger \sigma_l  U = \sigma_l + 2i n_i^* n_j \epsilon_{ljk} \sigma_i\sigma_k.\]</div>
 <p>The second term can be rewritten using the properties of Pauli matrices and Levi-Civita symbol but no significant simplification is shown.</p>
 </div>
+<div class="section" id="spherical-harmonics">
+<h2>1.4.2. Spherical Harmonics<a class="headerlink" href="#spherical-harmonics" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id4">
+<img alt="../_images/558px-3D_Spherical.svg.png" src="../_images/558px-3D_Spherical.svg.png" />
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Physicists&#8217; convention of spherical coordinate system. By Andeggs, Public Domain, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=7478049">Link</a>.</span></p>
+</div>
+<p>A vector in spherical coordinates is</p>
+<div class="math">
+\[\mathbf r = \begin{pmatrix} r\sin\theta \cos \phi &amp; r\sin\theta \sin \phi &amp; r\cos\theta \end{pmatrix}.\]</div>
+<p>Suppose we have two vectors <span class="math">\(r_1\)</span> and <span class="math">\(r_2\)</span>. Multiplication of them becomes</p>
+<div class="math">
+\[\begin{split}\mathbf r_1 \cdot \mathbf r_2 &amp;= r_1 r_2 \left[\sin\theta_1 \sin\theta_2\left( \cos\phi_1 \cos\phi_2 +   \sin\phi_1\sin\phi_2 \right) +  \cos \theta_1 \cos\theta_2\right]\\
+&amp;=r_1 r_2 \left[\sin\theta_1 \sin\theta_2 \cos(\phi_1-\phi_2) +  \cos \theta_1 \cos\theta_2\right]\end{split}\]</div>
+<p>Meanwhile, we can expand the inner product using spherical harmonics. I steal the expression from <a class="reference external" href="https://en.wikipedia.org/wiki/Table_of_spherical_harmonics">wikipedia</a>:</p>
+<div class="math">
+\[\begin{split}Y_{0}^{0}(\theta,\varphi)&amp;={1\over 2}\sqrt{1\over \pi} &amp; \\
+Y_{1}^{-1}(\theta,\varphi) &amp;=  {1\over 2}\sqrt{3\over 2\pi}\cdot e^{-i\varphi}\cdot\sin\theta &amp;= {1\over 2}\sqrt{3\over 2\pi} \cdot{(x-iy)\over r} \\
+Y_{1}^{ 0}(\theta,\varphi) &amp;=  {1\over 2}\sqrt{3\over  \pi}\cdot     \cos\theta &amp;= {1\over 2}\sqrt{3\over  \pi} \cdot{z\over r} \\
+Y_{1}^{ 1}(\theta,\varphi) &amp;= - {1\over 2}\sqrt{3\over 2\pi}\cdot e^{i\varphi}\cdot \sin\theta &amp;= -{1\over 2}\sqrt{3\over 2\pi} \cdot{(x+iy)\over r}\end{split}\]</div>
+<p>Then we notice that</p>
+<div class="math">
+\[\begin{split}{Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2) &amp;= 3\times \frac{1}{4\pi} \frac{x_1 x_2 + y_1 y_2}{r_1 r_2} \\
+{Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) &amp;= 3\times\frac{1}{4\pi} \frac{z_1z_2}{r_1r_2}.\end{split}\]</div>
+<p>The inner product of two vectors becomes</p>
+<div class="math">
+\[\mathbf r_1 \cdot \mathbf r_2 = \frac{4\pi}{3} r_1 r_2 \left[ {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) + {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2)  \right].\]</div>
+<p>In fact, we have another identity</p>
+<div class="math">
+\[1 - \mathbf r_1 \cdot \mathbf r_2 = 4\pi Y_0^0  +  \frac{4\pi}{3} r_1 r_2 \left[ {Y_1^0}^*(\theta_1,\phi_1) Y_1^0(\theta_2,\phi_2) + {Y_1^{1}}^*(\theta_1,\phi_1) Y_1^1(\theta_2,\phi_2) + {Y_1^{-1}}^* (\theta_1,\phi_1) Y_1^{-1} (\theta_2,\phi_2)  \right]\]</div>
+</div>
 <div class="section" id="the-equations">
-<h2>1.4.2. The Equations<a class="headerlink" href="#the-equations" title="Permalink to this headline">¶</a></h2>
+<h2>1.4.3. The Equations<a class="headerlink" href="#the-equations" title="Permalink to this headline">¶</a></h2>
 <p>For 2 flavor oscillations, the equation for flavor neutrinos is</p>
 <div class="math">
 \[\begin{split}i \frac{d}{dt} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \frac{\Delta m^2}{4E} \begin{pmatrix} - \cos 2\theta &amp; \sin 2\theta \\  \sin 2\theta  &amp; \cos 2\theta   \end{pmatrix} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}\end{split}\]</div>
@@ -399,9 +430,9 @@ cos \theta &amp; \sin \theta \\
 \[\begin{split}i \frac{d}{dt} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \frac{\Delta m^2}{4E} \begin{pmatrix} \frac{4E}{\Delta m^2} \sqrt{2} G_F n_e - \cos 2\theta   &amp; \sin 2\theta \\  \sin 2\theta  &amp;  \cos 2\theta   \end{pmatrix} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="equation-solving">
-<span id="index-0"></span><h2>1.4.3. Equation Solving<a class="headerlink" href="#equation-solving" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>1.4.4. Equation Solving<a class="headerlink" href="#equation-solving" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="logarithmic-perturbation">
-<h3>1.4.3.1. Logarithmic Perturbation<a class="headerlink" href="#logarithmic-perturbation" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.4.1. Logarithmic Perturbation<a class="headerlink" href="#logarithmic-perturbation" title="Permalink to this headline">¶</a></h3>
 <p>Balantekin et al 1988 <a class="reference internal" href="#balantekin1988" id="id1">[Balantekin1988]</a> used this method to solve equation</p>
 <div class="math">
 \[- \frac{d^2}{dx^2} \psi_e - \left( \frac{1}{4}\left( \lambda(x) - \omega_v \cos 2\theta_v  \right)^2 + i \frac{1}{2}\frac{d}{dx} \left( \lambda(x) - \omega_v \cos 2\theta_v  \right) \right) \psi_e - (\omega_v \cos 2\theta_v)^2 \psi_e = 0\]</div>
@@ -427,7 +458,7 @@ cos \theta &amp; \sin \theta \\
 </div>
 </div>
 <div class="section" id="qualitative-analysis">
-<span id="index-1"></span><h2>1.4.4. Qualitative Analysis<a class="headerlink" href="#qualitative-analysis" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>1.4.5. Qualitative Analysis<a class="headerlink" href="#qualitative-analysis" title="Permalink to this headline">¶</a></h2>
 <p>The vacuum oscillation is determined by autonomous equations. A fixed point of an autonomous system is defined by</p>
 <div class="math">
 \[\begin{split}\frac{d}{dt} \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}=0,\end{split}\]</div>
@@ -459,9 +490,9 @@ G(f,g) &amp; = 0.\end{split}\]</div>
 <p>This linearization is only valid for hyperbolic fixed points which means that the eigenvalues of Jacobian matrix at fixed point has non-zero real part. Suppose the Jacobian is <span class="math">\(\mathbf{J}\)</span> with eigenvalues are <span class="math">\(\lambda_j\)</span>, a hyperbolic fixed point requires that <span class="math">\(\mathcal{Re}\lambda_j\neq 0\)</span>.</p>
 <p>For more analysis, checkout <cite>Poincare-Lyapunov Theorem</cite>.[1]_</p>
 <p>Define <span class="math">\(p=\mathrm{Tr}(\mathbf{J}(f_i,g_i))\)</span> and <span class="math">\(q=\mathrm{det}(\mathbf{J}(f_i,g_i))\)</span> then the systems can be categorized into 3 different categories given the case that the fixed point isa hyperbolic one.</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id5">
 <img alt="../_images/fixedpoints-massoudmalek.png" src="../_images/fixedpoints-massoudmalek.png" />
-<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">A diagram that shows the different categorizations given p and q values. Repellers and saddle points are unstable points but attractors are stable. Or in simple ways, given the eigenvalues of the Jacobian <span class="math">\(\lambda_1, \lambda_2\)</span>, <span class="math">\(Re(\lambda_1)&gt;0, Re(\lambda_2)&gt;0\)</span> gives us a repeller, <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&lt;0\)</span> gives us an attractor while <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&gt;0\)</span> gives us the saddle point.</span></p>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">A diagram that shows the different categorizations given p and q values. Repellers and saddle points are unstable points but attractors are stable. Or in simple ways, given the eigenvalues of the Jacobian <span class="math">\(\lambda_1, \lambda_2\)</span>, <span class="math">\(Re(\lambda_1)&gt;0, Re(\lambda_2)&gt;0\)</span> gives us a repeller, <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&lt;0\)</span> gives us an attractor while <span class="math">\(Re(\lambda_1)&lt;0, Re(\lambda_2)&gt;0\)</span> gives us the saddle point.</span></p>
 </div>
 <table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
