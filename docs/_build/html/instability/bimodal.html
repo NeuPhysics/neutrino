@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7.3. Bimodal Oscillations &#8212; Neutrino Notes</title>
+    <title>7.1. Bimodal Oscillations &#8212; Neutrino Notes</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Pictures" href="../pictures/index.html" />
-    <link rel="prev" title="7.2. List of Instabilities" href="instabilities-list.html" />
+    <link rel="next" title="7.2. Multi-angle Instability" href="multi-zenith-angle.html" />
+    <link rel="prev" title="7. Instability" href="index.html" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script type="text/x-mathjax-config">
@@ -241,9 +241,9 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">7. Instability</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="self-interaction-instability.html">7.1. Self-Interaction Instability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instabilities-list.html">7.2. List of Instabilities</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">7.3. Bimodal Oscillations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. Bimodal Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi-zenith-angle.html">7.2. Multi-angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi-azimuth-angle.html">7.3. MAA</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../pictures/index.html">8. Pictures</a><ul>
@@ -301,7 +301,10 @@ TeX: {
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">7.3. Bimodal Oscillations</a></li>
+<li><a class="reference internal" href="#">7.1. Bimodal Oscillations</a><ul>
+<li><a class="reference internal" href="#refs-notes">7.1.1. Refs &amp; Notes</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -311,11 +314,11 @@ TeX: {
               
                 
   <li>
-    <a href="instabilities-list.html" title="Previous Chapter: 7.2. List of Instabilities"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7.2. List of ...</span>
+    <a href="index.html" title="Previous Chapter: 7. Instability"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. Instability</span>
     </a>
   </li>
   <li>
-    <a href="../pictures/index.html" title="Next Chapter: 8. Pictures"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">8. Pictures &raquo;</span>
+    <a href="multi-zenith-angle.html" title="Next Chapter: 7.2. Multi-angle Instability"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">7.2. Multi-an... &raquo;</span>
     </a>
   </li>
               
@@ -344,12 +347,37 @@ TeX: {
     <div class="col-md-12 content">
       
   <div class="section" id="bimodal-oscillations">
-<h1>7.3. Bimodal Oscillations<a class="headerlink" href="#bimodal-oscillations" title="Permalink to this headline">¶</a></h1>
-<div class="note admonition">
-<p class="first admonition-title">List of References</p>
-<ol class="last arabic simple">
-<li>Samuel, S. (1996). Bimodal coherence in dense self-interacting neutrino gases. Physical Review D, 53(10), 5382–5393. doi:10.1103/PhysRevD.53.5382</li>
-</ol>
+<span id="index-0"></span><h1>7.1. Bimodal Oscillations<a class="headerlink" href="#bimodal-oscillations" title="Permalink to this headline">¶</a></h1>
+<p>Bimodal in this context means <span class="highlight-text">two frequencies</span> <a class="reference internal" href="#samuel1996" id="id1">[Samuel1996]</a>. With neutrino coherent scattering, the neutrino state consists of two frequencies.</p>
+<p>An example of such intability happens in a system composed of equal amounts of neutrinos and antineutrinos. Flavour transform occurs due to</p>
+<div class="math">
+\[\nu_e + \bar{\nu_e} \leftrightarrow \nu_x + \bar{\nu_x}.\]</div>
+<p>Vacuum mixing angle triggers the flavour instability.</p>
+<p>Neutrino oscillations has a small amplitude inside a SN core (suppressed by matter effects) <a class="reference internal" href="#wolfenstein1978" id="id2">[Wolfenstein1978]</a>, which basically pins down the flavour transformation. As the neutrinos reaches a furthur distance, matter effect could drop out. Neutrino self-interaction becomes more important. <a class="reference internal" href="#samuel1996" id="id3">[Samuel1996]</a> considers a system of neutrinos and antineutrinos with only vacuum and neutrino self-interactions. The neutrinos and antineutrino forms a bipolar vector in flavor isospin space. The flavor isospin of neutrinos and that of antineutrinos are coupled.</p>
+<p><a class="reference internal" href="#duan2013" id="id4">[Duan2013]</a> decomposed the system into &#8220;normal modes&#8221; of the flavor isospin. The bipolar system is discussed in details in this paper. In a two beam model, the length of one of the perturbations can be discribed using an equation</p>
+<div class="math">
+\[\ddot {\tilde q_+} \approx - \eta (\eta + \mu) \tilde q_+,\]</div>
+<p>where <span class="math">\(\eta=\pm 1\)</span> deterimines the hierarchy, <span class="math">\(\mu=2\sqrt{2}G_F \lvert \omega_0 \rvert^{-1} n_{\mathrm {tot}}\)</span>. We find out from the equation that normal hierarchy (NH, <span class="math">\(\eta=1\)</span>) doesn&#8217;t have instabilities, but inverted hierarchy (IH, <span class="math">\(\eta=-1\)</span>) has instabilities with growth rate <span class="math">\(\sqrt{\mu-1}\)</span>, if <span class="math">\(\mu&gt;1\)</span>.</p>
+<div class="section" id="refs-notes">
+<h2>7.1.1. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<table class="docutils citation" frame="void" id="samuel1996" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Samuel1996]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Samuel, S. (1996). Bimodal coherence in dense self-interacting neutrino gases. Physical Review D, 53(10), 5382–5393. doi:10.1103/PhysRevD.53.5382</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="duan2013" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[Duan2013]</a></td><td>Duan, H. (2013). <a class="reference external" href="https://doi.org/10.1103/PhysRevD.88.125008">Flavor oscillation modes in dense neutrino media</a>. Physical Review D - Particles, Fields, Gravitation and Cosmology, 88.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="wolfenstein1978" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Wolfenstein1978]</a></td><td>Wolfenstein, L. <a class="reference external" href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.17.2369">Neutrino oscillations in matter.</a> <em>Phys. Rev. D</em> <strong>17</strong>, 23692374 (1978). Or check papers of MSW effect such as Wick Haxton&#8217;s excellent review.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
