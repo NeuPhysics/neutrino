@@ -234,16 +234,17 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="../collective/concepts.html">6.1. Collective Behavior</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../collective/equation-of-motion.html">6.2. Equation of Motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../collective/intuitions.html">6.3. Intuitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/synchronization.html">6.4. Synchronization in Neutrino Oscillations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/linear-stability-analysis.html">6.5. Linear Stability Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/fast-modes.html">6.6. Fast Modes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/symmetries.html">6.7. Symmetries in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetric-models.html">6.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/synchronization.html">6.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/linear-stability-analysis.html">6.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/fast-modes.html">6.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetries.html">6.8. Symmetries in Neutrino Oscillations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">7. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/self-interaction-instability.html">7.1. Self-Interaction Instability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../instability/instabilities-list.html">7.2. List of Instabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">7.3. Bimodal Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">7.1. Bimodal Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">7.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">7.3. MAA</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../pictures/index.html">8. Pictures</a><ul>
@@ -304,9 +305,11 @@ TeX: {
 <li><a class="reference internal" href="#">12.2. Supernova</a><ul>
 <li><a class="reference internal" href="#supernova-explosion">12.2.1. Supernova Explosion</a><ul>
 <li><a class="reference internal" href="#bounce-to-explode">12.2.1.1. Bounce to Explode</a></li>
-<li><a class="reference internal" href="#but">12.2.1.2. But</a></li>
-<li><a class="reference internal" href="#other-models">12.2.1.3. Other Models</a></li>
-<li><a class="reference internal" href="#efforts">12.2.1.4. Efforts</a></li>
+<li><a class="reference internal" href="#neutrino-mechanism-delayed-heating">12.2.1.2. Neutrino Mechanism - Delayed Heating</a></li>
+<li><a class="reference internal" href="#convection">12.2.1.3. Convection</a></li>
+<li><a class="reference internal" href="#general-relativity">12.2.1.4. General Relativity</a></li>
+<li><a class="reference internal" href="#other-ideas">12.2.1.5. Other Ideas</a></li>
+<li><a class="reference internal" href="#efforts">12.2.1.6. Efforts</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#boltzmann-transport">12.2.2. Boltzmann Transport</a></li>
@@ -357,7 +360,8 @@ TeX: {
       
   <div class="section" id="supernova">
 <h1>12.2. Supernova<a class="headerlink" href="#supernova" title="Permalink to this headline">¶</a></h1>
-<p>One astonishing fact about core collapse supernova is that almost all (99%) of the gravitational binding energy will be transfered to neutrinos.</p>
+<p>A typical time scale for core collapse of a core collapse supernova is 0.5 second, which is exceptionally quick. Followed by a bounce, a supernova could be successful.</p>
+<p>Another astonishing fact about core collapse supernova is that almost all (99%) of the gravitational binding energy will be transfered to neutrinos.</p>
 <p>Features of Type II supernova from observation in astronomy are listed below <a class="reference internal" href="#budge" id="id1">[Budge]</a>.</p>
 <ol class="arabic simple">
 <li>They have asymmetic remnants,</li>
@@ -368,30 +372,91 @@ TeX: {
 <p>We are most interested in neutrinos. From the view of observations, our detectors in the solar system can detect neutrino flux with energy spectrum and time evolution.</p>
 <div class="section" id="supernova-explosion">
 <h2>12.2.1. Supernova Explosion<a class="headerlink" href="#supernova-explosion" title="Permalink to this headline">¶</a></h2>
+<p>For a short review, Timothy Brandt&#8217;s slides are perfect for this purpose.</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/history-of-supernov-theory.jpg" src="../_images/history-of-supernov-theory.jpg" />
+<p class="caption"><span class="caption-number">Fig. 12.14 </span><span class="caption-text">From <a class="reference external" href="http://www.astro.princeton.edu/~burrows/classes/541/NeutrinoMechv2.pdf">Timothy Brandt</a>.</span></p>
+</div>
 <div class="section" id="bounce-to-explode">
 <h3>12.2.1.1. Bounce to Explode<a class="headerlink" href="#bounce-to-explode" title="Permalink to this headline">¶</a></h3>
 <p>The first idea about core collapse supernova model is to facilitated the idea of bounce on the surface of proto-neutron star.</p>
 <p>It should be notice that heat capacity is negative for a star balanced by nuclear fusion until other short range repulsive forces is comparable with grativational force.</p>
 <p>Thus we expect a violent destiny in the end of some stars when the fusion is not suffient to fight the gravitational force leading to a runaway process. The star collapses.</p>
 <p>However, collapse of the star is usually countered by other forces such as nuclear strong forces. When the core reaches nuclear density which is the limit of compression of nuclear materials, a bounce occurs.</p>
-</div>
-<div class="section" id="but">
-<h3>12.2.1.2. But<a class="headerlink" href="#but" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="first admonition-title">But</p>
 <p>However, the bounce alone is not enough. The shock of the explosion will stall and fall back onto the proto-neutron star. More energy should be deposited into the shock in order to revive it. Hence neutrino heating is introduced.</p>
 <p>Numerical simulations show that simple models of neutrino heating is still not sufficient. To revive the shock, we have to develop more models.</p>
-<ol class="arabic simple">
+<ol class="last arabic simple">
 <li>Is the energy density in the shock more distributed or concentrated in small regions? This is related to <strong>convection</strong> and the <strong>angular distribution of neutrinos</strong>.</li>
 <li>Do we have more electron flavor neutrinos at the shock? Electron flavor neutrinos are the primary source of neutrino energy deposition into the shock. This is related to the <strong>neutrino flavor conversion</strong>.</li>
 <li>Numerically, neutrino transport in supernova is very hard if flavor oscillations are considered. One of the trick is to estimate the flavor conversion at different distances then implement it as a flavor profile in the simulation.</li>
 </ol>
 </div>
-<div class="section" id="other-models">
-<h3>12.2.1.3. Other Models<a class="headerlink" href="#other-models" title="Permalink to this headline">¶</a></h3>
-<p>Adam Burrows et al developed a mechanism that allows protoneutron star to vibrate and explode the star <a class="reference internal" href="#burrows2006" id="id2">[Burrows2006]</a>. In their model, neutrino energy deposition is not necessary.</p>
+<p>So we need some energy input to the materials. Then we remember the toy problem named astro blaster. We could assume the bounce happens but leaves some materials back at the star while thowring part of materials out of the gravity well.</p>
+<p>Or we simply need energy input to the shock. One of the sources is radiation pressure which is always there. Another one is nuclear reactions.</p>
+<p>Well, there is another reason that a simple bounce won&#8217;t work. It is the ram pressure. As the shock moves through furthure out, it experiences the friction of the surronding materials, or the ram pressure, <span class="math">\(p_{ram}\sim \rho v^2\)</span>, which could be large. Assuming the post chock pressure is <span class="math">\(p_{ps}\)</span>, <span class="math">\(p_{ps}&lt;p_{ram}\)</span> will kill the out-going shock.</p>
+<div class="note admonition">
+<p class="first admonition-title">Towards a successful explosion</p>
+<p>Timothy Brandt mention in <a class="reference external" href="http://www.astro.princeton.edu/~burrows/classes/541/NeutrinoMechv2.pdf">one of his talk</a> that</p>
+<blockquote>
+<div><p>We need to either increase <span class="math">\(p_{post−shock}\)</span>, decrease <span class="math">\(p_{ram}\)</span>, or both, by:</p>
+<ol class="arabic simple">
+<li>Depositing additional energy behind the shock,</li>
+<li>Changing the nuclear equation of state (nope: e.g. Burrows &amp; Lattimer 1985),</li>
+<li>Using radiation pressure (nope: <span class="math">\(L_{typ}\sim 10^{53} \mathrm{erg s^{−1}} \ll L_{Edd} \sim 10^{55} \mathrm{erg s^{−1}}\)</span>) or</li>
+<li>Using progenitor models with steeper density profiles.</li>
+</ol>
+</div></blockquote>
+<p>So we pretty much rely on more energy deposition to the shock.</p>
+<p>We could use</p>
+<ol class="last arabic simple">
+<li>more nuclear burning,</li>
+<li><span class="math">\(\nu_e + \bar\nu_e \to e^+ + e^-\)</span> then the annihilation of them,</li>
+<li>the neutrino mechanism which is a delayed neutrino heating.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="neutrino-mechanism-delayed-heating">
+<h3>12.2.1.2. Neutrino Mechanism - Delayed Heating<a class="headerlink" href="#neutrino-mechanism-delayed-heating" title="Permalink to this headline">¶</a></h3>
+<p>Supernova neutrinos are typically within a range 5-40 MeV. Usually neutrino interactions with matter is negligible. In the environment of supernova explosion, the mean free path for neutrinos is <a class="reference external" href="http://www.astro.princeton.edu/~burrows/classes/541/NeutrinoMechv2.pdf">of the order</a></p>
+<div class="math">
+\[L \sim 100 \left( \frac{10^{15} \mathrm{g\cdot cm^{-3}}}{\rho} \right) \left( \frac{ 10 \mathrm{MeV} }{E_\nu} \right)^2 \mathrm{cm}.\]</div>
+<p>Neutrino can heat up the materials through neutrino and antineutrino capture processes. Meanwhile, we have neutrino cooling through URCA processes.</p>
+<div class="note admonition">
+<p class="first admonition-title">Neutrino Cooling</p>
+<p>URCA processes:</p>
+<ol class="arabic simple">
+<li>Electron capture: <span class="math">\(p+e^-\to \nu_e + n\)</span>,</li>
+<li>Position capture: <span class="math">\(n+e^+ \to \bar\nu_e + p\)</span>.</li>
+</ol>
+<p class="last">Cooling is at a rate that is proportional to <span class="math">\(T^6\)</span>, which is fast.</p>
+</div>
+<p>There exists a region of net neutrino heating. To doposite sufficient energy, the matter within this region has to stay long enough to recieve as much as the energy that neutrino can deliver.</p>
+<p>Multi-dimensional simulations seems to increase <span class="math">\(\tau_{res}\)</span> (the time of stay for matter within the heating region). And more matter can move through the region of heating which allows more heat to be gainded and transfered.</p>
+</div>
+<div class="section" id="convection">
+<h3>12.2.1.3. Convection<a class="headerlink" href="#convection" title="Permalink to this headline">¶</a></h3>
+<p>Convention in the core can speed up the neutrino escaping, which can increase the power of neutrino heating.</p>
+<p>But <a class="reference internal" href="#dessart2006" id="id2">[Dessart2006]</a> showed that the core has motions along cylinders due to rotations and it prevents large convection.</p>
+</div>
+<div class="section" id="general-relativity">
+<h3>12.2.1.4. General Relativity<a class="headerlink" href="#general-relativity" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="first admonition-title">References</p>
+<p class="last">See <a class="reference external" href="http://www.astro.princeton.edu/~burrows/classes/541/NeutrinoMechv2.pdf">Timothy Brandt</a>.</p>
+</div>
+<p>General relativity effect tends to compactify the core thus producing more energetic neutrinos.</p>
+<p>However, neutrinos lose kinetic energy as it climb out of the gravitational well.</p>
+<p>Probably a higher order effect.</p>
+</div>
+<div class="section" id="other-ideas">
+<h3>12.2.1.5. Other Ideas<a class="headerlink" href="#other-ideas" title="Permalink to this headline">¶</a></h3>
+<p>Adam Burrows et al developed a mechanism that allows protoneutron star to vibrate and explode the star <a class="reference internal" href="#burrows2006" id="id4">[Burrows2006]</a>. In their model, neutrino energy deposition is not necessary.</p>
 </div>
 <div class="section" id="efforts">
-<h3>12.2.1.4. Efforts<a class="headerlink" href="#efforts" title="Permalink to this headline">¶</a></h3>
-<p>Budge mentioned that several directions are being explored for more successful supernova models. <a class="reference internal" href="#budge" id="id3">[Budge]</a></p>
+<h3>12.2.1.6. Efforts<a class="headerlink" href="#efforts" title="Permalink to this headline">¶</a></h3>
+<p>Budge mentioned that several directions are being explored for more successful supernova models. <a class="reference internal" href="#budge" id="id5">[Budge]</a></p>
 <ol class="arabic simple">
 <li>Hydrodynamics,</li>
 <li>Boltzmann transport,</li>
@@ -424,13 +489,19 @@ TeX: {
 <table class="docutils citation" frame="void" id="budge" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[Budge]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> <a class="reference external" href="http://www.slac.stanford.edu/econf/C0805263/Slides/Budge.pdf">Supernova Theory: Simulation and Neutrino Fluxes by Kent G. Budge</a></td></tr>
+<tr><td class="label">[Budge]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> <a class="reference external" href="http://www.slac.stanford.edu/econf/C0805263/Slides/Budge.pdf">Supernova Theory: Simulation and Neutrino Fluxes by Kent G. Budge</a></td></tr>
 </tbody>
 </table>
 <table class="docutils citation" frame="void" id="burrows2006" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Burrows2006]</a></td><td>Burrows, A., Livne, E., Dessart, L., Ott, C. D., &amp; Murphy, J. (2006). <a class="reference external" href="http://doi.org/10.1086/500174">A New Mechanism for Core‐Collapse Supernova Explosions</a>. The Astrophysical Journal, 640(2), 878–890.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id4">[Burrows2006]</a></td><td>Burrows, A., Livne, E., Dessart, L., Ott, C. D., &amp; Murphy, J. (2006). <a class="reference external" href="http://doi.org/10.1086/500174">A New Mechanism for Core‐Collapse Supernova Explosions</a>. The Astrophysical Journal, 640(2), 878–890.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="dessart2006" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Dessart2006]</a></td><td>Dessart, L., Burrows, A., Ott, C. D., Livne, E., Yoon, S. ‐Y., &amp; Langer, N. (2006). <a class="reference external" href="https://doi.org/10.1086/503626">Multidimensional Simulations of the Accretion‐induced Collapse of White Dwarfs to Neutron Stars</a>. The Astrophysical Journal, 644(2), 1063–1084.</td></tr>
 </tbody>
 </table>
 </div>
