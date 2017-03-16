@@ -80,10 +80,12 @@ latex_preamble_data = r"""
 \usepackage{hyperref}
 \usepackage{mathrsfs}
 \usepackage{color}
+\usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{slashed}
 \usepackage{graphicx}
+\usepackage{graphics}
 
 
 
@@ -114,6 +116,7 @@ latex_preamble_data = r"""
 \newcommand{\ket}[1]{\left| #1\right\rangle}
 \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
 \newcommand{\avg}[1]{\left< #1 \right>}
+
 
 """
 
