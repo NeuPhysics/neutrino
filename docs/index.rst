@@ -64,6 +64,7 @@ Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :down
    instability/index.rst
    pictures/index.rst
    models/index.rst
+   resonances/index.rst
    statistical-physics/index.rst
    geometric-phase/index.rst
    astrophysics/index.rst
