@@ -449,7 +449,7 @@ which is a rotation for 3D with a CP violation phase :math:`\delta`. For simplic
 The Hamiltonian in flavor basis is found by applying the transformation that
 
 .. math::
-   \mathbf{H} &= \mathbf{U} \mathbf{H_{vm}} \mathbf{U^{-1}}.
+   \mathbf{H} = \mathbf{U} \mathbf{H_{vm}} \mathbf{U^{-1}}.
 
 
 

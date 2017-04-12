@@ -11,3 +11,4 @@ Many astrophysical phenomena and neutrinos are very closed reltated. As an examp
 
    stars-as-neutrino-factories.rst
    supernova.rst
+   merging-compact-objects.rst
