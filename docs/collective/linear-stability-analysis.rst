@@ -230,8 +230,8 @@ In the four-beam case, we define the system using the following three lists of p
 
 .. math::
    \epsilon =& \{\epsilon^L, \bar\epsilon^L, \epsilon^R, \bar\epsilon^R\}\\
-   \theta =& \{1, \alpha, \alpha, 1\}\\
-   \alpha =& \{ \theta_1, \theta_2, \pi-\theta_2,\pi-\theta_1 \},
+   \alpha =& \{1, \alpha, \alpha, 1\}\\
+   \theta =& \{ \theta_1, \theta_2, \pi-\theta_2,\pi-\theta_1 \},
 
 where the :math:`\epsilon`'s are used to construct the perturbed density matrix,
 
