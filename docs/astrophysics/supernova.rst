@@ -3,6 +3,8 @@ Supernova
 
 A typical time scale for core collapse of a core collapse supernova is 0.5 second, which is exceptionally quick. Followed by a bounce, a supernova could be successful.
 
+The energy released in a supernova is typically :math:`\sim 10^{51}\mathrm{erg}\sim 6.24\times 10^{56}\mathrm{MeV}`, which is usually dubbed as :math:`1\mathrm{B}` or 1 Bethe. John Cherry Jr wrote in his thesis that this is the energy to unbind a 10 solar mass star gravitationally. Blowing away most part of the stars is what exactly a supernova does.
+
 Another astonishing fact about core collapse supernova is that almost all (99%) of the gravitational binding energy will be transfered to neutrinos.
 
 
