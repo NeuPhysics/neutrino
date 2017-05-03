@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>8.2. Flavor Isospin &#8212; Neutrino Notes</title>
+    <title>9.2. Flavor Isospin &#8212; Neutrino Notes</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Models" href="../models/index.html" />
-    <link rel="prev" title="8.1. Some Useful Physics Pictures" href="basics.html" />
+    <link rel="next" title="10. Models" href="../models/index.html" />
+    <link rel="prev" title="9.1. Some Useful Physics Pictures" href="basics.html" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script type="text/x-mathjax-config">
@@ -95,7 +95,8 @@ TeX: {
      slashed: ['\\cancel{\#1}',1],
      bold: ['\\boldsymbol{\#1}',1],
      sech: ['\\operatorname{sech}{\#1}',1],
-     csch: ['\\operatorname{csch}{\#1}',1]
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
    }
 }
 });
@@ -230,64 +231,78 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../collective/index.html">6. Collective Behavior</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../collective/concepts.html">6.1. Collective Behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/equation-of-motion.html">6.2. Equation of Motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/intuitions.html">6.3. Intuitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/synchronization.html">6.4. Synchronization in Neutrino Oscillations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/linear-stability-analysis.html">6.5. Linear Stability Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/fast-modes.html">6.6. Fast Modes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collective/symmetries.html">6.7. Symmetries in Neutrino Oscillations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../instability/index.html">7. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/self-interaction-instability.html">7.1. Self-Interaction Instability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../instability/instabilities-list.html">7.2. List of Instabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">7.3. Bimodal Oscillations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">8. Pictures</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="basics.html">8.1. Some Useful Physics Pictures</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. Flavor Isospin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bimodal Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../models/index.html">9. Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/index.html#homogeneous-and-isotropic-neutrino-gas">9.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">9. Pictures</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.2. Flavor Isospin</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/index.html">10. Statistical Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../statistical-physics/master-eqn.html">10.1. Neutrino Oscillation And Master Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../geometric-phase/index.html">11. Geometric Phase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/review.html">11.1. Review of Geometric Phases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/neutrino-oscillations-berry-phase.html">11.2. Neutrino Oscillations and Berry Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../astrophysics/index.html">12. Astrophysics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../astrophysics/stars-as-neutrino-factories.html">12.1. Stars as Neutrino Factories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../astrophysics/supernova.html">12.2. Supernova</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">13. Gravity</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gravity/trajectory.html">13.1. Effect of Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../cosmology/index.html">14. Neutrinos and Cosmology</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#baryon-asymmetry-in-the-univserse">14.1. Baryon Asymmetry in the Univserse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#cosmic-neutrino-background">14.2. Cosmic Neutrino Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">15. Other Topics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../misc/basis.html">15.1. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/decoherence.html">15.2. Decoherence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/qualitative.html">15.3. Qualitative Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/cheatsheet.html">15.4. Neutrino Cheat Sheet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/faq.html">15.5. Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../ref.html">16. References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">17. Acknowledgement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
 </ul>
 </li>
@@ -301,14 +316,14 @@ TeX: {
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">8.2. Flavor Isospin</a><ul>
-<li><a class="reference internal" href="#neutrino-flavour-isospin">8.2.1. Neutrino Flavour Isospin</a></li>
-<li><a class="reference internal" href="#graphical-representation-of-flavor-isospin">8.2.2. Graphical Representation of Flavor Isospin</a><ul>
-<li><a class="reference internal" href="#vacuum-oscillation">8.2.2.1. Vacuum Oscillation</a></li>
-<li><a class="reference internal" href="#oscillations-in-matter">8.2.2.2. Oscillations in Matter</a></li>
+<li><a class="reference internal" href="#">9.2. Flavor Isospin</a><ul>
+<li><a class="reference internal" href="#neutrino-flavour-isospin">9.2.1. Neutrino Flavour Isospin</a></li>
+<li><a class="reference internal" href="#graphical-representation-of-flavor-isospin">9.2.2. Graphical Representation of Flavor Isospin</a><ul>
+<li><a class="reference internal" href="#vacuum-oscillation">9.2.2.1. Vacuum Oscillation</a></li>
+<li><a class="reference internal" href="#oscillations-in-matter">9.2.2.2. Oscillations in Matter</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#refs-notes">8.2.3. Refs &amp; Notes</a></li>
+<li><a class="reference internal" href="#refs-notes">9.2.3. Refs &amp; Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -320,11 +335,11 @@ TeX: {
               
                 
   <li>
-    <a href="basics.html" title="Previous Chapter: 8.1. Some Useful Physics Pictures"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 8.1. Some Use...</span>
+    <a href="basics.html" title="Previous Chapter: 9.1. Some Useful Physics Pictures"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 9.1. Some Use...</span>
     </a>
   </li>
   <li>
-    <a href="../models/index.html" title="Next Chapter: 9. Models"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Models &raquo;</span>
+    <a href="../models/index.html" title="Next Chapter: 10. Models"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">10. Models &raquo;</span>
     </a>
   </li>
               
@@ -353,7 +368,7 @@ TeX: {
     <div class="col-md-12 content">
       
   <div class="section" id="flavor-isospin">
-<h1>8.2. Flavor Isospin<a class="headerlink" href="#flavor-isospin" title="Permalink to this headline">¶</a></h1>
+<h1>9.2. Flavor Isospin<a class="headerlink" href="#flavor-isospin" title="Permalink to this headline">¶</a></h1>
 <div class="warning admonition">
 <p class="first admonition-title">Notations</p>
 <p class="last">In this part we use bold symbols for vectors because the subscript with a over arrow is too ugly to read.</p>
@@ -379,7 +394,7 @@ H_{\nu\nu} &amp;=\sqrt{2}G_F \int\mathrm{d}^3 \mathbf{p}' ( 1 - \hat{\mathbf{p}}
 <div class="math">
 \[i \frac{d}{dt} \rho = \left[ H, \rho \right].\]</div>
 <div class="section" id="neutrino-flavour-isospin">
-<span id="neutrino-flavor-isospin"></span><h2>8.2.1. Neutrino Flavour Isospin<a class="headerlink" href="#neutrino-flavour-isospin" title="Permalink to this headline">¶</a></h2>
+<span id="neutrino-flavor-isospin"></span><h2>9.2.1. Neutrino Flavour Isospin<a class="headerlink" href="#neutrino-flavour-isospin" title="Permalink to this headline">¶</a></h2>
 <div class="hint admonition">
 <p class="first admonition-title">Mathematical Reason</p>
 <p class="last">The reason behind this isospin for neutrino flavors is that Pauli matrices plus identity form a complete basis for all 2 by 2 matrices.</p>
@@ -465,7 +480,7 @@ P_1 + i P_2 &amp; = 2 \psi_e^* \psi_x ,\end{split}\]</div>
 <div class="math">
 \[\frac{d}{dx} \mathbf s = \frac{1}{2}\mathbf s \times \mathbf H,\]</div>
 <p>which is <strong>NOT</strong> good enough compared to the one we would have with the 1/2.</p>
-<p class="last">The minus sign is to revert the whole system so that it is easier to deal with, such as <a class="reference internal" href="#flavor-isospin-graphics-vacuum-only"><span class="std std-numref">Fig. 8.8</span></a>. <strong>Without this minus sign</strong>, for normal hierarchy of <span class="math">\(\delta m_{12}\)</span> and neutrinos, we would have the vacuum Hamiltonian vector almost pointing downward and the matter effect pointing upward, which are not so convinient.</p>
+<p class="last">The minus sign is to revert the whole system so that it is easier to deal with, such as <a class="reference internal" href="#flavor-isospin-graphics-vacuum-only"><span class="std std-numref">Fig. 9.8</span></a>. <strong>Without this minus sign</strong>, for normal hierarchy of <span class="math">\(\delta m_{12}\)</span> and neutrinos, we would have the vacuum Hamiltonian vector almost pointing downward and the matter effect pointing upward, which are not so convinient.</p>
 </div>
 <p>In order to have a look at the effect of different components, we also define <span class="math">\(\mathbf H_{v}\)</span> and <span class="math">\(\mathbf H_m\)</span>,</p>
 <div class="math">
@@ -519,7 +534,7 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 </div>
 </div>
 <div class="section" id="graphical-representation-of-flavor-isospin">
-<h2>8.2.2. Graphical Representation of Flavor Isospin<a class="headerlink" href="#graphical-representation-of-flavor-isospin" title="Permalink to this headline">¶</a></h2>
+<h2>9.2.2. Graphical Representation of Flavor Isospin<a class="headerlink" href="#graphical-representation-of-flavor-isospin" title="Permalink to this headline">¶</a></h2>
 <p>To have more understanding in the flavor isospin picture, we prefer to visualize it by putting up a 3-dimensional coordinate system. As a first step, we need to know what does a vector mean in such a system.</p>
 <div class="note admonition">
 <p class="first admonition-title">Why 3D Coordinate System</p>
@@ -527,14 +542,14 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 </div>
 <div class="figure align-center" id="id3">
 <img alt="../_images/isospin-space.png" src="../_images/isospin-space.png" />
-<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Isospin space. <a class="reference download internal" href="../_downloads/isospin-space.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Isospin space. <a class="reference download internal" href="../_downloads/isospin-space.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
 <p>First of all, we need to understand the component of flavor isospin projected on the black vertical axis. Apply the definition of flavor iosospin we can calculate the z component of it</p>
 <div class="math">
 \[\mathbf s_z = \frac{1}{2}\Psi^\dagger \sigma_3 \Psi = \frac{1}{2} \lvert \psi_e \rvert ^2 - \lvert \psi_x \rvert^2,\]</div>
 <p>which means the difference between electron flaor and the other flavor. Thus on this axis, +1/2 means all electron flavor, while -1/2 means all the other flavor.</p>
 <div class="section" id="vacuum-oscillation">
-<h3>8.2.2.1. Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h3>
+<h3>9.2.2.1. Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h3>
 <div class="warning admonition">
 <p class="first admonition-title">Basis</p>
 <p>Since we are talking about vectors and matrices, basis is always the concern.</p>
@@ -549,7 +564,7 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>Let&#8217;s start from electron flavor. If mixing angle is zero, the Hamiltonian vector will be on z axis and is aligned with initial state of flavor isospin. Recall the equation of motion is procession-like, thus <span class="math">\(\frac{d}{dt}\mathbf s= \mathbf{s}\times \mathbf H_v = \boldsymbol 0\)</span> and no flavor oscilltion or flavor mixing happens.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/zero-mixing-angle-isospin-graph.png" src="../_images/zero-mixing-angle-isospin-graph.png" />
-<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">Flavor isospin vector when mixing angle is zero. <a class="reference download internal" href="../_downloads/zero-mixing-angle-isospin-graph.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Flavor isospin vector when mixing angle is zero. <a class="reference download internal" href="../_downloads/zero-mixing-angle-isospin-graph.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
 <div class="hint admonition">
 <p class="first admonition-title">Different Initial Condition</p>
@@ -558,21 +573,21 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>Alternative, we can look at another limit, which is <span class="math">\(\theta_v = \frac{\pi}{4}\)</span>. The precession will be around x axis, thus the projection of flavor isospin vector will be oscillating from 1/2 (all electron flavor) to 0 (equal flavor content) then to -1/2 (all the other flavor) and back. In this case, the mixing should be maximium, i.e., the flavor conversion should be complete at some point.</p>
 <div class="figure align-center" id="id5">
 <span id="pi-over-four-mixing-angle-isospin-graph"></span><img alt="../_images/pi-over-four-mixing-angle-isospin-graph.png" src="../_images/pi-over-four-mixing-angle-isospin-graph.png" />
-<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Maximium conversion of initial electron flavor. The oscillation is between a up right state (electron flavor) and a down state (the other flavor). <a class="reference download internal" href="../_downloads/pi-over-four-mixing-angle-isospin-graph.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.7 </span><span class="caption-text">Maximium conversion of initial electron flavor. The oscillation is between a up right state (electron flavor) and a down state (the other flavor). <a class="reference download internal" href="../_downloads/pi-over-four-mixing-angle-isospin-graph.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
-<p>In general we can graphically represent any oscillations of flavor isospin using such graph, as shown in <a class="reference internal" href="#flavor-isospin-graphics-vacuum-only"><span class="std std-numref">Fig. 8.8</span></a>.</p>
+<p>In general we can graphically represent any oscillations of flavor isospin using such graph, as shown in <a class="reference internal" href="#flavor-isospin-graphics-vacuum-only"><span class="std std-numref">Fig. 9.8</span></a>.</p>
 <div class="figure align-center" id="id6">
 <span id="flavor-isospin-graphics-vacuum-only"></span><img alt="../_images/flavor-isospin-graphics-vacuum-only.png" src="../_images/flavor-isospin-graphics-vacuum-only.png" />
-<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Graphical representation of vacuum Hamiltonian.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.8 </span><span class="caption-text">Graphical representation of vacuum Hamiltonian.</span></p>
 </div>
 </div>
 <div class="section" id="oscillations-in-matter">
-<h3>8.2.2.2. Oscillations in Matter<a class="headerlink" href="#oscillations-in-matter" title="Permalink to this headline">¶</a></h3>
+<h3>9.2.2.2. Oscillations in Matter<a class="headerlink" href="#oscillations-in-matter" title="Permalink to this headline">¶</a></h3>
 <p>Vacuum is easy to understand, so is neutrino oscillations in constant matter potential. We could always define new mixing angles <span class="math">\(\theta_m\)</span> in matter and effective angular frequency <span class="math">\(\omega_m\)</span> so that the Hamiltonian with constant matter potential becomes</p>
 <div class="math">
 \[H = \frac{\omega_m}{2} \cos 2\theta_m \sigma_3 + \frac{\omega_m}{2} \sin 2\theta_m \sigma_1,\]</div>
 <p>which has exactly the same form as vacuum Hamiltonian. So we expect the constant matter potential oscillation graph to be exactly the same as vacuum oscillation, but with different effective mixing angles.</p>
-<p>As for changing matter potential, we can only analyze a few cases. More can be analyzed if we also plot out the components of Hamiltonian, as in <a class="reference internal" href="#oscillation-isospin-graph-msw"><span class="std std-numref">Fig. 8.9</span></a>.</p>
+<p>As for changing matter potential, we can only analyze a few cases. More can be analyzed if we also plot out the components of Hamiltonian, as in <a class="reference internal" href="#oscillation-isospin-graph-msw"><span class="std std-numref">Fig. 9.9</span></a>.</p>
 <div class="hint admonition">
 <p class="first admonition-title">Equation of Motion</p>
 <p>The equation of motion is</p>
@@ -586,18 +601,18 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 </div>
 <div class="figure align-center" id="id7">
 <span id="oscillation-isospin-graph-msw"></span><img alt="../_images/oscillation-isospin-graph-msw.png" src="../_images/oscillation-isospin-graph-msw.png" />
-<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Neutrino oscillations in matter, with Hamiltonian vector <span class="math">\(\vec H\)</span>.  <a class="reference download internal" href="../_downloads/oscillation-isospin-graph-msw.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.9 </span><span class="caption-text">Neutrino oscillations in matter, with Hamiltonian vector <span class="math">\(\vec H\)</span>.  <a class="reference download internal" href="../_downloads/oscillation-isospin-graph-msw.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
-<p>For very small matter density and very large matter density, we have vacuum oscillation dominition and matter dominition, <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 8.10</span></a>.</p>
+<p>For very small matter density and very large matter density, we have vacuum oscillation dominition and matter dominition, <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 9.10</span></a>.</p>
 <div class="figure align-center" id="id8">
 <span id="oscillation-isospin-graph-msw-change"></span><img alt="../_images/oscillation-isospin-graph-msw-change.png" src="../_images/oscillation-isospin-graph-msw-change.png" />
-<p class="caption"><span class="caption-number">Fig. 8.10 </span><span class="caption-text">Neutrino oscillations for (a) very small matter density and (b) very large matter density. <a class="reference download internal" href="../_downloads/oscillation-isospin-graph-msw-change.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.10 </span><span class="caption-text">Neutrino oscillations for (a) very small matter density and (b) very large matter density. <a class="reference download internal" href="../_downloads/oscillation-isospin-graph-msw-change.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
-<p>Now imagine a slow adiabatic process from <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 8.10</span></a> (a) to (b). At first, the oscillation is almost around vacuum Hamiltonian vector. As matter becomes dense, the matter Hamiltonian vector becomes dominating, which flips the oscillation axis. Somewhere in between, we would have a Hamiltonian vector which points horizontally, almost like <a class="reference internal" href="#pi-over-four-mixing-angle-isospin-graph"><span class="std std-numref">Fig. 8.7</span></a>. This is where the MSW resonance (maximium flavor conversion) happens.</p>
+<p>Now imagine a slow adiabatic process from <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 9.10</span></a> (a) to (b). At first, the oscillation is almost around vacuum Hamiltonian vector. As matter becomes dense, the matter Hamiltonian vector becomes dominating, which flips the oscillation axis. Somewhere in between, we would have a Hamiltonian vector which points horizontally, almost like <a class="reference internal" href="#pi-over-four-mixing-angle-isospin-graph"><span class="std std-numref">Fig. 9.7</span></a>. This is where the MSW resonance (maximium flavor conversion) happens.</p>
 </div>
 </div>
 <div class="section" id="refs-notes">
-<h2>8.2.3. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<h2>9.2.3. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <table class="docutils citation" frame="void" id="duan2006" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">

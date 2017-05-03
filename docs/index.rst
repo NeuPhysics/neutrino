@@ -60,6 +60,7 @@ Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :down
    experiments/index.rst
    oscillations/index.rst
    matter/index.rst
+   coherent/index.rst
    collective/index.rst
    instability/index.rst
    pictures/index.rst
