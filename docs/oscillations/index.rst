@@ -27,3 +27,4 @@ The interesting thing about neutrinos is that it oscillates.
    two-flavor-three-flavor.rst
    oscillations.rst
    vacuum.rst
+   limit-circle.rst
