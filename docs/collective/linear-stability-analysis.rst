@@ -287,7 +287,7 @@ The neutrino self interaction term requires some elabration on it. We take the l
 .. math::
    H_{\nu\nu}^L =  -\mu \alpha (1-\cos(\theta_1-\theta_2)) \bar\rho^L - \mu \alpha (1+\cos(\theta_1+\theta_2))\bar\rho^R + \mu (1+\cos 2\theta_1) \rho^R.
 
-This procedure works for all other beams. Or we can use the power of the All Mighty Mathematica.
+This procedure works for all other beams. Or we can use the power of the ALMIGHTY Mathematica.
 
 .. math::
    \bar H_{\nu\nu}^L = & \mu (1-\cos(\theta_1 - \theta_2)) \rho^L - \mu \alpha (1+\cos(2\theta_2)) \bar\rho^R + \mu (1+\cos(\theta_1+\theta_2)) \rho^R \\
