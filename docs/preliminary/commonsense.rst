@@ -51,6 +51,11 @@ Thus we have the oscillation angular frequency written as
    &= 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}.
    :label: common-sense-eqn-omega-v-si-unit
 
+Similarly for :math:`\Delta m_{12}` the frequency is
+
+.. math::
+   \omega_{12} =\frac{\Delta m^2}{2E} = 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1MeV}{E}.
+
 Vacuum oscillation equation of motion is
 
 .. math::
