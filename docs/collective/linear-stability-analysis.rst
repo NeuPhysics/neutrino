@@ -170,7 +170,7 @@ Suppose we have a Hamiltonian in flavor basis of the form
 
 .. math::
    H = \begin{pmatrix}
-   -h_1 & h \\
+   h_1 & h \\
    h^* & h_2
    \end{pmatrix},
 
@@ -181,6 +181,45 @@ the commutator of Hamiltonian and density matrix is
    \epsilon^* h - \epsilon h^* &  - h + \epsilon (h_1-h_2) \\
    (h_2-h_1)\epsilon^* + h^* & -\epsilon^* h + \epsilon h^*
    \end{pmatrix}.
+
+
+.. admonition:: Mathematica Code
+   :class: toggle
+
+   .. code-block:: Mathematica
+
+      (* Define the density matrices and Hamiltonians *)
+      rho={
+      {1,epsilon},
+      {Conjugate@epsilon,0}
+      };
+      rhodiag={
+      {1/2,epsilon},
+      {Conjugate@epsilon,-1/2}
+      };
+      hamil={
+      {h1,h},
+      {Conjugate@h,h2}
+      };
+      hamil2={
+      {-h1,h},
+      {Conjugate@h,h2}
+      };
+
+      (* Calculate the Commutators *)
+
+      hamil.rho-rho.hamil//Simplify
+
+      {{h Conjugate[epsilon] - epsilon Conjugate[h], -h + epsilon (h1 - h2)}, {(-h1 + h2) Conjugate[epsilon] + Conjugate[h], -h Conjugate[epsilon] + epsilon Conjugate[h]}}
+
+      hamil2.rho-rho.hamil2//Simplify
+
+      {{h Conjugate[epsilon] - epsilon Conjugate[h], -h - epsilon (h1 + h2)}, {(h1 + h2) Conjugate[epsilon] + Conjugate[h], -h Conjugate[epsilon] + epsilon Conjugate[h]}}
+
+      hamil.rhodiag-rhodiag.hamil//Simplify
+
+      {{h Conjugate[epsilon] - epsilon Conjugate[h], -h +epsilon (h1 - h2)}, {(-h1 + h2) Conjugate[epsilon] + Conjugate[h], -h Conjugate[epsilon] + epsilon Conjugate[h]}}
+
 
 We linearize the equation by keeping only the first order terms of :math:`\delta`. For this purpose, we need to calculate the neutrino self-interaction :math:`H_{\nu\nu}`.
 
@@ -316,9 +355,8 @@ Notice that we have the equation with r as the variable, which is not very conve
 
 The equation for the perturbations becomes
 
-
 .. math::
-   i \partial_r \begin{pmatrix}
+   i \partial_z \begin{pmatrix}
    \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
    \end{pmatrix} =
    \begin{pmatrix}
@@ -332,6 +370,42 @@ The equation for the perturbations becomes
    \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
    \end{pmatrix}.
    :label: eqn-linearized-eom-perturbations-in-general-1
+
+
+
+.. admonition:: Simplified?
+   :class: note
+
+   Define the following quantities
+
+   .. math::
+      \chi_+ =& 1 - \cos(\theta_1+\theta_2) \\
+      \chi_- =& 1 - \cos(\theta_1-\theta_2) \\
+      \chi_1 =& 1 - \cos(2\theta_1) \\
+      \chi_2 =& 1 - \cos(2\theta_2).
+
+   The lineaized equation of motion can be written in a simplified form.
+
+   .. math::
+      i \partial_z \begin{pmatrix}
+      \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
+      \end{pmatrix} =
+      \begin{pmatrix}
+      \frac{ \lambda - \eta \omega_v - \mu\alpha \chi_- - \mu \alpha \chi_+ + \mu \chi_1  }{\sin\theta_1} - i\cot\theta_1 \partial_x & \frac{ \mu\alpha \chi_- }{\sin\theta_1} & \frac{ -\mu \chi_1 }{\sin\theta_1} & \frac{ \mu\alpha \chi_+ }{\sin\theta_1} \\
+      \frac{ -\mu\chi_- }{\sin\theta_2} & \frac{ \lambda + \eta\omega_v + \mu \chi_- - \mu\alpha \chi_2 + \mu\chi_+ }{\sin\theta_2} - i\cot\theta_2 \partial_x & \frac{ -\mu \chi_+ }{\sin\theta_2} & \frac{ \mu\alpha \chi_2 }{\sin\theta_2 } \\
+      \frac{ -\mu\chi_1 }{\sin\theta_1} & \frac{ \mu\alpha \chi_+ }{\sin\theta_1} & \frac{ \mu -\eta\omega_v + \mu\chi_1 - \mu\alpha \chi_+ - \mu\alpha \chi_- }{\sin\theta_1} - i\cot\theta_1 \partial_x & \frac{ \mu\alpha\chi_- }{\sin\theta_1} \\
+      \frac{ -\mu\chi_+ }{\sin\theta_2} & \frac{ \mu\alpha\chi_2  }{\sin\theta_2} & \frac{ -\mu\chi_- }{\sin\theta_2} & \frac{ \mu + \eta\omega_v + \mu\chi_+ -\mu\alpha \chi_2 + \mu \chi_- }{\sin\theta_2} - i\cot\theta_2 \partial_x
+      \end{pmatrix}
+      \begin{pmatrix}
+      \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
+      \end{pmatrix}.
+      :label: eqn-linearized-eom-perturbations-in-general-2
+
+   Suppose we have the neutrino and antineutrino beams in the same direction, i.e., :math:`\theta_1=\theta_2`, the term :math:`\chi_-` becomes 0.
+
+
+
+
 
 
 
@@ -382,10 +456,10 @@ The equation for the perturbations becomes
       ]
 
 
-If we are using a model that is homogeneous in x direction, the derivative is gone. We assume the solution is of the form :math:`\delta = \delta_0 e^{i\Omega z}`. By put the assumption back into the equation we obtain
+If we are using a model that is homogeneous in x direction, the derivative is gone. We assume the solution is of the form :math:`\epsilon = \epsilon_0 e^{i\Omega z}`. By put the assumption back into the equation we obtain
 
 .. math::
-   -\Omega \delta_0 = M\cdot \delta_0.
+   -\Omega \epsilon_0 = M\cdot \epsilon_0.
 
 Linear stability analysis basically becomes finding the eigenvalues of matrix :math:`M`. A negative imaginary part in :math:`\Omega` means the solution can grow exponentially.
 
