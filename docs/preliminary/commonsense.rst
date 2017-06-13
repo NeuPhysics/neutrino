@@ -33,10 +33,10 @@ Useful Conversions in Neutrino Physics
 
 Using natural units, length = time = 1/energy, thus we could scale quantities using energy, or whatever convinient energy or length scale we have.
 
-In vacuum oscillations, the energy scale is the oscillation frequency :math:`\omega_v`. The length can be scaled using this energy scale. However, it is only convinient when we can restore the actually length in SI units. To fulfill it, we write down the conversion here. For two flavor oscillation, oscillation angular frequency is given by
+In vacuum oscillations, the energy scale is the oscillation frequency :math:`\omega_{v,21}`. The length can be scaled using this energy scale. However, it is only convinient when we can restore the actually length in SI units. To fulfill it, we write down the conversion here. For two flavor oscillation, oscillation angular frequency is given by
 
 .. math::
-   \omega_v = \frac{\delta m^2}{2E} =  \frac{7.5\times 10^{-5}\mathrm{eV}^2}{2\times 1\mathrm{MeV}} \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} .
+   \omega_{v,21} = \frac{\delta m^2}{2E} =  \frac{7.5\times 10^{-5}\mathrm{eV}^2}{2\times 1\mathrm{MeV}} \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} = 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} .
 
 On the other hand, electro-volt is related to length through the useful formula
 
@@ -46,15 +46,15 @@ On the other hand, electro-volt is related to length through the useful formula
 Thus we have the oscillation angular frequency written as
 
 .. math::
-   \omega_v &= 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} \\
+   \omega_{v,21} &= 3.75\times 10^{-11}\mathrm{eV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} \\
    &= 3.75\times 10^{-17}\mathrm{MeV}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E} \\
    &= 1.90\times 10^{-4}  \mathrm{m}^{-1}  \frac{\delta m^2}{7.5\times 10^{-5}\mathrm{eV}^2} \frac{1\mathrm{MeV}}{E}.
    :label: common-sense-eqn-omega-v-si-unit
 
-Similarly for :math:`\Delta m_{12}` the frequency is
+Similarly for :math:`\Delta m_{32}=2.4\times 10^{-3}\mathrm{eV^2}` the frequency is
 
 .. math::
-   \omega_{12} =\frac{\Delta m^2}{2E} = 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1MeV}{E}.
+   \omega_{v,32} =\frac{\Delta m^2_{32}}{2E} = 6.3\times 10^{-3} \mathrm{m}^{-1}  \frac{\Delta m^2_{32}}{2.5\times 10^{-3} \mathrm{eV}^2 } \frac{1MeV}{E}.
 
 Vacuum oscillation equation of motion is
 
