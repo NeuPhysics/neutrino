@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>5.4. Matter as Driving Energy &#8212; Neutrino Notes</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -167,7 +163,7 @@ TeX: {
 
  
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -221,6 +217,7 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Interaction With Matter</a><ul class="current">
@@ -232,7 +229,8 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
@@ -533,17 +531,17 @@ i \dot C_2 &amp; = {\color{red}-\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{bl
 \[\begin{split}C_1(x) &amp; = {\color{red}C_1(0) \exp\left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda (x') dx' \right)} \\
 C_2(x) &amp; = {\color{red}C_2(0) \exp \left( \frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}.\end{split}\]</div>
 <p>Given initial condition that <span class="math">\(C_1(0)=1\)</span> and <span class="math">\(C_2(0)=0\)</span>, we anticiptate the the new red term for <span class="math">\(C_2(x)\)</span> only works as <span class="math">\(C_1(x)\)</span> is populted to <span class="math">\(C_2(x)\)</span> through Rabi flopping.</p>
-<p>Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won&#8217;t just simply go away when the moduli are calculated.</p>
+<p>Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won’t just simply go away when the moduli are calculated.</p>
 <p>The other view of these equations is to look at the expressions</p>
 <div class="math">
 \[\begin{split}C_1 &amp;= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red} + \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
 C_2 &amp; = {\color{blue}\frac{ i \dot C_1}{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  } -  {\color{red} \frac{\frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  }.\end{split}\]</div>
-<p class="last">It means that the new terms added new mixing contributions to <span class="math">\(C_1\)</span> and <span class="math">\(C_2\)</span>. But the idea is that we don&#8217;t really know whether it is enhencement or reduction.</p>
+<p class="last">It means that the new terms added new mixing contributions to <span class="math">\(C_1\)</span> and <span class="math">\(C_2\)</span>. But the idea is that we don’t really know whether it is enhencement or reduction.</p>
 </div>
 <p>Combine the two equations we get the equation for <span class="math">\(\dot C_1\)</span> which is used to get the equation for <span class="math">\(C_2\)</span>. Simplification can be done and it leads to</p>
 <div class="math">
 \[\ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left(   \frac{\lambda \cos 2\theta_v}{2} \omega  - \frac{\lambda^2}{4}   \right) C_2 = 0.\]</div>
-<p>Since the equation doesn&#8217;t corresponds to a clear and simple physics picture, we need to understand term by term.</p>
+<p>Since the equation doesn’t corresponds to a clear and simple physics picture, we need to understand term by term.</p>
 <div class="note admonition">
 <p class="first admonition-title">Review of The Hamiltonian</p>
 <p>The Hamiltonian we are dealing with is</p>
@@ -811,7 +809,7 @@ i \frac{d C_2}{d\bar x} &amp; = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0
     <p>
         <span>© 2017, Lei Ma </span>|
         <span>Created with
-            <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
         <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
@@ -821,7 +819,11 @@ i \frac{d C_2}{d\bar x} &amp; = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
               <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
-        </span> |
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         <a href="/genindex.html">Index</a>
      </span> |

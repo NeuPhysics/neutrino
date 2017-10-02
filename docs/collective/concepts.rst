@@ -16,11 +16,13 @@ Backgrounds of collective effect:
 
 1. Matter background
 2. Neutrino background
-   a) sychronized oscillations: neutrino neutrino interaction potential is large compared toordinary oscillation frequencies in vacuum/medium + large asymmetry between neutrino and antineutrino distributions
-   b) bipolar oscillations: neutrino and antineutrino oscillate in opposite directions; non-zero vacuum mixing angle + some conditions of mass hierarchy. neutrino-neutrino interaction ( :math:`\mu=\sqrt{2}G_F n_\nu` ) is larger than vacuum oscillatioin frequency :math:`\omega=\Delta m` . like a torque applys to a top where instabilities happpen as the torque force is too big (top wobbles and flips).
+
+   a. sychronized oscillations: neutrino neutrino interaction potential is large compared toordinary oscillation frequencies in vacuum/medium + large asymmetry between neutrino and antineutrino distributions
+
+   b. bipolar oscillations: neutrino and antineutrino oscillate in opposite directions; non-zero vacuum mixing angle + some conditions of mass hierarchy. neutrino-neutrino interaction ( :math:`\mu=\sqrt{2}G_F n_\nu` ) is larger than vacuum oscillatioin frequency :math:`\omega=\Delta m` . like a torque applys to a top where instabilities happpen as the torque force is too big (top wobbles and flips).
 
 
-.. admonition:: Ref
+.. admonition:: References
    :class: note
 
    1. Raffelt, G. & Smirnov, A. `Self-induced spectral splits in supernova neutrino fluxes. <http://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.105010>`_ *Phys. Rev. D* **76**, (2007). (This paper includes a very brief summary of sychronized and bipolar.)
@@ -102,12 +104,18 @@ A spectral split phenomenon has been observed in calculations. [1]_
 Bipolar Model
 -----------------------
 
+
+
 .. figure:: assets/collective/bipolar.png
    :align: center
 
-   Biplar
+   Bipolar model. For the flavor isospin picutre, refer to :ref:`neutrino-flavor-isospin`.
 
-The neutrinos are generated in two classes with the same number density thus making up two total flavour isospins. Neutrino-neutrino interaction could make the oscillation unstable if it is too large. [2]_
+Neutrinos and antineutrinos with the same number density corresponds to two total flavor isospins in opposite directions. [2]_
+
+
+
+
 
 
 

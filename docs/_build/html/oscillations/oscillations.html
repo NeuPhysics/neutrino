@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>4.3. Evidence of Oscillations &#8212; Neutrino Notes</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -167,7 +163,7 @@ TeX: {
 
  
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -221,6 +217,7 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. Evidence of Oscillations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a><ul>
@@ -232,7 +229,8 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
@@ -469,7 +467,7 @@ TeX: {
 <div class="section" id="two-flavour-vacuum-oscillations">
 <h3>4.3.2.1. Two-flavour Vacuum Oscillations<a class="headerlink" href="#two-flavour-vacuum-oscillations" title="Permalink to this headline">¶</a></h3>
 <p>To write down this clearly, we need to write down the mixing matrix and propagator. For simplicity, we calculate the example of two flavour (a, b) oscillation.</p>
-<p>It&#8217;s easier to write down the propagation in mass eiginstates so the first thing to work out is the mixing matrix.</p>
+<p>It’s easier to write down the propagation in mass eiginstates so the first thing to work out is the mixing matrix.</p>
 <p>Suppose we have only a flavour neutrino initially,</p>
 <div class="math">
 \[\ket{\psi(0)} = \ket{\nu_a}\]</div>
@@ -530,7 +528,7 @@ TeX: {
 </div>
 <div class="section" id="hamiltonian-in-flavor-basis">
 <h4>4.3.2.1.3. Hamiltonian in Flavor Basis<a class="headerlink" href="#hamiltonian-in-flavor-basis" title="Permalink to this headline">¶</a></h4>
-<p>It&#8217;s easy to write down the Hamiltonian for the mass state stationary Schrodinger equation. As we have proven, to first order approximation,</p>
+<p>It’s easy to write down the Hamiltonian for the mass state stationary Schrodinger equation. As we have proven, to first order approximation,</p>
 <div class="math">
 \[E = p + \frac{1}{2}\frac{m^2}{p}\]</div>
 <div class="math">
@@ -570,7 +568,7 @@ TeX: {
 <p>To be explicit, <span class="math">\(\delta m^2 = \delta m_{12}^2= m_1^2 - m_2^2\)</span>. The trandition is always</p>
 <div class="math">
 \[\delta m_{i,j}^2 = m_i^2 - m_j^2.\]</div>
-<p>In two flavor oscillations, most literature use <span class="math">\(\Delta m^2 \equiv \delta m_{21}^2\)</span> so that we don&#8217;t have the negative sign in front of the Hamiltonian here. So be it,</p>
+<p>In two flavor oscillations, most literature use <span class="math">\(\Delta m^2 \equiv \delta m_{21}^2\)</span> so that we don’t have the negative sign in front of the Hamiltonian here. So be it,</p>
 <div class="math">
 \[\begin{split}\mathbf H  &amp;= \frac{\Delta m^2}{4E}\begin{pmatrix} -\cos 2\theta &amp; \sin 2\theta \\ \sin 2\theta &amp; \cos 2\theta \end{pmatrix} \\
 &amp; = \frac{\Delta m^2}{4 E} \left( -\cos 2\theta \boldsymbol{\sigma_z} + \sin 2\theta \boldsymbol{\sigma_x} \right).\end{split}\]</div>
@@ -817,7 +815,7 @@ TeX: {
     <p>
         <span>© 2017, Lei Ma </span>|
         <span>Created with
-            <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
         <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
@@ -827,7 +825,11 @@ TeX: {
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
               <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
-        </span> |
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         <a href="/genindex.html">Index</a>
      </span> |

@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>14.1. Stars as Neutrino Factories &#8212; Neutrino Notes</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -167,7 +163,7 @@ TeX: {
 
  
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -221,6 +217,7 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a><ul>
@@ -232,7 +229,8 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
@@ -581,7 +579,7 @@ c_2(0) e^{ -i\Delta m^2 t }    \end{pmatrix} .\end{split}\]</div>
 <p>The nature of neutrino oscillation means that flavor conversion occurs as long as their propagation eigenstates are not flavor eigenstates. We expect neutrino propagation eigenstates in matter are different from flavor states in general. <a class="reference internal" href="#wolf78" id="id1">[wolf78]</a> Using the fact that neutral current interactions between different flavor neutrinos and matter is independent of flavor, we only include the charged current, which will produce a effective potential for electron flavor. In flavor basis, the effective potential is</p>
 <div class="math">
 \[V=\frac{\sqrt{2}G_F n_e}{2} \sigma_3,\]</div>
-<p>where <span class="math">\(G_F\)</span> is Fermi constant, <span class="math">\(n_e\)</span> is number density of electrons. We also removed the identity in this matrix since it doesn&#8217;t change our survival probability. The Hamiltonian with matter effect is the combination of vacuum oscillation and matter effect, which is, in flavor basis, explicitly,</p>
+<p>where <span class="math">\(G_F\)</span> is Fermi constant, <span class="math">\(n_e\)</span> is number density of electrons. We also removed the identity in this matrix since it doesn’t change our survival probability. The Hamiltonian with matter effect is the combination of vacuum oscillation and matter effect, which is, in flavor basis, explicitly,</p>
 <div class="math">
 \[\begin{split}H_m = \frac{ \Delta m^2 }{2E}\frac{1}{2}\begin{pmatrix} -\cos 2\theta_v &amp; \sin 2 \theta_v \\ \sin 2\theta_v &amp; \cos 2\theta_v  \end{pmatrix} + \frac{\sqrt{2}G_F n_e}{2} \sigma_3,\end{split}\]</div>
 <p>where we used the result of flavor basis vacuum oscillation Hamiltonian</p>
@@ -609,7 +607,7 @@ E_2 &amp;= -\frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v
 <p class="caption"><span class="caption-number">Fig. 14.5 </span><span class="caption-text">The two energy levels in matter effect. The energy has unit <span class="math">\(\omega/2\)</span> while the potential has unit <span class="math">\(\omega\)</span>.</span></p>
 </div>
 <p><a class="reference internal" href="#fig-mswenergylevels"><span class="std std-numref">Fig. 14.5</span></a> shows the two energy levels. For very high matter density, which interact with electron neutrinos more through charged current, electron flavor is composed almost with heavy propagation eigenstate. However, as the matter density becomes lower, the heavy propagation state will be gradually transformed to the other flavors since electron flavor in vacuum is composed mostly the light mass state. The resonance, which is the closest point of energy levels, happens at density <span class="math">\(n_e = 2\omega \cos(2\theta_v)/\sqrt{2}G_F\)</span> which depends on <span class="math">\(\omega = \Delta m^2/2E\)</span>. Neutrinos with different energies have different resonance, which will significantly reshape the neutrino spectra for different flavors. More explicitly, the conversion of flavor is shown in
-<a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> which is taken from Smirnov. <a class="reference internal" href="#smirnov2003" id="id2">[Smirnov2003]</a> Since we are discussion adiabatic evolution, the probability of each energy eigenstates doesn&#8217;t change, as the boxes of each energy eigenstates shown in <a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> doesn&#8217;t change in size. The extreme dense case shows that matter converts a lot of electron flavor to muon flavor.</p>
+<a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> which is taken from Smirnov. <a class="reference internal" href="#smirnov2003" id="id2">[Smirnov2003]</a> Since we are discussion adiabatic evolution, the probability of each energy eigenstates doesn’t change, as the boxes of each energy eigenstates shown in <a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> doesn’t change in size. The extreme dense case shows that matter converts a lot of electron flavor to muon flavor.</p>
 <div class="figure align-center" id="id21">
 <span id="fig-msw-and-density"></span><img alt="../_images/msw_and_density.png" src="../_images/msw_and_density.png" />
 <p class="caption"><span class="caption-number">Fig. 14.6 </span><span class="caption-text">Flavor mixing of large vacuum mixing angle from a dense region to vacuum. <span class="math">\(n_e^R\)</span> is the resonance density. Yellow bar is the resonance point. In each panel, the upper color bar is for heavier eigen-energy while the lower color bar is for the lower eigen-energy. The first panel is the case of neutrino production in a region that has much larger density than resonance density. Neutrinos are produced as electron flavor in the dense region. Through adiabatic MSW effect, the flavor converts mostly the other. The other two panels shows the case of lower matter density. Figure taken from Smirnov 2003.</span></p>
@@ -708,7 +706,7 @@ pp  &amp; :math:`10^{10}` years \\
 <p>Apart from the emission of neutrinos from nuclear reactions of electron capture and positron emission in the solar interior, supernova environment also gives rise to Bremsstrahlung pair neutrino production, electron-positron neutrino pair production, which brings all three flavors and also anti-neutrinos into the spectra. However, even the with the presence of intensive interaction between neutrinos and the leptons and hadrons, which thermalize the neutrinos in the supernova core, the neutrino spectrum escaping from the supernova core is not completely Fermi-Dirac spectrum. Nonetheless, it is possible to parametrize it using nominal Fermi-Dirac distribution, <a class="reference internal" href="#raffelt2004" id="id13">[raffelt2004]</a></p>
 <div class="math">
 \[f(E)\propto \frac{E^2}{1+\exp ( E/kT - \mu )}.\]</div>
-<p>However, numerical results show that there is a deviation from this Fermi-Dirac distribution. <a class="reference internal" href="#totani1998" id="id14">[Totani1998]</a>  <a class="reference internal" href="#keil2003" id="id15">[Keil2003]</a> Keil Mathias and Georg Raffelt showed that it is good enough to approximate the neutrino spectrum from supernova in Monte Carlo simulations using the so called &#8220;alpha fit&#8221;,</p>
+<p>However, numerical results show that there is a deviation from this Fermi-Dirac distribution. <a class="reference internal" href="#totani1998" id="id14">[Totani1998]</a>  <a class="reference internal" href="#keil2003" id="id15">[Keil2003]</a> Keil Mathias and Georg Raffelt showed that it is good enough to approximate the neutrino spectrum from supernova in Monte Carlo simulations using the so called “alpha fit”,</p>
 <div class="math">
 \[f(E)\propto E^\alpha \exp\left( -(\alpha+1)\frac{E}{\langle E\rangle} \right),\]</div>
 <p>where <span class="math">\(\langle E\rangle\)</span> is the average energy, or the first moment of energy. The values from Monte Carlo simulations falls into the range <span class="math">\(\alpha = 2.5\sim 5\)</span>, which clearly shows the spectra are pinched as explained in <a class="reference internal" href="#fig-neutrino-spectra-sn-simulations"><span class="std std-numref">Fig. 14.13</span></a>. Detection of deviation from nominal Fermi-Dirac distribution will show evidence of core-collapse information.</p>
@@ -754,7 +752,7 @@ pp  &amp; :math:`10^{10}` years \\
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id3">[Lopes2013a]</a></td><td><ol class="first last upperroman simple">
-<li>Lopes, “Probing the Sun&#8217;s inner core using solar neutrinos: A new diagnostic method,” Physical Review D 88, 045006 (2013).</li>
+<li>Lopes, “Probing the Sun’s inner core using solar neutrinos: A new diagnostic method,” Physical Review D 88, 045006 (2013).</li>
 </ol>
 </td></tr>
 </tbody>
@@ -850,7 +848,7 @@ pp  &amp; :math:`10^{10}` years \\
     <p>
         <span>© 2017, Lei Ma </span>|
         <span>Created with
-            <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
         <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
@@ -860,7 +858,11 @@ pp  &amp; :math:`10^{10}` years \\
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
               <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
-        </span> |
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         <a href="/genindex.html">Index</a>
      </span> |

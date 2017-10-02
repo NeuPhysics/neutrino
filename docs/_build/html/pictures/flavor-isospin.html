@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>9.2. Flavor Isospin &#8212; Neutrino Notes</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,7 +23,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -167,7 +163,7 @@ TeX: {
 
  
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -221,6 +217,7 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a><ul>
@@ -232,7 +229,8 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
@@ -323,7 +321,8 @@ TeX: {
 <li><a class="reference internal" href="#oscillations-in-matter">9.2.2.2. Oscillations in Matter</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#refs-notes">9.2.3. Refs &amp; Notes</a></li>
+<li><a class="reference internal" href="#oscillations-in-vacuum">9.2.3. Oscillations in Vacuum</a></li>
+<li><a class="reference internal" href="#refs-notes">9.2.4. Refs &amp; Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -384,7 +383,7 @@ TeX: {
 \[\begin{split}H_v &amp;= \frac{1}{2} ( -\omega_v \cos 2\theta_v \sigma_3 + \omega_v \sin 2\theta_v \sigma_1 ) \\
 H_m &amp;= \frac{1}{2} \lambda \sigma_3 \\
 H_{\nu\nu} &amp;=\sqrt{2}G_F \int\mathrm{d}^3 \mathbf{p}' ( 1 - \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) (\rho_{\mathbf{p}'} - \bar\rho_{ \mathbf{p}' }),\end{split}\]</div>
-<p>where <span class="math">\(\rho\)</span>&#8216;s are the density matrices for neutrinos and <span class="math">\(\bar\rho\)</span>&#8216;s are the density matrix for antineutrinos, and <span class="math">\(\hat{\mathbf{p}} = \frac{\vec p}{E}\)</span>. As descretization is used in numerical calculation, another form of the self-interaction is useful,</p>
+<p>where <span class="math">\(\rho\)</span>‘s are the density matrices for neutrinos and <span class="math">\(\bar\rho\)</span>‘s are the density matrix for antineutrinos, and <span class="math">\(\hat{\mathbf{p}} = \frac{\vec p}{E}\)</span>. As descretization is used in numerical calculation, another form of the self-interaction is useful,</p>
 <div class="math">
 \[H_{\nu\nu}(t,\mathbf p, E) = \sqrt{2}G_F \sum_{\mathbf p} ( 1- \hat{\mathbf{p}}\cdot \hat{\mathbf{p}}' ) ( \rho_{\mathbf p'}(t) - \bar \rho^*_{\mathbf p'}(t) ).\]</div>
 <p>For antineutrino, the Hamiltonian it obeys is</p>
@@ -492,7 +491,7 @@ H_m &amp;= - \frac{\boldsymbol{\sigma} }{2} \cdot \mathbf H_m.\end{split}\]</div
 <div class="note admonition">
 <p class="first admonition-title">Deriving Equation of Flavor Isospin</p>
 <p>Here in this formalism we just plugin to compare with the original equation of motion.</p>
-<p>However, a more systematic and rigorous method is given in <a class="reference internal" href="#duan2006" id="id2">[duan2006]</a> . What&#8217;s different here is that the author used the definition <span class="math">\(H_v = - \omega_v \frac{\boldsymbol{\sigma}}{2} \cdot \mathbf H\)</span> which means <span class="math">\(\mathbf H\)</span> in that paper is normalized but here we do not do that.</p>
+<p>However, a more systematic and rigorous method is given in <a class="reference internal" href="#duan2006" id="id2">[duan2006]</a> . What’s different here is that the author used the definition <span class="math">\(H_v = - \omega_v \frac{\boldsymbol{\sigma}}{2} \cdot \mathbf H\)</span> which means <span class="math">\(\mathbf H\)</span> in that paper is normalized but here we do not do that.</p>
 <p>Nonethless, EoM for flavor isospin can be derived using brute force. As a first step, we write down the equation of motion for density matrix,</p>
 <div class="math">
 \[i \frac{d}{dt}\rho = [H,\rho].\]</div>
@@ -538,7 +537,7 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>To have more understanding in the flavor isospin picture, we prefer to visualize it by putting up a 3-dimensional coordinate system. As a first step, we need to know what does a vector mean in such a system.</p>
 <div class="note admonition">
 <p class="first admonition-title">Why 3D Coordinate System</p>
-<p class="last">In principle we need a 4D coordinate system. However, the component of identity of the Hamiltonian doesn&#8217;t play a role here. Thus only the three component of Pauli matrices are needed.</p>
+<p class="last">In principle we need a 4D coordinate system. However, the component of identity of the Hamiltonian doesn’t play a role here. Thus only the three component of Pauli matrices are needed.</p>
 </div>
 <div class="figure align-center" id="id3">
 <img alt="../_images/isospin-space.png" src="../_images/isospin-space.png" />
@@ -561,14 +560,14 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>where in flavor basis the components of <span class="math">\(\mathbf H_v\)</span> is</p>
 <div class="math">
 \[\begin{split}\mathbf H_v = \begin{pmatrix} -\omega_v\sin 2\theta_v \\ 0 \\ \omega_v\cos 2\theta_v   \end{pmatrix}\end{split}\]</div>
-<p>Let&#8217;s start from electron flavor. If mixing angle is zero, the Hamiltonian vector will be on z axis and is aligned with initial state of flavor isospin. Recall the equation of motion is procession-like, thus <span class="math">\(\frac{d}{dt}\mathbf s= \mathbf{s}\times \mathbf H_v = \boldsymbol 0\)</span> and no flavor oscilltion or flavor mixing happens.</p>
+<p>Let’s start from electron flavor. If mixing angle is zero, the Hamiltonian vector will be on z axis and is aligned with initial state of flavor isospin. Recall the equation of motion is procession-like, thus <span class="math">\(\frac{d}{dt}\mathbf s= \mathbf{s}\times \mathbf H_v = \boldsymbol 0\)</span> and no flavor oscilltion or flavor mixing happens.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/zero-mixing-angle-isospin-graph.png" src="../_images/zero-mixing-angle-isospin-graph.png" />
 <p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Flavor isospin vector when mixing angle is zero. <a class="reference download internal" href="../_downloads/zero-mixing-angle-isospin-graph.ggb" download=""><code class="xref download docutils literal"><span class="pre">Geogebra</span> <span class="pre">file</span></code></a>.</span></p>
 </div>
 <div class="hint admonition">
 <p class="first admonition-title">Different Initial Condition</p>
-<p class="last">Even with initial condition that is not on z axis, since procession will be along this Hamiltonian which is on z axis (where we assumed that the mixing angle is zero), and flavor content (which is determined by the projection on z axis) won&#8217;t change.</p>
+<p class="last">Even with initial condition that is not on z axis, since procession will be along this Hamiltonian which is on z axis (where we assumed that the mixing angle is zero), and flavor content (which is determined by the projection on z axis) won’t change.</p>
 </div>
 <p>Alternative, we can look at another limit, which is <span class="math">\(\theta_v = \frac{\pi}{4}\)</span>. The precession will be around x axis, thus the projection of flavor isospin vector will be oscillating from 1/2 (all electron flavor) to 0 (equal flavor content) then to -1/2 (all the other flavor) and back. In this case, the mixing should be maximium, i.e., the flavor conversion should be complete at some point.</p>
 <div class="figure align-center" id="id5">
@@ -611,8 +610,20 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>Now imagine a slow adiabatic process from <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 9.10</span></a> (a) to (b). At first, the oscillation is almost around vacuum Hamiltonian vector. As matter becomes dense, the matter Hamiltonian vector becomes dominating, which flips the oscillation axis. Somewhere in between, we would have a Hamiltonian vector which points horizontally, almost like <a class="reference internal" href="#pi-over-four-mixing-angle-isospin-graph"><span class="std std-numref">Fig. 9.7</span></a>. This is where the MSW resonance (maximium flavor conversion) happens.</p>
 </div>
 </div>
+<div class="section" id="oscillations-in-vacuum">
+<h2>9.2.3. Oscillations in Vacuum<a class="headerlink" href="#oscillations-in-vacuum" title="Permalink to this headline">¶</a></h2>
+<p>We consider a special case where matter cancels the vacuum Hamiltonian, which requres <span class="math">\(\sin 2\theta_v \to 0\)</span> and <span class="math">\(\lambda \sim \omega\)</span>. The equaion of motion becomes</p>
+<div class="math">
+\[\begin{split}\dot{\mathbf P } &amp;= \mu \mathbf P \times \tilde{\mathbf P} \\
+\dot{\tilde{\mathbf P} } &amp;= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \tilde{\mathbf P}.\end{split}\]</div>
+<p>This special case can not be reduced to the actual gyroscopic pendulum equation. (? I tried but not successful.)</p>
+<div class="figure align-center" id="id9">
+<img alt="../_images/flavor-isospin-selfinteractions.png" src="../_images/flavor-isospin-selfinteractions.png" />
+<p class="caption"><span class="caption-number">Fig. 9.11 </span><span class="caption-text">The combined oscillations of neutrinos <span class="math">\(\vec P\)</span> and antineutrinos <span class="math">\(\vec {\bar P}\)</span>.</span></p>
+</div>
+</div>
 <div class="section" id="refs-notes">
-<h2>9.2.3. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<h2>9.2.4. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <table class="docutils citation" frame="void" id="duan2006" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -662,7 +673,7 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
     <p>
         <span>© 2017, Lei Ma </span>|
         <span>Created with
-            <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
         <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
@@ -672,7 +683,11 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
               <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
-        </span> |
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         <a href="/genindex.html">Index</a>
      </span> |

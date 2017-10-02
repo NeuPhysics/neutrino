@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>4.4. Vacuum Oscillation &#8212; Neutrino Notes</title>
-    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -27,14 +23,14 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Interaction With Matter" href="../matter/index.html" />
+    <link rel="next" title="4.5. Oscillations and Limit Circle" href="limit-circle.html" />
     <link rel="prev" title="4.3. Evidence of Oscillations" href="oscillations.html" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -167,7 +163,7 @@ TeX: {
 
  
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -221,6 +217,7 @@ TeX: {
 <li class="toctree-l2"><a class="reference internal" href="two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="oscillations.html">4.3. Evidence of Oscillations</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../matter/index.html">5. Interaction With Matter</a><ul>
@@ -232,7 +229,8 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.1. Conservations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
@@ -340,7 +338,7 @@ TeX: {
     </a>
   </li>
   <li>
-    <a href="../matter/index.html" title="Next Chapter: 5. Interaction With Matter"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5. Interactio... &raquo;</span>
+    <a href="limit-circle.html" title="Next Chapter: 4.5. Oscillations and Limit Circle"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">4.5. Oscillat... &raquo;</span>
     </a>
   </li>
               
@@ -384,7 +382,7 @@ TeX: {
 <p class="first admonition-title">So Called Decoherence</p>
 <p>Here we assume that they all have the same energy but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, we can calculate the distance travelled by another neutrino in the frame of one neutrino.</p>
 <p>Assuming the mass of a neutrino is 1eV with energy 10MeV, we will get a speed of <span class="math">\(1-10^{-14}\)</span> c. This <span class="math">\(10^{-14}\)</span> c will make a difference about <span class="math">\(3\mu\mathrm{ m}\)</span> in 1s.</p>
-<p>Will decoherence happen due to this? For high energy neutrinos this won&#8217;t be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach. Because the different mass eigenstates will become decoherent gradually along the path.</p>
+<p>Will decoherence happen due to this? For high energy neutrinos this won’t be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach. Because the different mass eigenstates will become decoherent gradually along the path.</p>
 <p>Nussinov (1976) discussed that solar neutrino wave packet coherence length is about <span class="math">\(10^{-6}\mathrm{cm}\)</span>.</p>
 <p>A estimation of the decoherence length is</p>
 <div class="math">
@@ -461,7 +459,7 @@ TeX: {
 <div class="math">
 \[\begin{split}\Psi(x) &amp;=  \cos \theta_v \ket{\nu_1} e^{-i E_1 x} - \sin \theta_v \ket{\nu_2} e^{-i E_2 x} \\
 &amp;= e^{-i E_1 x}( \cos \theta_v \ket{\nu_1}  - \sin \theta_v \ket{\nu_2} e^{i(E_1 - E_2) x}).\end{split}\]</div>
-<p>Since a global phase doesn&#8217;t change the detection, we write the state as</p>
+<p>Since a global phase doesn’t change the detection, we write the state as</p>
 <div class="math">
 \[\Psi(x) =  \cos \theta_v \ket{\nu_1}  - \sin \theta_v \ket{\nu_2} e^{i(E_1 - E_2) x} .\]</div>
 <p>Notice that the period of the expression is</p>
@@ -677,11 +675,11 @@ U_{\tau 1} &amp; U_{\tau 2} &amp; U_{\tau 3}
 </div>
 <div class="figure align-center" id="id6">
 <img alt="../_images/vacOsc3FlavorTernary300.png" src="../_images/vacOsc3FlavorTernary300.png" />
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Ternary diagram for less oscillation periods. The system starts from the right-bottom corner which is measured to be all electron neutrinos. The period of the spirals is from the energy scale that is related to a small length scale. The system spirals up then spirals back. This is a &#8220;period&#8221; that is governed by the energy scale that corresponds to a long length scale. Read qualitative method chapter for more about length scales.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Ternary diagram for less oscillation periods. The system starts from the right-bottom corner which is measured to be all electron neutrinos. The period of the spirals is from the energy scale that is related to a small length scale. The system spirals up then spirals back. This is a “period” that is governed by the energy scale that corresponds to a long length scale. Read qualitative method chapter for more about length scales.</span></p>
 </div>
 <div class="figure align-center" id="id7">
 <img alt="../_images/vacOsc3FlavorTernary5000.png" src="../_images/vacOsc3FlavorTernary5000.png" />
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Ternary diagram for more oscillation periods. It shows that the system doesn&#8217;t really go back to the initial state after a &#8220;period&#8221;. This is a three body problem anyway.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Ternary diagram for more oscillation periods. It shows that the system doesn’t really go back to the initial state after a “period”. This is a three body problem anyway.</span></p>
 </div>
 <div class="figure align-center" id="id8">
 <img alt="../_images/Inv-1000-1.png" src="../_images/Inv-1000-1.png" />
@@ -815,7 +813,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
     <p>
         <span>© 2017, Lei Ma </span>|
         <span>Created with
-            <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
         <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
@@ -825,7 +823,11 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
               <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
-        </span> |
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         <a href="/genindex.html">Index</a>
      </span> |

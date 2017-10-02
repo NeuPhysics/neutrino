@@ -392,6 +392,24 @@ Now imagine a slow adiabatic process from :numref:`oscillation-isospin-graph-msw
 
 
 
+Oscillations in Vacuum
+---------------------------------
+
+
+We consider a special case where matter cancels the vacuum Hamiltonian, which requres :math:`\sin 2\theta_v \to 0` and :math:`\lambda \sim \omega`. The equaion of motion becomes
+
+.. math::
+   \dot{\mathbf P } &= \mu \mathbf P \times \tilde{\mathbf P} \\
+   \dot{\tilde{\mathbf P} } &= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \tilde{\mathbf P}.
+
+This special case can not be reduced to the actual gyroscopic pendulum equation. (? I tried but not successful.)
+
+.. figure:: assets/flavor-isospin/flavor-isospin-selfinteractions.png
+   :align: center
+
+   The combined oscillations of neutrinos :math:`\vec P` and antineutrinos :math:`\vec {\bar P}`.
+
+
 Refs & Notes
 ----------------------
 
