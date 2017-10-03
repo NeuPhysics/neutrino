@@ -392,22 +392,94 @@ Now imagine a slow adiabatic process from :numref:`oscillation-isospin-graph-msw
 
 
 
-Oscillations in Vacuum
----------------------------------
+Oscillations with Self-interactions
+--------------------------------------
 
 
-We consider a special case where matter cancels the vacuum Hamiltonian, which requres :math:`\sin 2\theta_v \to 0` and :math:`\lambda \sim \omega`. The equaion of motion becomes
+Bipolar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The equation of motion in terms of flavor isospins is
 
 .. math::
-   \dot{\mathbf P } &= \mu \mathbf P \times \tilde{\mathbf P} \\
-   \dot{\tilde{\mathbf P} } &= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \tilde{\mathbf P}.
+   \dot{\mathbf P} &= \omega \mathbf B \times \mathbf P - \mu  \bar{ \mathbf{ P} } \times \mathbf P \\
+   \dot { \bar{ \mathbf{ P} } } &= -\omega \mathbf B \times \bar{ \mathbf{ P} } + \mu \mathbf{P} \times \bar{ \mathbf{ P} },
+   :label: eqn-nfis-eom-no-matter-self-interaction
 
-This special case can not be reduced to the actual gyroscopic pendulum equation. (? I tried but not successful.)
+where :math:`\mathbf B = (\sin 2\theta_v,0,\cos 2\theta_v)` for normal hierarchy.
 
-.. figure:: assets/flavor-isospin/flavor-isospin-selfinteractions.png
+Suppose we start from the two vectors in the same direction :math:`\mathbf P\to (0,0,1)` and  :math:`\bar{\mathbf P}\to (0,0,1)`. To have a better visualization, we plot out :math:`\mathbf P` and :math:`-\bar{\mathbf P}`.
+
+.. _fig-matter-gyro-pendulum-20-alpha-1-lambda-0-slow:
+
+.. figure:: assets/flavor-isospin/matter-gyro-pendulum-20-alpha-1-lambda-0-slow.gif
    :align: center
 
-   The combined oscillations of neutrinos :math:`\vec P` and antineutrinos :math:`\vec {\bar P}`.
+   With :math:`\alpha=1`, :math:`\lambda=0`, :math:`\mu=3\omega`.
+
+
+However, :math:`\alpha` is not necessarily 1. The ensemble could start from other initial states such as :math:`\alpha=0.8` as shown in :numref:`fig-matter-gyro-pendulum-20-alpha-0.8-lambda-0-slow`.
+
+.. _fig-matter-gyro-pendulum-20-alpha-0.8-lambda-0-slow:
+
+.. figure:: assets/flavor-isospin/matter-gyro-pendulum-20-alpha-0.8-lambda-0-slow.gif
+   :align: center
+
+   With :math:`\alpha=0.8`, :math:`\lambda=0`, :math:`\mu=3\omega`.
+
+.. admonition:: The Name Bipolar
+   :class: warning
+
+   The name "Bipolar" doesn't seem to be actually describe the behavior the the two NFIS's. In the two examples we have shown, The two vectors are **not** opposite to each other all the time, even they started as such bipolar initial condition. That being said, the angle between the two NFIS's change with time. It can be proven by looking at :math:`\frac{d(\mathbf P \cdot \bar{\mathbf P})}{dt}` using equation of motion.
+
+
+Bipolar With Matter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We can introduce matter interaction to the problem :eq:`eqn-nfis-eom-no-matter-self-interaction`. The new equation of motion becomes
+
+.. math::
+   \dot{\mathbf P} &= (\omega \mathbf B + \lambda \mathbf \Lambda) \times \mathbf P - \mu  \bar{ \mathbf{ P} } \times \mathbf P \\
+   \dot { \bar{ \mathbf{ P} } } &= (-\omega \mathbf B + \lambda \mathbf \Lambda )\times \bar{ \mathbf{ P} } + \mu \mathbf{P} \times \bar{ \mathbf{ P} },
+   :label: eqn-nfis-eom-with-matter-self-interaction
+
+where :math:`\mathbf \Lambda = (0,0,-1)`.
+
+We choose a particular matter potential :math:`\lambda =\cos 2\theta_v` so that it cancels the corresponding vacuum Hamiltonian diagonal elements.
+
+
+.. figure:: assets/flavor-isospin/matter-gyro-pendulum-20-alpha-1-lambda-c2t-slow.gif
+   :align: center
+
+   With :math:`\alpha=1`, :math:`\lambda=\cos 2\theta_v`, :math:`\mu=3\omega`.
+
+
+
+.. figure:: assets/flavor-isospin/matter-gyro-pendulum-20-alpha-0.8-lambda-c2t-slow.gif
+   :align: center
+
+   With :math:`\alpha=0.8`, :math:`\lambda=\cos 2\theta_v`, :math:`\mu=3\omega`.
+
+
+
+.. admonition:: Simplified Case with Matter
+   :class: note
+
+   We consider a special case where matter cancels the vacuum Hamiltonian, which requres :math:`\sin 2\theta_v \to 0` and :math:`\lambda \sim \omega`. The equaion of motion becomes
+
+   .. math::
+      \dot{\mathbf P } &= \mu \mathbf P \times \bar{\mathbf P} \\
+      \dot{\bar{\mathbf P} } &= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \bar{\mathbf P}.
+
+   This special case can not be reduced to the actual gyroscopic pendulum equation. (? I tried but not successful.)
+
+   .. figure:: assets/flavor-isospin/flavor-isospin-selfinteractions.png
+      :align: center
+
+      The combined oscillations of neutrinos :math:`\matbbf P` and antineutrinos :math:`\bar {\mathbf P}`.
+
+
+
 
 
 Refs & Notes

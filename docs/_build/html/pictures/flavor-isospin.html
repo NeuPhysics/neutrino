@@ -321,7 +321,11 @@ TeX: {
 <li><a class="reference internal" href="#oscillations-in-matter">9.2.2.2. Oscillations in Matter</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#oscillations-in-vacuum">9.2.3. Oscillations in Vacuum</a></li>
+<li><a class="reference internal" href="#oscillations-with-self-interactions">9.2.3. Oscillations with Self-interactions</a><ul>
+<li><a class="reference internal" href="#bipolar">9.2.3.1. Bipolar</a></li>
+<li><a class="reference internal" href="#bipolar-with-matter">9.2.3.2. Bipolar With Matter</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#refs-notes">9.2.4. Refs &amp; Notes</a></li>
 </ul>
 </li>
@@ -610,16 +614,58 @@ i \boldsymbol \sigma_k \frac{d}{dt} \mathbf s_k &amp;= i\boldsymbol \sigma_k \fr
 <p>Now imagine a slow adiabatic process from <a class="reference internal" href="#oscillation-isospin-graph-msw-change"><span class="std std-numref">Fig. 9.10</span></a> (a) to (b). At first, the oscillation is almost around vacuum Hamiltonian vector. As matter becomes dense, the matter Hamiltonian vector becomes dominating, which flips the oscillation axis. Somewhere in between, we would have a Hamiltonian vector which points horizontally, almost like <a class="reference internal" href="#pi-over-four-mixing-angle-isospin-graph"><span class="std std-numref">Fig. 9.7</span></a>. This is where the MSW resonance (maximium flavor conversion) happens.</p>
 </div>
 </div>
-<div class="section" id="oscillations-in-vacuum">
-<h2>9.2.3. Oscillations in Vacuum<a class="headerlink" href="#oscillations-in-vacuum" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="oscillations-with-self-interactions">
+<h2>9.2.3. Oscillations with Self-interactions<a class="headerlink" href="#oscillations-with-self-interactions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bipolar">
+<h3>9.2.3.1. Bipolar<a class="headerlink" href="#bipolar" title="Permalink to this headline">¶</a></h3>
+<p>The equation of motion in terms of flavor isospins is</p>
+<div class="math" id="equation-eqn-nfis-eom-no-matter-self-interaction">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eqn-nfis-eom-no-matter-self-interaction" title="Permalink to this equation">¶</a></span>\[\begin{split}\dot{\mathbf P} &amp;= \omega \mathbf B \times \mathbf P - \mu  \bar{ \mathbf{ P} } \times \mathbf P \\
+\dot { \bar{ \mathbf{ P} } } &amp;= -\omega \mathbf B \times \bar{ \mathbf{ P} } + \mu \mathbf{P} \times \bar{ \mathbf{ P} },\end{split}\]</div>
+<p>where <span class="math">\(\mathbf B = (\sin 2\theta_v,0,\cos 2\theta_v)\)</span> for normal hierarchy.</p>
+<p>Suppose we start from the two vectors in the same direction <span class="math">\(\mathbf P\to (0,0,1)\)</span> and  <span class="math">\(\bar{\mathbf P}\to (0,0,1)\)</span>. To have a better visualization, we plot out <span class="math">\(\mathbf P\)</span> and <span class="math">\(-\bar{\mathbf P}\)</span>.</p>
+<div class="figure align-center" id="id9">
+<span id="fig-matter-gyro-pendulum-20-alpha-1-lambda-0-slow"></span><img alt="../_images/matter-gyro-pendulum-20-alpha-1-lambda-0-slow.gif" src="../_images/matter-gyro-pendulum-20-alpha-1-lambda-0-slow.gif" />
+<p class="caption"><span class="caption-number">Fig. 9.11 </span><span class="caption-text">With <span class="math">\(\alpha=1\)</span>, <span class="math">\(\lambda=0\)</span>, <span class="math">\(\mu=3\omega\)</span>.</span></p>
+</div>
+<p>However, <span class="math">\(\alpha\)</span> is not necessarily 1. The ensemble could start from other initial states such as <span class="math">\(\alpha=0.8\)</span> as shown in <a class="reference internal" href="#fig-matter-gyro-pendulum-20-alpha-0-8-lambda-0-slow"><span class="std std-numref">Fig. 9.12</span></a>.</p>
+<div class="figure align-center" id="id10">
+<span id="fig-matter-gyro-pendulum-20-alpha-0-8-lambda-0-slow"></span><img alt="../_images/matter-gyro-pendulum-20-alpha-0.8-lambda-0-slow.gif" src="../_images/matter-gyro-pendulum-20-alpha-0.8-lambda-0-slow.gif" />
+<p class="caption"><span class="caption-number">Fig. 9.12 </span><span class="caption-text">With <span class="math">\(\alpha=0.8\)</span>, <span class="math">\(\lambda=0\)</span>, <span class="math">\(\mu=3\omega\)</span>.</span></p>
+</div>
+<div class="warning admonition">
+<p class="first admonition-title">The Name Bipolar</p>
+<p class="last">The name “Bipolar” doesn’t seem to be actually describe the behavior the the two NFIS’s. In the two examples we have shown, The two vectors are <strong>not</strong> opposite to each other all the time, even they started as such bipolar initial condition. That being said, the angle between the two NFIS’s change with time. It can be proven by looking at <span class="math">\(\frac{d(\mathbf P \cdot \bar{\mathbf P})}{dt}\)</span> using equation of motion.</p>
+</div>
+</div>
+<div class="section" id="bipolar-with-matter">
+<h3>9.2.3.2. Bipolar With Matter<a class="headerlink" href="#bipolar-with-matter" title="Permalink to this headline">¶</a></h3>
+<p>We can introduce matter interaction to the problem <a class="reference internal" href="#equation-eqn-nfis-eom-no-matter-self-interaction">(3)</a>. The new equation of motion becomes</p>
+<div class="math" id="equation-eqn-nfis-eom-with-matter-self-interaction">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eqn-nfis-eom-with-matter-self-interaction" title="Permalink to this equation">¶</a></span>\[\begin{split}\dot{\mathbf P} &amp;= (\omega \mathbf B + \lambda \mathbf \Lambda) \times \mathbf P - \mu  \bar{ \mathbf{ P} } \times \mathbf P \\
+\dot { \bar{ \mathbf{ P} } } &amp;= (-\omega \mathbf B + \lambda \mathbf \Lambda )\times \bar{ \mathbf{ P} } + \mu \mathbf{P} \times \bar{ \mathbf{ P} },\end{split}\]</div>
+<p>where <span class="math">\(\mathbf \Lambda = (0,0,-1)\)</span>.</p>
+<p>We choose a particular matter potential <span class="math">\(\lambda =\cos 2\theta_v\)</span> so that it cancels the corresponding vacuum Hamiltonian diagonal elements.</p>
+<div class="figure align-center" id="id11">
+<img alt="../_images/matter-gyro-pendulum-20-alpha-1-lambda-c2t-slow.gif" src="../_images/matter-gyro-pendulum-20-alpha-1-lambda-c2t-slow.gif" />
+<p class="caption"><span class="caption-number">Fig. 9.13 </span><span class="caption-text">With <span class="math">\(\alpha=1\)</span>, <span class="math">\(\lambda=\cos 2\theta_v\)</span>, <span class="math">\(\mu=3\omega\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id12">
+<img alt="../_images/matter-gyro-pendulum-20-alpha-0.8-lambda-c2t-slow.gif" src="../_images/matter-gyro-pendulum-20-alpha-0.8-lambda-c2t-slow.gif" />
+<p class="caption"><span class="caption-number">Fig. 9.14 </span><span class="caption-text">With <span class="math">\(\alpha=0.8\)</span>, <span class="math">\(\lambda=\cos 2\theta_v\)</span>, <span class="math">\(\mu=3\omega\)</span>.</span></p>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Simplified Case with Matter</p>
 <p>We consider a special case where matter cancels the vacuum Hamiltonian, which requres <span class="math">\(\sin 2\theta_v \to 0\)</span> and <span class="math">\(\lambda \sim \omega\)</span>. The equaion of motion becomes</p>
 <div class="math">
-\[\begin{split}\dot{\mathbf P } &amp;= \mu \mathbf P \times \tilde{\mathbf P} \\
-\dot{\tilde{\mathbf P} } &amp;= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \tilde{\mathbf P}.\end{split}\]</div>
+\[\begin{split}\dot{\mathbf P } &amp;= \mu \mathbf P \times \bar{\mathbf P} \\
+\dot{\bar{\mathbf P} } &amp;= \mu \left( 2 \mathbf H_m/\mu + \mathbf P  \right) \times \bar{\mathbf P}.\end{split}\]</div>
 <p>This special case can not be reduced to the actual gyroscopic pendulum equation. (? I tried but not successful.)</p>
-<div class="figure align-center" id="id9">
+<div class="last figure align-center" id="id13">
 <img alt="../_images/flavor-isospin-selfinteractions.png" src="../_images/flavor-isospin-selfinteractions.png" />
-<p class="caption"><span class="caption-number">Fig. 9.11 </span><span class="caption-text">The combined oscillations of neutrinos <span class="math">\(\vec P\)</span> and antineutrinos <span class="math">\(\vec {\bar P}\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9.15 </span><span class="caption-text">The combined oscillations of neutrinos <span class="math">\(\matbbf P\)</span> and antineutrinos <span class="math">\(\bar {\mathbf P}\)</span>.</span></p>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="refs-notes">
