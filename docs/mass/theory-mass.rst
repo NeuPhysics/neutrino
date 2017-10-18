@@ -398,7 +398,7 @@ We used the creation and annihilation operators for neutrinos, :math:`\bar\nu_{L
 
 
 
-The idea of see-saw mechanism is to make :math:`\frac{m_R-m_L}{m_D}` very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`.
+If we diagonalize the matrix (:eq:`eqn-eigenvalues-mass-matrix-seesaw`) to get to the mass eigenbasis, we have the two eigenvalues of mass should be :math:`m_R` and :math:`\sim m_D^2/m_R`. The idea of see-saw mechanism is to make :math:`\frac{m_R-m_L}{m_D}` very large since we do not observe right-handed neutrinos.
 
 The we have the see-saw mechanism. Large mass of right-handed neutrinos compensate the mass of neutrinos we have observe.
 
@@ -416,26 +416,28 @@ The reason that :math:`\frac{m_R-m_L}{m_D}` can be large is that :math:`m_D` is 
    I can find the eigenvalues of the masses, they are
 
    .. math::
-      m_1 & = m_D^2/m_R \\
-      m_2 & = m_R.
+      m_1 &= \frac{1}{2}\left( m_R-m_L - \sqrt{ ( m_L - m_R )^2 + 4 m_D^2 } \right) = \frac{m_D}{2}\left( \frac{m_R-m_L}{m_D} -  \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right)  \\
+      m_2 &= \frac{m_D}{2} \left(\frac{m_R-m_L}{m_D} + \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right) = \frac{m_D}{2}\left( \frac{m_R-m_L}{m_D} +  \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right) .
+      :label: eqn-eigenvalues-mass-matrix-seesaw
 
-   Then we can find the transformation matrix. At this point we can identify that the see-saw mechanism works.
-
-   To save time, we can just follow Boris [2]_ , diagonalizing the first matrix with :math:`(m_R-m_L)/m_D \gg 1` is done using a unitary matrix
-
-   .. math::
-      Z = \begin{pmatrix} 1 & -\rho \\ \rho & 1  \end{pmatrix} \begin{pmatrix} i & 0 \\ 0 & 1 \end{pmatrix},
-
-   where :math:`\rho=m_D/(m_R-m_L)` is very small.
-
-   The result of the diagonalized mass matrix becomes
+   The matrix is diagonalized using the matrix
 
    .. math::
-      \mathscr{M}_{\mu,Diag} &= Z^T \mathscr{M}_\nu Z \\
-      & \approx \begin{pmatrix}  -\frac{m_D^2}{m_R-m_L} & 0 \\  0 & 2\frac{m_D^2}{m_R-m_L}+ m_R-m_L  \end{pmatrix} + m_L I.
+      Z = \begin{pmatrix}
+      -\frac{-m_L+m_R+ \sqrt{ 4 m_D^2+( m_L - m_R )^2}}{2 m_D } & 1 \\
+      \frac{ m_L - m_R + \sqrt{4 m_D^2+( m_L - m_R )^2}}{2 m_D } & 1 \\
+      \end{pmatrix}
 
-   **A problem here.**
+   See-saw mechanism proposes that we set :math:`\frac{m_R-m_L}{m_D}` to be large, so that the two mass eigenvalues becomes
 
+   .. math::
+      m_1 & = \frac{m_D^2}{m_R-m_L} \\
+      m_2 & = m_R-m_L.
+
+
+   Then we can find the transformation matrix. Neverthless, we can identify that the see-saw mechanism works already at this point.
+
+   
 
 
 

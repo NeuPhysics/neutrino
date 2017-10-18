@@ -594,13 +594,13 @@ P_{R(+)} &amp; = \frac{1}{2} \begin{pmatrix} 0 &amp; 0  \\  0 &amp; I \end{pmatr
 </div>
 <div class="section" id="see-saw-mechanism">
 <h3>2.1.1.5. See-saw Mechanism<a class="headerlink" href="#see-saw-mechanism" title="Permalink to this headline">¶</a></h3>
-<p>In general the mass term in Lagrangian can be written as <a class="footnote-reference" href="#id4" id="id1">[1]</a></p>
+<p>In general the mass term in Lagrangian can be written as <a class="footnote-reference" href="#id3" id="id1">[1]</a></p>
 <div class="math" id="equation-eqn-seesaw-mass-lagrangian">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eqn-seesaw-mass-lagrangian" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathscr{L}_m = \frac{1}{2} \begin{pmatrix} (\bar\nu_L)^c \bar\nu_R \end{pmatrix}\begin{pmatrix} m_L &amp; m_D \\ m_D &amp; m_R  \end{pmatrix} \begin{pmatrix}  \nu_L \\ (\nu_R)^c \end{pmatrix} + h.c. .\end{split}\]</div>
 <p>We used the creation and annihilation operators for neutrinos, <span class="math">\(\bar\nu_{L,R}\)</span> and <span class="math">\(\nu_{L,R}\)</span>.</p>
 <div class="note admonition">
 <p class="first admonition-title">Annihilation and Creation</p>
-<p>A table in Boris Kayser’s paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator <a class="footnote-reference" href="#id5" id="id2">[2]</a>.</p>
+<p>A table in Boris Kayser’s paper (arXiv:hep-ph/0211134) shows explicitly the meanings of the operator <a class="footnote-reference" href="#id4" id="id2">[2]</a>.</p>
 <table border="1" class="last docutils">
 <colgroup>
 <col width="38%" />
@@ -631,7 +631,7 @@ P_{R(+)} &amp; = \frac{1}{2} \begin{pmatrix} 0 &amp; 0  \\  0 &amp; I \end{pmatr
 </tbody>
 </table>
 </div>
-<p>The idea of see-saw mechanism is to make <span class="math">\(\frac{m_R-m_L}{m_D}\)</span> very large since we do not observe right-handed neutrinos. If we diagonalize the matrix to get to the mass eigenbasis, we have the two eigenvalues of mass should be <span class="math">\(m_R\)</span> and <span class="math">\(\sim m_D^2/m_R\)</span>.</p>
+<p>If we diagonalize the matrix (<a class="reference internal" href="#equation-eqn-eigenvalues-mass-matrix-seesaw">(2)</a>) to get to the mass eigenbasis, we have the two eigenvalues of mass should be <span class="math">\(m_R\)</span> and <span class="math">\(\sim m_D^2/m_R\)</span>. The idea of see-saw mechanism is to make <span class="math">\(\frac{m_R-m_L}{m_D}\)</span> very large since we do not observe right-handed neutrinos.</p>
 <p>The we have the see-saw mechanism. Large mass of right-handed neutrinos compensate the mass of neutrinos we have observe.</p>
 <p>The reason that <span class="math">\(\frac{m_R-m_L}{m_D}\)</span> can be large is that <span class="math">\(m_D\)</span> is of the same masses of other leptons because Dirac masses of leptons comes from the same Higgs field.</p>
 <div class="note admonition">
@@ -640,25 +640,26 @@ P_{R(+)} &amp; = \frac{1}{2} \begin{pmatrix} 0 &amp; 0  \\  0 &amp; I \end{pmatr
 <div class="math">
 \[\begin{split}\mathscr{M}_\nu = \begin{pmatrix} m_L &amp; m_D \\ m_D &amp; m_R \end{pmatrix} = \begin{pmatrix} 0 &amp; m_D \\ m_D &amp; m_R-m_L \end{pmatrix} + m_L I\end{split}\]</div>
 <p>I can find the eigenvalues of the masses, they are</p>
+<div class="math" id="equation-eqn-eigenvalues-mass-matrix-seesaw">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eqn-eigenvalues-mass-matrix-seesaw" title="Permalink to this equation">¶</a></span>\[\begin{split}m_1 &amp;= \frac{1}{2}\left( m_R-m_L - \sqrt{ ( m_L - m_R )^2 + 4 m_D^2 } \right) = \frac{m_D}{2}\left( \frac{m_R-m_L}{m_D} -  \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right)  \\
+m_2 &amp;= \frac{m_D}{2} \left(\frac{m_R-m_L}{m_D} + \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right) = \frac{m_D}{2}\left( \frac{m_R-m_L}{m_D} +  \sqrt{ ( m_L - m_R )^2/m_D^2 + 4 } \right) .\end{split}\]</div>
+<p>The matrix is diagonalized using the matrix</p>
 <div class="math">
-\[\begin{split}m_1 &amp; = m_D^2/m_R \\
-m_2 &amp; = m_R.\end{split}\]</div>
-<p>Then we can find the transformation matrix. At this point we can identify that the see-saw mechanism works.</p>
-<p>To save time, we can just follow Boris <a class="footnote-reference" href="#id5" id="id3">[2]</a> , diagonalizing the first matrix with <span class="math">\((m_R-m_L)/m_D \gg 1\)</span> is done using a unitary matrix</p>
+\[\begin{split}Z = \begin{pmatrix}
+-\frac{-m_L+m_R+ \sqrt{ 4 m_D^2+( m_L - m_R )^2}}{2 m_D } &amp; 1 \\
+\frac{ m_L - m_R + \sqrt{4 m_D^2+( m_L - m_R )^2}}{2 m_D } &amp; 1 \\
+\end{pmatrix}\end{split}\]</div>
+<p>See-saw mechanism proposes that we set <span class="math">\(\frac{m_R-m_L}{m_D}\)</span> to be large, so that the two mass eigenvalues becomes</p>
 <div class="math">
-\[\begin{split}Z = \begin{pmatrix} 1 &amp; -\rho \\ \rho &amp; 1  \end{pmatrix} \begin{pmatrix} i &amp; 0 \\ 0 &amp; 1 \end{pmatrix},\end{split}\]</div>
-<p>where <span class="math">\(\rho=m_D/(m_R-m_L)\)</span> is very small.</p>
-<p>The result of the diagonalized mass matrix becomes</p>
-<div class="math">
-\[\begin{split}\mathscr{M}_{\mu,Diag} &amp;= Z^T \mathscr{M}_\nu Z \\
-&amp; \approx \begin{pmatrix}  -\frac{m_D^2}{m_R-m_L} &amp; 0 \\  0 &amp; 2\frac{m_D^2}{m_R-m_L}+ m_R-m_L  \end{pmatrix} + m_L I.\end{split}\]</div>
-<p class="last"><strong>A problem here.</strong></p>
+\[\begin{split}m_1 &amp; = \frac{m_D^2}{m_R-m_L} \\
+m_2 &amp; = m_R-m_L.\end{split}\]</div>
+<p class="last">Then we can find the transformation matrix. Neverthless, we can identify that the see-saw mechanism works already at this point.</p>
 </div>
 </div>
 <div class="section" id="consequences">
 <h3>2.1.1.6. Consequences<a class="headerlink" href="#consequences" title="Permalink to this headline">¶</a></h3>
 <p>The see-saw mass term in <a class="reference internal" href="#equation-eqn-seesaw-mass-lagrangian">(1)</a> combined with the meaning of the creation and annihilation operators, we know that Majorana mass can annihilate a neutrino or antineutrino then create a antineutrino or neutrino.</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id6">
 <img alt="../_images/dirac-mass-vs-majorana-mass-lines.png" src="../_images/dirac-mass-vs-majorana-mass-lines.png" />
 <p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Figure 1 in <a class="reference external" href="http://arxiv.org/abs/hep-ph/0211134">arXiv:hep-ph/0211134</a> by Boris Kayser. These diagrams illustrate what Dirac mass and Majorana mass do to the neutrinos.</span></p>
 </div>
@@ -669,16 +670,16 @@ m_2 &amp; = m_R.\end{split}\]</div>
 <ol class="arabic simple">
 <li>References for Majorana fermions: <a class="reference external" href="http://isites.harvard.edu/fs/docs/icb.topic792163.files/10-spinors.pdf">Lecture notes by Matthew Schwartz &#64; Harvard: Lecture 10 Spinors and the Dirac Equation</a> , <a class="reference external" href="http://www.damtp.cam.ac.uk/user/tong/qft/four.pdf">Lectures notes by Tong &#64; DAMPTP</a> .</li>
 </ol>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
+<table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Elliott, S. R., &amp; Franz, M. (2015). Colloquium: Majorana fermions in nuclear, particle, and solid-state physics. Reviews of Modern Physics, 87(March), 137–163. doi:10.1103/RevModPhys.87.137</td></tr>
 </tbody>
 </table>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
+<table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> Kayser, B. (2002). Neutrino Mass, Mixing, and Flavor Change. <a class="reference external" href="http://arxiv.org/abs/hep-ph/0211134">arXiv:hep-ph/0211134</a> .</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Kayser, B. (2002). Neutrino Mass, Mixing, and Flavor Change. <a class="reference external" href="http://arxiv.org/abs/hep-ph/0211134">arXiv:hep-ph/0211134</a> .</td></tr>
 </tbody>
 </table>
 </div>
