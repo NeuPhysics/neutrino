@@ -6,6 +6,11 @@ Flavor Isospin
 
    In this part we use bold symbols for vectors because the subscript with a over arrow is too ugly to read.
 
+.. admonition:: Quaternion
+   :class: note
+
+   This is basically a quaternion form of neutrino oscillations.
+
 The Hamiltonian in flavor basis with matter interaction for neutrino is
 
 
