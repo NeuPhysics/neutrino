@@ -14,6 +14,6 @@ The caveat is that we do not require instability to have flavor conversions. The
 .. toctree::
    :maxdepth: 2
 
-   bimodal.rst
+   bipolar.rst
    multi-zenith-angle.rst
    multi-azimuth-angle.rst

@@ -1,6 +1,7 @@
 .. index:: Bimodal Instability
+.. index:: Bipolar Model
 
-Bimodal Oscillations
+Bipolar Model
 =========================
 
 
@@ -25,8 +26,65 @@ Neutrino oscillations has a small amplitude inside a SN core (suppressed by matt
 where :math:`\eta=\pm 1` deterimines the hierarchy, :math:`\mu=2\sqrt{2}G_F \lvert \omega_0 \rvert^{-1} n_{\mathrm {tot}}`. We find out from the equation that normal hierarchy (NH, :math:`\eta=1`) doesn't have instabilities, but inverted hierarchy (IH, :math:`\eta=-1`) has instabilities with growth rate :math:`\sqrt{\mu-1}`, if :math:`\mu>1`.
 
 
+Linear Stability Analysis
+--------------------------------
 
 
+The equation of motion is
+
+.. math::
+   i\partial_t \rho =& \left[ -\frac{\omega_v}{2} \cos2\theta \sigma_3 + \frac{\omega_v}{2}\sin 2\theta \sigma_1 - \mu \alpha \bar \rho , \rho\right] \\
+   i\partial_t \bar\rho =& \left[ \frac{\omega_v}{2} \cos2\theta \sigma_3 - \frac{\omega_v}{2}\sin 2\theta \sigma_1 + \mu \rho , \bar\rho\right].
+
+For the purpose of linear stability analysis, we assume that
+
+.. math::
+   \rho =& \frac{1}{2}\begin{pmatrix}
+   1 & \epsilon \\
+   \epsilon^* & -1
+   \end{pmatrix} \\
+   \bar\rho =& \frac{1}{2}\begin{pmatrix}
+   1 & \bar\epsilon \\
+   \bar \epsilon^* & -1
+   \end{pmatrix}.
+
+Plug them into equation of motion and set :math:`\theta=0`, we have the linearized ones,
+
+.. math::
+   i\partial_t \begin{pmatrix}
+   \epsilon \\
+   \bar\epsilon
+   \end{pmatrix} = \frac{1}{2}\begin{pmatrix}
+   -\alpha \mu - \omega_v & \alpha \mu \\
+   -\mu & \mu + \omega_v
+   \end{pmatrix}\begin{pmatrix}
+   \epsilon \\
+   \bar\epsilon
+   \end{pmatrix}.
+
+To have real eigenvalues, we require
+
+.. math::
+   (-1+\alpha)^2 \mu^2 + 4(1+\alpha)\mu \omega_v + 4 \omega_v^2 < 0,
+
+which is reduced to
+
+.. math::
+   \frac{ -2\omega_v (1+\alpha) - 4\sqrt{ \alpha } \lvert \omega_v \rvert  }{ (1-\alpha)^2 } < \mu < \frac{ -2\omega_v (1+\alpha) + 4\sqrt{ \alpha } \lvert \omega_v \rvert  }{ (1-\alpha)^2 },
+
+which is simplified to
+
+.. math::
+   \sqrt{ -2\omega_v }{ (1-\sqrt{\alpha})^2 } < \mu < \sqrt{ -2\omega_v }{ (1+\sqrt{\alpha})^2 },
+
+assuming normal hierarchy, i.e., :math:`\omega_v > 0`. We immediately notice that this can not happen.
+
+For inverted hierachy, we have :math:`\omega_v < 0`, so that
+
+.. math::
+   \sqrt{ 2\lvert\omega_v\rvert }{ (1+\sqrt{\alpha})^2 } < \mu < \sqrt{ 2\lvert\omega_v\rvert }{ (1-\sqrt{\alpha})^2 },
+
+Within this region, we have exponential growth.
 
 
 
