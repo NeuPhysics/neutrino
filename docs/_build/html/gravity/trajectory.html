@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>15.1. Effect of Gravitation &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.4',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,8 +140,7 @@ TeX: {
 <!-- Gitter Sidecar Environment END -->
 
  
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -231,7 +222,7 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
@@ -287,6 +278,17 @@ TeX: {
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -347,66 +349,99 @@ TeX: {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">15.1. Effect of Gravitation</a><ul>
+<li><a class="reference internal" href="#evaluation">15.1.1. Evaluation</a><ul>
+<li><a class="reference internal" href="#deflection-in-the-trajectory">15.1.1.1. Deflection in The Trajectory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#refs-notes">15.1.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="index.html" title="Previous Chapter: 15. Gravity"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 15. Gravity</span>
+    </a>
+  </li>
+  <li>
+    <a href="eom-in-gravitational-field.html" title="Next Chapter: 15.2. Equation of Motion in Gravitational Field"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">15.2. Equatio... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/gravity/trajectory.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="effect-of-gravitation">
 <h1>15.1. Effect of Gravitation<a class="headerlink" href="#effect-of-gravitation" title="Permalink to this headline">¶</a></h1>
 <p>The effect of gravitation on neutrino oscillation could be great around a neutron star.</p>
 <p>The spacetime are distorted around the neutron star.</p>
 <ul class="simple">
-<li>Time gradient/delay; Shapiro delay;</li>
-<li>Space geometry/trajectory; self-interaction <span class="math">\(\vec v\cdot \vec v'\)</span>;</li>
-<li>Redshift;</li>
-<li>Tidal effect;</li>
-<li>Coupling of space and time due to cross terms (might need quantum field theory in curved spacetime);</li>
-<li>Lense-Thirring effect.</li>
+<li><p>Time gradient/delay; Shapiro delay;</p></li>
+<li><p>Space geometry/trajectory; self-interaction <span class="math notranslate nohighlight">\(\vec v\cdot \vec v'\)</span>;</p></li>
+<li><p>Redshift;</p></li>
+<li><p>Tidal effect;</p></li>
+<li><p>Coupling of space and time due to cross terms (might need quantum field theory in curved spacetime);</p></li>
+<li><p>Lense-Thirring effect.</p></li>
 </ul>
 <div class="section" id="evaluation">
 <h2>15.1.1. Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
-<p>The equation of motion in a linear approximation (with respect to  <span class="math">\(\kappa\)</span>) is</p>
-<div class="math">
+<p>The equation of motion in a linear approximation (with respect to  <span class="math notranslate nohighlight">\(\kappa\)</span>) is</p>
+<div class="math notranslate nohighlight">
 \[\frac{d}{d\tau}u_\mu + \left( \kappa h_{\mu\alpha,\beta} u^\alpha u^\beta - \frac{\kappa}{2}h_{\alpha\beta,\mu}u^\alpha u^\beta \right) = 0,\]</div>
-<p>where <span class="math">\(\kappa=8\pi G\)</span>, <span class="math">\(h_{\alpha\beta}\)</span> is the metric tensor of the gravitational field, that is,</p>
-<div class="math">
+<p>where <span class="math notranslate nohighlight">\(\kappa=8\pi G\)</span>, <span class="math notranslate nohighlight">\(h_{\alpha\beta}\)</span> is the metric tensor of the gravitational field, that is,</p>
+<div class="math notranslate nohighlight">
 \[g_{\alpha\beta} = \eta_{\alpha\beta} + \kappa h_{\alpha}.\]</div>
-<p>Another useful form is to multiply on both side <span class="math">\(m d\tau\)</span> and substitute mass terms with 4-momentum <span class="math">\(p_\mu = m u_\mu\)</span>.</p>
-<div class="math">
+<p>Another useful form is to multiply on both side <span class="math notranslate nohighlight">\(m d\tau\)</span> and substitute mass terms with 4-momentum <span class="math notranslate nohighlight">\(p_\mu = m u_\mu\)</span>.</p>
+<div class="math notranslate nohighlight">
 \[d p_\mu + \left( \kappa h_{\mu\alpha,\beta} p^\alpha - \frac{\kappa}{2} h_{\alpha\beta,\mu} p^\alpha \right) dx^{\beta} = 0\]</div>
 <div class="section" id="deflection-in-the-trajectory">
 <h3>15.1.1.1. Deflection in The Trajectory<a class="headerlink" href="#deflection-in-the-trajectory" title="Permalink to this headline">¶</a></h3>
 <p>For the trajectory of photons, we only need to find out the geodesic. Neutrinos are massive particles which are different from photons. However, the neutrinos we are considering have energy as high as several MeVs or even more while their mass are less than 1eV. In this case, they are relativistic so their trajectory are close to photons’.</p>
 <p>The deflection of photons near a star is,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\delta \approx - \frac{4G M_\odot}{bc^2}.\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Derivation</p>
-<p>Suppose we have a photon coming along z axis from infinite, the deflected angle at infinite is, by first order approximation <span class="math">\(\tan\delta \approx \delta\)</span>, the change of momentum in x direction over the momentum in z direction,</p>
-<div class="math">
+<p class="admonition-title">Derivation</p>
+<p>Suppose we have a photon coming along z axis from infinite, the deflected angle at infinite is, by first order approximation <span class="math notranslate nohighlight">\(\tan\delta \approx \delta\)</span>, the change of momentum in x direction over the momentum in z direction,</p>
+<div class="math notranslate nohighlight">
 \[\delta \approx \frac{\Delta p_x}{p_z}.\]</div>
 <p>Momentum in this coordinate system is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[p^\alpha = (c p^3, 0, 0, p^3).\]</div>
 <p>Displacement is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[dx^\beta = (dz/c,0,0,dz).\]</div>
 <p>Then the change in momentum can be calculated using the equation of motion,</p>
-<div class="last math">
+<div class="math notranslate nohighlight">
 \[\Delta p_1 = - \kappa p^\alpha \int_{-\infty}^{\infty} \left( h_{1\alpha,\beta} - \frac{1}{2} h_{\alpha\beta,1} \right) dx^\beta.\]</div>
 </div>
 <p>This is the deflection angle of a photon coming from infinite. However, the angle deflected for a photon emitted at tangent is different.</p>
 <div class="figure align-center" id="id3">
 <img alt="../_images/tangentNeutrinoGravitation.png" src="../_images/tangentNeutrinoGravitation.png" />
-<p class="caption"><span class="caption-number">Fig. 15.1 </span><span class="caption-text">neutrino gravitatioin</span></p>
+<p class="caption"><span class="caption-number">Fig. 15.1 </span><span class="caption-text">neutrino gravitatioin</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<p>A detailed calculation shows, <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+<p>A detailed calculation shows, <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/gravitationDeflection.png" src="../_images/gravitationDeflection.png" />
-<p class="caption"><span class="caption-number">Fig. 15.2 </span><span class="caption-text">The deflection angle of a photon starting from a tangent position at <span class="math">\(z=rz\)</span> with tangent momentum and impact parameter <span class="math">\(b\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 15.2 </span><span class="caption-text">The deflection angle of a photon starting from a tangent position at <span class="math notranslate nohighlight">\(z=rz\)</span> with tangent momentum and impact parameter <span class="math notranslate nohighlight">\(b\)</span>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-<p>With an impact parameter of <span class="math">\(b=10\text{km}\)</span>, the angle will eventually become larger than <span class="math">\(0.4\)</span>, which is very significant.</p>
+<p>With an impact parameter of <span class="math notranslate nohighlight">\(b=10\text{km}\)</span>, the angle will eventually become larger than <span class="math notranslate nohighlight">\(0.4\)</span>, which is very significant.</p>
 <div class="figure align-center" id="id5">
 <img alt="../_images/deflectionAngle.png" src="../_images/deflectionAngle.png" />
-<p class="caption"><span class="caption-number">Fig. 15.3 </span><span class="caption-text">As we can see the angle becomes very big at about 10km.</span></p>
+<p class="caption"><span class="caption-number">Fig. 15.3 </span><span class="caption-text">As we can see the angle becomes very big at about 10km.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -414,24 +449,23 @@ TeX: {
 <h2>15.1.2. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <p>Here is a list of papers on the gravitational effects of neutrino oscillations,</p>
 <ol class="arabic simple">
-<li><a class="reference external" href="http://arxiv.org/abs/hep-ph/9611231">Gravitational Effects on the Neutrino Oscillation</a></li>
-<li><a class="reference external" href="http://arxiv.org/abs/hep-ph/9610494">Neutrino oscillations in curved spacetime: an heuristic treatment</a></li>
-<li><a class="reference external" href="http://arxiv.org/abs/0906.5556">Neutrino Oscillations in Gravitational Field</a></li>
-<li><a class="reference external" href="http://arxiv.org/abs/1002.0648">Neutrino oscillations in Kerr-Newman space-time</a></li>
-<li><a class="reference external" href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.54.1587">Neutrino oscillations in strong gravitational fields</a> by Dardo Piriz, Mou Roy, and Jose Wudka</li>
-<li><a class="reference external" href="http://arxiv.org/abs/gr-qc/0605153">Can Gravity Distinguish Between Dirac and Majorana Neutrinos?</a> (on <a class="reference external" href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.041101">PRL</a> )</li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/hep-ph/9611231">Gravitational Effects on the Neutrino Oscillation</a></p></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/hep-ph/9610494">Neutrino oscillations in curved spacetime: an heuristic treatment</a></p></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/0906.5556">Neutrino Oscillations in Gravitational Field</a></p></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/1002.0648">Neutrino oscillations in Kerr-Newman space-time</a></p></li>
+<li><p><a class="reference external" href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.54.1587">Neutrino oscillations in strong gravitational fields</a> by Dardo Piriz, Mou Roy, and Jose Wudka</p></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/gr-qc/0605153">Can Gravity Distinguish Between Dirac and Majorana Neutrinos?</a> (on <a class="reference external" href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.041101">PRL</a> )</p></li>
 </ol>
 <p>And related topics</p>
 <ol class="arabic simple">
-<li><a class="reference external" href="http://arxiv.org/abs/gr-qc/0609075">A comparison between matter wave and light wave interferometers for the detection of gravitational waves</a></li>
-<li><a class="reference external" href="http://arxiv.org/abs/gr-qc/0107063">Matter waves in a gravitational field: An index of refraction for massive particles in general relativity</a></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/gr-qc/0609075">A comparison between matter wave and light wave interferometers for the detection of gravitational waves</a></p></li>
+<li><p><a class="reference external" href="http://arxiv.org/abs/gr-qc/0107063">Matter waves in a gravitational field: An index of refraction for massive particles in general relativity</a></p></li>
 </ol>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The MMA file is <a class="reference external" href="https://github.com/emptymalei/neutrino/blob/master/MMA/gravitation.nb">here</a> .</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The MMA file is <a class="reference external" href="https://github.com/emptymalei/neutrino/blob/master/MMA/gravitation.nb">here</a> .</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -473,7 +507,7 @@ TeX: {
 
     </p>
     <p>
-        <span>© 2017, Lei Ma </span>|
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|

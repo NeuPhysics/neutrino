@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>12.1. Neutrino Oscillation And Master Equation &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.4',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,8 +140,7 @@ TeX: {
 <!-- Gitter Sidecar Environment END -->
 
  
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -231,7 +222,7 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
@@ -287,6 +278,17 @@ TeX: {
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -347,92 +349,125 @@ TeX: {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">12.1. Neutrino Oscillation And Master Equation</a><ul>
+<li><a class="reference internal" href="#quantum-master-equation">12.1.1. Quantum Master Equation</a></li>
+<li><a class="reference internal" href="#vacuum-oscillation-master-equation">12.1.2. Vacuum Oscillation Master Equation</a></li>
+<li><a class="reference internal" href="#neutrino-oscillation-in-matter-a-possible-master-equation-approach">12.1.3. Neutrino Oscillation in Matter - A Possible Master Equation Approach</a></li>
+<li><a class="reference internal" href="#self-interaction-between-neutrinos">12.1.4. Self Interaction Between Neutrinos</a></li>
+<li><a class="reference internal" href="#refs-notes">12.1.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="index.html" title="Previous Chapter: 12. Statistical Physics"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 12. Statistic...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../geometric-phase/index.html" title="Next Chapter: 13. Geometric Phase"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">13. Geometric Phase &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/statistical-physics/master-eqn.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="neutrino-oscillation-and-master-equation">
 <h1>12.1. Neutrino Oscillation And Master Equation<a class="headerlink" href="#neutrino-oscillation-and-master-equation" title="Permalink to this headline">¶</a></h1>
 <div class="hint admonition">
-<p class="first admonition-title">Why do we think about master equation?</p>
-<p class="last">The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.</p>
+<p class="admonition-title">Why do we think about master equation?</p>
+<p>The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.</p>
 </div>
 <div class="warning admonition">
-<p class="first admonition-title">WHY</p>
-<p class="last">Why do you need a master equation approach? IDK.</p>
+<p class="admonition-title">WHY</p>
+<p>Why do you need a master equation approach? IDK.</p>
 </div>
 <div class="section" id="quantum-master-equation">
 <span id="index-0"></span><h2>12.1.1. Quantum Master Equation<a class="headerlink" href="#quantum-master-equation" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="first admonition-title">Projection Technique</p>
-<p>First of all define a diagonalizing operator <span class="math">\(\hat D\)</span> which just keeps the diagonal elements and simply drops the off diagonal elements. We see that <span class="math">\(1-\hat D\)</span> will eliminate all diagonal elements.</p>
-<p>We can define the diagonalized density matrix as <span class="math">\(\hat \rho_d = \hat D \hat \rho\)</span> and off-diagonalized density matrix as <span class="math">\(\hat \rho_{od} = (1-\hat D)\hat \rho\)</span>. As an application,</p>
-<div class="math">
+<p class="admonition-title">Projection Technique</p>
+<p>First of all define a diagonalizing operator <span class="math notranslate nohighlight">\(\hat D\)</span> which just keeps the diagonal elements and simply drops the off diagonal elements. We see that <span class="math notranslate nohighlight">\(1-\hat D\)</span> will eliminate all diagonal elements.</p>
+<p>We can define the diagonalized density matrix as <span class="math notranslate nohighlight">\(\hat \rho_d = \hat D \hat \rho\)</span> and off-diagonalized density matrix as <span class="math notranslate nohighlight">\(\hat \rho_{od} = (1-\hat D)\hat \rho\)</span>. As an application,</p>
+<div class="math notranslate nohighlight">
 \[\hat \rho = \hat \rho_d + \hat \rho_{od} .\]</div>
 <p>Starting from the von Neumann equation,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[i\hbar \partial_t \hat \rho = \left[\hat H, \hat \rho \right] .\]</div>
 <p>By using the Liouville operator,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\partial_t \hat \rho = -i \hat L \hat \rho .\]</div>
-<p>Apply <span class="math">\(\hat D\)</span> and <span class="math">\(1-\hat D\)</span> to the von Neumann equation,</p>
-<div class="math">
+<p>Apply <span class="math notranslate nohighlight">\(\hat D\)</span> and <span class="math notranslate nohighlight">\(1-\hat D\)</span> to the von Neumann equation,</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\partial_t \hat \rho_d &amp; = -i \hat D  \hat L \hat \rho \\
 \partial_t \hat \rho _{od} &amp; = -i (1 - \hat D)  \hat L \hat \rho .\end{split}\]</div>
-<p>Use the relation that <span class="math">\(\hat \rho = \hat \rho_d + \hat \rho_{od}\)</span>, we have</p>
-<div class="math">
+<p>Use the relation that <span class="math notranslate nohighlight">\(\hat \rho = \hat \rho_d + \hat \rho_{od}\)</span>, we have</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\partial_t \hat \rho_d &amp; = -i \hat D  \hat L \hat \rho_d - i \hat D  \hat L \hat \rho _ {od} \\
 \partial_t \hat \rho _{od} &amp; = - i (1 - \hat D)  \hat L \hat \rho _ d - i (1 - \hat D)  \hat L \hat \rho_{od}  .\end{split}\]</div>
 <p>Solve the second equation using Green function technique,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\hat \rho_{od} = e^{-i(1-\hat D)\hat L t} + \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(-i(1-\hat D)\hat L \hat \rho_d(t')) .\]</div>
 <div class="admonition hint">
-<p class="first admonition-title">Hint</p>
+<p class="admonition-title">Hint</p>
 <p>Recall that the solution for</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\dot y + \alpha y = f\]</div>
 <p>is</p>
-<div class="last math">
+<div class="math notranslate nohighlight">
 \[y = e^{-\alpha t} y(0) + \int_0^t dt' e^{-\alpha (t-t')} f(t') .\]</div>
 </div>
-<p>Insert this solution to the equation of <span class="math">\(\hat \rho_d\)</span>,</p>
-<div class="math">
+<p>Insert this solution to the equation of <span class="math notranslate nohighlight">\(\hat \rho_d\)</span>,</p>
+<div class="math notranslate nohighlight">
 \[{\color{red}\partial_t \hat \rho_d = - i\hat D\hat L \hat \rho_d -  \hat D\hat L \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(1-\hat D)\hat L \hat \rho_d(t')} {\color{blue} - i \hat D \hat L e^{-i(1-\hat D)\hat L t} \rho_{od}(0) }.\]</div>
 <p>What happened to the blue term? It disapears when we apply the initial random phase condition.</p>
-<p class="last">When it happens we get our closed master equation for <span class="math">\(\hat \rho_d\)</span>, which is an equation for the probability.</p>
+<p>When it happens we get our closed master equation for <span class="math notranslate nohighlight">\(\hat \rho_d\)</span>, which is an equation for the probability.</p>
 </div>
 <p>In our case of neutrinos, random phase condition is not really needed since we usually deal with the situation that electron neutrinos are appearant only.</p>
 <p>In details, we have such a density matrix,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathbf\rho = \begin{pmatrix}\rho_{aa} &amp;\rho_{ab} \\ \rho_{ba} &amp; \rho_{bb}\end{pmatrix} .\end{split}\]</div>
 <p>The quantum master equation we would like to use is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\partial_t \hat \rho_d = - i\hat D\hat L \hat \rho_d -  \hat D\hat L \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(1-\hat D)\hat L \hat \rho_d(t') .\]</div>
 </div>
 <div class="section" id="vacuum-oscillation-master-equation">
 <h2>12.1.2. Vacuum Oscillation Master Equation<a class="headerlink" href="#vacuum-oscillation-master-equation" title="Permalink to this headline">¶</a></h2>
 <p>Using this projection method, one can find out the master equation for vacuum oscillations.</p>
 <div class="note admonition">
-<p class="first admonition-title">Pauli Matrices</p>
+<p class="admonition-title">Pauli Matrices</p>
 <p>We will use Pauli matrices in the following part. Here is a review of them.</p>
 <ol class="arabic">
-<li><p class="first">Pauli Matrices,</p>
+<li><p>Pauli Matrices,</p>
 <blockquote>
-<div><div class="math">
+<div><div class="math notranslate nohighlight">
 \[\begin{split}\sigma_1 &amp;= \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \\
 \sigma_2 &amp; = \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} \\
 \sigma_3 &amp; = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}.\end{split}\]</div>
 </div></blockquote>
 </li>
 </ol>
-<blockquote class="last">
-<div><ol class="arabic" start="2">
-<li><p class="first">Commutation Relations,</p>
 <blockquote>
-<div><div class="math">
+<div><ol class="arabic" start="2">
+<li><p>Commutation Relations,</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[\begin{split}[\sigma_1,\sigma_2] &amp;= 2i \sigma_3 \\
 [\sigma_2,\sigma_3] &amp;= 2i \sigma_1 \\
 [\sigma_3,\sigma_1] &amp;= 2i \sigma_2.\end{split}\]</div>
 <p>The general form is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[[\sigma_i,\sigma_j] &amp;= 2i \epsilon_{ijk} \sigma_k.\]</div>
 </div></blockquote>
 </li>
@@ -440,91 +475,91 @@ TeX: {
 </div></blockquote>
 </div>
 <p>All the Pauli matrices plus identity form a complate basis for 2 by 2 matrices. Vacuum oscillation Hamiltonian is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathbf H &amp;\to \frac{\delta^2m}{4E} \begin{pmatrix} -\cos 2\theta &amp; \sin 2 \theta \\ \sin 2\theta &amp; \cos 2\theta \end{pmatrix} \\
 &amp; \equiv \begin{pmatrix} -c &amp; s \\ s &amp; c \end{pmatrix}\\
 &amp; = -c \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} + s\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \\
 &amp; = -c \mathbf{\sigma_3} + s \mathbf{ \sigma_1},\end{split}\]</div>
-<p>where <span class="math">\(c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta\)</span> and similarly for s.</p>
+<p>where <span class="math notranslate nohighlight">\(c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta\)</span> and similarly for s.</p>
 <div class="note admonition">
-<p class="first admonition-title">Liouville Operator</p>
+<p class="admonition-title">Liouville Operator</p>
 <p>Liouville operator in quantum mechanics is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\hat L  =  [H, *],\]</div>
 <p>where the asterisk is the slot for an operator.</p>
 <p>In the case of vacuum oscillation, we can calculate the following results,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\hat L \sigma_1 &amp;= [H, \sigma_1] = -2ic\sigma_2 \\
 \hat L \sigma_2 &amp;= [H, \sigma_2] = 2ic\sigma_1 + 2is\sigma_3.\end{split}\]</div>
-<p>Notice that <span class="math">\(\sigma_3\)</span> has diagonal terms only. It will dispear when we apply <span class="math">\(1-\mathscr D\)</span> which removes the diagonal elements, i.e.,</p>
-<div class="math">
+<p>Notice that <span class="math notranslate nohighlight">\(\sigma_3\)</span> has diagonal terms only. It will dispear when we apply <span class="math notranslate nohighlight">\(1-\mathscr D\)</span> which removes the diagonal elements, i.e.,</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}(1-\mathscr D)\hat L \sigma_1 &amp;= -2ic\sigma_2 \\
 (1-\mathscr D)\hat L \sigma_2 &amp;= 2ic\sigma_1.\end{split}\]</div>
-<p><strong>Diagonalized density matrix</strong> <span class="math">\(\rho_d=\mathrm {diag}(\rho_1,\rho_2)\)</span> is</p>
-<div class="math">
+<p><strong>Diagonalized density matrix</strong> <span class="math notranslate nohighlight">\(\rho_d=\mathrm {diag}(\rho_1,\rho_2)\)</span> is</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathrm {\rho_d} &amp;= \begin{pmatrix} \rho_1 &amp; 0 \\ 0 &amp; \rho_2 \end{pmatrix} \\
 &amp; = \frac{1}{2} \left(\begin{pmatrix} \rho_1 -\rho_2 &amp; 0 \\ 0 &amp; \rho_2 -\rho_1 \end{pmatrix} + \begin{pmatrix} \rho_1+\rho_2 &amp; 0 \\ 0 &amp; \rho_1 + \rho_2 \end{pmatrix} \right) \\
 &amp; = \frac{1}{2}\left( (\rho_1-\rho_2)\sigma_3 + (\rho_1+\rho_2)\mathbf I \right)\end{split}\]</div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Actually <span class="math">\(\rho_1+\rho_2=1\)</span> for such a system. We’ll see the proof of this later.</p>
+<p class="admonition-title">Note</p>
+<p>Actually <span class="math notranslate nohighlight">\(\rho_1+\rho_2=1\)</span> for such a system. We’ll see the proof of this later.</p>
 </div>
-<p>Apply <span class="math">\((1-\mathscr D)\hat L\)</span> we get</p>
-<div class="last math">
+<p>Apply <span class="math notranslate nohighlight">\((1-\mathscr D)\hat L\)</span> we get</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}(1-\mathscr D)\hat L \rho_d &amp;= i s (\rho_2-\rho_1) \sigma_2,\\
 \mathscr D \hat L \rho_d &amp; = -\frac{1}{2}c (\rho_1+\rho_2)\sigma_3.\end{split}\]</div>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">Exponential Operator</p>
+<p class="admonition-title">Exponential Operator</p>
 <p>Exponential operator is understood when series expansion is done,</p>
-<div class="last math">
+<div class="math notranslate nohighlight">
 \[e^{\hat A} = \hat I + \hat A + \frac{1}{2!}{\hat A}^2 + \frac{1}{3!} {\hat A}^3 +\cdots\]</div>
 </div>
 <p>Recall that the master equation is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\partial_t \rho_d(t) &amp;= - i \mathscr D \hat L \rho_d - \mathscr D\hat L \int_0^t dt' e^{-i(1-\mathscr D)\hat L (t-t')} (1-\mathscr D) \hat L \hat \rho_d(t') \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D\hat L \int_0^t dt' \left( i s (\rho_2-\rho_1) e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2  \right) \\\end{split}\]</div>
 <p>So we need to calculate</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \left[1 -i(1-\mathscr D)\hat L (t-t')  + \frac{1}{2} (-i(1-\mathscr D)\hat L (t-t') )^2 + \frac{1}{3!}(-i(1-\mathscr D)\hat L (t-t') )^3 + \cdots \right]\sigma_2\\
 &amp;\equiv T_0 + T_1 + \frac{1}{2} T_2 +  \frac{1}{3!}T_3 + \cdots .\end{split}\]</div>
 <p>We will calculate it term by term and find the pattern.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[T_0 = \sigma_2\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}T_1 &amp;= -i(1-\mathscr D)\hat L (t-t') \sigma_2 \\
 &amp; = 2c\sigma_1 (t-t')\end{split}\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}T_2 &amp; = -i(1-\mathscr D)\hat L (t-t') (2c\sigma_1 (t-t')) \\
 &amp; = -i(t-t')^2 2c(-2ic\sigma_2) \\
 &amp; = - 2^2 c^2 (t-t')^2 \sigma_2\end{split}\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}T_3 &amp; = -i(1-\mathscr D)\hat L (t-t') (- 4c^2 (t-t')^2 \sigma_2) \\
 &amp; = -2^3c^3(t-t')^3\sigma_1\end{split}\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}T_4 &amp; = -i(1-\mathscr D)\hat L (t-t') (-2^3c^3(t-t')^3\sigma_1) \\
 &amp; = -i (t-t') (-2^3 c^3(t-t')^3) (-2ic\sigma_2) \\
 &amp; = 2^4 c^4 (t-t')^4 \sigma_2\end{split}\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}T_5 &amp; = -i(1-\mathscr D)\hat L (t-t') 2^4 c^4 (t-t')^4 \sigma_2 \\
 &amp; = -i(t-t')2^4 c^4 (t-t')^4 2ic\sigma_1 \\
 &amp; = 2^5c^5 (t-t')^5 \sigma_1\end{split}\]</div>
 <p>Carry on this calculation we can infer that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \sigma_2 + 2c\sigma_1 (t-t') + \frac{1}{2}(- 2^2 c^2 (t-t')^2 \sigma_2) +  \frac{1}{3!}(-2^3c^3(t-t')^3\sigma_1) + \frac{1}{4!} 2^4 c^4 (t-t')^4 \sigma_2  + \frac{1}{5!} 2^5c^5 (t-t')^5 \sigma_1 +  \cdots\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Taylor Series</p>
-<p>Taylor series of <span class="math">\(\sin x\)</span> and <span class="math">\(\cos x\)</span> around <span class="math">\(x=0\)</span> are</p>
-<div class="last math">
+<p class="admonition-title">Taylor Series</p>
+<p>Taylor series of <span class="math notranslate nohighlight">\(\sin x\)</span> and <span class="math notranslate nohighlight">\(\cos x\)</span> around <span class="math notranslate nohighlight">\(x=0\)</span> are</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\sin x &amp;= x - \frac{1}{3!} x^3 + \frac{1}{5!}x^5 + \cdots \\
 \cos x &amp; = 1 -\frac{1}{2!} x^2 + \frac{1}{4!} x^4 + \cdots .\end{split}\]</div>
 </div>
 <p>Now we see that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \sigma_1 \sin(M) + \sigma_2 \cos(M),\]</div>
-<p>where <span class="math">\(M\equiv 2 c (t-t')\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(M\equiv 2 c (t-t')\)</span>.</p>
 <p>The master equation we need is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\partial_t \rho_d(t) &amp;= \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L \int_0^t  dt' i s (\rho_2-\rho_1) \left(\sigma_1 \sin(2c(t-t')) + \sigma_2 \cos(2c(t-t'))\right) \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 - \mathscr D \hat L  i s \int_0^t  dt' (\rho_2-\rho_1) \left(\sigma_2 \cos(2c(t-t'))\right)   \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 -  i s G(t) \mathscr D \hat L  \sigma_2   \\
@@ -532,15 +567,15 @@ TeX: {
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' (\rho_2-\rho_1)  \sigma_3 \cos(2c(t-t')) \\
 &amp; = \frac{1}{2}ic(\rho_1+\rho_2)\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + (\rho_1+\rho_2) \mathbf I \right) \cos(2c(t-t')) \\
 &amp; = \frac{1}{2}ic\sigma_3 + 2 s^2 \int_0^t dt' \left( -2\rho_d(t') + \mathbf I \right) \cos(2c(t-t'))\end{split}\]</div>
-<p>In the calculation, <span class="math">\(G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))\)</span>.</p>
+<p>In the calculation, <span class="math notranslate nohighlight">\(G=\int_0^t dt'(\rho_2-\rho_1)\cos(2c(t-t'))\)</span>.</p>
 <p>Plug in the definitions of c and s, we have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\partial_t\rho_d(t) = \frac{\omega}{4} i \cos 2\theta_v \sigma_3 +  \frac{\omega^2 \sin^2 2\theta_v }{2} \int_0^t dt' (\mathbf I - 2 \rho_d(t'))\cos \left( 2 \cos 2\theta_v (t - t') \right).\]</div>
 <p>This result shows that the equations of different elements are decoupled. This is very important.</p>
 <div class="warning admonition">
-<p class="first admonition-title">What to Do?</p>
+<p class="admonition-title">What to Do?</p>
 <p>I don’t see anything good about this method. What to do next? I can predict that it’s also won’t cost a lot to solve the MSW effect. But what’s the point? These problems are not very hard to solve even using wave function method.</p>
-<p class="last">I am just leaving this result here and move on to other topics.</p>
+<p>I am just leaving this result here and move on to other topics.</p>
 </div>
 </div>
 <div class="section" id="neutrino-oscillation-in-matter-a-possible-master-equation-approach">
@@ -554,8 +589,8 @@ TeX: {
 <h2>12.1.5. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <p>Some papers actually use mater equation for its simplicity in physical meanings.</p>
 <ol class="arabic simple">
-<li>Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation in a Fluctuating Sun. Annals of Physics, 256(1), 1–38. doi:10.1006/aphy.1996.5660</li>
-<li>Bamert, P., Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation Through Helioseismic Waves, 27. doi:10.1016/S0550-3213(97)00672-X</li>
+<li><p>Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation in a Fluctuating Sun. Annals of Physics, 256(1), 1–38. doi:10.1006/aphy.1996.5660</p></li>
+<li><p>Bamert, P., Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation Through Helioseismic Waves, 27. doi:10.1016/S0550-3213(97)00672-X</p></li>
 </ol>
 </div>
 </div>
@@ -598,7 +633,7 @@ TeX: {
 
     </p>
     <p>
-        <span>© 2017, Lei Ma </span>|
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|

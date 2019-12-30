@@ -28,31 +28,20 @@ Notes of some research is hosted on bitbucket as private repository `here <https
 
 
 
-Support me:
-
-.. image:: assets/tips-neutrino-4c924c.svg
-   :target: https://gratipay.com/~emptymalei/
-
-
 Cite this doc:
 
 .. image:: /assets/zenodo.167903-blue.svg
    :target: https://zenodo.org/record/167903
 
 
+General Topics of Neutrino Physics
+--------------------------------------
 
-Here is also an index:
-
-.. image:: /assets/Neutrino-Index-blue.svg
-   :target: /genindex.html
-
-Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :download:`sitemap.xml.gz <assets/sitemap.xml.gz>` .
-
-
+I've been recreating some of the topics related to neutrinos so that I could understand better.
 
 .. toctree::
    :maxdepth: 3
-   :caption: Table of Contents
+   :caption: Table of Content
    :numbered:
 
    preliminary/index.rst
@@ -74,3 +63,14 @@ Sitemap can be downloaded: :download:`sitemap.xml <assets/sitemap.xml>` or :down
    misc/index.rst
    ref.rst
    acknowledgement.rst
+
+
+Some WIP Notes
+---------------------------------------
+
+.. toctree::
+   :maxdepth: 3
+   :caption: WIP Notes
+   :numbered:
+
+   research-notes/index.rst

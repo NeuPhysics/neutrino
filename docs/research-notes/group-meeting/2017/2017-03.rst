@@ -1,0 +1,26 @@
+2017-03 Group Meeting
+=======================
+
+
+
+2017-03-09
+--------------------------
+
+Topic: Dispersion Relation of Neutrino Flavor Oscillations
+
+About numerical calculations
+
+1. My :math:`\omega` and :math:`k` have a minus sign compared to Raffelts result.
+2. Not exactly the same plot. How can I determine the scaling of spectrum. In principle I have the same definition of :math:`G`. However, it definitely is not the case when comparing the result.
+
+
+About analytical analysis
+
+1. I should have the discrete case approaching the continuous case when the number of beams becomes large.
+
+
+2017-03-16
+----------------------
+
+
+1. Solved the continuous case but the result is weird, both for homogeneous and nonhonogeous case.

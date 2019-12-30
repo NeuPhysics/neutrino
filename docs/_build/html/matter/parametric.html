@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>5.3. Parametric Resonance &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.4',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,8 +140,7 @@ TeX: {
 <!-- Gitter Sidecar Environment END -->
 
  
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -231,7 +222,7 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
@@ -287,6 +278,17 @@ TeX: {
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -352,124 +354,161 @@ TeX: {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">5.3. Parametric Resonance</a><ul>
+<li><a class="reference internal" href="#index-0">5.3.1. Parametric Resonance</a><ul>
+<li><a class="reference internal" href="#picture">5.3.1.1. Picture</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#castle-wall-potential">5.3.2. Castle Wall Potential</a><ul>
+<li><a class="reference internal" href="#evolution-operator">5.3.2.1. Evolution Operator</a></li>
+<li><a class="reference internal" href="#two-slabs">5.3.2.2. Two Slabs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#refs-and-notes">5.3.3. Refs and Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="msw-derivation.html" title="Previous Chapter: 5.2. MSW Refraction, Resonance and Non-adiabacity"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5.2. MSW Refr...</span>
+    </a>
+  </li>
+  <li>
+    <a href="matter-driven.html" title="Next Chapter: 5.4. Matter as Driving Energy"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5.4. Matter a... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/matter/parametric.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="parametric-resonance">
 <h1>5.3. Parametric Resonance<a class="headerlink" href="#parametric-resonance" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="index-0">
 <span id="id1"></span><h2>5.3.1. Parametric Resonance<a class="headerlink" href="#index-0" title="Permalink to this headline">¶</a></h2>
-<p>Parametric resonance is the enhenced oscillation due to matter profile fluctions. The resonance is triggered by the synchronization between the averaged eigen oscillations and the oscillations of the fluctuations in matter profile. In other words, <a class="reference internal" href="#krastev1989" id="id2">[krastev1989]</a></p>
-<div class="math">
+<p>Parametric resonance is the enhenced oscillation due to matter profile fluctions. The resonance is triggered by the synchronization between the averaged eigen oscillations and the oscillations of the fluctuations in matter profile. In other words, <a class="reference internal" href="#krastev1989" id="id2"><span>[krastev1989]</span></a></p>
+<div class="math notranslate nohighlight">
 \[\int_0^{2\pi/k} \omega_m(x) d x = 2\pi n, n = 1,2,3,\cdots\]</div>
-<p>where <span class="math">\(2\pi/k\)</span> is the periodic length of matter perturbation.</p>
-<p>Given matter profile <span class="math">\(\lambda(x) = \lambda_0 (1 + A \sin(k x))\)</span>, we could solve the condition assuming the matter perturbation wavelength is much smaller than the oscillation length in matter. The result is</p>
-<div class="math">
+<p>where <span class="math notranslate nohighlight">\(2\pi/k\)</span> is the periodic length of matter perturbation.</p>
+<p>Given matter profile <span class="math notranslate nohighlight">\(\lambda(x) = \lambda_0 (1 + A \sin(k x))\)</span>, we could solve the condition assuming the matter perturbation wavelength is much smaller than the oscillation length in matter. The result is</p>
+<div class="math notranslate nohighlight">
 \[\omega_m = n k,\]</div>
-<p>where we choose <span class="math">\(\omega_m\)</span> to be the averaged value along the matter fluctuation period.</p>
+<p>where we choose <span class="math notranslate nohighlight">\(\omega_m\)</span> to be the averaged value along the matter fluctuation period.</p>
 <div class="section" id="picture">
 <h3>5.3.1.1. Picture<a class="headerlink" href="#picture" title="Permalink to this headline">¶</a></h3>
-<table class="docutils citation" frame="void" id="krastev1989" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[krastev1989]</a></td><td>Krastev, P. I., &amp; Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. <a class="reference external" href="http://doi.org/10.1016/0370-2693(89)91206-9">http://doi.org/10.1016/0370-2693(89)91206-9</a></td></tr>
-</tbody>
-</table>
+<dl class="citation">
+<dt class="label" id="krastev1989"><span class="brackets"><a class="fn-backref" href="#id2">krastev1989</a></span></dt>
+<dd><p>Krastev, P. I., &amp; Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. <a class="reference external" href="http://doi.org/10.1016/0370-2693(89)91206-9">http://doi.org/10.1016/0370-2693(89)91206-9</a></p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="section" id="castle-wall-potential">
 <h2>5.3.2. Castle Wall Potential<a class="headerlink" href="#castle-wall-potential" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="evolution-operator">
 <h3>5.3.2.1. Evolution Operator<a class="headerlink" href="#evolution-operator" title="Permalink to this headline">¶</a></h3>
-<p>For constant matter density, the state after a propagation of distance <span class="math">\(X\)</span> is given by the evolution operator,</p>
-<div class="math">
+<p>For constant matter density, the state after a propagation of distance <span class="math notranslate nohighlight">\(X\)</span> is given by the evolution operator,</p>
+<div class="math notranslate nohighlight">
 \[\Psi^{f}(x_0+X) = \mathscr{U}^{m} (X) \Psi^f(x_0),\]</div>
-<p>where <span class="math">\(\mathscr{U}^{m}\)</span> is the evolution operator in flavor basis, which is obtained directly using</p>
-<div class="math">
+<p>where <span class="math notranslate nohighlight">\(\mathscr{U}^{m}\)</span> is the evolution operator in flavor basis, which is obtained directly using</p>
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^m (x) = \exp\left(  -i H^f x \right),\]</div>
 <p>or from a rotation of evolution operator in matter basis.</p>
 <p>The Hamiltonian in flavor basis is simply written in terms of Pauli matrices,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H^f = \frac{\omega}{2} \left( \sin 2\theta \sigma_1 + (\hat\lambda - \cos 2\theta) \sigma_3 \right),\]</div>
 <p>which, fortunately, can be simplified to a vector product of the Pauli matrices vector and another vector. To find out the other vector, we define</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\vec \sigma = \left( \sigma_1, \sigma_2,\sigma_3 \right).\]</div>
 <p>Then we require</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H^f \equiv \frac{\omega_m}{2} \vec n\cdot \vec \sigma .\]</div>
-<p>Compare this expression with the previous result for <span class="math">\(H^f\)</span>, we solve</p>
-<div class="math">
+<p>Compare this expression with the previous result for <span class="math notranslate nohighlight">\(H^f\)</span>, we solve</p>
+<div class="math notranslate nohighlight">
 \[\vec n = \frac{\omega}{\omega_m } \left( \sin 2\theta ,  0 , \hat\lambda  - \cos 2\theta  \right),\]</div>
-<p>where <span class="math">\(\vec n\)</span> is indeed a unit vector.</p>
+<p>where <span class="math notranslate nohighlight">\(\vec n\)</span> is indeed a unit vector.</p>
 <p>Using this new simplified expression for Hamiltonian, we have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathscr{U}^m (x) &amp;= \exp\left( -i H^f x \right) \\
 &amp; = \exp \left( - i \frac{\omega_m}{2} x \vec n\cdot \vec \sigma \right).\end{split}\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Euler’s Formula for Pauli Matrices</p>
-<div class="math">
+<p class="admonition-title">Euler’s Formula for Pauli Matrices</p>
+<div class="math notranslate nohighlight">
 \[e^{i \phi \vec n \cdot \vec \sigma} = I \cos \phi + i \vec n \cdot \vec \sigma \sin \phi.\]</div>
-<p class="last">To prove it, Taylor expansion of the exponential and anticommutation relations are needed.</p>
+<p>To prove it, Taylor expansion of the exponential and anticommutation relations are needed.</p>
 </div>
 <p>Using Euler’s formula, we obtain the expanded form of the evolution operator,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^m (x) = I \cos \left( \frac{\omega_m}{2} x \right) - i \vec n \cdot \vec \sigma \sin \left( \frac{\omega_m}{2} x \right),\]</div>
 <p>where we can define a phase function for simplicity, :math:<a href="#id3"><span class="problematic" id="id4">`</span></a>phi(x) =  frac{omega_m}{2} x <a href="#id5"><span class="problematic" id="id6">`</span></a>. The evolution becomes</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^m (x) = I \cos \phi(x) - i \vec n \cdot \vec \sigma \sin \phi(x).\]</div>
 </div>
 <div class="section" id="two-slabs">
 <h3>5.3.2.2. Two Slabs<a class="headerlink" href="#two-slabs" title="Permalink to this headline">¶</a></h3>
 <p>For two slabs with different matter potential right next to each other, the evolution operator for the two slabs is simply the multiplication of the two evolution operator for each slab,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^f (X_1+X_2) = \mathscr{U}^f(X_2)\mathscr{U}^f(X_1),\]</div>
-<p>where <span class="math">\(X_1\)</span> and <span class="math">\(X_2\)</span> are the thickness of the slabs.</p>
+<p>where <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are the thickness of the slabs.</p>
 <p>Apply the formalism of Pauli matrices, we have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathscr{U}^f (X_1+X_2) &amp;= \left( I \cos \phi(X_2) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \right)  \left( I \cos \phi(X_1) - i \vec n_1 \cdot \vec \sigma \sin \phi(X_1) \right) \\
 &amp; = \cos \phi(X_2)\cos \phi(X_1) - i\vec n _1 \cdot \vec \sigma \cos\phi(X_2) \sin \phi(X_1) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \cos \phi(X_1) - (\vec n_2 \cdot \vec \sigma)(\vec n_1 \cdot \vec \sigma) \sin \phi (X_2) \sin \phi(X_1).\end{split}\]</div>
 <p>Notice that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}&amp;(\vec n_2 \cdot \vec \sigma)(\vec n_1 \cdot \vec \sigma)  \\
 =&amp; \frac{\omega}{\omega_{m1}}\frac{\omega}{\omega_{m2}}( \sin 2\theta \sigma_1 + ( \hat\lambda_{m2} - \cos 2\theta ) \sigma_3 )( \sin 2\theta \sigma_1 + (\hat\lambda_{m1} -\cos 2\theta ) \sigma_3 ) \\
 =&amp; \frac{\omega}{\omega_{m1}}\frac{\omega}{\omega_{m2}} ( \sin 2\theta \sin 2\theta + \cos 2\theta \cos 2\theta + \hat \lambda_{m1}\hat\lambda_{m2} - \hat\lambda_{m1} \cos 2\theta - \hat\lambda_{m2}\cos 2\theta - \sin 2\theta \sigma_1 (\hat\lambda_{m1}- \cos 2\theta) \sigma_3  -  (\hat\lambda_{m2}- \cos 2\theta) \sigma_3 \sin 2\theta \sigma_1 ) \\
 =&amp; \vec n_1 \cdot \vec n_2 + i \vec n_1 \times \vec n_2 \sigma_2.\end{split}\]</div>
 <p>Thus the result for the evolution operator is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\mathscr{U}^f (X_1+X_2) &amp; = \cos \phi(X_2)\cos \phi(X_1) - i\vec n _1 \cdot \vec \sigma \cos\phi(X_2) \sin \phi(X_1) - i \vec n_2 \cdot \vec \sigma \sin \phi(X_2) \cos \phi(X_1) - (\vec n_1 \cdot \vec n_2 + \vec n_1 \times \vec n_2) \sin \phi (X_2) \sin \phi(X_1) \\
 &amp; = \cos \phi(X_1) \cos \phi(X_2) - \sin \phi(X_1)\sin \phi(X_2) \vec n_1\cdot \vec n_2  - i \vec \sigma\cdot ( \sin \phi(X_1) \cos \phi(X_2) \vec n_1 + \cos \phi(X_1) \sin \phi(X_2) \vec n_2 -  \sin \phi (X_1) \sin \phi(X_2) \vec n_1 \times \vec n_2 )\\
 &amp; \equiv R - i \vec \sigma \cdot \vec I,\end{split}\]</div>
 <p>where</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}R &amp;= \cos \phi(X_1) \cos \phi(X_2) - \sin \phi(X_1)\sin \phi(X_2) \vec n_1\cdot \vec n_2 \\
 \vec I &amp; = \sin \phi(X_1) \cos \phi(X_2) \vec n_1 + \cos \phi(X_1) \sin \phi(X_2) \vec n_2 -  \sin \phi (X_1) \sin \phi(X_2) \vec n_1 \times \vec n_2.\end{split}\]</div>
 <p>To carry out the calculation of multiple periods of such, it is easier to rewrite the evolution operator into exponential form. To do so we need to define</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}R &amp; = \cos \Phi ,\\
 \vec N &amp; = \frac{\vec I}{\lvert \vec I \rvert},\\
 \lvert \vec I \rvert &amp; = \sin \Phi.\end{split}\]</div>
 <p>Using these representations, we can easily apply Euler’s formula backwards,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^f(X_1+X_2) = \exp \left( -i (\vec N \cdot  \vec \sigma) \Phi \right).\]</div>
 <p>For a lot of such potentials right next to each other, we have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\mathscr{U}^f(k(X_1+X_2)) = \exp \left( -i k (\vec N \cdot  \vec \sigma) \Phi \right).\]</div>
 <p>This is verified in Giunti’s book.</p>
 <p>Then we can calculate the transition probability, which is given in Giunti’s book,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[P_{\nu_e\to\nu_\mu} (k(X_1+X_2) ) = \left( 1 - \frac{I_3^2}{\lvert \vec I \rvert^2}  \right) \sin^2 k\Phi ,\]</div>
-<p>which gives us the resonance condition <span class="math">\(I_3=0\)</span>, i.e.,</p>
-<div class="math">
+<p>which gives us the resonance condition <span class="math notranslate nohighlight">\(I_3=0\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
 \[\frac{\tan \phi(X_1)}{\tan \phi(X_2)} = -\frac{\cos 2\theta_{m2}}{\cos 2\theta_{m1}},\]</div>
-<p>with <span class="math">\(\phi(X_i)=\frac{\omega_{mi}}{2}X_i\)</span>.</p>
+<p>with <span class="math notranslate nohighlight">\(\phi(X_i)=\frac{\omega_{mi}}{2}X_i\)</span>.</p>
 </div>
 </div>
 <div class="section" id="refs-and-notes">
 <h2>5.3.3. Refs and Notes<a class="headerlink" href="#refs-and-notes" title="Permalink to this headline">¶</a></h2>
 <p>I did some calculations based on Giunti’s book so that I can really understand each step of the derivations.</p>
 <ol class="arabic simple">
-<li>Giunti, C., &amp; Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001</li>
-<li>Krastev, P. I., &amp; Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. <a class="reference external" href="http://doi.org/10.1016/0370-2693(89)91206-9">http://doi.org/10.1016/0370-2693(89)91206-9</a></li>
-<li>Loreti, F. N., &amp; Balantekin, A. B. (1994). Neutrino oscillations in noisy media. Physical Review D, 50(8), 4762–4770. <a class="reference external" href="http://doi.org/10.1103/PhysRevD.50.4762">http://doi.org/10.1103/PhysRevD.50.4762</a></li>
+<li><p>Giunti, C., &amp; Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001</p></li>
+<li><p>Krastev, P. I., &amp; Smirnov, A. Y. (1989). Parametric effects in neutrino oscillations. Physics Letters B, 226(3-4), 341–346. <a class="reference external" href="http://doi.org/10.1016/0370-2693(89)91206-9">http://doi.org/10.1016/0370-2693(89)91206-9</a></p></li>
+<li><p>Loreti, F. N., &amp; Balantekin, A. B. (1994). Neutrino oscillations in noisy media. Physical Review D, 50(8), 4762–4770. <a class="reference external" href="http://doi.org/10.1103/PhysRevD.50.4762">http://doi.org/10.1103/PhysRevD.50.4762</a></p></li>
 </ol>
 </div>
 </div>
@@ -512,7 +551,7 @@ TeX: {
 
     </p>
     <p>
-        <span>© 2017, Lei Ma </span>|
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|

@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>10. Models &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.4',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,8 +140,7 @@ TeX: {
 <!-- Gitter Sidecar Environment END -->
 
  
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -231,7 +222,7 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
@@ -287,6 +278,17 @@ TeX: {
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -347,19 +349,52 @@ TeX: {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">10. Models</a><ul>
+<li><a class="reference internal" href="#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a><ul>
+<li><a class="reference internal" href="#what-to-expect">10.1.1. What to expect?</a></li>
+<li><a class="reference internal" href="#solving-eqns">10.1.2. Solving Eqns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="../pictures/flavor-isospin.html" title="Previous Chapter: 9.2. Flavor Isospin"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 9.2. Flavor Isospin</span>
+    </a>
+  </li>
+  <li>
+    <a href="../resonances/index.html" title="Next Chapter: 11. Resonances in Neutrino Oscillations"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">11. Resonance... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/models/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="models">
 <h1>10. Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="homogeneous-and-isotropic-neutrino-gas">
 <h2>10.1. Homogeneous and Isotropic Neutrino Gas<a class="headerlink" href="#homogeneous-and-isotropic-neutrino-gas" title="Permalink to this headline">¶</a></h2>
-<p><span class="math">\(\vec P_\omega\)</span> can be time-independent.</p>
-<p>Regarding the discussion in Pictures, we know immediately that <span class="math">\(\vec H\)</span> is aligned or anti-aligned with <span class="math">\(\vec P_\omega\)</span> since</p>
-<div class="math">
+<p><span class="math notranslate nohighlight">\(\vec P_\omega\)</span> can be time-independent.</p>
+<p>Regarding the discussion in Pictures, we know immediately that <span class="math notranslate nohighlight">\(\vec H\)</span> is aligned or anti-aligned with <span class="math notranslate nohighlight">\(\vec P_\omega\)</span> since</p>
+<div class="math notranslate nohighlight">
 \[\vec H \times \vec P_\omega = 0,\]</div>
-<p>as <span class="math">\(\vec P_\omega\)</span> is time-independent.</p>
+<p>as <span class="math notranslate nohighlight">\(\vec P_\omega\)</span> is time-independent.</p>
 <p>Anyway the equation we need to solve is then</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\vec a\]</div>
 <div class="section" id="what-to-expect">
 <h3>10.1.1. What to expect?<a class="headerlink" href="#what-to-expect" title="Permalink to this headline">¶</a></h3>
@@ -368,8 +403,8 @@ TeX: {
 <div class="section" id="solving-eqns">
 <h3>10.1.2. Solving Eqns<a class="headerlink" href="#solving-eqns" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
-<p class="first admonition-title">What is special in this model?</p>
-<p class="last">To be added.</p>
+<p class="admonition-title">What is special in this model?</p>
+<p>To be added.</p>
 </div>
 </div>
 </div>
@@ -413,7 +448,7 @@ TeX: {
 
     </p>
     <p>
-        <span>© 2017, Lei Ma </span>|
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|

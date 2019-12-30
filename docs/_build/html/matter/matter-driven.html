@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>5.4. Matter as Driving Energy &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -10,20 +10,12 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.4',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,8 +140,7 @@ TeX: {
 <!-- Gitter Sidecar Environment END -->
 
  
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default ">
     <div class="container">
@@ -231,7 +222,7 @@ TeX: {
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../instability/bimodal.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
 </ul>
@@ -287,6 +278,17 @@ TeX: {
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -360,217 +362,263 @@ TeX: {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">5.4. Matter as Driving Energy</a><ul>
+<li><a class="reference internal" href="#oscillation-in-matter-and-vacuum">5.4.1. Oscillation in Matter and Vacuum</a></li>
+<li><a class="reference internal" href="#rabi-like-transition">5.4.2. Rabi-like Transition</a></li>
+<li><a class="reference internal" href="#analytical-attack">5.4.3. Analytical Attack</a></li>
+<li><a class="reference internal" href="#period-matter-potential-non-physical">5.4.4. Period Matter Potential (NON-PHYSICAL)</a><ul>
+<li><a class="reference internal" href="#numerical-results">5.4.4.1. Numerical Results</a></li>
+<li><a class="reference internal" href="#approximation">5.4.4.2. Approximation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constant-matter-with-periodic-perturbation">5.4.5. Constant Matter with Periodic Perturbation</a><ul>
+<li><a class="reference internal" href="#id1">5.4.5.1. Numerical Results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resoances">5.4.6. Resoances</a><ul>
+<li><a class="reference internal" href="#what-really-is-the-reason-of-these-transition">5.4.6.1. What Really is the Reason of These Transition?</a></li>
+<li><a class="reference internal" href="#approximations">5.4.6.2. Approximations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#refs-notes">5.4.7. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="parametric.html" title="Previous Chapter: 5.3. Parametric Resonance"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5.3. Parametr...</span>
+    </a>
+  </li>
+  <li>
+    <a href="distorted-phase-effect.html" title="Next Chapter: 5.5. Distorted Phase Effect"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5.5. Distorte... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/matter/matter-driven.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="matter-as-driving-energy">
 <h1>5.4. Matter as Driving Energy<a class="headerlink" href="#matter-as-driving-energy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="oscillation-in-matter-and-vacuum">
 <h2>5.4.1. Oscillation in Matter and Vacuum<a class="headerlink" href="#oscillation-in-matter-and-vacuum" title="Permalink to this headline">¶</a></h2>
 <p>Oscillation in Vacuum, as we have calculated is,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \psi_{e}^{(v)} (\bar x) \\ \psi_{x}^{(v)} (\bar x)  \end{pmatrix} = \begin{pmatrix}  \cos\theta_v \psi_{v1}(0) e^{-i\frac{\bar x}{2}} + \sin \theta_v \psi_{v2}(0) e^{i\frac{\bar x}{2}} \\    -\sin\theta_v \psi_{v1}(0) e^{-i\frac{\bar x}{2}} + \cos \theta_v \psi_{v2}(0) e^{i\frac{\bar x}{2}}   \end{pmatrix},\end{split}\]</div>
-<p>where <span class="math">\(\bar x = \omega x\)</span> and <span class="math">\(\omega = \frac{\delta m^2 }{2E}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(\bar x = \omega x\)</span> and <span class="math notranslate nohighlight">\(\omega = \frac{\delta m^2 }{2E}\)</span>.</p>
 <p>The initial condition is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \psi_{v1}(0) \\ \psi_{v2}(0) \end{pmatrix} = \begin{pmatrix} \cos\theta_v &amp; -\sin\theta_v \\ \sin \theta_v &amp; \cos\theta_v \end{pmatrix} \begin{pmatrix} \psi_{e}(0) \\ \psi_{x}(0) \end{pmatrix} .\end{split}\]</div>
 <p>Thus we have the probability of the second state</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[P_{x}^{(v)}(\bar x) = 2\sin^2\theta_v \cos^2\theta_v \left( 1 + \cos (\bar x) \right).\]</div>
 <p>Similarly the oscillation in a constant matter background is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[P_{x}^{(m)}(\bar x) = 2\sin^2\theta_m \cos^2\theta_m \left( 1 + \cos \left( \frac{\omega_m}{\omega} \bar x \right) \right).\]</div>
 <p>To have a larger amplitude in matter oscillation, we require</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\sin ^2\theta_m \cos^2\theta_m \geq \sin ^2\theta_v \cos^2\theta_v,\]</div>
 <p>which simplifies to</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\sin 2\theta_m \geq \sin 2\theta_v.\]</div>
 <p>Since</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\sin 2\theta_m = \frac{\sin 2\theta_v}{\sqrt{ 1 + \left(\frac{\lambda}{\omega}\right)^2 - 2\frac{\lambda}{\omega} \cos 2\theta_v }},\]</div>
 <p>we have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\sqrt{ 1 + \left(\frac{\lambda}{\omega}\right)^2 - 2\frac{\lambda}{\omega} \cos 2\theta_v } \leq 1.\]</div>
 <p>Manipulating this inequality, we get</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\frac{\lambda}{\omega} \leq 2\cos 2\theta_v.\]</div>
 <div class="hint admonition">
-<p class="first admonition-title">MSW Resonance</p>
+<p class="admonition-title">MSW Resonance</p>
 <p>The MSW resonance is at</p>
-<div class="last math">
+<div class="math notranslate nohighlight">
 \[\frac{\lambda}{\omega} = \cos 2\theta_v.\]</div>
 </div>
 <p>Notice that this requirement also leads to the result that the oscillation frequency in matter is smaller than the vacuum oscillation frequency,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\omega_m = \omega \sqrt{ 1 +  \left(\frac{\lambda}{\omega}\right)^2 -2 \frac{\lambda}{\omega} \cos 2\theta_v } \leq \omega.\]</div>
 </div>
 <div class="section" id="rabi-like-transition">
 <h2>5.4.2. Rabi-like Transition<a class="headerlink" href="#rabi-like-transition" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition" id="index-0">
-<p class="first admonition-title">Rabi Oscillation</p>
-<p>Rabi oscillations happens when a driving field is applied to a quantum system. A simple case would be a driving field <span class="math">\(-A\cos(\omega t)\)</span> is applied to a system with Hamiltonian</p>
-<div class="math">
+<p class="admonition-title">Rabi Oscillation</p>
+<p>Rabi oscillations happens when a driving field is applied to a quantum system. A simple case would be a driving field <span class="math notranslate nohighlight">\(-A\cos(\omega t)\)</span> is applied to a system with Hamiltonian</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}H_0 = \begin{pmatrix} \epsilon_1 &amp; 0 \\ 0 &amp; \epsilon_2 \end{pmatrix}.\end{split}\]</div>
 <p>The overall Hamiltonian becomes</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}H = -\frac{\omega_0}{2} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} - A \cos(\omega t)\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0  \end{pmatrix} .\end{split}\]</div>
 <p>Using Pauli matrices, this can be simplified,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H = -\frac{\omega_0}{2}\sigma_z - A\cos(\omega t)\sigma_x .\]</div>
 <p>An ansatz about the state is that we can always write down the solutions to this system as</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\ket{\psi} = c_g(t) e^{-iE_g t}\ket{g} + c_e(t) e^{-i E_e t} \ket{e}.\]</div>
-<p>We also know that in <span class="math">\(\{\ket{g},\ket{e}\}\)</span> basis, we have <span class="math">\(\sigma_z \ket{g}=\ket{g}\)</span> and <span class="math">\(\sigma_z\ket{e}=-\ket{e}\)</span>. Thus the Schroding equation is reduced to</p>
-<div class="math">
+<p>We also know that in <span class="math notranslate nohighlight">\(\{\ket{g},\ket{e}\}\)</span> basis, we have <span class="math notranslate nohighlight">\(\sigma_z \ket{g}=\ket{g}\)</span> and <span class="math notranslate nohighlight">\(\sigma_z\ket{e}=-\ket{e}\)</span>. Thus the Schroding equation is reduced to</p>
+<div class="math notranslate nohighlight">
 \[i\partial_t( c_g e^{-iE_gt}\ket{g}+c_e e^{-iE_et}\ket{e} )=(-\frac{\omega}{2}\sigma_z - A\cos(\omega t) \sigma_z)( c_g e^{-iE_gt}\ket{g}+c_e e^{-iE_et}\ket{e} ).\]</div>
-<p>Simplify the equation and write down the equations for both <span class="math">\(\ket{g}\)</span> and <span class="math">\(\ket{e}\)</span>, I have</p>
-<div class="math">
+<p>Simplify the equation and write down the equations for both <span class="math notranslate nohighlight">\(\ket{g}\)</span> and <span class="math notranslate nohighlight">\(\ket{e}\)</span>, I have</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\dot c_g &amp;= i A\cos(\omega t) c_e e^{i(E_g-E_e) t}, \\
 \dot c_e &amp; = i A\cos(\omega t) c_g e^{-i(E_g-E_e)t}.\end{split}\]</div>
-<p>Notice that we can write <span class="math">\(\cos(\omega t)\)</span> as <span class="math">\(\frac{1}{2}(e^{-i\omega t} + e^{i\omega t})\)</span>. The equations becomes</p>
-<div class="math">
+<p>Notice that we can write <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span> as <span class="math notranslate nohighlight">\(\frac{1}{2}(e^{-i\omega t} + e^{i\omega t})\)</span>. The equations becomes</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\dot c_g &amp;= \frac{iA}{2}c_e ( e^{i(omega-\omega_0)t} + e^{-i(\omega+\omega_0)t} ), \\
 \dot c_e &amp; = \frac{iA}{2} c_g ( e^{i(\omega+\omega_0)t} + e^{i( \omega_0 - \omega )t} ).\end{split}\]</div>
-<p>where I used <span class="math">\(\omega_0 = E_e - E_g\)</span>. I assume this is larger than 0.</p>
-<p><strong>The rotation wave approximation is that since the term with angular frequency</strong> <span class="math">\(\omega+\omega_0\)</span> <strong>is much larger than</strong> <span class="math">\(\omega_0-\omega\)</span>. I would drop it and only capture the overall behavior.</p>
+<p>where I used <span class="math notranslate nohighlight">\(\omega_0 = E_e - E_g\)</span>. I assume this is larger than 0.</p>
+<p><strong>The rotation wave approximation is that since the term with angular frequency</strong> <span class="math notranslate nohighlight">\(\omega+\omega_0\)</span> <strong>is much larger than</strong> <span class="math notranslate nohighlight">\(\omega_0-\omega\)</span>. I would drop it and only capture the overall behavior.</p>
 <p>The equation we have is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\dot c_g &amp; = \frac{iA}{2} c_e e^{-i(\omega_0-\omega)}, \\
 \dot c_e &amp; = \frac{iA}{2} c_g e^{i(\omega_0 - \omega)}.\end{split}\]</div>
 <p>So the problem becomes solvable.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\ddot c_e - i(\omega - \omega) \dot c_e + \frac{A^2}{4}c_e = 0.\]</div>
 <p>The solution to this is simply determined by solving out the characteristic equation, which is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\lambda_{\pm} = \frac{(\omega_0 - \omega) \pm \sqrt{ (\omega_0 - \omega)^2 + A^2 } }{2} .\]</div>
-<p>The general solution to <span class="math">\(c_e\)</span> is</p>
-<div class="math">
+<p>The general solution to <span class="math notranslate nohighlight">\(c_e\)</span> is</p>
+<div class="math notranslate nohighlight">
 \[c_e = c_+ e^{i\lambda_+ t} + c_- e^{i\lambda_- t}.\]</div>
 <p>Suppose we have initial condition that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}c_g(0) &amp; = 1,\\
 c_e(0) &amp; = 0,\end{split}\]</div>
 <p>the solutions should be</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}c_e(t) &amp; = \frac{iA}{\Omega_R} e^{i\Delta t/2} \sin(\Omega_R t/2) ,\\
 c_g(t) &amp;=  e^{-i\Delta t/2}(\cos(\Omega_R t/2) + \frac{i\Delta}{\Omega_R} \sin(\Omega_R t/2) ),\end{split}\]</div>
-<p>where we defined <span class="math">\(\Delta = \omega_0-\omega\)</span> and the Rabi frequency <span class="math">\(\Omega_R^2\)</span> is defined as <span class="math">\(\Omega_R^2 = \Delta^2 + A^2\)</span>.</p>
-<p>The probability for the system to stay on a state <span class="math">\(\ket{e}\)</span> is</p>
-<div class="last math">
+<p>where we defined <span class="math notranslate nohighlight">\(\Delta = \omega_0-\omega\)</span> and the Rabi frequency <span class="math notranslate nohighlight">\(\Omega_R^2\)</span> is defined as <span class="math notranslate nohighlight">\(\Omega_R^2 = \Delta^2 + A^2\)</span>.</p>
+<p>The probability for the system to stay on a state <span class="math notranslate nohighlight">\(\ket{e}\)</span> is</p>
+<div class="math notranslate nohighlight">
 \[P = \frac{A^2}{\Omega_R^2} \sin^2\left( \frac{\Omega_R }{2} t \right).\]</div>
 </div>
 <p>In vacuum energy eigenbasis, we can write down the Hamiltonian for neutrino oscillations in matter,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H =  -\frac{\omega}{2} \sigma_1 + U^{-1} V U,\]</div>
 <p>where the transformation matrix was calculated in the previous chapter. The expression for this Hamiltonian, as we plug in the transformation, is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H = -\frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\cos(2\theta_v) \sigma_3 + \frac{\lambda}{2}\sin(2\theta) \sigma_1 .\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Comparing with The Simple Case of Rabi Oscillation</p>
+<p class="admonition-title">Comparing with The Simple Case of Rabi Oscillation</p>
 <p>The extra term compared with the Rabi oscillation we worked out is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\frac{\lambda}{2}\cos(2\theta_v) \sigma_3,\]</div>
-<p class="last">which is also the troble since here <span class="math">\(\lambda\)</span> is time dependent.</p>
+<p>which is also the troble since here <span class="math notranslate nohighlight">\(\lambda\)</span> is time dependent.</p>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">Hamiltonian Vector</p>
+<p class="admonition-title">Hamiltonian Vector</p>
 <p>This Hamiltonian forms a vector</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\vec H = \begin{pmatrix}  0 &amp; \frac{\lambda}{2}\sin(2\theta_v) &amp; 0 &amp; -\frac{\omega}{2} + \frac{\lambda}{2} \cos(2\theta_v)  \end{pmatrix},\]</div>
 <p>in the complate basis</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\vec \sigma = \begin{pmatrix}  I &amp; \sigma_1 &amp; \sigma_2 &amp; \sigma_3  \end{pmatrix}.\]</div>
 <p>So that</p>
-<div class="last math">
+<div class="math notranslate nohighlight">
 \[H = \vec H \cdot \vec \sigma.\]</div>
 </div>
 <p>To solve the problem, we use the ansatz that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\ket{\psi} = C_1 e^{i\frac{\omega}{2}t} \ket{1} + C_2 e^{-i\frac{\omega}{2}t} \ket{2}.\]</div>
 <p>In the proper basis, we also have</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\sigma_3 \ket{1} &amp;= \ket{1}, \\
 \sigma_3 \ket{2} &amp; = -\ket{2},\\
 \sigma_1 \ket{1} &amp; = \ket{2},\\
 \sigma_1\ket{2} &amp; = \ket{1}.\end{split}\]</div>
 <p>Plug in these into Schrodinger equation,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}&amp;( i\dot C_1 e^{i\omega t/2} \ket{1} - \frac{\omega}{2} C_1 e^{i\omega t/2} \ket{1} + i\dot C_2 e^{-i\omega t/2} \ket{2} + \frac{\omega}{2} C_2 e^{-i\omega t/2} \ket{1} ) \\
 &amp;= \left( \frac{\lambda}{2} \cos 2\theta_v - \frac{\omega}{2} \right) C_1 e^{i\omega t/2} \ket{1} - \left( \frac{\lambda}{2}\cos 2\theta_v -\frac{\omega}{2}  \right) C_2 e^{-\omega t/2} \ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_1 e^{i\omega t/2}\ket{2} + \frac{\lambda}{2} \sin 2\theta_v C_2 e^{-i\omega t/2} \ket{1}.\end{split}\]</div>
 <p>Collect terms we get two equations,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}i \dot C_1 &amp; = \frac{\lambda \cos 2\theta_v}{2} C_1 + \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}, \\
 i \dot C_2 &amp; = -\frac{\lambda \cos 2\theta_v}{2} C_2 + \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}.\end{split}\]</div>
-<p>Write down the expression for <span class="math">\(C_1\)</span> from the second equation and the expression for <span class="math">\(C_2\)</span> from the first equation,</p>
-<div class="math">
+<p>Write down the expression for <span class="math notranslate nohighlight">\(C_1\)</span> from the second equation and the expression for <span class="math notranslate nohighlight">\(C_2\)</span> from the first equation,</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}C_1 &amp;= \frac{ i \dot C_2 + \frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}, \\
 C_2 &amp; = \frac{ i \dot C_1 - \frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }.\end{split}\]</div>
 <div class="note admonition">
-<p class="first admonition-title">The Equations</p>
+<p class="admonition-title">The Equations</p>
 <p>The equations should be analyzed term by term.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}i \dot C_1 &amp; = {\color{red}\frac{\lambda \cos 2\theta_v}{2} C_1} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_2 e^{-i\omega t}}, \\
 i \dot C_2 &amp; = {\color{red}-\frac{\lambda \cos 2\theta_v}{2} C_2} {\color{blue}+ \frac{\lambda \sin 2\theta_v}{2} C_1 e^{i\omega t}}.\end{split}\]</div>
-<p>The red terms are the new math, without which the equation given a periodic matter potential will be exactly the same as the Rabi flopping we worked out. The red terms works as acuumulated oscillation due to all the values of <span class="math">\(C_1\)</span> or <span class="math">\(C_2\)</span>.</p>
+<p>The red terms are the new math, without which the equation given a periodic matter potential will be exactly the same as the Rabi flopping we worked out. The red terms works as acuumulated oscillation due to all the values of <span class="math notranslate nohighlight">\(C_1\)</span> or <span class="math notranslate nohighlight">\(C_2\)</span>.</p>
 <p>To see this effect more clearly, the solutions with the blue Rabi flopping terms are worked out for both equations.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}C_1(x) &amp; = {\color{red}C_1(0) \exp\left( -\frac{i}{2} \cos 2\theta_v \int_0^x \lambda (x') dx' \right)} \\
 C_2(x) &amp; = {\color{red}C_2(0) \exp \left( \frac{i}{2} \cos 2\theta_v \int_0^x \lambda(x') dx' \right)}.\end{split}\]</div>
-<p>Given initial condition that <span class="math">\(C_1(0)=1\)</span> and <span class="math">\(C_2(0)=0\)</span>, we anticiptate the the new red term for <span class="math">\(C_2(x)\)</span> only works as <span class="math">\(C_1(x)\)</span> is populted to <span class="math">\(C_2(x)\)</span> through Rabi flopping.</p>
+<p>Given initial condition that <span class="math notranslate nohighlight">\(C_1(0)=1\)</span> and <span class="math notranslate nohighlight">\(C_2(0)=0\)</span>, we anticiptate the the new red term for <span class="math notranslate nohighlight">\(C_2(x)\)</span> only works as <span class="math notranslate nohighlight">\(C_1(x)\)</span> is populted to <span class="math notranslate nohighlight">\(C_2(x)\)</span> through Rabi flopping.</p>
 <p>Notice that this term will give us more complicated oscillatary result since it will mix up with the Rabi flopping result. The phase in these results won’t just simply go away when the moduli are calculated.</p>
 <p>The other view of these equations is to look at the expressions</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}C_1 &amp;= {\color{blue}\frac{ i \dot C_2}{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}} {\color{red} + \frac{\frac{\lambda \cos 2\theta_v }{2}C_2 }{\frac{\lambda \cos 2\theta_v}{2} e^{i\omega t}}  }, \\
 C_2 &amp; = {\color{blue}\frac{ i \dot C_1}{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  } -  {\color{red} \frac{\frac{\lambda \cos 2\theta_v }{2}C_1  }{ \frac{\lambda \sin 2\theta_v}{2} e^{-i\omega t} }  }.\end{split}\]</div>
-<p class="last">It means that the new terms added new mixing contributions to <span class="math">\(C_1\)</span> and <span class="math">\(C_2\)</span>. But the idea is that we don’t really know whether it is enhencement or reduction.</p>
+<p>It means that the new terms added new mixing contributions to <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span>. But the idea is that we don’t really know whether it is enhencement or reduction.</p>
 </div>
-<p>Combine the two equations we get the equation for <span class="math">\(\dot C_1\)</span> which is used to get the equation for <span class="math">\(C_2\)</span>. Simplification can be done and it leads to</p>
-<div class="math">
+<p>Combine the two equations we get the equation for <span class="math notranslate nohighlight">\(\dot C_1\)</span> which is used to get the equation for <span class="math notranslate nohighlight">\(C_2\)</span>. Simplification can be done and it leads to</p>
+<div class="math notranslate nohighlight">
 \[\ddot C_2 - \left( i \omega +  \frac{\dot \lambda}{\lambda}  \right) \dot C_2 - \left(   \frac{\lambda \cos 2\theta_v}{2} \omega  - \frac{\lambda^2}{4}   \right) C_2 = 0.\]</div>
 <p>Since the equation doesn’t corresponds to a clear and simple physics picture, we need to understand term by term.</p>
 <div class="note admonition">
-<p class="first admonition-title">Review of The Hamiltonian</p>
+<p class="admonition-title">Review of The Hamiltonian</p>
 <p>The Hamiltonian we are dealing with is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[H = {\color{green}-\frac{\omega}{2} \sigma_3} + {\color{red}\frac{\lambda}{2} \cos 2\theta_v \sigma_3} + {\color{blue}\frac{\lambda}{2}\sin 2\theta_v \sigma_1},\]</div>
-<p class="last">where the green term contributes to the two eigenenergies, the red term contributes to the two eigenenergies but with a time or space dependence, the last blue term is the flopping term.</p>
+<p>where the green term contributes to the two eigenenergies, the red term contributes to the two eigenenergies but with a time or space dependence, the last blue term is the flopping term.</p>
 </div>
-<p>One of the obstacles of further approximations to Rabi oscillation is that the term <span class="math">\(\frac{\lambda}{2} \cos 2\theta_v\)</span> is not much smaller than the flopping term which means it can not be dropped.</p>
-<p>From now on we are going to use <span class="math">\(ct=x\)</span> since neutrinos has a velocity very close to speed of light which means we can just replace <span class="math">\(t\)</span> with <span class="math">\(x\)</span> in natural units.</p>
+<p>One of the obstacles of further approximations to Rabi oscillation is that the term <span class="math notranslate nohighlight">\(\frac{\lambda}{2} \cos 2\theta_v\)</span> is not much smaller than the flopping term which means it can not be dropped.</p>
+<p>From now on we are going to use <span class="math notranslate nohighlight">\(ct=x\)</span> since neutrinos has a velocity very close to speed of light which means we can just replace <span class="math notranslate nohighlight">\(t\)</span> with <span class="math notranslate nohighlight">\(x\)</span> in natural units.</p>
 </div>
 <div class="section" id="analytical-attack">
 <h2>5.4.3. Analytical Attack<a class="headerlink" href="#analytical-attack" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="period-matter-potential-non-physical">
 <h2>5.4.4. Period Matter Potential (NON-PHYSICAL)<a class="headerlink" href="#period-matter-potential-non-physical" title="Permalink to this headline">¶</a></h2>
-<p>For simplicity we consider periodic matter potential, <span class="math">\(\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)\)</span>. Also for easy calculation, we define <span class="math">\(\omega_\lambda = \beta \omega\)</span>. Thus <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> fully describes the periodic matter potential.</p>
-<p>We use periodic matter potential <span class="math">\(\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)\)</span> and define <span class="math">\(\omega_\lambda = \beta \omega\)</span>.</p>
+<p>For simplicity we consider periodic matter potential, <span class="math notranslate nohighlight">\(\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)\)</span>. Also for easy calculation, we define <span class="math notranslate nohighlight">\(\omega_\lambda = \beta \omega\)</span>. Thus <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> fully describes the periodic matter potential.</p>
+<p>We use periodic matter potential <span class="math notranslate nohighlight">\(\lambda(x) = \lambda_0 \cos(\omega_\lambda x) \equiv \alpha\omega \cos(\omega_\lambda x)\)</span> and define <span class="math notranslate nohighlight">\(\omega_\lambda = \beta \omega\)</span>.</p>
 <div class="section" id="numerical-results">
 <h3>5.4.4.1. Numerical Results<a class="headerlink" href="#numerical-results" title="Permalink to this headline">¶</a></h3>
-<p>To verify this approximation, we also need to write down the equation for <span class="math">\(C_2\)</span>,</p>
-<div class="math">
+<p>To verify this approximation, we also need to write down the equation for <span class="math notranslate nohighlight">\(C_2\)</span>,</p>
+<div class="math notranslate nohighlight">
 \[- \frac{d^2 C_2}{d\bar x ^2} + \left( i -\beta \tan (\beta \bar x) \right) \frac{d C_2}{d\bar x} + \left( \frac{\alpha}{2} \cos (\beta \bar x)\cos 2\theta_v - \frac{\alpha^2}{4} \cos^2 (\beta \bar x)  \right) C_2 = 0 .\]</div>
 <p>We have the two real equations for it, which is written as a matrix equation.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\frac{d}{d\bar x}\begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix} =\begin{pmatrix}
 0 &amp; 0 &amp; 1 &amp; 0 \\
 0  &amp; 0 &amp; 0 &amp; 1 \\
 \frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) &amp; 0 &amp; -\beta \tan (\beta\bar x) &amp; -1 \\
 0 &amp; \frac{\alpha}{2}\cos 2\theta_v \cos (\beta \bar x) - \frac{\alpha^2}{4}\cos^2 (\beta \bar x) &amp; 1 &amp; -\beta \tan (\beta \bar x)
 \end{pmatrix} \begin{pmatrix} C_{2,R} \\ C_{2,I} \\ C_{2P,R} \\ C_{2P,I} \end{pmatrix}\end{split}\]</div>
-<p>where we defined <span class="math">\(C_{2P}=\frac{dC_{2}}{d\bar x}\)</span>.</p>
+<p>where we defined <span class="math notranslate nohighlight">\(C_{2P}=\frac{dC_{2}}{d\bar x}\)</span>.</p>
 <p>Meanwhile, the original equations becomes</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}i \frac{d C_1}{d \bar x} &amp;= \frac{\alpha \cos 2\theta_v }{2} \cos (\beta \bar x) C_1 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_2 e^{-i\bar x} \\
 i \frac{d C_2}{d\bar x} &amp; =  -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta\bar x) C_2 + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_1 e^{i\bar x}.\end{split}\]</div>
 <p>To solve them numerically, we could decompose it into four real equations.</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}- \frac{d C_{1,I}}{d \bar x} &amp;= \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \cos(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \sin(\bar x) \\
 \frac{d C_{1,R}}{d\bar x}&amp; = \frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{1,I} - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} \sin(\bar x) + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{2,I} \cos(\bar x) \\
 -\frac{d C_{2,I}}{d\bar x}&amp;= -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x) C_{2,R} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R}\cos \bar x - \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,I}\sin \bar x \\
 \frac{d C_{2,R}}{d\bar x} &amp; = -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta \bar x)  C_{2,I} + \frac{\alpha \sin 2\theta_v}{2} \cos (\beta \bar x) C_{1,R} \sin \bar x + \frac{\alpha \sin 2\theta_v}{2}\cos (\beta \bar x) C_{1,I} \cos \bar x .\end{split}\]</div>
 <p>Consequently, we have the matrix equation as the original equations,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\frac{d}{d\bar x}\begin{pmatrix} C_{1,R}\\ C_{1,I} \\ C_{2,R} \\ C_{2,I} \end{pmatrix} = \frac{1}{2}\begin{pmatrix}
 0 &amp; \alpha\cos 2\theta_v &amp; - \alpha \sin 2\theta_v\sin \bar x &amp; \alpha \sin 2\theta_v \cos \bar x \\
 -\alpha\cos 2\theta_v &amp; 0 &amp; -\alpha\sin 2\theta_v \cos \bar x &amp; - \alpha \sin 2\theta_v\sin\bar x \\
@@ -580,178 +628,176 @@ i \frac{d C_2}{d\bar x} &amp; =  -\frac{\alpha \cos 2\theta_v}{2} \cos (\beta\ba
 <p>The numerical results have periodic stimulated phenomena.</p>
 <div class="figure align-center" id="id4">
 <img alt="../_images/matterandrabi-numerical-original-c1-mma.png" src="../_images/matterandrabi-numerical-original-c1-mma.png" />
-<p class="caption"><span class="caption-number">Fig. 5.27 </span><span class="caption-text">Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.27 </span><span class="caption-text">Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id5">
 <img alt="../_images/matterandrabi-numerical-original-c2-mma.png" src="../_images/matterandrabi-numerical-original-c2-mma.png" />
-<p class="caption"><span class="caption-number">Fig. 5.28 </span><span class="caption-text">Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.28 </span><span class="caption-text">Numerical result using Mathematica. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id6">
 <img alt="../_images/matterandrabi-numerical-original-c1-py.png" src="../_images/matterandrabi-numerical-original-c1-py.png" />
-<p class="caption"><span class="caption-number">Fig. 5.29 </span><span class="caption-text">Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.29 </span><span class="caption-text">Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id7">
 <img alt="../_images/matterandrabi-numerical-original-c2-py.png" src="../_images/matterandrabi-numerical-original-c2-py.png" />
-<p class="caption"><span class="caption-number">Fig. 5.30 </span><span class="caption-text">Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.30 </span><span class="caption-text">Numerical result using python. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-<p>The second order equation of <span class="math">\(C_2\)</span> can also be solved numerically.</p>
+<p>The second order equation of <span class="math notranslate nohighlight">\(C_2\)</span> can also be solved numerically.</p>
 <div class="figure align-center" id="id8">
 <img alt="../_images/matterandrabi-numerical-solving-second-c2-py.png" src="../_images/matterandrabi-numerical-solving-second-c2-py.png" />
-<p class="caption"><span class="caption-number">Fig. 5.31 </span><span class="caption-text">Solving the second order equation of <span class="math">\(C_2\)</span> numerically. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.31 </span><span class="caption-text">Solving the second order equation of <span class="math notranslate nohighlight">\(C_2\)</span> numerically. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id9">
 <img alt="../_images/matterandrabi-numerical-difference-two-first-order-second-c2-py.png" src="../_images/matterandrabi-numerical-difference-two-first-order-second-c2-py.png" />
-<p class="caption"><span class="caption-number">Fig. 5.32 </span><span class="caption-text">The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because <cite>numpy.odeint</cite> is used instead of <cite>numpy.ode</cite>. sin2thetav = 0.917; cos2thetav = 0.4</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.32 </span><span class="caption-text">The difference between solving the two first order equations and the one second order equation. The two methods are not exactly the same even though they are the same equations. This is probability because <cite>numpy.odeint</cite> is used instead of <cite>numpy.ode</cite>. sin2thetav = 0.917; cos2thetav = 0.4</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="approximation">
 <h3>5.4.4.2. Approximation<a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h3>
-<p>We first consider the case that <span class="math">\(\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}\)</span> and <span class="math">\(\omega_\lambda\ll \omega\)</span> which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that</p>
-<div class="math">
+<p>We first consider the case that <span class="math notranslate nohighlight">\(\frac{\lambda}{2} \cos 2\theta_v\ll \frac{\omega}{2}\)</span> and <span class="math notranslate nohighlight">\(\omega_\lambda\ll \omega\)</span> which means that the modulation of eigenenergies are not very fast. Translate these conditions into math, we require that</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\alpha &amp;\ll 1\\
 \beta &amp; \ll 1.\end{split}\]</div>
 <ol class="arabic">
-<li><p class="first">The red term <span class="math">\(\frac{\lambda}{2} \cos 2\theta_v\sigma_3\)</span> works as a modulation of the eigenenergies.</p>
-</li>
-<li><p class="first">The blue term <span class="math">\(\frac{\lambda}{2}\sin 2\theta_v \sigma_1\)</span> flips the states with a Rabi flopping rate <strong>approximately</strong>. The rate in this case could be</p>
-<div class="math">
+<li><p>The red term <span class="math notranslate nohighlight">\(\frac{\lambda}{2} \cos 2\theta_v\sigma_3\)</span> works as a modulation of the eigenenergies.</p></li>
+<li><p>The blue term <span class="math notranslate nohighlight">\(\frac{\lambda}{2}\sin 2\theta_v \sigma_1\)</span> flips the states with a Rabi flopping rate <strong>approximately</strong>. The rate in this case could be</p>
+<div class="math notranslate nohighlight">
 \[P = \frac{\frac{\lambda_0^2}{2^2} \sin^2 2\theta_v }{\Omega_R^2} \sin^2\left( \frac{\Omega_R}{2} t  \right),\]</div>
-<p>where <span class="math">\(\Omega_R\)</span> is a function of <span class="math">\(x\)</span>,</p>
-<div class="math">
+<p>where <span class="math notranslate nohighlight">\(\Omega_R\)</span> is a function of <span class="math notranslate nohighlight">\(x\)</span>,</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}\Omega_R^2 &amp;= \omega^2 \left( \left(1 - \frac{\omega_\lambda}{\omega}  - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \frac{\omega_\lambda}{\omega} \omega x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v  \right)^2  \right) \\
 &amp;= \omega^2 \left( \left( 1 - \beta - \frac{\alpha}{2}\cos 2\theta_v \cos\left( \beta \bar x \right) \right)^2 + \left( \frac{\alpha}{2}\sin 2\theta_v \right)^2 \right)\end{split}\]</div>
-<p>So we define <span class="math">\(\hat\Omega_R = \Omega_R/\omega\)</span> and <span class="math">\(\bar x = \omega x\)</span>. The survival probability as an approximation becomes</p>
-<div class="math">
+<p>So we define <span class="math notranslate nohighlight">\(\hat\Omega_R = \Omega_R/\omega\)</span> and <span class="math notranslate nohighlight">\(\bar x = \omega x\)</span>. The survival probability as an approximation becomes</p>
+<div class="math notranslate nohighlight">
 \[P = \frac{(\alpha \sin 2\theta_v)^2}{4 \omega (\hat\Omega_R(\bar x))^2} \sin^2\left( \frac{\hat\Omega_R(\bar x)}{2} \bar x \right).\]</div>
 </li>
 </ol>
 <p>This theoretical prediction is shown in the following figure.</p>
 <div class="figure align-center" id="id10">
 <img alt="../_images/matterandrabi-rwa-slow-approx-py.png" src="../_images/matterandrabi-rwa-slow-approx-py.png" />
-<p class="caption"><span class="caption-number">Fig. 5.33 </span><span class="caption-text">RWA plus slow periodic perturbation (and probabily more hidden approximations) analytical result.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.33 </span><span class="caption-text">RWA plus slow periodic perturbation (and probabily more hidden approximations) analytical result.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="constant-matter-with-periodic-perturbation">
 <h2>5.4.5. Constant Matter with Periodic Perturbation<a class="headerlink" href="#constant-matter-with-periodic-perturbation" title="Permalink to this headline">¶</a></h2>
-<p>Using the scaled variable <span class="math">\(\bar x = \omega x\)</span>, the equations for <span class="math">\(C_1\)</span> and <span class="math">\(C_2\)</span> are</p>
-<div class="math">
+<p>Using the scaled variable <span class="math notranslate nohighlight">\(\bar x = \omega x\)</span>, the equations for <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> are</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}i \frac{d C_1}{d\bar x} &amp; = {\color{red}\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_2 e^{-i\bar x}}, \\
 i \frac{d C_2}{d\bar x} &amp; = {\color{red}-\frac{\cos 2\theta_v}{2} \frac{\lambda }{\omega} C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} \frac{\lambda }{\omega} C_1 e^{i\bar x}},\end{split}\]</div>
-<p>which gives us the general equation for <span class="math">\(C_2\)</span></p>
-<div class="math">
+<p>which gives us the general equation for <span class="math notranslate nohighlight">\(C_2\)</span></p>
+<div class="math notranslate nohighlight">
 \[\frac{d^2C_2}{d\bar x ^2} - \left( \frac{1}{\lambda} \frac{d\lambda}{d\bar x}  + i \right) \frac{dC_2}{d\bar x} - \left( \frac{1}{2} \frac{\lambda}{\omega} \cos 2\theta_v - \frac{1}{4}\left( \frac{\lambda}{\omega} \right)^2 \right) C_2 = 0.\]</div>
-<p>We will consider the case that matter potential is composed of a constant background potential <span class="math">\(\lambda_0\)</span> and a periodic perturbative potential <span class="math">\(\lambda_1\cos(\beta \bar x)\)</span>. Thus the matter potential is <span class="math">\(\lambda = \lambda_0 + \lambda_1 \cos(\beta x)\)</span>, where <span class="math">\(\beta = \frac{\omega_\lambda}{\omega}\)</span>.</p>
+<p>We will consider the case that matter potential is composed of a constant background potential <span class="math notranslate nohighlight">\(\lambda_0\)</span> and a periodic perturbative potential <span class="math notranslate nohighlight">\(\lambda_1\cos(\beta \bar x)\)</span>. Thus the matter potential is <span class="math notranslate nohighlight">\(\lambda = \lambda_0 + \lambda_1 \cos(\beta x)\)</span>, where <span class="math notranslate nohighlight">\(\beta = \frac{\omega_\lambda}{\omega}\)</span>.</p>
 <p>Define the following variables,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\alpha_0 &amp; = \frac{\lambda_0}{\omega}, \\
 \alpha_1 &amp; = \frac{\lambda_1}{\omega}.\end{split}\]</div>
-<p>The equations for <span class="math">\(C_1\)</span> and <span class="math">\(C_2\)</span> becomes</p>
-<div class="math">
+<p>The equations for <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> becomes</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}i \frac{dC_1}{d\bar x} &amp; = {\color{red}\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2 e^{-i\bar x}}, \\
 i \frac{d C_2}{d\bar x} &amp; = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_2} {\color{blue}+ \frac{\sin 2\theta_v}{2} ( \alpha_0 + \alpha_1\cos(\beta \bar x) ) C_1 e^{i\bar x}}.\end{split}\]</div>
-<p>The equation for <span class="math">\(C_2\)</span> becomes</p>
-<div class="math">
+<p>The equation for <span class="math notranslate nohighlight">\(C_2\)</span> becomes</p>
+<div class="math notranslate nohighlight">
 \[\frac{d^2C_2}{d\bar x^2} + \left( \frac{ \frac{\alpha_1}{\alpha_0} \beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) } - i \right) \frac{dC_2}{d\bar x} + \frac{1}{4} \left( \alpha_0^2 \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)^2 - 2 \alpha_0 \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  \right) \right) C_2 = 0\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Consistancy Check</p>
-<p>This result should go back to the non-physical periodic perturbation case when we plug in <span class="math">\(\lambda_0 = 0\)</span>.</p>
+<p class="admonition-title">Consistancy Check</p>
+<p>This result should go back to the non-physical periodic perturbation case when we plug in <span class="math notranslate nohighlight">\(\lambda_0 = 0\)</span>.</p>
 <p>As we do that, the result is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\frac{d^2 C_2}{d\bar x^2} + ( \beta \tan(\beta \bar x) - i ) \frac{dC_2}{d\bar x} + \frac{1}{4} \left( \alpha_1^2 \cos ^2 (\beta \bar x) - 2\alpha_2 \cos (\beta \bar x) \cos 2\theta_v \right) C_2 = 0,\]</div>
-<p class="last">which indeed is the case we had.</p>
+<p>which indeed is the case we had.</p>
 </div>
 <div class="section" id="id1">
 <h3>5.4.5.1. Numerical Results<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id11">
 <img alt="../_images/constantAndPerturbation-c2.png" src="../_images/constantAndPerturbation-c2.png" />
-<p class="caption"><span class="caption-number">Fig. 5.34 </span><span class="caption-text">Numerical result for the transition probability <span class="math">\(\left\lvert C_2\right\rvert^2\)</span> with parameters <span class="math">\(sin2thetav = 0.917\)</span>, <span class="math">\(\alpha_0 = 0.1\)</span>, <span class="math">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math">\(\beta = 0.1\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.34 </span><span class="caption-text">Numerical result for the transition probability <span class="math notranslate nohighlight">\(\left\lvert C_2\right\rvert^2\)</span> with parameters <span class="math notranslate nohighlight">\(sin2thetav = 0.917\)</span>, <span class="math notranslate nohighlight">\(\alpha_0 = 0.1\)</span>, <span class="math notranslate nohighlight">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
-<p>As a comparision, we also have the result when <span class="math">\(\alpha_1 = 0\)</span>.</p>
+<p>As a comparision, we also have the result when <span class="math notranslate nohighlight">\(\alpha_1 = 0\)</span>.</p>
 <div class="figure align-center" id="id12">
 <img alt="../_images/constantAndPerturbation-Background-c2.png" src="../_images/constantAndPerturbation-Background-c2.png" />
-<p class="caption"><span class="caption-number">Fig. 5.35 </span><span class="caption-text">Numerical result for the transition probability with a constant matter perturbation, i.e., <span class="math">\(\alpha_1=0\)</span>. Other parameters are <span class="math">\(sin2thetav = 0.917\)</span>, <span class="math">\(\alpha_0 = 0.1\)</span>, <span class="math">\(\beta = 0.1\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.35 </span><span class="caption-text">Numerical result for the transition probability with a constant matter perturbation, i.e., <span class="math notranslate nohighlight">\(\alpha_1=0\)</span>. Other parameters are <span class="math notranslate nohighlight">\(sin2thetav = 0.917\)</span>, <span class="math notranslate nohighlight">\(\alpha_0 = 0.1\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <p>To go back to flavor basis, we use</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} C_e \\ C_x \end{pmatrix} = \begin{pmatrix} \cos\theta_v &amp; \sin\theta_v \\ -\sin\theta_v &amp; \cos \theta_v \end{pmatrix} \begin{pmatrix} C_1 \\ C_2 \end{pmatrix}.\end{split}\]</div>
-<p>Since we have been using initial condition that <span class="math">\(\lvert C_1 \rvert^2=1\)</span>, the initial electron flavor is <span class="math">\(\lvert C_e \rvert^2 = 0.70\)</span>.</p>
+<p>Since we have been using initial condition that <span class="math notranslate nohighlight">\(\lvert C_1 \rvert^2=1\)</span>, the initial electron flavor is <span class="math notranslate nohighlight">\(\lvert C_e \rvert^2 = 0.70\)</span>.</p>
 <div class="figure align-center" id="id13">
 <img alt="../_images/constantAndPerturbation-electron.png" src="../_images/constantAndPerturbation-electron.png" />
-<p class="caption"><span class="caption-number">Fig. 5.36 </span><span class="caption-text">Electron neutrino survival probability.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.36 </span><span class="caption-text">Electron neutrino survival probability.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id14">
 <img alt="../_images/constantAndPerturbation-Background-electron.png" src="../_images/constantAndPerturbation-Background-electron.png" />
-<p class="caption"><span class="caption-number">Fig. 5.37 </span><span class="caption-text">Electron flavor survival probability for background matter potential only.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.37 </span><span class="caption-text">Electron flavor survival probability for background matter potential only.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="resoances">
 <h2>5.4.6. Resoances<a class="headerlink" href="#resoances" title="Permalink to this headline">¶</a></h2>
 <p>For a matter profile</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\lambda (x) = \lambda_0 + \lambda_1 \sin ( \beta \hat x ),\]</div>
-<p>where <span class="math">\(\hat x = \omega x\)</span>, the resonance happens at a <span class="math">\(\beta\)</span> value</p>
-<div class="math">
+<p>where <span class="math notranslate nohighlight">\(\hat x = \omega x\)</span>, the resonance happens at a <span class="math notranslate nohighlight">\(\beta\)</span> value</p>
+<div class="math notranslate nohighlight">
 \[\beta_r = \frac{1}{n} \sqrt{ \hat \lambda ^2 +1 - 2\hat\lambda \cos (2\theta_v) }.\]</div>
-<p>This result comes from the matching of the frequency of matter oscillation profile <span class="math">\(\beta\)</span> and matter oscillation frequency <span class="math">\(\omega_m = \frac{\omega_m}{2} - \left( -\frac{\omega_m}{2} \right)\)</span> to some certain fraction <span class="math">\(n\)</span>, <a class="footnote-reference" href="#id3" id="id2">[1]</a></p>
-<div class="math">
+<p>This result comes from the matching of the frequency of matter oscillation profile <span class="math notranslate nohighlight">\(\beta\)</span> and matter oscillation frequency <span class="math notranslate nohighlight">\(\omega_m = \frac{\omega_m}{2} - \left( -\frac{\omega_m}{2} \right)\)</span> to some certain fraction <span class="math notranslate nohighlight">\(n\)</span>, <a class="footnote-reference brackets" href="#id3" id="id2">1</a></p>
+<div class="math notranslate nohighlight">
 \[n \beta - \left( \frac{\omega_m}{2} - \left( -\frac{\omega_m}{2} \right) \right) = 0.\]</div>
 <div class="section" id="what-really-is-the-reason-of-these-transition">
 <h3>5.4.6.1. What Really is the Reason of These Transition?<a class="headerlink" href="#what-really-is-the-reason-of-these-transition" title="Permalink to this headline">¶</a></h3>
 <p>As a comparison, we would like to see how is the system deviating from adiabatic. In adiabatic limit, we have a light state and a heavy state, which means we have a wavefunction</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \nu_L(x) \\ \nu_H(x) \end{pmatrix}.\end{split}\]</div>
 <p>The relation between the wave function in this basis and the wave function in flavor basis is</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \nu_L(x) \\ \nu_H(x) \end{pmatrix} = \mathbf{U^{-1}}(x) \begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix}.\end{split}\]</div>
 <p>Meanwhile,</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix} \nu_e \\ \nu_x \end{pmatrix} = \mathbf{U} \begin{pmatrix} \nu_1 \\ \nu_2 \end{pmatrix},\end{split}\]</div>
-<p>where the rotation matrix <span class="math">\(\mathbf{U}\)</span> relates vacuum eigenbasis wave function to the flavor basis wave function.</p>
+<p>where the rotation matrix <span class="math notranslate nohighlight">\(\mathbf{U}\)</span> relates vacuum eigenbasis wave function to the flavor basis wave function.</p>
 <p>Survival probability of the heavier state in vacuum basis is given by</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[P_{\nu_1\to\nu_2} = \left\lvert \cos(\theta_v- \theta(x)) \nu_L(0) - \sin(\theta_v - \theta(x)) \nu_H(0)  \right\rvert^2,\]</div>
 <p>where</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\nu_L(0) &amp;= \cos(\theta_v - \theta(0)) \\
 \nu_H(0) &amp; = -\sin(\theta_v - \theta(0)),\end{split}\]</div>
 <p>given initial condition that in vacuum basis that</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\begin{split}\nu_1(0) &amp;= 1\\
 \nu_2(0) &amp; = 0.\end{split}\]</div>
 <div class="figure align-center" id="id15">
 <img alt="../_images/matterandrabi-constantAndPerturbation-adiabatic-c2.png" src="../_images/matterandrabi-constantAndPerturbation-adiabatic-c2.png" />
-<p class="caption"><span class="caption-number">Fig. 5.38 </span><span class="caption-text">Adiabatic result given the same parameters and initial condition, i.e., <span class="math">\(\left\lvert C_2\right\rvert^2\)</span>, <span class="math">\(sin2thetav = 0.917\)</span>, <span class="math">\(\alpha_0 = 0.1\)</span>, <span class="math">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math">\(\beta = 0.1\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.38 </span><span class="caption-text">Adiabatic result given the same parameters and initial condition, i.e., <span class="math notranslate nohighlight">\(\left\lvert C_2\right\rvert^2\)</span>, <span class="math notranslate nohighlight">\(sin2thetav = 0.917\)</span>, <span class="math notranslate nohighlight">\(\alpha_0 = 0.1\)</span>, <span class="math notranslate nohighlight">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="approximations">
 <h3>5.4.6.2. Approximations<a class="headerlink" href="#approximations" title="Permalink to this headline">¶</a></h3>
-<p>Approximations can be done when <span class="math">\(\alpha_1\ll \alpha_0\)</span> which means the perturbation is small compared to the background.</p>
-<p>Using <span class="math">\(\frac{\alpha_1}{\alpha_0}\)</span> as a small quantity, apply Taylor expansion and keep only first order, we have</p>
-<div class="math">
+<p>Approximations can be done when <span class="math notranslate nohighlight">\(\alpha_1\ll \alpha_0\)</span> which means the perturbation is small compared to the background.</p>
+<p>Using <span class="math notranslate nohighlight">\(\frac{\alpha_1}{\alpha_0}\)</span> as a small quantity, apply Taylor expansion and keep only first order, we have</p>
+<div class="math notranslate nohighlight">
 \[\begin{split}&amp;\frac{ \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x) }{ 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x)  }
 \approx  \frac{\alpha_1}{\alpha_0}\beta \sin (\beta \bar x), \\
 &amp; \frac{1}{4} \left( \alpha_1^2 \cos ^2 (\beta \bar x) - 2\alpha_2 \cos (\beta \bar x) \cos 2\theta_v \right)   \\
 \approx &amp; -\frac{1}{4} \left( 2\cos 2\theta_v - 1 + 2 \left( \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) ( \cos 2\theta_v -1 )  \right) \\
 = &amp; \frac{1}{2} \alpha_0 ( 1 - \cos 2\theta_v ) \left( 1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right)  - \frac{1}{4} \alpha_0 .\end{split}\]</div>
-<p>Under this approximation, the equation for <span class="math">\(C_2\)</span> becomes</p>
-<div class="math">
+<p>Under this approximation, the equation for <span class="math notranslate nohighlight">\(C_2\)</span> becomes</p>
+<div class="math notranslate nohighlight">
 \[\frac{d^2 C_2}{ d\bar x^2}  + \left( \frac{\alpha_1}{\alpha_0} \sin (\beta \bar x) - i \right) \frac{d C_2}{d\bar x} + \left( \frac{1}{2} \alpha_0 (1 - \cos 2\theta_v) \left(1 + \frac{\alpha_1}{\alpha_0} \cos (\beta \bar x) \right) - \frac{1}{4}\alpha_0  \right) C_2 = 0 .\]</div>
 <div class="figure align-center" id="id16">
 <img alt="../_images/matterandrabi-constantAndPerturbation-c2-small-perturbation.png" src="../_images/matterandrabi-constantAndPerturbation-c2-small-perturbation.png" />
-<p class="caption"><span class="caption-number">Fig. 5.39 </span><span class="caption-text">Small pertubation approximation numerical result. Parameters used are <span class="math">\(sin2thetav = 0.917\)</span>, <span class="math">\(\alpha_0 = 0.1\)</span>, <span class="math">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math">\(\beta = 0.1\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 5.39 </span><span class="caption-text">Small pertubation approximation numerical result. Parameters used are <span class="math notranslate nohighlight">\(sin2thetav = 0.917\)</span>, <span class="math notranslate nohighlight">\(\alpha_0 = 0.1\)</span>, <span class="math notranslate nohighlight">\(\alpha_1 = 0.01 \alpha_0\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="refs-notes">
 <h2>5.4.7. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Kneller, J. P., McLaughlin, G. C., &amp; Patton, K. M. (2013). Stimulated neutrino transformation in supernovae. AIP Conference Proceedings, 1560, 176–178. doi:10.1063/1.4826746</td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>Kneller, J. P., McLaughlin, G. C., &amp; Patton, K. M. (2013). Stimulated neutrino transformation in supernovae. AIP Conference Proceedings, 1560, 176–178. doi:10.1063/1.4826746</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -793,7 +839,7 @@ i \frac{d C_2}{d\bar x} &amp; = {\color{red}-\frac{\cos 2\theta_v}{2} ( \alpha_0
 
     </p>
     <p>
-        <span>© 2017, Lei Ma </span>|
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
