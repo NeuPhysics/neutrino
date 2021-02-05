@@ -45,6 +45,20 @@ sys.path.append(os.path.abspath('exts'))
 #         'chat.html',
 #     ]
 # }
+html_sidebars = {
+    '**': [
+        # 'about.html',
+        # 'navigation.html',
+        # 'globaltoc.html',
+        # 'relations.html',
+        # 'searchbox.html',
+        # 'donate.html',
+        # 'chat.html',
+        # 'localtoc.html',
+        # 'sourcelink.html',
+        # 'searchbox.html'
+    ]
+}
 
 
 
@@ -149,7 +163,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Neutrino'
-copyright = u'2017, Lei Ma'
+copyright = u'2021, Lei Ma'
 
 
 # The version info for the project you're documenting, acts as replacement for

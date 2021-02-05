@@ -2,7 +2,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>12.1. Neutrino Oscillation And Master Equation &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,8 +15,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -30,17 +30,6 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-44466929-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
 
@@ -168,7 +157,7 @@ TeX: {
      href="../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Contents</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -281,7 +270,7 @@ TeX: {
 </ul>
 <p class="caption"><span class="caption-text">WIP Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">Neutrino Physics</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
@@ -349,55 +338,22 @@ TeX: {
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">12.1. Neutrino Oscillation And Master Equation</a><ul>
-<li><a class="reference internal" href="#quantum-master-equation">12.1.1. Quantum Master Equation</a></li>
-<li><a class="reference internal" href="#vacuum-oscillation-master-equation">12.1.2. Vacuum Oscillation Master Equation</a></li>
-<li><a class="reference internal" href="#neutrino-oscillation-in-matter-a-possible-master-equation-approach">12.1.3. Neutrino Oscillation in Matter - A Possible Master Equation Approach</a></li>
-<li><a class="reference internal" href="#self-interaction-between-neutrinos">12.1.4. Self Interaction Between Neutrinos</a></li>
-<li><a class="reference internal" href="#refs-notes">12.1.5. Refs &amp; Notes</a></li>
-</ul>
-</li>
-</ul>
-
-  <li>
-    <a href="index.html" title="Previous Chapter: 12. Statistical Physics"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 12. Statistic...</span>
-    </a>
-  </li>
-  <li>
-    <a href="../geometric-phase/index.html" title="Next Chapter: 13. Geometric Phase"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">13. Geometric Phase &raquo;</span>
-    </a>
-  </li>
-<div id="sourcelink">
-  <a href="../_sources/statistical-physics/master-eqn.rst.txt"
-     rel="nofollow">Source</a>
-</div>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="neutrino-oscillation-and-master-equation">
 <h1>12.1. Neutrino Oscillation And Master Equation<a class="headerlink" href="#neutrino-oscillation-and-master-equation" title="Permalink to this headline">¶</a></h1>
 <div class="hint admonition">
-<p class="admonition-title">Why do we think about master equation?</p>
-<p>The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.</p>
+<p class="first admonition-title">Why do we think about master equation?</p>
+<p class="last">The terms we care the most are the populations of the states. One of the treatment of quantum master equation is to write down the closed equations for population terms only. A very beautiful example is the projection method invented by Zwawzig and Nakajiwa.</p>
 </div>
 <div class="warning admonition">
-<p class="admonition-title">WHY</p>
-<p>Why do you need a master equation approach? IDK.</p>
+<p class="first admonition-title">WHY</p>
+<p class="last">Why do you need a master equation approach? IDK.</p>
 </div>
 <div class="section" id="quantum-master-equation">
 <span id="index-0"></span><h2>12.1.1. Quantum Master Equation<a class="headerlink" href="#quantum-master-equation" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="admonition-title">Projection Technique</p>
+<p class="first admonition-title">Projection Technique</p>
 <p>First of all define a diagonalizing operator <span class="math notranslate nohighlight">\(\hat D\)</span> which just keeps the diagonal elements and simply drops the off diagonal elements. We see that <span class="math notranslate nohighlight">\(1-\hat D\)</span> will eliminate all diagonal elements.</p>
 <p>We can define the diagonalized density matrix as <span class="math notranslate nohighlight">\(\hat \rho_d = \hat D \hat \rho\)</span> and off-diagonalized density matrix as <span class="math notranslate nohighlight">\(\hat \rho_{od} = (1-\hat D)\hat \rho\)</span>. As an application,</p>
 <div class="math notranslate nohighlight">
@@ -420,19 +376,19 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\hat \rho_{od} = e^{-i(1-\hat D)\hat L t} + \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(-i(1-\hat D)\hat L \hat \rho_d(t')) .\]</div>
 <div class="admonition hint">
-<p class="admonition-title">Hint</p>
+<p class="first admonition-title">Hint</p>
 <p>Recall that the solution for</p>
 <div class="math notranslate nohighlight">
 \[\dot y + \alpha y = f\]</div>
 <p>is</p>
-<div class="math notranslate nohighlight">
+<div class="last math notranslate nohighlight">
 \[y = e^{-\alpha t} y(0) + \int_0^t dt' e^{-\alpha (t-t')} f(t') .\]</div>
 </div>
 <p>Insert this solution to the equation of <span class="math notranslate nohighlight">\(\hat \rho_d\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[{\color{red}\partial_t \hat \rho_d = - i\hat D\hat L \hat \rho_d -  \hat D\hat L \int_0^t dt' e^{-i(1-\hat D) \hat L (t-t')}(1-\hat D)\hat L \hat \rho_d(t')} {\color{blue} - i \hat D \hat L e^{-i(1-\hat D)\hat L t} \rho_{od}(0) }.\]</div>
 <p>What happened to the blue term? It disapears when we apply the initial random phase condition.</p>
-<p>When it happens we get our closed master equation for <span class="math notranslate nohighlight">\(\hat \rho_d\)</span>, which is an equation for the probability.</p>
+<p class="last">When it happens we get our closed master equation for <span class="math notranslate nohighlight">\(\hat \rho_d\)</span>, which is an equation for the probability.</p>
 </div>
 <p>In our case of neutrinos, random phase condition is not really needed since we usually deal with the situation that electron neutrinos are appearant only.</p>
 <p>In details, we have such a density matrix,</p>
@@ -446,10 +402,10 @@ TeX: {
 <h2>12.1.2. Vacuum Oscillation Master Equation<a class="headerlink" href="#vacuum-oscillation-master-equation" title="Permalink to this headline">¶</a></h2>
 <p>Using this projection method, one can find out the master equation for vacuum oscillations.</p>
 <div class="note admonition">
-<p class="admonition-title">Pauli Matrices</p>
+<p class="first admonition-title">Pauli Matrices</p>
 <p>We will use Pauli matrices in the following part. Here is a review of them.</p>
 <ol class="arabic">
-<li><p>Pauli Matrices,</p>
+<li><p class="first">Pauli Matrices,</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\begin{split}\sigma_1 &amp;= \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix} \\
@@ -458,9 +414,9 @@ TeX: {
 </div></blockquote>
 </li>
 </ol>
-<blockquote>
+<blockquote class="last">
 <div><ol class="arabic" start="2">
-<li><p>Commutation Relations,</p>
+<li><p class="first">Commutation Relations,</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\begin{split}[\sigma_1,\sigma_2] &amp;= 2i \sigma_3 \\
@@ -482,7 +438,7 @@ TeX: {
 &amp; = -c \mathbf{\sigma_3} + s \mathbf{ \sigma_1},\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\equiv \frac{\delta^2 m}{4E}\cos 2 \theta\)</span> and similarly for s.</p>
 <div class="note admonition">
-<p class="admonition-title">Liouville Operator</p>
+<p class="first admonition-title">Liouville Operator</p>
 <p>Liouville operator in quantum mechanics is</p>
 <div class="math notranslate nohighlight">
 \[\hat L  =  [H, *],\]</div>
@@ -501,18 +457,18 @@ TeX: {
 &amp; = \frac{1}{2} \left(\begin{pmatrix} \rho_1 -\rho_2 &amp; 0 \\ 0 &amp; \rho_2 -\rho_1 \end{pmatrix} + \begin{pmatrix} \rho_1+\rho_2 &amp; 0 \\ 0 &amp; \rho_1 + \rho_2 \end{pmatrix} \right) \\
 &amp; = \frac{1}{2}\left( (\rho_1-\rho_2)\sigma_3 + (\rho_1+\rho_2)\mathbf I \right)\end{split}\]</div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Actually <span class="math notranslate nohighlight">\(\rho_1+\rho_2=1\)</span> for such a system. We’ll see the proof of this later.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Actually <span class="math notranslate nohighlight">\(\rho_1+\rho_2=1\)</span> for such a system. We’ll see the proof of this later.</p>
 </div>
 <p>Apply <span class="math notranslate nohighlight">\((1-\mathscr D)\hat L\)</span> we get</p>
-<div class="math notranslate nohighlight">
+<div class="last math notranslate nohighlight">
 \[\begin{split}(1-\mathscr D)\hat L \rho_d &amp;= i s (\rho_2-\rho_1) \sigma_2,\\
 \mathscr D \hat L \rho_d &amp; = -\frac{1}{2}c (\rho_1+\rho_2)\sigma_3.\end{split}\]</div>
 </div>
 <div class="note admonition">
-<p class="admonition-title">Exponential Operator</p>
+<p class="first admonition-title">Exponential Operator</p>
 <p>Exponential operator is understood when series expansion is done,</p>
-<div class="math notranslate nohighlight">
+<div class="last math notranslate nohighlight">
 \[e^{\hat A} = \hat I + \hat A + \frac{1}{2!}{\hat A}^2 + \frac{1}{3!} {\hat A}^3 +\cdots\]</div>
 </div>
 <p>Recall that the master equation is</p>
@@ -548,9 +504,9 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[e^{-i(1-\mathscr D)\hat L (t-t')} \sigma_2 &amp;= \sigma_2 + 2c\sigma_1 (t-t') + \frac{1}{2}(- 2^2 c^2 (t-t')^2 \sigma_2) +  \frac{1}{3!}(-2^3c^3(t-t')^3\sigma_1) + \frac{1}{4!} 2^4 c^4 (t-t')^4 \sigma_2  + \frac{1}{5!} 2^5c^5 (t-t')^5 \sigma_1 +  \cdots\]</div>
 <div class="note admonition">
-<p class="admonition-title">Taylor Series</p>
+<p class="first admonition-title">Taylor Series</p>
 <p>Taylor series of <span class="math notranslate nohighlight">\(\sin x\)</span> and <span class="math notranslate nohighlight">\(\cos x\)</span> around <span class="math notranslate nohighlight">\(x=0\)</span> are</p>
-<div class="math notranslate nohighlight">
+<div class="last math notranslate nohighlight">
 \[\begin{split}\sin x &amp;= x - \frac{1}{3!} x^3 + \frac{1}{5!}x^5 + \cdots \\
 \cos x &amp; = 1 -\frac{1}{2!} x^2 + \frac{1}{4!} x^4 + \cdots .\end{split}\]</div>
 </div>
@@ -573,9 +529,9 @@ TeX: {
 \[\partial_t\rho_d(t) = \frac{\omega}{4} i \cos 2\theta_v \sigma_3 +  \frac{\omega^2 \sin^2 2\theta_v }{2} \int_0^t dt' (\mathbf I - 2 \rho_d(t'))\cos \left( 2 \cos 2\theta_v (t - t') \right).\]</div>
 <p>This result shows that the equations of different elements are decoupled. This is very important.</p>
 <div class="warning admonition">
-<p class="admonition-title">What to Do?</p>
+<p class="first admonition-title">What to Do?</p>
 <p>I don’t see anything good about this method. What to do next? I can predict that it’s also won’t cost a lot to solve the MSW effect. But what’s the point? These problems are not very hard to solve even using wave function method.</p>
-<p>I am just leaving this result here and move on to other topics.</p>
+<p class="last">I am just leaving this result here and move on to other topics.</p>
 </div>
 </div>
 <div class="section" id="neutrino-oscillation-in-matter-a-possible-master-equation-approach">
@@ -589,8 +545,8 @@ TeX: {
 <h2>12.1.5. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <p>Some papers actually use mater equation for its simplicity in physical meanings.</p>
 <ol class="arabic simple">
-<li><p>Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation in a Fluctuating Sun. Annals of Physics, 256(1), 1–38. doi:10.1006/aphy.1996.5660</p></li>
-<li><p>Bamert, P., Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation Through Helioseismic Waves, 27. doi:10.1016/S0550-3213(97)00672-X</p></li>
+<li>Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation in a Fluctuating Sun. Annals of Physics, 256(1), 1–38. doi:10.1006/aphy.1996.5660</li>
+<li>Bamert, P., Burgess, C. P., &amp; Michaud, D. (1997). Neutrino Propagation Through Helioseismic Waves, 27. doi:10.1016/S0550-3213(97)00672-X</li>
 </ol>
 </div>
 </div>
