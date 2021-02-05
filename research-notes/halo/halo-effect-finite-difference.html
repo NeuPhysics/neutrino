@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.3.2. Halo Effect - Finite Difference &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.3.3. Halo Effect in Line Model - Finite Difference" href="halo-effect-finite-difference-line-model.html" />
+    <link rel="prev" title="1.3.1. Halo Effect - Artificial Neural Network" href="halo-effect-ann.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.3.2. Halo Effect - Finite Difference</a><ul>
+<li><a class="reference internal" href="#models">1.3.2.1. Models</a><ul>
+<li><a class="reference internal" href="#toy-model">1.3.2.1.1. Toy Model</a></li>
+<li><a class="reference internal" href="#antineutrinos-or-spectrum">1.3.2.1.2. Antineutrinos or Spectrum</a></li>
+<li><a class="reference internal" href="#model-with-collective-oscillations">1.3.2.1.3. Model with Collective Oscillations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-state-convention">1.3.2.2. Numerical - State Convention</a><ul>
+<li><a class="reference internal" href="#convention-i-used-in-code">1.3.2.2.1. Convention I Used in Code</a></li>
+<li><a class="reference internal" href="#convention-ii-polarization-vector">1.3.2.2.2. Convention II: Polarization Vector</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-stepper-senario">1.3.2.3. Numerical - Stepper Senario</a><ul>
+<li><a class="reference internal" href="#euler-method">1.3.2.3.1. Euler Method</a></li>
+<li><a class="reference internal" href="#evolution-operator">1.3.2.3.2. Evolution Operator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-iteration-senario">1.3.2.4. Numerical - Iteration Senario</a><ul>
+<li><a class="reference internal" href="#single-neutrino-forward-then-backward">1.3.2.4.1. Single Neutrino Forward then Backward</a></li>
+<li><a class="reference internal" href="#single-neutrino-simultaneous">1.3.2.4.2. Single Neutrino Simultaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#verify-results">1.3.2.5. Verify Results</a></li>
+<li><a class="reference internal" href="#damping-in-time">1.3.2.6. Damping in Time</a></li>
+<li><a class="reference internal" href="#varying-parameters">1.3.2.7. Varying Parameters</a></li>
+<li><a class="reference internal" href="#references-and-notes">1.3.2.8. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="halo-effect-ann.html" title="Previous Chapter: 1.3.1. Halo Effect - Artificial Neural Network"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3.1. Halo E...</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-finite-difference-line-model.html" title="Next Chapter: 1.3.3. Halo Effect in Line Model - Finite Difference"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.3. Halo E... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.3.2. Halo Effect - Finite Difference</a><ul>
+<li><a class="reference internal" href="#models">1.3.2.1. Models</a><ul>
+<li><a class="reference internal" href="#toy-model">1.3.2.1.1. Toy Model</a></li>
+<li><a class="reference internal" href="#antineutrinos-or-spectrum">1.3.2.1.2. Antineutrinos or Spectrum</a></li>
+<li><a class="reference internal" href="#model-with-collective-oscillations">1.3.2.1.3. Model with Collective Oscillations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-state-convention">1.3.2.2. Numerical - State Convention</a><ul>
+<li><a class="reference internal" href="#convention-i-used-in-code">1.3.2.2.1. Convention I Used in Code</a></li>
+<li><a class="reference internal" href="#convention-ii-polarization-vector">1.3.2.2.2. Convention II: Polarization Vector</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-stepper-senario">1.3.2.3. Numerical - Stepper Senario</a><ul>
+<li><a class="reference internal" href="#euler-method">1.3.2.3.1. Euler Method</a></li>
+<li><a class="reference internal" href="#evolution-operator">1.3.2.3.2. Evolution Operator</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-iteration-senario">1.3.2.4. Numerical - Iteration Senario</a><ul>
+<li><a class="reference internal" href="#single-neutrino-forward-then-backward">1.3.2.4.1. Single Neutrino Forward then Backward</a></li>
+<li><a class="reference internal" href="#single-neutrino-simultaneous">1.3.2.4.2. Single Neutrino Simultaneous</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#verify-results">1.3.2.5. Verify Results</a></li>
+<li><a class="reference internal" href="#damping-in-time">1.3.2.6. Damping in Time</a></li>
+<li><a class="reference internal" href="#varying-parameters">1.3.2.7. Varying Parameters</a></li>
+<li><a class="reference internal" href="#references-and-notes">1.3.2.8. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="halo-effect-ann.html" title="Previous Chapter: 1.3.1. Halo Effect - Artificial Neural Network"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3.1. Halo E...</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-finite-difference-line-model.html" title="Next Chapter: 1.3.3. Halo Effect in Line Model - Finite Difference"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.3. Halo E... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/halo/halo-effect-finite-difference.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="halo-effect-finite-difference">
+<h1>1.3.2. Halo Effect - Finite Difference<a class="headerlink" href="#halo-effect-finite-difference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="models">
+<h2>1.3.2.1. Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="first admonition-title">Some Seasoning</p>
+<ul class="last simple">
+<li>[ ] Add in anti-neutrinos to the beams</li>
+<li>[ ] Neutrino and anti-neutrino beams are in different directions</li>
+</ul>
+</div>
+<div class="section" id="toy-model">
+<h3>1.3.2.1.1. Toy Model<a class="headerlink" href="#toy-model" title="Permalink to this headline">¶</a></h3>
+<p>The toy model we use is neutrino-only, right forward beam and reflection.</p>
+<p>For single angle neutrino-only emission, this model can also work for the tilted emission simply by rescale the neutrino self-interaction by <span class="math notranslate nohighlight">\(\cos\alpha\)</span> where <span class="math notranslate nohighlight">\(\alpha\)</span> the angle of forward and backward beams.</p>
+</div>
+<div class="section" id="antineutrinos-or-spectrum">
+<h3>1.3.2.1.2. Antineutrinos or Spectrum<a class="headerlink" href="#antineutrinos-or-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>The simple model would be two beams model with left and right beams having different energies.</p>
+</div>
+<div class="section" id="model-with-collective-oscillations">
+<h3>1.3.2.1.3. Model with Collective Oscillations<a class="headerlink" href="#model-with-collective-oscillations" title="Permalink to this headline">¶</a></h3>
+<p>Introduce multiangles and left-right asymmetries to the system.</p>
+</div>
+</div>
+<div class="section" id="numerical-state-convention">
+<h2>1.3.2.2. Numerical - State Convention<a class="headerlink" href="#numerical-state-convention" title="Permalink to this headline">¶</a></h2>
+<p>We use traceless density matrix. There are two senarios to keep track of the elements.</p>
+<div class="section" id="convention-i-used-in-code">
+<h3>1.3.2.2.1. Convention I Used in Code<a class="headerlink" href="#convention-i-used-in-code" title="Permalink to this headline">¶</a></h3>
+<p>For any tracelesstwo by two matrix with real diagonal elements such as density matrix,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho = \begin{pmatrix}
+a &amp; b + i c\\
+b - i c &amp; -a
+\end{pmatrix}\end{split}\]</div>
+<p>we define a corresponding array <cite>s = { a, b ,c }</cite>. Then the density matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho = \begin{pmatrix}
+s[0] &amp; s[1] + i s[2] \\
+s[1] - i s[2] &amp; -s[0]
+\end{pmatrix}.\end{split}\]</div>
+</div>
+<div class="section" id="convention-ii-polarization-vector">
+<h3>1.3.2.2.2. Convention II: Polarization Vector<a class="headerlink" href="#convention-ii-polarization-vector" title="Permalink to this headline">¶</a></h3>
+<p>Polarization vector <span class="math notranslate nohighlight">\(\vec P\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\rho = 1 + \vec \sigma \cdot \vec P,\]</div>
+<p>so that <cite>vec P = { b, -c , a }</cite>.</p>
+<div class="toggle admonition">
+<p class="first admonition-title">Relation to My Previous Convention I</p>
+<p>It is related to my convention I by</p>
+<div class="last highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">P</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-stepper-senario">
+<h2>1.3.2.3. Numerical - Stepper Senario<a class="headerlink" href="#numerical-stepper-senario" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="euler-method">
+<h3>1.3.2.3.1. Euler Method<a class="headerlink" href="#euler-method" title="Permalink to this headline">¶</a></h3>
+<p>We start from the equation of motion</p>
+<div class="math notranslate nohighlight">
+\[i\partial_z \rho = \left[ H, \rho \right],\]</div>
+<p>where we denote</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho &amp;= \begin{pmatrix}
+a &amp; b + i c\\
+b - i c &amp; -a
+\end{pmatrix} \\
+H &amp; = \begin{pmatrix}
+h &amp; \bar h + i \tilde h\\
+\bar h - i\tilde h &amp; - h
+\end{pmatrix}.\end{split}\]</div>
+<p>Calcuation of the commutator shows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[ H ,\rho\right] = 2 \begin{pmatrix}
+i( \tilde h b - \bar h c) &amp; b h - a \bar h + i( h c - a \tilde h) \\
+c.c. &amp;  - i( \tilde h b - \bar h c)
+\end{pmatrix},\end{split}\]</div>
+<p>from which we conclude that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_z a &amp;= 2 ( \tilde h b - \bar h c ) \\
+\partial_z b &amp;= 2 ( h c - a \tilde h ) \\
+\partial_z c &amp;= 2 ( h b - a \bar h ).\end{split}\]</div>
+<p>Then we discretize each equations using Euler method.</p>
+</div>
+<div class="section" id="evolution-operator">
+<h3>1.3.2.3.2. Evolution Operator<a class="headerlink" href="#evolution-operator" title="Permalink to this headline">¶</a></h3>
+<p>The same calculation can be achieved by using the evolution operator <span class="math notranslate nohighlight">\(U(t) = \exp (-i H t)\)</span>.</p>
+<div class="note admonition">
+<p class="first admonition-title">Evolution Operator</p>
+<p>Evolution operator <span class="math notranslate nohighlight">\(U(t)\)</span> is used to evolve states</p>
+<div class="math notranslate nohighlight">
+\[\rho(t) = U(t)\rho(t_0) U(t)^\dagger\]</div>
+<p>if Hamiltonian doesn’t depend on time.</p>
+<p>As a numerical algorithm, we can use the finite difference form</p>
+<div class="last math notranslate nohighlight">
+\[\rho(t+\Delta t) = U(\Delta t) \rho(t)  U(\Delta t)^\dagger.\]</div>
+</div>
+<p>Since the Hamiltonian in our simple calcuations is always two by two, the exact form of the algorithm can be written down exactly.</p>
+<p>The evolution operator itself is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U(\Delta t) = \begin{pmatrix}
+\cos (h \Delta t) - i\frac{h_3 \sin( h \Delta t) }{ h } &amp; \frac{ -i( h_1 + i h_2 ) \sin ( h \Delta t ) }{  h } \\
+\frac{ -i( h_1 -i h_2) \sin ( h \Delta t ) }{  h } &amp;  \cos (h \Delta t) + i\frac{h_3 \sin( h \Delta t) }{ h }
+\end{pmatrix}\end{split}\]</div>
+<p>where we defined <span class="math notranslate nohighlight">\(h = \sqrt{ h_1^2+h_2^2+h_3^2 }\)</span> for short.</p>
+<p>To obtain a simpler form, we can write all matrices as Pauli matrices.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U &amp;= \cos(h \Delta t) I  -i \frac{ h_1 \sin(h \Delta t) }{h} \sigma_1 + i \frac{ h_2\sin(h \Delta t) }{h} \sigma_2- i \frac{ h_3 \sin(h \Delta t) }{ h} \sigma_3 \\
+&amp; = u_0 I + u_1 \sigma_1 + u_2 \sigma_2 + u_3 \sigma_3.\end{split}\]</div>
+<p>For the purpose of formalism, we denote density matrix as <span class="math notranslate nohighlight">\(\rho = P_i \sigma_i\)</span>. The density matrix at <span class="math notranslate nohighlight">\(t+\Delta t\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho(t+\Delta t) &amp;= U_t(\Delta t) \rho(t) U_t^\dagger(\Delta t) \\
+&amp;= ( cI +  u_i \sigma_i ) \rho_k \sigma_k ( c I -  u_j \sigma_j ) \\
+&amp;= c^2 \rho_k \sigma_k + \left[ u_i u_i \rho_n - 2 u_i \rho_i u_n \right]\sigma_n \\
+&amp; = \left[  (c^2 - s^2 )\rho_n - 2 u_i \rho_i u_n \right]\sigma_n,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c=\cos( h \Delta t )\)</span>, <span class="math notranslate nohighlight">\(s = \sin(h\Delta t)\)</span>, <span class="math notranslate nohighlight">\(u_{1,3} =-i h_{1,3}/h\)</span>, <span class="math notranslate nohighlight">\(u_2 = i h_2/h\)</span>, and <span class="math notranslate nohighlight">\(h=\sqrt{h_1^2 + h_2^2 + h_3^2}\)</span>. The equation is simplified if we redefine</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u_1 &amp;= -i \sin(h\Delta t) u_1' \\
+u_2 &amp;= -i \sin(h\Delta t) u_2' \\
+u_3 &amp;= -i \sin(h\Delta t) u_3'.\end{split}\]</div>
+<p>Then we obtain the equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho(t+\Delta t) &amp;= \left[  \cos( 2 h \Delta t)\rho_n -  2 u_i \rho_i u_n \right]\sigma_n \\
+&amp;= \left[  \cos( 2 h \Delta t) \rho_n +  2 \sin^2(h \Delta t) u'_i \rho_i u'_n \right]\sigma_n\end{split}\]</div>
+<div class="toggle admonition">
+<p class="first admonition-title">The Code</p>
+<p>The vectors about h is consistent with my code. But the state vector I calculated is different. The actual update rule should be</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\rho(t+\Delta t)[0] &amp;= \cos( 2 h \Delta t) \rho[0] +  2 \sin^2(h \Delta t) u'_i \rho_i u'[0] \\\end{split}\]</div>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">The Tedious Result Using Mathematica</p>
+<p><strong>For my previous Convention I.</strong></p>
+<p>The evolved density matrix obtained quite a long expression but it definitely can be implemented.</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\rho(t + \Delta t) = \left(
+\begin{array}{cc}
+\frac{\text{h0} (\text{h0} \text{s0}+\text{h1} \text{s1}+\text{h2} \text{s2})+\left(\text{s0} \text{h1}^2-\text{h0} \text{s1} \text{h1}+\text{h2} (\text{h2} \text{s0}-\text{h0} \text{s2})\right) \cos \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+(\text{h2} \text{s1}-\text{h1} \text{s2}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right) \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}}{\text{h0}^2+\text{h1}^2+\text{h2}^2} &amp; \frac{(\text{h1}+\text{h2} i) (\text{h0} \text{s0}+\text{h1} \text{s1}+\text{h2} \text{s2})+\left((\text{s1}+i \text{s2}) \text{h0}^2-\text{h0} (\text{h1}+\text{h2} i) \text{s0}+(\text{h1}+\text{h2} i) i (\text{h1} \text{s2}-\text{h2} \text{s1})\right) \cos \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+(-\text{h2} \text{s0}+\text{h1} i \text{s0}-i \text{h0} \text{s1}+\text{h0} \text{s2}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right) \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}}{\text{h0}^2+\text{h1}^2+\text{h2}^2} \\
+(\text{s1}-i \text{s2}) \cos ^2\left(\text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+\frac{\left(-(\text{s1}-i \text{s2}) \text{h0}^2+2 (\text{h1}-i \text{h2}) \text{s0} \text{h0}+(\text{h1}-i \text{h2})^2 (\text{s1}+i \text{s2})\right) \sin ^2\left(\text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)}{\text{h0}^2+\text{h1}^2+\text{h2}^2}+\frac{(-\text{h2} \text{s0}+\text{h1} (-i) \text{s0}+\text{h0} i \text{s1}+\text{h0} \text{s2}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)}{\sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}} &amp; \frac{-\text{h0} (\text{h0} \text{s0}+\text{h1} \text{s1}+\text{h2} \text{s2})+\left(\text{h0} \text{s1} \text{h1}-\text{h1}^2 \text{s0}+\text{h2} (\text{h0} \text{s2}-\text{h2} \text{s0})\right) \cos \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+(\text{h1} \text{s2}-\text{h2} \text{s1}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right) \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}}{\text{h0}^2+\text{h1}^2+\text{h2}^2} \\
+\end{array}
+\right)\end{split}\]</div>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">First Order Expansion</p>
+<p>We could Taylor series of the evolution operator,</p>
+<div class="math notranslate nohighlight">
+\[U = 1 - i H(t) \Delta t.\]</div>
+<p class="last">We work out the evolved density matrix.</p>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-iteration-senario">
+<h2>1.3.2.4. Numerical - Iteration Senario<a class="headerlink" href="#numerical-iteration-senario" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-neutrino-forward-then-backward">
+<h3>1.3.2.4.1. Single Neutrino Forward then Backward<a class="headerlink" href="#single-neutrino-forward-then-backward" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="first admonition-title">Algrimth</p>
+<ol class="last arabic simple">
+<li>Calculate forward beam using 0 backward beam;</li>
+<li>Calculate backward beam using forward beam calculated in 1;</li>
+<li>Calculate forward beam using backward beam calculated in 2;</li>
+<li>Repeat.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="single-neutrino-simultaneous">
+<h3>1.3.2.4.2. Single Neutrino Simultaneous<a class="headerlink" href="#single-neutrino-simultaneous" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="first admonition-title">Algrimth</p>
+<ol class="last arabic simple">
+<li>Calculate forward beam using 0 backward beam;</li>
+<li>Calculate backward beam and forward beam together using all current counter beams;</li>
+<li>Repeat.</li>
+</ol>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">Computation Time</p>
+<p><strong>2017-09-13:</strong></p>
+<p>The export of my test code:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>PROGRAM START
+Halo Problem Forward and Backward:
+Total number of iterations: 100
+Size of rhos: 1000
+Range: 1.000000
+Step size: 0.001000
+Save Steps: 2
+Total clock time: 0.070386
+Clock time for 1000 iterations: 0.70409
+PROGRAM END
+</pre></div>
+</div>
+<p>Some estimations:</p>
+<ol class="arabic simple">
+<li>(1e5 steps in z) times (10000) steps requires (10000 times 7e-4 times 100 = 700) seconds;</li>
+<li>(1e6 steps in z) times (10000) steps requires (10000 times 7e-4 times 1000 = 7000 ) seconds, i.e., 117 minutes;</li>
+<li>(1e7 steps in z) times (10000) steps requires (10000 times 7e-4 times 10000 = 70000 ) seconds, i.e., 1e3 minutes.</li>
+</ol>
+<p><strong>2017-09-14:</strong> I changed the Hamiltonian functions and solvers.</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>PROGRAM START
+Halo Problem Forward and Backward:
+Total number of iterations: 100
+Size of rhos: 1000
+Range: 1.000000
+Step size: 0.001000
+Save Steps: 2
+Total clock time: 0.018305
+Clock time for 1000 iterations: 0.18335
+PROGRAM END
+</pre></div>
+</div>
+<p class="last">3.5 times faster!</p>
+</div>
+<p>The result shows that</p>
+<video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/halo_sim_osc_20000_100000_1.000000_0.000010.csv.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">For 20000 total iteractions. Calculation is within range 0 to 1 with step size 1e-5. A total of 100 steps are exported. So each step indicates iteration of 200 times.</p><div class="toggle admonition">
+<p class="first admonition-title">GIF: Step size <span class="math notranslate nohighlight">\(10^{-5}\)</span></p>
+<div class="last figure align-center" id="id1">
+<img alt="../../_images/halo_sim_osc_20000_100000_1.000000_0.000010.csv.gif" src="../../_images/halo_sim_osc_20000_100000_1.000000_0.000010.csv.gif" />
+<p class="caption"><span class="caption-number">Fig. 1.176 </span><span class="caption-text">For 20000 iteractions within range 0 to 1 with 100 outputs. Each time increment in the plot indicates 200 iterations.</span></p>
+</div>
+</div>
+<p>We immediately spot trouble here. The calculation doesn’t reach equilibrium. I calculated using larger iterations (100000 iterations) and it doesn’t converge either.</p>
+<p>I checked the convergence.</p>
+<video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/convergence-1e4-and-1e5.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing step size 1e-4 and 1e-5, with Ntop = 20000 total iterations and 20 outputs. Each time increment in the plot indicates 20000/20=1000 iterations. </p><p>Compare step sizes <span class="math notranslate nohighlight">\(10^{-5}\)</span> and <span class="math notranslate nohighlight">\(10^{-6}\)</span>.</p>
+<video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/convergence-1e6-and-1e5.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing step size 1e-6 and 1e-5, with Ntop = 20000 total iterations and 20 outputs. Each time increment in the plot indicates 20000/20=1000 iterations. </p><div class="warning admonition">
+<p class="first admonition-title">What to do?</p>
+<p>The first thing to do is to optimize the code and check the performance of this code. It might need more time, otherwise this would be physically important. We have to solve the time dependent problem by tracking all the neutrinos.</p>
+<ol class="last arabic simple">
+<li>Parallelize the code.</li>
+<li>Read about what the mathematicians are using to solve <strong>BVP with nonlocal boundary conditions</strong>. Refer to <a class="reference internal" href="halo-effect-analytical-methods.html#bvp-nonlocal-bc-references"><span class="std std-ref">BVP nonlocal BC</span></a>.</li>
+<li>Try to calculate multiangles to check if the convergence is easier to reach. What are the conditions of equilibrium?</li>
+<li>Write the time dependent code, with tracks all the neutrinos at different locations and solve it. This would be the actual time evolution of the flavors. The time scale would be on ms. Will this be useful?</li>
+</ol>
+</div>
+<div class="warning admonition">
+<p class="first admonition-title">TODO</p>
+<ol class="last arabic simple">
+<li>Linear stability analysis.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="verify-results">
+<h2>1.3.2.5. Verify Results<a class="headerlink" href="#verify-results" title="Permalink to this headline">¶</a></h2>
+<p>The equilibrium results can be verified using Mathematica solver. I simply feed in the initial conditions at <span class="math notranslate nohighlight">\(z=0\)</span> and calculate forward to the reflection surace at <span class="math notranslate nohighlight">\(z=L\)</span>. The two neutrino beams should be at the same state.</p>
+<p>Result is verified using Mathematica code.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/cpp-code-validation-using-mathematica.png" src="../../_images/cpp-code-validation-using-mathematica.png" />
+<p class="caption"><span class="caption-number">Fig. 1.177 </span><span class="caption-text">C++ code validation using mathematica for <span class="math notranslate nohighlight">\(\mu=20\)</span>.</span></p>
+</div>
+</div>
+<div class="section" id="damping-in-time">
+<h2>1.3.2.6. Damping in Time<a class="headerlink" href="#damping-in-time" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="first admonition-title">The Problem</p>
+<p>The problem I encountered is that some of the calculations show that approaching to equilibrium can be extremely slow due to some kind of oscillation behavior.</p>
+<div class="last"><video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/halo_parallel_REFL0.200000_ITER10000000_STEPS50000_RANGE5.000000_TH_20_t2017-11-5-17-59-36.csv.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption"> The system is kind of oscillatory in time. Reflection coefficient refl=0.2, mu = 1.0, within z range [0,5]. </p></div></div>
+<p>Average the past two steps to slow down the time evolution. Maybe it can prevent the oscillations in time.</p>
+<p>The average algorithm takes on parameter <span class="math notranslate nohighlight">\(\alpha\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\rho(t_{n-1}) = (1-\alpha)\rho(t_{n-1}) + \alpha \rho(t_{n-2}).\]</div>
+<p>I can verify that the code is producing the correct results by setting <span class="math notranslate nohighlight">\(\alpha=0\)</span> and compare the result with my previous code. They are producing exact the same results.</p>
+<video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0-no-average.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing damping method with alpha=0 (effectively no damping) and original code (without damping) for neutrino potential mu =0.1 and reflection coefficient refl=0.01  </p><p>I also verified that the final equilibrium states produced by new code with damping and the original code without damping are the same.</p>
+<a class="reference internal image-reference" href="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu-p1.png"><img alt="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu-p1.png" src="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu-p1.png" style="width: 49%;" /></a>
+<a class="reference internal image-reference" href="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu0p1.png"><img alt="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu0p1.png" src="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu0p1.png" style="width: 49%;" /></a>
+<a class="reference internal image-reference" href="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu1.png"><img alt="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu1.png" src="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p01-mu1.png" style="width: 49%;" /></a>
+<a class="reference internal image-reference" href="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu1.png"><img alt="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu1.png" src="../../_images/neutrino-headon-avg1-alpha-0p5-vs-noavg-refl0p1-mu1.png" style="width: 49%;" /></a>
+<p>However, the new algoritm seems to be slow. It’s expected though.</p>
+<video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =0.1 and reflection coefficient refl=0.1  </p><video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =0.1 and reflection coefficient refl=0.01  </p><video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =1.0 and reflection coefficient refl=0.1  </p><video width="100%" controls>
+<source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =1.0 and reflection coefficient refl=0.01  </p><p>To make use of this new damping mechanism, I need to recalculate</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">refl</span> <span class="pre">=</span> <span class="pre">0.2</span>
+<span class="pre">mu</span> <span class="pre">=</span> <span class="pre">1.0</span>
+<span class="pre">range</span> <span class="pre">=</span> <span class="pre">5</span>
+<span class="pre">`</span></code></p>
+</div>
+<div class="section" id="varying-parameters">
+<h2>1.3.2.7. Varying Parameters<a class="headerlink" href="#varying-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/varying-relf-for-mu-1.png" src="../../_images/varying-relf-for-mu-1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.178 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=1\)</span></span></p>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/varying-relf-for-mu-0.5.png" src="../../_images/varying-relf-for-mu-0.5.png" />
+<p class="caption"><span class="caption-number">Fig. 1.179 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.5\)</span></span></p>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/varying-relf-for-mu-0.1.png" src="../../_images/varying-relf-for-mu-0.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.180 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.1\)</span></span></p>
+</div>
+</div>
+<div class="section" id="references-and-notes">
+<h2>1.3.2.8. References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/halo/halo-effect-finite-difference.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

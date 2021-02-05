@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>5.1. MSW Effect &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.2. MSW Refraction, Resonance and Non-adiabacity" href="msw-derivation.html" />
+    <link rel="prev" title="5. Interaction With Matter" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Interaction With Matter</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5.1. MSW Effect</a><ul>
+<li><a class="reference internal" href="#an-introduction-to-msw-effect">5.1.1. An Introduction to MSW Effect</a></li>
+<li><a class="reference internal" href="#solar-neutrinos-and-msw-effect">5.1.2. Solar Neutrinos and MSW Effect</a></li>
+<li><a class="reference internal" href="#visualizing-the-solar-neutrino-flavor-oscillations">5.1.3. Visualizing the Solar Neutrino Flavor Oscillations</a></li>
+<li><a class="reference internal" href="#numerical-results">5.1.4. Numerical Results</a><ul>
+<li><a class="reference internal" href="#flavor-oscillation">5.1.4.1. 2 Flavor Oscillation</a></li>
+<li><a class="reference internal" href="#three-flavor-oscillations">5.1.4.2. Three flavor Oscillations</a></li>
+<li><a class="reference internal" href="#ternary-diagram">5.1.4.3. Ternary Diagram</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#experiments">5.1.5. Experiments</a></li>
+<li><a class="reference internal" href="#msw-triangle">5.1.6. MSW Triangle</a></li>
+<li><a class="reference internal" href="#refs-and-notes">5.1.7. Refs and Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: 5. Interaction With Matter"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5. Interactio...</span>
+    </a>
+  </li>
+  <li>
+    <a href="msw-derivation.html" title="Next Chapter: 5.2. MSW Refraction, Resonance and Non-adiabacity"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5.2. MSW Refr... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">5.1. MSW Effect</a><ul>
+<li><a class="reference internal" href="#an-introduction-to-msw-effect">5.1.1. An Introduction to MSW Effect</a></li>
+<li><a class="reference internal" href="#solar-neutrinos-and-msw-effect">5.1.2. Solar Neutrinos and MSW Effect</a></li>
+<li><a class="reference internal" href="#visualizing-the-solar-neutrino-flavor-oscillations">5.1.3. Visualizing the Solar Neutrino Flavor Oscillations</a></li>
+<li><a class="reference internal" href="#numerical-results">5.1.4. Numerical Results</a><ul>
+<li><a class="reference internal" href="#flavor-oscillation">5.1.4.1. 2 Flavor Oscillation</a></li>
+<li><a class="reference internal" href="#three-flavor-oscillations">5.1.4.2. Three flavor Oscillations</a></li>
+<li><a class="reference internal" href="#ternary-diagram">5.1.4.3. Ternary Diagram</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#experiments">5.1.5. Experiments</a></li>
+<li><a class="reference internal" href="#msw-triangle">5.1.6. MSW Triangle</a></li>
+<li><a class="reference internal" href="#refs-and-notes">5.1.7. Refs and Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="index.html" title="Previous Chapter: 5. Interaction With Matter"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5. Interactio...</span>
+    </a>
+  </li>
+  <li>
+    <a href="msw-derivation.html" title="Next Chapter: 5.2. MSW Refraction, Resonance and Non-adiabacity"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5.2. MSW Refr... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../_sources/matter/msw.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="msw-effect">
+<span id="index-0"></span><h1>5.1. MSW Effect<a class="headerlink" href="#msw-effect" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="first admonition-title">Brief Summary of MSW Resonance</p>
+<p>The Hamiltonian for matter effect is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf H(x) = \left(\frac{\lambda(x)}{2} -\frac{ \omega_{\mathrm{v}} }{2} \cos 2\theta_{\mathrm{v}}\right) \boldsymbol {\sigma_3 } + \frac{ \omega_{\mathrm{v}} }{2} \sin 2\theta_{\mathrm{v}} \boldsymbol{\sigma_1},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda(x)=\sqrt{2}G_F n_e(x)\)</span> is the matter potential and <span class="math notranslate nohighlight">\(\omega_{\mathrm{v}}=\frac{\Delta m^2}{2E}\)</span> is the vacuum oscillation angular frequency. MSW resonance happens when the diagonal terms disappear, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}.\]</div>
+<p>What does it mean?</p>
+<p>Now think about the vacuum Hamiltonian in <strong>flavor basis</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H}_{\mathrm{vacuum}} = -\frac{\omega_{\mathrm{v}} \cos 2\theta_\mathrm{v}}{2}\boldsymbol{\sigma_3} + \frac{\omega_{\mathrm{v}} \sin 2\theta_\mathrm{v}}{2}\boldsymbol{\sigma_1}.\]</div>
+<p>We actually spot this similarity between matter Hamiltonian and vacuum Hamiltonian. Thus we define new oscillation frequency <span class="math notranslate nohighlight">\(\omega_{\mathrm{m}}\)</span> and mixing angle <span class="math notranslate nohighlight">\(\theta_{\mathrm{m}}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\omega_{\mathrm{m}} &amp;= \omega_{\mathrm{v}}\sqrt{ (\frac{\lambda}{\omega_{\mathrm{v}}} - \cos 2\theta_{\mathrm{v}})^2 + \sin^2 2\theta_{\mathrm{v}}  },\\
+\tan 2\theta_{\mathrm{m}} &amp; = \frac{\sin 2\theta_{\mathrm{v}} }{ \cos 2\theta_{\mathrm{v}} -  \lambda/\omega_{\mathrm{v}}    },\end{split}\]</div>
+<p>so that the Hamiltonian has the form</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H}(x) = -\frac{\omega_{\mathrm{m}} \cos 2 \theta_{\mathrm{m}}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm{m}} \sin 2\theta_{\mathrm{m}} }{2} \boldsymbol{\sigma_1}.\]</div>
+<p>What are the significances of <span class="math notranslate nohighlight">\(\theta_{\mathrm{m}}\)</span> and <span class="math notranslate nohighlight">\(\omega_{\mathrm{m}}\)</span>? We can look at them in constant matter profile, which means they are constant. In such a case we can find a basis in which the Hamiltonian is diagonalized.</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H}_{\mathrm{diagonalized}} = - \frac{\omega_{\mathrm{m}}}{2}\boldsymbol{\sigma_3}.\]</div>
+<p>So <span class="math notranslate nohighlight">\(\omega_{\mathrm{m}}\)</span> is the oscillation frequency in matter. <strong>However, a caveat is that Hamiltonian with matter interaction is not always diagonalizable. Noneless, we know for constant matter profile and adiabatic approximation, diagonalizing the Hamiltonian is doable.</strong></p>
+<p>So the condition for MSW resonance also minimizes the oscillation angular frequency in matter.</p>
+<p>This basis, which we call matter basis <span class="math notranslate nohighlight">\(\{\ket{\nu_{\mathrm{L}}}, \ket{\nu_{\mathrm{H}}}\}\)</span>, is related to flavor basis through this rotation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\ket{\nu_{\mathrm{e}}} \\
+\ket{\nu_{\mathrm{x}}}
+\end{pmatrix} = \begin{pmatrix}
+\cos \theta_{\mathrm{m}} &amp; \sin \theta_{\mathrm{m}} \\
+-\sin \theta_{\mathrm{m}} &amp; \cos \theta_{\mathrm{m}}
+\end{pmatrix}
+\begin{pmatrix}
+\ket{\nu_{\mathrm{L}}}\\
+\ket{\nu_{\mathrm{H}}}
+\end{pmatrix}.\end{split}\]</div>
+<p>An investigation into the effective mixing angles in matter <span class="math notranslate nohighlight">\(\theta_{\mathrm{m}}\)</span> shows that resonance condition also maximizes the <span class="math notranslate nohighlight">\(\sin 2\theta_m\)</span>. The reason is that <span class="math notranslate nohighlight">\(\lambda(x) - \omega_{\mathrm{v}} \cos 2\theta_{\mathrm{v}}  =0\)</span> will make <span class="math notranslate nohighlight">\(\tan 2\theta_{\mathrm{m}}\)</span> infinity. Then we have <span class="math notranslate nohighlight">\(2\theta_{\mathrm{m}}=\frac{\pi}{2}\)</span> which means <span class="math notranslate nohighlight">\(\sin 2\theta_{\mathrm{m}} = 1\)</span>.</p>
+<p>We also notice <span class="math notranslate nohighlight">\(\theta_{\mathrm{m}}=\frac{\pi}{4}\)</span> will also lead to equal mixing, i.e., electron flavor state consists of equal fraction of light state and heavy state.</p>
+<p><strong>In summary, the MSW resonance happens when</strong></p>
+<ul class="simple">
+<li>diagonal elements of Hamiltonian in flavor basis vanish;</li>
+<li>energy split between heavy and light states is minimized;</li>
+<li>flavor oscillation (angular) frequency is minimized or oscillation length is maximized;</li>
+<li>mixing angle in matter <span class="math notranslate nohighlight">\(\theta_{\mathrm{m}}=\frac{\pi}{4}\)</span>;</li>
+<li>equal mixing happens;</li>
+<li><span class="math notranslate nohighlight">\(\sin 2\theta_m\)</span> is maximized which means the oscillation amplitude happens.</li>
+</ul>
+<p class="last">There are more about MSW effect, which is related to non-adiabatic conversion. Read the main text for more information.</p>
+</div>
+<div class="section" id="an-introduction-to-msw-effect">
+<h2>5.1.1. An Introduction to MSW Effect<a class="headerlink" href="#an-introduction-to-msw-effect" title="Permalink to this headline">¶</a></h2>
+<p>First of all, MSW means Mikheyev–Smirnov–Wolfenstein.</p>
+<p>The symmetry breaking between neutral current and charged current will change the evolution and makes the states more electron neutrino.</p>
+<p>This is the reason of MSW effect.</p>
+<p>In other words, the first requirement of MSW effect is that the electrons interacts with neutrinos and makes it in a specific state that is heavy if the electron density is strong enough. Meanwhile, if the mixing angle is not that large, a level crossing could happen making the state a light state as the density becomes vacuum. The other requirement, which is obvious, is that the density change should be adiabatic, the meaning of which is the density profile of matter gently reduces to vacuum, leaving enough reaction time for the neutrinos.</p>
+<p>The Hamiltonian for neutinos with neutrino-matter interaction (in flavour basis) is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf H = \frac{ \Delta m^2 }{4E}\begin{pmatrix} -\cos 2\theta &amp; \sin 2\theta \\ \sin 2\theta &amp; \cos 2\theta \end{pmatrix}  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I},\end{split}\]</div>
+<p>where the last term (green part) can be neglected because this term will only shift all the eigenvalues with the same amount without changing the eigenvectors.</p>
+<p>Define a quantities like <span class="math notranslate nohighlight">\(\omega=\frac{ \Delta m^2 }{2E}\)</span> for neutrinos ( <span class="math notranslate nohighlight">\(\bar\omega = \frac{ \Delta m^2 }{-2E}\)</span> for antineutrinos) and <span class="math notranslate nohighlight">\(\Delta = \sqrt{2} G_F n(x)\)</span> (which might be denoted by <span class="math notranslate nohighlight">\(\nu = \sqrt{2}G_F n_\nu\)</span> in other lituratures).</p>
+<p>Using Pauli matrices, I can decompose this to</p>
+<div class="math notranslate nohighlight">
+\[\mathbf H = \frac{\omega}{2}( -\cos2\theta \sigma_3 + \sin 2\theta \sigma_1 )   {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}}  {\color{green}+ \Delta \mathbf I}\]</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As a reminder, <span class="math notranslate nohighlight">\(\Delta = \sqrt{2}G_F n(x)\)</span>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The red part is from the charged current Feynman diagram. We have a <span class="math notranslate nohighlight">\(\mathbf\sigma_3\)</span> matrix instead of an matrix like</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}\end{split}\]</div>
+<p>because we rewrite this matrix with Pauli matrices and identy. Then the identities are neglected.</p>
+<p class="last">This can be done properly because Pauli matrice and Identy matrix form a complete basis.</p>
+</div>
+<p>In a more compact form, this Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf H &amp;= \frac{ \Delta m^2 }{4E} \left( -\cos 2\theta \mathbf {\sigma_3 } + \sin 2\theta \mathbf{\sigma_1} \right)  {\color{red} + \frac{\Delta}{2} \mathbf {\sigma_3}} \\
+&amp; = \left(\frac{\Delta}{2} -\frac{ \Delta m^2 }{4E} \cos 2\theta\right) \mathbf {\sigma_3 } + \frac{ \Delta m^2 }{4E} \sin 2\theta \mathbf{\sigma_1}\end{split}\]</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Eigenvalues of <span class="math notranslate nohighlight">\(\mathbf {\sigma_3}\)</span> are 1 and -1 with corresponding eigenvectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1\\ 0 \end{pmatrix}\end{split}\]</div>
+<p>and</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}0\\ 1 \end{pmatrix}.\end{split}\]</div>
+</div>
+<p>As we have mentioned, this Hamiltonian is in flavour basis. When mixing angle <span class="math notranslate nohighlight">\(\theta \to 0\)</span>, the eigenvectors are almost eigenvectors of <span class="math notranslate nohighlight">\(\mathbf{\sigma_3}\)</span> which are electron neutrinos and x type neutrinos.</p>
+<div class="note admonition">
+<p class="first admonition-title">Interesting Limits</p>
+<p>Before we really solve the equation of motion, some interesting limits can be shown here.</p>
+<p><strong>Interaction</strong> <span class="math notranslate nohighlight">\(\Delta\)</span> <strong>is much larger than cacuum mixing terms.</strong> In this case, the Hamiltonian becomes diagonalized and the neutrinos will stay on it’s flavour eigenstates in the propagation.</p>
+<p class="last"><strong>Interaction</strong> <span class="math notranslate nohighlight">\(\Delta\)</span> <strong>is much smaller than vacuum mixing terms.</strong> The propagation reduces to vacuum case.</p>
+</div>
+<p>To see this effect quantitively, we need to diagonalize this Hamiltonian (<strong>Can we actually diagonalize the equation of motion? NO!</strong>). Equivalently, we can rewrite it in the basis of mass eigenstates <span class="math notranslate nohighlight">\(\{\ket{\nu_L(x)}, \ket{\nu_H(x)}\}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ket{\nu_L(x)} &amp;= \cos\theta(x) \ket{\nu_e} - \sin\theta(x) \ket{\nu_\mu} \\
+\ket{\nu_H(x)} &amp; =  \sin\theta(x) \ket{\nu_e} - \cos\theta(x) \ket{\nu_\mu}.\end{split}\]</div>
+<p>This new rotation in matrix form is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} \ket{\nu_L(x)} \\ \ket{\nu_H(x)} \end{pmatrix} &amp;= \begin{pmatrix} \cos \theta(x) &amp; -\sin\theta(x) \\ \sin\theta(x) &amp; \cos\theta(x) \end{pmatrix} \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix} \\
+&amp; = \mathbf{U^{-1}_x } \begin{pmatrix}\ket{\nu_e} \\ \ket{\nu_x} \end{pmatrix}\end{split}\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Diagonalize Hamiltonian</p>
+<p>To diagonilize it, we need to multiply on both sides the rotation matrix and its inverse,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf {H_{xd}} = \mathbf{U_x^{-1}} \mathbf H \mathbf {U_x}.\]</div>
+<p>The second step is to set the off diagonal elements to zero. By solving the equaions we can find the <span class="math notranslate nohighlight">\(\sin 2\theta(x)\)</span> and <span class="math notranslate nohighlight">\(\cos 2\theta(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H_{xd}} &amp;= \mathbf{U^{-1}_x} \left( A_1 \mathbf{\sigma_1} + A_3 \mathbf{\sigma_3} \right) \mathbf{ U_x } \\
+&amp; = \begin{pmatrix} A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) &amp; A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x) \\ A_3 \sin 2\theta(x) + A_1\cos 2\theta(x) &amp;  - A_3 \cos 2\theta(x) + A_1 \sin 2\theta(x) \end{pmatrix},\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_3 &amp;  = \frac{\Delta}{2} - \frac{\delta^2 m}{4E}\cos 2\theta \\
+A_1 &amp; =  \frac{\delta^2 m}{4E} \sin 2\theta.\end{split}\]</div>
+<p>Set the off-diagonal elements to zero,</p>
+<div class="math notranslate nohighlight">
+\[A_3 \sin 2\theta(x) + A_1 \cos 2\theta(x)  = 0\]</div>
+<p>So the solutions are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sin 2\theta(x) &amp; = \frac{A_1}{\sqrt{A_1^2 + A_3^2}} \\
+\cos 2\theta(x) &amp; = \frac{-A_3}{\sqrt{A_1^2+A_3^2}}.\end{split}\]</div>
+<p>Plug in <span class="math notranslate nohighlight">\(A_1\)</span> and <span class="math notranslate nohighlight">\(A_3\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sin 2\theta(x)  &amp;= \frac{\sin 2\theta_v}{\sqrt{ \left(\frac{\Delta}{\omega} \right)^2+1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v }} \\
+\cos 2\theta(x)&amp;= \frac{ \cos 2\theta_v - \frac{\Delta}{\omega} }{ \sqrt{ \left( \frac{\Delta}{\omega} \right)^2  +1 - 2 \frac{\Delta}{\omega}\cos 2\theta_v  }}.\end{split}\]</div>
+<p>Define <span class="math notranslate nohighlight">\(\hat\Delta = \frac{\Delta}{\omega}\)</span> with <span class="math notranslate nohighlight">\(\omega=\frac{\Delta m^2}{2E}\)</span>, which represents the matter interaction strength compared to the vacuum oscillation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sin 2\theta(x)  &amp;= \frac{\sin 2\theta_v}{\sqrt{ \hat\Delta ^2+1 - 2 \hat\Delta \cos 2\theta_v }} \\
+\cos 2\theta(x)&amp;= \frac{ \cos 2\theta_v - \hat\Delta  }{ \sqrt{\hat\Delta ^2  +1 - 2 \hat\Delta \cos 2\theta_v } }.\end{split}\]</div>
+<p>We also have</p>
+<div class="math notranslate nohighlight">
+\[A_3\cos 2\theta(x) - A_1 \sin 2\theta(x) = -\frac{\omega}{2}\sqrt{\hat \Delta^2 +1 - 2\hat\Delta \cos 2\theta_v},\]</div>
+<p>which leads to the result of the diagonalized Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H_{xd}} = \frac{\omega}{2}\sqrt{\hat\Delta^2 +1 - 2\hat\Delta \cos 2\theta_v} \begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}.\end{split}\]</div>
+<p><strong>This diagonalize the Hamiltonian LOCALLY. It’s not possible to diagonalize the Hamiltonian globally if the electron number density is not a constant.</strong></p>
+<p class="last"><strong>The point is, for equation of motion, we have a differentiation with respect to position</strong> <span class="math notranslate nohighlight">\(x\)</span>! <strong>So even we diagonalize the Hamiltonian, the equation of motion won’t be diagonalized. An extra matrix will occur on the LHS and de-diagonalize the Hamiltonian on RHS.</strong></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As <span class="math notranslate nohighlight">\(\Delta \to \infty\)</span>, <span class="math notranslate nohighlight">\(A_3\to \infty\)</span> and <span class="math notranslate nohighlight">\(\sin 2\theta(x)\)</span> vanishes. Thus the neutrino will stay on flavour eigenstates.</p>
+</div>
+<p>With the newly defined heavy-light mass eigenstates, we can calculate the propagatioin of neutrinos,</p>
+<div class="math notranslate nohighlight">
+\[i \partial_t \ket{\psi_x(t)} = \mathbf{Extra Matrix From LHS}\cdot \mathbf H_{xd} \ket{\psi_x(t)},\]</div>
+<p>where the <span class="math notranslate nohighlight">\(\mathbf{Extra Matrix From LHS}\)</span> comes from the fact that changing from flavor basis <span class="math notranslate nohighlight">\(\Psi(x)\)</span> to heavy-light basis <span class="math notranslate nohighlight">\(\Psi_m(x)\)</span> using <span class="math notranslate nohighlight">\(\mathbf {U_m}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[i\partial_x (\mathbf{U_m} \Psi_m(x)) = H ( \mathbf{U_m} \Psi_m(x) )\]</div>
+<p>only returns</p>
+<div class="math notranslate nohighlight">
+\[i\partial_x \Psi_m(x) = \mathbf{H_{md} } \Psi_m(x) - i \mathbf{U_m^{-1}} ( \partial_x \mathbf{U_m} ) \Psi_m(x).\]</div>
+<p>We imediately know the propagation is on the heavy-light mass eigenstates under adiabatic condition WITHOUT solving the equation. The eigenvalue of these states are <span class="math notranslate nohighlight">\(-\sqrt{A_3^2+A_1^2}\)</span> and <span class="math notranslate nohighlight">\(\sqrt{A_3^2+A_1^2}\)</span>. The absolute value of these solutions grow as <span class="math notranslate nohighlight">\(\Delta\)</span> becomes large.</p>
+<p>Combining the two terms on RHS,</p>
+<div class="math notranslate nohighlight">
+\[i\partial_x \Psi_m(x) = \mathbf{H_m} \Psi_m(x),\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H_m} = \mathbf{H_{md}} - i \mathbf{U_m^{-1}} ( \partial_x \mathbf{ U_m } ).\]</div>
+<p>The only part inside <span class="math notranslate nohighlight">\(\mathbf{U_m(x)}\)</span> that is space dependent is the number density of the electrons <span class="math notranslate nohighlight">\(n(x)\)</span>. <strong>Thus we know immediately that the Hamiltonian is diagonalized if the number density is constant.</strong></p>
+<div class="note admonition">
+<p class="first admonition-title">Is Adabatic Condition Valid Here?</p>
+<p>Haxton’s paper.</p>
+<p class="last">Before going into the system, here is a discussion of adiabatic in thermodynamics.</p>
+</div>
+<p>From the two solutions we know there is a gap between the two trajectories. We draw a figure with electron number density as the horizontal axis and energy as the vertical axis.</p>
+<div class="figure align-center" id="id2">
+<img alt="../_images/msw.png" src="../_images/msw.png" />
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><a class="reference external" href="http://scitation.aip.org/content/aapt/journal/ajp/68/1/10.1119/1.19368">Neutrino physics</a> by Wick C. Haxton and Barry R. Holstein.</span></p>
+</div>
+</div>
+<div class="section" id="solar-neutrinos-and-msw-effect">
+<h2>5.1.2. Solar Neutrinos and MSW Effect<a class="headerlink" href="#solar-neutrinos-and-msw-effect" title="Permalink to this headline">¶</a></h2>
+<p>The MSW effect itself can be made clear using the example of neutrino oscillations in our sun. In fact it is responsible for the missing solar neutrino problem.</p>
+<div class="note admonition">
+<p class="first admonition-title">Small Mixing Angle Limit</p>
+<p>Just for fun.</p>
+<p>Take two flavour mixing as an example.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} = \begin{pmatrix}  \cos\theta &amp; \sin\theta \\ -\sin\theta  &amp; \cos\theta \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}\end{split}\]</div>
+<p>In the small mixing angle limit,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 &amp; \theta \\ -\theta  &amp; 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}\end{split}\]</div>
+<p>which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate <span class="math notranslate nohighlight">\(\nu_1\)</span>. By <span class="math notranslate nohighlight">\(\nu_1\)</span> we mean the state with energy <span class="math notranslate nohighlight">\(\frac{ \Delta m^2 }{4E}\)</span> in vacuum.</p>
+<p class="last">We need this intuitive picture to understand MSW effect. Electron neutrinos are almost identical to the low mass neutrino mass eigenstate. <strong>However, as we will see, due to the matter interaction, the electron flavour neutrino is corresponding to the HEAVY mass eigenstate.</strong> This is the key idea in physics of MSW effect.</p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../_images/clorine-detector-solar-neutrinos.jpg" src="../_images/clorine-detector-solar-neutrinos.jpg" />
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Solar neutrino problem: chlorine detector (Homestake experiment) results and theory predictions. SNU: 1 event for <span class="math notranslate nohighlight">\(10^{36}\)</span> target atoms per second. Source: <a class="reference external" href="https://ase.tufts.edu/cosmos/view_picture.asp?id=585">Kenneth R. Lang (2010)</a></span></p>
+</div>
+<div class="figure align-center" id="id4">
+<img alt="../_images/msw-and-density.png" src="../_images/msw-and-density.png" />
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">MSW effect of solar neutrinos. This figure is adapted from Smirnov 2003.</span></p>
+</div>
+<p>Hamiltonian with matter effect is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H} = \frac{\lambda(x) - \omega_{\mathrm v} \cos 2\theta_{\mathrm v}}{2} \boldsymbol{\sigma_3} + \frac{ \omega_{\mathrm v} \sin 2\theta_{\mathrm v}}{2} \boldsymbol{\sigma_1}\]</div>
+<p>and new basis is defined</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\ket{\nu_{\mathrm{e}}} \\
+\ket{\nu_{\mu}}
+\end{pmatrix} =
+\begin{pmatrix}
+\cos\theta_{\mathrm m} &amp; \sin\theta_{\mathrm m} \\
+-\sin\theta_{\mathrm m} &amp; \cos\theta_{\mathrm m}
+\end{pmatrix}\begin{pmatrix}
+\ket{\nu_{\mathrm{L}}} \\
+\ket{\nu_{\mathrm{H}}}.
+\end{pmatrix}\end{split}\]</div>
+<p>Now we have two states in this matter basis, the heavy state and the light state. When we talk about adabatic propagation, we mean the system doesn’t jump between these heave and light states.</p>
+<p>In the figure, we have dense matter on the left while the matter desnity approaching vacuum on the right. Upper bar means the probability of finding the system to be in heavy state and the lower bar means in light state. As the matter profile doesn’t change too fast, the system undergoes adiabatic propagation and the length of the bars doesn’t change. For example, if the system starts with completely heavy state , it will always remain on heavy state.</p>
+<p>Since almost all neutrinos produced in the sun are electron neutrinos, and electron flavor neutrinos experience a big potential, electron flavor almost means heavy state. So we have the system starts with a state that is mostly heavy state and it remains this way. However, during the propagation, heavy state is going to have less electron flavor until some point, we have equal mixing which is MSW resonance. As it approaches vacuum, we have only about 1/3 of the probability to find the neutrinos to be on electron flavor state.</p>
+<p>If we discuss more about this phenomenon, we have situations such as not so large density.</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/msw_and_density1.png" src="../_images/msw_and_density1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">MSW conversion for different matter profiles. Smirnov 2003.</span></p>
+</div>
+</div>
+<div class="section" id="visualizing-the-solar-neutrino-flavor-oscillations">
+<h2>5.1.3. Visualizing the Solar Neutrino Flavor Oscillations<a class="headerlink" href="#visualizing-the-solar-neutrino-flavor-oscillations" title="Permalink to this headline">¶</a></h2>
+<p>Applying the flavor isospin method (<a class="reference internal" href="../pictures/flavor-isospin.html#neutrino-flavor-isospin"><span class="std std-ref">Neutrino Flavour Isospin</span></a>), we can visualize the flavor conversions.</p>
+<a class="reference internal image-reference" href="../_images/matter-effect-large-density.png"><img alt="../_images/matter-effect-large-density.png" src="../_images/matter-effect-large-density.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../_images/matter-effect-adiabatic.png"><img alt="../_images/matter-effect-adiabatic.png" src="../_images/matter-effect-adiabatic.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../_images/matter-effect-adiabatic-3.png"><img alt="../_images/matter-effect-adiabatic-3.png" src="../_images/matter-effect-adiabatic-3.png" style="width: 32%;" /></a>
+</div>
+<div class="section" id="numerical-results">
+<h2>5.1.4. Numerical Results<a class="headerlink" href="#numerical-results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="flavor-oscillation">
+<h3>5.1.4.1. 2 Flavor Oscillation<a class="headerlink" href="#flavor-oscillation" title="Permalink to this headline">¶</a></h3>
+<p>The equation of motion in flavor basis is</p>
+<div class="math notranslate nohighlight">
+\[i\partial_x \Psi_{mf}(x) = \mathbf{H_{mf}} \Psi_{mf}(x)\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H_{mf}} =  \left(  \frac{\Delta}{2} -  \frac{\omega}{2} \cos 2\theta_v  \right) \boldsymbol{\sigma_3} + \frac{\omega}{2} \sin 2\theta_v \boldsymbol{\sigma_1}.\]</div>
+<p>Writing down the dimensionless equation, we have</p>
+<div class="math notranslate nohighlight">
+\[i \partial_{\hat x} \Psi_{mf} = \frac{R_S \omega}{2} ( (\hat\Delta - \cos 2\theta_v ) \boldsymbol{\sigma_3} + \sin 2\theta_v \boldsymbol{\sigma_1} )  \Psi_{mf} .\]</div>
+<p>As for the data of the sun I use a simple exponential distribution. The data is also from the paper by Bahcall. The model using just exponential is not accurate however it is enough to make the point in MSW resonance. So I choose a solar model in which the core density is <span class="math notranslate nohighlight">\(n(0) = 10^{-13}\mathrm{GeV}^{3}\)</span>. The distribution is</p>
+<div class="math notranslate nohighlight">
+\[n =  10^{-13 - 4.3\hat x} \mathrm{GeV}^{3}.\]</div>
+<p>The numerical results can be obtains by plugging this density profile into the differential equation solver.</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/numericalMSW-model-3.png" src="../_images/numericalMSW-model-3.png" />
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Numerical results for electron flavor neutrino probability and the other flavor neutrino probability when the electron density profile is <span class="math notranslate nohighlight">\(10^{-14 - 4.3\hat x} \mathrm{GeV}^{3}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id7">
+<img alt="../_images/numericalMSW-model-2flavor-minus13-1.png" src="../_images/numericalMSW-model-2flavor-minus13-1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Number density profile <span class="math notranslate nohighlight">\(n(\hat x) =  10^{-13 - 4.3\hat x}\mathrm{GeV^{3}}\)</span>.</span></p>
+</div>
+<p>Since we can easily predict the survival probability using simple theory. Here are some comparision. The following figures are for matter profile <span class="math notranslate nohighlight">\(10^{-13-4.3\hat x}\mathrm{GeV^3}\)</span> and vacuum oscillation frequency <span class="math notranslate nohighlight">\(\omega = 10^{-20} \mathrm{GeV}, 10^{-19} \mathrm{GeV},10^{-18} \mathrm{GeV},10^{-17} \mathrm{GeV}\)</span> respectively. As we can see that in this two flavor special case, the problem doesn’t dependent on energy and mass difference independently but depends only on <span class="math notranslate nohighlight">\(\omega=\frac{\Delta m^2}{2E}\)</span>. If we choose <span class="math notranslate nohighlight">\(\Delta m^2=7.5\times 10^{-5}\mathrm{eV^2}\)</span>, the four figures are corresponding to energies <span class="math notranslate nohighlight">\(7.5\mathrm{MeV},0.75\mathrm{MeV},7.5\times 10^{-2}\mathrm{MeV},7.5\times 10^{-3}\mathrm{MeV}\)</span>.</p>
+<div class="figure align-center" id="id8">
+<img alt="../_images/compThNu13-1.png" src="../_images/compThNu13-1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">The grey line is theoretical survival probability at <span class="math notranslate nohighlight">\(\hat x = 1\)</span>. In this calculation the vacuum oscillation frequency is set to <span class="math notranslate nohighlight">\(\omega = 10^{-20} \mathrm{GeV}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id9">
+<img alt="../_images/compThNu13-2.png" src="../_images/compThNu13-2.png" />
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">The grey line is theoretical survival probability at <span class="math notranslate nohighlight">\(\hat x = 1\)</span>. In this calculation the vacuum oscillation frequency is set to <span class="math notranslate nohighlight">\(\omega = 10^{-19} \mathrm{GeV}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id10">
+<img alt="../_images/compThNu13-3.png" src="../_images/compThNu13-3.png" />
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">The grey line is theoretical survival probability at <span class="math notranslate nohighlight">\(\hat x = 1\)</span>. In this calculation the vacuum oscillation frequency is set to <span class="math notranslate nohighlight">\(\omega = 10^{-18} \mathrm{GeV}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id11">
+<img alt="../_images/compThNu13-4.png" src="../_images/compThNu13-4.png" />
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">The grey line is theoretical survival probability at <span class="math notranslate nohighlight">\(\hat x = 1\)</span>. In this calculation the vacuum oscillation frequency is set to <span class="math notranslate nohighlight">\(\omega = 10^{-17} \mathrm{GeV}\)</span>.</span></p>
+</div>
+</div>
+<div class="section" id="three-flavor-oscillations">
+<h3>5.1.4.2. Three flavor Oscillations<a class="headerlink" href="#three-flavor-oscillations" title="Permalink to this headline">¶</a></h3>
+<p>Vacuum part of the Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H_{mvv}} = \frac{1}{2E} \begin{pmatrix}
+m_1^2 &amp; 0 &amp; 0 \\
+0 &amp; m_2^2 &amp; 0 \\
+0 &amp; 0 &amp; m_3^2
+\end{pmatrix}.\end{split}\]</div>
+<p>The matter interaction in flavor basis is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{V_{mf}} = \sqrt{2}G_F n \mathrm{diag}{1,0,0}.\]</div>
+<p>Thus to work in vacuum mass eigenstates, we need a transformation</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{V_{mv}} = \mathbf{U^{-1}}\mathbf{V_{mf}} \mathbf{U}.\]</div>
+<p>Then the Hamiltonian becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H_{m}} = \begin{pmatrix}
+\frac{m_1^2}{2E} + \Delta U_{e1}^2 &amp; \Delta U_{e1} U_{e2} &amp; \Delta U_{e1} U_{e3} \\
+\Delta U_{e2} U_{e1} &amp; \frac{m_2^2}{2E} + \Delta U_{e2}^2 &amp; \Delta U_{e2} U_{e3} \\
+\Delta U_{e3} U_{e1} &amp; \Delta U_{e3} U_{e2} &amp; \frac{m_3^2}{2E} + \Delta U_{e3}^2
+\end{pmatrix}\end{split}\]</div>
+<p>Trace of this Hamiltonian is <span class="math notranslate nohighlight">\(\mathrm{Tr}(\mathbf{H_m}) = \frac{m_1^2+m_2^2+m_3^2}{2E}+\Delta\)</span>. To find the traceless part, we can use the relation <a class="reference internal" href="#ohlsson2000" id="id1">[ohlsson2000]</a></p>
+<div class="math notranslate nohighlight">
+\[M = M_{traceless}+ \frac{1}{N} \mathrm{Tr}(M) I,\]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the rank.</p>
+<p>The traceless part of Hamiltonian becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{H_{m}} = \begin{pmatrix}
+\Delta U_{e1}^2 - \frac{1}{3}\Delta + \frac{1}{3}(\frac{m_1^2-m_2^2 + m_1^2-m_3^2}{2E}) &amp; \Delta U_{e1}U_{e2} &amp; \Delta U_{e1} U_{e3} \\
+\Delta U_{e2} U_{e1} &amp; \Delta U_{e2}^2 -\frac{1}{3}\Delta + \frac{1}{3}\frac{m_2^2 - m_1^2+m_2^2-m_3^2}{2E} &amp; \Delta U_{e2}U_{e3} \\
+\Delta U_{e1} U_{e3} &amp; \Delta U_{e2} U_{e3} &amp; \Delta U_{e3}^2 -\frac{1}{3} \Delta + \frac{1}{3} \frac{m_3^2 - m_1^2 + m_3^2-m_2^2 }{2E}
+\end{pmatrix}.\end{split}\]</div>
+<p>Define the following quantities where only two of them are linearly independent</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Delta m_{12}^2 &amp; = m_2^2 - m_1^2 \\
+\Delta m_{23}^2 &amp; = m_3^2 - m_2^2 \\
+\Delta m_{13}^2 &amp; = m_3^2 - m_1^2.\end{split}\]</div>
+<p>We define an energy scale related to the radius of the sun</p>
+<div class="math notranslate nohighlight">
+\[\epsilon_S = \frac{1}{R_S}.\]</div>
+<p>The EoM can be written in a dimensionless manner,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_{\hat x} \Psi_{m} =  \begin{pmatrix}
+\tilde\Delta U_{e1}^2 - \frac{1}{3}\tilde\Delta + \frac{1}{3}(\frac{\Delta m_{12}^2 + \Delta m_{13}^2}{2E\epsilon_S}) &amp; \tilde\Delta U_{e1}U_{e2} &amp; \tilde\Delta U_{e1} U_{e3} \\
+\tilde\Delta U_{e2} U_{e1} &amp; \tilde\Delta U_{e2}^2 -\frac{1}{3}\tilde\Delta + \frac{1}{3}\frac{\Delta m_{12}^2 + \Delta m_{23}^2}{2E\epsilon_S} &amp; \tilde\Delta U_{e2}U_{e3} \\
+\tilde\Delta U_{e1} U_{e3} &amp; \tilde\Delta U_{e2} U_{e3} &amp; \tilde\Delta U_{e3}^2 -\frac{1}{3} \tilde\Delta + \frac{1}{3} \frac{\Delta m_{13}^2 + \Delta m_{23}^2 }{2E\epsilon_S}
+\end{pmatrix}\Psi_m ,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tilde\Delta = \Delta/\epsilon_S\)</span>.</p>
+<p>The parameters for this calculation in units of <span class="math notranslate nohighlight">\(GeV^{\mathrm{some power}}\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}n(x) &amp;= 10^{-12 - 4.3 x} \\
+\epsilon_S &amp;= 10^{-24}\\
+\tilde\Delta(x) &amp;= \sqrt{2} G_F n(x)/\epsilon_S\\
+\Delta m _ {12}^2 &amp;= 7.6\times 10^{-5}\times 10^{-18}\\
+\Delta m _ {13}^2 &amp;= 2.3\times 10^{-3}\times 10^{-18}\\
+\Delta m _ {23}^2 &amp;= \Delta m _ {13}^2 - \Delta m _ {12}^2\\
+E &amp;= 10^{-3}\end{split}\]</div>
+<p>For these parameters there is only resonance for <span class="math notranslate nohighlight">\(\Delta m_{13}^2+\Delta m_{23}^2\)</span>.</p>
+<p>A quick check over the different energy scales.</p>
+<ol class="arabic">
+<li><p class="first">Vacuum energy scales in normal hierarchy</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\omega_{12}&amp;= \frac{\Delta m_{12}^2}{2E} = 3.8\times 10^{-20}\mathrm{GeV}\\
+\omega_{13}&amp;= \frac{\Delta m_{13}^2}{2E} = 1.7\times 10^{-18}\mathrm{GeV}\\
+\omega_{23}&amp;= \frac{\Delta m_{23}^2}{2E} \approx \omega_{13}\end{split}\]</div>
+</li>
+<li><p class="first">Matter related scale for density profile <span class="math notranslate nohighlight">\(10^{-14-4.3\hat x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\Delta_1 = 1.6\times 10^{-19-4.3\hat x}\in [1.6\times 10^{-23.3},1.6\times 10^{-19}]\]</div>
+</li>
+<li><p class="first">Matter related scale for density profile <span class="math notranslate nohighlight">\(10^{-13-4.3\hat x}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\Delta_1 = 1.6\times 10^{-18-4.3\hat x}\in [1.6\times 10^{-22.3},1.6\times 10^{-18}]\]</div>
+</li>
+</ol>
+<div class="figure align-center" id="id12">
+<img alt="../_images/numericalMSW3Flavor-normalization.png" src="../_images/numericalMSW3Flavor-normalization.png" />
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Normalization factor as a function of distance.</span></p>
+</div>
+<div class="figure align-center" id="id13">
+<img alt="../_images/numericalMSW3Flavor-probabilities.png" src="../_images/numericalMSW3Flavor-probabilities.png" />
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Probability for each flavor of neutrinos.</span></p>
+</div>
+<p>Applying a number density function <span class="math notranslate nohighlight">\(n(x) = 10^{-13 - 4.3 x}\)</span> to the system, the small scale oscillations are revived,</p>
+<div class="figure align-center" id="id14">
+<img alt="../_images/numericalMSW3Flavor-2-norm.png" src="../_images/numericalMSW3Flavor-2-norm.png" />
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Normalization of the states for numerical 3 flavor oscillation in the sun with density profile <span class="math notranslate nohighlight">\(10^{-13 - 4.3 x}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id15">
+<img alt="../_images/numericalMSW3Flavor-2-probability.png" src="../_images/numericalMSW3Flavor-2-probability.png" />
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Numerical results for 3 flavor oscillation in the sun with density profile <span class="math notranslate nohighlight">\(10^{-13 - 4.3 x}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id16">
+<img alt="../_images/numericalMSW3Flavor-minus13-Inst-Eigen-Energies.png" src="../_images/numericalMSW3Flavor-minus13-Inst-Eigen-Energies.png" />
+<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Eigenenergies for density profile <span class="math notranslate nohighlight">\(10^{-13 - 4.3 x}\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id17">
+<img alt="../_images/numericalMSW3Flavor-vac-eigen-prob.png" src="../_images/numericalMSW3Flavor-vac-eigen-prob.png" />
+<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">Survival probabilities for different vacuum mass eigenstates for 3 flavor oscillation in the sun with density profile <span class="math notranslate nohighlight">\(10^{-13 - 4.3 x}\)</span>.</span></p>
+</div>
+<p>An interesting notion is the survival probability for the instantaneous eigenstates.</p>
+<div class="figure align-center" id="id18">
+<img alt="../_images/instanEigenstetes-minus13-Grid.png" src="../_images/instanEigenstetes-minus13-Grid.png" />
+<p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">Probability for the instantaneous eigenstates for matter profile <span class="math notranslate nohighlight">\(10^{-13 - 4.3 x}\)</span>.</span></p>
+</div>
+<p>Lower matter density will have less suppression on vacuum oscillations.</p>
+<div class="figure align-center" id="id19">
+<img alt="../_images/numericalMSW3Flavor-minus14matter.png" src="../_images/numericalMSW3Flavor-minus14matter.png" />
+<p class="caption"><span class="caption-number">Fig. 5.18 </span><span class="caption-text">Numerical results for 3 flavor oscillation in the sun with density profile <span class="math notranslate nohighlight">\(10^{-14 - 4.3 x}\)</span>.</span></p>
+</div>
+<table class="docutils citation" frame="void" id="ohlsson2000" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[ohlsson2000]</a></td><td>Ohlsson, T., &amp; Snellman, H. (1999). Three flavor neutrino oscillations in matter, 2768(2000), 25. doi:10.1063/1.533270</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ternary-diagram">
+<h3>5.1.4.3. Ternary Diagram<a class="headerlink" href="#ternary-diagram" title="Permalink to this headline">¶</a></h3>
+<p>High matter density suppresses the vacuum oscillations which is clearly shown on a ternary diagram.</p>
+<div class="figure align-center" id="id20">
+<img alt="../_images/mass-1.png" src="../_images/mass-1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.19 </span><span class="caption-text">Ternary diagram for MSW effect shows that the vacuum oscillations in this case is suppressed. Comparing this with the survival probability, the survival probability for electron neutrino drops to a value and the rapid oscillations start to show up. The drop is the movement in the ternary diagram from the right-bottom cornor to the tau neutrino axis. These rapid oscillations corresponds to the T-shaped tip at the other end of the line.</span></p>
+</div>
+<div class="figure align-center" id="id21">
+<img alt="../_images/mass-1-scatter.png" src="../_images/mass-1-scatter.png" />
+<p class="caption"><span class="caption-number">Fig. 5.20 </span><span class="caption-text">Ternary diagram for MSW effect with homogeneously descretized position <span class="math notranslate nohighlight">\(x\)</span> with matter profile <span class="math notranslate nohighlight">\(10^{-13-4.3x}\mathrm{GeV^3}\)</span>. We can see clearly that the system stays on the two ends to the line for a longer time that in the middle where the transition happens very quickly. This can also be seen in the survival probability plot.</span></p>
+</div>
+<div class="figure align-center" id="id22">
+<img alt="../_images/matter-inst-eigen-e-1.png" src="../_images/matter-inst-eigen-e-1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.21 </span><span class="caption-text">Ternary diagram for instantaneous eigenstates with matter profile <span class="math notranslate nohighlight">\(10^{-13-4.3x}\mathrm{GeV^3}\)</span>. The system starts from almost the second instantaneous state then moves along the state that <span class="math notranslate nohighlight">\(\nu_1=0\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id23">
+<img alt="../_images/matter-inverted-1.png" src="../_images/matter-inverted-1.png" />
+<p class="caption"><span class="caption-number">Fig. 5.22 </span><span class="caption-text">Ternary diagram for MSW effect with inverted hierarchy <span class="math notranslate nohighlight">\(\Delta m_{23} = m_3^2 - m_2^2&lt;0\)</span>. The shape changes a lot since the frequencies changes a lot.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="experiments">
+<h2>5.1.5. Experiments<a class="headerlink" href="#experiments" title="Permalink to this headline">¶</a></h2>
+<p>MSW effect is verified by serveral experiments, SNO, Borexino and many others.</p>
+<div class="figure align-center" id="id24">
+<img alt="../_images/msw-experiments.png" src="../_images/msw-experiments.png" />
+<p class="caption"><span class="caption-number">Fig. 5.23 </span><span class="caption-text">Comparison of MSW prediction and experiments. The uncertainties of MSW prediction line are on on mixing angles. Figure from <a class="reference external" href="https://arxiv.org/abs/1208.5723">Haxton et al 2013</a>.</span></p>
+</div>
+</div>
+<div class="section" id="msw-triangle">
+<h2>5.1.6. MSW Triangle<a class="headerlink" href="#msw-triangle" title="Permalink to this headline">¶</a></h2>
+<p>Finally, one of the interesting things about MSW effect is that we could find a triangle where the survival probability is low.</p>
+<div class="figure align-center" id="id25">
+<img alt="../_images/msw-triangle.png" src="../_images/msw-triangle.png" />
+<p class="caption"><span class="caption-number">Fig. 5.24 </span><span class="caption-text">Code and illustration for the calculation can be downloaded on github <a class="reference external" href="https://github.com/NeuPhysics/codebase/blob/master/ipynb/matter/msw_triangle.ipynb">https://github.com/NeuPhysics/codebase/blob/master/ipynb/matter/msw_triangle.ipynb</a> .</span></p>
+</div>
+</div>
+<div class="section" id="refs-and-notes">
+<h2>5.1.7. Refs and Notes<a class="headerlink" href="#refs-and-notes" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Wolfenstein, L. (1978). Neutrino oscillations in matter. Physical Review D, 17(9), 2369–2374. doi:10.1103/PhysRevD.17.2369</li>
+<li>Wolfenstein, L. (1979). Neutrino oscillations and stellar collapse. Physical Review D, 20(10), 2634–2635. doi:10.1103/PhysRevD.20.2634</li>
+<li>Parke, S. J. (1986). Nonadiabatic Level Crossing in Resonant Neutrino Oscillations. Physical Review Letters, 57(10), 1275–1278. doi:10.1103/PhysRevLett.57.1275</li>
+<li>Bethe, H. A. (1986). Possible Explanation of the Solar-Neutrino Puzzle. Physical Review Letters, 56(12), 1305–1308. doi:10.1103/PhysRevLett.56.1305</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../_sources/matter/msw.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

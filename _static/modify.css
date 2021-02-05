@@ -1,0 +1,293 @@
+
+
+/* Remove the grey background image */
+
+html {
+background: none !important;
+}
+body {
+   padding-top: 0 !important;
+}
+
+a {
+   color: #a31 !important;
+}
+a:hover {
+   text-decoration: underline !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none !important;
+    color: #fff !important;
+    background-color: #a31 !important;
+}
+
+div.header {
+margin-bottom: 20px;
+}
+
+/* Top Nav color */
+
+div.topnav {
+border-bottom: solid 2px !important;
+border-top: solid 2px !important;
+padding: 10px !important;
+}
+
+/*  For messange box */
+
+div.note {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px lightgrey !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+
+.alert-info {
+color: black !important;
+background-color: white !important;
+}
+
+.alert {
+color: black !important;
+}
+
+div.important {
+border: solid 2px #4183c4 !important;
+border-radius: 4px !important;
+padding: 10px 15px 10px 50px !important;
+background: none !important;
+}
+
+div.warning {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px orange !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+div.hint {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px #37D612 !important;
+border-radius: 4px !important;
+}
+
+div.admonition-laws {
+padding: 10px 15px 10px 50px !important;
+border: solid 2px #28344C !important;
+border-radius: 4px !important;
+background: none !important;
+}
+
+div.math {
+text-align:center;
+}
+
+
+.figure>p.caption {
+color: grey;
+border-left: 5px solid grey;
+border-right: 5px solid grey;
+background: #E2DFDF;
+padding: 10px;
+margin: 10px;
+}
+
+
+
+/*.highlit {
+padding: 2px 4px;
+/*font-size: 90%;*/
+/*font-weight: bold;*/
+color: #4B648C;
+background-color: #EDFFF0;
+white-space: nowrap;
+border-radius: 4px;
+}
+*/
+
+/* Toggle Environment Begin */
+
+.toggle {
+    background: none repeat scroll 0 0 #e7f2fa;
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.toggle .admonition-title {
+    display: block;
+    clear: both;
+    cursor: pointer;
+    font-size: 110% !important;
+}
+
+.toggle .admonition-title:after {
+    content: " ▼";
+}
+
+.toggle .admonition-title.open:after {
+    content: " ▲";
+}
+
+.toggle p:last-child {
+    margin-bottom: 0;
+}
+
+/* Toggle Environment End */
+
+
+.strike {
+  text-decoration: line-through;
+}
+
+/* Highlight Text */
+
+.highlight-text {
+padding: 2px 4px;
+/*font-size: 90%;*/
+/*font-weight: bold;*/
+color: #4B648C;
+background-color: #c3ffcd;
+/*white-space: nowrap;*/
+border-radius: 4px;
+display: inline;
+}
+
+
+
+/* For disqus thread*/
+
+#disqus_thread {
+max-width:1170px;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#sourcelink {
+padding-top:15px;padding-bottom:15px;
+float:left;
+color:#777777;
+}
+#sourcelink>a {
+color:#777777;
+text-decoration:none;
+}
+
+.dropdown-menu {
+min-width: 260px !important;
+}
+
+
+/* Some tiny fix */
+.math {
+  text-align:center;
+}
+
+img.math {
+    width: inherit;
+}
+
+/* Toggle Environment Begin */
+
+.toggle {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #86c6f5;
+}
+
+.toggle .admonition-title {
+    display: block;
+    clear: both;
+    cursor: pointer;
+    font-size: 110% !important;
+}
+
+.toggle .admonition-title.open {
+    text-align: center;
+}
+
+.toggle .admonition-title:after {
+    content: " ▼";
+}
+
+.toggle .admonition-title.open:after {
+    content: " ▲";
+}
+
+.toggle p:last-child {
+    margin-bottom: 0;
+}
+
+/* Toggle Environment End */
+
+.sidebar-btn {
+   margin: 0.5em 0 0.5em 0;
+   background: none;
+   border: none;
+}
+
+
+
+/* Citation Table Styles BEGIN */
+
+.table.citation {
+   margin-top: 0.5em !important;
+   margin-bottom: 0.5em !important;
+   border-left: none !important;
+}
+.table>tbody>tr>td {
+   color: inherit;
+    border-top: none !important;
+}
+
+/* Citation Table Styles END */
+
+#sourcelink {
+margin-top: 19.5px;
+margin-bottom: 19.5px;
+margin-left:10px;
+/*padding-top:15px;
+padding-bottom:15px;*/
+float:left;
+color:#777777;
+}
+#sourcelink>a {
+color:#777777;
+text-decoration:none;
+}
+
+
+
+
+.caption {
+color: grey;
+border-left: 5px solid grey;
+border-right: 5px solid grey;
+background: #E2DFDF;
+padding: 10px;
+margin: 10px;
+}
+
+
+
+
+/*For sub menu*/
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+
+/* navbar search box */
+.navbar-right>div>input {
+max-width: 85px;
+}

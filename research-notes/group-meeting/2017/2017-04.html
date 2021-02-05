@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.5.1.2. 2017-04 Group Meeting &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.5.1.3. 2017-10 Group Meeting" href="2017-10.html" />
+    <link rel="prev" title="1.5.1.1. 2017-03 Group Meeting" href="2017-03.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.5.1.2. 2017-04 Group Meeting</a><ul>
+<li><a class="reference internal" href="#id1">1.5.1.2.1. 2017-04-13</a></li>
+<li><a class="reference internal" href="#id2">1.5.1.2.2. 2017-04-19</a><ul>
+<li><a class="reference internal" href="#some-discussion-on-scaling">1.5.1.2.2.1. Some Discussion on Scaling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3">1.5.1.2.3. 2017-04-22</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="2017-03.html" title="Previous Chapter: 1.5.1.1. 2017-03 Group Meeting"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.5.1.1. 2017...</span>
+    </a>
+  </li>
+  <li>
+    <a href="2017-10.html" title="Next Chapter: 1.5.1.3. 2017-10 Group Meeting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.5.1.3. 2017... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.5.1.2. 2017-04 Group Meeting</a><ul>
+<li><a class="reference internal" href="#id1">1.5.1.2.1. 2017-04-13</a></li>
+<li><a class="reference internal" href="#id2">1.5.1.2.2. 2017-04-19</a><ul>
+<li><a class="reference internal" href="#some-discussion-on-scaling">1.5.1.2.2.1. Some Discussion on Scaling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3">1.5.1.2.3. 2017-04-22</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="2017-03.html" title="Previous Chapter: 1.5.1.1. 2017-03 Group Meeting"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.5.1.1. 2017...</span>
+    </a>
+  </li>
+  <li>
+    <a href="2017-10.html" title="Next Chapter: 1.5.1.3. 2017-10 Group Meeting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.5.1.3. 2017... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../../_sources/research-notes/group-meeting/2017/2017-04.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="group-meeting">
+<h1>1.5.1.2. 2017-04 Group Meeting<a class="headerlink" href="#group-meeting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1.5.1.2.1. 2017-04-13<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Show the new dispersion relations as well as the <span class="math notranslate nohighlight">\(\omega(n)\)</span> plots.</li>
+<li>Crossing change the number of solutions for different n.</li>
+<li>Ask about how to identify the plus and minus modes before the calculation in the 2013 paper: Duan, H. (2013). Flavor oscillation modes in dense neutrino media. Physical Review D - Particles, Fields, Gravitation and Cosmology, 88(12), 1–7.</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>1.5.1.2.2. 2017-04-19<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The unstable points</li>
+</ol>
+<div class="section" id="some-discussion-on-scaling">
+<h3>1.5.1.2.2.1. Some Discussion on Scaling<a class="headerlink" href="#some-discussion-on-scaling" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="first admonition-title">Code</p>
+<p>The corresponding Mathematica code is:</p>
+<p class="last">codebase.git/mma/linear-stability/growth-in-fourier-modes.nb</p>
+</div>
+<div class="figure align-center" id="id6">
+<img alt="../../../_images/growth-in-fourier-modes-slope-as-time.png" src="../../../_images/growth-in-fourier-modes-slope-as-time.png" />
+<p class="caption"><span class="caption-number">Fig. 1.191 </span><span class="caption-text">Slope as a function of time. I tried log(-x) plot and it shows that -x decreases faster than exponential.</span></p>
+</div>
+<div class="figure align-center" id="id7">
+<img alt="../../../_images/growth-in-fourier-modes-logplot-of-log-slope-as-time.png" src="../../../_images/growth-in-fourier-modes-logplot-of-log-slope-as-time.png" />
+<p class="caption"><span class="caption-number">Fig. 1.192 </span><span class="caption-text">In the beginning -x is decreasing as exp(exp(-k x + b)). But it than will be faster than this expression.
+The caveat is that the calculation of slope is not that accurate when it approaches 0. So we actually should truncate it. As being said, it might be a good idea to treat it as exp(exp(-k x + b)). The red line is <span class="math notranslate nohighlight">\(1.48988 - 0.435439 x\)</span>.</span></p>
+</div>
+<p>This means that the time evolution of slope is quite complicated. But we should compare the slope at the same time for different parameters. For each time snapshot we should be able to guess the function of parameters that describes the slope.</p>
+<p>As a very preliminary result, scale as I defined, changes how fast the perturbation is propagated into higher moments. So does the off diagonal element.</p>
+<p>meh</p>
+<p>The eigenvalues of this pseudo Hamiltonian</p>
+<div class="figure align-center" id="id8">
+<img alt="../../../_images/eigenvectors-of-pseudo-hamiltonian.png" src="../../../_images/eigenvectors-of-pseudo-hamiltonian.png" />
+<p class="caption"><span class="caption-number">Fig. 1.193 </span><span class="caption-text">Eigenvector components for different eigenvectors of this pseudo Hamiltonian. For mat[dim,1,1,1]</span></p>
+</div>
+<div class="figure align-center" id="id9">
+<img alt="../../../_images/eigenvalues-of-pseudo-hamiltonian.png" src="../../../_images/eigenvalues-of-pseudo-hamiltonian.png" />
+<p class="caption"><span class="caption-number">Fig. 1.194 </span><span class="caption-text">Eigenvalues of this pseudo Hamiltonian. For mat[dim,1,1,1]</span></p>
+</div>
+<p>The key is actually the eigenvectors. If we assume each of the modes are plane waves, the eigenvalues are the ones that determines how fast the grow is while the eigenvectors tells us which element will grow. As I increase the scale, the eigenvectors seems to be more clean, i.e., fewer but hierarchial excited elements.</p>
+<div class="figure align-center" id="id10">
+<img alt="../../../_images/eigenvalues-of-pseudo-hamiltonian-scale-4.png" src="../../../_images/eigenvalues-of-pseudo-hamiltonian-scale-4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.195 </span><span class="caption-text">Eigenvalues for mat[dim,4,1,1]. Notice that for the 20th and 21st eigenvalues are close to 0.</span></p>
+</div>
+<div class="figure align-center" id="id11">
+<img alt="../../../_images/eigenvectors-of-pseudo-hamiltonian-scale-4.png" src="../../../_images/eigenvectors-of-pseudo-hamiltonian-scale-4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.196 </span><span class="caption-text">Eigenvector components for different eigenvectors of this pseudo Hamiltonian. For mat[dim,4,1,1].</span></p>
+</div>
+<p>Decreasing the off diagonal elements have similar effect on eigenvectors which explains the similar structure of fourier modes for different off diagonal elements. However, they should have different growth rate as a function of time.</p>
+<p>More explicitly, we plot out the logplot of eigenvector elements and we will see the exponential behavior.</p>
+<div class="figure align-center" id="id12">
+<img alt="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-4.png" src="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.197 </span><span class="caption-text">LogPlot of <a class="reference external" href="mailto:Abs&#37;&#52;&#48;eigenvecotors">Abs<span>&#64;</span>eigenvecotors</a>. For mat[dim,4,1,1].</span></p>
+</div>
+<p>Just for reference, the positive values of eigenvectors also have this exp behavior.</p>
+<div class="figure align-center" id="id13">
+<img alt="../../../_images/eigenvectors-logplot-of-pseudo-hamiltonian-scale-4.png" src="../../../_images/eigenvectors-logplot-of-pseudo-hamiltonian-scale-4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.198 </span><span class="caption-text">LogPlot of positive elements of eigenvecotors. For mat[dim,4,1,1].</span></p>
+</div>
+<p>Do all the eigenvectors have the same slope?</p>
+<div class="figure align-center" id="id14">
+<img alt="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-1-cat.png" src="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-1-cat.png" />
+<p class="caption"><span class="caption-number">Fig. 1.199 </span><span class="caption-text">All 40 eigenvectors for mat[dim,1,1,1]. Kind of same absolute values of slope.</span></p>
+</div>
+<p>Qualitatively we can see why the exponantial behavior in Fourier modes through the eigenvectors.</p>
+<p>To guess an expression for it, I need to compare different scales.</p>
+<p>As reference, we plot mat[dim,1,1,1].</p>
+<div class="figure align-center" id="id15">
+<img alt="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-1.png" src="../../../_images/eigenvectors-absolute-values-logplot-of-pseudo-hamiltonian-scale-1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.200 </span><span class="caption-text">LogPlot of <a class="reference external" href="mailto:Abs&#37;&#52;&#48;eigenvecotors">Abs<span>&#64;</span>eigenvecotors</a>. For mat[dim,1,1,1].</span></p>
+</div>
+<p>Here is a plot that shows the slope of <span class="math notranslate nohighlight">\(\text{Log&#64;Abs&#64;Eigenvalues}\sim \text{Eigenvalue Element ID}\)</span>.</p>
+<div class="figure align-center" id="id16">
+<span id="slope-log-eigenvector-elements-vs-scale"></span><img alt="../../../_images/slope-log-eigenvector-elements-vs-scale.png" src="../../../_images/slope-log-eigenvector-elements-vs-scale.png" />
+<p class="caption"><span class="caption-number">Fig. 1.201 </span><span class="caption-text">Slope of eigenvector elements for different scales.</span></p>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Ratio of Scale and Off diagonal?</p>
+<p>Is the ratio of scale and off diagonal element responsible for the slope?</p>
+<div class="figure align-center" id="id17">
+<img alt="../../../_images/slope-log-eigenvector-elements-vs-scale-ratio-10.png" src="../../../_images/slope-log-eigenvector-elements-vs-scale-ratio-10.png" />
+<p class="caption"><span class="caption-number">Fig. 1.202 </span><span class="caption-text">The ratio of scales and off diagonal elements is roughly 10.</span></p>
+</div>
+<p>Or the plot with scale/off-diag = 1 to 10.</p>
+<div class="last figure align-center" id="id18">
+<img alt="../../../_images/slope-log-eigenvector-elements-vs-scale-ratio-1-to-10.png" src="../../../_images/slope-log-eigenvector-elements-vs-scale-ratio-1-to-10.png" />
+<p class="caption"><span class="caption-number">Fig. 1.203 </span><span class="caption-text">The ratio of scales and off diagonal elements is roughly from 1 to 10. It almost matches the result from the calculation for different scales.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>1.5.1.2.3. 2017-04-22<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>This is an update for the Fourier mode growth.</p>
+<p>I recalculated the eigenvectors using a Hamiltonian without random numbers so that the Hamiltonian matrix is defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{ij} =\begin{cases}
+od, &amp; i= j\pm 1\\
+scale * i, &amp; i=j
+\end{cases}.\end{split}\]</div>
+<p>What I found is that if <span class="math notranslate nohighlight">\(1/ratio = od/scale\)</span> is small, the slope is related to the ration through</p>
+<div class="math notranslate nohighlight">
+\[slope = k \ln (ratio) + b,\]</div>
+<p>or in other words,</p>
+<div class="math notranslate nohighlight">
+\[ratio = e^{( slope - b)/k }.\]</div>
+<p>In the calculations I did, <span class="math notranslate nohighlight">\(k\sim 1\)</span>.</p>
+<div class="figure align-center" id="id19">
+<img alt="../../../_images/fourier-mode-growth-slope-ratio-relation.png" src="../../../_images/fourier-mode-growth-slope-ratio-relation.png" />
+<p class="caption"><span class="caption-number">Fig. 1.204 </span><span class="caption-text">Slope vs Ratio</span></p>
+</div>
+<div class="figure align-center" id="id20">
+<img alt="../../../_images/fourier-mode-growth-slope-ratio-relation-scale-2.png" src="../../../_images/fourier-mode-growth-slope-ratio-relation-scale-2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.205 </span><span class="caption-text">Slope vs Ratio with scale = 2. The same as above thus the ratio is the key.</span></p>
+</div>
+<p>The dimension seems to change the interception.</p>
+<div class="figure align-center" id="id21">
+<img alt="../../../_images/fourier-mode-growth-slope-ratio-relation-dim-15.png" src="../../../_images/fourier-mode-growth-slope-ratio-relation-dim-15.png" />
+<p class="caption"><span class="caption-number">Fig. 1.206 </span><span class="caption-text">Slope vs Ratio with dimension = 15.</span></p>
+</div>
+<p>Change the dimension seems to only slightly change the slope increasing rate.</p>
+<div class="figure align-center" id="id22">
+<img alt="../../../_images/fourier-mode-growth-slope-ratio-relation-pentadiag.png" src="../../../_images/fourier-mode-growth-slope-ratio-relation-pentadiag.png" />
+<p class="caption"><span class="caption-number">Fig. 1.207 </span><span class="caption-text">Slope vs Ratio with pentadiag Hamiltonian.</span></p>
+</div>
+<p>Enough for these eigenvectors. To make a real connection with the time evolution or the long time limit of the time evolution, we need to find how the system evolves.</p>
+<p>The idea is that all Fourier modes are oscillations. In the beginning of oscillations, it is simply a linear growth in time since Taylor expansion of <span class="math notranslate nohighlight">\(e^{-i E t}\)</span> is <span class="math notranslate nohighlight">\(E t\)</span>.</p>
+<p>Given an initial condition <span class="math notranslate nohighlight">\(\psi(0)\)</span> with only nonzero in the middle element, we can expand it using the eigenvectors <span class="math notranslate nohighlight">\(\psi_i (0)\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\psi(0) = \sum_i A_i \psi_i (0).\]</div>
+<p>What I find is that the coefficients <span class="math notranslate nohighlight">\(A_i\)</span> is actually a exponential shape.</p>
+<div class="figure align-center" id="id23">
+<img alt="../../../_images/fourier-mode-growth-initial-condition-decomposed.png" src="../../../_images/fourier-mode-growth-initial-condition-decomposed.png" />
+<p class="caption"><span class="caption-number">Fig. 1.208 </span><span class="caption-text">logplot of coefficients <span class="math notranslate nohighlight">\(A_i\)</span>.</span></p>
+</div>
+<p>If I start from all 1’s as initial condition, the evolution won’t be of this wedge shape and it will oscillation.</p>
+<div class="figure align-center" id="id24">
+<img alt="../../../_images/fourier-modes-all-1-initial-time-evo.gif" src="../../../_images/fourier-modes-all-1-initial-time-evo.gif" />
+<p class="caption"><span class="caption-number">Fig. 1.209 </span><span class="caption-text">Animation of value of each components of wave function, with inital condition all 1’s.</span></p>
+</div>
+<p>The corresponding decomposition of intial condition is shown in <a href="#id4"><span class="problematic" id="id5">:numfig:`fourier-mode-growth-initial-all-1-decompose`</span></a>.</p>
+<div class="figure align-center" id="id25">
+<span id="fourier-mode-growth-initial-all-1-decompose"></span><img alt="../../../_images/fourier-mode-growth-initial-all-1-decompose.png" src="../../../_images/fourier-mode-growth-initial-all-1-decompose.png" />
+<p class="caption"><span class="caption-number">Fig. 1.210 </span><span class="caption-text">logplot of coefficients <span class="math notranslate nohighlight">\(A_i\)</span>.</span></p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../../_sources/research-notes/group-meeting/2017/2017-04.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.3.4. Halo Effect - Analytical Methods &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.3.5. Halo Effect - Two Beams" href="halo-effect-two-beams.html" />
+    <link rel="prev" title="1.3.3. Halo Effect in Line Model - Finite Difference" href="halo-effect-finite-difference-line-model.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.3.4. Halo Effect - Analytical Methods</a><ul>
+<li><a class="reference internal" href="#linear-stability">1.3.4.1. Linear Stability</a><ul>
+<li><a class="reference internal" href="#single-beam-both-start-with-electron-flavor">1.3.4.1.1. Single Beam Both Start with Electron Flavor</a></li>
+<li><a class="reference internal" href="#single-beam-undetermined-back-beam">1.3.4.1.2. Single Beam Undetermined Back Beam</a><ul>
+<li><a class="reference internal" href="#linear-regime-behavior">1.3.4.1.2.1. Linear Regime Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nonlocal-boundary-value-problem">1.3.4.2. Nonlocal Boundary Value Problem</a></li>
+<li><a class="reference internal" href="#references-and-notes">1.3.4.3. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="halo-effect-finite-difference-line-model.html" title="Previous Chapter: 1.3.3. Halo Effect in Line Model - Finite Difference"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3.3. Halo E...</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-two-beams.html" title="Next Chapter: 1.3.5. Halo Effect - Two Beams"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.5. Halo E... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.3.4. Halo Effect - Analytical Methods</a><ul>
+<li><a class="reference internal" href="#linear-stability">1.3.4.1. Linear Stability</a><ul>
+<li><a class="reference internal" href="#single-beam-both-start-with-electron-flavor">1.3.4.1.1. Single Beam Both Start with Electron Flavor</a></li>
+<li><a class="reference internal" href="#single-beam-undetermined-back-beam">1.3.4.1.2. Single Beam Undetermined Back Beam</a><ul>
+<li><a class="reference internal" href="#linear-regime-behavior">1.3.4.1.2.1. Linear Regime Behavior</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nonlocal-boundary-value-problem">1.3.4.2. Nonlocal Boundary Value Problem</a></li>
+<li><a class="reference internal" href="#references-and-notes">1.3.4.3. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="halo-effect-finite-difference-line-model.html" title="Previous Chapter: 1.3.3. Halo Effect in Line Model - Finite Difference"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3.3. Halo E...</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-two-beams.html" title="Next Chapter: 1.3.5. Halo Effect - Two Beams"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.5. Halo E... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/halo/halo-effect-analytical-methods.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="halo-effect-analytical-methods">
+<h1>1.3.4. Halo Effect - Analytical Methods<a class="headerlink" href="#halo-effect-analytical-methods" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="linear-stability">
+<h2>1.3.4.1. Linear Stability<a class="headerlink" href="#linear-stability" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-beam-both-start-with-electron-flavor">
+<h3>1.3.4.1.1. Single Beam Both Start with Electron Flavor<a class="headerlink" href="#single-beam-both-start-with-electron-flavor" title="Permalink to this headline">¶</a></h3>
+<p>We assume that both the forward and backward beams are starting from electron flavor.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho_F &amp;= \frac{1}{2}\begin{pmatrix}
+1 &amp; \epsilon_F \\
+\epsilon_F^* &amp; -1
+\end{pmatrix} \\
+\rho_B &amp;= \frac{1}{2}\begin{pmatrix}
+1 &amp; \epsilon_B \\
+\epsilon_B^* &amp; -1
+\end{pmatrix}.\end{split}\]</div>
+<p>The linearized equation of motion is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_z \begin{pmatrix}
+\epsilon_F \\
+\epsilon_B
+\end{pmatrix} = \begin{pmatrix}
+R \mu + \eta &amp; - R \mu \\
+\mu &amp; -(\mu+ \eta)
+\end{pmatrix} \begin{pmatrix}
+\epsilon_F \\
+\epsilon_B
+\end{pmatrix},\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the hierarchy and all quantities are scaled by <span class="math notranslate nohighlight">\(\omega_v\)</span>.</p>
+<p>We can solve the eigenvalues of this problem. To obtain complex solutions, we require <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, which translates to</p>
+<div class="math notranslate nohighlight">
+\[\mu_-&lt; \mu &lt;\mu_+,\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\mu_\pm = \frac{ -2 (1+R) \eta \pm 8 \sqrt{ R }  }{ (1-R)^2 }.\]</div>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/table-of-mu-values-for-instability.jpg" src="../../_images/table-of-mu-values-for-instability.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.182 </span><span class="caption-text">Table of {<span class="math notranslate nohighlight">\(\mu_{-}\)</span>, <span class="math notranslate nohighlight">\(\mu_{+}\)</span>}.</span></p>
+</div>
+<p>We plot out growth rate as a function of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span>, which shows that such so called instabilities only exist for normal hierarchy.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/growth-rate-mu-refl-nh.jpg" src="../../_images/growth-rate-mu-refl-nh.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.183 </span><span class="caption-text">For normal hierarchy. Vacuum mixing angle is set to 0.</span></p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/growth-rate-mu-refl-ih.jpg" src="../../_images/growth-rate-mu-refl-ih.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.184 </span><span class="caption-text">For inverted hierarchy. Vacuum mixing angle is set to 0.</span></p>
+</div>
+</div>
+<div class="section" id="single-beam-undetermined-back-beam">
+<h3>1.3.4.1.2. Single Beam Undetermined Back Beam<a class="headerlink" href="#single-beam-undetermined-back-beam" title="Permalink to this headline">¶</a></h3>
+<p>The equation of motion is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_z \rho_F &amp;= [ H_F, \rho_F ] \\
+i\partial_z \rho_B &amp;= [ H_B, \rho_B ] ,\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_F &amp;=  R  \mu \rho_B\\
+H_B &amp;= \mu \rho_F.\end{split}\]</div>
+<div class="warning admonition">
+<p class="first admonition-title">Conventions</p>
+<p class="last">The angle contribution is <span class="math notranslate nohighlight">\(1-\cos\theta=2\)</span>. We absorbe this factor into <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+</div>
+<p>As for the initial states, we can assume some general forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho_F &amp;=  \frac{1}{2} \begin{pmatrix}
+1 &amp; \epsilon_F \\
+\epsilon_F^* &amp; -1
+\end{pmatrix}\\
+\rho_B &amp;=  \frac{1}{2} \begin{pmatrix}
+a &amp; \epsilon_B \\
+\epsilon_B^* &amp; -a
+\end{pmatrix}.\end{split}\]</div>
+<p>The forward beam start from neutrino flavors. However, the state of the backward beam is to be determined. The exact state is not necessary since we are interested in linear stability.</p>
+<p>We linearize the equation of motion by keeping only first order of the small off-diagonal elements.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_z \begin{pmatrix}
+1 &amp; \epsilon_F \\
+\epsilon_F^* &amp; -1
+\end{pmatrix} &amp;= \frac{ R \mu}{2} \begin{pmatrix}
+0 &amp; 2(a \epsilon_F -\epsilon_B) \\
+c.c. &amp; 0
+\end{pmatrix} + \frac{R\mu}{2} \begin{pmatrix}
+0 &amp; 2(a\epsilon_F - b) \\
+c.c. &amp; 0
+\end{pmatrix} \\
+- i\partial_z \begin{pmatrix}
+1 &amp; \epsilon_B \\
+\epsilon_B^* &amp; -1
+\end{pmatrix} &amp;= -\frac{\mu}{2} \begin{pmatrix}
+0 &amp; 2(a \epsilon_F -\epsilon_B) \\
+c.c. &amp; 0
+\end{pmatrix} - \frac{\mu}{2} \begin{pmatrix}
+0 &amp; 2 (a\epsilon_F - b) \\
+c.c. &amp; 0
+\end{pmatrix}\end{split}\]</div>
+<p>The system of equations can be easily solved and we found that the exponentials are <span class="math notranslate nohighlight">\(e^{i(2a R -1) \mu z}\)</span>. No exponent growth is possible.</p>
+<div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">eqnF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">epsF</span><span class="p">[</span><span class="n">z</span><span class="p">],</span><span class="w"> </span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">epsF</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">epsB</span><span class="p">[</span><span class="n">z</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">epsF</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="n">eqnB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">epsB</span><span class="p">[</span><span class="n">z</span><span class="p">],</span><span class="w"> </span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">epsF</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">epsB</span><span class="p">[</span><span class="n">z</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mu</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="n">epsF</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="n">DSolve</span><span class="p">[{</span><span class="n">eqnF</span><span class="p">,</span><span class="n">eqnB</span><span class="p">},{</span><span class="n">epsF</span><span class="p">,</span><span class="n">epsB</span><span class="p">},</span><span class="n">z</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">The Two Beams have Synchronized Evolution</p>
+<p>Notice that the two equations can be combined to</p>
+<div class="math notranslate nohighlight">
+\[\partial_z  \epsilon_F = \partial_z ( R \epsilon_B ).\]</div>
+<p class="last">This result indicates that the initial development of the forward and backward beams are synchronized.</p>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">Dealing with Inhomogenous Differential Equations</p>
+<ol class="last arabic simple">
+<li>The solution to inhomogenous systems is the general solution plus the particular solution. At least we can know that if the general solution contains exponential growth terms, the final solution should also contain exponential growth terms, if the particular solution doesn’t cancel them.</li>
+<li>Floquet theory for periodic matrix systems might be useful.</li>
+</ol>
+</div>
+<div class="section" id="linear-regime-behavior">
+<h4>1.3.4.1.2.1. Linear Regime Behavior<a class="headerlink" href="#linear-regime-behavior" title="Permalink to this headline">¶</a></h4>
+<p>The solutions to such a problem shows that we always obtain decreasing modes. It’s not easy to comphrend. But the linear could be solved exactly.</p>
+<p>In linear regime, we define the density matrices for forward and backward beams to be</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho_F &amp;= \frac{1}{2} \begin{pmatrix}
+1 &amp; \epsilon_F \\
+\epsilon_B^* &amp; -1
+\end{pmatrix} \\
+\rho_B &amp;= \frac{1}{2} \begin{pmatrix}
+1 &amp; \epsilon_B \\
+\epsilon_B^* &amp; -1
+\end{pmatrix}.\end{split}\]</div>
+<p>The Hamiltonians are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_F &amp;= H_v + \mu \rho_F \\
+H_B &amp;= H_v + R \mu \rho_B.\end{split}\]</div>
+<p>We will investigate the instability for zero mixing angle.</p>
+<p>The linearized equation of motion can be simplified to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_z \begin{pmatrix}
+\epsilon_F \\
+\epsilon_B
+\end{pmatrix} = \begin{pmatrix}
+-\omega_v + R \xi \mu &amp; - R \xi \mu \\
+\xi \mu &amp; \omega_v - \xi \mu
+\end{pmatrix} \begin{pmatrix}
+\epsilon_F \\
+\epsilon_B
+\end{pmatrix}.\end{split}\]</div>
+<p>This equation can be easily solved. The eigenvalues are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Omega_+ &amp;= \frac{1}{2} ( (R-1)\xi\mu + \sqrt{\Delta} ) \\
+\Omega_- &amp;= \frac{1}{2} ( (R-1)\xi\mu - \sqrt{\Delta} ),\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\Delta = (1-R)^2 \mu^2 \xi^2 - 4\mu\xi \omega_v (1+R) + 4\omega_v^2.\]</div>
+<p>The corresponding eigenvectors are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_+ &amp;=\begin{pmatrix}
+\frac{ -2\omega_v + \xi \mu (1+R) + \sqrt{\Delta} }{2\xi\mu} \\
+1
+\end{pmatrix} \\
+V_- &amp;=\begin{pmatrix}
+\frac{ -2\omega_v + \xi \mu (1+R) - \sqrt{\Delta} }{2\xi\mu} \\
+1
+\end{pmatrix}.\end{split}\]</div>
+<p>The general solution to the equation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\epsilon_F(z) \\
+\epsilon_B(z)
+\end{pmatrix} = C_+ V_+ e^{-i \Omega_+ z} +  C_- V_- e^{-i \Omega_- z}.\end{split}\]</div>
+<p><strong>The special property about this reflection prolem is that the density matrices for the forward and backward beams should be the same at the reflection point,</strong> say <span class="math notranslate nohighlight">\(L\)</span>. With such a simple relation, we can find the relations between <span class="math notranslate nohighlight">\(C_\pm\)</span> by setting <span class="math notranslate nohighlight">\(\epsilon_F(L)=\epsilon_B(L)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{C_+}{C_-} = e^{-i(\Omega_- -\Omega_+)L} \frac{ \sqrt{\Delta} +  2\omega_v + \mu \xi (1-R) }{\sqrt{\Delta} -  2\omega_v - \mu \xi (1-R)}.\]</div>
+<p>The solution to be problem can be simplified,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\epsilon_F(z) \\
+\epsilon_B(z)
+\end{pmatrix} = C_- e^{-i\Omega_- L} \left( \frac{ \sqrt{\Delta} +  2\omega_v + \mu \xi (1-R) }{\sqrt{\Delta} -  2\omega_v - \mu \xi (1-R)} V_+ e^{-i \Omega_+ (z-L)} +  V_- e^{-i \Omega_- (z-L)} \right).\end{split}\]</div>
+<p>We are interested in the absolute values of each elements so that the overall factors can be neglected. The forward beam evolution is obtained by taking the absolute value of <span class="math notranslate nohighlight">\(\epsilon_F\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\left\vert \epsilon_F \right\vert \propto \lvert (2\omega_v +\xi\mu(1-R) +i \delta ) ( -2\omega_v + \xi\mu(1+R) + i \delta ) e^{delta(z-L)} + ( -2\omega_v - \xi\mu(1-R) +i \delta ) ( -2\omega_v + \xi\mu(1+R) - i \delta ) e^{-delta(z-L)} \rvert,\]</div>
+<p>in which <span class="math notranslate nohighlight">\(\sqrt{\Delta}\)</span> is replaced by <span class="math notranslate nohighlight">\(i \delta\)</span>.</p>
+<p>Collecting terms, we could verify that it has the form</p>
+<div class="math notranslate nohighlight">
+\[\left\vert \epsilon_F \right\vert \propto A + B \cosh( 2\delta(L-z) ).\]</div>
+<p>The only <span class="math notranslate nohighlight">\(z\)</span> dependent term is cosh( 2delta(L-z) ), which is decreasing within <span class="math notranslate nohighlight">\([0,L]\)</span> and is increasing in <span class="math notranslate nohighlight">\([L,2L]\)</span>. The slope at <span class="math notranslate nohighlight">\(z=L\)</span> is 0.</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/cosh-function.png" src="../../_images/cosh-function.png" />
+<p class="caption"><span class="caption-number">Fig. 1.185 </span><span class="caption-text"><span class="math notranslate nohighlight">\(\cosh(2\delta(z-L))\)</span> with <span class="math notranslate nohighlight">\(\delta=1\)</span>.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nonlocal-boundary-value-problem">
+<h2>1.3.4.2. Nonlocal Boundary Value Problem<a class="headerlink" href="#nonlocal-boundary-value-problem" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition" id="bvp-nonlocal-bc-references">
+<p class="first admonition-title">Some References</p>
+<ol class="last arabic simple">
+<li>Springer Open has a <a class="reference external" href="https://www.springeropen.com/collections/nbvp">curated list of NBVP</a>. <a class="reference external" href="https://www.springeropen.com/collections/denfc">DENFC</a>.</li>
+<li>To solve coupled systems with nonlocal boundary conditions: Goodrich, C. S. (2017). <a class="reference external" href="https://doi.org/10.1016/j.aml.2016.11.011">Pointwise conditions in discrete boundary value problems with nonlocal boundary conditions</a>. Applied Mathematics Letters, 67, 7–15.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="references-and-notes">
+<h2>1.3.4.3. References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/halo/halo-effect-analytical-methods.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

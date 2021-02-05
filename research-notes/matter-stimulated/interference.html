@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.1.7. Interference &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1.8. Flavor Isospin Method" href="flavor-isospin-matter.html" />
+    <link rel="prev" title="1.1.6. Multi-frequency" href="multi-frequency.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.1.7. Interference</a><ul>
+<li><a class="reference internal" href="#apply-approximations-to-two-frequencies">1.1.7.1. Apply Approximations to Two Frequencies</a></li>
+<li><a class="reference internal" href="#resonance-destroyed">1.1.7.2. Resonance Destroyed</a><ul>
+<li><a class="reference internal" href="#general-ideas">1.1.7.2.1. General Ideas</a></li>
+<li><a class="reference internal" href="#some-artifical-systems">1.1.7.2.2. Some Artifical Systems</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#refs-notes">1.1.7.3. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="multi-frequency.html" title="Previous Chapter: 1.1.6. Multi-frequency"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.1.6. Multi-...</span>
+    </a>
+  </li>
+  <li>
+    <a href="flavor-isospin-matter.html" title="Next Chapter: 1.1.8. Flavor Isospin Method"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.1.8. Flavor... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.1.7. Interference</a><ul>
+<li><a class="reference internal" href="#apply-approximations-to-two-frequencies">1.1.7.1. Apply Approximations to Two Frequencies</a></li>
+<li><a class="reference internal" href="#resonance-destroyed">1.1.7.2. Resonance Destroyed</a><ul>
+<li><a class="reference internal" href="#general-ideas">1.1.7.2.1. General Ideas</a></li>
+<li><a class="reference internal" href="#some-artifical-systems">1.1.7.2.2. Some Artifical Systems</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#refs-notes">1.1.7.3. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="multi-frequency.html" title="Previous Chapter: 1.1.6. Multi-frequency"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.1.6. Multi-...</span>
+    </a>
+  </li>
+  <li>
+    <a href="flavor-isospin-matter.html" title="Next Chapter: 1.1.8. Flavor Isospin Method"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.1.8. Flavor... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/matter-stimulated/interference.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="interference">
+<h1>1.1.7. Interference<a class="headerlink" href="#interference" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="first admonition-title">Summary</p>
+<p>Overall the system has at least two limits,</p>
+<ol class="arabic simple">
+<li>strong interference regime (the wavelength of the perturbations are of the same orders);</li>
+<li>low-interference regime (one of the perturbations has a wavelength much larger than the others’).</li>
+</ol>
+<p>For either case, the system is explained within the ralm of superpositions of multiple Rabi oscillations.</p>
+<p>As for the first case, th criteria is related to both the resonance itself and the size of physical system we are interested in.</p>
+<ol class="arabic simple">
+<li>Each mode has an associated resonance, and explained by a single Rabi oscillation. Higher orders have much smaller resonance width than low orders.</li>
+<li>Whether a mode is important to the system is determined by Q value, which is defined as the ratio of distance to resonance and resonance width.</li>
+<li>However a mode with a wavelength that is much larger than the system is not counted since the resonance has not accumulated any significant transition probabilities within the region of the physical system.</li>
+</ol>
+<p><strong>However, we do not have a cystal clear understanding of such a strong interference.</strong></p>
+<p>The second case is essentially some limit of the strong interference. With Komogorov spectra of matter, the resonance is simplified in some sense. One of the limits is that one of the matter perturbations has much larger wavelength than the others, which will behave as a shift of the background matter density, within one wavelength of the small wavelength perturbations. Here we use two frequencies as examples, c.f. <a class="reference internal" href="#interference-adding-new-destroy-resonance-q-value"><span class="std std-numref">Fig. 1.27</span></a>.</p>
+<ol class="arabic">
+<li><p class="first">Even if the short wavelength one is exactly on resonance, adding the second perturbation as a background shift could move the system out of the resonance. The math behind it is related to the amplitude,</p>
+<div class="math notranslate nohighlight">
+\[\frac{ \left\lvert  B_{n}  \right\rvert^2 }{ \left\lvert    B_{n}  \right\rvert^2 + ( n  k - \omega_m )^2  },\]</div>
+<p>where <span class="math notranslate nohighlight">\(n  k - \omega_m = 0\)</span> for the resonance situation. As we add in the second long wavelength perturbation, <span class="math notranslate nohighlight">\(B_{n}\)</span>, <span class="math notranslate nohighlight">\(\omega_m\)</span> will change. Nonetheless the relative change in <span class="math notranslate nohighlight">\(B_n\)</span> is small while the change in <span class="math notranslate nohighlight">\(nk-\omega_m\)</span> is huge compared to <span class="math notranslate nohighlight">\(B_n\)</span> value, if the amplitude of the new perturbation is large enough, i.e., <span class="math notranslate nohighlight">\(A_2 \gg \lvert B_n\rvert\)</span>.</p>
+</li>
+<li><p class="first">The caveat is that the wavelength of the second perturbation <span class="math notranslate nohighlight">\(k_2\)</span> must be within a range much smaller than <span class="math notranslate nohighlight">\(k_1\)</span>, and much larger than the resonance transition probability wavelength, roughly speaking, <span class="math notranslate nohighlight">\(k_1\gg k_2 \gg \lvert B_n\rvert\)</span>.</p>
+</li>
+<li><p class="first">The newly added long wavelength merely has any effect when the system is in a region <span class="math notranslate nohighlight">\(\mathrm{mod}(k_2 x,\pi)\sim 0\)</span>, since <span class="math notranslate nohighlight">\(A_2\sin(k_2x)\sim 0\)</span> for these values. Such regions probabily will appear multiple times within the size of physical system. Then we see accumulation effect, so that the transition amplitude will rise as we go furthure out.</p>
+</li>
+</ol>
+<p class="last"><strong>From this point of view, the resonance is never destroyed since the accumulation will always be there.</strong></p>
+</div>
+<p>In the calculation of multi-frequency matter background,</p>
+<div class="math notranslate nohighlight">
+\[\delta\lambda_N = \sum_{a=1}^N A_a \sin(k_a x + \phi_a),\]</div>
+<p>we derived the equation of motion</p>
+<div class="math notranslate nohighlight">
+\[i \partial_x \Psi = H \Psi,\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Psi = \begin{pmatrix}
+\psi_{b1} \\
+\psi_{b2}
+\end{pmatrix},\end{split}\]</div>
+<p>is the wave function in the T basis (new basis unitary transform from background matter basis using T matrix) and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H = \begin{pmatrix}
+0 &amp; h_N \\
+h_N^* &amp; 0
+\end{pmatrix},\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[h_N = -\frac{1}{2}\sum_{n_1=-\infty}^\infty \cdots \sum_{n_N=-\infty}^\infty B_N\Phi_N e^{i(\sum_a^{N} n_a k_a - \omega_m)x},\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B_N &amp;= (-i)^{\sum_a n_a} \left( \sum_a n_a k_a \right) \left( \prod_a J_{n_a}\left( \frac{A_a}{k_a}\cos 2\theta_m \right) \right),\\
+\Phi_N &amp;= e^{i\left( \sum_a n_a \phi_a \right)}.\end{split}\]</div>
+<div class="section" id="apply-approximations-to-two-frequencies">
+<h2>1.1.7.1. Apply Approximations to Two Frequencies<a class="headerlink" href="#apply-approximations-to-two-frequencies" title="Permalink to this headline">¶</a></h2>
+<p>We could identify the important combinations of n’s <span class="math notranslate nohighlight">\(\{n_1, \cdots, n_N \}\)</span> so that we can approximate the actual result.</p>
+<p>The important question is combining multiple lists of n’s is not intuitively easy to understand. Here we consider the effect of adding new list of n’s to the system.</p>
+<p>For simplicity a simplified system will be used,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_x  \begin{pmatrix}
+\psi_{b1} \\
+\psi_{b2}
+\end{pmatrix} = \begin{pmatrix}
+0 &amp; A_1 e^{ i \phi_1 x } +A_2 e^{ i \phi_2 x } \\
+A_1^* e^{ - i \phi_1 x } + A_2^* e^{ -i \phi_2 x } &amp; 0
+\end{pmatrix}
+\begin{pmatrix}
+\psi_{b1} \\
+\psi_{b2}
+\end{pmatrix}.\end{split}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(\phi_n\)</span> is always real but <span class="math notranslate nohighlight">\(A_n\)</span> are either real or pure imaginary.</p>
+<p>The matrix equation can be rewritten as systems of differential equations,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i \partial_x \psi_{b1} &amp;= (A_1 e^{ i \phi_1 x } +A_2 e^{ i \phi_2 x } ) \psi_{b2}, \\
+i \partial_x \psi_{b2} &amp; = (A_1^* e^{ - i \phi_1 x } + A_2^* e^{ -i \phi_2 x }) \psi_{b1}.\end{split}\]</div>
+<p>This set of equations is solved by rewrite them to a second order differential equation</p>
+<div class="math notranslate nohighlight" id="equation-two-n-list-second-order-eq-o-m">
+<span class="eqno">(1.26)<a class="headerlink" href="#equation-two-n-list-second-order-eq-o-m" title="Permalink to this equation">¶</a></span>\[\partial_x^2 \psi_{b2} + \frac{ A_1^* e^{ - i \phi_1 x } + A_2^* e^{ -i \phi_2 x }) }{\partial_x (A_1^* e^{ - i \phi_1 x } + A_2^* e^{ -i \phi_2 x }) } \partial_x \psi_{b2} + (A_1^* e^{ - i \phi_1 x } + A_2^* e^{ -i \phi_2 x }) (A_1 e^{ i \phi_1 x } +A_2 e^{ i \phi_2 x } ) \psi_{b2}.\]</div>
+<p>As a comparison, we also write down the equation for single n list,</p>
+<div class="math notranslate nohighlight">
+\[\partial_x^2 \psi_{b2} + \left( \frac{i}{\phi_1}  \right) \partial_x \psi_{b2} + \lvert A_1 \rvert^2 \psi_{b2} = 0.\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Approximations?</p>
+<p>For single n list equation, the second term dominates if <span class="math notranslate nohighlight">\(\phi_1\)</span> is much smaller than 1. In the language of physics, the second term dominates if the system is very close to resonance.</p>
+<div class="note admonition">
+<p class="first admonition-title"><span class="math notranslate nohighlight">\(\phi_n\)</span> and resonance</p>
+<p><span class="math notranslate nohighlight">\(\phi_n\)</span> is in fact the deviation from exact resonance.</p>
+<div class="last math notranslate nohighlight">
+\[\phi_n = \sum_{a}^N n_a k_a - \omega_m.\]</div>
+</div>
+<p>In the multi-n-list case, this domination is easily destroyed. As an example, suppose we have <span class="math notranslate nohighlight">\(A_1= A_2 = A\)</span> and <span class="math notranslate nohighlight">\(\phi_2 = 10^{10}\phi_1\)</span>, the second term in equation <a class="reference internal" href="#equation-two-n-list-second-order-eq-o-m">(1.26)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[\frac{ e^{ - i \phi_1 x } + e^{ -i 10^{10}\phi_1 x }) }{\partial_x (e^{ - i \phi_1 x } + e^{ -i 10^{10}\phi_1 x }) } \partial_x \psi_{b2} = \frac{ e^{ - i \phi_1 x } + e^{ -i 10^{10}\phi_1 x }) }{ (-i\phi_1 e^{ - i \phi_1 x } - i 10^{10}\phi_1 e^{ -i 10^{10}\phi_1 x }) } \partial_x \psi_{b2},\]</div>
+<p>which can be dropped on as long as <span class="math notranslate nohighlight">\(\phi_1\)</span> is not as small as <span class="math notranslate nohighlight">\(10^{-10}\)</span>.</p>
+<p class="last">We exaggerated the situation.</p>
+</div>
+</div>
+<div class="section" id="resonance-destroyed">
+<h2>1.1.7.2. Resonance Destroyed<a class="headerlink" href="#resonance-destroyed" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-ideas">
+<h3>1.1.7.2.1. General Ideas<a class="headerlink" href="#general-ideas" title="Permalink to this headline">¶</a></h3>
+<p>We first investigate two frequencies. The Hamiltonian for a single frequency matter perturbation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\mathbf{H}} = \sum_{n=-\infty}^{\infty} \begin{pmatrix}
+0 &amp; \frac{1}{2} \hat B_n e^{i(n \hat k - 1)\hat x} \\
+\frac{1}{2} \hat B_n^* e^{-i(n \hat k - 1)\hat x} &amp; 0
+\end{pmatrix},\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\hat B_n = (-i)^n \tan 2\theta_{\mathrm{m}} n \hat k  J_n (\frac{\hat A}{\hat k} \cos 2\theta_{\mathrm{m}}).\]</div>
+<p>In some conditions, even we have on of the matter frequancy at resonance, this resonance could be destroyed when a new matter frequency is destroyed. Numerical calculations show that this could happen if the new perturbation is off resonance and with larger <span class="math notranslate nohighlight">\(B_{n_2}\)</span>.</p>
+<p>Let’s first set this first perturbation at resonance. Suppose we add in another matter perturbation with a frequency which is higher, i.e., <span class="math notranslate nohighlight">\(k_2\ll k\)</span>. Since the wavelength of this new perturbation is much larger, we will assume it doesn’t change within one wavelength of the first perturbation. Thus it behaves as an additional background. Will this new background destroy the resonance? Illustration of this idea is shown in <a class="reference internal" href="#interference-adding-new-destroy-resonance-q-value"><span class="std std-numref">Fig. 1.27</span></a>.</p>
+<div class="figure align-center" id="id1">
+<span id="interference-adding-new-destroy-resonance-q-value"></span><img alt="../../_images/second-freq-as-bg-illustration.png" src="../../_images/second-freq-as-bg-illustration.png" />
+<p class="caption"><span class="caption-number">Fig. 1.27 </span><span class="caption-text">The two matter perturbations</span></p>
+</div>
+<p>To quantify this idea, we calculate the Q values for different modes with and without the new frequency. The procedure should be</p>
+<ol class="arabic simple">
+<li>Prepare the parameters: <span class="math notranslate nohighlight">\(\omega_v\)</span>, <span class="math notranslate nohighlight">\(\lambda_0\)</span> (background matter profile), <span class="math notranslate nohighlight">\(\lambda_1\)</span> (perturbation amplitude for first perturbation), <span class="math notranslate nohighlight">\(k_1\)</span> (perturbation wavenumber for first perturbation)</li>
+<li>Calculate the Q values.</li>
+<li>Add in <span class="math notranslate nohighlight">\(\lambda_2\)</span> (perturbation amplitude for the second perturbation) and treat this new perturbation as a constant within one wavelength of the first perturbation. Just use some random phase for the new matter profile, i.e., set <span class="math notranslate nohighlight">\(\sin(k_2 x)\)</span> to some resonanable value.</li>
+<li>Recalculate the Q values.</li>
+</ol>
+<p>Without the new perturbation (Mathematica Code):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deltamsquare13</span> <span class="o">=</span> <span class="mf">2.6</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">);(</span><span class="o">*</span><span class="n">MeV</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="p">)</span>
+<span class="n">energy20</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;(</span><span class="o">*</span><span class="n">Energy</span> <span class="ow">in</span> <span class="n">units</span> <span class="n">of</span> <span class="n">MeV</span><span class="o">*</span><span class="p">)</span>
+<span class="n">thetaV</span> <span class="o">=</span> <span class="n">ArcSin</span><span class="p">[</span><span class="n">Sqrt</span><span class="p">[</span><span class="mf">0.093</span><span class="p">]]</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">omegaVKK</span> <span class="o">=</span> <span class="n">OmegaVacuum</span><span class="p">[</span><span class="n">energy20</span><span class="p">,</span> <span class="n">deltamsquare13</span><span class="p">](</span><span class="o">*</span><span class="n">MeV</span><span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">deltamsquare13</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="n">energy20</span><span class="p">)(</span><span class="o">*</span><span class="n">MeV</span><span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="p">)</span>
+
+<span class="n">lambdaNKK</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">Cos</span><span class="p">[</span><span class="mi">2</span> <span class="n">thetaV</span><span class="p">]</span> <span class="n">omegaVKK</span> <span class="p">(</span><span class="o">*</span><span class="n">MeV</span><span class="o">*</span><span class="p">)</span>
+
+<span class="n">onekListKK</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">};</span>
+<span class="n">oneaListKK</span> <span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="p">{</span><span class="mf">0.1</span><span class="p">};</span><span class="o">*</span><span class="p">){</span><span class="mf">0.02</span> <span class="p">(</span><span class="n">MeVInverse2km</span><span class="p">[</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="p">(</span><span class="n">omegaMKK</span> <span class="n">onekListKK</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])]</span><span class="o">/</span><span class="mi">1500</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)};</span>
+<span class="n">onephiListKK</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="n">Part</span><span class="p">[</span><span class="n">qValueOrderdList</span><span class="p">[</span><span class="n">listNGenerator</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">onekListKK</span><span class="p">,</span> <span class="n">oneaListKK</span><span class="p">,</span> <span class="n">onephiListKK</span><span class="p">,</span> <span class="n">thetamV</span><span class="p">],</span> <span class="mi">1</span> <span class="p">;;</span> <span class="mi">10</span><span class="p">];</span>
+<span class="n">Grid</span><span class="o">@%</span>
+</pre></div>
+</div>
+<p>which returns the Q value results for each modes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">}</span>  <span class="mf">0.</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span> <span class="mf">577810.</span>
+<span class="p">{</span><span class="mi">2</span><span class="p">}</span>  <span class="mf">1.75394</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">10</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">}</span> <span class="mf">5.26182</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">10</span>
+<span class="p">{</span><span class="mi">3</span><span class="p">}</span>  <span class="mf">4.25927</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">15</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span> <span class="mf">8.51854</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">15</span>
+<span class="p">{</span><span class="mi">4</span><span class="p">}</span>  <span class="mf">1.16361</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">21</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">4</span><span class="p">}</span> <span class="mf">1.93935</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">21</span>
+<span class="p">{</span><span class="mi">5</span><span class="p">}</span>  <span class="mf">3.76761</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">26</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">5</span><span class="p">}</span> <span class="mf">5.65142</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">26</span>
+</pre></div>
+</div>
+<p>Adding in the new frequency:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">phi2</span> <span class="o">=</span> <span class="n">Pi</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
+
+<span class="n">twoaListKK</span> <span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="p">{</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">};</span><span class="o">*</span><span class="p">){</span><span class="mf">0.02</span> <span class="p">(</span><span class="n">MeVInverse2km</span><span class="p">[</span><span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="p">(</span><span class="n">omegaMKK</span><span class="o">*</span><span class="n">twokListKK</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])]</span><span class="o">/</span><span class="mi">1500</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span>
+<span class="mf">0.02</span> <span class="p">(</span><span class="n">MeVInverse2km</span><span class="p">[</span><span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="p">(</span><span class="n">omegaMKK</span> <span class="n">twokListKK</span><span class="p">[[</span><span class="mi">2</span><span class="p">]])]</span><span class="o">/</span><span class="mi">1500</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)};</span>
+
+<span class="n">lambdaNKK2</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">Cos</span><span class="p">[</span><span class="mi">2</span> <span class="n">thetaV</span><span class="p">]</span> <span class="n">omegaVKK</span> <span class="o">+</span> <span class="n">Sin</span><span class="p">[</span><span class="n">phi2</span><span class="p">]</span><span class="o">*</span><span class="n">twoaListKK</span><span class="p">[[</span><span class="mi">2</span><span class="p">]]</span><span class="o">*</span><span class="n">omegaMKK</span><span class="p">(</span><span class="o">*</span><span class="n">MeV</span><span class="o">*</span><span class="p">)</span>
+
+<span class="n">omegaMKK2</span> <span class="o">=</span> <span class="n">OmegaMatter2</span><span class="p">[</span><span class="n">lambdaNKK2</span><span class="p">,</span> <span class="n">thetaV</span><span class="p">,</span> <span class="n">omegaVKK</span><span class="p">](</span><span class="o">*</span><span class="n">MeV</span><span class="o">*</span><span class="p">)</span>
+<span class="n">thetamV2</span> <span class="o">=</span> <span class="n">Mod</span><span class="p">[</span><span class="n">ArcTan</span><span class="p">[</span><span class="n">Sin</span><span class="p">[</span><span class="mi">2</span> <span class="n">thetaV</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="mi">2</span> <span class="n">thetaV</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="n">lambdaNKK2</span><span class="o">/</span><span class="n">omegaVKK</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)]</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">Pi</span><span class="p">]</span>
+
+<span class="n">onekListKK2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">*</span><span class="n">omegaMKK</span><span class="o">/</span><span class="n">omegaMKK2</span><span class="p">;</span>
+<span class="n">oneaListKK2</span> <span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="p">{</span><span class="mf">0.1</span><span class="p">};</span><span class="o">*</span><span class="p">){</span><span class="mf">0.02</span> <span class="p">(</span><span class="n">MeVInverse2km</span><span class="p">[</span><span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="p">(</span><span class="n">omegaMKK2</span> <span class="n">onekListKK2</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])]</span><span class="o">/</span><span class="mi">1500</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)};</span>
+
+<span class="n">Part</span><span class="p">[</span><span class="n">qValueOrderdList</span><span class="p">[</span><span class="n">listNGenerator</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">onekListKK2</span><span class="p">,</span> <span class="n">oneaListKK2</span><span class="p">,</span> <span class="n">onephiListKK</span><span class="p">,</span> <span class="n">thetamV2</span><span class="p">],</span> <span class="mi">1</span> <span class="p">;;</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">Grid</span><span class="o">@%</span>
+</pre></div>
+</div>
+<p>and the results for Q values of different modes are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">1</span><span class="p">}</span>  <span class="mf">246.833</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">}</span> <span class="mf">577687.</span>
+<span class="p">{</span><span class="mi">2</span><span class="p">}</span>  <span class="mf">1.75752</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">10</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">}</span> <span class="mf">5.26655</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">10</span>
+<span class="p">{</span><span class="mi">3</span><span class="p">}</span>  <span class="mf">4.27026</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">15</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span> <span class="mf">8.53505</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">15</span>
+<span class="p">{</span><span class="mi">4</span><span class="p">}</span>  <span class="mf">1.16758</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">21</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">4</span><span class="p">}</span> <span class="mf">1.94507</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">21</span>
+<span class="p">{</span><span class="mi">5</span><span class="p">}</span>  <span class="mf">3.78384</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">26</span>
+<span class="p">{</span><span class="o">-</span><span class="mi">5</span><span class="p">}</span> <span class="mf">5.67375</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">26</span>
+</pre></div>
+</div>
+<p>The corresponding plots are shown in <a class="reference internal" href="#second-freq-as-bg-example-1-first-freq-only"><span class="std std-numref">Fig. 1.28</span></a> and <a class="reference internal" href="#second-freq-as-bg-example-1-with-second-freq-as-bg"><span class="std std-numref">Fig. 1.29</span></a></p>
+<div class="figure align-center" id="id2">
+<span id="second-freq-as-bg-example-1-first-freq-only"></span><img alt="../../_images/second-freq-as-bg-example-1-first-freq-only.png" src="../../_images/second-freq-as-bg-example-1-first-freq-only.png" />
+<p class="caption"><span class="caption-number">Fig. 1.28 </span><span class="caption-text">Only the first frequency which is at resonance</span></p>
+</div>
+<div class="figure align-center" id="id3">
+<span id="second-freq-as-bg-example-1-with-second-freq-as-bg"></span><img alt="../../_images/second-freq-as-bg-example-1-with-second-freq-as-bg.png" src="../../_images/second-freq-as-bg-example-1-with-second-freq-as-bg.png" />
+<p class="caption"><span class="caption-number">Fig. 1.29 </span><span class="caption-text">With the second frequency added in but only as a shift in background density</span></p>
+</div>
+<p>What determines the amplitude is</p>
+<div class="math notranslate nohighlight">
+\[\frac{ \left\lvert  B_{n}  \right\rvert^2 }{ \left\lvert    B_{n}  \right\rvert^2 + ( n  k - \omega_m )^2  }.\]</div>
+<p>In this example, the coefficient in unit of <span class="math notranslate nohighlight">\(\omega_m\)</span> for one perturbation only is</p>
+<div class="math notranslate nohighlight">
+\[\lvert B_1 \rvert = 3.46135\times 10^{-6},\]</div>
+<p>while it shifts a little bit when the second frequency is added in as a background shift, in unit of <span class="math notranslate nohighlight">\(\omega_m\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\lvert B_1' \rvert = 3.46356\times 10^{-6}.\]</div>
+<p>We set the first frequency at resonance, which means</p>
+<div class="math notranslate nohighlight">
+\[k - \omega_m = 0.\]</div>
+<p>With the apprearance of the second frequency, what we have now is, in unit of <span class="math notranslate nohighlight">\(\omega_m\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[k - \omega_m' = 0.000854192,\]</div>
+<p>which is far beyond the width of the resonance.</p>
+</div>
+<div class="section" id="some-artifical-systems">
+<h3>1.1.7.2.2. Some Artifical Systems<a class="headerlink" href="#some-artifical-systems" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-matter-density.png" src="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-matter-density.png" />
+<p class="caption"><span class="caption-number">Fig. 1.30 </span><span class="caption-text">Matter profiles with one wavelength of the first perturbation</span></p>
+</div>
+<p>The resonance from the first perturbation is destroyed as the second perturbation grows much larger than it.</p>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-full-numerical.png" src="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-full-numerical.png" />
+<p class="caption"><span class="caption-number">Fig. 1.31 </span><span class="caption-text">Full numerical solutions</span></p>
+</div>
+<p>The hint is, the shift of the background matter profile is related to the destruction effect, whether it’s true destruction or effective destruction (destruction within a region).</p>
+<p>An investigation of the most important mode shows that it is destroyed due to the a shift of background matter density.</p>
+<div class="figure align-center" id="id6">
+<img alt="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-log.png" src="../../_images/second-freq-as-bg-1-divided-10-10-20-30-100-1000-10000-log.png" />
+<p class="caption"><span class="caption-number">Fig. 1.32 </span><span class="caption-text">Resonance destruction of the first mode</span></p>
+</div>
+<p>To verify how the interference actually works, we plot the full numerical calculation and the {1,0} mode, for comparision</p>
+<div class="figure align-center" id="id7">
+<span id="second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-1000-full-numerical-with-10-mode-with-gridlines"></span><img alt="../../_images/second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-1000-full-numerical-with-10-mode-with-gridlines.png" src="../../_images/second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-1000-full-numerical-with-10-mode-with-gridlines.png" />
+<p class="caption"><span class="caption-number">Fig. 1.33 </span><span class="caption-text">The solid lines are the full numerical calculations of the system; Dashed lines are {1,0} mode of the corresponding parameters; Vertical grid lines are the positions of zero amplitudes of the second matter perturbation.</span></p>
+</div>
+<p>It is clearly shown in <a class="reference internal" href="#second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-1000-full-numerical-with-10-mode-with-gridlines"><span class="std std-numref">Fig. 1.33</span></a> that each vicinity of zero amplitude for the second perturbation, the transition amplitude will increase, due to the resonance of the first perturbation.</p>
+<p>What’s more interesting is that as <span class="math notranslate nohighlight">\(A_2\)</span> becomes much larger than <span class="math notranslate nohighlight">\(A_1\)</span>, the resonance seams to be destroyed. As an example, here we take <span class="math notranslate nohighlight">\(A_2=0.0346135, A_1=0.0000357347\)</span> both in unit of <span class="math notranslate nohighlight">\(\omega_m\)</span>, which means <span class="math notranslate nohighlight">\(A_2\)</span> is almost three orders larger than <span class="math notranslate nohighlight">\(A_1\)</span>. The results are shown in <a class="reference internal" href="#second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-10000-full-numerical-with-10-mode-with-gridlines"><span class="std std-numref">Fig. 1.34</span></a>.</p>
+<div class="figure align-center" id="id8">
+<span id="second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-10000-full-numerical-with-10-mode-with-gridlines"></span><img alt="../../_images/second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-10000-full-numerical-with-10-mode-with-gridlines.png" src="../../_images/second-freq-as-bg-1-d-10-1-d-1000-1-d-10000-1-d-200000-10000-full-numerical-with-10-mode-with-gridlines.png" />
+<p class="caption"><span class="caption-number">Fig. 1.34 </span><span class="caption-text">The solid lines are the full numerical calculations of the system; Dashed lines are {1,0} mode of the corresponding parameters; Vertical grid lines are the positions of zero amplitudes of the second matter perturbation.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="refs-notes">
+<h2>1.1.7.3. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/matter-stimulated/interference.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

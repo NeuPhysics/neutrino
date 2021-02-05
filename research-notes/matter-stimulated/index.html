@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.1. Matter Stimulated Oscillation &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1.1. Scales" href="scales.html" />
+    <link rel="prev" title="1. WIP Neutrino Physics" href="../index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.1. Matter Stimulated Oscillation</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../index.html" title="Previous Chapter: 1. WIP Neutrino Physics"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1. WIP Neutri...</span>
+    </a>
+  </li>
+  <li>
+    <a href="scales.html" title="Next Chapter: 1.1.1. Scales"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.1.1. Scales &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.1. Matter Stimulated Oscillation</a></li>
+</ul>
+
+  <li>
+    <a href="../index.html" title="Previous Chapter: 1. WIP Neutrino Physics"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1. WIP Neutri...</span>
+    </a>
+  </li>
+  <li>
+    <a href="scales.html" title="Next Chapter: 1.1.1. Scales"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.1.1. Scales &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/matter-stimulated/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="matter-stimulated-oscillation">
+<h1>1.1. Matter Stimulated Oscillation<a class="headerlink" href="#matter-stimulated-oscillation" title="Permalink to this headline">¶</a></h1>
+<p>We investigate a system with matter potential</p>
+<div class="math notranslate nohighlight">
+\[\lambda(x) = \lambda_0 + \delta \lambda (x),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda_0 = \sqrt{2}G_F n_{e0}\)</span> and <span class="math notranslate nohighlight">\(\delta \lambda(x) = \sqrt{2}G_F \delta n_e(x)\)</span>.</p>
+<p>The Hamiltonian in background matter basis <span class="math notranslate nohighlight">\(\{\ket{\nu_{\mathrm{L}}},\ket{\nu_{\mathrm{H}}}\}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[H = - \frac{\omega_m}{2} \sigma_3 + \frac{\delta \lambda}{2} \cos 2\theta_m \sigma_3 - \frac{\delta \lambda}{2} \sin 2 \theta_m \sigma_1.\]</div>
+<p>Here by background matter basis, we mean that the Hamiltonian is diagonalized if perturbation is zero in matter profile.</p>
+<div class="note admonition">
+<p class="first admonition-title">Derive the Hamiltonian</p>
+<p>This Hamiltonian can be derived easily using</p>
+<div class="last math notranslate nohighlight">
+\[H = -\frac{\omega_m}{3}\sigma_3 + \frac{\delta \lambda}{2} U^\dagger \sigma_3 U.\]</div>
+</div>
+<p>What we are interested in is the transition between two background mass states. If we can have full converstion between the two mass states, we can have full conversion between flavor states.</p>
+<p><strong>A Unitary Transformation</strong></p>
+<p>Suppose the wave function in this basis is written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix}.\end{split}\]</div>
+<p>To remove the position dependent <span class="math notranslate nohighlight">\(\sigma_3\)</span> term in the Hamiltonian which prevents us from solving the equation of motion easily, we define a new basis <span class="math notranslate nohighlight">\(\{\ket{\tilde\nu_{\mathrm{L}}},\ket{\tilde\nu_{\mathrm{H}}}\}\)</span> where the wave function is related to background matter basis through</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} = \begin{pmatrix} e^{-i \eta (x)} &amp; 0 \\  0 &amp; e^{i \eta (x)}  \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.\end{split}\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Transformation of Pauli Matrices</p>
+<p>This transformation, defined as <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>, is unitary,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}^\dagger \mathbf{T} = \mathbf{I}.\]</div>
+<p>It doesn’t change <span class="math notranslate nohighlight">\(\sigma_3\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{T} \sigma_3 \mathbf{T}^\dagger &amp;= \sigma_3\\
+\mathbf{T}^\dagger \sigma_3 \mathbf{T} &amp;= \sigma_3.\end{split}\]</div>
+<p>It adds a phase to the off-diagonal elements of <span class="math notranslate nohighlight">\(\sigma_1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{T} \sigma_1 \mathbf{T}^\dagger &amp;= \begin{pmatrix} 0 &amp; e^{-2i\eta} \\ e^{2 i\eta } &amp; 0 \end{pmatrix} \\
+\mathbf{T}^\dagger \sigma_1 \mathbf{T} &amp;= \begin{pmatrix} 0 &amp; e^{2i\eta} \\ e^{-2 i\eta } &amp; 0 \end{pmatrix}.\end{split}\]</div>
+<p>We can also look at the following very general transformation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \begin{pmatrix} e^{i\eta_1} &amp; 0 \\ 0 &amp; e^{-i\eta_1}\end{pmatrix} \begin{pmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22}\end{pmatrix}  \begin{pmatrix} e^{i\eta_2} &amp; 0 \\ 0 &amp; e^{-i\eta_2}\end{pmatrix} \\
+= &amp; \begin{pmatrix} a_{11} e^{i(\eta_1+\eta_2)} &amp; a_{12} e^{i(\eta_1 - \eta_2)} \\ a_{21} e^{-i(\eta_1-\eta_2)} &amp; a_{22} e^{-i(\eta_1+\eta_2)}  \end{pmatrix}\end{split}\]</div>
+<p>Another very useful relation is</p>
+<div class="last math notranslate nohighlight">
+\[i\mathbf{T}^{\dagger} \partial_x \mathbf{T} = \partial_x \eta(x) \sigma_3.\]</div>
+</div>
+<p>The Schrodinger equation in background matter basis is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\frac{d}{dx}\begin{pmatrix} \psi_{1} \\ \psi_2 \end{pmatrix} = \left(- \frac{\omega_m}{2} \sigma_3 + \frac{\delta \lambda}{2} \cos 2\theta_m \sigma_3 - \frac{\delta \lambda}{2} \sin 2 \theta_m \sigma_1 \right) \begin{pmatrix} \psi_{1} \\ \psi_2 \end{pmatrix}\end{split}\]</div>
+<p>To write down the Schodinger equation in the new basis, we need the transformation of the Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{T}^\dagger \cdot \mathrm{LHS} &amp;= \mathbf{T}^\dagger\left[ i \begin{pmatrix} - i \frac{d\eta}{dx} e^{-i\eta} &amp; 0 \\ 0 &amp; i \frac{d\eta}{dx} e^{i\eta} \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \begin{pmatrix}  e^{-i\eta} &amp; 0 \\ 0 &amp; e^{i\eta} \end{pmatrix} \frac{d}{dx} \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix} \right] \\
+&amp; =   i \begin{pmatrix} - i \frac{d\eta}{dx}  &amp; 0 \\ 0 &amp; i \frac{d\eta}{dx}  \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \frac{d}{dx} \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix}  .\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{T}^\dagger \cdot \mathrm{RHS} &amp;= \left[ -\frac{\omega_m}{2} \mathbf{T} ^\dagger \sigma_3 \mathbf{T} + \frac{\delta \lambda}{2} \cos 2\theta_m \mathbf{T}^\dagger \sigma_3 \mathbf{T} - \frac{\delta \lambda}{2} \sin 2\theta_m \mathbf{T}^\dagger \sigma_1 \mathbf{T}   \right] \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} \\
+&amp; =  \left[ -\frac{\omega_m}{2} \sigma_3  + \frac{\delta \lambda}{2} \cos 2\theta_m  \sigma_3  - \frac{\delta \lambda}{2} \sin 2\theta_m \begin{pmatrix} 0 &amp; e^{2i\eta} \\ e^{-2 i\eta } &amp; 0 \end{pmatrix}   \right] \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} .\end{split}\]</div>
+<p>The equation of motion in this new basis becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  \frac{d\eta}{dx}  &amp; 0 \\ 0 &amp; - \frac{d\eta}{dx}  \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} + i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} =
+\left[ -\frac{\omega_m}{2} \sigma_3  + \frac{\delta \lambda}{2} \cos 2\theta_m  \sigma_3  - \frac{\delta \lambda}{2} \sin 2\theta_m \begin{pmatrix} 0 &amp; e^{2i\eta} \\ e^{-2 i\eta } &amp; 0 \end{pmatrix}   \right] \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}\end{split}\]</div>
+<p>The key is to remove the <span class="math notranslate nohighlight">\(\sigma_3\)</span> terms using this transformation, which requires</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}  \frac{d\eta}{dx}  &amp; 0 \\ 0 &amp; - \frac{d\eta}{dx}  \end{pmatrix} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} = \left[ -\frac{\omega_m}{2} \sigma_3  + \frac{\delta \lambda}{2} \cos 2\theta_m  \sigma_3 \right] \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.\end{split}\]</div>
+<p>It reduces to</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\eta(x)}{dx} = - \frac{\omega_m}{2} + \frac{\delta \lambda(x)}{2} \cos 2\theta_m ,\]</div>
+<p>which has a general solution of the form</p>
+<div class="math notranslate nohighlight" id="equation-eta-x-general">
+<span id="matter-stimulated-equation-eta-x-general"></span><span class="eqno">(1.5)<a class="headerlink" href="#equation-eta-x-general" title="Permalink to this equation">¶</a></span>\[\eta(x) - \eta(0) = - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x \delta\lambda (\tau) d\tau.\]</div>
+<p>We might choose <span class="math notranslate nohighlight">\(\eta(0)=0\)</span>, which simplifies the relation</p>
+<div class="math notranslate nohighlight">
+\[\eta(x)= - \frac{\omega_m}{2} x + \frac{\cos 2\theta_m}{2} \int_0^x \delta\lambda (\tau) d\tau.\]</div>
+<p>What is left in the equation of motion is the part where off-diagonal Hamiltonian takes effect,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i \frac{d}{dx} \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix} = - \frac{\delta \lambda}{2} \sin 2\theta_m \begin{pmatrix} 0 &amp; e^{2i\eta} \\ e^{-2 i\eta } &amp; 0 \end{pmatrix}  \begin{pmatrix} \psi_{b1} \\ \psi_{b2} \end{pmatrix}.\end{split}\]</div>
+<div class="note admonition">
+<p class="first admonition-title">Other Initial Conditions</p>
+<p class="last">The initial condition can be other convinient ones. For example we can remove the integration constant of the last term in the relation.</p>
+</div>
+<p>At any position/time, the wave function in background matter basis is</p>
+<div class="math notranslate nohighlight" id="equation-wavefunction-diff-basis">
+<span id="matter-stimulated-equation-wavefunction-diff-basis"></span><span class="eqno">(1.6)<a class="headerlink" href="#equation-wavefunction-diff-basis" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{pmatrix} \psi_1 (x) \\ \psi_2(x)  \end{pmatrix} = \begin{pmatrix} e^{- i \eta} \psi_{b1} (x) \\ e^{i\eta} \psi_{b2} (x)  \end{pmatrix}.\end{split}\]</div>
+<p>To calculated the transition from low energy state to high energy state in background matter basis, with initial condition</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} \psi_1 (0) \\ \psi_2(0)  \end{pmatrix} = \begin{pmatrix} 1 \\ 0  \end{pmatrix},\end{split}\]</div>
+<p>we simply calculate</p>
+<div class="math notranslate nohighlight">
+\[P_{1 \to 2} (x) = \lvert e^{i\eta} \psi_{b2} (x)  \rvert^2 = \lvert \psi_{b2} (x)  \rvert^2 .\]</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scales.html">1.1.1. Scales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scales.html#supernova">1.1.1.1. Supernova</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="msw-revisted.html">1.1.2. MSW Effect Revisted</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="msw-revisted.html#flavor-basis">1.1.2.1. Flavor Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="msw-revisted.html#instanteneous-matter-basis">1.1.2.2. Instanteneous Matter Basis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parametric-resonance-revisted.html">1.1.3. Parametric Resonance Revisted</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="parametric-resonance-revisted.html#castle-wall-direct-rotation-using-t-matrix">1.1.3.1. Castle Wall - Direct Rotation Using T Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametric-resonance-revisted.html#castle-wall-profile-fourier-series">1.1.3.2. Castle Wall Profile - Fourier Series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametric-resonance-revisted.html#refs-notes">1.1.3.3. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="single-frequency.html">1.1.4. Single Frequency Matter Perturbation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="single-frequency.html#mathematical-analysis-of-the-result">1.1.4.1. Mathematical Analysis of The Result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single-frequency.html#the-resonances">1.1.4.2. The Resonances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single-frequency.html#perturbation-amplitude-and-transition-probability">1.1.4.3. Perturbation Amplitude and Transition Probability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="two-frequency.html">1.1.5. Two-frequency Matter Perturbation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="two-frequency.html#two-frequencies">1.1.5.1. Two Frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="two-frequency.html#which-one-dominates">1.1.5.2. Which one Dominates?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="two-frequency.html#a-more-systematic-thinking-of-2-frequency">1.1.5.3. A More Systematic Thinking of 2-Frequency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multi-frequency.html">1.1.6. Multi-frequency</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multi-frequency.html#frequencies">1.1.6.1. 3 Frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi-frequency.html#n-frequencies">1.1.6.2. N Frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi-frequency.html#numerical-results">1.1.6.3. Numerical Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interference.html">1.1.7. Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interference.html#apply-approximations-to-two-frequencies">1.1.7.1. Apply Approximations to Two Frequencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interference.html#resonance-destroyed">1.1.7.2. Resonance Destroyed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interference.html#refs-notes">1.1.7.3. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flavor-isospin-matter.html">1.1.8. Flavor Isospin Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flavor-isospin-matter.html#flavor-isospin-applied">1.1.8.1. Flavor Isospin Applied</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flavor-isospin-matter.html#equilibrium-points-linear-stability-analysis-and-limit-cycles">1.1.8.2. Equilibrium Points, Linear Stability Analysis, and Limit Cycles</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="picture.html">1.1.9. Physics Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="picture.html#rabi-oscillations">1.1.9.1. Rabi oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="picture.html#oscillations-and-modes">1.1.9.2. Oscillations and Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="picture.html#example-of-full-system">1.1.9.3. Example of Full System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="picture.html#explaination">1.1.9.4. Explaination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="picture.html#refs-notes">1.1.9.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="linear-background-matter.html">1.1.10. Linear Background Matter Profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="linear-background-matter.html#id1">1.1.10.1. Linear Background Matter Profile</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ol class="arabic simple">
+<li>Patton, K. M., Kneller, J. P., &amp; McLaughlin, G. C. (2014). Stimulated neutrino transformation through turbulence. Physical Review D, 89(7), 073022. doi:10.1103/PhysRevD.89.073022</li>
+<li>Kneller, J. P., McLaughlin, G. C., &amp; Patton, K. M. (2013). Stimulated neutrino transformation in supernovae. AIP Conference Proceedings, 1560, 176–178. doi:10.1063/1.4826746</li>
+</ol>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/matter-stimulated/index.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

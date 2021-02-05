@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.2.3. Two Beams Model &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.2.4. Dispersion Relation" href="dispersion-relation.html" />
+    <link rel="prev" title="1.2.2. Directional Instability" href="directional-instability.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.2.3. Two Beams Model</a><ul>
+<li><a class="reference internal" href="#id1">1.2.3.1. Two Beams Model</a><ul>
+<li><a class="reference internal" href="#all-neutrino-beams">1.2.3.1.1. All Neutrino Beams</a></li>
+<li><a class="reference internal" href="#simple-cases">1.2.3.1.2. Simple Cases</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#breaking-symmetries">1.2.3.2. Breaking Symmetries</a><ul>
+<li><a class="reference internal" href="#emission-angle-parity-symmetry">1.2.3.2.1. Emission Angle Parity Symmetry</a></li>
+<li><a class="reference internal" href="#matter-effect">1.2.3.2.2. Matter Effect</a></li>
+<li><a class="reference internal" href="#translational-symmetry">1.2.3.2.3. Translational Symmetry</a></li>
+<li><a class="reference internal" href="#number-density-of-emission">1.2.3.2.4. Number Density of Emission</a></li>
+<li><a class="reference internal" href="#energy-of-emission">1.2.3.2.5. Energy of Emission</a></li>
+<li><a class="reference internal" href="#time-translational-symmetry">1.2.3.2.6. Time Translational Symmetry</a></li>
+<li><a class="reference internal" href="#numerical-calculations">1.2.3.2.7. Numerical Calculations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#non-local-symmetry-breaking">1.2.3.3. Non-local Symmetry Breaking</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="directional-instability.html" title="Previous Chapter: 1.2.2. Directional Instability"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.2.2. Direct...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dispersion-relation.html" title="Next Chapter: 1.2.4. Dispersion Relation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.2.4. Disper... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.2.3. Two Beams Model</a><ul>
+<li><a class="reference internal" href="#id1">1.2.3.1. Two Beams Model</a><ul>
+<li><a class="reference internal" href="#all-neutrino-beams">1.2.3.1.1. All Neutrino Beams</a></li>
+<li><a class="reference internal" href="#simple-cases">1.2.3.1.2. Simple Cases</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#breaking-symmetries">1.2.3.2. Breaking Symmetries</a><ul>
+<li><a class="reference internal" href="#emission-angle-parity-symmetry">1.2.3.2.1. Emission Angle Parity Symmetry</a></li>
+<li><a class="reference internal" href="#matter-effect">1.2.3.2.2. Matter Effect</a></li>
+<li><a class="reference internal" href="#translational-symmetry">1.2.3.2.3. Translational Symmetry</a></li>
+<li><a class="reference internal" href="#number-density-of-emission">1.2.3.2.4. Number Density of Emission</a></li>
+<li><a class="reference internal" href="#energy-of-emission">1.2.3.2.5. Energy of Emission</a></li>
+<li><a class="reference internal" href="#time-translational-symmetry">1.2.3.2.6. Time Translational Symmetry</a></li>
+<li><a class="reference internal" href="#numerical-calculations">1.2.3.2.7. Numerical Calculations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#non-local-symmetry-breaking">1.2.3.3. Non-local Symmetry Breaking</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="directional-instability.html" title="Previous Chapter: 1.2.2. Directional Instability"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.2.2. Direct...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dispersion-relation.html" title="Next Chapter: 1.2.4. Dispersion Relation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.2.4. Disper... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/collective/two-beams-model.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="two-beams-model">
+<h1>1.2.3. Two Beams Model<a class="headerlink" href="#two-beams-model" title="Permalink to this headline">¶</a></h1>
+<p>I need to understand several phenomena people mentioned.</p>
+<ol class="arabic simple">
+<li>Why crossing leads to instability?</li>
+<li>What exactly is happening when we break the symmetries?</li>
+</ol>
+<div class="warning admonition">
+<p class="first admonition-title">TODO</p>
+<p class="last">I need to make a table or something to really make it easy to access.</p>
+</div>
+<div class="section" id="id1">
+<span id="id2"></span><h2>1.2.3.1. Two Beams Model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We use a simple two-beam line model.</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/two-beam-line-model.png" src="../../_images/two-beam-line-model.png" />
+<p class="caption"><span class="caption-number">Fig. 1.61 </span><span class="caption-text">Two-beam model. Using this model we can check the effect of different symmetries.</span></p>
+</div>
+<p>For convinience of notations, we define a number density distribution function</p>
+<div class="math notranslate nohighlight">
+\[f(\hat v,\omega)= \frac{n(\hat v,\omega)}{n_t},\]</div>
+<p>where <span class="math notranslate nohighlight">\(n_t\)</span> is the total number density of all neutrino emitted, <span class="math notranslate nohighlight">\(n(\hat v,\omega)\)</span> is the number density with momentum direction <span class="math notranslate nohighlight">\(\hat v\)</span> and energy <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<p>We also define</p>
+<div class="math notranslate nohighlight">
+\[\mu = \sqrt{2}G_F n_t.\]</div>
+<p>For two dimensional systems, we can calculate the neutrinos within an angle <span class="math notranslate nohighlight">\([\theta,\theta+d\theta]\)</span></p>
+<div class="math notranslate nohighlight">
+\[n_t f(\hat v,\omega) d\theta.\]</div>
+<p>Similarly we can define the angular distribution for antineutrinos.</p>
+<div class="section" id="all-neutrino-beams">
+<h3>1.2.3.1.1. All Neutrino Beams<a class="headerlink" href="#all-neutrino-beams" title="Permalink to this headline">¶</a></h3>
+<p>If all the beams are neutrinos, but with different energies for the left and right beams. The distribution function for beams is delta function. In fact, each beam is just half of the total neutrino number density <span class="math notranslate nohighlight">\(n_t\)</span>.</p>
+<p>The Hamiltonian is a sum of vacuum terms, matter terms, and self-interaction terms,</p>
+<div class="math notranslate nohighlight">
+\[H= H_v + H_m + H_{\nu\nu},\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_v =&amp; - \eta \frac{1}{2}\omega \sigma_3 \\
+H_m =&amp; \frac{1}{2}\lambda \sigma_3\\
+H_{\nu\nu}^L =&amp; \frac{1}{2}\mu^R \rho^R (1-\cos(\theta_1-\theta_2))\\
+H_{\nu\nu}^R =&amp; \frac{1}{2}\mu^L \rho^L (1-\cos(\theta_1-\theta_2)).\end{split}\]</div>
+<p>To linearize the equation of motion, we define the perturbed density matrix as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho = \frac{1}{2}\begin{pmatrix}
+1 &amp; \epsilon\\
+\epsilon^* &amp; -1
+\end{pmatrix},\end{split}\]</div>
+<p>where we have removed the trace part because it is alway time independent.</p>
+<p>The linearized equation of motion becomes</p>
+<div class="math notranslate nohighlight" id="equation-eqn-line-model-two-beams-all-neutrino-linearized-eom">
+<span class="eqno">(1.32)<a class="headerlink" href="#equation-eqn-line-model-two-beams-all-neutrino-linearized-eom" title="Permalink to this equation">¶</a></span>\[\begin{split}i \partial_z \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} =&amp;  - i \begin{pmatrix}\cot\theta_1\partial_x &amp; 0 \\
+0 &amp; \cot\theta_2 \partial_x
+\end{pmatrix} \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} \\
+&amp;+
+\frac{1}{2}\begin{pmatrix}
+(\lambda+ \mu_2 - \eta \omega_1 - \mu_2 \cos(\theta_1-\theta_2) )/\sin \theta_1 &amp; -\mu_2 (1-\cos(\theta_1-\theta_2)) /\sin \theta_1\\
+-\mu_1 (1- \cos(\theta_1-\theta_2))/\sin\theta_2 &amp; (\lambda + \mu_1 - \eta \omega_2 - \mu_1 \cos(\theta_1-\theta_2) )/\sin\theta_2
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix},\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mu_1 =&amp; \sqrt{2}G_F n_{t,1}\\
+\mu_2 =&amp; \sqrt{2}G_F n_{t,2}.\end{split}\]</div>
+<p>We know that real symmetric matrix has only real eigenvalues, from which we infer that <span class="math notranslate nohighlight">\(\mu_1=\mu_2\)</span> and <span class="math notranslate nohighlight">\(\theta_1=\theta_2\)</span> removes the instability.</p>
+<p>For translational symmetric models, that is <span class="math notranslate nohighlight">\(\partial_x\to 0\)</span>, we have the eigenvalues</p>
+<div class="math notranslate nohighlight">
+\[\Omega = \frac{1}{4}(A\pm B),\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=&amp; -\eta \omega_1/\sin\theta_1 - \mu_2 /\sin\theta_1 + \eta \omega_2 /\sin\theta_2 + \mu_1 \xi /\sin\theta_2 + \lambda(1/\sin\theta_1 + 1/\sin\theta_2)  \\
+B=&amp; \sqrt{
+   -4[(\lambda-\eta\omega_1)(\lambda +\eta\omega_2) + (\lambda (\mu_1-\mu_2) -\eta (\mu_1\omega_1 + \mu_2\omega_2) )\xi ] \sin\theta_1 \sin\theta_2 + [(\lambda + \eta\omega_2 + \mu_1\xi) \sin\theta_1 + (\lambda - \eta \omega_1 - \mu_2\xi) \sin\theta_2 ]^2
+}/(\sin\theta_1\sin\theta_2)\\
+\xi=&amp;1-\cos(\theta_1-\theta_2).\end{split}\]</div>
+<div class="note admonition">
+<p class="first admonition-title">All Antineutrino Beams</p>
+<p>I only need to change <span class="math notranslate nohighlight">\(\mu_i\to -\bar\mu_i\)</span> and <span class="math notranslate nohighlight">\(\omega_i\to -\bar\omega_i\)</span>, where <span class="math notranslate nohighlight">\(\bar\mu=\sqrt{2}G_F \bar n_t\)</span>.</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}i \partial_z \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} =&amp;  - i \begin{pmatrix}\cot\theta_1\partial_x &amp; 0 \\
+0 &amp; \cot\theta_2 \partial_x
+\end{pmatrix} \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} \\
+&amp;+
+\frac{1}{2}\begin{pmatrix}
+(\lambda-\bar\mu_2 + \eta \bar\omega_1 + \bar\mu_2 \cos(\theta_1-\theta_2) )/\sin \theta_1 &amp; \bar\mu_2 (1-\cos(\theta_1-\theta_2)) /\sin \theta_1 \\
+\bar\mu_1 (1- \cos(\theta_1-\theta_2))/\sin\theta_2 &amp; (\lambda -\bar\mu_1 + \eta \bar\omega_2 +\bar\mu_1 \cos(\theta_1-\theta_2) )/\sin\theta_2
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}\end{split}\]</div>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">One Antineutrino and One Neutrino Beams</p>
+<p>Assume that the left beam is neutrino beam and the right beam is antineutrno beam. The linearized equation of motion becomes</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}i\partial_z \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} = &amp; -i\begin{pmatrix}
+\cot\theta_1 \partial_x &amp; 0 \\
+0 &amp; \cot\theta_2 \partial_x
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} \\
+&amp;+ \frac{1}{2}\begin{pmatrix}
+(\lambda - \bar\mu - 2\eta \omega_1 + \bar\mu \cos(\theta_1-\theta_2) )/\sin\theta_1 &amp; \bar\mu (1-\cos(\theta_1-\theta_2))/\sin\theta_1 \\
+-\mu(1-\cos(\theta_1-\theta_2))/\sin\theta_2 &amp; (\lambda + \mu + \eta \omega_2 - \mu \cos(\theta_1-\theta_2) )/\sin\theta_2
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="simple-cases">
+<h3>1.2.3.1.2. Simple Cases<a class="headerlink" href="#simple-cases" title="Permalink to this headline">¶</a></h3>
+<p>We first consider a simple case, where <span class="math notranslate nohighlight">\(\theta_1=\theta_2\equiv\theta\)</span> <span class="math notranslate nohighlight">\(\lambda=0\)</span>, <span class="math notranslate nohighlight">\(\eta=1\)</span>, and homogeneous in x direction. For simplicity we define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mu =&amp; \sqrt{2}G_F (n_1 + n_2)\\
+\mu_i =&amp; \mu \frac{n_i}{n_1+n_2}\equiv \mu f_i \\
+\xi = &amp; 1-\cos(\theta_1-\theta_2)\\
+\omega'_i = &amp; \lambda - \eta\omega_i.\end{split}\]</div>
+<div class="warning admonition">
+<p class="first admonition-title">Not A Self-consistant Example</p>
+<p>This is not a self-consistant example since <span class="math notranslate nohighlight">\(\theta_1=\theta_2\)</span> indicates that <span class="math notranslate nohighlight">\(\xi=0\)</span>. As we will see, no instability is present in this case.</p>
+<p class="last">However, we keep the term <span class="math notranslate nohighlight">\(\xi\)</span> because we need to analyze the effect of symmetry breaking. This example builds up a formalism.</p>
+</div>
+<p>The equation for perturbations becomes</p>
+<div class="math notranslate nohighlight" id="equation-eqn-linearized-eom-symmetric-eg">
+<span class="eqno">(1.33)<a class="headerlink" href="#equation-eqn-linearized-eom-symmetric-eg" title="Permalink to this equation">¶</a></span>\[\begin{split}i\partial_z\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} = \frac{1}{2\sin\theta} \begin{pmatrix}
+\omega'_i + \mu f_2\xi &amp; -\mu f_2 \xi \\
+-\mu f_1 \xi &amp; \omega'_2 + \mu f_1 \xi
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix}.\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\mu\)</span> is the most important energy scale in this problem, we scale all energies with it.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_{\hat z}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} = \frac{1}{2\sin\theta} \begin{pmatrix}
+\hat\omega'_1 +  f_2\xi &amp; - f_2 \xi \\
+- f_1 \xi &amp; \hat\omega'_2 +  f_1 \xi
+\end{pmatrix}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix},\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_{\hat z} =&amp; \frac{d}{\mu dz} \\
+\hat \omega'_i =&amp; \frac{\omega'_i}{\mu}.\end{split}\]</div>
+<p>The characteristic equation for this equation is</p>
+<div class="math notranslate nohighlight" id="equation-eqn-two-beam-line-characteristic-eqn-simple">
+<span class="eqno">(1.34)<a class="headerlink" href="#equation-eqn-two-beam-line-characteristic-eqn-simple" title="Permalink to this equation">¶</a></span>\[\left( ( \Omega - \hat\omega'_1 - f_2\xi )(\Omega - \hat\omega'_2-f_1\xi) - f_1 f_2 \xi^2 \right) =0,\]</div>
+<p>which is simplified to</p>
+<div class="math notranslate nohighlight">
+\[(\Omega-\Omega_1)(\Omega-\Omega_2) -f_1f_2\xi^2 = 0,\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Omega_1 = &amp; \hat\omega'_1 + f_2 \xi\\
+\Omega_2 = &amp; \hat\omega'_2 + f_1 \xi.\end{split}\]</div>
+<p>Complete the square</p>
+<div class="math notranslate nohighlight">
+\[(\Omega - (\Omega_1 + \Omega_2)/2)^2 = \frac{1}{4}(\Omega_1-\Omega_2) + f_1f_2\xi^2.\]</div>
+<p>The solution becomes</p>
+<div class="math notranslate nohighlight">
+\[\Omega = \frac{1}{2}(\Omega_1+\Omega_2)\pm\sqrt{ (\Omega_1-\Omega_2)^2/4 + f_1f_2\xi^2 }.\]</div>
+<p>The condition to have positive imaginary part is</p>
+<div class="math notranslate nohighlight">
+\[(\Omega_1-\Omega_2)^2 + 4f_1f_2\xi^2 &lt; 0,\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[-2\sqrt{-f_1f_2\xi^2}&lt;\Omega_1-\Omega_2&lt;2\sqrt{-f_1f_2\xi^2},\]</div>
+<p>and <span class="math notranslate nohighlight">\(f_1f_2\xi^2&lt;0\)</span>. Recall the meaning of <span class="math notranslate nohighlight">\(f_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[f_i = \frac{n_i}{n_1+n_2},\]</div>
+<p>instability requires that we have a spectrum crossing, i.e., <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span> have different signs.</p>
+<p>Plug in the definitions of <span class="math notranslate nohighlight">\(\Omega_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[-2\sqrt{-f_1f_2\xi^2}&lt; \eta(- \omega_1 + \omega_2)/\mu + (f_2 - f_1)\xi &lt; 2\sqrt{-f_1f_2\xi^2}.\]</div>
+<p>From this we can infer</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(f_1f_2\)</span> has to be negative, which means we can NOT have instabilities with only neutrinos or antineutrinos with all the symmetries we assumed. This is <span class="highlight-text">crossing</span>.</li>
+<li><span class="math notranslate nohighlight">\(-\omega_1+\omega_2=0\)</span> will remove the instability. So we have to have both neutrinos and antineutrinos.</li>
+<li><span class="math notranslate nohighlight">\(f_2-f_1\)</span>, <span class="math notranslate nohighlight">\(\eta(\omega_2-\omega_1)\)</span>, and <span class="math notranslate nohighlight">\(\mu\)</span> set limit on each other.</li>
+<li><span class="math notranslate nohighlight">\(\theta_1=\theta_2\equiv \theta\)</span> removes the instability since it leads to <span class="math notranslate nohighlight">\(\xi=0\)</span>. The emission has to be asymmetric in this simple two beams model. <strong>This is trivial since equal emission angle means the beams are not colliding.</strong></li>
+</ol>
+<div class="warning admonition">
+<p class="first admonition-title">But why?</p>
+<p>We have these conclusions. But why?</p>
+<p>What are the roles of</p>
+<ol class="last arabic simple">
+<li><span class="math notranslate nohighlight">\(f_i\)</span>,</li>
+<li>neutrino beam and antineutrino beam,</li>
+<li>hierarchy,</li>
+<li>neutrino number density variations,</li>
+<li>variations of angular distributions of neutrinos,</li>
+<li>variations of energy spectrum of neutrinos.</li>
+</ol>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">Real Symmetric and Skew Symmetric</p>
+<p>Another way of understanding this equation is to think of it as the growth of the length of the vector <span class="math notranslate nohighlight">\(\vec v = (\epsilon_1,\epsilon_2)^T\)</span>. For an arbitrary matrix differential equation of the form</p>
+<div class="math notranslate nohighlight">
+\[\partial_z \mathbf v = \mathbf A \mathbf v,\]</div>
+<p>we can always decompose the matrix <span class="math notranslate nohighlight">\(\mathbf A\)</span> into symmetric part and skew-symmetric part</p>
+<div class="math notranslate nohighlight">
+\[\mathbf A = \frac{1}{2}(\mathbf A + \mathbf A^T) + \frac{1}{2}(\mathbf A - \mathbf A^T) \equiv \mathbf A^+ + \mathbf A^-.\]</div>
+<p class="last">We can indentify the effect of <span class="math notranslate nohighlight">\(f_1-f_2\)</span> but this is not particularly useful since we can not say anything about the eigenvalues of matrix <span class="math notranslate nohighlight">\(\mathbf A\)</span> from the eigenvalues of matrix <span class="math notranslate nohighlight">\(\mathbf A^+\)</span> and <span class="math notranslate nohighlight">\(\mathbf A^-\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="breaking-symmetries">
+<h2>1.2.3.2. Breaking Symmetries<a class="headerlink" href="#breaking-symmetries" title="Permalink to this headline">¶</a></h2>
+<p>For a line model, the symmetries we have are</p>
+<ol class="arabic simple">
+<li>Time translation symmetry;</li>
+<li>Translational symmetry along the line;</li>
+<li>Energy spectrum of the beams; <strong>One of particular interest is to have different neutrino spheres for different energies which can be investigated using two beam model.</strong></li>
+<li>Number density of left and right beams;</li>
+<li>Angle of left and right beams;</li>
+<li>With and without matter.</li>
+</ol>
+<p>In this subsection we provide simple pictures of some the symmetries mentioned above.</p>
+<div class="section" id="emission-angle-parity-symmetry">
+<h3>1.2.3.2.1. Emission Angle Parity Symmetry<a class="headerlink" href="#emission-angle-parity-symmetry" title="Permalink to this headline">¶</a></h3>
+<p>The emission angles change the value of <span class="math notranslate nohighlight">\(\xi=1-\cos(\theta_1-\theta_2)\)</span> as well as rescale the quantities by angle dependent factor <span class="math notranslate nohighlight">\(1/\sin\theta_i\)</span>.</p>
+<p>To see the importance of angles, we can redefine some quantities</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\omega''_i=&amp; \frac{\omega'_i}{\sin\theta_i}\\
+f''_1=&amp;\frac{f_1}{\sin\theta_2} \\
+f''_2=&amp;\frac{f_2}{\sin\theta_1}.\end{split}\]</div>
+<p>The we will reach the same characteristic equation as Eq. <a class="reference internal" href="#equation-eqn-two-beam-line-characteristic-eqn-simple">(1.34)</a>. So the angles serves as shift of energy gap and angular distribution.</p>
+<p>The region of instability changes in a convoluted way. Given angles we can always write down the expression and find out.</p>
+<ol class="arabic simple">
+<li>The criteria of existance of instability doesn’t change.</li>
+<li>The region of instability changes.</li>
+</ol>
+</div>
+<div class="section" id="matter-effect">
+<h3>1.2.3.2.2. Matter Effect<a class="headerlink" href="#matter-effect" title="Permalink to this headline">¶</a></h3>
+<p>Including matter will define vacuum frequencies, <span class="math notranslate nohighlight">\(\omega'_i\)</span>, which is effectively just a shift of vacuum frequencies. In the symmetric emission case, <span class="math notranslate nohighlight">\(\omega'_1-\omega'_2\)</span> is independent of matter effect. But breaking the emission symmetry generates the degeneracy,</p>
+<div class="math notranslate nohighlight">
+\[\hat\omega''_1-\hat\omega''_2=( \lambda/\sin\theta_1 - \lambda/\sin\theta_2 + \eta(- \omega_1/\sin\theta_1 + \omega_2/\sin\theta_2) )/\mu`.\]</div>
+<ol class="arabic simple">
+<li>Very large matter density shift the region to very small <span class="math notranslate nohighlight">\(\mu\)</span>.</li>
+</ol>
+<div class="note admonition">
+<p class="first admonition-title">Varying Matter Potential</p>
+<p>However, matter effect is not always this simple. Suppose we have different matter potential for different beams, when they collide they would have built a different phase due to matter effect.</p>
+<p>The inhomogeneous matter effect has been studied in <a class="reference internal" href="#mangano2014" id="id3">[Mangano2014]</a>. It can excite high Fourier moments of polarization vector, which makes a lot of sense because it generates fine structure in the x direction.</p>
+<p>This can be integrated into LESA effect.</p>
+<table class="last docutils citation" frame="void" id="mangano2014" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[Mangano2014]</a></td><td>Mangano, G., Mirizzi, A., &amp; Saviano, N. (2014). Damping the neutrino flavor pendulum by breaking homogeneity. Physical Review D, 89(7), 73017. <a class="reference external" href="https://doi.org/10.1103/PhysRevD.89.073017">https://doi.org/10.1103/PhysRevD.89.073017</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="translational-symmetry">
+<h3>1.2.3.2.3. Translational Symmetry<a class="headerlink" href="#translational-symmetry" title="Permalink to this headline">¶</a></h3>
+<p>Translational symmetry is explained by introducing Fourier transform in x direction. For each mode, a term that is proportional to Fourier mode index m. It only appears in diagonal elements, thus is effectively a shift of vacuum frequencies, thus energies of neutrinos.</p>
+<p>For each Fourier mode</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} =  \mathbf Q(\Omega,k) e^{-i(\Omega t- k x)},\end{split}\]</div>
+<p>where we set <span class="math notranslate nohighlight">\(\Omega=0\)</span>.</p>
+<p>First term in RHS of Eq. <a class="reference internal" href="#equation-eqn-line-model-two-beams-all-neutrino-linearized-eom">(1.32)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}- i \begin{pmatrix}\cot\theta_1\partial_x &amp; 0 \\
+0 &amp; \cot\theta_2 \partial_x
+\end{pmatrix} \begin{pmatrix}
+\epsilon_1 \\
+\epsilon_2
+\end{pmatrix} = k \begin{pmatrix}\cot\theta_1 &amp; 0 \\
+0 &amp; \cot\theta_2
+\end{pmatrix} \begin{pmatrix}
+Q_1 \\
+Q_2
+\end{pmatrix}.\end{split}\]</div>
+<p>We now define <span class="math notranslate nohighlight">\(\hat\omega''_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\hat\omega''_{k,i} = \hat \omega''_i + 2\hat k\cot\theta_i,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat k=k/\mu\)</span>.</p>
+<p>The k term contributes to the difference between <span class="math notranslate nohighlight">\(\Omega_{k,i}\equiv \hat\omega''_{k,i}+ f''_i\xi\)</span>.</p>
+<p><strong>Instability criteria doesn’t change. However, the regime of instability changes.</strong> We also know that the instability region is determined by</p>
+<div class="math notranslate nohighlight">
+\[\lvert \Delta\hat\omega''_{12} + 2\hat k (\cot \theta_1 - \cot\theta_2) + \Delta f''_{12}\xi \rvert &lt; \sqrt{-f_1f_2\xi^2},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta \hat \omega''_{12} = \hat\omega''_1-\hat\omega''_2\)</span>. The instability region shift from</p>
+<div class="math notranslate nohighlight">
+\[-\sqrt{-f''_1f''_2\xi^2} -\Delta f''_{12}\xi &lt; (\Delta\omega''_{12} + 2 k(\cot\theta_1-\cot\theta_2))/\mu &lt; \sqrt{-f''_1f''_2\xi^2} -\Delta f''_{12}\xi\]</div>
+<p>If <span class="math notranslate nohighlight">\(\lvert \Delta\omega''_{12} + 2 k(\cot\theta_1-\cot\theta_2) \rvert\)</span> becomes larger, the region of instability is shifted to larger <span class="math notranslate nohighlight">\(\mu\)</span>, i.e., larger number density.</p>
+</div>
+<div class="section" id="number-density-of-emission">
+<h3>1.2.3.2.4. Number Density of Emission<a class="headerlink" href="#number-density-of-emission" title="Permalink to this headline">¶</a></h3>
+<p>A crossing is required to have instability, i.e., <span class="math notranslate nohighlight">\(-f''_1f''_2&gt;0\)</span>. Meanwhile the number density on the left and right have little effects on the existance of instability. It shifts the region of instability for <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+</div>
+<div class="section" id="energy-of-emission">
+<h3>1.2.3.2.5. Energy of Emission<a class="headerlink" href="#energy-of-emission" title="Permalink to this headline">¶</a></h3>
+<p>Different energy of two beams will make sure <span class="math notranslate nohighlight">\(-\omega_1 + \omega_2\neq 0\)</span>. It has no effects on the criteria but changes the <span class="math notranslate nohighlight">\(\mu\)</span> region of instability.</p>
+</div>
+<div class="section" id="time-translational-symmetry">
+<h3>1.2.3.2.6. Time Translational Symmetry<a class="headerlink" href="#time-translational-symmetry" title="Permalink to this headline">¶</a></h3>
+<div class="warning admonition">
+<p class="first admonition-title">Time Translational Symmetry</p>
+<p>How about time translational symmetry? I need to write down the equation of motion that is related to time.</p>
+<p>Two limits are of particular interest.</p>
+<ol class="last arabic simple">
+<li>Adiabatic limit,</li>
+<li>Superfast time variants.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="numerical-calculations">
+<h3>1.2.3.2.7. Numerical Calculations<a class="headerlink" href="#numerical-calculations" title="Permalink to this headline">¶</a></h3>
+<p>We assume the two beams have different energy, as indicated by <span class="math notranslate nohighlight">\(\omega_1\)</span> and <span class="math notranslate nohighlight">\(\omega_2\)</span> in Eq. <a class="reference internal" href="#equation-eqn-line-model-two-beams-all-neutrino-linearized-eom">(1.32)</a>.</p>
+<p>For numerical calcualtions, we scale quantities using <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+<p>With symmetric angles for the two beams, I didn’t find instabilities. However, <span class="math notranslate nohighlight">\(\theta_1\neq \theta_2\)</span> leads to instabilities in IH, which is consistant with our expections.</p>
+<p>For NH:</p>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-6.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-6.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-6.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-6.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-6.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-6.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-6.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-6.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-6.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-6-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-6-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-6-theta2-pi-div-3.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-6-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-6-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-6-theta2-pi-div-3.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-6-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-6-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-6-theta2-pi-div-3.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-0.5-theta1-pi-div-3-theta2-pi-div-3.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.-theta1-pi-div-3-theta2-pi-div-3.png" style="width: 31%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-3.png"><img alt="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-3.png" src="../../_images/line-two-beam-eta-1-lambda-0-mu-10-alpha-1.5-theta1-pi-div-3-theta2-pi-div-3.png" style="width: 31%;" /></a>
+</div>
+</div>
+<div class="section" id="non-local-symmetry-breaking">
+<h2>1.2.3.3. Non-local Symmetry Breaking<a class="headerlink" href="#non-local-symmetry-breaking" title="Permalink to this headline">¶</a></h2>
+<p>What was shown up there is breaking of symmetry locally. Similar to the discussion of varying matter potential, other symmetries can be broken globally, i.e., distribution as a function of spacetime coordinates.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/collective/two-beams-model.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.3.1. Halo Effect - Artificial Neural Network &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.3.2. Halo Effect - Finite Difference" href="halo-effect-finite-difference.html" />
+    <link rel="prev" title="1.3. Halo Effect" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.3.1. Halo Effect - Artificial Neural Network</a><ul>
+<li><a class="reference internal" href="#background">1.3.1.1. Background</a><ul>
+<li><a class="reference internal" href="#neutrino-neutrino-interaction-with-the-appearance-of-reflection">1.3.1.1.1. Neutrino-neutrino Interaction with The Appearance of Reflection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-methods">1.3.1.2. Numerical Methods</a><ul>
+<li><a class="reference internal" href="#artificial-neural-network-for-vacuum-oscillation">1.3.1.2.1. Artificial Neural Network for Vacuum Oscillation</a><ul>
+<li><a class="reference internal" href="#vacuum-oscillation">1.3.1.2.1.1. Vacuum Oscillation</a></li>
+<li><a class="reference internal" href="#id1">1.3.1.2.1.2. Artificial Neural Network for Vacuum Oscillation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#codes">1.3.1.2.2. Codes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: 1.3. Halo Effect"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3. Halo Effect</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-finite-difference.html" title="Next Chapter: 1.3.2. Halo Effect - Finite Difference"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.2. Halo E... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.3.1. Halo Effect - Artificial Neural Network</a><ul>
+<li><a class="reference internal" href="#background">1.3.1.1. Background</a><ul>
+<li><a class="reference internal" href="#neutrino-neutrino-interaction-with-the-appearance-of-reflection">1.3.1.1.1. Neutrino-neutrino Interaction with The Appearance of Reflection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numerical-methods">1.3.1.2. Numerical Methods</a><ul>
+<li><a class="reference internal" href="#artificial-neural-network-for-vacuum-oscillation">1.3.1.2.1. Artificial Neural Network for Vacuum Oscillation</a><ul>
+<li><a class="reference internal" href="#vacuum-oscillation">1.3.1.2.1.1. Vacuum Oscillation</a></li>
+<li><a class="reference internal" href="#id1">1.3.1.2.1.2. Artificial Neural Network for Vacuum Oscillation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#codes">1.3.1.2.2. Codes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="index.html" title="Previous Chapter: 1.3. Halo Effect"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.3. Halo Effect</span>
+    </a>
+  </li>
+  <li>
+    <a href="halo-effect-finite-difference.html" title="Next Chapter: 1.3.2. Halo Effect - Finite Difference"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.3.2. Halo E... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/halo/halo-effect-ann.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="halo-effect-artificial-neural-network">
+<h1>1.3.1. Halo Effect - Artificial Neural Network<a class="headerlink" href="#halo-effect-artificial-neural-network" title="Permalink to this headline">¶</a></h1>
+<div class="warning admonition">
+<p class="first admonition-title">Notice</p>
+<p class="last">This is a summary of the work that has been done on solving vacuum oscillation using artificial neural network. Also included are some tests.</p>
+</div>
+<p>The aim of this subproject is to solve a system that could not be solved using the transitional numerical methods. The system here is a system of neutrinos emitted from a plane but interact with with the neutrinos reflected from some other plane. In this case the evolution of the emitted neutrinos are coupled to itself through the reflection.</p>
+<div class="section" id="background">
+<h2>1.3.1.1. Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="neutrino-neutrino-interaction-with-the-appearance-of-reflection">
+<h3>1.3.1.1.1. Neutrino-neutrino Interaction with The Appearance of Reflection<a class="headerlink" href="#neutrino-neutrino-interaction-with-the-appearance-of-reflection" title="Permalink to this headline">¶</a></h3>
+<p>Here is the configuration.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/neutrinoWithReflection.png" src="../../_images/neutrinoWithReflection.png" />
+<p class="caption"><span class="caption-number">Fig. 1.170 </span><span class="caption-text">Configuration of the system. The lower plane is the emission plane while the upper plane the the reflection plane. Neutrino reaches the upper plane has a probability of being reflected, in other words there is a fixed coefficient for reflection. Only the reflected beams with angle that is the same as the emission angle are considered.</span></p>
+</div>
+<p>The lower plane is the emission plane while the upper plane the the reflection plane. Neutrinos get reflected at the upper plane with a reflection coefficient <span class="math notranslate nohighlight">\(\alpha\)</span>. The distance between the two plane is <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/emissionAngles.png" src="../../_images/emissionAngles.png" />
+<p class="caption"><span class="caption-number">Fig. 1.171 </span><span class="caption-text">There is a left-right symmetry of the emission beams. The angles are defined as <span class="math notranslate nohighlight">\(\theta\)</span>.</span></p>
+</div>
+<p>The notation for neutrino beams are</p>
+<ul class="simple">
+<li>Density Matrix of Emission to The Right: <span class="math notranslate nohighlight">\(\rho^{Re}\)</span></li>
+<li>Density Matrix of Emission to The Left: <span class="math notranslate nohighlight">\(\rho^{Le}\)</span></li>
+<li>Density Matrix of Reflection to The Right: <span class="math notranslate nohighlight">\(\rho^{Rr}\)</span></li>
+<li>Density Matrix of Reflection to The Left: <span class="math notranslate nohighlight">\(\rho^{Lr}\)</span></li>
+<li>Neutrino-neutrino Interaction of Emission to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Re}\)</span></li>
+<li>Neutrino-neutrino Interaction of Emission to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Le}\)</span></li>
+<li>Neutrino-neutrino Interaction of Reflection to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Rr}\)</span></li>
+<li>Neutrino-neutrino Interaction of Reflection to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Lr}\)</span></li>
+</ul>
+<p>At a fixed, each beam has a neutrino-neutrino interaction Hamiltonian with contribution from another emission beam and two reflected beams.</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/interactionAtPoint.png" src="../../_images/interactionAtPoint.png" />
+<p class="caption"><span class="caption-number">Fig. 1.172 </span><span class="caption-text">The neutrino-neutrino interaction at a fixed point for a beam going to the right.</span></p>
+</div>
+<p>For a right emission beam, the neutrino-neutrino interaction is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{\nu\nu}^{Re} =&amp; \mu \left( 2 n^{Lr} (\rho^{Lr} -\bar\rho^{Lr}) +  n^{Le}(1-\cos(2\theta) ) (\rho^{Le} -\bar\rho^{Le}) \right. \nonumber \\
+&amp; \left. + n^{Rr} (1+\cos(2\theta))(\rho^{Rr} - \bar\rho^{Rr})  \right)\end{split}\]</div>
+<p>The equation of motion for this beam is</p>
+<div class="math notranslate nohighlight">
+\[i \partial_z \rho^{Re}(z)  = \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Re} ,  \rho^{Re}(z)  \right],\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hbar= c =1\)</span>.</p>
+<p>This equation of motion shows that to calculate the evolution of the density matrix of the emission beam, we need the reflected beam, which, unfortunately depends on the emission beam. This is the reason why we tried artificial neural network. However, other methods could be found.</p>
+<p>The other seven equation can also be written down using exactly the same trick. First of all the Hamiltonian are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{\nu\nu}^{Le} &amp; = \mu \left[ 2 n^{Rr}(\rho^{Rr} - \bar \rho^{Rr}) + n^{Lr}(1+\cos 2\theta )( \rho^{Lr} - \bar \rho^{Lr} )  +  n^{Re} (1-\cos 2\theta) (\rho^{Re} - \bar \rho^{Re})\right] \\
+H_{\nu\nu}^{Rr}&amp; = \mu\left[ 2 n^{Le}(\rho^{Le} - \bar \rho^{Le}) + n^{Lr} (1-\cos 2\theta)(\rho^{Lr} - \bar\rho^{Lr}) + n^{Re}(1+\cos 2\theta) (\rho^{Re} - \bar \rho^{Re}) \right] \\
+H_{\nu\nu}^{Lr}&amp; = \mu \left[ 2n^{Re}(\rho^{Re}-\bar\rho^{Re}) + n^{Rr} (1-\cos 2\theta) (\rho^{Rr} - \bar \rho^{Rr}) + n^{Le}(1+\cos 2\theta )  (\rho^{Le} - \bar \rho^{Le} ) \right]\\\end{split}\]</div>
+<p>The EoMs are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}i\partial_z \rho^{Le}(z) &amp;= \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Le}, \rho^{Le}(z) \right] \\
+i\partial_z \rho^{Rr}(z) &amp;= \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Rr}, \rho^{Rr}(z) \right] \\
+i\partial_z \rho^{Lr}(z) &amp;= \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Lr}, \rho^{Lr}(z) \right].\end{split}\]</div>
+<p>For anti-neutrinos, the vacuum Hamiltonian is different from neutrinos which is <span class="math notranslate nohighlight">\(\bar H_{vac} = - H_{vac}\)</span>. The convention is that <span class="math notranslate nohighlight">\(z\)</span> is always pointing up perpendicular to the emission plane.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}- i \partial_z \bar \rho^{Re}(z) &amp; = \cos\theta \left[ \bar H_{vac} + H_{\nu\nu}^{Re} , \bar \rho^{Re}(z)  \right] \\
+- i\partial_z \bar\rho^{Le}(z) &amp;= \cos\theta \left[\bar H_{vac} + H_{\nu\nu}^{Le}, \bar\rho^{Le}(z) \right] \\
+- i\partial_z \bar\rho^{Rr}(z) &amp;= \cos\theta \left[\bar H_{vac} + H_{\nu\nu}^{Rr}, \bar\rho^{Rr}(z) \right] \\
+- i\partial_z \bar \rho^{Lr}(z) &amp;= \cos\theta \left[\bar H_{vac} + H_{\nu\nu}^{Lr}, \bar\rho^{Lr}(z) \right].\end{split}\]</div>
+<p>To solve the eight first order ODEs, eight constraints are required. To begin with, all the differential equations for the emission beams are given as usual.</p>
+<div class="math notranslate nohighlight">
+\[\rho^{Xe}(z=0) = \cdots ,\]</div>
+<p>where <span class="math notranslate nohighlight">\({}^{Xe}\)</span> is for <span class="math notranslate nohighlight">\({}^{Le}\)</span> and <span class="math notranslate nohighlight">\({}^{Re}\)</span>.</p>
+<p>However, the other four constraints are for the reflected beams and they are not clear.</p>
+<div class="warning admonition">
+<p class="first admonition-title">Question Here</p>
+<p class="last">I have a question here. Since there is no mixing between neutrinos and anti-neutrinos for Dirac particle, I would expect these constraints to be independent of each other. Is this true?</p>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho^{Lr}(z=d) &amp; = \mathbf{Refl} [\rho^{Le}(z=d)] \\
+\rho^{Rr}(z=d) &amp; =  \mathbf{Refl} [ \rho^{Rr}(z=d) ]  \\
+\bar\rho^{Lr}(z=d) &amp; =  \mathbf{Refl} [\bar \rho^{Le}(z=d)] \\
+\bar \rho^{Rr}(z=d) &amp; =  \mathbf{Refl} [ \bar \rho^{Re}(z=d)],\end{split}\]</div>
+<p>in which <span class="math notranslate nohighlight">\(\mathbf{Refl}\)</span> is the operator for the reflection that takes out some of the diagonal elements and multiplied each element by a constant.</p>
+<div class="warning admonition">
+<p class="first admonition-title">Question</p>
+<p class="last">The question is how to determine this <span class="math notranslate nohighlight">\(\mathbf{Refl}\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-methods">
+<h2>1.3.1.2. Numerical Methods<a class="headerlink" href="#numerical-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="artificial-neural-network-for-vacuum-oscillation">
+<h3>1.3.1.2.1. Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#artificial-neural-network-for-vacuum-oscillation" title="Permalink to this headline">¶</a></h3>
+<p>To make sure artificial neural network actually works, we started from the calculation of vacuum oscillation. In this section we consider only two flavour neutrino oscillation.</p>
+<div class="section" id="vacuum-oscillation">
+<h4>1.3.1.2.1.1. Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h4>
+<p>Neutrino Vacuum Oscillation is determined by the following equation of motion.</p>
+<div class="math notranslate nohighlight">
+\[i\partial_t \rho = \left[ H_{vac},\rho \right],\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density matrix and can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho = \begin{pmatrix} a &amp; b + i c\\
+b - i c &amp; d \end{pmatrix},\end{split}\]</div>
+<p>in which all the <span class="math notranslate nohighlight">\(a,b,c,d\)</span> are real.</p>
+<p>The vacuum Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{vac} = \frac{\delta^2 m}{4 E}\begin{pmatrix} -\cos(2\theta_v) &amp; \sin(2\theta_v)\\
+\sin(2\theta_v) &amp; \cos(2\theta_v)\end{pmatrix}.\end{split}\]</div>
+<p>Plug in this vacuum Hamiltonian we can write down four equations for <span class="math notranslate nohighlight">\(a,b,c,d\)</span>.</p>
+<p>Suppose we can write the vacuum Hamiltonian as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{vac} = \begin{pmatrix} h0 &amp; h1 \\ h2 &amp; h3 \end{pmatrix}.\end{split}\]</div>
+<p>Von Neumann equation shows that</p>
+<div class="math notranslate nohighlight">
+\[i \partial_t \rho = \left[ H_{vac}, \rho \right],\]</div>
+<p>Using the previous notations, I find four equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\dot a &amp;= - (h1+h2) c \\
+\dot b &amp;= (h0-h3) c \\
+\dot c &amp;= a ~ h1 + d~h1 + b (h0-h3) \\
+\dot d &amp; = c (h0-h3).\end{split}\]</div>
+<p>There are two ways of writing the program.</p>
+<ul class="simple">
+<li>2 by 2 Matrix</li>
+<li>1 by 4 Matrix</li>
+</ul>
+<p>In this note, we will use a 1 by 4 matrix to denote the density matrix, which is defined as,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\rho = \begin{pmatrix} a \\ d \\ b \\ c
+\end{pmatrix}\end{split}\]</div>
+<p>The equation of motion becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_t \begin{pmatrix} a \\ d \\ b \\ c
+\end{pmatrix}  = \begin{pmatrix} - (h1+h2) c \\  (h0-h3) c  \\ a~h1 + d~h1 + b (h0-h3) \\ c (h0-h3)  \end{pmatrix}\end{split}\]</div>
+<p>For vacuum oscillations, the Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H_{vac} \propto \begin{pmatrix} -\cos 2\theta &amp; \sin 2\theta \\ \sin 2\theta &amp; \cos 2\theta \end{pmatrix},\end{split}\]</div>
+<p>which leads to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_t \begin{pmatrix} a \\ d \\ b \\ c
+\end{pmatrix}  = \begin{pmatrix} - 2 c \sin 2\theta  \\  -2c \cos 2\theta   \\ a\sin 2\theta + d \sin 2\theta - 2b \cos 2\theta \\ -2c\cos 2\theta   \end{pmatrix}.\end{split}\]</div>
+<p>The four equations can be solved and the density matrix at any time can be obtained.</p>
+</div>
+<div class="section" id="id1">
+<h4>1.3.1.2.1.2. Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The code I have been testing is written by Shashank for my code doesn’t minimized to a good result.But the debugging for my code is also shown below.</p>
+<div class="note admonition">
+<p class="first admonition-title">Debugging( Compare my code with Shashank’s code)</p>
+<p>My code can also be found here at <a class="reference external" href="http://nbviewer.ipython.org/github/NeuPhysics/aNN/blob/master/ipynb/vacOsc4CompSSConvention.ipynb">nbviewer</a> .</p>
+<p class="last">Through the debugging I have confirmed that we have the same function value given the same arguments and the same cost function value in the same condition. But my code doesn’t show a good minimization result.</p>
+</div>
+<div class="note admonition">
+<p class="first admonition-title">Testing ANN for Vacuum Oscillation using Shashank’s Code</p>
+<p>These are tests done using Shashank’s code. Three types of tests has been done.</p>
+<p><strong>Using only Nelder-Mead</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vout</span><span class="o">=</span><span class="n">minimize</span><span class="p">(</span><span class="n">yp</span><span class="p">,</span><span class="n">partot</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;Nelder-Mead&#39;</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-11</span><span class="p">,</span>
+<span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ftol&quot;</span><span class="p">:</span><span class="mf">1e-9</span><span class="p">,</span> <span class="s2">&quot;maxfev&quot;</span><span class="p">:</span> <span class="mi">100000000</span><span class="p">,</span><span class="s2">&quot;maxiter&quot;</span><span class="p">:</span><span class="mi">1000000000</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>The result appears to be not bad. (“nfev”: number of function evaluation; “nit”: number of total iterations.)</p>
+<div class="figure align-center" id="id5">
+<span id="index-0"></span><img alt="../../_images/ann_NelderMead.png" src="../../_images/ann_NelderMead.png" />
+<p class="caption"><span class="caption-number">Fig. 1.173 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is the numerical one.</span></p>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>status: 0
+nfev: 145333
+success: True
+fun: 0.08876848018538129
+x: array([ 1.21427619, 2.79927002, -0.31095306, -3.03716024, 0.56912385,
+0.58925948, -2.20871918, -0.4288958 , -0.32492061, 0.49362869, 0.58244097,
+-0.22038025, -0.1011485 , 0.52798698, -2.32437879, 0.44040058, 0.38382487,
+0.55826206, -4.94480949, -1.07137694, 4.11333683, -1.50943871, 2.71204262,
+-0.76276552, 1.55497648, 0.22475994, 0.88421604, -1.06671129, -2.00532868,
+-3.00326507, 0.48030015, 0.25948442, 0.25845743, -0.82423628, 0.78934658,
+0.39508506, 0.02805506, -0.02669909, 10.68427395, -1.4504223 , -3.26192936,
+7.52701912, -2.55832534, 4.79891183, 4.44328441, -0.14572288, -0.59159877,
+0.23857354, -4.99080565, 3.47041765, -2.27428677, -1.07234212, 1.76593101,
+-2.21089853, -2.83558577, -0.94328398, -1.99377883, -2.21098883, 0.38034013,
+0.43636049])
+message: &#39;Optimization terminated successfully.&#39;
+nit: 131078
+</pre></div>
+</div>
+<p><strong>Using Only Differential Evolution</strong></p>
+<p>For a range of time in (0,2),</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and using only differential evolution,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vout</span><span class="o">=</span><span class="n">differential_evolution</span><span class="p">(</span><span class="n">yp</span><span class="p">,</span><span class="n">bounds</span><span class="p">,</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;best1bin&#39;</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">polish</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the function result turns out to be,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mf">5.649973778537050774e-03</span>
+</pre></div>
+</div>
+<p>while the result for x array is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">-</span><span class="mf">0.46752427</span> <span class="o">-</span><span class="mf">2.65884641</span> <span class="o">-</span><span class="mf">0.87100392</span> <span class="mf">2.21847349</span> <span class="o">-</span><span class="mf">0.68876981</span>
+<span class="o">-</span><span class="mf">1.18718098</span> <span class="o">-</span><span class="mf">2.45899394</span> <span class="o">-</span><span class="mf">2.41608376</span> <span class="o">-</span><span class="mf">2.03016303</span> <span class="o">-</span><span class="mf">2.50621246</span>
+<span class="o">-</span><span class="mf">1.72752687</span> <span class="o">-</span><span class="mf">3.52288081</span> <span class="mf">4.53627758</span> <span class="o">-</span><span class="mf">0.11251283</span> <span class="o">-</span><span class="mf">2.78713549</span>
+<span class="o">-</span><span class="mf">0.44748985</span> <span class="mf">1.64193553</span> <span class="o">-</span><span class="mf">0.92174658</span> <span class="o">-</span><span class="mf">0.99302148</span> <span class="mf">1.09775197</span>
+<span class="o">-</span><span class="mf">1.17935884</span> <span class="o">-</span><span class="mf">1.71925608</span> <span class="o">-</span><span class="mf">2.83591163</span> <span class="o">-</span><span class="mf">0.52258003</span> <span class="o">-</span><span class="mf">2.71429398</span>
+<span class="mf">1.35386314</span> <span class="mf">3.34156037</span> <span class="mf">0.96810593</span> <span class="mf">0.24346204</span> <span class="o">-</span><span class="mf">4.39480932</span> <span class="mf">2.09637481</span>
+<span class="o">-</span><span class="mf">0.74179975</span> <span class="mf">3.26104658</span> <span class="o">-</span><span class="mf">2.72595898</span> <span class="o">-</span><span class="mf">0.76631589</span> <span class="o">-</span><span class="mf">2.21640847</span>
+<span class="o">-</span><span class="mf">3.25833908</span> <span class="o">-</span><span class="mf">0.78663055</span> <span class="o">-</span><span class="mf">1.55206952</span> <span class="mf">0.46654166</span> <span class="o">-</span><span class="mf">4.8803229</span>
+<span class="o">-</span><span class="mf">4.26865044</span> <span class="o">-</span><span class="mf">0.12565569</span> <span class="mf">0.10469799</span> <span class="o">-</span><span class="mf">1.8695357</span> <span class="o">-</span><span class="mf">0.15555892</span>
+<span class="o">-</span><span class="mf">1.17371098</span> <span class="mf">0.26577405</span> <span class="mf">0.875804</span> <span class="o">-</span><span class="mf">2.51542228</span> <span class="o">-</span><span class="mf">4.29488662</span> <span class="o">-</span><span class="mf">2.6605975</span>
+<span class="mf">1.96894693</span> <span class="o">-</span><span class="mf">3.09901811</span> <span class="o">-</span><span class="mf">1.39401083</span> <span class="mf">0.96014599</span> <span class="mf">2.95403418</span>
+<span class="mf">3.79841345</span> <span class="o">-</span><span class="mf">2.10529717</span> <span class="o">-</span><span class="mf">4.10821308</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="figure align-center" id="id6">
+<span id="index-1"></span><img alt="../../_images/ann_devo.png" src="../../_images/ann_devo.png" />
+<p class="caption"><span class="caption-number">Fig. 1.174 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span></p>
+</div>
+<p><strong>Calculating a Longer Range</strong></p>
+<p>Double the range to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and apply only differential evolution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vout</span><span class="o">=</span><span class="n">differential_evolution</span><span class="p">(</span><span class="n">yp</span><span class="p">,</span><span class="n">bounds</span><span class="p">,</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;best1bin&#39;</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="n">polish</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The result is very bad.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nfev: 105906
+success: False
+fun: 0.15264565359933352
+x: array([ 1.2415797 , -1.27267036, 0.14521048, 1.06534837, -0.22554095,
+1.97210186, 4.85844909, -1.5015446 , -2.66713337, -0.59127114, -1.17100097,
+0.72691612, -3.84768313, 0.68169926, 1.61422628, -1.69251485, 0.61827763,
+-1.70389394, -2.90578576, 4.69827117, -4.18291259, -1.74349331, 3.76258326,
+0.95722587, 5. , 2.80036916, -4.24126024, -2.45899517, 0.99396641, 1.54324845,
+-2.99045871, -0.26770419, 1.62076744, -3.41084945, -1.31280928, -2.21778869,
+2.4837208 , 2.81803398, -3.94093507, 1.63757038, -3.5154411 , 2.93116174,
+0.74082291, -3.26617915, -0.19332002, 1.75131816, -1.46409058, 2.342905 ,
+-1.78805522, -2.55208371, -3.55389878, -3.7073305 , -1.98135275, -3.88337902,
+-3.3127076 , 0.13548304, 1.90006674, -3.89693459, -1.37139011, -2.28290761])
+message: &#39;Maximum number of iterations has been exceeded.&#39;
+jac: array([ 9.90042492e-02, 9.56093427e-02, 5.69877479e-05, 9.94637706e-04,
+3.43239936e-02, 4.57047178e-03, -1.29582733e-03, 2.14828155e-06,
+-4.48536763e-03, -1.63860814e-02, -2.19701479e-03, -4.18309276e-03,
+8.10185252e-06, -4.03330425e-03, -4.40266712e-03, -9.43032319e-03,
+-1.44689816e-04, -1.15090820e-01, -1.20024951e-01, -1.24700941e-01,
+-1.07455711e-03, -1.56707980e-05, -3.08311154e-03, 2.43753712e-02,
+-3.95701805e-03, -5.22216714e-03, -8.87512286e-05, -5.17548226e-03,
+1.23602240e-02, -4.17025858e-03, 4.53925786e-04, -6.57369575e-02,
+-6.92782415e-02, 4.67753614e-04, -7.70130126e-02, -3.59692831e-04,
+-5.45286039e-05, 3.42913198e-03, 1.46133106e-04, 7.60768115e-03,
+-1.32331091e-03, -1.87794225e-04, 5.21242494e-03, -1.47535317e-03,
+-8.97968366e-03, 3.09193504e-03, -7.49011964e-05, -2.00667261e-04,
+1.80120363e-03, 7.68457520e-04, -2.31557273e-03, -1.89914195e-03,
+-2.09954831e-03, 6.48930909e-04, 7.02615743e-04, 4.39465131e-04,
+4.34813574e-03, -4.79563611e-04, -2.18436380e-03, -1.66073266e-03])
+nit: 100
+</pre></div>
+</div>
+<div class="last figure align-center" id="id7">
+<span id="index-2"></span><img alt="../../_images/ann_devo_range.png" src="../../_images/ann_devo_range.png" />
+<p class="caption"><span class="caption-number">Fig. 1.175 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="codes">
+<h3>1.3.1.2.2. Codes<a class="headerlink" href="#codes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">expit</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">array12</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">60</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="mi">12</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">act</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">expit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+
+<span class="c1"># Density matrix in the forms that I wrote down on my Neutrino Physics notebook</span>
+<span class="c1"># x is a real array of 12 arrays.</span>
+
+<span class="n">init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">rho</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ti</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">):</span>
+
+    <span class="n">elem</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">elem</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">act</span><span class="p">(</span><span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">init</span> <span class="o">+</span> <span class="n">elem</span>
+
+
+<span class="n">rho</span><span class="p">(</span><span class="n">array12</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">init</span><span class="p">)</span>
+
+
+<span class="n">hamil</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[</span>  <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+<span class="nb">print</span> <span class="n">hamil</span>
+
+
+<span class="k">def</span> <span class="nf">rhop</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ti</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">):</span>
+
+    <span class="n">rhoprime</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">rhoprime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">act</span><span class="p">(</span><span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span> <span class="p">)</span> <span class="o">+</span>  <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span> <span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span> <span class="p">(</span><span class="n">act</span><span class="p">(</span><span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span> <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="p">(</span><span class="n">act</span><span class="p">(</span><span class="n">ti</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>  <span class="p">)</span> <span class="p">)</span><span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>  <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">rhoprime</span>
+
+
+
+<span class="c1">## This is the regularization which is not used in this code</span>
+
+<span class="n">regularization</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+<span class="k">def</span> <span class="nf">costi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ti</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">):</span>
+
+    <span class="n">rhoi</span> <span class="o">=</span> <span class="n">rho</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ti</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">)</span>
+    <span class="n">rhopi</span> <span class="o">=</span> <span class="n">rhop</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">ti</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">)</span>
+
+    <span class="n">costTemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">costTemp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">rhopi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">rhoi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">hamil</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">costTemp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">rhopi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">rhoi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">hamil</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">costTemp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">rhopi</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">rhoi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">hamil</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">costTemp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span> <span class="n">rhopi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">rhoi</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="n">hamil</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">hamil</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">rhoi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">rhoi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">costTemp</span><span class="p">)</span><span class="c1"># + 2.0*(rhoi[0]+rhoi[1]-1.0)**2</span>
+
+
+<span class="c1">#    return np.sum(costTemp) + regularization*np.sum(x**2)</span>
+
+
+<span class="n">costi</span><span class="p">(</span><span class="n">array12</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">init</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">):</span>
+
+    <span class="n">costTotal</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">costi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">initialCondition</span><span class="p">),</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">costTotal</span><span class="p">)</span>
+
+
+<span class="n">cost</span><span class="p">(</span><span class="n">array12</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="n">init</span><span class="p">)</span>
+<span class="c1">#cost(xresult,np.array([0,4,11]),init)</span>
+
+<span class="c1"># initGuess = np.asarray(np.split( 5.0*(np.random.rand(1,60)[0] - 0.5),12))</span>
+<span class="n">initGuess</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">endpoint</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tlin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">endpoint</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">costF</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">cost</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">tlin</span><span class="p">,</span><span class="n">init</span><span class="p">)</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">costvFResult</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">costF</span><span class="p">,</span><span class="n">initGuess</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;Nelder-Mead&#39;</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ftol&quot;</span><span class="p">:</span><span class="mf">1e-3</span><span class="p">,</span> <span class="s2">&quot;maxfev&quot;</span><span class="p">:</span> <span class="mi">10000000</span><span class="p">,</span><span class="s2">&quot;maxiter&quot;</span><span class="p">:</span><span class="mi">10000000</span><span class="p">})</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">start</span>
+<span class="n">timespent</span> <span class="o">=</span> <span class="n">stop</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nb">print</span> <span class="n">costvFResult</span>
+
+
+
+<span class="n">xresult</span> <span class="o">=</span> <span class="n">costvFResult</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">xresult</span>
+
+<span class="c1">#np.savetxt(&#39;costvFResult.txt&#39;,costvFResult,delimiter=&#39;,&#39;)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;xresult.txt&#39;</span><span class="p">,</span> <span class="n">xresult</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;timespent.txt&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">timespent</span><span class="p">]),</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;functionvalue.txt&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">costvFResult</span><span class="o">.</span><span class="n">fun</span><span class="p">]),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/halo/halo-effect-ann.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

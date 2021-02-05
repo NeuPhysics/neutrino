@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Neutrino Physics &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. Preliminary" href="preliminary/index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="research-notes/index.html">1. WIP Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Neutrino Physics</a><ul>
+<li><a class="reference internal" href="#general-topics-of-neutrino-physics">General Topics of Neutrino Physics</a></li>
+<li><a class="reference internal" href="#some-wip-notes">Some WIP Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="preliminary/index.html" title="Next Chapter: 1. Preliminary"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1. Preliminary &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Neutrino Physics</a><ul>
+<li><a class="reference internal" href="#general-topics-of-neutrino-physics">General Topics of Neutrino Physics</a></li>
+<li><a class="reference internal" href="#some-wip-notes">Some WIP Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="preliminary/index.html" title="Next Chapter: 1. Preliminary"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1. Preliminary &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="_sources/index.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="neutrino-physics">
+<h1>Neutrino Physics<a class="headerlink" href="#neutrino-physics" title="Permalink to this headline">¶</a></h1>
+<p>Neutrino is one of the most interesting particles in our world. The first proposal of such a new particle was given by Pauli. He managed to explain the spectrum of beta decay. In 1956, neutrinos were first detected in Cowan–Reines neutrino experiment. <a class="footnote-reference" href="#id2" id="id1">[1]</a> Later on a lot of neutrino experiments have been carried out.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Cowan%E2%80%93Reines_neutrino_experiment">Cowan–Reines neutrino experiment</a></td></tr>
+</tbody>
+</table>
+<div class="figure align-center" id="id3">
+<img alt="_images/FirstNeutrinoEventAnnotated.jpg" src="_images/FirstNeutrinoEventAnnotated.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">First detection of neutrino</span></p>
+</div>
+<p>This project is part of <a class="reference external" href="http://neutrino.xyz">NeuPhysics</a> . Just click the link already and see what’s going on.</p>
+<p>Notes of some research is hosted on bitbucket as private repository <a class="reference external" href="https://bitbucket.org/neuphysics/neutrino-reseaching">here</a> . Login to view the most current research if you have access to it.</p>
+<p>Cite this doc:</p>
+<a class="reference external image-reference" href="https://zenodo.org/record/167903"><img alt="_images/zenodo.167903-blue.svg" src="_images/zenodo.167903-blue.svg" /></a>
+<div class="section" id="general-topics-of-neutrino-physics">
+<h2>General Topics of Neutrino Physics<a class="headerlink" href="#general-topics-of-neutrino-physics" title="Permalink to this headline">¶</a></h2>
+<p>I’ve been recreating some of the topics related to neutrinos so that I could understand better.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/commonsense.html">1.1. Common Sense</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/commonsense.html#units">1.1.1. Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/commonsense.html#useful-conversions-in-neutrino-physics">1.1.2. Useful Conversions in Neutrino Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/commonsense.html#diagrams">1.1.3. Diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/commonsense.html#refs-and-notes">1.1.4. Refs and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/physics.html">1.2. Physics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#reactions-related-to-neutrinos">1.2.1. Reactions Related to Neutrinos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#what-is-a-neutrino-particle">1.2.2. What is a Neutrino Particle?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#chirality-and-helicity">1.2.3. Chirality and Helicity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#majorana-or-dirac">1.2.4. Majorana or Dirac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#states">1.2.5. States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#statistics">1.2.6. Statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/physics.html#refs-notes">1.2.7. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/quantum.html">1.3. Quantum Physics Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/quantum.html#time-independent-two-level-systems">1.3.1. Time Independent Two Level Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/quantum.html#time-dependent-two-level-system">1.3.2. Time Dependent Two Level System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/quantum.html#bloch-sphere-and-bloch-vectors">1.3.3. Bloch Sphere and Bloch Vectors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/math.html">1.4. Mathematics Related</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/math.html#pauli-matrices">1.4.1. Pauli Matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/math.html#spherical-harmonics">1.4.2. Spherical Harmonics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/math.html#the-equations">1.4.3. The Equations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/math.html#equation-solving">1.4.4. Equation Solving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/math.html#qualitative-analysis">1.4.5. Qualitative Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preliminary/questions.html">1.5. Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preliminary/questions.html#astrophysics">1.5.1. Astrophysics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mass/theory-mass.html">2.1. Theories of Neutrino Mass</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mass/theory-mass.html#majorana-particle">2.1.1. Majorana Particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mass/theory-mass.html#refs-notes">2.1.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mass/determine-mass.html">2.2. Determine Neutrino Mass</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mass/determine-mass.html#experiments">2.2.1. Experiments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiments/exp-concepts.html">3.2. Concepts in Experiments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="experiments/exp-concepts.html#prediction-of-theory">3.2.1. Prediction of Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiments/exp-concepts.html#sensitivity">3.2.2. Sensitivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiments/exp-concepts.html#review-of-experiments">3.2.3. Review of Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiments/exp-concepts.html#low-energy-neutrino-detection">3.2.4. Low Energy Neutrino Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiments/exp-concepts.html#refs-notes">3.2.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/propagation.html#wave-packet-treatment">4.1.1. Wave Packet Treatment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/two-flavor-three-flavor.html#oscillation-scales">4.2.1. Oscillation Scales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/two-flavor-three-flavor.html#refs-notes">4.2.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/oscillations.html">4.3. Evidence of Oscillations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/oscillations.html#results-of-experiments">4.3.1. Results of Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/oscillations.html#hamiltonian-equation-of-motion-and-solution">4.3.2. Hamiltonian, Equation of Motion and Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/oscillations.html#matter-effect-an-introduction">4.3.3. Matter Effect - An Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/oscillations.html#q-a">4.3.4. Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/vacuum.html">4.4. Vacuum Oscillation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#survival-problem">4.4.1. Survival Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#two-flavor-states">4.4.2. Two Flavor States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#the-standard-math-for-2-flavor-neutrino">4.4.3. The Standard Math for 2 Flavor Neutrino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#numerical-results-for-2-flavor-neutrino-oscillations">4.4.4. Numerical Results for 2 Flavor Neutrino Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#flavor-oscillations">4.4.5. 3 Flavor Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#ternary-diagram">4.4.6. Ternary Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#understanding-the-mixing-angles">4.4.7. Understanding the Mixing Angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillations/vacuum.html#refs-and-notes">4.4.8. Refs and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matter/msw.html">5.1. MSW Effect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#an-introduction-to-msw-effect">5.1.1. An Introduction to MSW Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#solar-neutrinos-and-msw-effect">5.1.2. Solar Neutrinos and MSW Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#visualizing-the-solar-neutrino-flavor-oscillations">5.1.3. Visualizing the Solar Neutrino Flavor Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#numerical-results">5.1.4. Numerical Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#experiments">5.1.5. Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#msw-triangle">5.1.6. MSW Triangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw.html#refs-and-notes">5.1.7. Refs and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw-derivation.html#flavor-neutrino-oscillations-and-matter-effect">5.2.1. 2 Flavor Neutrino Oscillations and Matter Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw-derivation.html#constant-electron-number-density">5.2.2. Constant Electron Number Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw-derivation.html#adiabatic-limit">5.2.3. Adiabatic Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw-derivation.html#general-discussion-of-matter-effect">5.2.4. General Discussion of Matter Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/msw-derivation.html#landau-zener-transition-of-neutrinos">5.2.5. Landau-Zener Transition of Neutrinos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matter/parametric.html">5.3. Parametric Resonance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matter/parametric.html#index-0">5.3.1. Parametric Resonance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/parametric.html#castle-wall-potential">5.3.2. Castle Wall Potential</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/parametric.html#refs-and-notes">5.3.3. Refs and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matter/matter-driven.html">5.4. Matter as Driving Energy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#oscillation-in-matter-and-vacuum">5.4.1. Oscillation in Matter and Vacuum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#rabi-like-transition">5.4.2. Rabi-like Transition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#analytical-attack">5.4.3. Analytical Attack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#period-matter-potential-non-physical">5.4.4. Period Matter Potential (NON-PHYSICAL)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#constant-matter-with-periodic-perturbation">5.4.5. Constant Matter with Periodic Perturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#resoances">5.4.6. Resoances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/matter-driven.html#refs-notes">5.4.7. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matter/distorted-phase-effect.html#the-phenomenon">5.5.1. The Phenomenon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matter/distorted-phase-effect.html#refs-notes">5.5.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coherent/coherent-scattering.html">6.1. Coherent Scattering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coherent/coherent-scattering.html#equation-of-motion-for-neutrinos">6.1.1. Equation of Motion for Neutrinos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="coherent/conserved-quantities.html">6.2. Conservations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coherent/conserved-quantities.html#conservation-of-lepton-numbers">6.2.1. Conservation of Lepton Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coherent/conserved-quantities.html#references-and-notes">6.2.2. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collective/concepts.html">7.1. Collective Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/concepts.html#collective-phenomenon">7.1.1. Collective Phenomenon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/concepts.html#bipolar-model">7.1.2. Bipolar Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/concepts.html#dense-homogeneous-isotropic-neutrino-gas">7.1.3. Dense Homogeneous Isotropic Neutrino Gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/concepts.html#refs-notes">7.1.4. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/intuitions.html">7.3. Intuitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/intuitions.html#refs-notes">7.3.1. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/symmetric-models.html#neutrino-gas">7.4.1. Neutrino Gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/symmetric-models.html#bulb-model">7.4.2. Bulb Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/symmetric-models.html#references-and-notes">7.4.3. References and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/synchronization.html#neutrinos-and-antineutrinos-in-flavor-isospin-space">7.5.1. Neutrinos and Antineutrinos in Flavor Isospin Space</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/linear-stability-analysis.html#some-general-discussion">7.6.1. Some General Discussion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/linear-stability-analysis.html#first-approach">7.6.2. First Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="collective/linear-stability-analysis.html#second-approach">7.6.3. Second Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="collective/symmetries.html#energy-spectrum-crossing">7.8.1. Energy Spectrum Crossing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instability/bipolar.html">8.1. Bipolar Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="instability/bipolar.html#linear-stability-analysis">8.1.1. Linear Stability Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instability/bipolar.html#refs-notes">8.1.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="instability/multi-zenith-angle.html#references-notes">8.2.1. References &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pictures/basics.html">9.1. Some Useful Physics Pictures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pictures/basics.html#magnetic-spin">9.1.1. Magnetic Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/basics.html#coupled-pendulum">9.1.2. Coupled Pendulum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/basics.html#gyroscope-or-spinning-top-picture">9.1.3. Gyroscope or Spinning Top Picture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/basics.html#polarization-vector">9.1.4. Polarization Vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/basics.html#neutrino-neutrino-interaction-and-bcs-theory">9.1.5. Neutrino-neutrino Interaction and BCS Theory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pictures/flavor-isospin.html">9.2. Flavor Isospin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pictures/flavor-isospin.html#neutrino-flavour-isospin">9.2.1. Neutrino Flavour Isospin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/flavor-isospin.html#graphical-representation-of-flavor-isospin">9.2.2. Graphical Representation of Flavor Isospin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/flavor-isospin.html#oscillations-with-self-interactions">9.2.3. Oscillations with Self-interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pictures/flavor-isospin.html#refs-notes">9.2.4. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/index.html#what-to-expect">10.1.1. What to expect?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/index.html#solving-eqns">10.1.2. Solving Eqns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resonances/matter-neutrino-resonance.html#references-and-notes">11.4.1. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="statistical-physics/master-eqn.html#quantum-master-equation">12.1.1. Quantum Master Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistical-physics/master-eqn.html#vacuum-oscillation-master-equation">12.1.2. Vacuum Oscillation Master Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistical-physics/master-eqn.html#neutrino-oscillation-in-matter-a-possible-master-equation-approach">12.1.3. Neutrino Oscillation in Matter - A Possible Master Equation Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistical-physics/master-eqn.html#self-interaction-between-neutrinos">12.1.4. Self Interaction Between Neutrinos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statistical-physics/master-eqn.html#refs-notes">12.1.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geometric-phase/review.html">13.1. Review of Geometric Phases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geometric-phase/review.html#berry-phase">13.1.1. Berry Phase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geometric-phase/review.html#refs-notes">13.1.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="geometric-phase/neutrino-oscillations-berry-phase.html#notes-references">13.2.1. Notes &amp; References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html#neutrinos-in-astrophysics">14.1.1. Neutrinos in Astrophysics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html#solar-neutrino-spectrum">14.1.2. Solar Neutrino Spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html#neutrino-spectrum-with-thermal-and-relativistic-modifications">14.1.3. Neutrino Spectrum with Thermal and Relativistic Modifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html#supernova-neutrinos-and-conclusion">14.1.4. Supernova Neutrinos and Conclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/stars-as-neutrino-factories.html#refs-notes">14.1.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/supernova.html">14.2. Supernova</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/supernova.html#supernova-explosion">14.2.1. Supernova Explosion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/supernova.html#boltzmann-transport">14.2.2. Boltzmann Transport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/supernova.html#neutrino-oscillations">14.2.3. Neutrino Oscillations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="astrophysics/supernova.html#refs-notes">14.2.4. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gravity/trajectory.html">15.1. Effect of Gravitation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gravity/trajectory.html#evaluation">15.1.1. Evaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gravity/trajectory.html#refs-notes">15.1.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gravity/eom-in-gravitational-field.html#references-and-notes">15.2.1. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cosmology/cnb.html">16.2.1. Cosmic Neutrino Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cosmology/cnb.html#refs-notes">16.2.2. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="misc/basis.html">17.1. Basis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/basis.html#rotation-of-states">17.1.1. Rotation of States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/basis.html#rotation-of-pauli-matrices">17.1.2. Rotation of Pauli Matrices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/basis.html#rotation-of-hamiltonian">17.1.3. Rotation of Hamiltonian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/basis.html#examples-of-rotating-basis">17.1.4. Examples of Rotating Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/basis.html#refs-notes">17.1.5. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="misc/decoherence.html">17.2. Decoherence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/decoherence.html#refs-notes">17.2.1. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="misc/qualitative.html">17.3. Qualitative Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/qualitative.html#oscillation-period-frequency-and-energy">17.3.1. Oscillation Period, Frequency and Energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="misc/qualitative.html#refs-and-notes">17.3.2. Refs and Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/cheatsheet.html#refs-notes">17.4.1. Refs &amp; Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="misc/faq.html">17.5. Frequently Asked Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="misc/faq.html#refs-notes">17.5.1. Refs &amp; Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="some-wip-notes">
+<h2>Some WIP Notes<a class="headerlink" href="#some-wip-notes" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="research-notes/index.html">1. WIP Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/scales.html">1.1.1. Scales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/msw-revisted.html">1.1.2. MSW Effect Revisted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/parametric-resonance-revisted.html">1.1.3. Parametric Resonance Revisted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/single-frequency.html">1.1.4. Single Frequency Matter Perturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/two-frequency.html">1.1.5. Two-frequency Matter Perturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/multi-frequency.html">1.1.6. Multi-frequency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/interference.html">1.1.7. Interference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/flavor-isospin-matter.html">1.1.8. Flavor Isospin Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/picture.html">1.1.9. Physics Picture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/matter-stimulated/linear-background-matter.html">1.1.10. Linear Background Matter Profile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/collective/index.html">1.2. Collective</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/fast-modes.html">1.2.1. Fast Modes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/directional-instability.html">1.2.2. Directional Instability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/two-beams-model.html">1.2.3. Two Beams Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/dispersion-relation.html">1.2.4. Dispersion Relation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/dispersion-relation-gap.html">1.2.5. Dispersion Relation and Gap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/dispersion-relation-and-crossing.html">1.2.6. Dispersion Relation and Crossing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/dispersion-and-greens-function.html">1.2.7. Dispersion Relation and Instabilities Using Green’s Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/flavor-waves.html">1.2.8. Flavor Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/discworld.html">1.2.9. Discworld</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/equilibrium-points.html">1.2.10. Equilibrium Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/collective/numerical.html">1.2.11. Numerical Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/halo/index.html">1.3. Halo Effect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-effect-ann.html">1.3.1. Halo Effect - Artificial Neural Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-effect-finite-difference.html">1.3.2. Halo Effect - Finite Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-effect-finite-difference-line-model.html">1.3.3. Halo Effect in Line Model - Finite Difference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-effect-analytical-methods.html">1.3.4. Halo Effect - Analytical Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-effect-two-beams.html">1.3.5. Halo Effect - Two Beams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/halo/halo-questions.html">1.3.6. Questions about Halo Problem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/gravity/index.html">1.4. Gravity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/gravity/equation-of-motion.html">1.4.1. Equation of Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/gravity/gravitational-waves.html">1.4.2. Gravitational Waves</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="research-notes/group-meeting/index.html">1.5. Group Meeting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="research-notes/group-meeting/2017/index.html">1.5.1. Group Meeting 2017</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="_sources/index.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>

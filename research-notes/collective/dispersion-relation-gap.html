@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>1.2.5. Dispersion Relation and Gap &#8212; Neutrino Notes</title>
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.2.6. Dispersion Relation and Crossing" href="dispersion-relation-and-crossing.html" />
+    <link rel="prev" title="1.2.4. Dispersion Relation" href="dispersion-relation.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44466929-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"]
+   });
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   tex2jax: {
+     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+   }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+     var all = MathJax.Hub.getAllJax(), i;
+     for(i=0; i < all.length; i += 1) {
+         all[i].SourceElement().parentNode.className += ' has-jax';
+     }
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+   processEscapes: true
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+"fast-preview": {
+Chunks: {EqnChunk: 10000, EqnChunkFactor: 1, EqnChunkDelay: 0},
+color: "inherit!important",
+updateTime: 30, updateDelay: 6,
+messageStyle: "none",
+disabled: false
+}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+   Macros: {
+     overlr: ['\\overset\\leftrightarrow{\#1}',1],
+     overl: ['\\overset\leftarrow{\#1}',1],
+     overr: ['\\overset\rightarrow{\#1}',1],
+     bra: ['\\left\\langle \#1\\right|',1],
+     ket: ['\\left| \#1\\right\\rangle',1],
+     braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+     avg: ['\\left< \#1 \\right>',1],
+     slashed: ['\\cancel{\#1}',1],
+     bold: ['\\boldsymbol{\#1}',1],
+     sech: ['\\operatorname{sech}{\#1}',1],
+     csch: ['\\operatorname{csch}{\#1}',1],
+     Tr: ['\\operatorname{Tr}{\#1}',1]
+   }
+}
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<!-- Toggle Environment Begin -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+    </script>
+<!-- Toggle Environment End -->
+
+<!-- Gitter Sidecar Environment BEGIN -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'NeuPhysics/neutrino',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+<!-- Gitter Sidecar Environment END -->
+
+ 
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Neutrino</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.4</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Chapters <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/physics.html">1.2. Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/quantum.html">1.3. Quantum Physics Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/math.html">1.4. Mathematics Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preliminary/questions.html">1.5. Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mass/index.html">2. Masses of Neutrinos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/theory-mass.html">2.1. Theories of Neutrino Mass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mass/determine-mass.html">2.2. Determine Neutrino Mass</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/index.html">3. Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/neutrino-sources.html">3.1. Neutrino Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-concepts.html">3.2. Concepts in Experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../experiments/exp-list.html">3.3. List of Neutrino Experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../oscillations/index.html">4. Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/propagation.html">4.1. How Do Neutrinos Propagate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/two-flavor-three-flavor.html">4.2. Two-flavor and Three-flavor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/oscillations.html">4.3. Evidence of Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/vacuum.html">4.4. Vacuum Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oscillations/limit-circle.html">4.5. Oscillations and Limit Circle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../matter/index.html">5. Interaction With Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw.html">5.1. MSW Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/msw-derivation.html">5.2. MSW Refraction, Resonance and Non-adiabacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/parametric.html">5.3. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/matter-driven.html">5.4. Matter as Driving Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matter/distorted-phase-effect.html">5.5. Distorted Phase Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../coherent/index.html">6. Coherent Scattering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/coherent-scattering.html">6.1. Coherent Scattering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../coherent/conserved-quantities.html">6.2. Conservations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../collective/index.html">7. Collective Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/concepts.html">7.1. Collective Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/equation-of-motion.html">7.2. Equation of Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/intuitions.html">7.3. Intuitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetric-models.html">7.4. Symmetric Neutrino Flavor Evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/synchronization.html">7.5. Synchronization in Neutrino Oscillations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/linear-stability-analysis.html">7.6. Linear Stability Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/fast-modes.html">7.7. Fast Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collective/symmetries.html">7.8. Symmetries in Neutrino Oscillations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../instability/index.html">8. Instability</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/bipolar.html">8.1. Bipolar Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-zenith-angle.html">8.2. Multi-Zenith-Angle Instability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../instability/multi-azimuth-angle.html">8.3. MAA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pictures/index.html">9. Pictures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/basics.html">9.1. Some Useful Physics Pictures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pictures/flavor-isospin.html">9.2. Flavor Isospin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../models/index.html">10. Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models/index.html#homogeneous-and-isotropic-neutrino-gas">10.1. Homogeneous and Isotropic Neutrino Gas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resonances/index.html">11. Resonances in Neutrino Oscillations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/msw-resonance.html">11.1. MSW Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/parameteric-resonance.html">11.2. Parametric Resonance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/resonance-in-general-matter-potential.html">11.3. Resonance in General Matter Potential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resonances/matter-neutrino-resonance.html">11.4. Matter Neutrino Resonance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../statistical-physics/index.html">12. Statistical Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../statistical-physics/master-eqn.html">12.1. Neutrino Oscillation And Master Equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geometric-phase/index.html">13. Geometric Phase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/review.html">13.1. Review of Geometric Phases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometric-phase/neutrino-oscillations-berry-phase.html">13.2. Neutrino Oscillations and Berry Phase</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../astrophysics/index.html">14. Astrophysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/stars-as-neutrino-factories.html">14.1. Stars as Neutrino Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/supernova.html">14.2. Supernova</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../astrophysics/merging-compact-objects.html">14.3. Merging Compact Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gravity/index.html">15. Gravity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/trajectory.html">15.1. Effect of Gravitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gravity/eom-in-gravitational-field.html">15.2. Equation of Motion in Gravitational Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cosmology/index.html">16. Neutrinos and Cosmology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#baryon-asymmetry-in-the-univserse">16.1. Baryon Asymmetry in the Univserse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cosmology/index.html#cosmic-neutrino-background">16.2. Cosmic Neutrino Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../misc/index.html">17. Other Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/basis.html">17.1. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/decoherence.html">17.2. Decoherence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/qualitative.html">17.3. Qualitative Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/cheatsheet.html">17.4. Neutrino Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/faq.html">17.5. Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
+</ul>
+<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../group-meeting/index.html">1.5. Group Meeting</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Sections <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">1.2.5. Dispersion Relation and Gap</a><ul>
+<li><a class="reference internal" href="#discrete-beams">1.2.5.1. Discrete Beams</a></li>
+<li><a class="reference internal" href="#two-beams">1.2.5.2. Two Beams</a></li>
+<li><a class="reference internal" href="#solutions">1.2.5.3. Solutions</a><ul>
+<li><a class="reference internal" href="#id1">1.2.5.3.1. Discrete Beams</a><ul>
+<li><a class="reference internal" href="#maa">1.2.5.3.1.1. MAA</a></li>
+<li><a class="reference internal" href="#mza">1.2.5.3.1.2. MZA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#box-spectra">1.2.5.3.2. Box Spectra</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#instability-regions-stop-at-axis-or">1.2.5.4. Instability Regions Stop at Axis <span class="math notranslate nohighlight">\(\omega=0\)</span> or <span class="math notranslate nohighlight">\(k=0\)</span></a></li>
+<li><a class="reference internal" href="#references-and-notes">1.2.5.5. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dispersion-relation.html" title="Previous Chapter: 1.2.4. Dispersion Relation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.2.4. Disper...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dispersion-relation-and-crossing.html" title="Next Chapter: 1.2.6. Dispersion Relation and Crossing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.2.6. Disper... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">1.2.5. Dispersion Relation and Gap</a><ul>
+<li><a class="reference internal" href="#discrete-beams">1.2.5.1. Discrete Beams</a></li>
+<li><a class="reference internal" href="#two-beams">1.2.5.2. Two Beams</a></li>
+<li><a class="reference internal" href="#solutions">1.2.5.3. Solutions</a><ul>
+<li><a class="reference internal" href="#id1">1.2.5.3.1. Discrete Beams</a><ul>
+<li><a class="reference internal" href="#maa">1.2.5.3.1.1. MAA</a></li>
+<li><a class="reference internal" href="#mza">1.2.5.3.1.2. MZA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#box-spectra">1.2.5.3.2. Box Spectra</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#instability-regions-stop-at-axis-or">1.2.5.4. Instability Regions Stop at Axis <span class="math notranslate nohighlight">\(\omega=0\)</span> or <span class="math notranslate nohighlight">\(k=0\)</span></a></li>
+<li><a class="reference internal" href="#references-and-notes">1.2.5.5. References and Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="dispersion-relation.html" title="Previous Chapter: 1.2.4. Dispersion Relation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1.2.4. Disper...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dispersion-relation-and-crossing.html" title="Next Chapter: 1.2.6. Dispersion Relation and Crossing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">1.2.6. Disper... &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/research-notes/collective/dispersion-relation-gap.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="dispersion-relation-and-gap">
+<h1>1.2.5. Dispersion Relation and Gap<a class="headerlink" href="#dispersion-relation-and-gap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="discrete-beams">
+<h2>1.2.5.1. Discrete Beams<a class="headerlink" href="#discrete-beams" title="Permalink to this headline">¶</a></h2>
+<p>I define the following beams,</p>
+<div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">spectDBWC1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+<span class="n">spectDBWC2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+<span class="n">spectDBWC3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+
+<span class="n">spectDBC1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+<span class="n">spectDBC2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+<span class="n">spectDBC3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.6</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The first thing is to really see that the instability regions are going through the gap in discrete beams case.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/lsaMAAROPltDB-WC1-to-WC3.png" src="../../_images/lsaMAAROPltDB-WC1-to-WC3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.100 </span><span class="caption-text">MAA solutions for spectra WC1, WC2, WC3. The instability regions go through the gap.</span></p>
+</div>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/lsaMAAROPltDB-C1-to-C3.png" src="../../_images/lsaMAAROPltDB-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.101 </span><span class="caption-text">MAA solutions for spectra C1, C2, C3. For real <span class="math notranslate nohighlight">\(\omega\)</span>, no complex k is found.</span></p>
+</div>
+<p>The MZA+ solution can also be found.</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/lsaMZApROPltDB-WC1-to-WC3.png" src="../../_images/lsaMZApROPltDB-WC1-to-WC3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.102 </span><span class="caption-text">MZA+ solution for WC spectra.</span></p>
+</div>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/lsaMZApROPltDB-C1-to-C3.png" src="../../_images/lsaMZApROPltDB-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.103 </span><span class="caption-text">MZA+ solution for C spectra. As like before, no instability in k is found.</span></p>
+</div>
+<p>The MZA- solutions:</p>
+<div class="figure align-center" id="id6">
+<img alt="../../_images/lsaMZAmROPltDB-WC1-to-WC3.png" src="../../_images/lsaMZAmROPltDB-WC1-to-WC3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.104 </span><span class="caption-text">MZA- solution for WC spectra.</span></p>
+</div>
+<div class="figure align-center" id="id7">
+<img alt="../../_images/lsaMZAmROPltDB-C1-to-C3.png" src="../../_images/lsaMZAmROPltDB-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.105 </span><span class="caption-text">MZA- solution for C spectra.</span></p>
+</div>
+<p>So the C spectra have no instabilities in k. I should calculate the instabilities in <span class="math notranslate nohighlight">\(\omega\)</span> for real k.</p>
+<div class="figure align-center" id="id8">
+<img alt="../../_images/lsaMAARKPltDB-WC1-to-WC3-and-C1-to-C3.png" src="../../_images/lsaMAARKPltDB-WC1-to-WC3-and-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.106 </span><span class="caption-text">MAA solution for real k finding complex <span class="math notranslate nohighlight">\(\omega\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id9">
+<img alt="../../_images/lsaMZApRKPltDB-WC1-to-WC3-and-C1-to-C3.png" src="../../_images/lsaMZApRKPltDB-WC1-to-WC3-and-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.107 </span><span class="caption-text">MZA+ solution for real k finding complex <span class="math notranslate nohighlight">\(\omega\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id10">
+<img alt="../../_images/lsaMZAmRKPltDB-WC1-to-WC3-and-C1-to-C3.png" src="../../_images/lsaMZAmRKPltDB-WC1-to-WC3-and-C1-to-C3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.108 </span><span class="caption-text">MZA- solution for real k finding complex <span class="math notranslate nohighlight">\(\omega\)</span>.</span></p>
+</div>
+</div>
+<div class="section" id="two-beams">
+<h2>1.2.5.2. Two Beams<a class="headerlink" href="#two-beams" title="Permalink to this headline">¶</a></h2>
+<p>For two beams, the equation <span class="math notranslate nohighlight">\(f(\omega,k)=0\)</span> is quadratic in both <span class="math notranslate nohighlight">\(\omega\)</span> and <span class="math notranslate nohighlight">\(k\)</span>, thus two solutions everywhere even for complex solutions.</p>
+<div class="note admonition">
+<p class="first admonition-title">Infinities at Emission Angle</p>
+<p>It has been a very weird thing that the MZA DR lines can cross the forbidden lines defined by the emission angle. To illustrate this problem, we think of a two beams model, with spectrum <span class="math notranslate nohighlight">\(\{\{g_1,u_1\},\{g_2,u_2\}\}\)</span>.</p>
+<p>The equation for DR has terms of the form</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{1-n u_i},\]</div>
+<p>which indicates that this can lead to infinity when <span class="math notranslate nohighlight">\(n=1/u_i\)</span>, unless the numerator is 0. For MAA solution, the numerator indeed becomes 0. But for MZA solution it is not that obvious.</p>
+<p>However, we can prove that one of the MZA solutions is still finite as <span class="math notranslate nohighlight">\(n=1/u_i\)</span>.</p>
+<p>The MZA solution is</p>
+<div class="math notranslate nohighlight">
+\[\omega(n) = -\frac{1}{4} \left(  I_0 - I_2 \pm \sqrt{  (I_0+I_2 - 2I_1)(I_0+I_2 + 2I_1) } \right),\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[I_m = \sum g_i \frac{ u_i^m }{1 - m u_i}.\]</div>
+<p>We are interested in wether the term</p>
+<div class="math notranslate nohighlight">
+\[I_0 - I_2 \pm \sqrt{  (I_0+I_2 - 2I_1)(I_0+I_2 + 2I_1) }\]</div>
+<p>will become finite at <span class="math notranslate nohighlight">\(n=1/u_i\)</span>. We plug in the expressions for <span class="math notranslate nohighlight">\(I_m\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;I_0 - I_2 \pm \sqrt{  (I_0+I_2 - 2I_1)(I_0+I_2 + 2I_1) } \\
+=&amp;\sum_i \frac{ g_i(1-u_i^2) }{1-n u_i} \pm \sqrt{ \left( \sum_i \frac{ g_i(u_i-1)^2 }{ 1- nu_i } \right) \left( \sum_i \frac{ g_i(u_i+1)^2 }{ 1- nu_i } \right) } \\
+=&amp; \frac{ g_1 (1-u_1^2)(1-n u_2) + g_2(1-u_2^2)(1-n u_1) }{ (1-n u_1)(1-n u_2) } \pm \sqrt{  \frac{ [ g_1 (1-u_1)^2 (1-n u_2) + g_2 (1-u_2)^2 (1-n u_1) ][ g_1 (1+u_1)^2 (1-n u_2) + g_2 (1+u_2)^2 (1-n u_1) ] }{ (1-n u_1)^2(1-n u_2)^2 } }.\end{split}\]</div>
+<p>We take the limit <span class="math notranslate nohighlight">\(n\to 1/u_i\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;I_0 - I_2 \pm \sqrt{  (I_0+I_2 - 2I_1)(I_0+I_2 + 2I_1) } \\
+=&amp; \frac{ g_1(1-u_1^2) }{ 1- n u_1 } \pm  \left\lvert \frac{ g_1(1-u_1^2)  }{  1 - n u_1  } \right\rvert.\end{split}\]</div>
+<p>One of the solutions, + or -, will be 0, depending on spectrum and also which side we are approaching the limit.</p>
+<p>Suppose we have <span class="math notranslate nohighlight">\(g_1&gt;0\)</span> and <span class="math notranslate nohighlight">\(n\to 1/u_1 +\)</span> (<span class="math notranslate nohighlight">\(1-n u_1&lt;0\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[\omega(n) = \frac{ g_1(1-u_1^2) }{ 1- n u_1 } \pm  \left(  - \frac{ g_1(1-u_1^2)  }{  1 - n u_1  }  \right),\]</div>
+<p class="last">so that the MZA+ solution is 0.</p>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2>1.2.5.3. Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<p>It seems that gap and instability are not really related all the time. For discrete beams, the number of solutions is the key to instabilities.</p>
+<p>It shows that spectrum <span class="math notranslate nohighlight">\(DBC1\)</span> has only MZA+ instabilities on the left side of the axis for real k. We need to prove that no solutions are found on the left side of the axis. Similarly for MZA- solutions but on different sides.</p>
+<div class="section" id="id1">
+<h3>1.2.5.3.1. Discrete Beams<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="maa">
+<h4>1.2.5.3.1.1. MAA<a class="headerlink" href="#maa" title="Permalink to this headline">¶</a></h4>
+<p>For <code class="docutils literal notranslate"><span class="pre">spectDBWC1</span></code> we have the following density plots of <span class="math notranslate nohighlight">\(f(\omega=0.1,k)\)</span>, <span class="math notranslate nohighlight">\(f(\omega=0.5,k)\)</span>, and <span class="math notranslate nohighlight">\(f(\omega=1.5,k)\)</span> respectively.</p>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbwc1.png"><img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbwc1.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbwc1.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbwc1.png"><img alt="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbwc1.png" src="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbwc1.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbwc1.png"><img alt="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbwc1.png" src="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbwc1.png" style="width: 32%;" /></a>
+<p>Similar plots are made for <code class="docutils literal notranslate"><span class="pre">spectDBC1</span></code> which has no MAA instabilities.</p>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbc1.png"><img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbc1.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectdbc1.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbc1.png"><img alt="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbc1.png" src="../../_images/f-of-omega-0.5-and-k-densityplot-log-maa-spectdbc1.png" style="width: 32%;" /></a>
+<a class="reference internal image-reference" href="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbc1.png"><img alt="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbc1.png" src="../../_images/f-of-omega-1.5-and-k-densityplot-log-maa-spectdbc1.png" style="width: 32%;" /></a>
+</div>
+<div class="section" id="mza">
+<h4>1.2.5.3.1.2. MZA<a class="headerlink" href="#mza" title="Permalink to this headline">¶</a></h4>
+<p>I can also plot out the MZA solutions.</p>
+<div class="figure align-center" id="id11">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mazm-spectdbwc1.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mazm-spectdbwc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.109 </span><span class="caption-text">MZA solutions (MZA+ left, MZA- right) for <code class="docutils literal notranslate"><span class="pre">spectDBWC1</span></code> with <span class="math notranslate nohighlight">\(\omega=0.1\)</span>. The MZA+ plot on the left seems to be weird. I checked the values within this region. There is a plateau here but not exactly flat. And they are not approaching 0. The other real solution in MZA- solution which is not shown is pretty far away from these two complex solutions.</span></p>
+</div>
+<p>A closer look at the MZA- solutions are showed below.</p>
+<div class="figure align-center" id="id12">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mazm-spectdbwc1-2.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mazm-spectdbwc1-2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.110 </span><span class="caption-text">MZA- solutions for <code class="docutils literal notranslate"><span class="pre">spectDBWC1</span></code> at a closer look at the 0 points. The white bands are regions slightly larger than 0. <code class="docutils literal notranslate"><span class="pre">Log&#64;Abs&#64;DBAxialSymOmegaNMZApEqnLHSComplex[0.1,</span> <span class="pre">-0.1826</span> <span class="pre">-</span> <span class="pre">0*I,</span> <span class="pre">spectDBWC1]</span></code> returns <code class="docutils literal notranslate"><span class="pre">0.475377</span></code>.</span></p>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">Check Values at Plateau</p>
+<div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">162</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Log</span><span class="o">@</span><span class="n">Abs</span><span class="o">@</span><span class="n">DBAxialSymOmegaNMZApEqnLHSComplex</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.6</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">spectDBWC1</span><span class="p">]</span><span class="w"></span>
+<span class="n">Log</span><span class="o">@</span><span class="n">Abs</span><span class="o">@</span><span class="n">DBAxialSymOmegaNMZApEqnLHSComplex</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">spectDBWC1</span><span class="p">]</span><span class="w"></span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">162</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">-2.46077</span><span class="w"></span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">163</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">-2.49663</span><span class="w"></span>
+</pre></div>
+</div>
+<p>A sharp transition occurs at the white boundry. The values near the boundary change abruptly. According to the values <span class="math notranslate nohighlight">\(f(\omega=0.1,k)\)</span>, imaginary part of it appears and becomes large as we move from left to right around the boundary.</p>
+<div class="figure align-center" id="id13">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-spectwc1-at-step-structure.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-spectwc1-at-step-structure.png" />
+<p class="caption"><span class="caption-number">Fig. 1.111 </span><span class="caption-text">LogPlot of <span class="math notranslate nohighlight">\(|f(\omega=0.1,k=kreal-0.8386*I)|\)</span> for <span class="math notranslate nohighlight">\(kreal\in [1.052, 1.0535]\)</span>. This region of plot goes across the step structure.</span></p>
+</div>
+<div class="last highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">LogPlot</span><span class="p">[</span><span class="n">Abs</span><span class="o">@</span><span class="n">DBAxialSymOmegaNMZApEqnLHSComplex</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">kreal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.8386</span><span class="o">*</span><span class="n">I</span><span class="p">,</span><span class="w">  </span><span class="n">spectDBWC1</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">kreal</span><span class="p">,</span><span class="w"> </span><span class="mf">1.052</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0535</span><span class="p">},</span><span class="w"> </span><span class="n">Frame</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">PlotLabel</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;|f(\[Omega]=0.1,k=kreal-0.8386*I)| for spectDBWC1&quot;</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p>For <span class="math notranslate nohighlight">\(\omega=-0.5\)</span>.</p>
+<div class="figure align-center" id="id14">
+<img alt="../../_images/f-of-omega-m0.5-and-k-densityplot-log-mzap-mazm-spectdbwc1.png" src="../../_images/f-of-omega-m0.5-and-k-densityplot-log-mzap-mazm-spectdbwc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.112 </span><span class="caption-text">MZA solutions (MZA+ left, MZA- right) for <code class="docutils literal notranslate"><span class="pre">spectDBWC1</span></code> with <span class="math notranslate nohighlight">\(\omega=-0.5\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id15">
+<img alt="../../_images/f-of-omega-m0.5-and-k-densityplot-log-mazm-spectdbwc1-2.png" src="../../_images/f-of-omega-m0.5-and-k-densityplot-log-mazm-spectdbwc1-2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.113 </span><span class="caption-text">MZA- solution around the real solution. <code class="docutils literal notranslate"><span class="pre">Log&#64;Abs&#64;DBAxialSymOmegaNMZApEqnLHSComplex[-0.5,</span> <span class="pre">-1.99</span> <span class="pre">-</span> <span class="pre">0*I,</span> <span class="pre">spectDBWC1]</span></code> returns <code class="docutils literal notranslate"><span class="pre">-5.18447</span></code> which indicates a 0 point.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="box-spectra">
+<h3>1.2.5.3.2. Box Spectra<a class="headerlink" href="#box-spectra" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id16">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectwc3.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.114 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>. We have points or regions approaching <span class="math notranslate nohighlight">\(f(\omega=0.1,k)\to 0\)</span>.</span></p>
+</div>
+<p>f-of-omega-m0.1-and-k-densityplot-log-maa-spectwc3.png</p>
+<div class="figure align-center" id="id17">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectwc3.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.115 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>. How do I determine whether it is approaching 0? I change the plot range and checked. <span class="math notranslate nohighlight">\(e^{-2.3}\)</span> seems to be the smallest value.</span></p>
+</div>
+<div class="figure align-center" id="id18">
+<img alt="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectwc3.png" src="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.116 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=1\)</span>. It seems that the solutions to k are real.</span></p>
+</div>
+<p>Similar plots are made for <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code>.</p>
+<div class="figure align-center" id="id19">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectwc4.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.117 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id20">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectwc4.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.118 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id21">
+<img alt="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectwc4.png" src="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.119 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id22">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectc1.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-maa-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.120 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id23">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectc1.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-maa-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.121 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id24">
+<img alt="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectc1.png" src="../../_images/f-of-omega-1-and-k-densityplot-log-maa-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.122 </span><span class="caption-text">MAA <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> for <span class="math notranslate nohighlight">\(\omega=1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id25">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-boxspectrum-spectwc3.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-boxspectrum-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.123 </span><span class="caption-text">MZA <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id26">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectwc3.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.124 </span><span class="caption-text">MZA solution <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id27">
+<img alt="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc3.png" src="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc3.png" />
+<p class="caption"><span class="caption-number">Fig. 1.125 </span><span class="caption-text">MZA solutions <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=0.05\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id28">
+<img alt="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc3-check-point.png" src="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc3-check-point.png" />
+<p class="caption"><span class="caption-number">Fig. 1.126 </span><span class="caption-text">MZA+ solution <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> for <span class="math notranslate nohighlight">\(\omega=0.05\)</span> for a small range of <span class="math notranslate nohighlight">\(k\)</span>. I chose only real <span class="math notranslate nohighlight">\(k\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id29">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-spectwc4.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.127 </span><span class="caption-text">MZA solution <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id30">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectwc4.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.128 </span><span class="caption-text">MZA solution <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=-0.1\)</span>.</span></p>
+</div>
+<div class="figure align-center" id="id31">
+<img alt="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc4.png" src="../../_images/f-of-omega-0.05-and-k-densityplot-log-mzap-mzam-spectwc4.png" />
+<p class="caption"><span class="caption-number">Fig. 1.129 </span><span class="caption-text">MZA solution <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> for <span class="math notranslate nohighlight">\(\omega=0.05\)</span>.</span></p>
+</div>
+<div class="warning admonition">
+<p class="first admonition-title">Questions about MZA Solutions</p>
+<p class="last">The results are weird. For <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> and <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code>, no real solutions are found in DR for <span class="math notranslate nohighlight">\(\omega=0.05\)</span>. However, here we found one real solution for <span class="math notranslate nohighlight">\(k\)</span>, which is not 0.</p>
+</div>
+<p>MZA solutions for spectra with crossing are shown below.</p>
+<div class="figure align-center" id="id32">
+<img alt="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-spectc1.png" src="../../_images/f-of-omega-0.1-and-k-densityplot-log-mzap-mzam-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.130 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> with <span class="math notranslate nohighlight">\(\omega=0.1\)</span></span></p>
+</div>
+<div class="figure align-center" id="id33">
+<img alt="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectc1.png" src="../../_images/f-of-omega-m0.1-and-k-densityplot-log-mzap-mzam-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.131 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> with <span class="math notranslate nohighlight">\(\omega=-0.1\)</span></span></p>
+</div>
+<div class="figure align-center" id="id34">
+<img alt="../../_images/f-of-omega-1-and-k-densityplot-log-mzap-mzam-spectc1.png" src="../../_images/f-of-omega-1-and-k-densityplot-log-mzap-mzam-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.132 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> with <span class="math notranslate nohighlight">\(\omega=1\)</span>. We found one real solution for MZA- solution.</span></p>
+</div>
+<div class="figure align-center" id="id35">
+<img alt="../../_images/f-of-omega-m1-and-k-densityplot-log-mzap-mzam-spectc1.png" src="../../_images/f-of-omega-m1-and-k-densityplot-log-mzap-mzam-spectc1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.133 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> with <span class="math notranslate nohighlight">\(\omega=-1\)</span>. We found one real solution for MZA+ solution.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="instability-regions-stop-at-axis-or">
+<h2>1.2.5.4. Instability Regions Stop at Axis <span class="math notranslate nohighlight">\(\omega=0\)</span> or <span class="math notranslate nohighlight">\(k=0\)</span><a class="headerlink" href="#instability-regions-stop-at-axis-or" title="Permalink to this headline">¶</a></h2>
+<div class="warning admonition">
+<p class="first admonition-title">Question about MZA solutions</p>
+<p class="last">It seems that we should Taylor expand around <span class="math notranslate nohighlight">\(omega=0\)</span> for MZA/MAA solutions to see what actually is happening. We can expand the <span class="math notranslate nohighlight">\(I_m\)</span>‘s around small real <span class="math notranslate nohighlight">\(\omega\)</span>, then perform the integral.</p>
+</div>
+<div class="toggle admonition">
+<p class="first admonition-title">Can I do Taylor Expansion?</p>
+<p>For discrete beams, we determine <span class="math notranslate nohighlight">\(k\)</span> using first order expansion of <span class="math notranslate nohighlight">\(I_m\)</span> at <span class="math notranslate nohighlight">\(\omega\sim 0\)</span>.</p>
+<p><strong>We first look at MAA solution.</strong></p>
+<p>For generality we do not distingush between discrete beams and continuous beams. Instead, we define moments of spectrum to be</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G_m = \begin{cases}
+\sum g_i u_i^m, &amp;\qquad \text{for discrete beams}\\
+\int G(u) u^m du, &amp;\qquad \text{for continuous spectrum}\\
+\end{cases}.\end{split}\]</div>
+<p>For MAA solutions, the equations we are interested in are</p>
+<div class="math notranslate nohighlight" id="equation-eqn-maa-bar-eqn">
+<span class="eqno">(1.39)<a class="headerlink" href="#equation-eqn-maa-bar-eqn" title="Permalink to this equation">¶</a></span>\[4 = \bar I_0 - \bar I_2,\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\bar I_m = \begin{cases}
+\sum g_i \frac{u_i^m}{\omega - u_i k} , &amp;\qquad \text{for discrete beams}\\
+\int G(u) \frac{u^m}{\omega - u k} du, &amp;\qquad \text{for continuous spectrum}\\
+\end{cases}.\end{split}\]</div>
+<p>We perform Taylor expansion on <span class="math notranslate nohighlight">\(\frac{u^m}{\omega - k u}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{u^m}{\omega - k u}  = -\frac{u^{m-1}}{k} - \omega \frac{u^{m-2}}{k^2} + \mathscr{O}(\omega^2).\]</div>
+<p>Eqn. <a class="reference internal" href="#equation-eqn-maa-bar-eqn">(1.39)</a> is simplified to</p>
+<div class="math notranslate nohighlight">
+\[4 k^2 + k (G_{-1}-G_1) + \omega ( G_{-2}-G_0 )=0.\]</div>
+<p>by dropping high orders. We are looking for solutions to this equation which is determined by the discriminant <span class="math notranslate nohighlight">\(\Delta\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\Delta = (G_{-1}-G_1)^2 - 16 \omega ( G_{-2}-G_0 ).\]</div>
+<p>The first term <span class="math notranslate nohighlight">\((G_{-1}-G_1)^2\)</span> is non-negative. I can tell that <span class="math notranslate nohighlight">\(\omega\)</span> plays a rule here. The question is how to quantify it.</p>
+<p>Analatyically I could discuss the region of positive or negative <span class="math notranslate nohighlight">\(\Delta\)</span>, i.e., real or imaginary solutions. But this is not simply determined by the sign of <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(( G_{-2}-G_0 )&gt;0\)</span>, <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span> requires <span class="math notranslate nohighlight">\(\omega&gt;\frac{ ( (G_{-1}-G_1)^2 }{ 16( G_{-2}-G_0 ) }\)</span>;</li>
+<li><span class="math notranslate nohighlight">\(( G_{-2}-G_0 )&lt;0\)</span>, <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span> requires <span class="math notranslate nohighlight">\(\omega&lt;\frac{ ( (G_{-1}-G_1)^2 }{ 16( G_{-2}-G_0 ) }\)</span>;</li>
+</ol>
+<p class="last">This is no really helpful and not correct.</p>
+</div>
+<p>From numerical calculations, we observe that <span class="math notranslate nohighlight">\(\omega/k\to 0\)</span>, as <span class="math notranslate nohighlight">\(\omega\to 0\)</span>. Thus we expect that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;4 =&amp; \bar I_0 - \bar I_2  \\
+\Rightarrow &amp;4 =&amp; \int G(u) \frac{1-u^2}{\omega - k u} du \\
+\Rightarrow &amp;4 =&amp; \frac{1}{k} \int G(u) \frac{ 1 - u^2 }{ \omega/k - u } .\end{split}\]</div>
+<p>We investigate the behavior this solution around <span class="math notranslate nohighlight">\(\omega\to 0\)</span> so that the MAA solution simplifies to</p>
+<div class="math notranslate nohighlight">
+\[4 = \frac{1}{k} \left( \mathscr P \int G(u) \frac{ 1 - u^2 }{  - u } - i \pi \operatorname{Sign}\left( \frac{-\omega \operatorname{Im}(k)}{\lvert k \rvert}  \right) G(0)  \right).\]</div>
+<p>We write down the real and imaginary part of the equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}k_R =&amp; \frac{1}{4}\left(  \mathscr P \int G(u) \frac{ 1 - u^2 }{  - u }  \right) \\
+k_I = &amp; \frac{1}{4}  \pi \operatorname{Sign}\left( \frac{\omega \operatorname{Im}(k)}{\lvert k \rvert}  \right) G(0) \\
+=&amp; \frac{1}{4}  \pi \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right) G(0) \\
+=&amp; \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right) ,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k = k_R + i k_I\)</span>. We are interested in imaginary part of <span class="math notranslate nohighlight">\(k\)</span> since it dertermines the instability. We rewrite the equation,</p>
+<div class="math notranslate nohighlight">
+\[\lvert k_I \rvert  =  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right).\]</div>
+<p>If <span class="math notranslate nohighlight">\(G(0)\)</span> is positive, we should have <span class="math notranslate nohighlight">\(\omega&gt;0\)</span> to really have instabilities. And the value of imaginary part of <span class="math notranslate nohighlight">\(k\)</span> is fixed to <span class="math notranslate nohighlight">\(\frac{G(0) \pi}{4}\)</span> which is <span class="math notranslate nohighlight">\(0.78\)</span> if <span class="math notranslate nohighlight">\(G(0)\)</span></p>
+<div class="warning admonition">
+<p class="first admonition-title">MZA Solutions</p>
+<p class="last">For MZA solutions, I tried but it seems to be complicated. Neverthless I have the form of solutions. Need more thinking.</p>
+</div>
+<p>For MZA solutions, we have the equation</p>
+<div class="math notranslate nohighlight">
+\[(\bar I_0 - \bar I_2 + 4)^2 = (\bar I_0 +\bar I_2 + 2 \bar I_1)(\bar I_0 +\bar I_2 - 2 \bar I_1).\]</div>
+<p>We calculate each terms at the limit <span class="math notranslate nohighlight">\(\omega/k \to 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\bar I_0 - \bar I_2 = &amp; \frac{1}{k}\left(  -\mathscr P \int \frac{G(u)}{u} du + i \pi \operatorname{Sign}(\omega k_I)G(0) + \int G(u) u du \right) \\
+\bar I_0 + \bar I_2 \pm 2 I_1 = &amp; \frac{1}{k}\left(  -\mathscr P \int \frac{G(u)}{u} du + i \pi \operatorname{Sign}(\omega k_I)G(0) - \int G(u) u du \mp 2\int G(u) du  \right).\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(1/k\)</span> could be elimited on both sides. We define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_R = &amp; 4 k_R  -\mathscr P \int \frac{G(u)}{u} du + \int G(u) u du \\
+A_I =&amp;  4 k_I + \pi \operatorname{Sign}(\omega k_I)G(0) \\
+B_R =&amp; -\mathscr P \int \frac{G(u)}{u} du - \int G(u) u du - 2\int G(u) du  \\
+B_I =&amp; \pi \operatorname{Sign}(\omega k_I)G(0) \\
+C_R =&amp; -\mathscr P \int \frac{G(u)}{u} du - \int G(u) u du + 2\int G(u) du  \\
+C_I =&amp; = B_I = \pi \operatorname{Sign}(\omega k_I)G(0) .\end{split}\]</div>
+<p>Then the equation could be rewitten as</p>
+<div class="math notranslate nohighlight">
+\[(A_R + i A_I)^2 = (B_R+i B_I) (C_R + i C_I).\]</div>
+<p>We seperate the imaginary part of the equation.</p>
+<div class="math notranslate nohighlight">
+\[2 A_R A_I = B_R C_I + B_I C_R,\]</div>
+<p>which is in fact</p>
+<div class="math notranslate nohighlight">
+\[2 A_R 4 k_I + 2 A_R \pi G(0) \operatorname{Sign}(\omega k_I) = \pi G(0)\operatorname{Sign}(\omega k_I) 2 \left( -\mathscr P \int \frac{G(u)}{u} du - \int G(u) u du \right).\]</div>
+<p>We solve <span class="math notranslate nohighlight">\(k_I\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[k_I = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega k_I) \left(  1 + \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4k_R - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right).\]</div>
+<div class="warning admonition">
+<p class="first admonition-title">Problems?</p>
+<ol class="last arabic simple">
+<li>In principle we could solve <span class="math notranslate nohighlight">\(k_R\)</span> and <span class="math notranslate nohighlight">\(k_I\)</span> by combining both the real and imaginary part. However, the real part of the equation is quadratic in k.</li>
+<li>I have the sign of <span class="math notranslate nohighlight">\(\omega\)</span> consistant with LSA for several spectra. But the numerical values are not exactly matching.</li>
+<li>The problem of MZA- solutions becomes much more serious now.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="references-and-notes">
+<h2>1.2.5.5. References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'neuphysics'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+
+<hr>
+
+
+<div class="container" style="border-top:solid 1px black;margin-top:10px;padding-top:10px;padding-bottom:10px;">
+    <p class="pull-right">
+
+
+        <a href="#"><span class="label label-info">Back to top</span></a>
+
+    </p>
+    <p>
+        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>Created with
+        <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
+        </span>|
+        <span><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
+        </span>|
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://physics.openmetric.org">Physics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+        </span>
+        <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+        </span>
+         |
+        <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <a href="/genindex.html">Index</a>
+     </span> |
+       <span><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+       <a href="../../_sources/research-notes/collective/dispersion-relation-gap.rst.txt"
+      rel="nofollow">Page Source</a>
+      </span>
+
+        <span><script data-gittip-username="emptymalei"
+        data-gittip-widget="button"
+        src="//gttp.co/v1.js"></script></span>
+    </p>
+
+    <hr>
+
+    <script>
+        window.jQuery || document.write('<script src="_static/js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+</div>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-66327435-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+ 
+  </body>
+</html>
