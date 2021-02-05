@@ -99,8 +99,8 @@ TeX: {
 }
 });
 </script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 
@@ -117,16 +117,7 @@ TeX: {
     </script>
 <!-- Toggle Environment End -->
 
-<!-- Gitter Sidecar Environment BEGIN -->
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'NeuPhysics/neutrino',
-    activationElement: false
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
-<!-- Gitter Sidecar Environment END -->
 
  
   </head><body>
@@ -271,11 +262,11 @@ TeX: {
 <p class="caption"><span class="caption-text">WIP Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">1.2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">1.3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">1.4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">1.5. Group Meeting</a></li>
 </ul>
 </li>
 </ul>
@@ -396,7 +387,7 @@ TeX: {
 
     </p>
     <p>
-        <span>© <a href="https://leima.is">2017, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
+        <span>© <a href="https://leima.is">2021, Lei Ma  <span class="glyphicon glyphicon-link" aria-hidden="true"></span></a> </span> |
         <span>Created with
         <a href="http://sphinx.pocoo.org/">Sphinx</a> and <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>.
         </span>|
@@ -404,13 +395,13 @@ TeX: {
         <a href="https://github.com/NeuPhysics/neutrino">On GitHub</a>
         </span>|
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-              <a href="http://physics.openmetric.org">Physics Notebook</a>
+              <a href="http://physics.leima.is">Physics Notebook</a>
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-              <a href="http://statisticalphysics.openmetric.org">Statistical Mechanics Notebook</a>
+              <a href="http://statisticalphysics.leima.is">Statistical Mechanics Notebook</a>
         </span>
         <span><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-            <a href="http://computational.neutrino.xyz>Computational Methods</a>
+            <a href="http://datumorphism.leima.is>Computational Methods</a>
         </span>
          |
         <span><span class="glyphicon glyphicon-list" aria-hidden="true"></span>
@@ -421,9 +412,7 @@ TeX: {
       rel="nofollow">Page Source</a>
       </span>
 
-        <span><script data-gittip-username="emptymalei"
-        data-gittip-widget="button"
-        src="//gttp.co/v1.js"></script></span>
+
     </p>
 
     <hr>
