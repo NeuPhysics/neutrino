@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  push:
+    branches: [master]
+
+jobs:
+  docs:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+      - name: Install dependencies
+        run: |
+          cd docs
+          pip install -r requirements.readthedocs.txt
+      - name: Generate documentation
+        run: |
+          cd docs
+          make html
+
+      - name: Upload to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html/
