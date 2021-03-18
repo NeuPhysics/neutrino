@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>3.2. Concepts in Experiments &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -11,15 +10,16 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.3. List of Neutrino Experiments" href="exp-list.html" />
@@ -286,8 +286,8 @@ TeX: {
 <li><a class="reference internal" href="#prediction-of-theory">3.2.1. Prediction of Theory</a><ul>
 <li><a class="reference internal" href="#what-does-a-detector-do">3.2.1.1. What Does A Detector Do</a></li>
 <li><a class="reference internal" href="#the-stringent-constraint-of-mixing-angle">3.2.1.2. The Stringent Constraint of Mixing Angle</a></li>
-<li><a class="reference internal" href="#small-limit">3.2.1.3. Small <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit</a></li>
-<li><a class="reference internal" href="#large-limit">3.2.1.4. Large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit</a></li>
+<li><a class="reference internal" href="#small-delta-m-2-langle-l-e-rangle-limit">3.2.1.3. Small <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit</a></li>
+<li><a class="reference internal" href="#large-delta-m-2-langle-l-e-rangle-limit">3.2.1.4. Large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#sensitivity">3.2.2. Sensitivity</a></li>
@@ -345,36 +345,36 @@ TeX: {
     <div class="col-md-12 content">
       
   <div class="section" id="concepts-in-experiments">
-<h1>3.2. Concepts in Experiments<a class="headerlink" href="#concepts-in-experiments" title="Permalink to this headline">¶</a></h1>
-<p>Chapter 7 (section 7.6) and chapter 12 of Giunti’s book <a class="footnote-reference" href="#id7" id="id1">[1]</a> are the good materials to read.</p>
+<h1><span class="section-number">3.2. </span>Concepts in Experiments<a class="headerlink" href="#concepts-in-experiments" title="Permalink to this headline">¶</a></h1>
+<p>Chapter 7 (section 7.6) and chapter 12 of Giunti’s book <a class="footnote-reference brackets" href="#id7" id="id1">1</a> are the good materials to read.</p>
 <div class="section" id="prediction-of-theory">
-<span id="index-0"></span><h2>3.2.1. Prediction of Theory<a class="headerlink" href="#prediction-of-theory" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">3.2.1. </span>Prediction of Theory<a class="headerlink" href="#prediction-of-theory" title="Permalink to this headline">¶</a></h2>
 <p>In experiments we do not directly measure the exact survival probabilty, instead we measure events that are generated by neutrinos. The connection between the theoretical exact survival probability is to average over the parameters that we do not precisely resolve.</p>
 <p>In the example of 2 flavor oscillation, the transition probability from <span class="math notranslate nohighlight">\(\nu_\alpha\)</span> to <span class="math notranslate nohighlight">\(\nu_\beta\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[P_{\alpha\to\beta}(L,E) = \frac{1}{2}\sin^2 2\theta_v\left( 1 - \cos\left( \frac{\Delta m^2}{2}\frac{L}{E} \right) \right).\]</div>
-<p>It is not possible to obtain this result since we do not have enough resolution for <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. The observed result is the probability averaged over the distribution of <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. <a class="footnote-reference" href="#id7" id="id2">[1]</a></p>
-<p>Nonetheless, in this simple two flavor example, the probability only depends on <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span>. So we average over <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span>. <a class="footnote-reference" href="#id7" id="id3">[1]</a></p>
+<p>It is not possible to obtain this result since we do not have enough resolution for <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. The observed result is the probability averaged over the distribution of <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. <a class="footnote-reference brackets" href="#id7" id="id2">1</a></p>
+<p>Nonetheless, in this simple two flavor example, the probability only depends on <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span>. So we average over <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span>. <a class="footnote-reference brackets" href="#id7" id="id3">1</a></p>
 <div class="math notranslate nohighlight">
 \[\langle P_{\alpha\to\beta}(L/E) \rangle = \int P_{\alpha\to\beta}(L/E) \phi(L/E) d(L/E),\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi(L/E)\)</span> is the distribution.</p>
-<p>The practical distribution of <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span> is Gaussian, <a class="footnote-reference" href="#id7" id="id4">[1]</a></p>
+<p>The practical distribution of <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span> is Gaussian, <a class="footnote-reference brackets" href="#id7" id="id4">1</a></p>
 <div class="math notranslate nohighlight">
 \[\phi(\frac{L}{E}) = \frac{1}{\sqrt{2\pi \sigma_{L/E}^2}} \exp\left( -\frac{(L/E - \langle L/E\rangle)^2}{2\sigma_{L/E}^2} \right),\]</div>
-<p>which determines the average of the cosine term is <a class="footnote-reference" href="#id7" id="id5">[1]</a></p>
+<p>which determines the average of the cosine term is <a class="footnote-reference brackets" href="#id7" id="id5">1</a></p>
 <div class="math notranslate nohighlight">
 \[\langle \cos \left(\frac{\Delta m^2}{2} \frac{L}{E} \right)\rangle = \cos\left( \frac{\Delta m^2}{2} \langle \frac{L}{E} \rangle \right)\exp\left( -\frac{1}{2}\left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right).\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Variance of L/E</p>
+<p class="admonition-title">Variance of L/E</p>
 <p>The virance can be splitted into two parts,</p>
 <div class="math notranslate nohighlight">
 \[\left( \frac{\sigma_{L/E}}{\langle L/E\rangle} \right)^2 = \left( \frac{\sigma_L}{\langle L\rangle} \right)^2 + \left( \frac{\sigma_E}{\langle E\rangle} \right)^2,\]</div>
 <p>which comes from the fact that a Gaussion is written as</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\propto \exp\left( \frac{1}{2} \left( \frac{b}{\sigma_b} - \frac{\langle b\rangle}{\sigma_b} \right)^2 \right).\]</div>
 </div>
 <div class="section" id="what-does-a-detector-do">
-<h3>3.2.1.1. What Does A Detector Do<a class="headerlink" href="#what-does-a-detector-do" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.1.1. </span>What Does A Detector Do<a class="headerlink" href="#what-does-a-detector-do" title="Permalink to this headline">¶</a></h3>
 <p>In experiments we can either detect the appearance of <span class="math notranslate nohighlight">\(\nu_\alpha\)</span> or find the disappearance of <span class="math notranslate nohighlight">\(\nu_\alpha\)</span> given a source of <span class="math notranslate nohighlight">\(\nu_\beta\)</span>.</p>
 <p>If a detector can not observe any oscillations, that means it can only put a upper limit on the averaged probability. <strong>Otherwise the detector will find exactly the averaged probability!</strong></p>
 <p>That being said, the averaged probability obtains an upper limit through experiments,</p>
@@ -383,7 +383,7 @@ TeX: {
 <p>which in 2 flavor case is</p>
 <div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right)   \leq P_{\alpha\to\beta}^{max}\]</div>
-<p>Using Gaussian distribution of <span class="math notranslate nohighlight">\(\phi(L/E)\)</span>, we have <a class="footnote-reference" href="#id7" id="id6">[1]</a></p>
+<p>Using Gaussian distribution of <span class="math notranslate nohighlight">\(\phi(L/E)\)</span>, we have <a class="footnote-reference brackets" href="#id7" id="id6">1</a></p>
 <div class="math notranslate nohighlight">
 \[P_{\alpha\to\beta} = \frac{1}{2} \sin^2 2\theta_v \left( 1 - \cos \left( \frac{\Delta m^2}{2} \langle \frac{L}{E}\rangle \right) \exp\left( -\frac{1}{2} \left( \frac{\Delta m^2}{2} \sigma_{L/E} \right)^2 \right) \right) \leq P_{\alpha\to\beta}^{max}.\]</div>
 <p>The relation between <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> and <span class="math notranslate nohighlight">\(L/E\)</span> can be found,</p>
@@ -394,26 +394,26 @@ TeX: {
 \[\sin^2 2\theta_v \leq f(\Delta m^2 \langle \frac{L}{E} \rangle ).\]</div>
 <p>This relation allows us to do a joint analysis of <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> and <span class="math notranslate nohighlight">\(\Delta m^2\)</span>.</p>
 <div class="note admonition">
-<p class="first admonition-title">General Form of Constraint</p>
+<p class="admonition-title">General Form of Constraint</p>
 <p>Rewrite</p>
 <div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right)   \leq 2 P_{\alpha\to\beta}^{max},\]</div>
 <p>we have</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v    \leq  \frac{ 2 P_{\alpha\to\beta}^{max} }{ \left( 1- \langle \cos\left( \frac{\Delta m^2}{2} \frac{L}{E} \right) \rangle \right) }\]</div>
 </div>
 <div class="figure align-center" id="id8">
 <span id="index-1"></span><img alt="../_images/sinSquare2thetaVSDeltamSquare.png" src="../_images/sinSquare2thetaVSDeltamSquare.png" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">A figure grabbed from Giunti’s book <em>Fundamentals of Neutrino Physics and Astrophysics</em> section 7.6. As we mentioned, we have a relation between <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> and <span class="math notranslate nohighlight">\(\Delta m^2\)</span>, which is given as the black solid lines in the figures. The regions that have larger values of <span class="math notranslate nohighlight">\(\sin ^2 2\theta_v\)</span> are excluded. Thus the solid lines are called exclusion curve.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">A figure grabbed from Giunti’s book <em>Fundamentals of Neutrino Physics and Astrophysics</em> section 7.6. As we mentioned, we have a relation between <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> and <span class="math notranslate nohighlight">\(\Delta m^2\)</span>, which is given as the black solid lines in the figures. The regions that have larger values of <span class="math notranslate nohighlight">\(\sin ^2 2\theta_v\)</span> are excluded. Thus the solid lines are called exclusion curve.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="the-stringent-constraint-of-mixing-angle">
-<h3>3.2.1.2. The Stringent Constraint of Mixing Angle<a class="headerlink" href="#the-stringent-constraint-of-mixing-angle" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.1.2. </span>The Stringent Constraint of Mixing Angle<a class="headerlink" href="#the-stringent-constraint-of-mixing-angle" title="Permalink to this headline">¶</a></h3>
 <p>The most stringent constraint for <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> happens when the demoninator of the right side is largest, which means</p>
 <div class="math notranslate nohighlight">
 \[\langle \cos \left( \frac{\Delta m^2}{2} \frac{L}{E}  \right) \rangle = -1.\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Averge of cosine</p>
+<p class="admonition-title">Averge of cosine</p>
 <p>In experiments, we have the fact that the change in <span class="math notranslate nohighlight">\(\frac{L}{E}\)</span> is small compared to the average value <span class="math notranslate nohighlight">\(\langle\frac{L}{E}\rangle\)</span>.</p>
 <p>So when we average over the cosine</p>
 <div class="math notranslate nohighlight">
@@ -426,7 +426,7 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\langle \left(\frac{L}{E} \right)^2 \rangle - \langle \frac{L}{E}\rangle^2,\]</div>
 <p>which is pluged into the inequality. We have finally</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\langle \left(\frac{L}{E} \right)^2 \rangle \ll 2\langle \frac{L}{E}\rangle^2.\]</div>
 </div>
 <p>The condition leads to</p>
@@ -439,7 +439,7 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\Delta m^2 \langle \frac{L}{E} \rangle \sim 2\pi.\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Units of <span class="math notranslate nohighlight">\(\Delta m^2  L/E\)</span></p>
+<p class="admonition-title">Units of <span class="math notranslate nohighlight">\(\Delta m^2  L/E\)</span></p>
 <p>First of all, calculate the following expression,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;1 eV^2 \frac{1km}{1GeV} \\
@@ -447,15 +447,15 @@ TeX: {
 =&amp; 1eV^2 \frac{10^{18}}{10^8 eV} \frac{1}{197 MeV} \\
 =&amp; \frac{1}{1.97}.\end{split}\]</div>
 <p>Thus we have</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\Delta m^2   \frac{L}{E} = \frac{1}{1.97} \left( \frac{\Delta m^2}{1eV^2} \right) \left(  \frac{L/1km}{E/1GeV} \right).\]</div>
 </div>
 <p>Rewrite it using the Bethe trandition,</p>
 <div class="math notranslate nohighlight">
 \[\left( \frac{\Delta m^2}{1eV^2} \right) \left(  \frac{L/1km}{E/1GeV} \right) \sim \frac{2\pi}{1.97} = 1.24.\]</div>
 </div>
-<div class="section" id="small-limit">
-<h3>3.2.1.3. Small <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit<a class="headerlink" href="#small-limit" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="small-delta-m-2-langle-l-e-rangle-limit">
+<h3><span class="section-number">3.2.1.3. </span>Small <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit<a class="headerlink" href="#small-delta-m-2-langle-l-e-rangle-limit" title="Permalink to this headline">¶</a></h3>
 <p>In small <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> limit, we have the Taylor expansion of cosine term</p>
 <div class="math notranslate nohighlight">
 \[\langle \cos \left( \frac{\Delta m^2}{2} \frac{L}{E} \right)\rangle \approx \langle 1- \frac{1}{2}\left( \frac{\Delta m^2}{2} \frac{L}{E} \right)^2 \rangle  \approx 1 - \frac{1}{2} \left(\frac{\Delta m^2}{2} \right)^2 \langle \left( \frac{L}{E} \right)^2 \rangle.\]</div>
@@ -469,7 +469,7 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \left( \frac{\Delta m^2}{2}  \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 },\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Giunti’s Results</p>
+<p class="admonition-title">Giunti’s Results</p>
 <p>Giuti’s idea is that</p>
 <div class="math notranslate nohighlight">
 \[\langle \left(\frac{L}{E} \right)^2 \rangle - \langle \frac{L}{E}\rangle^2 \ll 2\langle \frac{L}{E}\rangle^2\]</div>
@@ -480,138 +480,137 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\langle \left(\frac{L}{E} \right)^2 \rangle \sim \langle \frac{L}{E}\rangle^2.\]</div>
 <p>Then he has</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v \leq \frac{2 P_{\alpha\to\beta}^{max} }{ \frac{1}{2} \left( \frac{\Delta m^2}{2} \right)^2  \left(\langle\frac{L}{E} \rangle\right)^2 }.\]</div>
 </div>
 </div>
-<div class="section" id="large-limit">
-<h3>3.2.1.4. Large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit<a class="headerlink" href="#large-limit" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="large-delta-m-2-langle-l-e-rangle-limit">
+<h3><span class="section-number">3.2.1.4. </span>Large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> Limit<a class="headerlink" href="#large-delta-m-2-langle-l-e-rangle-limit" title="Permalink to this headline">¶</a></h3>
 <p>In this limit, we have a flat line in the <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> vs <span class="math notranslate nohighlight">\(\Delta m^2 \langle\frac{L}{E}\rangle\)</span> plot.</p>
 <p>The reason is that the limit of <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> becomes</p>
 <div class="math notranslate nohighlight">
 \[\sin^2 2\theta_v \leq 2  P_{\alpha\to\beta}^{max}.\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Reason for Flat Line</p>
-<p class="last">The exponential part dominates and the denominator becomes 1 at large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> value.</p>
+<p class="admonition-title">Reason for Flat Line</p>
+<p>The exponential part dominates and the denominator becomes 1 at large <span class="math notranslate nohighlight">\(\Delta m^2 \langle L/E \rangle\)</span> value.</p>
 </div>
 </div>
 </div>
 <div class="section" id="sensitivity">
-<h2>3.2.2. Sensitivity<a class="headerlink" href="#sensitivity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.2. </span>Sensitivity<a class="headerlink" href="#sensitivity" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="first admonition-title">Sensitivity</p>
+<p class="admonition-title">Sensitivity</p>
 <p><span class="math notranslate nohighlight">\((\sin^2 2\theta_v)_s\)</span> and <span class="math notranslate nohighlight">\((\Delta m^2)_s\)</span> are better at small values because they means the “smallest” constraint we can obtain.</p>
-<div class="last figure align-center" id="id9">
+<div class="figure align-center" id="id9">
 <img alt="../_images/exclusionCurveSensitivity.png" src="../_images/exclusionCurveSensitivity.png" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Sensitivities</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Sensitivities</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <p>For disappearance experiments:</p>
 <ul class="simple">
-<li>L <span class="math notranslate nohighlight">\(\searrow\)</span> : <span class="math notranslate nohighlight">\((\sin^2 2\theta_v)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>, <span class="math notranslate nohighlight">\((\Delta m^2)_s\)</span> <span class="math notranslate nohighlight">\(\nearrow\)</span>; (going up means sensitivity becomes worse; going down means sensitivity becomes better.)</li>
-<li>E <span class="math notranslate nohighlight">\(\searrow\)</span> : <span class="math notranslate nohighlight">\((\sin^2 2\theta_v)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>, <span class="math notranslate nohighlight">\((\Delta m^2)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>.</li>
+<li><p>L <span class="math notranslate nohighlight">\(\searrow\)</span> : <span class="math notranslate nohighlight">\((\sin^2 2\theta_v)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>, <span class="math notranslate nohighlight">\((\Delta m^2)_s\)</span> <span class="math notranslate nohighlight">\(\nearrow\)</span>; (going up means sensitivity becomes worse; going down means sensitivity becomes better.)</p></li>
+<li><p>E <span class="math notranslate nohighlight">\(\searrow\)</span> : <span class="math notranslate nohighlight">\((\sin^2 2\theta_v)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>, <span class="math notranslate nohighlight">\((\Delta m^2)_s\)</span> <span class="math notranslate nohighlight">\(\searrow\)</span>.</p></li>
 </ul>
 <p>We have very little control over the production energy of neutrinos though. To have a better sensitivity of mass difference (i.e., make the sensitivity values smaller), we need to have a bigger distance, which makes the sensitivity of mixing angles worse. But we can at the same time increase the flux of <span class="math notranslate nohighlight">\(\nu_\alpha\)</span> and the mass of the detector to compensate this loss of sensitivity.</p>
 </div>
 <div class="section" id="review-of-experiments">
-<h2>3.2.3. Review of Experiments<a class="headerlink" href="#review-of-experiments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.3. </span>Review of Experiments<a class="headerlink" href="#review-of-experiments" title="Permalink to this headline">¶</a></h2>
 <p>Through the analysis we know that the most important factors of experiments are</p>
 <ul class="simple">
-<li>Basiline <span class="math notranslate nohighlight">\(L\)</span>;</li>
-<li>Source neutrino flux;</li>
-<li>Neutrino energy <span class="math notranslate nohighlight">\(E\)</span>.</li>
+<li><p>Basiline <span class="math notranslate nohighlight">\(L\)</span>;</p></li>
+<li><p>Source neutrino flux;</p></li>
+<li><p>Neutrino energy <span class="math notranslate nohighlight">\(E\)</span>.</p></li>
 </ul>
 <div class="section" id="reactor-experiments">
-<h3>3.2.3.1. Reactor Experiments<a class="headerlink" href="#reactor-experiments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.3.1. </span>Reactor Experiments<a class="headerlink" href="#reactor-experiments" title="Permalink to this headline">¶</a></h3>
 <p>What we would like to see in the experiments is the disappearance of the reactor neutrinos. In nuclear fusion we have a lot of <span class="math notranslate nohighlight">\(\bar\nu_e\)</span> which will oscillate to other flavors. If the detector is sensitive enough we would find out that the detected neutrinos are smaller than the expected neutrinos without oscillation.</p>
 <p>The energy of the neutrinos is about 1.8MeV.</p>
 <p>The first question is how many neutrinos can be detected. If neutrino energy is too high, cross section at detector will be large but neutrino flux per unit energy will be small. The best detection rate is at some certain energy.</p>
 <div class="figure align-center" id="id10">
 <img alt="../_images/reactorDetection.png" src="../_images/reactorDetection.png" />
-<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The best energy of detection. Figure 12.2 in Giunti’s book.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The best energy of detection. Figure 12.2 in Giunti’s book.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">The Source Flux</p>
-<p class="last">We can calculate the production of neutrinos by monitoring the power of the nuclear reactor.</p>
+<p class="admonition-title">The Source Flux</p>
+<p>We can calculate the production of neutrinos by monitoring the power of the nuclear reactor.</p>
 </div>
 <div class="figure align-center" id="id11">
 <img alt="../_images/reactorExpBaseline.png" src="../_images/reactorExpBaseline.png" />
-<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The ratio of observed neutrino flux to expected neutrino flux compared in different experiments. The dotted line is the ratio when expected flux calculated from best fit results of <span class="math notranslate nohighlight">\(\Delta m^2\)</span> and <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> extracted from solar neutrino experiments. These experiments more or less lie on the best fit result. Figure 12.3 of Giunti’s book.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The ratio of observed neutrino flux to expected neutrino flux compared in different experiments. The dotted line is the ratio when expected flux calculated from best fit results of <span class="math notranslate nohighlight">\(\Delta m^2\)</span> and <span class="math notranslate nohighlight">\(\sin^2 2\theta_v\)</span> extracted from solar neutrino experiments. These experiments more or less lie on the best fit result. Figure 12.3 of Giunti’s book.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
-<li><span class="math notranslate nohighlight">\(L\sim 10 - 100 m\)</span> : short baseline experiment (SBL);</li>
-<li>CHOOZ and Palo Verde has baseline <span class="math notranslate nohighlight">\(L\sim 1km\)</span> : long baseline experiment (LBL);</li>
-<li>KamLAND has baseline <span class="math notranslate nohighlight">\(L\sim 200km\)</span> : Very long baseline experiment (VLBL).</li>
+<li><p><span class="math notranslate nohighlight">\(L\sim 10 - 100 m\)</span> : short baseline experiment (SBL);</p></li>
+<li><p>CHOOZ and Palo Verde has baseline <span class="math notranslate nohighlight">\(L\sim 1km\)</span> : long baseline experiment (LBL);</p></li>
+<li><p>KamLAND has baseline <span class="math notranslate nohighlight">\(L\sim 200km\)</span> : Very long baseline experiment (VLBL).</p></li>
 </ul>
 <p>To find the best result of mass squared difference <span class="math notranslate nohighlight">\(\Delta m^2\)</span>, we need a long baseline like KamLAND.</p>
 <div class="note admonition">
-<p class="first admonition-title">Background</p>
+<p class="admonition-title">Background</p>
 <p>One of the background of neutrinos is the cosmic ray. The cosmic neutrino background is much smaller than the reactor neutrino flux.</p>
 <div class="figure align-center" id="id12">
 <img alt="../_images/atmosphericNeutrinos.png" src="../_images/atmosphericNeutrinos.png" />
-<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Production of neutrinos through cosmic rays. We need to shield the hardons. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Atmospheric_Collision.svg">wikipedia</a>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Production of neutrinos through cosmic rays. We need to shield the hardons. From <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Atmospheric_Collision.svg">wikipedia</a>.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<p class="last">The background actually can be measured when the nuclear plants are turned off to supply fuel.</p>
+<p>The background actually can be measured when the nuclear plants are turned off to supply fuel.</p>
 </div>
 <div class="section" id="review-of-reactor-experiments">
-<h4>3.2.3.1.1. Review of Reactor Experiments<a class="headerlink" href="#review-of-reactor-experiments" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">3.2.3.1.1. </span>Review of Reactor Experiments<a class="headerlink" href="#review-of-reactor-experiments" title="Permalink to this headline">¶</a></h4>
 <p>Experiments can detect antielectron neutrinos through inverse neutron decay (inverse beta decay),</p>
 <div class="math notranslate nohighlight">
 \[\bar\nu_e + p \to n + e^+ .\]</div>
 <ul class="simple">
-<li>Late 1970s to the 1990s, SBL experiments with detector mass of order <span class="math notranslate nohighlight">\(10^2\mathrm{kg}\)</span> got null results, i.e., they didn’t find the disappearance of the reactor neutrinos which is <span class="math notranslate nohighlight">\(\bar\nu_e\)</span>. The reason is that they have short baseline. The result is <span class="math notranslate nohighlight">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</li>
-<li>LBL experiments gave us better exclusion curves.
+<li><p>Late 1970s to the 1990s, SBL experiments with detector mass of order <span class="math notranslate nohighlight">\(10^2\mathrm{kg}\)</span> got null results, i.e., they didn’t find the disappearance of the reactor neutrinos which is <span class="math notranslate nohighlight">\(\bar\nu_e\)</span>. The reason is that they have short baseline. The result is <span class="math notranslate nohighlight">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</p></li>
+<li><p>LBL experiments gave us better exclusion curves.
 * <strong>CHOOZ</strong> : 5 tons of detector mass; 1115km and 998m from the two sources.
-* <strong>Palo Verde</strong> : 12 tons of detector mass; 890m, 890m and 750m from the three sources.</li>
-<li><strong>KamLAND</strong>: mostly detects neutrinos from 53 reactors in Japan. 80% neutrinos from reactors at distance between 140km and 215km.  3000 tons of detector mass. Best fit results using KamLAND and solar neutrino is <span class="math notranslate nohighlight">\(\Delta m^2 = 7.9^{+0.6}_{0.5}\times 10^{-5}\mathrm{eV^2}\)</span> and <span class="math notranslate nohighlight">\(\tan^2\theta_v = 0.40^{+0.10}_{-0.07}\)</span>, which corresponds to <span class="math notranslate nohighlight">\(\sin^2 2\theta_v \sim 0.82\)</span>.</li>
+* <strong>Palo Verde</strong> : 12 tons of detector mass; 890m, 890m and 750m from the three sources.</p></li>
+<li><p><strong>KamLAND</strong>: mostly detects neutrinos from 53 reactors in Japan. 80% neutrinos from reactors at distance between 140km and 215km.  3000 tons of detector mass. Best fit results using KamLAND and solar neutrino is <span class="math notranslate nohighlight">\(\Delta m^2 = 7.9^{+0.6}_{0.5}\times 10^{-5}\mathrm{eV^2}\)</span> and <span class="math notranslate nohighlight">\(\tan^2\theta_v = 0.40^{+0.10}_{-0.07}\)</span>, which corresponds to <span class="math notranslate nohighlight">\(\sin^2 2\theta_v \sim 0.82\)</span>.</p></li>
 </ul>
 <div class="figure align-center" id="id13">
 <img alt="../_images/sblResults.png" src="../_images/sblResults.png" />
-<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">SBL results from Giunti’s book (figure 12.5). These experiments showed exclusion curves that extend to <span class="math notranslate nohighlight">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">SBL results from Giunti’s book (figure 12.5). These experiments showed exclusion curves that extend to <span class="math notranslate nohighlight">\(\Delta m^2\sim 10^{-2}\mathrm{eV^2}\)</span>.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id14">
 <img alt="../_images/choozResult.png" src="../_images/choozResult.png" />
-<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">CHOOZ result from Giunt’s book (figure 12.6).</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">CHOOZ result from Giunt’s book (figure 12.6).</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id15">
 <img alt="../_images/paloVerdeResult.png" src="../_images/paloVerdeResult.png" />
-<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Palo Verde result from Giunt’s book (figure 12.7).</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Palo Verde result from Giunt’s book (figure 12.7).</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id16">
 <img alt="../_images/kamLANDOsc.png" src="../_images/kamLANDOsc.png" />
-<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">KamLAND detected the oscillation. To calculate the expected flux, the experiment used <span class="math notranslate nohighlight">\(L_0 = 180 \mathrm {km}\)</span>. The best fit is <span class="math notranslate nohighlight">\(\Delta m^2 7.9^{+0.6}_{-0.5} times 10^{-5}\mathrm{eV^2}\)</span>.  From Giunti figure 12.9.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.10 </span><span class="caption-text">KamLAND detected the oscillation. To calculate the expected flux, the experiment used <span class="math notranslate nohighlight">\(L_0 = 180 \mathrm {km}\)</span>. The best fit is <span class="math notranslate nohighlight">\(\Delta m^2 7.9^{+0.6}_{-0.5} times 10^{-5}\mathrm{eV^2}\)</span>.  From Giunti figure 12.9.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id17">
 <img alt="../_images/kamLANDResults.png" src="../_images/kamLANDResults.png" />
-<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">KamLAND result from  Giunt’s book (figure 12.10). The left figure is the result of KamLAND while the result is the joint analysis of KamLAND and solar neutrino using 2 neutrino oscillation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 3.11 </span><span class="caption-text">KamLAND result from  Giunt’s book (figure 12.10). The left figure is the result of KamLAND while the result is the joint analysis of KamLAND and solar neutrino using 2 neutrino oscillation.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="accelerator-experiments">
-<h3>3.2.3.2. Accelerator Experiments<a class="headerlink" href="#accelerator-experiments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.3.2. </span>Accelerator Experiments<a class="headerlink" href="#accelerator-experiments" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>WB : wide band = wide energy spectrum;</li>
-<li>NB : narrow band = narrow energy spectrum;</li>
-<li>OA : off-axis to obtain almost monochromatic beam.</li>
+<li><p>WB : wide band = wide energy spectrum;</p></li>
+<li><p>NB : narrow band = narrow energy spectrum;</p></li>
+<li><p>OA : off-axis to obtain almost monochromatic beam.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="low-energy-neutrino-detection">
-<h2>3.2.4. Low Energy Neutrino Detection<a class="headerlink" href="#low-energy-neutrino-detection" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.4. </span>Low Energy Neutrino Detection<a class="headerlink" href="#low-energy-neutrino-detection" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>[KATRIN](<a class="reference external" href="https://www.katrin.kit.edu/">https://www.katrin.kit.edu/</a>)</li>
-<li>Project 8</li>
-<li>PROLEMY</li>
+<li><p>[KATRIN](<a class="reference external" href="https://www.katrin.kit.edu/">https://www.katrin.kit.edu/</a>)</p></li>
+<li><p>Project 8</p></li>
+<li><p>PROLEMY</p></li>
 </ol>
 </div>
 <div class="section" id="refs-notes">
-<h2>3.2.5. Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>, <a class="fn-backref" href="#id3">3</a>, <a class="fn-backref" href="#id4">4</a>, <a class="fn-backref" href="#id5">5</a>, <a class="fn-backref" href="#id6">6</a>)</em> Giunti, C., &amp; Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001</td></tr>
-</tbody>
-</table>
+<h2><span class="section-number">3.2.5. </span>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id5">5</a>,<a href="#id6">6</a>)</span></dt>
+<dd><p>Giunti, C., &amp; Kim, C. W. (2007). Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press. doi:10.1093/acprof:oso/9780198508717.001.0001</p>
+</dd>
+</dl>
 </div>
 </div>
 

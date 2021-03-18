@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>4.4. Vacuum Oscillation &#8212; Neutrino Notes</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -11,15 +10,16 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4.5. Oscillations and Limit Circle" href="limit-circle.html" />
@@ -335,7 +335,7 @@ TeX: {
     <div class="col-md-12 content">
       
   <div class="section" id="vacuum-oscillation">
-<h1>4.4. Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.4. </span>Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h1>
 <p>Schrodinger equation is</p>
 <div class="math notranslate nohighlight">
 \[i\partial_t \ket{\Psi} = \mathbf H \ket{\Psi},\]</div>
@@ -347,7 +347,7 @@ TeX: {
 \[\begin{split}\sqrt{p^2+m_i^2} &amp; = p\sqrt{1 + \frac{m_i^2}{p^2}} \\
 &amp;\approx  p(1 + \frac{1}{2} \frac{m_i^2}{p^2}).\end{split}\]</div>
 <div class="note admonition">
-<p class="first admonition-title">So Called Decoherence</p>
+<p class="admonition-title">So Called Decoherence</p>
 <p>Here we assume that they all have the same energy but different mass. The thing is we assume they have the same velocity since the mass is very small. To have an idea of the velocity difference, we can calculate the distance travelled by another neutrino in the frame of one neutrino.</p>
 <p>Assuming the mass of a neutrino is 1eV with energy 10MeV, we will get a speed of <span class="math notranslate nohighlight">\(1-10^{-14}\)</span> c. This <span class="math notranslate nohighlight">\(10^{-14}\)</span> c will make a difference about <span class="math notranslate nohighlight">\(3\mu\mathrm{ m}\)</span> in 1s.</p>
 <p>Will decoherence happen due to this? For high energy neutrinos this won’t be a problem however for low energy neutrinos this will definitely cause a problem for the wave function approach. Because the different mass eigenstates will become decoherent gradually along the path.</p>
@@ -360,7 +360,7 @@ TeX: {
 \[\begin{split}\Delta x &amp;= \lvert v_1 - v_2 \rvert t_{\mathrm{coh}}\\
 \frac{\hbar c}{\Delta E} &amp; = \lvert \frac{m_1^2}{2E_1^2} - \frac{m_2^2}{2E_2^2} \rvert t_{\mathrm{coh}} \\
 \frac{\hbar c}{\Delta E} &amp; = \frac{1}{2E}\lvert \Delta m_{12}^2 \rvert t_{\mathrm{coh}}\end{split}\]</div>
-<p class="last"><strong>It should be made clear that this is not really decoherence but in the view of wave packet formalism different propagation eigenstates will be far away from each other. As long as we put them together again we can overlap and oscillate again. No quantum decoherence is happening at all.</strong></p>
+<p><strong>It should be made clear that this is not really decoherence but in the view of wave packet formalism different propagation eigenstates will be far away from each other. As long as we put them together again we can overlap and oscillate again. No quantum decoherence is happening at all.</strong></p>
 </div>
 <p>In general the flavor eigenstates are the mixing of the mass eigenstates with a unitary matrix <span class="math notranslate nohighlight">\(\mathbf U\)</span>, that is</p>
 <div class="math notranslate nohighlight">
@@ -383,7 +383,7 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[H^f_{\alpha\beta}  = U^\dagger_{\alpha i} H^m_{ij} U_{j\beta}.\]</div>
 <div class="section" id="survival-problem">
-<h2>4.4.1. Survival Problem<a class="headerlink" href="#survival-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.1. </span>Survival Problem<a class="headerlink" href="#survival-problem" title="Permalink to this headline">¶</a></h2>
 <p>The neutrino states at any time can be written as</p>
 <div class="math notranslate nohighlight">
 \[\ket{\Psi(t)}  = X_1 \ket{\nu_1 } e^{-i E_1 t}+ X_2 \ket{ \nu_2 } e^{-i E_2 t},\]</div>
@@ -410,15 +410,15 @@ TeX: {
 <p><span class="math notranslate nohighlight">\(U^{\dagger *}_{i\alpha}\)</span> stands for the <em>i</em> th row and the <span class="math notranslate nohighlight">\(\alpha\)</span> th column of the matrix <span class="math notranslate nohighlight">\(U^{\dagger *}\)</span>.</p>
 </div>
 <div class="section" id="two-flavor-states">
-<h2>4.4.2. Two Flavor States<a class="headerlink" href="#two-flavor-states" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.2. </span>Two Flavor States<a class="headerlink" href="#two-flavor-states" title="Permalink to this headline">¶</a></h2>
 <p>Suppose the neutrinos are prepared in electron flavor initially, the survival probability of electron flavor neutrinos is calculated using the result I get previously.</p>
 <p>Electron neutrinos are the lighter ones, then I have <span class="math notranslate nohighlight">\({}_a = {}_e\)</span> and denote <span class="math notranslate nohighlight">\({}_b={}_x\)</span>.</p>
 <div class="note admonition">
-<p class="first admonition-title">Meaning of Mixing</p>
+<p class="admonition-title">Meaning of Mixing</p>
 <p>In the small mixing angle limit,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}\nu_e \\ \nu_x\end{pmatrix} \to \begin{pmatrix}  1 &amp; \theta \\ -\theta  &amp; 1 \end{pmatrix}   \begin{pmatrix}\nu_1 \\ \nu_2\end{pmatrix}\end{split}\]</div>
-<p class="last">which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate  <span class="math notranslate nohighlight">\(\nu_1\)</span> . By <span class="math notranslate nohighlight">\(\nu_1\)</span> we mean the state with energy  <span class="math notranslate nohighlight">\(\frac{ \delta m^2 }{4E}\)</span> in vacuum.</p>
+<p>which is very close to an identity matrix. This implies that electron neutrino is more like mass eigenstate  <span class="math notranslate nohighlight">\(\nu_1\)</span> . By <span class="math notranslate nohighlight">\(\nu_1\)</span> we mean the state with energy  <span class="math notranslate nohighlight">\(\frac{ \delta m^2 }{4E}\)</span> in vacuum.</p>
 </div>
 <p>In fact the dynamics of the system is very easily solved without dive into the math. Suppose we have <span class="math notranslate nohighlight">\(\ket{\nu_e}\)</span> initially, which is</p>
 <div class="math notranslate nohighlight">
@@ -443,7 +443,7 @@ TeX: {
 &amp;= 1- \frac{1}{2}\sin^2 2\theta_v \left(1- \cos\left( \frac{2\pi x}{l_v} \right) \right)\end{split}\]</div>
 </div>
 <div class="section" id="the-standard-math-for-2-flavor-neutrino">
-<h2>4.4.3. The Standard Math for 2 Flavor Neutrino<a class="headerlink" href="#the-standard-math-for-2-flavor-neutrino" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.3. </span>The Standard Math for 2 Flavor Neutrino<a class="headerlink" href="#the-standard-math-for-2-flavor-neutrino" title="Permalink to this headline">¶</a></h2>
 <p><strong>This section is to demonstrate the standard math for differential equations we have learned in first year undergrad. In fact almost all the procedures are not necessary because we get this Hamiltonian in Flavor basis by transform the diagonalized Hamiltonian in mass eigenstates basis using the mixing matrix. Hence this section only works as a review of mathematics.</strong></p>
 <p>To solve a set of first order differential equations, I need the determinant of coefficient matrix. For 2 flavor neutrino oscillations, the equation of motion is</p>
 <div class="math notranslate nohighlight">
@@ -526,7 +526,7 @@ i \frac{\omega}{2} \sin 2\theta_v &amp; i \frac{\omega}{2} \cos 2\theta_v - \lam
 <p>This problem can also be solved using numerical methods. Here is a comparison between this analytical result and a numerical result.</p>
 </div>
 <div class="section" id="numerical-results-for-2-flavor-neutrino-oscillations">
-<h2>4.4.4. Numerical Results for 2 Flavor Neutrino Oscillations<a class="headerlink" href="#numerical-results-for-2-flavor-neutrino-oscillations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.4. </span>Numerical Results for 2 Flavor Neutrino Oscillations<a class="headerlink" href="#numerical-results-for-2-flavor-neutrino-oscillations" title="Permalink to this headline">¶</a></h2>
 <p>For numerical calculation, the equations should be made dimensionless or seperate out the quantities that is not dimensionless before any calculations.</p>
 <p>In 2 flavor neutrino case, the equation of motion to be solved is</p>
 <div class="math notranslate nohighlight">
@@ -539,11 +539,11 @@ i \frac{\omega}{2} \sin 2\theta_v &amp; i \frac{\omega}{2} \cos 2\theta_v - \lam
 \end{pmatrix}.\end{split}\]</div>
 <div class="figure align-center" id="id1">
 <img alt="../_images/vacuumOsc.jpg" src="../_images/vacuumOsc.jpg" />
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Theoretical and numerical results overlap on all the range completely.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Theoretical and numerical results overlap on all the range completely.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="flavor-oscillations">
-<h2>4.4.5. 3 Flavor Oscillations<a class="headerlink" href="#flavor-oscillations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.5. </span>3 Flavor Oscillations<a class="headerlink" href="#flavor-oscillations" title="Permalink to this headline">¶</a></h2>
 <p>The vacuum Hamiltonian in mass eigenstate basis is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{2E}\begin{pmatrix}
@@ -616,11 +616,11 @@ U_{\tau 1} &amp; U_{\tau 2} &amp; U_{\tau 3}
 \[\mathbf{H} = \mathbf{U} \mathbf{H_{vm}} \mathbf{U^{-1}}.\]</div>
 <div class="figure align-center" id="id2">
 <img alt="../_images/vacOsc3Flavor.jpg" src="../_images/vacOsc3Flavor.jpg" />
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Numerical results for vacuum oscillation 3 flavor case. The overall shapes are the same for NH and IH however they differ on small scales.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Numerical results for vacuum oscillation 3 flavor case. The overall shapes are the same for NH and IH however they differ on small scales.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id3">
 <img alt="../_images/vacOscNormInvComp.png" src="../_images/vacOscNormInvComp.png" />
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Comparison of normal hierarchy and inverted hierarchy.The reason that they are almost the same is that the oscillation length for <span class="math notranslate nohighlight">\(\Delta m_{13}^2\)</span> is small thus it only changes the oscillation patterns for the small oscillations. Vacuum energy scales in normal hierarchy are</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Comparison of normal hierarchy and inverted hierarchy.The reason that they are almost the same is that the oscillation length for <span class="math notranslate nohighlight">\(\Delta m_{13}^2\)</span> is small thus it only changes the oscillation patterns for the small oscillations. Vacuum energy scales in normal hierarchy are</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\omega_{12} &amp;= \frac{\Delta m_{12}^2}{2E} = 3.8\times 10^{-20}\mathrm{GeV} \\
@@ -631,35 +631,35 @@ U_{\tau 1} &amp; U_{\tau 2} &amp; U_{\tau 3}
 </div>
 <div class="figure align-center" id="id4">
 <img alt="../_images/vacOscNormInvComp-Invert12.png" src="../_images/vacOscNormInvComp-Invert12.png" />
-<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Comparison of normal hierarchy and inverted hierarchy but with inverted <span class="math notranslate nohighlight">\(\Delta m_{12}^2\)</span>.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">Comparison of normal hierarchy and inverted hierarchy but with inverted <span class="math notranslate nohighlight">\(\Delta m_{12}^2\)</span>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="ternary-diagram">
-<h2>4.4.6. Ternary Diagram<a class="headerlink" href="#ternary-diagram" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.6. </span>Ternary Diagram<a class="headerlink" href="#ternary-diagram" title="Permalink to this headline">¶</a></h2>
 <p>Since the probability for differential flavors of neutrinos are summed to 1 and can be represented in barycentric coordinates, a ternary plot would be nice to understand what happens in the oscillations.</p>
 <div class="figure align-center" id="id5">
 <img alt="../_images/vacOsc3FlavorTernary900.png" src="../_images/vacOsc3FlavorTernary900.png" />
-<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Ternary diagram for vacuum oscillations. The state starts from bottom left, which means that the system has only electron neutrinos. As the neutrino travels, it oscillates in curves. After one period of the beat, it reaches the far end and then oscillates backwards.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">Ternary diagram for vacuum oscillations. The state starts from bottom left, which means that the system has only electron neutrinos. As the neutrino travels, it oscillates in curves. After one period of the beat, it reaches the far end and then oscillates backwards.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id6">
 <img alt="../_images/vacOsc3FlavorTernary300.png" src="../_images/vacOsc3FlavorTernary300.png" />
-<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Ternary diagram for less oscillation periods. The system starts from the right-bottom corner which is measured to be all electron neutrinos. The period of the spirals is from the energy scale that is related to a small length scale. The system spirals up then spirals back. This is a “period” that is governed by the energy scale that corresponds to a long length scale. Read qualitative method chapter for more about length scales.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Ternary diagram for less oscillation periods. The system starts from the right-bottom corner which is measured to be all electron neutrinos. The period of the spirals is from the energy scale that is related to a small length scale. The system spirals up then spirals back. This is a “period” that is governed by the energy scale that corresponds to a long length scale. Read qualitative method chapter for more about length scales.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id7">
 <img alt="../_images/vacOsc3FlavorTernary5000.png" src="../_images/vacOsc3FlavorTernary5000.png" />
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Ternary diagram for more oscillation periods. It shows that the system doesn’t really go back to the initial state after a “period”. This is a three body problem anyway.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Ternary diagram for more oscillation periods. It shows that the system doesn’t really go back to the initial state after a “period”. This is a three body problem anyway.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id8">
 <img alt="../_images/Inv-1000-1.png" src="../_images/Inv-1000-1.png" />
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Ternary diagram for inverted hierarchy. Inverted hierarchy means a period is inverted thus the spirals are in different directions.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Ternary diagram for inverted hierarchy. Inverted hierarchy means a period is inverted thus the spirals are in different directions.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="understanding-the-mixing-angles">
-<h2>4.4.7. Understanding the Mixing Angles<a class="headerlink" href="#understanding-the-mixing-angles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.7. </span>Understanding the Mixing Angles<a class="headerlink" href="#understanding-the-mixing-angles" title="Permalink to this headline">¶</a></h2>
 <p>The mixing angles play important roles in the amplitude of the oscillations while the energy scales play a role in the periods.</p>
 <div class="figure align-center" id="id9">
 <img alt="../_images/1000-1.png" src="../_images/1000-1.png" />
-<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Neutrino oscillations with the following parameters. This plot works as the base plot which will be compared with. The energy is scaled by a factor so that <span class="math notranslate nohighlight">\(\frac{1}{4E}=100\mathrm{eV}\)</span>. (This scaling has no physical significance but rescales the period.)</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">Neutrino oscillations with the following parameters. This plot works as the base plot which will be compared with. The energy is scaled by a factor so that <span class="math notranslate nohighlight">\(\frac{1}{4E}=100\mathrm{eV}\)</span>. (This scaling has no physical significance but rescales the period.)</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/180*Pi; \\
@@ -672,7 +672,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
 </div>
 <div class="figure align-center" id="id10">
 <img alt="../_images/1000-2.png" src="../_images/1000-2.png" />
-<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{12}\)</span> reduced to half of the value in the base plot. It is clear that <span class="math notranslate nohighlight">\(\theta_{12}\)</span> plays an imprtatn role in the long period of the oscillatioin. It also obvious that reducing <span class="math notranslate nohighlight">\(\theta_{12}\)</span> tilts the system to less <span class="math notranslate nohighlight">\(\nu_\tau\)</span> state.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{12}\)</span> reduced to half of the value in the base plot. It is clear that <span class="math notranslate nohighlight">\(\theta_{12}\)</span> plays an imprtatn role in the long period of the oscillatioin. It also obvious that reducing <span class="math notranslate nohighlight">\(\theta_{12}\)</span> tilts the system to less <span class="math notranslate nohighlight">\(\nu_\tau\)</span> state.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/2* 180 * Pi; \\
@@ -685,7 +685,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
 </div>
 <div class="figure align-center" id="id11">
 <img alt="../_images/1000-3.png" src="../_images/1000-3.png" />
-<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{13}\)</span> reduced to half of the value in the base plot. Reducing <span class="math notranslate nohighlight">\(\theta_{13}\)</span> shrinks the oscillation amplitude of the rapid oscillation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{13}\)</span> reduced to half of the value in the base plot. Reducing <span class="math notranslate nohighlight">\(\theta_{13}\)</span> shrinks the oscillation amplitude of the rapid oscillation.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/180*Pi; \\
@@ -698,7 +698,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
 </div>
 <div class="figure align-center" id="id12">
 <img alt="../_images/1000-4.png" src="../_images/1000-4.png" />
-<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{23}\)</span> reduced to half of the value in the base plot. Reducing <span class="math notranslate nohighlight">\(\theta_{23}\)</span> has a complicated effect on the oscillations. But it definitely tilts the system to less <span class="math notranslate nohighlight">\(\nu_\tau\)</span> state. The suppression on the probability of <span class="math notranslate nohighlight">\(\nu_\tau\)</span> is dramatic.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\theta_{23}\)</span> reduced to half of the value in the base plot. Reducing <span class="math notranslate nohighlight">\(\theta_{23}\)</span> has a complicated effect on the oscillations. But it definitely tilts the system to less <span class="math notranslate nohighlight">\(\nu_\tau\)</span> state. The suppression on the probability of <span class="math notranslate nohighlight">\(\nu_\tau\)</span> is dramatic.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/180*Pi; \\
@@ -711,7 +711,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
 </div>
 <div class="figure align-center" id="id13">
 <img alt="../_images/1000-5.png" src="../_images/1000-5.png" />
-<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\Delta m_{12}^2 = m_2^2- m_1^2\)</span> increased compared to the value in base plot. This changes the period of the rapid oscillation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Neutrino oscillations with <span class="math notranslate nohighlight">\(\Delta m_{12}^2 = m_2^2- m_1^2\)</span> increased compared to the value in base plot. This changes the period of the rapid oscillation.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/180*Pi; \\
@@ -724,7 +724,7 @@ m_2^2 &amp;= m1sq + 0.000079\times 10.\end{split}\]</div>
 </div>
 <div class="figure align-center" id="id14">
 <img alt="../_images/1000-5.png" src="../_images/1000-5.png" />
-<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Neutrino oscillation starts with initial state <span class="math notranslate nohighlight">\(\Psi(x=0) = \nu_\mu\)</span>. The system starts from the top corner.</span></p>
+<p class="caption"><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Neutrino oscillation starts with initial state <span class="math notranslate nohighlight">\(\Psi(x=0) = \nu_\mu\)</span>. The system starts from the top corner.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\theta_{12} &amp;= 33.36/180*Pi; \\
@@ -737,7 +737,7 @@ m_2^2 &amp;= m1sq + 0.000079.\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="refs-and-notes">
-<h2>4.4.8. Refs and Notes<a class="headerlink" href="#refs-and-notes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4.8. </span>Refs and Notes<a class="headerlink" href="#refs-and-notes" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

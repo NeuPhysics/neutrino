@@ -333,7 +333,7 @@ The result shows that
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/halo_sim_osc_20000_100000_1.000000_0.000010.csv.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/halo_sim_osc_20000_100000_1.000000_0.000010.csv.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">For 20000 total iteractions. Calculation is within range 0 to 1 with step size 1e-5. A total of 100 steps are exported. So each step indicates iteration of 200 times.</p>
@@ -356,7 +356,7 @@ I checked the convergence.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/convergence-1e4-and-1e5.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/convergence-1e4-and-1e5.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing step size 1e-4 and 1e-5, with Ntop = 20000 total iterations and 20 outputs. Each time increment in the plot indicates 20000/20=1000 iterations. </p>
@@ -368,7 +368,7 @@ Compare step sizes :math:`10^{-5}` and :math:`10^{-6}`.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/convergence-1e6-and-1e5.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/convergence-1e6-and-1e5.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing step size 1e-6 and 1e-5, with Ntop = 20000 total iterations and 20 outputs. Each time increment in the plot indicates 20000/20=1000 iterations. </p>
@@ -418,7 +418,7 @@ Damping in Time
    .. raw:: html
 
       <video width="100%" controls>
-      <source src="../_static/assets/halo/halo-effect-finite-difference/halo_parallel_REFL0.200000_ITER10000000_STEPS50000_RANGE5.000000_TH_20_t2017-11-5-17-59-36.csv.mp4" type="video/mp4">
+      <source src="../../_static/assets/halo/halo-effect-finite-difference/halo_parallel_REFL0.200000_ITER10000000_STEPS50000_RANGE5.000000_TH_20_t2017-11-5-17-59-36.csv.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
       </video>
       <p class="caption"> The system is kind of oscillatory in time. Reflection coefficient refl=0.2, mu = 1.0, within z range [0,5]. </p>
@@ -436,7 +436,7 @@ I can verify that the code is producing the correct results by setting :math:`\a
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0-no-average.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0-no-average.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing damping method with alpha=0 (effectively no damping) and original code (without damping) for neutrino potential mu =0.1 and reflection coefficient refl=0.01  </p>
@@ -459,7 +459,7 @@ However, the new algoritm seems to be slow. It's expected though.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =0.1 and reflection coefficient refl=0.1  </p>
@@ -467,7 +467,7 @@ However, the new algoritm seems to be slow. It's expected though.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-0.1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =0.1 and reflection coefficient refl=0.01  </p>
@@ -476,7 +476,7 @@ However, the new algoritm seems to be slow. It's expected though.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.1-average-alpha-0.5-no-average.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =1.0 and reflection coefficient refl=0.1  </p>
@@ -485,7 +485,7 @@ However, the new algoritm seems to be slow. It's expected though.
 .. raw:: html
 
    <video width="100%" controls>
-   <source src="../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
+   <source src="../../_static/assets/halo/halo-effect-finite-difference/damping-method-mu-1-refl-0.01-average-alpha-0.5-no-average.mp4" type="video/mp4">
    Your browser does not support HTML5 video.
    </video>
    <p class="caption">Comparing damping method with alpha=0.5 and no damping for neutrino potential mu =1.0 and reflection coefficient refl=0.01  </p>
