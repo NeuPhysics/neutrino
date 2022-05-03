@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.6. Linear Stability Analysis &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7.7. Fast Modes" href="fast-modes.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -338,38 +339,38 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="linear-stability-analysis">
-<span id="index-0"></span><h1>7.6. Linear Stability Analysis<a class="headerlink" href="#linear-stability-analysis" title="Permalink to this headline">¶</a></h1>
+  <section id="linear-stability-analysis">
+<span id="index-0"></span><h1><span class="section-number">7.6. </span>Linear Stability Analysis<a class="headerlink" href="#linear-stability-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="toggle admonition">
-<p class="first admonition-title">Reading List</p>
-<ol class="last arabic simple">
-<li>Banerjee, A., Dighe, A., &amp; Raffelt, G. (2011). <a class="reference external" href="https://doi.org/10.1103/PhysRevD.84.053013">Linearized flavor-stability analysis of dense neutrino streams</a>. Physical Review D - Particles, Fields, Gravitation and Cosmology, 84(5), 1–19.</li>
-<li>Raffelt, G., Sarikas, S., &amp; Seixas, D. D. S. (2013). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.111.091101">Axial Symmetry Breaking in Self-Induced Flavor Conversionof Supernova Neutrino Fluxes</a>. Physical Review Letters, 111(9), 91101.</li>
-<li>Izaguirre, I., Raffelt, G., &amp; Tamborra, I. (2017). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.118.021101">Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach</a>. Physical Review Letters, 118(2), 21101.</li>
+<p class="admonition-title">Reading List</p>
+<ol class="arabic simple">
+<li><p>Banerjee, A., Dighe, A., &amp; Raffelt, G. (2011). <a class="reference external" href="https://doi.org/10.1103/PhysRevD.84.053013">Linearized flavor-stability analysis of dense neutrino streams</a>. Physical Review D - Particles, Fields, Gravitation and Cosmology, 84(5), 1–19.</p></li>
+<li><p>Raffelt, G., Sarikas, S., &amp; Seixas, D. D. S. (2013). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.111.091101">Axial Symmetry Breaking in Self-Induced Flavor Conversionof Supernova Neutrino Fluxes</a>. Physical Review Letters, 111(9), 91101.</p></li>
+<li><p>Izaguirre, I., Raffelt, G., &amp; Tamborra, I. (2017). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.118.021101">Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach</a>. Physical Review Letters, 118(2), 21101.</p></li>
 </ol>
 </div>
-<div class="section" id="some-general-discussion">
-<h2>7.6.1. Some General Discussion<a class="headerlink" href="#some-general-discussion" title="Permalink to this headline">¶</a></h2>
+<section id="some-general-discussion">
+<h2><span class="section-number">7.6.1. </span>Some General Discussion<a class="headerlink" href="#some-general-discussion" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="first admonition-title">Tips about Matrices</p>
+<p class="admonition-title">Tips about Matrices</p>
 <p>Here are some conclusions about matrices.</p>
-<ol class="last arabic simple" start="0">
-<li>Skew symmetric = anti-symmetric.</li>
-<li>Eigenvalues of symmetric matrix are real.</li>
-<li>Eigenvalues of skew-symmetric matrix are either 0 or imaginary.</li>
+<ol class="arabic simple" start="0">
+<li><p>Skew symmetric = anti-symmetric.</p></li>
+<li><p>Eigenvalues of symmetric matrix are real.</p></li>
+<li><p>Eigenvalues of skew-symmetric matrix are either 0 or imaginary.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="first-approach">
-<h2>7.6.2. First Approach<a class="headerlink" href="#first-approach" title="Permalink to this headline">¶</a></h2>
-<p>For some references, please read <a class="reference internal" href="#chakraborty2016" id="id1">[chakraborty2016]</a>.</p>
-<p>The conventions used in <a class="reference internal" href="#chakraborty2016" id="id2">[chakraborty2016]</a> are</p>
+</section>
+<section id="first-approach">
+<h2><span class="section-number">7.6.2. </span>First Approach<a class="headerlink" href="#first-approach" title="Permalink to this headline">¶</a></h2>
+<p>For some references, please read <a class="reference internal" href="#chakraborty2016" id="id1"><span>[chakraborty2016]</span></a>.</p>
+<p>The conventions used in <a class="reference internal" href="#chakraborty2016" id="id2"><span>[chakraborty2016]</span></a> are</p>
 <ol class="arabic">
-<li><p class="first">Equation of motion:</p>
+<li><p>Equation of motion:</p>
 <div class="math notranslate nohighlight">
 \[i(\partial_t + \mathbf v^{(i)} \cdot \mathbf\nabla)\rho^{(i)} = [ H^{(i)},\rho^{(i)} ].\]</div>
 </li>
-<li><p class="first">Linearized density matrix</p>
+<li><p>Linearized density matrix</p>
 <div class="math notranslate nohighlight" id="equation-eqn-density-matrix-lsa-traceless">
 <span class="eqno">(7.2)<a class="headerlink" href="#equation-eqn-density-matrix-lsa-traceless" title="Permalink to this equation">¶</a></span>\[\begin{split}\rho = \frac{1}{2}\begin{pmatrix}
 1 &amp; \epsilon \\
@@ -389,12 +390,12 @@ a &amp; \epsilon \\
 \end{pmatrix},\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a=1\)</span> if we start from all electron flavor.</p>
 </li>
-<li><p class="first">The fact that the number densities are different for different beams could be included in the density matrix or the coefficient in fron of it. In the paper by Chakraborty, Hansen, Izaguirre, and Raffelt <a class="reference internal" href="#chakraborty2016" id="id3">[chakraborty2016]</a> they include this difference in densities in the density matrix, <strong>which I find not so intuitive</strong>. So I would choose to define the density matrix similar to the single particle ones and define</p>
+<li><p>The fact that the number densities are different for different beams could be included in the density matrix or the coefficient in fron of it. In the paper by Chakraborty, Hansen, Izaguirre, and Raffelt <a class="reference internal" href="#chakraborty2016" id="id3"><span>[chakraborty2016]</span></a> they include this difference in densities in the density matrix, <strong>which I find not so intuitive</strong>. So I would choose to define the density matrix similar to the single particle ones and define</p>
 <div class="math notranslate nohighlight">
 \[\alpha\mu = \sqrt{2}G_F  \alpha n_{\nu},\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> accounts for the differences in the densities for each beam.</p>
 </li>
-<li><p class="first">The commutator of a general traceless Hamiltonian</p>
+<li><p>The commutator of a general traceless Hamiltonian</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H = \begin{pmatrix}
 -h_0 &amp; h \\
@@ -428,29 +429,27 @@ h^{(2)} =&amp; c Q^{(1)} + d Q^{(2)}\end{split}\]</div>
 a &amp; b \\
 c &amp; d
 \end{pmatrix}.\end{split}\]</div>
-<table class="docutils citation" frame="void" id="chakraborty2016" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[chakraborty2016]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>, <a class="fn-backref" href="#id3">3</a>)</em> Chakraborty, S., Hansen, R. S., Izaguirre, I., &amp; Raffelt, G. (2016). <a class="reference external" href="http://doi.org/10.1088/1475-7516/2016/03/042">Self-induced neutrino flavor conversion without flavor mixing, (10), 17.</a></td></tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="second-approach">
-<h2>7.6.3. Second Approach<a class="headerlink" href="#second-approach" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="chakraborty2016"><span class="brackets">chakraborty2016</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dd><p>Chakraborty, S., Hansen, R. S., Izaguirre, I., &amp; Raffelt, G. (2016). <a class="reference external" href="http://doi.org/10.1088/1475-7516/2016/03/042">Self-induced neutrino flavor conversion without flavor mixing, (10), 17.</a></p>
+</dd>
+</dl>
+</section>
+<section id="second-approach">
+<h2><span class="section-number">7.6.3. </span>Second Approach<a class="headerlink" href="#second-approach" title="Permalink to this headline">¶</a></h2>
 <p>In this approach, we use conventions of the following.</p>
 <ol class="arabic">
-<li><p class="first">Linearized density matrix</p>
+<li><p>Linearized density matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho = \begin{pmatrix}
 1 &amp; \epsilon \\
 \epsilon^* &amp; 0
 \end{pmatrix}\end{split}\]</div>
 </li>
-<li><p class="first">Equation of motion without time de</p>
-</li>
+<li><p>Equation of motion without time de</p></li>
 </ol>
-<div class="section" id="linearize-the-eom">
-<h3>7.6.3.1. Linearize the EoM<a class="headerlink" href="#linearize-the-eom" title="Permalink to this headline">¶</a></h3>
+<section id="linearize-the-eom">
+<h3><span class="section-number">7.6.3.1. </span>Linearize the EoM<a class="headerlink" href="#linearize-the-eom" title="Permalink to this headline">¶</a></h3>
 <p>To linear the EoM we start from a state where almost all neutrinos are in one flavor,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho = \begin{pmatrix}
@@ -470,8 +469,8 @@ h^* &amp; h_2
 (h_2-h_1)\epsilon^* + h^* &amp; -\epsilon^* h + \epsilon h^*
 \end{pmatrix}.\end{split}\]</div>
 <div class="toggle admonition">
-<p class="first admonition-title">Mathematica Code</p>
-<div class="last highlight-Mathematica notranslate"><div class="highlight"><pre><span></span>(* Define the density matrices and Hamiltonians *)
+<p class="admonition-title">Mathematica Code</p>
+<div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span>(* Define the density matrices and Hamiltonians *)
 rho={
 {1,epsilon},
 {Conjugate@epsilon,0}
@@ -508,11 +507,11 @@ hamil.rhodiag-rhodiag.hamil//Simplify
 <p>We linearize the equation by keeping only the first order terms of <span class="math notranslate nohighlight">\(\delta\)</span>. For this purpose, we need to calculate the neutrino self-interaction <span class="math notranslate nohighlight">\(H_{\nu\nu}\)</span>.</p>
 <p>However, from the general form of <span class="math notranslate nohighlight">\(H_{\nu\nu}\)</span>, which is an integral or convolution of <span class="math notranslate nohighlight">\(\rho\)</span>, we would expect that the off diagonal element of the Hamiltonian <span class="math notranslate nohighlight">\(h\)</span>, is of first order, if we start from a density matrix that has first order, which is what we do. Thus we expect <span class="math notranslate nohighlight">\(h \delta^*\)</span> is second order effect, which we will neglect.</p>
 <p>Finally, we obtain one equation for each beam, which can either be the (1,2) element or the (2,1) element.</p>
-</div>
-<div class="section" id="four-beam-line-model">
-<h3>7.6.3.2. Four-Beam Line Model<a class="headerlink" href="#four-beam-line-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="four-beam-line-model">
+<h3><span class="section-number">7.6.3.2. </span>Four-Beam Line Model<a class="headerlink" href="#four-beam-line-model" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
-<p class="first admonition-title">Some Definitions</p>
+<p class="admonition-title">Some Definitions</p>
 <p>We define some parameters in this section.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\lambda =&amp; \sqrt{2} G_F n_e \\
@@ -522,12 +521,14 @@ hamil.rhodiag-rhodiag.hamil//Simplify
 \mu =&amp; \sqrt{2} G_F n_{\nu_e}\\
 n_{\bar\nu_e} = &amp; \alpha n_{\nu_e}.\end{split}\]</div>
 <p><span class="math notranslate nohighlight">\(\eta\)</span> is determines the hierarchy of the neutrinos. <span class="math notranslate nohighlight">\(\eta=+1\)</span> means normal hierarchy, and <span class="math notranslate nohighlight">\(\eta=-1\)</span> means inverted hierarchy. <span class="math notranslate nohighlight">\(\beta\)</span> takes care of the sign for the vacuum term and self-interaction term. For the vacuum term, <span class="math notranslate nohighlight">\(\beta=(-)1\)</span> for (anti)neutrinos. For the self-interaction term, <span class="math notranslate nohighlight">\(\beta=(-)1\)</span> if the beam is interacting with (anti)neutrinos.</p>
-<p class="last">We use <span class="math notranslate nohighlight">\({}^L\)</span> to denote the beam on the left, <span class="math notranslate nohighlight">\({}^R\)</span> to denote the beam on the right, and <span class="math notranslate nohighlight">\(\bar{\epsilon}\)</span> to denote that the beam is composed of anti-neutrinos.</p>
+<p>We use <span class="math notranslate nohighlight">\({}^L\)</span> to denote the beam on the left, <span class="math notranslate nohighlight">\({}^R\)</span> to denote the beam on the right, and <span class="math notranslate nohighlight">\(\bar{\epsilon}\)</span> to denote that the beam is composed of anti-neutrinos.</p>
 </div>
-<div class="figure align-center" id="id7">
+<figure class="align-center" id="id7">
 <span id="four-beams-model-geometry"></span><img alt="../_images/four-beams-model-geometry.png" src="../_images/four-beams-model-geometry.png" />
-<p class="caption"><span class="caption-number">Fig. 7.7 </span><span class="caption-text">Four beams model</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">Four beams model</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>For any line model of finite beams, we can specify each beam by three parameters,</p>
 <div class="math notranslate nohighlight">
 \[\{\rho, \theta, \alpha\},\]</div>
@@ -537,14 +538,14 @@ n_{\bar\nu_e} = &amp; \alpha n_{\nu_e}.\end{split}\]</div>
 \[\begin{split}\epsilon =&amp; \{\epsilon^L, \bar\epsilon^L, \epsilon^R, \bar\epsilon^R\}\\
 \alpha =&amp; \{1, \alpha, \alpha, 1\}\\
 \theta =&amp; \{ \theta_1, \theta_2, \pi-\theta_2,\pi-\theta_1 \},\end{split}\]</div>
-<p>where the <span class="math notranslate nohighlight">\(\epsilon\)</span>‘s are used to construct the perturbed density matrix,</p>
+<p>where the <span class="math notranslate nohighlight">\(\epsilon\)</span>’s are used to construct the perturbed density matrix,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho^L = \begin{pmatrix}
 1 &amp; \epsilon^L \\
 \epsilon^{L*} &amp; 0
 \end{pmatrix}\end{split}\]</div>
 <div class="toggle admonition">
-<p class="first admonition-title">Perturbed Density Matrix</p>
+<p class="admonition-title">Perturbed Density Matrix</p>
 <p>We are interested in flavor conversion. So we start from a state with one flavor, which renders the density matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho^{X} = \begin{pmatrix}
@@ -552,7 +553,7 @@ n_{\bar\nu_e} = &amp; \alpha n_{\nu_e}.\end{split}\]</div>
 0 &amp; 0
 \end{pmatrix}.\end{split}\]</div>
 <p>However, as dynamics is our concern, we need to add the perturbation to investigate the stability</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}\rho^{X} = \begin{pmatrix}
 1 &amp; \epsilon^{X} \\
 \epsilon^{X*} &amp; 0
@@ -560,9 +561,9 @@ n_{\bar\nu_e} = &amp; \alpha n_{\nu_e}.\end{split}\]</div>
 </div>
 <p>So we can now write down the equation of motion for the system with this perturbed density.</p>
 <div class="toggle admonition">
-<p class="first admonition-title"><span class="math notranslate nohighlight">\(\epsilon\)</span> as a vector</p>
+<p class="admonition-title"><span class="math notranslate nohighlight">\(\epsilon\)</span> as a vector</p>
 <p>In fact, as we’ll derive the linearized equations, <span class="math notranslate nohighlight">\(\delta\)</span> is used as a vector</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}\epsilon = \begin{pmatrix}
 \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
 \end{pmatrix}.\end{split}\]</div>
@@ -580,7 +581,7 @@ H_m = &amp; \frac{1}{2}\lambda \sigma_3.\end{split}\]</div>
 \[\begin{split}\bar H_{\nu\nu}^L = &amp; \mu (1-\cos(\theta_1 - \theta_2)) \rho^L - \mu \alpha (1+\cos(2\theta_2)) \bar\rho^R + \mu (1+\cos(\theta_1+\theta_2)) \rho^R \\
 \bar H_{\nu\nu}^R = &amp; \mu (1 + \cos(\theta_1 + \theta_2)) \rho^L -\mu \alpha (1 + \cos(2\theta_2)) \bar \rho^L + \mu (1 - \cos(\theta_1-\theta_2))\rho^R \\
 H_{\nu\nu} ^R = &amp; \mu (1 + \cos(2\theta_1)) \rho^L - \mu \alpha(1 + \cos(\theta_1 + \theta_2)) \bar \rho^L - \mu\alpha (1 - \cos(\theta_1 - \theta_2)) \bar\rho^R.\end{split}\]</div>
-<p>The equation of motion is reduced to one equation about <span class="math notranslate nohighlight">\(\delta\)</span>‘s for each beam.</p>
+<p>The equation of motion is reduced to one equation about <span class="math notranslate nohighlight">\(\delta\)</span>’s for each beam.</p>
 <div class="math notranslate nohighlight">
 \[i \partial_r \epsilon = - h + \epsilon (h_1-h_2),\]</div>
 <p>where <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(h_2\)</span> are determined by both <span class="math notranslate nohighlight">\(H_v\)</span>, <span class="math notranslate nohighlight">\(H_m\)</span>, and the self-interaction term <span class="math notranslate nohighlight">\(H_{\nu\nu}\)</span>. <span class="math notranslate nohighlight">\(h\)</span> is determined by the expression of <span class="math notranslate nohighlight">\(H_{\nu\nu}\)</span>. Then we rewrite the equation into the form</p>
@@ -609,7 +610,7 @@ i \partial_r^R =&amp; i\sin \theta_1 \partial_z - i\cos\theta_1 \partial_x.\end{
 \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
 \end{pmatrix}.\end{split}\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Simplified?</p>
+<p class="admonition-title">Simplified?</p>
 <p>Define the following quantities</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\chi_+ =&amp; 1 - \cos(\theta_1+\theta_2) \\
@@ -630,15 +631,15 @@ i \partial_r^R =&amp; i\sin \theta_1 \partial_z - i\cos\theta_1 \partial_x.\end{
 \begin{pmatrix}
 \epsilon^L \\ \bar\epsilon^L \\ \epsilon^R \\ \bar\epsilon^R
 \end{pmatrix}.\end{split}\]</div>
-<p class="last">Suppose we have the neutrino and antineutrino beams in the same direction, i.e., <span class="math notranslate nohighlight">\(\theta_1=\theta_2\)</span>, the term <span class="math notranslate nohighlight">\(\chi_-\)</span> becomes 0.</p>
+<p>Suppose we have the neutrino and antineutrino beams in the same direction, i.e., <span class="math notranslate nohighlight">\(\theta_1=\theta_2\)</span>, the term <span class="math notranslate nohighlight">\(\chi_-\)</span> becomes 0.</p>
 </div>
 <div class="toggle admonition">
-<p class="first admonition-title">Mathematica Code</p>
+<p class="admonition-title">Mathematica Code</p>
 <p>The Mathematica code that describes the matrix M’ in equation</p>
 <div class="math notranslate nohighlight">
 \[i\partial_z \boldsymbol\delta = \mathbf{M'}\boldsymbol\delta\]</div>
 <p>is</p>
-<div class="last highlight-text notranslate"><div class="highlight"><pre><span></span>transMatrix[eta_, mk_, mu_, alpha_, theta1_, theta2_, lambda_, omegav_: 0] := Module[{},
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>transMatrix[eta_, mk_, mu_, alpha_, theta1_, theta2_, lambda_, omegav_: 0] := Module[{},
 
    (* theta1 for neutrinos, theta2 for antineutrinos *)
 
@@ -678,17 +679,17 @@ i \partial_r^R =&amp; i\sin \theta_1 \partial_z - i\cos\theta_1 \partial_x.\end{
 \[-\Omega \epsilon_0 = M\cdot \epsilon_0.\]</div>
 <p>Linear stability analysis basically becomes finding the eigenvalues of matrix <span class="math notranslate nohighlight">\(M\)</span>. A negative imaginary part in <span class="math notranslate nohighlight">\(\Omega\)</span> means the solution can grow exponentially.</p>
 <div class="warning admonition">
-<p class="first admonition-title">Some Questions</p>
-<ol class="last arabic simple">
-<li>Even if we assume homogenous in x direction, will it be stable under small perturbations? I guess it also is not that easy to say since the equation of motion in x direction is somewhat similar to the equation in z direction, we might have some instability in x direction.</li>
-<li>Is there any interpretation of the solution as a function of r?</li>
+<p class="admonition-title">Some Questions</p>
+<ol class="arabic simple">
+<li><p>Even if we assume homogenous in x direction, will it be stable under small perturbations? I guess it also is not that easy to say since the equation of motion in x direction is somewhat similar to the equation in z direction, we might have some instability in x direction.</p></li>
+<li><p>Is there any interpretation of the solution as a function of r?</p></li>
 </ol>
 </div>
 <p>For this four-beam model, the eigenvalues can be found analytically by Mathematica, eventhough the solution is a bit tedious. We work out the example using unit of <span class="math notranslate nohighlight">\(\omega_v\)</span>, i.e., <span class="math notranslate nohighlight">\(\hat \lambda=\lambda/\omega_v\)</span> and <span class="math notranslate nohighlight">\(\hat\mu = \mu/\omega_v\)</span>.</p>
-</div>
-<div class="section" id="neutrino-line-model-with-fourier-analysis">
-<h3>7.6.3.3. Neutrino Line Model with Fourier Analysis<a class="headerlink" href="#neutrino-line-model-with-fourier-analysis" title="Permalink to this headline">¶</a></h3>
-<p>Neutrino line model is discussed in <a class="reference internal" href="#duan2015" id="id4">[duan2015]</a>. We’ll follow the paper.</p>
+</section>
+<section id="neutrino-line-model-with-fourier-analysis">
+<h3><span class="section-number">7.6.3.3. </span>Neutrino Line Model with Fourier Analysis<a class="headerlink" href="#neutrino-line-model-with-fourier-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Neutrino line model is discussed in <a class="reference internal" href="#duan2015" id="id4"><span>[duan2015]</span></a>. We’ll follow the paper.</p>
 <p>The equation of motion is</p>
 <div class="math notranslate nohighlight">
 \[i\partial_t \rho + i \hat v \cdot \vec \nabla \rho = \left[ H, \rho \right],\]</div>
@@ -703,8 +704,8 @@ i \partial_r^R =&amp; i\sin \theta_1 \partial_z - i\cos\theta_1 \partial_x.\end{
 <div class="math notranslate nohighlight">
 \[k_0 = \frac{2\pi}{L}.\]</div>
 <p>Equivalently, we can linearize the equation first then Fourier transform the perturbations. Both methods works.</p>
-<div class="section" id="fourier-transform-of-density-matrix">
-<h4>7.6.3.3.1. Fourier Transform of Density Matrix<a class="headerlink" href="#fourier-transform-of-density-matrix" title="Permalink to this headline">¶</a></h4>
+<section id="fourier-transform-of-density-matrix">
+<h4><span class="section-number">7.6.3.3.1. </span>Fourier Transform of Density Matrix<a class="headerlink" href="#fourier-transform-of-density-matrix" title="Permalink to this headline">¶</a></h4>
 <p>As we plug it back into the equation of motion, left hand side becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;i \hat v \cdot \nabla \rho(x,z) \\
@@ -735,8 +736,8 @@ H_m =&amp; \frac{1}{2} \lambda \sigma_3.\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-eqn-fourier-modes-density-matrix-eom">
 <span class="eqno">(7.6)<a class="headerlink" href="#equation-eqn-fourier-modes-density-matrix-eom" title="Permalink to this equation">¶</a></span>\[i v_z \partial_z \rho_m^i(z) - m k_0 v_x^i \rho_m^i(z) = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho_m^i(z) \right] + \left[ \lambda \sigma_3/2, \rho_m^i(z) \right] + \sum_{m'}\left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j_{m'}(z),\rho^i_{m-m'}(z) \right].\]</div>
 <div class="warning admonition">
-<p class="first admonition-title">Horizontal Speed <span class="math notranslate nohighlight">\(v_x^i\)</span></p>
-<p class="last">Please notice that the horizontal speed <span class="math notranslate nohighlight">\(v_x^i\)</span> has a different sign for left beam and right beam.</p>
+<p class="admonition-title">Horizontal Speed <span class="math notranslate nohighlight">\(v_x^i\)</span></p>
+<p>Please notice that the horizontal speed <span class="math notranslate nohighlight">\(v_x^i\)</span> has a different sign for left beam and right beam.</p>
 </div>
 <p>We have all the modes decoupled from each other. However, the different beams are coupled to each other for the same mode. Thus the equations for mode <span class="math notranslate nohighlight">\(m\)</span> can be combined into a single matrix differential equation, which is tedious to write down.</p>
 <p>To analyze the instability, we apply the tricks in linear stability analysis, and define the perturbed density matrice</p>
@@ -751,9 +752,9 @@ H_m =&amp; \frac{1}{2} \lambda \sigma_3.\end{split}\]</div>
 \end{pmatrix}.\end{split}\]</div>
 <p>The only unknow functions are <span class="math notranslate nohighlight">\(\epsilon^i_m\)</span> and <span class="math notranslate nohighlight">\(\bar\epsilon^i_m\)</span>.</p>
 <div class="hint admonition">
-<p class="first admonition-title">Useful Commutation Relations</p>
+<p class="admonition-title">Useful Commutation Relations</p>
 <p>With the perturbed form of density matrix, we have several simple commutation relations.</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}[\sigma_3,\rho_m^i] =&amp; \begin{pmatrix}
 0 &amp; 2\epsilon_m^i \\
 2{\epsilon_m^i}^* &amp; 0
@@ -799,9 +800,9 @@ iv_z \partial_z \bar\epsilon^L_m =&amp; \left( m k_0 v_x + (\lambda + \eta \omeg
 i v_z \partial_z \epsilon^R_m =&amp; \left( -m k_0 v_x + (\lambda - \eta \omega_v ) \right) \epsilon^R_m + \sum_{m'}\left( \chi (\epsilon^R_{m-m'} - \epsilon^L_{m'}) - \alpha \chi (\epsilon^R_{m-m'} -\bar \epsilon^L_{m'}) \right)\\
 iv_z \partial_z \bar\epsilon^R_m =&amp; \left(  -m k_0 v_x + (\lambda + \eta \omega_v \right) \bar\epsilon^R_m + \sum_{m'} \left( \chi (\bar\epsilon^R_{m-m'} - \epsilon^L_{m'}) -  \alpha \chi (\bar\epsilon^R_{m-m'} - \bar\epsilon^L_{m'}) \right).\end{split}\]</div>
 <p><strong>We actually have a problem. What are those couplings between different modes?</strong> Are these couplings really first order?</p>
-</div>
-<div class="section" id="fourier-transform-perturbations">
-<h4>7.6.3.3.2. Fourier Transform Perturbations<a class="headerlink" href="#fourier-transform-perturbations" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="fourier-transform-perturbations">
+<h4><span class="section-number">7.6.3.3.2. </span>Fourier Transform Perturbations<a class="headerlink" href="#fourier-transform-perturbations" title="Permalink to this headline">¶</a></h4>
 <p>The other idea is to linearize the equations first then Fourier transform only the perturbations. The result for the equations of perturbations can be obtained directly from Eq. <a class="reference internal" href="#equation-eqn-fourier-modes-density-matrix-eom">(7.6)</a>,</p>
 <div class="math notranslate nohighlight">
 \[i v_z \partial_z \rho^i(z)  = \left[ -\beta^i \eta \omega_v \sigma_3/2, \rho^i(z) \right] + \left[ \lambda \sigma_3/2, \rho^i(z) \right] + \left[\sum_j \mu \alpha^j (1 - \hat v^{i}\cdot \hat v^{j}) \beta^{j}\rho^j(z),\rho^i(z) \right].\]</div>
@@ -848,8 +849,8 @@ m k_0 v_x  + (\lambda - \eta \omega_v) + (1 - \alpha) \chi  &amp; 0 &amp; -\chi 
 \end{pmatrix}.\end{split}\]</div>
 <p>This non-Hermitian ‘evolution’ matrix <span class="math notranslate nohighlight">\(\Upsilon_m\)</span> introduces many new features in the evolutions of the perturbations since the eigenvalues of it are not garanteed to be real. Any imaginary part of the eigenvalues of it will give us exponential increase.</p>
 <div class="toggle admonition">
-<p class="first admonition-title">Plus-Minus Modes</p>
-<p>In the paper <a class="reference internal" href="#duan2015" id="id5">[duan2015]</a> the authors introduced the definition</p>
+<p class="admonition-title">Plus-Minus Modes</p>
+<p>In the paper <a class="reference internal" href="#duan2015" id="id5"><span>[duan2015]</span></a> the authors introduced the definition</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}D^{\pm}_m =&amp; \frac{1}{2} (\epsilon^L_m \pm \epsilon^R_m) - \frac{\alpha}{2} (\bar\epsilon^L_m\pm \bar\epsilon^R_m)\\
 S^{\pm}_m =&amp;  \frac{1}{2} (\epsilon^L_m \pm \epsilon^R_m) + \frac{\alpha}{2} (\bar\epsilon^L_m\pm \bar\epsilon^R_m).\end{split}\]</div>
@@ -893,31 +894,32 @@ S^-_m
 m k_0 v_x &amp; 0 &amp; 2(1-\alpha)\chi + \lambda &amp; -\eta\omega_v\\
 0 &amp; m k_0 v_x &amp; (1+\alpha)\chi - \eta \omega_v &amp; (1-\alpha)\chi + \lambda
 \end{pmatrix},\end{split}\]</div>
-<p class="last">which is the same as the form derived in the paper <a class="reference internal" href="#duan2015" id="id6">[duan2015]</a>.</p>
+<p>which is the same as the form derived in the paper <a class="reference internal" href="#duan2015" id="id6"><span>[duan2015]</span></a>.</p>
 </div>
 <p>We can easily find the eigenvalues for the matrix <span class="math notranslate nohighlight">\(Uplison_m\)</span> or <span class="math notranslate nohighlight">\(\Lambda_m\)</span>. Any <strong>imaginary part</strong> (not real part because we have an extra i in the equation) of the eigenvalue will lead to exponential growth of the perturbations.</p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <img alt="../_images/linear-stability-analysis-kappa-line-four-beams.png" src="../_images/linear-stability-analysis-kappa-line-four-beams.png" />
-<p class="caption"><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Maximum of imaginary part of the eigenvalues of matrix <span class="math notranslate nohighlight">\(\Upsilon_m\)</span> for different <span class="math notranslate nohighlight">\(\chi\)</span> and <span class="math notranslate nohighlight">\(m\)</span>. This amazing result says that larger neutrino density leads to the instability on smaller scales. This result is for <span class="math notranslate nohighlight">\(\alpha=0.8\)</span>, <span class="math notranslate nohighlight">\(v_z=1/2\)</span>, <span class="math notranslate nohighlight">\(k_0=2\pi/L=2\pi/(20\pi/\omega_v)\)</span>, and <span class="math notranslate nohighlight">\(\lambda=0\)</span>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Maximum of imaginary part of the eigenvalues of matrix <span class="math notranslate nohighlight">\(\Upsilon_m\)</span> for different <span class="math notranslate nohighlight">\(\chi\)</span> and <span class="math notranslate nohighlight">\(m\)</span>. This amazing result says that larger neutrino density leads to the instability on smaller scales. This result is for <span class="math notranslate nohighlight">\(\alpha=0.8\)</span>, <span class="math notranslate nohighlight">\(v_z=1/2\)</span>, <span class="math notranslate nohighlight">\(k_0=2\pi/L=2\pi/(20\pi/\omega_v)\)</span>, and <span class="math notranslate nohighlight">\(\lambda=0\)</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="hint admonition">
-<p class="first admonition-title">Eigenvalues of <span class="math notranslate nohighlight">\(\Upsilon_m\)</span> and <span class="math notranslate nohighlight">\(\Lambda_m\)</span> are the same</p>
+<p class="admonition-title">Eigenvalues of <span class="math notranslate nohighlight">\(\Upsilon_m\)</span> and <span class="math notranslate nohighlight">\(\Lambda_m\)</span> are the same</p>
 <p>The reason is that the determinant of the following two matrice are the same,</p>
 <div class="math notranslate nohighlight">
 \[\lvert \Upsilon_m \rvert = \lvert \mathcal R \Upsilon_m \mathcal R^{-1} \rvert,\]</div>
-<p class="last">since determinant has cyclic permutation symmetric.</p>
+<p>since determinant has cyclic permutation symmetric.</p>
 </div>
 <p>We also notice that matter has no effect on this phenomenon because we can remove matter effect by minus a matrix <span class="math notranslate nohighlight">\(\frac{1}{v_z}\lambda \mathbf I\)</span> from matrix <span class="math notranslate nohighlight">\(\Upsilon_m\)</span>, while the eigenvalues is not changed. What’s more important, the evolution of the perturbation doesn’t change under such a manipulation.</p>
-<table class="docutils citation" frame="void" id="duan2015" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[duan2015]</td><td><em>(<a class="fn-backref" href="#id4">1</a>, <a class="fn-backref" href="#id5">2</a>, <a class="fn-backref" href="#id6">3</a>)</em> Duan, H., &amp; Shalgar, S. (2015). <a class="reference external" href="http://doi.org/10.1016/j.physletb.2015.05.057">Flavor instabilities in the neutrino line model.</a> Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics, 747, 139–143.</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+<dl class="citation">
+<dt class="label" id="duan2015"><span class="brackets">duan2015</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>,<a href="#id6">3</a>)</span></dt>
+<dd><p>Duan, H., &amp; Shalgar, S. (2015). <a class="reference external" href="http://doi.org/10.1016/j.physletb.2015.05.057">Flavor instabilities in the neutrino line model.</a> Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics, 747, 139–143.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+</section>
 
 
     </div>

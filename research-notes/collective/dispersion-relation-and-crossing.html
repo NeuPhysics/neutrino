@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.2.6. Dispersion Relation and Crossing &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.2.7. Dispersion Relation and Instabilities Using Green’s Function" href="dispersion-and-greens-function.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -332,17 +333,17 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="dispersion-relation-and-crossing">
-<h1>1.2.6. Dispersion Relation and Crossing<a class="headerlink" href="#dispersion-relation-and-crossing" title="Permalink to this headline">¶</a></h1>
+  <section id="dispersion-relation-and-crossing">
+<h1><span class="section-number">1.2.6. </span>Dispersion Relation and Crossing<a class="headerlink" href="#dispersion-relation-and-crossing" title="Permalink to this headline">¶</a></h1>
 <div class="note admonition">
-<p class="first admonition-title">How to understand Dispersion Relation</p>
-<p class="last">We should come back to the wave picture. DR tells us how easily a wave will disperse as it travels. The things that can be research on are the disperse itself. Stability is one important topic but it also tells us how the wave disperse.</p>
+<p class="admonition-title">How to understand Dispersion Relation</p>
+<p>We should come back to the wave picture. DR tells us how easily a wave will disperse as it travels. The things that can be research on are the disperse itself. Stability is one important topic but it also tells us how the wave disperse.</p>
 </div>
-<div class="section" id="box-spectrum">
-<h2>1.2.6.1. Box Spectrum<a class="headerlink" href="#box-spectrum" title="Permalink to this headline">¶</a></h2>
+<section id="box-spectrum">
+<h2><span class="section-number">1.2.6.1. </span>Box Spectrum<a class="headerlink" href="#box-spectrum" title="Permalink to this headline">¶</a></h2>
 <div class="toggle admonition">
-<p class="first admonition-title">Box Spectrum Defined Spectra Code</p>
-<div class="last highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">spectWC1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
+<p class="admonition-title">Box Spectrum Defined Spectra Code</p>
+<div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">spectWC1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
 <span class="n">spectWC2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mf">0.5</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
 <span class="n">spectWC3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
 <span class="n">spectWC4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">}};</span><span class="w"></span>
@@ -360,222 +361,292 @@ TeX: {
 </div>
 </div>
 <div class="toggle admonition">
-<p class="first admonition-title">Numerical Issues with Box Spectrum in LSA</p>
+<p class="admonition-title">Numerical Issues with Box Spectrum in LSA</p>
 <p>Mathematica seems to fail the mission when finding the complex k’s given real <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p>I tested bot NIntegrate of the integrals and Integrate first. It seems that Integrate first works better and faster.</p>
 <p>Since I could find the analytical expressions for the integrals, I simple plug in the expression then calculate numbers.</p>
 <p>I could plot the values of <span class="math notranslate nohighlight">\(\omega - (I_0-I_4)/4\)</span> (MAA solution) for real <span class="math notranslate nohighlight">\(\omega\)</span> to check if they have interceptions with the 0 plane.</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="../../_images/maa-solution-real-image-3d-plot-spect-wc1.png" src="../../_images/maa-solution-real-image-3d-plot-spect-wc1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.134 </span><span class="caption-text">MAA solution for WC1 spectrum. This plot was for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>. The two horizontal axes are real and imaginary part of k. Green plane is 0 plane. The blue surface is real part while the orange surface is imaginary part.  We could see the spike-like structure in the real part intercepts with 0 plane as well as imaginary part that indicates a solution</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.134 </span><span class="caption-text">MAA solution for WC1 spectrum. This plot was for <span class="math notranslate nohighlight">\(\omega=0.1\)</span>. The two horizontal axes are real and imaginary part of k. Green plane is 0 plane. The blue surface is real part while the orange surface is imaginary part.  We could see the spike-like structure in the real part intercepts with 0 plane as well as imaginary part that indicates a solution</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>I also ploted out the MZA solutions. I found that interceptions exsits for only some values of <span class="math notranslate nohighlight">\(\omega\)</span>. Examples of such plots are shown below.</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/mzap-solution-real-image-3d-plot-spect-wc1.png" src="../../_images/mzap-solution-real-image-3d-plot-spect-wc1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.135 </span><span class="caption-text">MZA+ solutions for spectrum id WC1. Seems to be solutionless.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.135 </span><span class="caption-text">MZA+ solutions for spectrum id WC1. Seems to be solutionless.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Similarly for MZA- solution we have the following.</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../../_images/mzam-solution-real-image-3d-plot-spect-wc1.png" src="../../_images/mzam-solution-real-image-3d-plot-spect-wc1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.136 </span><span class="caption-text">MZA- solutions for spectrum id WC1.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.136 </span><span class="caption-text">MZA- solutions for spectrum id WC1.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>After some test, my thought is that the integral is nicely behaved for some range of real <span class="math notranslate nohighlight">\(\omega\)</span>, which makes sense since the line of instability can not extend to arbitary large and small <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p>Thus the solution to the warnings and errors in FindRoot is to plugin the suitable range of <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p>Meanwhile for real <span class="math notranslate nohighlight">\(k\)</span>, we have only solutions at <span class="math notranslate nohighlight">\(\omega =0\)</span>.</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <img alt="../../_images/maa-solution-real-image-3d-plot-spect-wc1-realk.png" src="../../_images/maa-solution-real-image-3d-plot-spect-wc1-realk.png" />
-<p class="caption"><span class="caption-number">Fig. 1.137 </span><span class="caption-text">For real k. MAA solution. Blue, Orange, Green has similar means as before.</span></p>
-</div>
-<div class="figure align-center" id="id5">
+<figcaption>
+<p><span class="caption-number">Fig. 1.137 </span><span class="caption-text">For real k. MAA solution. Blue, Orange, Green has similar means as before.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
 <img alt="../../_images/mzap-solution-real-image-3d-plot-spect-wc1-realk.png" src="../../_images/mzap-solution-real-image-3d-plot-spect-wc1-realk.png" />
-<p class="caption"><span class="caption-number">Fig. 1.138 </span><span class="caption-text">For real k, <span class="math notranslate nohighlight">\(k=0.1\)</span>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.138 </span><span class="caption-text">For real k, <span class="math notranslate nohighlight">\(k=0.1\)</span>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>MAA solutions also has similar shape.</p>
-<p class="last">In any case, we managed to solve instabilities for MAA and MZA. In Mathematica package <cite>dispersion-relation.wl</cite>, <cite>ConAxialSymOmegaNMZApEqnLHSComplex[-omegareal, k, spectrum]</cite> returns the value of <span class="math notranslate nohighlight">\(\omega - \left( -\frac{1}{4}\left( I_0 - I_2 + \sqrt{ (I_0+I_2-2I_1)(I_0+I_2+2I_1) } \right) \right)\)</span>. Simply using <cite>FindRoot</cite> from Mathematica should return the solutions.</p>
+<p>In any case, we managed to solve instabilities for MAA and MZA. In Mathematica package <cite>dispersion-relation.wl</cite>, <cite>ConAxialSymOmegaNMZApEqnLHSComplex[-omegareal, k, spectrum]</cite> returns the value of <span class="math notranslate nohighlight">\(\omega - \left( -\frac{1}{4}\left( I_0 - I_2 + \sqrt{ (I_0+I_2-2I_1)(I_0+I_2+2I_1) } \right) \right)\)</span>. Simply using <cite>FindRoot</cite> from Mathematica should return the solutions.</p>
 </div>
 <p>Since box spectrum is easier and faster to calculate, we’ll explore the phenomena within box spectrum. For example, the spectrum notation</p>
 <div class="highlight-Mathematica notranslate"><div class="highlight"><pre><span></span><span class="p">{{{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3</span><span class="p">},</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="mf">-0.3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mf">0.7</span><span class="p">}}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>indicates tht the spectrum has a constant value -0.2 within <span class="math notranslate nohighlight">\(\cos\theta \in [-1,-0.3]\)</span> and value 0.7 within <span class="math notranslate nohighlight">\(\cos\theta \in [-0.3,1]\)</span>.</p>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <img alt="../../_images/box-spectra-without-crossing-omega-n-k-n-dr.png" src="../../_images/box-spectra-without-crossing-omega-n-k-n-dr.png" />
-<p class="caption"><span class="caption-number">Fig. 1.139 </span><span class="caption-text">No crossing</span></p>
-</div>
-<div class="figure align-center" id="id7">
+<figcaption>
+<p><span class="caption-number">Fig. 1.139 </span><span class="caption-text">No crossing</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
 <img alt="../../_images/box-spectra-with-crossing-omega-n-k-n-dr.png" src="../../_images/box-spectra-with-crossing-omega-n-k-n-dr.png" />
-<p class="caption"><span class="caption-number">Fig. 1.140 </span><span class="caption-text">With crossing</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.140 </span><span class="caption-text">With crossing</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="warning admonition">
-<p class="first admonition-title">Observations and Questions</p>
-<ol class="last arabic simple">
-<li>Any 0 in spectrum make it possible go cross the singularity line.</li>
-<li>MZA disappears at some point of parameters. What are the constraints.</li>
+<p class="admonition-title">Observations and Questions</p>
+<ol class="arabic simple">
+<li><p>Any 0 in spectrum make it possible go cross the singularity line.</p></li>
+<li><p>MZA disappears at some point of parameters. What are the constraints.</p></li>
 </ol>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">MZA disappears</p>
+<p class="admonition-title">MZA disappears</p>
 <p>The analytical expression for it to dispear shows that it involves all the elements of the spectrum. Numerically, I can show that for a specific one <span class="math notranslate nohighlight">\(\{\{\{-1, -0.3\}, g_1\}, \{\{-0.3, 1\}, 1\}\}\)</span>, the region of <span class="math notranslate nohighlight">\(g_1\)</span> that leads to no MZA solution for a given <span class="math notranslate nohighlight">\(n\)</span> is shown in <a class="reference internal" href="#analytical-where-mza-dispear-spectrum-c5"><span class="std std-numref">Fig. 1.141</span></a>.</p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <span id="analytical-where-mza-dispear-spectrum-c5"></span><img alt="../../_images/analytical-where-mza-dispear-spectrum-c5.png" src="../../_images/analytical-where-mza-dispear-spectrum-c5.png" />
-<p class="caption"><span class="caption-number">Fig. 1.141 </span><span class="caption-text">Region of <span class="math notranslate nohighlight">\(g_1\)</span>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.141 </span><span class="caption-text">Region of <span class="math notranslate nohighlight">\(g_1\)</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>This figure shows that the MZA solution will come back if we choose really small <span class="math notranslate nohighlight">\(g_1\)</span>. It is verified using another spectrum which is labeled as C5 spectrum.</p>
-<div class="figure align-center" id="id9">
+<figure class="align-center" id="id9">
 <img alt="../../_images/omega-n-spectrum-c5.png" src="../../_images/omega-n-spectrum-c5.png" />
-<p class="caption"><span class="caption-number">Fig. 1.142 </span><span class="caption-text">For a spectrum <span class="math notranslate nohighlight">\(\{\{\{-1, -0.3\}, -15\}, \{\{-0.3, 1\}, 1\}\}\)</span>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.142 </span><span class="caption-text">For a spectrum <span class="math notranslate nohighlight">\(\{\{\{-1, -0.3\}, -15\}, \{\{-0.3, 1\}, 1\}\}\)</span>.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>However examples of numerical calculations won’t be enough. Alternatively, I could derive an analytical expression. MZA solution is</p>
 <div class="math notranslate nohighlight">
 \[\omega = -\frac{1}{4}\left(I_0-I_2\pm \sqrt{ (I_0-2I_1+I_2)(I_0+2I_1+I_2) }\right).\]</div>
 <p>We examine the term inside square root and set it to be negative which will show us the region where real omega disppears.</p>
 <p>Comment: the upper limit is not a horizontal line.</p>
-<div class="figure align-center" id="id10">
+<figure class="align-center" id="id10">
 <img alt="../../_images/omega-n-upper-limit-spectrum-c5.png" src="../../_images/omega-n-upper-limit-spectrum-c5.png" />
-<p class="caption"><span class="caption-number">Fig. 1.143 </span><span class="caption-text">Upper limit.</span></p>
-</div>
-<p class="last">For the MZA solutions to disappear, we need to find the smallest value of the upper limit (-0.73160 in this case) and the largest value of lower limit (-7.16327 in this case).</p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.143 </span><span class="caption-text">Upper limit.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>For the MZA solutions to disappear, we need to find the smallest value of the upper limit (-0.73160 in this case) and the largest value of lower limit (-7.16327 in this case).</p>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">Taylor Expansion of MZA solutions</p>
+<p class="admonition-title">Taylor Expansion of MZA solutions</p>
 <p>What about Taylor expansion around small values of <span class="math notranslate nohighlight">\(g_1\)</span>? Taylor expanding the most general abstract form doesn’t give us any useful results since it is super complicated.</p>
-<div class="figure align-center" id="id11">
+<figure class="align-center" id="id11">
 <img alt="../../_images/mza-solutions-taylor-series-coefficients-spect-c5.png" src="../../_images/mza-solutions-taylor-series-coefficients-spect-c5.png" />
-<p class="caption"><span class="caption-number">Fig. 1.144 </span><span class="caption-text">Coefficients of Taylor series of MZA solutions. It’s weird that the coefficients are all real.</span></p>
-</div>
-<p class="last">I am not sure how to use these results.</p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.144 </span><span class="caption-text">Coefficients of Taylor series of MZA solutions. It’s weird that the coefficients are all real.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>I am not sure how to use these results.</p>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">Crossing has an effect on <span class="math notranslate nohighlight">\(d\omega/dn\)</span></p>
+<p class="admonition-title">Crossing has an effect on <span class="math notranslate nohighlight">\(d\omega/dn\)</span></p>
 <p>By observing the <span class="math notranslate nohighlight">\(\omega\sim n\)</span> plot, we noticed that crossing is changes the behavior of it, especially at the point <span class="math notranslate nohighlight">\(n=-1\)</span>. It seems that crossing changes whether the <span class="math notranslate nohighlight">\(\omega\)</span> goes to <span class="math notranslate nohighlight">\(\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span> at <span class="math notranslate nohighlight">\(n=-1\)</span>.</p>
-<div class="figure align-center" id="id12">
+<figure class="align-center" id="id12">
 <img alt="../../_images/box-spectra-mza-g1-n-shortrange.png" src="../../_images/box-spectra-mza-g1-n-shortrange.png" />
-<p class="caption"><span class="caption-number">Fig. 1.145 </span><span class="caption-text"><span class="math notranslate nohighlight">\(d\omega/dn\)</span> for MZA solutions with spectrum <span class="math notranslate nohighlight">\(spectAbs2 = \{\{\{-1, -0.3\}, g_1\}, \{\{-0.3, 1\}, 1\}\}\)</span>. In this plot, we have <span class="math notranslate nohighlight">\(g_1\in [-1,1]\)</span> with a step size 0.1 while <span class="math notranslate nohighlight">\(n\in [-1,1]\)</span>. We notice that the value at -1 changes as crossing happens.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.145 </span><span class="caption-text"><span class="math notranslate nohighlight">\(d\omega/dn\)</span> for MZA solutions with spectrum <span class="math notranslate nohighlight">\(spectAbs2 = \{\{\{-1, -0.3\}, g_1\}, \{\{-0.3, 1\}, 1\}\}\)</span>. In this plot, we have <span class="math notranslate nohighlight">\(g_1\in [-1,1]\)</span> with a step size 0.1 while <span class="math notranslate nohighlight">\(n\in [-1,1]\)</span>. We notice that the value at -1 changes as crossing happens.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>More specifically, we plot out the <span class="math notranslate nohighlight">\(d\omega/dn\)</span> for three different <span class="math notranslate nohighlight">\(g_1\)</span>.</p>
-<div class="last figure align-center" id="id13">
+<figure class="align-center" id="id13">
 <img alt="../../_images/box-spectra-mza-n-g1-three-values-including-crossing.png" src="../../_images/box-spectra-mza-n-g1-three-values-including-crossing.png" />
-<p class="caption"><span class="caption-number">Fig. 1.146 </span><span class="caption-text">for 3 different values of <span class="math notranslate nohighlight">\(g_1\)</span>. The second panel is for <span class="math notranslate nohighlight">\(g_1=0\)</span>. The grid lines are actually calculated using Limit which are <span class="math notranslate nohighlight">\(-0.0143723\)</span> and <span class="math notranslate nohighlight">\(0.0370502\)</span>. They never become 0?</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.146 </span><span class="caption-text">for 3 different values of <span class="math notranslate nohighlight">\(g_1\)</span>. The second panel is for <span class="math notranslate nohighlight">\(g_1=0\)</span>. The grid lines are actually calculated using Limit which are <span class="math notranslate nohighlight">\(-0.0143723\)</span> and <span class="math notranslate nohighlight">\(0.0370502\)</span>. They never become 0?</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div>
 <div class="warning admonition">
-<p class="first admonition-title">MZA solutions Disapears?</p>
+<p class="admonition-title">MZA solutions Disapears?</p>
 <p>The DR plots show that MZA solutions disappears for <code class="docutils literal notranslate"><span class="pre">spectC3</span></code> and <code class="docutils literal notranslate"><span class="pre">spectC4</span></code>. Is this true?</p>
 <p>I tested <code class="docutils literal notranslate"><span class="pre">Exclusions-&gt;None</span></code> in Mathematica to make sure this is not a plotting issue. The results do not change with this option.</p>
 <p>However, I found that the <span class="math notranslate nohighlight">\(\lvert f(\omega=1,k)\rvert\)</span> is approaching 0 for some none zero real k.</p>
-<div class="figure align-center" id="id14">
+<figure class="align-center" id="id14">
 <img alt="../../_images/f-of-omega-1-and-k-densityplot-log-mzap-mzam-spectc3.png" src="../../_images/f-of-omega-1-and-k-densityplot-log-mzap-mzam-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.147 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC3</span></code> with <span class="math notranslate nohighlight">\(\omega=1\)</span>. We found one real solutioin for MZA- solution, which is not what we expected from DR plots.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.147 </span><span class="caption-text">MZA solutions for <code class="docutils literal notranslate"><span class="pre">spectC3</span></code> with <span class="math notranslate nohighlight">\(\omega=1\)</span>. We found one real solutioin for MZA- solution, which is not what we expected from DR plots.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>This makes the DR plots questionable. However, no bug has been found. In fact I have been using the same functions to make this density plot.</p>
-<p>The I realized that using only real <span class="math notranslate nohighlight">\(n\)</span>‘s could be a problem since we might have complex <span class="math notranslate nohighlight">\(n\)</span>‘s that give us real <span class="math notranslate nohighlight">\(\omega\)</span>, in principle.</p>
+<p>The I realized that using only real <span class="math notranslate nohighlight">\(n\)</span>’s could be a problem since we might have complex <span class="math notranslate nohighlight">\(n\)</span>’s that give us real <span class="math notranslate nohighlight">\(\omega\)</span>, in principle.</p>
 <p>Indeed this is true for <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</p>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectc3.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.148 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code></span></p>
-</div>
-<div class="figure align-center" id="id16">
+<figcaption>
+<p><span class="caption-number">Fig. 1.148 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectc3.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.149 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.149 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Meanwhile the real parts of these solutions do not go to 0.</p>
-<div class="figure align-center" id="id17">
+<figure class="align-center" id="id17">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectc3.png" src="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.150 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id18">
+<figcaption>
+<p><span class="caption-number">Fig. 1.150 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id18">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectc3.png" src="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.151 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.151 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>But there can never be real k for these real <span class="math notranslate nohighlight">\(\omega\)</span> lines because real <span class="math notranslate nohighlight">\(k=\omega n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is complex.</p>
-<div class="figure align-center" id="id19">
+<figure class="align-center" id="id19">
 <img alt="../../_images/imaginary-part-of-k-for-complex-n-mzap-boxspectrum-spectc3.png" src="../../_images/imaginary-part-of-k-for-complex-n-mzap-boxspectrum-spectc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.152 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(k\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.152 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(k\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>.</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>For <code class="docutils literal notranslate"><span class="pre">spectC3</span></code>, we have the following.</p>
-<div class="figure align-center" id="id20">
+<figure class="align-center" id="id20">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectc2.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectc2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.153 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id21">
+<figcaption>
+<p><span class="caption-number">Fig. 1.153 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id21">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectc2.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectc2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.154 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id22">
+<figcaption>
+<p><span class="caption-number">Fig. 1.154 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id22">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectc2.png" src="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectc2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.155 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id23">
+<figcaption>
+<p><span class="caption-number">Fig. 1.155 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id23">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectc2.png" src="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectc2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.156 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.156 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectC2</span></code>.</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>So things must be special for <code class="docutils literal notranslate"><span class="pre">spectWC1</span></code> etc. Here we plot the real and imaginary part of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</p>
-<div class="figure align-center" id="id24">
+<figure class="align-center" id="id24">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectwc3.png" src="../../_images/real-part-of-omega-for-complex-n-mzap-boxspectrum-spectwc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.157 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id25">
+<figcaption>
+<p><span class="caption-number">Fig. 1.157 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id25">
 <img alt="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectwc3.png" src="../../_images/real-part-of-omega-for-complex-n-mzam-boxspectrum-spectwc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.158 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id26">
+<figcaption>
+<p><span class="caption-number">Fig. 1.158 </span><span class="caption-text">Absolute value of real part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id26">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectwc3.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzap-boxspectrum-spectwc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.159 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span></p>
-</div>
-<div class="figure align-center" id="id27">
+<figcaption>
+<p><span class="caption-number">Fig. 1.159 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id27">
 <img alt="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectwc3.png" src="../../_images/imaginary-part-of-omega-for-complex-n-mzam-boxspectrum-spectwc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.160 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.160 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(\omega\)</span> for MZA- solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>But there can never be real k for these real <span class="math notranslate nohighlight">\(\omega\)</span> lines because real <span class="math notranslate nohighlight">\(k=\omega n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is complex.</p>
-<div class="figure align-center" id="id28">
+<figure class="align-center" id="id28">
 <img alt="../../_images/imaginary-part-of-k-for-complex-n-mzap-boxspectrum-spectwc3.png" src="../../_images/imaginary-part-of-k-for-complex-n-mzap-boxspectrum-spectwc3.png" />
-<p class="caption"><span class="caption-number">Fig. 1.161 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(k\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span></p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.161 </span><span class="caption-text">Absolute value of imaginary part of <span class="math notranslate nohighlight">\(k\)</span> for MZA+ solution of <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code>.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>So, where did the MZA solutions go?</p>
 </div>
-<p class="last">So, where did the MZA solutions go?</p>
-</div>
-<div class="section" id="instabilities-for-box-spectra">
-<h3>1.2.6.1.1. Instabilities for Box Spectra<a class="headerlink" href="#instabilities-for-box-spectra" title="Permalink to this headline">¶</a></h3>
+<section id="instabilities-for-box-spectra">
+<h3><span class="section-number">1.2.6.1.1. </span>Instabilities for Box Spectra<a class="headerlink" href="#instabilities-for-box-spectra" title="Permalink to this headline">¶</a></h3>
 <div class="warning admonition">
-<p class="first admonition-title">Crossing seems to have little effects on instabilities</p>
-<p class="last">Instabilities on DR plot seems to be NOT affected by crossing. Probably because of the lines in the forbidden region (using abs for log argument in the results of integral for I’s) doesn’t seem to change a lot.</p>
+<p class="admonition-title">Crossing seems to have little effects on instabilities</p>
+<p>Instabilities on DR plot seems to be NOT affected by crossing. Probably because of the lines in the forbidden region (using abs for log argument in the results of integral for I’s) doesn’t seem to change a lot.</p>
 </div>
-<div class="figure align-center" id="id29">
+<figure class="align-center" id="id29">
 <img alt="../../_images/box-spectra-dr-lsa-maa-spectwc3-to-wc4.png" src="../../_images/box-spectra-dr-lsa-maa-spectwc3-to-wc4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.162 </span><span class="caption-text">MAA DR and LSA for spectrum <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> and <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code>. LSA is for real <span class="math notranslate nohighlight">\(\omega\)</span>, the color of the dots indicates the value of imaginary value of <span class="math notranslate nohighlight">\(k\)</span>.</span></p>
-</div>
-<div class="figure align-center" id="id30">
+<figcaption>
+<p><span class="caption-number">Fig. 1.162 </span><span class="caption-text">MAA DR and LSA for spectrum <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> and <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code>. LSA is for real <span class="math notranslate nohighlight">\(\omega\)</span>, the color of the dots indicates the value of imaginary value of <span class="math notranslate nohighlight">\(k\)</span>.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id30">
 <img alt="../../_images/box-spectra-dr-lsa-maa-spectc1-to-c4.png" src="../../_images/box-spectra-dr-lsa-maa-spectc1-to-c4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.163 </span><span class="caption-text">DR and LSA (MAA) for spectra with crossings.</span></p>
-</div>
-<div class="figure align-center" id="id31">
+<figcaption>
+<p><span class="caption-number">Fig. 1.163 </span><span class="caption-text">DR and LSA (MAA) for spectra with crossings.</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id31">
 <img alt="../../_images/box-spectra-dr-lsa-mzap-spectwc3-wc4.png" src="../../_images/box-spectra-dr-lsa-mzap-spectwc3-wc4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.164 </span><span class="caption-text">DR and LSA (MZA+) for spectra <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> (left) and <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> (right).</span></p>
-</div>
-<div class="figure align-center" id="id32">
+<figcaption>
+<p><span class="caption-number">Fig. 1.164 </span><span class="caption-text">DR and LSA (MZA+) for spectra <code class="docutils literal notranslate"><span class="pre">spectWC3</span></code> (left) and <code class="docutils literal notranslate"><span class="pre">spectWC4</span></code> (right).</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id32">
 <img alt="../../_images/box-spectra-dr-lsa-mzap-spectc1-to-c4.png" src="../../_images/box-spectra-dr-lsa-mzap-spectc1-to-c4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.165 </span><span class="caption-text">DR and LSA (MZA+) for spectra <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> (left-most) to <code class="docutils literal notranslate"><span class="pre">spectC4</span></code> (right-most).</span></p>
-</div>
-</div>
-</div>
-<div class="section" id="can-we-explain-crossing-using-discrete-beams">
-<h2>1.2.6.2. Can We Explain Crossing Using Discrete Beams?<a class="headerlink" href="#can-we-explain-crossing-using-discrete-beams" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 1.165 </span><span class="caption-text">DR and LSA (MZA+) for spectra <code class="docutils literal notranslate"><span class="pre">spectC1</span></code> (left-most) to <code class="docutils literal notranslate"><span class="pre">spectC4</span></code> (right-most).</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="can-we-explain-crossing-using-discrete-beams">
+<h2><span class="section-number">1.2.6.2. </span>Can We Explain Crossing Using Discrete Beams?<a class="headerlink" href="#can-we-explain-crossing-using-discrete-beams" title="Permalink to this headline">¶</a></h2>
 <p>What does backward emission mean? Is it somewhat equivalent to crossing spectrum without backward emission?</p>
-<div class="figure align-center" id="id33">
+<figure class="align-center" id="id33">
 <img alt="../../_images/lsaMAAROPltDB-WC4-and-C4.png" src="../../_images/lsaMAAROPltDB-WC4-and-C4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.166 </span><span class="caption-text">DR and LSA (MAA) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span></p>
-</div>
-<div class="figure align-center" id="id34">
+<figcaption>
+<p><span class="caption-number">Fig. 1.166 </span><span class="caption-text">DR and LSA (MAA) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id34">
 <img alt="../../_images/lsaMZApROPltDB-WC4-and-C4.png" src="../../_images/lsaMZApROPltDB-WC4-and-C4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.167 </span><span class="caption-text">DR and LSA (MZA+) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span></p>
-</div>
-<div class="figure align-center" id="id35">
+<figcaption>
+<p><span class="caption-number">Fig. 1.167 </span><span class="caption-text">DR and LSA (MZA+) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id35">
 <img alt="../../_images/lsaMZAmROPltDB-WC4-and-C4.png" src="../../_images/lsaMZAmROPltDB-WC4-and-C4.png" />
-<p class="caption"><span class="caption-number">Fig. 1.168 </span><span class="caption-text">DR and LSA (MZA-) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.168 </span><span class="caption-text">DR and LSA (MZA-) for <code class="docutils literal notranslate"><span class="pre">spectDBWC4</span></code> and <code class="docutils literal notranslate"><span class="pre">spectDBC4</span></code> which are <code class="docutils literal notranslate"><span class="pre">{{0.5,</span> <span class="pre">-0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{-0.5,</span> <span class="pre">0.1},</span> <span class="pre">{1,</span> <span class="pre">0.4},</span> <span class="pre">{1,</span> <span class="pre">0.6}}</span></code> respectively.</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Analytically, crossing and backward emission are not simply related.</p>
-</div>
-<div class="section" id="spectral-crossing-makes-dr-crossing-0-possible">
-<h2>1.2.6.3. Spectral Crossing Makes DR Crossing 0 Possible<a class="headerlink" href="#spectral-crossing-makes-dr-crossing-0-possible" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="spectral-crossing-makes-dr-crossing-0-possible">
+<h2><span class="section-number">1.2.6.3. </span>Spectral Crossing Makes DR Crossing 0 Possible<a class="headerlink" href="#spectral-crossing-makes-dr-crossing-0-possible" title="Permalink to this headline">¶</a></h2>
 <p>The MZA solution has some interesting behaviors. It seems that a crossing in spectrum can bend the DR and make it cross 0.</p>
 <p>We can prove that the crossing indeed needed but not guarantee to make DR cross 0.</p>
 <p>The MZA solution is</p>
@@ -594,8 +665,8 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\langle u^2 \rangle = \left(\langle u \rangle \right)^2,\]</div>
 <p>which can not be true. However, a crossing brings some negative regions and makes it possible but not guaranteed to have solutions.</p>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>

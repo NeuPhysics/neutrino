@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.2.1. Fast Modes &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.2.2. Directional Instability" href="directional-instability.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -329,16 +330,16 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="fast-modes">
-<h1>1.2.1. Fast Modes<a class="headerlink" href="#fast-modes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="why-is-it-fast">
-<h2>1.2.1.1. Why is it fast?<a class="headerlink" href="#why-is-it-fast" title="Permalink to this headline">¶</a></h2>
+  <section id="fast-modes">
+<h1><span class="section-number">1.2.1. </span>Fast Modes<a class="headerlink" href="#fast-modes" title="Permalink to this headline">¶</a></h1>
+<section id="why-is-it-fast">
+<h2><span class="section-number">1.2.1.1. </span>Why is it fast?<a class="headerlink" href="#why-is-it-fast" title="Permalink to this headline">¶</a></h2>
 <p>Fast modes require different opening angles for neutrinos and anti-neutrinos. The reason seems to be quite understandable. Forward scattering requires “colliding beams”. In the early studies of neutrino self interactions, the models always have same opening angles for neutrinos and antineutrinos, which means that no colliding for neutrinos and antineutrinos on the same side of emission.</p>
 <p>Different opening angles for all beams introduce collisions between all the beams, thus possibly leading to more conversions.</p>
 <p>Here we use the four beams model. The linear stability analysis is simply four coupled harmonic oscillators.</p>
 <div class="warning admonition">
-<p class="first admonition-title">How could they be harmonic oscillators?</p>
-<p class="last">Here is the confusion. How could <span class="math notranslate nohighlight">\(\epsilon\)</span> become very large if they are coupled harmonic oscillators? Is this related the fact that <span class="math notranslate nohighlight">\(\epsilon\)</span> is complex instead of real?</p>
+<p class="admonition-title">How could they be harmonic oscillators?</p>
+<p>Here is the confusion. How could <span class="math notranslate nohighlight">\(\epsilon\)</span> become very large if they are coupled harmonic oscillators? Is this related the fact that <span class="math notranslate nohighlight">\(\epsilon\)</span> is complex instead of real?</p>
 </div>
 <p>We take out the terms related to the difference in opening angles <span class="math notranslate nohighlight">\(\chi_-=1-\cos(\theta_1 - \theta_2)\)</span>. The linearized equation of motion becomes</p>
 <div class="math notranslate nohighlight">
@@ -369,22 +370,23 @@ TeX: {
 <p>where the discrimination <span class="math notranslate nohighlight">\(\Delta\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\Delta = (M_{11} - M_{22})^2 + 4 M_{12} M_{21}.\]</div>
-</div>
-<div class="section" id="several-numerical-calculations">
-<h2>1.2.1.2. Several Numerical Calculations<a class="headerlink" href="#several-numerical-calculations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="several-numerical-calculations">
+<h2><span class="section-number">1.2.1.2. </span>Several Numerical Calculations<a class="headerlink" href="#several-numerical-calculations" title="Permalink to this headline">¶</a></h2>
 <div class="hint admonition">
-<p class="first admonition-title">Four Beams Model</p>
+<p class="admonition-title">Four Beams Model</p>
 <p>There are many things to consider for the four beams line model.</p>
-<ol class="last arabic simple">
-<li>Different emission angle for neutrinos and antineutrinos;</li>
-<li>Different density for neutrinos and antineutrinos;</li>
-<li>Left and right difference.</li>
+<ol class="arabic simple">
+<li><p>Different emission angle for neutrinos and antineutrinos;</p></li>
+<li><p>Different density for neutrinos and antineutrinos;</p></li>
+<li><p>Left and right difference.</p></li>
 </ol>
 </div>
 <p>Is the system unstable even for <span class="math notranslate nohighlight">\(\omega_v=0\)</span> and <span class="math notranslate nohighlight">\(\lambda=0\)</span>?</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="../../_images/fast-mode-alpha-0.8.png" src="../../_images/fast-mode-alpha-0.8.png" />
-<p class="caption"><span class="caption-number">Fig. 1.49 </span><span class="caption-text">The maximum imaginary part in linear stability analysis. These calculations are for fix <span class="math notranslate nohighlight">\(k_m/\hat E=1\)</span>, where <span class="math notranslate nohighlight">\(\hat E\)</span> is the energy scale used to scale all the quantities.</span></p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.49 </span><span class="caption-text">The maximum imaginary part in linear stability analysis. These calculations are for fix <span class="math notranslate nohighlight">\(k_m/\hat E=1\)</span>, where <span class="math notranslate nohighlight">\(\hat E\)</span> is the energy scale used to scale all the quantities.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\omega_v =&amp; 0\\
@@ -399,10 +401,12 @@ TeX: {
 \left\{\frac{\pi }{3},\frac{\pi }{6}\right\} &amp; \left\{\frac{\pi }{3},\frac{2 \pi }{9}\right\} &amp; \left\{\frac{\pi }{3},\frac{5 \pi }{18}\right\} &amp; \left\{\frac{\pi }{3},\frac{\pi }{3}\right\} \\
 \end{array}\end{split}\]</div>
 </div>
-</div>
-<div class="figure align-center" id="id2">
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
 <img alt="../../_images/fast-mode-alpha-1.2.png" src="../../_images/fast-mode-alpha-1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.50 </span><span class="caption-text">The maximum imaginary part in linear stability analysis. These calculations are for fix <span class="math notranslate nohighlight">\(k_m/\hat E=1\)</span>, where <span class="math notranslate nohighlight">\(\hat E\)</span> is the energy scale used to scale all the quantities.</span></p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.50 </span><span class="caption-text">The maximum imaginary part in linear stability analysis. These calculations are for fix <span class="math notranslate nohighlight">\(k_m/\hat E=1\)</span>, where <span class="math notranslate nohighlight">\(\hat E\)</span> is the energy scale used to scale all the quantities.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\omega_v =&amp; 0\\
@@ -417,11 +421,13 @@ TeX: {
 \left\{\frac{\pi }{3},\frac{\pi }{6}\right\} &amp; \left\{\frac{\pi }{3},\frac{2 \pi }{9}\right\} &amp; \left\{\frac{\pi }{3},\frac{5 \pi }{18}\right\} &amp; \left\{\frac{\pi }{3},\frac{\pi }{3}\right\} \\
 \end{array}\end{split}\]</div>
 </div>
-</div>
+</figcaption>
+</figure>
 <p>When we have symmetric geometry, the instability region is gone. Such a result is exactly what we expect. However, different</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="research-notes/collective/assets/fast-modes-fast-mode-no-matter-asymmetric-alpha-0.8.png" src="research-notes/collective/assets/fast-modes-fast-mode-no-matter-asymmetric-alpha-0.8.png" />
-<p class="caption"><span class="caption-number">Fig. 1.51 </span><span class="caption-text">Linear stability analysis for</span></p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.51 </span><span class="caption-text">Linear stability analysis for</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <div class="math notranslate nohighlight">
 \[\begin{split}\omega_v =&amp; 0\\
@@ -430,59 +436,78 @@ TeX: {
 \theta_L =&amp; 2\pi/9 \\
 \theta_R =&amp; \pi/6.\end{split}\]</div>
 </div>
-</div>
-</div>
-<div class="section" id="regions-of-instability">
-<h2>1.2.1.3. Regions of Instability<a class="headerlink" href="#regions-of-instability" title="Permalink to this headline">¶</a></h2>
+</figcaption>
+</figure>
+</section>
+<section id="regions-of-instability">
+<h2><span class="section-number">1.2.1.3. </span>Regions of Instability<a class="headerlink" href="#regions-of-instability" title="Permalink to this headline">¶</a></h2>
 <p>For convinience, we define some quantities for four beam case.</p>
 <ol class="arabic simple">
-<li>We define the a parameter <span class="math notranslate nohighlight">\(\alpha=(1-a)/(1+a)\)</span> so that <span class="math notranslate nohighlight">\(\alpha \in [0,\infty]\)</span> is mapped onto <span class="math notranslate nohighlight">\(a\in [-1,1]\)</span>.</li>
-<li>The summation of the two angles <span class="math notranslate nohighlight">\(\Sigma\theta=\theta_1+\theta_2\)</span> and the difference between two angles <span class="math notranslate nohighlight">\(\Delta\theta=\theta_1-\theta_2\)</span>, where <span class="math notranslate nohighlight">\(\theta_1\)</span> is for neutrino beams.</li>
-<li>Every quantity is in unit of <span class="math notranslate nohighlight">\(\mu\)</span>.</li>
+<li><p>We define the a parameter <span class="math notranslate nohighlight">\(\alpha=(1-a)/(1+a)\)</span> so that <span class="math notranslate nohighlight">\(\alpha \in [0,\infty]\)</span> is mapped onto <span class="math notranslate nohighlight">\(a\in [-1,1]\)</span>.</p></li>
+<li><p>The summation of the two angles <span class="math notranslate nohighlight">\(\Sigma\theta=\theta_1+\theta_2\)</span> and the difference between two angles <span class="math notranslate nohighlight">\(\Delta\theta=\theta_1-\theta_2\)</span>, where <span class="math notranslate nohighlight">\(\theta_1\)</span> is for neutrino beams.</p></li>
+<li><p>Every quantity is in unit of <span class="math notranslate nohighlight">\(\mu\)</span>.</p></li>
 </ol>
 <p>First we check the result without matter, without vacuum frequency, and <span class="math notranslate nohighlight">\(\Sigma\theta=2\pi/3\)</span>.</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-0.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-0.png" />
-<p class="caption"><span class="caption-number">Fig. 1.52 </span><span class="caption-text">No matter, no vacuum frequency</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.52 </span><span class="caption-text">No matter, no vacuum frequency</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>We can also check the matter effect.</p>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-1.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.53 </span><span class="caption-text">With matter, no vacuum frequency.</span></p>
-</div>
-<div class="figure align-center" id="id6">
+<figcaption>
+<p><span class="caption-number">Fig. 1.53 </span><span class="caption-text">With matter, no vacuum frequency.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-10.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-10.png" />
-<p class="caption"><span class="caption-number">Fig. 1.54 </span><span class="caption-text">With matter, no vacuum frequency.</span></p>
-</div>
-<div class="figure align-center" id="id7">
+<figcaption>
+<p><span class="caption-number">Fig. 1.54 </span><span class="caption-text">With matter, no vacuum frequency.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-100.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0-lambda-divided-by-mu-100.png" />
-<p class="caption"><span class="caption-number">Fig. 1.55 </span><span class="caption-text">With matter, no vacuum frequency.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.55 </span><span class="caption-text">With matter, no vacuum frequency.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Then we check the result without matter, without vacuum frequency, and <span class="math notranslate nohighlight">\(\Sigma\theta=2\pi/3\)</span>, and <span class="math notranslate nohighlight">\(\frac{m k}{\mu}=0.1\)</span>.</p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0.1-lambda-divided-by-mu-0.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-0.1-lambda-divided-by-mu-0.png" />
-<p class="caption"><span class="caption-number">Fig. 1.56 </span><span class="caption-text">No matter, no vacuum frequency.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.56 </span><span class="caption-text">No matter, no vacuum frequency.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The effect of <span class="math notranslate nohighlight">\(m k/\mu\)</span> is also similar to matter effect.</p>
-<div class="figure align-center" id="id9">
+<figure class="align-center" id="id9">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-1-lambda-divided-by-mu-0.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-1-lambda-divided-by-mu-0.png" />
-<p class="caption"><span class="caption-number">Fig. 1.57 </span><span class="caption-text">Higher order Fourier modes, without matter, no vacuum frequency.</span></p>
-</div>
-<div class="figure align-center" id="id10">
+<figcaption>
+<p><span class="caption-number">Fig. 1.57 </span><span class="caption-text">Higher order Fourier modes, without matter, no vacuum frequency.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-10-lambda-divided-by-mu-0.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-10-lambda-divided-by-mu-0.png" />
-<p class="caption"><span class="caption-number">Fig. 1.58 </span><span class="caption-text">Higher order Fourier modes, without matter, no vacuum frequency.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.58 </span><span class="caption-text">Higher order Fourier modes, without matter, no vacuum frequency.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Matter + Fourier modes also has suppression</p>
-<div class="figure align-center" id="id11">
+<figure class="align-center" id="id11">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-10-lambda-divided-by-mu-100.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-10-lambda-divided-by-mu-100.png" />
-<p class="caption"><span class="caption-number">Fig. 1.59 </span><span class="caption-text">Higher order Fourier modes, with matter, no vacuum frequency.</span></p>
-</div>
-<div class="figure align-center" id="id12">
+<figcaption>
+<p><span class="caption-number">Fig. 1.59 </span><span class="caption-text">Higher order Fourier modes, with matter, no vacuum frequency.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
 <img alt="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-1-lambda-divided-by-mu-10.png" src="../../_images/plt2-sigmatheta-2Pi-divided-by-3-mk-divided-by-mu-1-lambda-divided-by-mu-10.png" />
-<p class="caption"><span class="caption-number">Fig. 1.60 </span><span class="caption-text">Higher order Fourier modes, with matter, no vacuum frequency.</span></p>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.60 </span><span class="caption-text">Higher order Fourier modes, with matter, no vacuum frequency.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 
 
     </div>

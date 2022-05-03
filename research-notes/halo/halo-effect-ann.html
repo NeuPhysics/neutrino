@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.3.1. Halo Effect - Artificial Neural Network &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.3.2. Halo Effect - Finite Difference" href="halo-effect-finite-difference.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -339,43 +340,49 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="halo-effect-artificial-neural-network">
-<h1>1.3.1. Halo Effect - Artificial Neural Network<a class="headerlink" href="#halo-effect-artificial-neural-network" title="Permalink to this headline">¶</a></h1>
+  <section id="halo-effect-artificial-neural-network">
+<h1><span class="section-number">1.3.1. </span>Halo Effect - Artificial Neural Network<a class="headerlink" href="#halo-effect-artificial-neural-network" title="Permalink to this headline">¶</a></h1>
 <div class="warning admonition">
-<p class="first admonition-title">Notice</p>
-<p class="last">This is a summary of the work that has been done on solving vacuum oscillation using artificial neural network. Also included are some tests.</p>
+<p class="admonition-title">Notice</p>
+<p>This is a summary of the work that has been done on solving vacuum oscillation using artificial neural network. Also included are some tests.</p>
 </div>
 <p>The aim of this subproject is to solve a system that could not be solved using the transitional numerical methods. The system here is a system of neutrinos emitted from a plane but interact with with the neutrinos reflected from some other plane. In this case the evolution of the emitted neutrinos are coupled to itself through the reflection.</p>
-<div class="section" id="background">
-<h2>1.3.1.1. Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="neutrino-neutrino-interaction-with-the-appearance-of-reflection">
-<h3>1.3.1.1.1. Neutrino-neutrino Interaction with The Appearance of Reflection<a class="headerlink" href="#neutrino-neutrino-interaction-with-the-appearance-of-reflection" title="Permalink to this headline">¶</a></h3>
+<section id="background">
+<h2><span class="section-number">1.3.1.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<section id="neutrino-neutrino-interaction-with-the-appearance-of-reflection">
+<h3><span class="section-number">1.3.1.1.1. </span>Neutrino-neutrino Interaction with The Appearance of Reflection<a class="headerlink" href="#neutrino-neutrino-interaction-with-the-appearance-of-reflection" title="Permalink to this headline">¶</a></h3>
 <p>Here is the configuration.</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/neutrinoWithReflection.png" src="../../_images/neutrinoWithReflection.png" />
-<p class="caption"><span class="caption-number">Fig. 1.170 </span><span class="caption-text">Configuration of the system. The lower plane is the emission plane while the upper plane the the reflection plane. Neutrino reaches the upper plane has a probability of being reflected, in other words there is a fixed coefficient for reflection. Only the reflected beams with angle that is the same as the emission angle are considered.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.170 </span><span class="caption-text">Configuration of the system. The lower plane is the emission plane while the upper plane the the reflection plane. Neutrino reaches the upper plane has a probability of being reflected, in other words there is a fixed coefficient for reflection. Only the reflected beams with angle that is the same as the emission angle are considered.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The lower plane is the emission plane while the upper plane the the reflection plane. Neutrinos get reflected at the upper plane with a reflection coefficient <span class="math notranslate nohighlight">\(\alpha\)</span>. The distance between the two plane is <span class="math notranslate nohighlight">\(d\)</span>.</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../../_images/emissionAngles.png" src="../../_images/emissionAngles.png" />
-<p class="caption"><span class="caption-number">Fig. 1.171 </span><span class="caption-text">There is a left-right symmetry of the emission beams. The angles are defined as <span class="math notranslate nohighlight">\(\theta\)</span>.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.171 </span><span class="caption-text">There is a left-right symmetry of the emission beams. The angles are defined as <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>The notation for neutrino beams are</p>
 <ul class="simple">
-<li>Density Matrix of Emission to The Right: <span class="math notranslate nohighlight">\(\rho^{Re}\)</span></li>
-<li>Density Matrix of Emission to The Left: <span class="math notranslate nohighlight">\(\rho^{Le}\)</span></li>
-<li>Density Matrix of Reflection to The Right: <span class="math notranslate nohighlight">\(\rho^{Rr}\)</span></li>
-<li>Density Matrix of Reflection to The Left: <span class="math notranslate nohighlight">\(\rho^{Lr}\)</span></li>
-<li>Neutrino-neutrino Interaction of Emission to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Re}\)</span></li>
-<li>Neutrino-neutrino Interaction of Emission to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Le}\)</span></li>
-<li>Neutrino-neutrino Interaction of Reflection to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Rr}\)</span></li>
-<li>Neutrino-neutrino Interaction of Reflection to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Lr}\)</span></li>
+<li><p>Density Matrix of Emission to The Right: <span class="math notranslate nohighlight">\(\rho^{Re}\)</span></p></li>
+<li><p>Density Matrix of Emission to The Left: <span class="math notranslate nohighlight">\(\rho^{Le}\)</span></p></li>
+<li><p>Density Matrix of Reflection to The Right: <span class="math notranslate nohighlight">\(\rho^{Rr}\)</span></p></li>
+<li><p>Density Matrix of Reflection to The Left: <span class="math notranslate nohighlight">\(\rho^{Lr}\)</span></p></li>
+<li><p>Neutrino-neutrino Interaction of Emission to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Re}\)</span></p></li>
+<li><p>Neutrino-neutrino Interaction of Emission to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Le}\)</span></p></li>
+<li><p>Neutrino-neutrino Interaction of Reflection to The Right: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Rr}\)</span></p></li>
+<li><p>Neutrino-neutrino Interaction of Reflection to The Left: <span class="math notranslate nohighlight">\(H_{\nu\nu}^{Lr}\)</span></p></li>
 </ul>
 <p>At a fixed, each beam has a neutrino-neutrino interaction Hamiltonian with contribution from another emission beam and two reflected beams.</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <img alt="../../_images/interactionAtPoint.png" src="../../_images/interactionAtPoint.png" />
-<p class="caption"><span class="caption-number">Fig. 1.172 </span><span class="caption-text">The neutrino-neutrino interaction at a fixed point for a beam going to the right.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.172 </span><span class="caption-text">The neutrino-neutrino interaction at a fixed point for a beam going to the right.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>For a right emission beam, the neutrino-neutrino interaction is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}H_{\nu\nu}^{Re} =&amp; \mu \left( 2 n^{Lr} (\rho^{Lr} -\bar\rho^{Lr}) +  n^{Le}(1-\cos(2\theta) ) (\rho^{Le} -\bar\rho^{Le}) \right. \nonumber \\
@@ -407,8 +414,8 @@ i\partial_z \rho^{Lr}(z) &amp;= \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Lr}, \rh
 <p>where <span class="math notranslate nohighlight">\({}^{Xe}\)</span> is for <span class="math notranslate nohighlight">\({}^{Le}\)</span> and <span class="math notranslate nohighlight">\({}^{Re}\)</span>.</p>
 <p>However, the other four constraints are for the reflected beams and they are not clear.</p>
 <div class="warning admonition">
-<p class="first admonition-title">Question Here</p>
-<p class="last">I have a question here. Since there is no mixing between neutrinos and anti-neutrinos for Dirac particle, I would expect these constraints to be independent of each other. Is this true?</p>
+<p class="admonition-title">Question Here</p>
+<p>I have a question here. Since there is no mixing between neutrinos and anti-neutrinos for Dirac particle, I would expect these constraints to be independent of each other. Is this true?</p>
 </div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho^{Lr}(z=d) &amp; = \mathbf{Refl} [\rho^{Le}(z=d)] \\
@@ -417,18 +424,18 @@ i\partial_z \rho^{Lr}(z) &amp;= \cos\theta \left[ H_{vac} + H_{\nu\nu}^{Lr}, \rh
 \bar \rho^{Rr}(z=d) &amp; =  \mathbf{Refl} [ \bar \rho^{Re}(z=d)],\end{split}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\mathbf{Refl}\)</span> is the operator for the reflection that takes out some of the diagonal elements and multiplied each element by a constant.</p>
 <div class="warning admonition">
-<p class="first admonition-title">Question</p>
-<p class="last">The question is how to determine this <span class="math notranslate nohighlight">\(\mathbf{Refl}\)</span></p>
+<p class="admonition-title">Question</p>
+<p>The question is how to determine this <span class="math notranslate nohighlight">\(\mathbf{Refl}\)</span></p>
 </div>
-</div>
-</div>
-<div class="section" id="numerical-methods">
-<h2>1.3.1.2. Numerical Methods<a class="headerlink" href="#numerical-methods" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="artificial-neural-network-for-vacuum-oscillation">
-<h3>1.3.1.2.1. Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#artificial-neural-network-for-vacuum-oscillation" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="numerical-methods">
+<h2><span class="section-number">1.3.1.2. </span>Numerical Methods<a class="headerlink" href="#numerical-methods" title="Permalink to this headline">¶</a></h2>
+<section id="artificial-neural-network-for-vacuum-oscillation">
+<h3><span class="section-number">1.3.1.2.1. </span>Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#artificial-neural-network-for-vacuum-oscillation" title="Permalink to this headline">¶</a></h3>
 <p>To make sure artificial neural network actually works, we started from the calculation of vacuum oscillation. In this section we consider only two flavour neutrino oscillation.</p>
-<div class="section" id="vacuum-oscillation">
-<h4>1.3.1.2.1.1. Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h4>
+<section id="vacuum-oscillation">
+<h4><span class="section-number">1.3.1.2.1.1. </span>Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h4>
 <p>Neutrino Vacuum Oscillation is determined by the following equation of motion.</p>
 <div class="math notranslate nohighlight">
 \[i\partial_t \rho = \left[ H_{vac},\rho \right],\]</div>
@@ -456,8 +463,8 @@ b - i c &amp; d \end{pmatrix},\end{split}\]</div>
 \dot d &amp; = c (h0-h3).\end{split}\]</div>
 <p>There are two ways of writing the program.</p>
 <ul class="simple">
-<li>2 by 2 Matrix</li>
-<li>1 by 4 Matrix</li>
+<li><p>2 by 2 Matrix</p></li>
+<li><p>1 by 4 Matrix</p></li>
 </ul>
 <p>In this note, we will use a 1 by 4 matrix to denote the density matrix, which is defined as,</p>
 <div class="math notranslate nohighlight">
@@ -475,17 +482,17 @@ b - i c &amp; d \end{pmatrix},\end{split}\]</div>
 \[\begin{split}\partial_t \begin{pmatrix} a \\ d \\ b \\ c
 \end{pmatrix}  = \begin{pmatrix} - 2 c \sin 2\theta  \\  -2c \cos 2\theta   \\ a\sin 2\theta + d \sin 2\theta - 2b \cos 2\theta \\ -2c\cos 2\theta   \end{pmatrix}.\end{split}\]</div>
 <p>The four equations can be solved and the density matrix at any time can be obtained.</p>
-</div>
-<div class="section" id="id1">
-<h4>1.3.1.2.1.2. Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id1">
+<h4><span class="section-number">1.3.1.2.1.2. </span>Artificial Neural Network for Vacuum Oscillation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>The code I have been testing is written by Shashank for my code doesn’t minimized to a good result.But the debugging for my code is also shown below.</p>
 <div class="note admonition">
-<p class="first admonition-title">Debugging( Compare my code with Shashank’s code)</p>
+<p class="admonition-title">Debugging( Compare my code with Shashank’s code)</p>
 <p>My code can also be found here at <a class="reference external" href="http://nbviewer.ipython.org/github/NeuPhysics/aNN/blob/master/ipynb/vacOsc4CompSSConvention.ipynb">nbviewer</a> .</p>
-<p class="last">Through the debugging I have confirmed that we have the same function value given the same arguments and the same cost function value in the same condition. But my code doesn’t show a good minimization result.</p>
+<p>Through the debugging I have confirmed that we have the same function value given the same arguments and the same cost function value in the same condition. But my code doesn’t show a good minimization result.</p>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">Testing ANN for Vacuum Oscillation using Shashank’s Code</p>
+<p class="admonition-title">Testing ANN for Vacuum Oscillation using Shashank’s Code</p>
 <p>These are tests done using Shashank’s code. Three types of tests has been done.</p>
 <p><strong>Using only Nelder-Mead</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vout</span><span class="o">=</span><span class="n">minimize</span><span class="p">(</span><span class="n">yp</span><span class="p">,</span><span class="n">partot</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;Nelder-Mead&#39;</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">1e-11</span><span class="p">,</span>
@@ -493,10 +500,12 @@ b - i c &amp; d \end{pmatrix},\end{split}\]</div>
 </pre></div>
 </div>
 <p>The result appears to be not bad. (“nfev”: number of function evaluation; “nit”: number of total iterations.)</p>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <span id="index-0"></span><img alt="../../_images/ann_NelderMead.png" src="../../_images/ann_NelderMead.png" />
-<p class="caption"><span class="caption-number">Fig. 1.173 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is the numerical one.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.173 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is the numerical one.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>status: 0
 nfev: 145333
 success: True
@@ -544,10 +553,12 @@ nit: 131078
 <span class="mf">3.79841345</span> <span class="o">-</span><span class="mf">2.10529717</span> <span class="o">-</span><span class="mf">4.10821308</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <span id="index-1"></span><img alt="../../_images/ann_devo.png" src="../../_images/ann_devo.png" />
-<p class="caption"><span class="caption-number">Fig. 1.174 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.174 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p><strong>Calculating a Longer Range</strong></p>
 <p>Double the range to</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
@@ -590,15 +601,17 @@ jac: array([ 9.90042492e-02, 9.56093427e-02, 5.69877479e-05, 9.94637706e-04,
 nit: 100
 </pre></div>
 </div>
-<div class="last figure align-center" id="id7">
+<figure class="align-center" id="id7">
 <span id="index-2"></span><img alt="../../_images/ann_devo_range.png" src="../../_images/ann_devo_range.png" />
-<p class="caption"><span class="caption-number">Fig. 1.175 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span></p>
+<figcaption>
+<p><span class="caption-number">Fig. 1.175 </span><span class="caption-text">The 11 element of density matrix as a function of time. The red curve is accurate result while the blue is from differential evolution.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="codes">
-<h3>1.3.1.2.2. Codes<a class="headerlink" href="#codes" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="codes">
+<h3><span class="section-number">1.3.1.2.2. </span>Codes<a class="headerlink" href="#codes" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
 <span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">expit</span>
@@ -712,9 +725,9 @@ nit: 100
 <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;functionvalue.txt&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">costvFResult</span><span class="o">.</span><span class="n">fun</span><span class="p">]),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
     </div>

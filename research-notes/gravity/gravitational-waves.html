@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.4.2. Gravitational Waves &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.5. Group Meeting" href="../group-meeting/index.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -345,22 +346,22 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="gravitational-waves">
-<h1>1.4.2. Gravitational Waves<a class="headerlink" href="#gravitational-waves" title="Permalink to this headline">¶</a></h1>
+  <section id="gravitational-waves">
+<h1><span class="section-number">1.4.2. </span>Gravitational Waves<a class="headerlink" href="#gravitational-waves" title="Permalink to this headline">¶</a></h1>
 <div class="warning admonition">
-<p class="first admonition-title">Conventions</p>
-<ol class="last arabic simple">
-<li>We use signature <span class="math notranslate nohighlight">\(+2\)</span> for the metric.</li>
-<li><span class="math notranslate nohighlight">\(\omega,k\)</span> are the frequencies from Fourier expansion of the off diagonal element of density matrix.</li>
+<p class="admonition-title">Conventions</p>
+<ol class="arabic simple">
+<li><p>We use signature <span class="math notranslate nohighlight">\(+2\)</span> for the metric.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega,k\)</span> are the frequencies from Fourier expansion of the off diagonal element of density matrix.</p></li>
 </ol>
 </div>
-<div class="section" id="basics">
-<h2>1.4.2.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<section id="basics">
+<h2><span class="section-number">1.4.2.1. </span>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
 <p>In general, we write down the components of metric for weak gravitational field as</p>
 <div class="math notranslate nohighlight">
 \[g_{\alpha\beta} = \eta_{\alpha\beta} + h_{\alpha\beta},\]</div>
 <p>where <span class="math notranslate nohighlight">\(h_{\alpha\beta}\)</span> is the perturbation.</p>
-<p>In general, a weak gravitational wave has two different modes, the <span class="math notranslate nohighlight">\(h_+\)</span> mode <a class="reference internal" href="#schutz" id="id1">[Schutz]</a>,</p>
+<p>In general, a weak gravitational wave has two different modes, the <span class="math notranslate nohighlight">\(h_+\)</span> mode <a class="reference internal" href="#schutz" id="id1"><span>[Schutz]</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}h_{\alpha\beta} \to \begin{pmatrix}
 0 &amp; 0 &amp; 0 &amp; 0 \\
@@ -373,13 +374,13 @@ TeX: {
 \[\begin{split}h_+ &amp;= A_{xx} \cos(\omega_{gw}(t-z))\\
 h_\times &amp;= A_{xy} \sin(\omega_{gw}(t-z)).\end{split}\]</div>
 <div class="note admonition">
-<p class="first admonition-title">Binary Neutron Stary System</p>
-<p>In a binary neutron star system, which we detect at a distance <span class="math notranslate nohighlight">\(r\)</span>, the gravitational waves carries the metric <a class="reference internal" href="#hendry2007" id="id2">[Hendry2007]</a></p>
+<p class="admonition-title">Binary Neutron Stary System</p>
+<p>In a binary neutron star system, which we detect at a distance <span class="math notranslate nohighlight">\(r\)</span>, the gravitational waves carries the metric <a class="reference internal" href="#hendry2007" id="id2"><span>[Hendry2007]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}h_{xx} &amp;= -h_{yy} =h\cos(4\pi f t)\\
 h_{xy}&amp;=h_{yx} = - h\sin (4\pi f t),\end{split}\]</div>
 <p>where</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[h = \frac{ 32\pi^2 G M R^2 f^2 }{c^4 r}.\]</div>
 </div>
 <p>For simplicity, we ignore the cross terms and consider only the diagonal elements in perturbation, aka <span class="math notranslate nohighlight">\(h_+\)</span> polarization, the metric should be</p>
@@ -395,68 +396,72 @@ h_{xy}&amp;=h_{yx} = - h\sin (4\pi f t),\end{split}\]</div>
 \[h_+ = A_{xx} \cos(\omega_{gw}(t-z)).\]</div>
 <p>There are many sources of gravitational waves. Neutron star megers, even burst in supernova explosions.</p>
 <div class="note admonition">
-<p class="first admonition-title">What Metric</p>
+<p class="admonition-title">What Metric</p>
 <p>In principle, the metric near neutron star megers are complicated. For approximations, I would like to propose a Kerr metric plus the perturbations.</p>
 <p>However, Kerr metric is still too complicated for neutrino oscillations. I would argue that the angular momentum is not that large and we could simply use a Schwarzchild metric as the background metric.</p>
 <p>So the first case study would be Schwarzchild metric plus the plane wave gravitational perturbation.</p>
-<p class="last">For vacuum oscillation, Schwarzchild metric has no effect on the flavor oscillations.</p>
+<p>For vacuum oscillation, Schwarzchild metric has no effect on the flavor oscillations.</p>
 </div>
-</div>
-<div class="section" id="some-estimations">
-<h2>1.4.2.2. Some Estimations<a class="headerlink" href="#some-estimations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="magnitude-of-strain">
-<h3>1.4.2.2.1. Magnitude of Strain<a class="headerlink" href="#magnitude-of-strain" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="some-estimations">
+<h2><span class="section-number">1.4.2.2. </span>Some Estimations<a class="headerlink" href="#some-estimations" title="Permalink to this headline">¶</a></h2>
+<section id="magnitude-of-strain">
+<h3><span class="section-number">1.4.2.2.1. </span>Magnitude of Strain<a class="headerlink" href="#magnitude-of-strain" title="Permalink to this headline">¶</a></h3>
 <p>As an estimation, the power of gravitation waves drop as <span class="math notranslate nohighlight">\(1/r^2\)</span>. Thus the strain drops as <span class="math notranslate nohighlight">\(1/r\)</span>.</p>
-<p>For compact binary coalescence, the circular polarized wave at distance r is <a class="reference internal" href="#riles2013" id="id3">[Riles2013]</a></p>
+<p>For compact binary coalescence, the circular polarized wave at distance r is <a class="reference internal" href="#riles2013" id="id3"><span>[Riles2013]</span></a></p>
 <div class="math notranslate nohighlight">
 \[h(t) =  \frac{1}{r} \left( \frac{5 G^5 M^5}{2 c^{11}} \right)^{1/4} \frac{1}{(t_{\mathrm{coal}} -t)^{1/4}},\]</div>
 <p>which shows that the frequency diverges at <span class="math notranslate nohighlight">\(t_{\mathrm{coal}}\)</span>.</p>
-<p>In the astrophysicists’ form, we have <a class="reference internal" href="#riles2013" id="id4">[Riles2013]</a></p>
+<p>In the astrophysicists’ form, we have <a class="reference internal" href="#riles2013" id="id4"><span>[Riles2013]</span></a></p>
 <div class="math notranslate nohighlight">
 \[h(\tau) = (1.7\times 10^{-23}) \left( \frac{15\mathrm{Mpc}}{r} \right) \left( \frac{1 \text{ day} }{\tau} \right)^{1/4} \left( \frac{M}{1.4M_{\odot}}\right)^{5/4}.\]</div>
 <p>As an estimation, we can show that at <span class="math notranslate nohighlight">\(r=1000 km\)</span> from the source,</p>
 <div class="math notranslate nohighlight">
 \[h(\tau) \sim 10^{-6}\left( \frac{1 \text{ day} }{\tau} \right)^{1/4} \left( \frac{M}{1.4M_{\odot}}\right)^{5/4}.\]</div>
 <p>As an example, we plot the evolution as a function of <span class="math notranslate nohighlight">\(\tau\)</span> for 1.4 solar mass binaries.</p>
-<div class="figure align-center" id="id14">
+<figure class="align-center" id="id14">
 <img alt="../../_images/binary-mergers-h-tau.png" src="../../_images/binary-mergers-h-tau.png" />
-<p class="caption"><span class="caption-number">Fig. 1.189 </span><span class="caption-text">Binary mergers. In the beginning, gravitational waves are very strong.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.189 </span><span class="caption-text">Binary mergers. In the beginning, gravitational waves are very strong.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="warning admonition">
-<p class="first admonition-title">Strong Field</p>
+<p class="admonition-title">Strong Field</p>
 <p>However, the problem is, for stong waves, this estimation fails. I need to find a paper that numerically calculates the strain for strong fields.</p>
-<p class="last"><strong>And I haven’t found the right paper.</strong></p>
+<p><strong>And I haven’t found the right paper.</strong></p>
 </div>
-<p>The size of the disk of neutron star mergers are of the order <span class="math notranslate nohighlight">\(10 km\)</span> <a class="reference internal" href="#foucart2012" id="id5">[Foucart2012]</a>.</p>
-</div>
-<div class="section" id="some-scales">
-<h3>1.4.2.2.2. Some Scales<a class="headerlink" href="#some-scales" title="Permalink to this headline">¶</a></h3>
+<p>The size of the disk of neutron star mergers are of the order <span class="math notranslate nohighlight">\(10 km\)</span> <a class="reference internal" href="#foucart2012" id="id5"><span>[Foucart2012]</span></a>.</p>
+</section>
+<section id="some-scales">
+<h3><span class="section-number">1.4.2.2.2. </span>Some Scales<a class="headerlink" href="#some-scales" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Vacuum frequency: <span class="math notranslate nohighlight">\(\omega_v = 3.75\times 10^{-11}eV \frac{ \delta m^2 }{ 7.5\times 10^{-5} \mathrm{eV^2} } \frac{1\mathrm{MeV} }{E}\)</span>.</li>
-<li>Vacuum frequency corresponds to oscillation length scale of <span class="math notranslate nohighlight">\(L_v \sim 197\times 10^6\times \frac{ 1 }{ \omega_v } \approx 10^1 \mathrm{km}\)</span>.</li>
-<li>The gravitational wave frequency are usually of the order kHz <a class="reference internal" href="#bauswein2016" id="id6">[Bauswein2016]</a>. Such a frequency corresponds to a periodic potential in space, which has a length scale of <span class="math notranslate nohighlight">\(L_{GW} \sim 3\times 10^{5}\mathrm{km/s} \times 10^{-3} \mathrm{s}\sim 10^2 \mathrm{km}\)</span>.</li>
+<li><p>Vacuum frequency: <span class="math notranslate nohighlight">\(\omega_v = 3.75\times 10^{-11}eV \frac{ \delta m^2 }{ 7.5\times 10^{-5} \mathrm{eV^2} } \frac{1\mathrm{MeV} }{E}\)</span>.</p></li>
+<li><p>Vacuum frequency corresponds to oscillation length scale of <span class="math notranslate nohighlight">\(L_v \sim 197\times 10^6\times \frac{ 1 }{ \omega_v } \approx 10^1 \mathrm{km}\)</span>.</p></li>
+<li><p>The gravitational wave frequency are usually of the order kHz <a class="reference internal" href="#bauswein2016" id="id6"><span>[Bauswein2016]</span></a>. Such a frequency corresponds to a periodic potential in space, which has a length scale of <span class="math notranslate nohighlight">\(L_{GW} \sim 3\times 10^{5}\mathrm{km/s} \times 10^{-3} \mathrm{s}\sim 10^2 \mathrm{km}\)</span>.</p></li>
 </ol>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <img alt="../../_images/gw-frequency-neutron-star-mergers.png" src="../../_images/gw-frequency-neutron-star-mergers.png" />
-<p class="caption"><span class="caption-number">Fig. 1.190 </span><span class="caption-text">Gravitational wave frequencies and their strains. <a class="reference internal" href="#bauswein2016" id="id7">[Bauswein2016]</a></span></p>
-</div>
-</div>
-</div>
-<div class="section" id="build-a-model">
-<h2>1.4.2.3. Build a Model<a class="headerlink" href="#build-a-model" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 1.190 </span><span class="caption-text">Gravitational wave frequencies and their strains. <a class="reference internal" href="#bauswein2016" id="id7"><span>[Bauswein2016]</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="build-a-model">
+<h2><span class="section-number">1.4.2.3. </span>Build a Model<a class="headerlink" href="#build-a-model" title="Permalink to this headline">¶</a></h2>
 <p>I need a practical model to demonstrate the effect and be able to numerically solve it up to nonlinear regime of neutrino oscillations.</p>
 <p>In any case, we could linearize the equation of motion and explore the linear regime. With the help of dispersion relation, the linear regime can be analyzed.</p>
 <p>In principle, the equation of motion is changed due to gravitational field with derivatives becoming covariant ones. However, for fast neutrino oscillations, we can consider the local effect by ignoring the connections. I have to replace the Minkowski metric with the metric of gravitational waves. Without any calculation, I expect gravitational waves breaks the symmetrics intrinsically. For example it breaks the degeneracy of the MAA solution for axial symmetric system.</p>
 <div class="warning admonition">
-<p class="first admonition-title">Shashank’s Comment</p>
+<p class="admonition-title">Shashank’s Comment</p>
 <p>He said that a possible resonance could bring in other effects.</p>
 <p><strong>Update (20/03/2017)</strong>:</p>
-<p>I think this is a very nice point. If we write down the Dirac equation for neutrino oscillations in matter <a class="reference internal" href="#cardall1996" id="id8">[Cardall1996]</a>,</p>
+<p>I think this is a very nice point. If we write down the Dirac equation for neutrino oscillations in matter <a class="reference internal" href="#cardall1996" id="id8"><span>[Cardall1996]</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[[\gamma^\mu(\partial_\mu + i A_{f\mu} \mathscr P_L) + M_f] \psi_f = 0,\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_{f\mu}\)</span> is the neutrino-matter interaction.</p>
 <p>For stimulated oscillations, this “potential” <span class="math notranslate nohighlight">\(A_{f\mu}\)</span> is periodic.</p>
-<p>The vacuum oscillation in gravitational field is determined by <a class="reference internal" href="#cardall1996" id="id9">[Cardall1996]</a></p>
+<p>The vacuum oscillation in gravitational field is determined by <a class="reference internal" href="#cardall1996" id="id9"><span>[Cardall1996]</span></a></p>
 <div class="math notranslate nohighlight">
 \[[\gamma^\mu e^\mu_a (\partial_\mu + \Gamma_{\mu})+M]\psi=0,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Gamma_\mu\)</span> is the so called spin connection, which has the form</p>
@@ -470,18 +475,18 @@ h_{xy}&amp;=h_{yx} = - h\sin (4\pi f t),\end{split}\]</div>
 \[A_G^\mu = \frac{1}{4} \sqrt{-g} e_a^\mu \epsilon^{abcd} (e_{b\nu,\sigma} - e_{b\sigma,\nu})e^\nu_{c} e^\sigma_d.\]</div>
 <p>For gravitational waves, it effectively provides a potential that is periodic since <span class="math notranslate nohighlight">\(-g\)</span> has periodic components.</p>
 <p>As for length scales, vacuum oscillations (10MeV) has length scale <span class="math notranslate nohighlight">\(10^2\,\mathrm{km}\)</span>, while GW from neutron star mergers has length scale <span class="math notranslate nohighlight">\(10^2\,\mathrm{km}\)</span>. They are of the same order.</p>
-<p class="last">Another point is that matter effect increases the oscillation length scales.</p>
+<p>Another point is that matter effect increases the oscillation length scales.</p>
 </div>
-</div>
-<div class="section" id="resonances">
-<h2>1.4.2.4. Resonances<a class="headerlink" href="#resonances" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="stimulated-transitions">
-<h3>1.4.2.4.1. Stimulated Transitions<a class="headerlink" href="#stimulated-transitions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="resonances">
+<h2><span class="section-number">1.4.2.4. </span>Resonances<a class="headerlink" href="#resonances" title="Permalink to this headline">¶</a></h2>
+<section id="stimulated-transitions">
+<h3><span class="section-number">1.4.2.4.1. </span>Stimulated Transitions<a class="headerlink" href="#stimulated-transitions" title="Permalink to this headline">¶</a></h3>
 <p><strong>In this section, we will try to verify Shashank’s idea about resonance.</strong></p>
 <p>For resonance of linear EoM, we do not need to consider neutrino self-interactions.</p>
 <div class="warning admonition">
-<p class="first admonition-title">What’s the EoM</p>
-<p class="last">We need a Schrodinger equation formalism instead of the Dirac equation one. Here I am going to use the one derived by Cardall and Fuller <a class="reference internal" href="#cardall1996" id="id10">[Cardall1996]</a>.</p>
+<p class="admonition-title">What’s the EoM</p>
+<p>We need a Schrodinger equation formalism instead of the Dirac equation one. Here I am going to use the one derived by Cardall and Fuller <a class="reference internal" href="#cardall1996" id="id10"><span>[Cardall1996]</span></a>.</p>
 </div>
 <p>We need to calculate the vector potential</p>
 <div class="math notranslate nohighlight">
@@ -500,24 +505,24 @@ h_{xy}&amp;=h_{yx} = - h\sin (4\pi f t),\end{split}\]</div>
 \[h_+^2 + h_\times^2= h_0^2 (\cos^2 (\omega_{gw}(t-z)) + \sin^2 (\omega_{gw}(t-z)) ) = h_0^2,\]</div>
 <p>which is a constant. So we observe nothing new.</p>
 <div class="warning admonition">
-<p class="first admonition-title">Are the approximations valid?</p>
+<p class="admonition-title">Are the approximations valid?</p>
 <p>First of all, I used the tetrad from Schwarzchild metric. This is in principle of the same order of <span class="math notranslate nohighlight">\(\sqrt{-g}\)</span>.</p>
-<p class="last">Secondly, I used time independent equation. For gravitational waves, we need time dependent equation.</p>
+<p>Secondly, I used time independent equation. For gravitational waves, we need time dependent equation.</p>
 </div>
-</div>
-<div class="section" id="msw-like-transition">
-<h3>1.4.2.4.2. MSW-like Transition<a class="headerlink" href="#msw-like-transition" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="msw-like-transition">
+<h3><span class="section-number">1.4.2.4.2. </span>MSW-like Transition<a class="headerlink" href="#msw-like-transition" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
-<p class="first admonition-title">Some Estimations</p>
+<p class="admonition-title">Some Estimations</p>
 <p>The scale of <span class="math notranslate nohighlight">\(\vec A\)</span> is determined by <span class="math notranslate nohighlight">\(\dot a/a=H\)</span>. For a MSW resonance, we require the energy scale of <span class="math notranslate nohighlight">\(\vec A\)</span> to go through a value that is of the order of vacuum oscillation frequency.</p>
 <p>For convinience of comparision with previous calculations, we use length scale instead of energy scales.</p>
 <p>For 1MeV neutrinos, the length scale associated with oscillations is of the order 10km. We can find the corresponding H that is of the same order of length. It turns out to be</p>
 <div class="math notranslate nohighlight">
 \[H \sim 10^3 \frac{1}{ \mathrm{s} } \sim 10^3 \frac{10^{19}\mathrm{km}}{ \mathrm{s} \mathrm{Mpc} } \sim 10^{22} \mathrm{km/s/Mpc}.\]</div>
 <p>This is a huge Hubble parameter. Not sure if it means anything anymore.</p>
-<p class="last">If we consider the low energy neutrinos. But for a reasonable Hubble parameter, we have to consider very low energy even non-relativistic neutrinos. Not really something that can be worked out.</p>
+<p>If we consider the low energy neutrinos. But for a reasonable Hubble parameter, we have to consider very low energy even non-relativistic neutrinos. Not really something that can be worked out.</p>
 </div>
-<p>Regardless of the estimation, the formalism can be calcualted using <a class="reference internal" href="#cardall1996" id="id11">[Cardall1996]</a> and <a class="reference internal" href="#chirata" id="id12">[Chirata]</a>.</p>
+<p>Regardless of the estimation, the formalism can be calcualted using <a class="reference internal" href="#cardall1996" id="id11"><span>[Cardall1996]</span></a> and <a class="reference internal" href="#chirata" id="id12"><span>[Chirata]</span></a>.</p>
 <p>The tetrad to be used is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}e^0_a &amp;= (1,0,0,0) \\
@@ -527,31 +532,31 @@ e^3_a &amp;= ( 0,0,0, 1/( a\sqrt{k(\chi)} \sin\theta ) ),\end{split}\]</div>
 <p>where the line element is</p>
 <div class="math notranslate nohighlight">
 \[ds^2 = - dt^2 + a^2 \left[ d\chi^2 + k(\chi) (d\theta^2 + \sin^2\theta d\phi^2) \right].\]</div>
-</div>
-</div>
-<div class="section" id="nonlinear-effect">
-<h2>1.4.2.5. Nonlinear Effect<a class="headerlink" href="#nonlinear-effect" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="nonlinear-effect">
+<h2><span class="section-number">1.4.2.5. </span>Nonlinear Effect<a class="headerlink" href="#nonlinear-effect" title="Permalink to this headline">¶</a></h2>
 <p>To consider the nonlinear effect on neutrino flavor conversions, we can apply linear stability analysis.</p>
-<div class="section" id="polarization-tensor">
-<h3>1.4.2.5.1. Polarization Tensor<a class="headerlink" href="#polarization-tensor" title="Permalink to this headline">¶</a></h3>
-<p>I can use polarization tensor to solve the linear regime <a class="reference internal" href="#izaguirre2017" id="id13">[Izaguirre2017]</a>. This method is nothing different from solving the linearized EoM for k and finding the imaginary part in it.</p>
+<section id="polarization-tensor">
+<h3><span class="section-number">1.4.2.5.1. </span>Polarization Tensor<a class="headerlink" href="#polarization-tensor" title="Permalink to this headline">¶</a></h3>
+<p>I can use polarization tensor to solve the linear regime <a class="reference internal" href="#izaguirre2017" id="id13"><span>[Izaguirre2017]</span></a>. This method is nothing different from solving the linearized EoM for k and finding the imaginary part in it.</p>
 <div class="note admonition">
-<p class="first admonition-title">Comments on Dispersion Relation</p>
+<p class="admonition-title">Comments on Dispersion Relation</p>
 <p>Any dispersion relation <span class="math notranslate nohighlight">\(f(\omega,k)=0\)</span> indicates whether it is possible to have imaginary parts in <span class="math notranslate nohighlight">\(\omega,k\)</span>.</p>
 <p>What we usually do is to set <span class="math notranslate nohighlight">\(\omega=0\)</span> and find <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <p>The equation of motion is simply of the form</p>
 <div class="math notranslate nohighlight">
 \[v^\mu k_\mu Q = v^\mu a_\mu,\]</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is the amplitude of Fourier mode. So in principle we could simply change all the Minkowski metric to the one with perturbation.</p>
-<p class="last">There is another concern. The integrals also depends on the metric. But it is of a smaller effect. We need to prove this/make sense of it.</p>
+<p>There is another concern. The integrals also depends on the metric. But it is of a smaller effect. We need to prove this/make sense of it.</p>
 </div>
-</div>
-<div class="section" id="gravitational-waves-mode">
-<h3>1.4.2.5.2. Gravitational Waves + Mode<a class="headerlink" href="#gravitational-waves-mode" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gravitational-waves-mode">
+<h3><span class="section-number">1.4.2.5.2. </span>Gravitational Waves + Mode<a class="headerlink" href="#gravitational-waves-mode" title="Permalink to this headline">¶</a></h3>
 <div class="warning admonition">
-<p class="first admonition-title">Assumptions</p>
+<p class="admonition-title">Assumptions</p>
 <p>Assume the EoM derived by Raffelt is valid for weak gravitational field, as explained above.</p>
-<p class="last">As an approximation, we do not consider other effects on Schrodinger equation but only the change in distances.</p>
+<p>As an approximation, we do not consider other effects on Schrodinger equation but only the change in distances.</p>
 </div>
 <p>The polarization tensor</p>
 <div class="math notranslate nohighlight">
@@ -566,9 +571,9 @@ e^3_a &amp;= ( 0,0,0, 1/( a\sqrt{k(\chi)} \sin\theta ) ),\end{split}\]</div>
 \frac{1}{2}I_1 &amp; 0 &amp; 0 &amp; -\frac{1}{2}I_2
 \end{pmatrix},\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(h_+\sim h_0 \cos (\omega_{gw}(t-z))\)</span> is small, so we expect small effect from + mode. At least we do not expect something completely different.</p>
-</div>
-<div class="section" id="gravitational-waves-x-mode">
-<h3>1.4.2.5.3. Gravitational Waves x Mode<a class="headerlink" href="#gravitational-waves-x-mode" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gravitational-waves-x-mode">
+<h3><span class="section-number">1.4.2.5.3. </span>Gravitational Waves x Mode<a class="headerlink" href="#gravitational-waves-x-mode" title="Permalink to this headline">¶</a></h3>
 <p>The x mode will bring in cross terms. The polarization tensor becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}I + \begin{pmatrix}
@@ -583,72 +588,48 @@ e^3_a &amp;= ( 0,0,0, 1/( a\sqrt{k(\chi)} \sin\theta ) ),\end{split}\]</div>
 4 &amp;= -(1-h_+ + h_\times) (I_0-I_2).\end{split}\]</div>
 <p>For neutron star mergers, <span class="math notranslate nohighlight">\(h_\times=-h_+\)</span>. The first solution is reduced to the flat space time solution.</p>
 <div class="warning admonition">
-<p class="first admonition-title">A Lot More to Think abut</p>
+<p class="admonition-title">A Lot More to Think abut</p>
 <p>How can I make sure I am can use this method?</p>
-<p class="last">Even the previous calculations are valid, gravitational waves seems to break the symmetries in the emission surface. The question to ask is <strong>the effect of breaking emission surface symmetry anyway</strong>.</p>
+<p>Even the previous calculations are valid, gravitational waves seems to break the symmetries in the emission surface. The question to ask is <strong>the effect of breaking emission surface symmetry anyway</strong>.</p>
 </div>
-</div>
-</div>
-<div class="section" id="references-and-notes">
-<h2>1.4.2.6. References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
-<table class="docutils citation" frame="void" id="schutz" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[Schutz]</a></td><td>A First Course in General Relativity, Bernard Schutz.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="hendry2007" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Hendry2007]</a></td><td><a class="reference external" href="http://star-www.st-and.ac.uk/~hz4/gr/hendry_GRwaves.pdf">An Introduction to General Relativity, Gravitational Waves and Detection Principles</a>, Dr Martin Hendry. This discussion about the gravitational waves in a binary neutron star system is for slow motion approximation.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="riles2013" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Riles2013]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> <ol class="last upperalpha simple" start="11">
-<li>Riles, <a class="reference external" href="http://dx.doi.org/10.1016/j.ppnp.2012.08.001">Gravitational waves: Sources, detectors and searches</a>, Progress in Particle and Nuclear Physics, Volume 68, January 2013, Pages 1-54, ISSN 0146-6410.</li>
+</section>
+</section>
+<section id="references-and-notes">
+<h2><span class="section-number">1.4.2.6. </span>References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
+<dl class="citation">
+<dt class="label" id="schutz"><span class="brackets"><a class="fn-backref" href="#id1">Schutz</a></span></dt>
+<dd><p>A First Course in General Relativity, Bernard Schutz.</p>
+</dd>
+<dt class="label" id="hendry2007"><span class="brackets"><a class="fn-backref" href="#id2">Hendry2007</a></span></dt>
+<dd><p><a class="reference external" href="http://star-www.st-and.ac.uk/~hz4/gr/hendry_GRwaves.pdf">An Introduction to General Relativity, Gravitational Waves and Detection Principles</a>, Dr Martin Hendry. This discussion about the gravitational waves in a binary neutron star system is for slow motion approximation.</p>
+</dd>
+<dt class="label" id="riles2013"><span class="brackets">Riles2013</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><ol class="upperalpha simple" start="11">
+<li><p>Riles, <a class="reference external" href="http://dx.doi.org/10.1016/j.ppnp.2012.08.001">Gravitational waves: Sources, detectors and searches</a>, Progress in Particle and Nuclear Physics, Volume 68, January 2013, Pages 1-54, ISSN 0146-6410.</p></li>
 </ol>
-</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="foucart2012" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[Foucart2012]</a></td><td>Francois Foucart, <a class="reference external" href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.86.124007">Black-hole–neutron-star mergers: Disk mass predictions</a>, Phys. Rev. D 86, December 2012.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="izaguirre2017" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id13">[Izaguirre2017]</a></td><td>Izaguirre, I., Raffelt, G., &amp; Tamborra, I. (2017). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.118.021101">Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach</a>. Physical Review Letters, 118(2), 21101.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="cardall1996" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Cardall1996]</td><td><em>(<a class="fn-backref" href="#id8">1</a>, <a class="fn-backref" href="#id9">2</a>, <a class="fn-backref" href="#id10">3</a>, <a class="fn-backref" href="#id11">4</a>)</em> Cardall, C. Y., &amp; Fuller, G. M. (1996). <a class="reference external" href="https://doi.org/10.1103/PhysRevD.55.7960">Neutrino oscillations in curved spacetime: an heuristic treatment</a>, 55(12), 7.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="bauswein2016" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Bauswein2016]</td><td><em>(<a class="fn-backref" href="#id6">1</a>, <a class="fn-backref" href="#id7">2</a>)</em> <ol class="last upperalpha simple">
-<li>Bauswein, J. Clark, N. Stergioulas, H.-T. J. (n.d.). Dynamics and gravitational-wave emission of neutron-star merger remnants, arXiv:1602.00950. Retrieved from https://arxiv.org/abs/1602.00950</li>
+</dd>
+<dt class="label" id="foucart2012"><span class="brackets"><a class="fn-backref" href="#id5">Foucart2012</a></span></dt>
+<dd><p>Francois Foucart, <a class="reference external" href="http://journals.aps.org/prd/abstract/10.1103/PhysRevD.86.124007">Black-hole–neutron-star mergers: Disk mass predictions</a>, Phys. Rev. D 86, December 2012.</p>
+</dd>
+<dt class="label" id="izaguirre2017"><span class="brackets"><a class="fn-backref" href="#id13">Izaguirre2017</a></span></dt>
+<dd><p>Izaguirre, I., Raffelt, G., &amp; Tamborra, I. (2017). <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.118.021101">Fast Pairwise Conversion of Supernova Neutrinos: A Dispersion Relation Approach</a>. Physical Review Letters, 118(2), 21101.</p>
+</dd>
+<dt class="label" id="cardall1996"><span class="brackets">Cardall1996</span><span class="fn-backref">(<a href="#id8">1</a>,<a href="#id9">2</a>,<a href="#id10">3</a>,<a href="#id11">4</a>)</span></dt>
+<dd><p>Cardall, C. Y., &amp; Fuller, G. M. (1996). <a class="reference external" href="https://doi.org/10.1103/PhysRevD.55.7960">Neutrino oscillations in curved spacetime: an heuristic treatment</a>, 55(12), 7.</p>
+</dd>
+<dt class="label" id="bauswein2016"><span class="brackets">Bauswein2016</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><ol class="upperalpha simple">
+<li><p>Bauswein, J. Clark, N. Stergioulas, H.-T. J. (n.d.). Dynamics and gravitational-wave emission of neutron-star merger remnants, arXiv:1602.00950. Retrieved from https://arxiv.org/abs/1602.00950</p></li>
 </ol>
-</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="chirata" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id12">[Chirata]</a></td><td><a class="reference external" href="http://www.tapir.caltech.edu/~chirata/ph217/lec01.pdf">Lecture notes on Cosmology</a></td></tr>
-</tbody>
-</table>
+</dd>
+<dt class="label" id="chirata"><span class="brackets"><a class="fn-backref" href="#id12">Chirata</a></span></dt>
+<dd><p><a class="reference external" href="http://www.tapir.caltech.edu/~chirata/ph217/lec01.pdf">Lecture notes on Cosmology</a></p>
+</dd>
+</dl>
 <p>Kip Thorne wrote a review paper about gravitational waves: <a class="reference external" href="https://www.its.caltech.edu/~kip/scripts/PubScans/II-68.pdf">The Generation of Gravitational Waves: A Review of Computational Tecniques</a>.</p>
 <p>A paper about modern techniques: <a class="reference external" href="http://www.nikhef.nl/pub/services/biblio/theses_pdf/thesis_T_G_F_Li.pdf">Extracting Physics from Gravitational Waves</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>

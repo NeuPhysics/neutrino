@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.3.2. Halo Effect - Finite Difference &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/modify.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.3.3. Halo Effect in Line Model - Finite Difference" href="halo-effect-finite-difference-line-model.html" />
@@ -148,7 +149,7 @@ TeX: {
      href="../../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,7 +260,7 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. WIP Neutrino Physics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
@@ -351,36 +352,36 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="halo-effect-finite-difference">
-<h1>1.3.2. Halo Effect - Finite Difference<a class="headerlink" href="#halo-effect-finite-difference" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="models">
-<h2>1.3.2.1. Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+  <section id="halo-effect-finite-difference">
+<h1><span class="section-number">1.3.2. </span>Halo Effect - Finite Difference<a class="headerlink" href="#halo-effect-finite-difference" title="Permalink to this headline">¶</a></h1>
+<section id="models">
+<h2><span class="section-number">1.3.2.1. </span>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="first admonition-title">Some Seasoning</p>
-<ul class="last simple">
-<li>[ ] Add in anti-neutrinos to the beams</li>
-<li>[ ] Neutrino and anti-neutrino beams are in different directions</li>
+<p class="admonition-title">Some Seasoning</p>
+<ul class="simple">
+<li><p>[ ] Add in anti-neutrinos to the beams</p></li>
+<li><p>[ ] Neutrino and anti-neutrino beams are in different directions</p></li>
 </ul>
 </div>
-<div class="section" id="toy-model">
-<h3>1.3.2.1.1. Toy Model<a class="headerlink" href="#toy-model" title="Permalink to this headline">¶</a></h3>
+<section id="toy-model">
+<h3><span class="section-number">1.3.2.1.1. </span>Toy Model<a class="headerlink" href="#toy-model" title="Permalink to this headline">¶</a></h3>
 <p>The toy model we use is neutrino-only, right forward beam and reflection.</p>
 <p>For single angle neutrino-only emission, this model can also work for the tilted emission simply by rescale the neutrino self-interaction by <span class="math notranslate nohighlight">\(\cos\alpha\)</span> where <span class="math notranslate nohighlight">\(\alpha\)</span> the angle of forward and backward beams.</p>
-</div>
-<div class="section" id="antineutrinos-or-spectrum">
-<h3>1.3.2.1.2. Antineutrinos or Spectrum<a class="headerlink" href="#antineutrinos-or-spectrum" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="antineutrinos-or-spectrum">
+<h3><span class="section-number">1.3.2.1.2. </span>Antineutrinos or Spectrum<a class="headerlink" href="#antineutrinos-or-spectrum" title="Permalink to this headline">¶</a></h3>
 <p>The simple model would be two beams model with left and right beams having different energies.</p>
-</div>
-<div class="section" id="model-with-collective-oscillations">
-<h3>1.3.2.1.3. Model with Collective Oscillations<a class="headerlink" href="#model-with-collective-oscillations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="model-with-collective-oscillations">
+<h3><span class="section-number">1.3.2.1.3. </span>Model with Collective Oscillations<a class="headerlink" href="#model-with-collective-oscillations" title="Permalink to this headline">¶</a></h3>
 <p>Introduce multiangles and left-right asymmetries to the system.</p>
-</div>
-</div>
-<div class="section" id="numerical-state-convention">
-<h2>1.3.2.2. Numerical - State Convention<a class="headerlink" href="#numerical-state-convention" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="numerical-state-convention">
+<h2><span class="section-number">1.3.2.2. </span>Numerical - State Convention<a class="headerlink" href="#numerical-state-convention" title="Permalink to this headline">¶</a></h2>
 <p>We use traceless density matrix. There are two senarios to keep track of the elements.</p>
-<div class="section" id="convention-i-used-in-code">
-<h3>1.3.2.2.1. Convention I Used in Code<a class="headerlink" href="#convention-i-used-in-code" title="Permalink to this headline">¶</a></h3>
+<section id="convention-i-used-in-code">
+<h3><span class="section-number">1.3.2.2.1. </span>Convention I Used in Code<a class="headerlink" href="#convention-i-used-in-code" title="Permalink to this headline">¶</a></h3>
 <p>For any tracelesstwo by two matrix with real diagonal elements such as density matrix,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho = \begin{pmatrix}
@@ -393,28 +394,28 @@ b - i c &amp; -a
 s[0] &amp; s[1] + i s[2] \\
 s[1] - i s[2] &amp; -s[0]
 \end{pmatrix}.\end{split}\]</div>
-</div>
-<div class="section" id="convention-ii-polarization-vector">
-<h3>1.3.2.2.2. Convention II: Polarization Vector<a class="headerlink" href="#convention-ii-polarization-vector" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="convention-ii-polarization-vector">
+<h3><span class="section-number">1.3.2.2.2. </span>Convention II: Polarization Vector<a class="headerlink" href="#convention-ii-polarization-vector" title="Permalink to this headline">¶</a></h3>
 <p>Polarization vector <span class="math notranslate nohighlight">\(\vec P\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\rho = 1 + \vec \sigma \cdot \vec P,\]</div>
 <p>so that <cite>vec P = { b, -c , a }</cite>.</p>
 <div class="toggle admonition">
-<p class="first admonition-title">Relation to My Previous Convention I</p>
+<p class="admonition-title">Relation to My Previous Convention I</p>
 <p>It is related to my convention I by</p>
-<div class="last highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">P</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
+<span class="n">P</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="n">P</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="numerical-stepper-senario">
-<h2>1.3.2.3. Numerical - Stepper Senario<a class="headerlink" href="#numerical-stepper-senario" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="euler-method">
-<h3>1.3.2.3.1. Euler Method<a class="headerlink" href="#euler-method" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="numerical-stepper-senario">
+<h2><span class="section-number">1.3.2.3. </span>Numerical - Stepper Senario<a class="headerlink" href="#numerical-stepper-senario" title="Permalink to this headline">¶</a></h2>
+<section id="euler-method">
+<h3><span class="section-number">1.3.2.3.1. </span>Euler Method<a class="headerlink" href="#euler-method" title="Permalink to this headline">¶</a></h3>
 <p>We start from the equation of motion</p>
 <div class="math notranslate nohighlight">
 \[i\partial_z \rho = \left[ H, \rho \right],\]</div>
@@ -440,18 +441,18 @@ c.c. &amp;  - i( \tilde h b - \bar h c)
 \partial_z b &amp;= 2 ( h c - a \tilde h ) \\
 \partial_z c &amp;= 2 ( h b - a \bar h ).\end{split}\]</div>
 <p>Then we discretize each equations using Euler method.</p>
-</div>
-<div class="section" id="evolution-operator">
-<h3>1.3.2.3.2. Evolution Operator<a class="headerlink" href="#evolution-operator" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="evolution-operator">
+<h3><span class="section-number">1.3.2.3.2. </span>Evolution Operator<a class="headerlink" href="#evolution-operator" title="Permalink to this headline">¶</a></h3>
 <p>The same calculation can be achieved by using the evolution operator <span class="math notranslate nohighlight">\(U(t) = \exp (-i H t)\)</span>.</p>
 <div class="note admonition">
-<p class="first admonition-title">Evolution Operator</p>
+<p class="admonition-title">Evolution Operator</p>
 <p>Evolution operator <span class="math notranslate nohighlight">\(U(t)\)</span> is used to evolve states</p>
 <div class="math notranslate nohighlight">
 \[\rho(t) = U(t)\rho(t_0) U(t)^\dagger\]</div>
 <p>if Hamiltonian doesn’t depend on time.</p>
 <p>As a numerical algorithm, we can use the finite difference form</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\rho(t+\Delta t) = U(\Delta t) \rho(t)  U(\Delta t)^\dagger.\]</div>
 </div>
 <p>Since the Hamiltonian in our simple calcuations is always two by two, the exact form of the algorithm can be written down exactly.</p>
@@ -482,16 +483,16 @@ u_3 &amp;= -i \sin(h\Delta t) u_3'.\end{split}\]</div>
 \[\begin{split}\rho(t+\Delta t) &amp;= \left[  \cos( 2 h \Delta t)\rho_n -  2 u_i \rho_i u_n \right]\sigma_n \\
 &amp;= \left[  \cos( 2 h \Delta t) \rho_n +  2 \sin^2(h \Delta t) u'_i \rho_i u'_n \right]\sigma_n\end{split}\]</div>
 <div class="toggle admonition">
-<p class="first admonition-title">The Code</p>
+<p class="admonition-title">The Code</p>
 <p>The vectors about h is consistent with my code. But the state vector I calculated is different. The actual update rule should be</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}\rho(t+\Delta t)[0] &amp;= \cos( 2 h \Delta t) \rho[0] +  2 \sin^2(h \Delta t) u'_i \rho_i u'[0] \\\end{split}\]</div>
 </div>
 <div class="toggle admonition">
-<p class="first admonition-title">The Tedious Result Using Mathematica</p>
+<p class="admonition-title">The Tedious Result Using Mathematica</p>
 <p><strong>For my previous Convention I.</strong></p>
 <p>The evolved density matrix obtained quite a long expression but it definitely can be implemented.</p>
-<div class="last math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}\rho(t + \Delta t) = \left(
 \begin{array}{cc}
 \frac{\text{h0} (\text{h0} \text{s0}+\text{h1} \text{s1}+\text{h2} \text{s2})+\left(\text{s0} \text{h1}^2-\text{h0} \text{s1} \text{h1}+\text{h2} (\text{h2} \text{s0}-\text{h0} \text{s2})\right) \cos \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+(\text{h2} \text{s1}-\text{h1} \text{s2}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right) \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}}{\text{h0}^2+\text{h1}^2+\text{h2}^2} &amp; \frac{(\text{h1}+\text{h2} i) (\text{h0} \text{s0}+\text{h1} \text{s1}+\text{h2} \text{s2})+\left((\text{s1}+i \text{s2}) \text{h0}^2-\text{h0} (\text{h1}+\text{h2} i) \text{s0}+(\text{h1}+\text{h2} i) i (\text{h1} \text{s2}-\text{h2} \text{s1})\right) \cos \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right)+(-\text{h2} \text{s0}+\text{h1} i \text{s0}-i \text{h0} \text{s1}+\text{h0} \text{s2}) \sin \left(2 \text{dt} \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}\right) \sqrt{\text{h0}^2+\text{h1}^2+\text{h2}^2}}{\text{h0}^2+\text{h1}^2+\text{h2}^2} \\
@@ -500,40 +501,40 @@ u_3 &amp;= -i \sin(h\Delta t) u_3'.\end{split}\]</div>
 \right)\end{split}\]</div>
 </div>
 <div class="note admonition">
-<p class="first admonition-title">First Order Expansion</p>
+<p class="admonition-title">First Order Expansion</p>
 <p>We could Taylor series of the evolution operator,</p>
 <div class="math notranslate nohighlight">
 \[U = 1 - i H(t) \Delta t.\]</div>
-<p class="last">We work out the evolved density matrix.</p>
+<p>We work out the evolved density matrix.</p>
 </div>
-</div>
-</div>
-<div class="section" id="numerical-iteration-senario">
-<h2>1.3.2.4. Numerical - Iteration Senario<a class="headerlink" href="#numerical-iteration-senario" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="single-neutrino-forward-then-backward">
-<h3>1.3.2.4.1. Single Neutrino Forward then Backward<a class="headerlink" href="#single-neutrino-forward-then-backward" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="numerical-iteration-senario">
+<h2><span class="section-number">1.3.2.4. </span>Numerical - Iteration Senario<a class="headerlink" href="#numerical-iteration-senario" title="Permalink to this headline">¶</a></h2>
+<section id="single-neutrino-forward-then-backward">
+<h3><span class="section-number">1.3.2.4.1. </span>Single Neutrino Forward then Backward<a class="headerlink" href="#single-neutrino-forward-then-backward" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
-<p class="first admonition-title">Algrimth</p>
-<ol class="last arabic simple">
-<li>Calculate forward beam using 0 backward beam;</li>
-<li>Calculate backward beam using forward beam calculated in 1;</li>
-<li>Calculate forward beam using backward beam calculated in 2;</li>
-<li>Repeat.</li>
+<p class="admonition-title">Algrimth</p>
+<ol class="arabic simple">
+<li><p>Calculate forward beam using 0 backward beam;</p></li>
+<li><p>Calculate backward beam using forward beam calculated in 1;</p></li>
+<li><p>Calculate forward beam using backward beam calculated in 2;</p></li>
+<li><p>Repeat.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="single-neutrino-simultaneous">
-<h3>1.3.2.4.2. Single Neutrino Simultaneous<a class="headerlink" href="#single-neutrino-simultaneous" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="single-neutrino-simultaneous">
+<h3><span class="section-number">1.3.2.4.2. </span>Single Neutrino Simultaneous<a class="headerlink" href="#single-neutrino-simultaneous" title="Permalink to this headline">¶</a></h3>
 <div class="note admonition">
-<p class="first admonition-title">Algrimth</p>
-<ol class="last arabic simple">
-<li>Calculate forward beam using 0 backward beam;</li>
-<li>Calculate backward beam and forward beam together using all current counter beams;</li>
-<li>Repeat.</li>
+<p class="admonition-title">Algrimth</p>
+<ol class="arabic simple">
+<li><p>Calculate forward beam using 0 backward beam;</p></li>
+<li><p>Calculate backward beam and forward beam together using all current counter beams;</p></li>
+<li><p>Repeat.</p></li>
 </ol>
 </div>
 <div class="toggle admonition">
-<p class="first admonition-title">Computation Time</p>
+<p class="admonition-title">Computation Time</p>
 <p><strong>2017-09-13:</strong></p>
 <p>The export of my test code:</p>
 <div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>PROGRAM START
@@ -550,9 +551,9 @@ PROGRAM END
 </div>
 <p>Some estimations:</p>
 <ol class="arabic simple">
-<li>(1e5 steps in z) times (10000) steps requires (10000 times 7e-4 times 100 = 700) seconds;</li>
-<li>(1e6 steps in z) times (10000) steps requires (10000 times 7e-4 times 1000 = 7000 ) seconds, i.e., 117 minutes;</li>
-<li>(1e7 steps in z) times (10000) steps requires (10000 times 7e-4 times 10000 = 70000 ) seconds, i.e., 1e3 minutes.</li>
+<li><p>(1e5 steps in z) times (10000) steps requires (10000 times 7e-4 times 100 = 700) seconds;</p></li>
+<li><p>(1e6 steps in z) times (10000) steps requires (10000 times 7e-4 times 1000 = 7000 ) seconds, i.e., 117 minutes;</p></li>
+<li><p>(1e7 steps in z) times (10000) steps requires (10000 times 7e-4 times 10000 = 70000 ) seconds, i.e., 1e3 minutes.</p></li>
 </ol>
 <p><strong>2017-09-14:</strong> I changed the Hamiltonian functions and solvers.</p>
 <div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>PROGRAM START
@@ -567,7 +568,7 @@ Clock time for 1000 iterations: 0.18335
 PROGRAM END
 </pre></div>
 </div>
-<p class="last">3.5 times faster!</p>
+<p>3.5 times faster!</p>
 </div>
 <p>The result shows that</p>
 <video width="100%" controls>
@@ -575,11 +576,13 @@ PROGRAM END
 Your browser does not support HTML5 video.
 </video>
 <p class="caption">For 20000 total iteractions. Calculation is within range 0 to 1 with step size 1e-5. A total of 100 steps are exported. So each step indicates iteration of 200 times.</p><div class="toggle admonition">
-<p class="first admonition-title">GIF: Step size <span class="math notranslate nohighlight">\(10^{-5}\)</span></p>
-<div class="last figure align-center" id="id1">
+<p class="admonition-title">GIF: Step size <span class="math notranslate nohighlight">\(10^{-5}\)</span></p>
+<figure class="align-center" id="id1">
 <img alt="../../_images/halo_sim_osc_20000_100000_1.000000_0.000010.csv.gif" src="../../_images/halo_sim_osc_20000_100000_1.000000_0.000010.csv.gif" />
-<p class="caption"><span class="caption-number">Fig. 1.176 </span><span class="caption-text">For 20000 iteractions within range 0 to 1 with 100 outputs. Each time increment in the plot indicates 200 iterations.</span></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.176 </span><span class="caption-text">For 20000 iteractions within range 0 to 1 with 100 outputs. Each time increment in the plot indicates 200 iterations.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div>
 <p>We immediately spot trouble here. The calculation doesn’t reach equilibrium. I calculated using larger iterations (100000 iterations) and it doesn’t converge either.</p>
 <p>I checked the convergence.</p>
@@ -593,42 +596,44 @@ Your browser does not support HTML5 video.
 Your browser does not support HTML5 video.
 </video>
 <p class="caption">Comparing step size 1e-6 and 1e-5, with Ntop = 20000 total iterations and 20 outputs. Each time increment in the plot indicates 20000/20=1000 iterations. </p><div class="warning admonition">
-<p class="first admonition-title">What to do?</p>
+<p class="admonition-title">What to do?</p>
 <p>The first thing to do is to optimize the code and check the performance of this code. It might need more time, otherwise this would be physically important. We have to solve the time dependent problem by tracking all the neutrinos.</p>
-<ol class="last arabic simple">
-<li>Parallelize the code.</li>
-<li>Read about what the mathematicians are using to solve <strong>BVP with nonlocal boundary conditions</strong>. Refer to <a class="reference internal" href="halo-effect-analytical-methods.html#bvp-nonlocal-bc-references"><span class="std std-ref">BVP nonlocal BC</span></a>.</li>
-<li>Try to calculate multiangles to check if the convergence is easier to reach. What are the conditions of equilibrium?</li>
-<li>Write the time dependent code, with tracks all the neutrinos at different locations and solve it. This would be the actual time evolution of the flavors. The time scale would be on ms. Will this be useful?</li>
+<ol class="arabic simple">
+<li><p>Parallelize the code.</p></li>
+<li><p>Read about what the mathematicians are using to solve <strong>BVP with nonlocal boundary conditions</strong>. Refer to <a class="reference internal" href="halo-effect-analytical-methods.html#bvp-nonlocal-bc-references"><span class="std std-ref">BVP nonlocal BC</span></a>.</p></li>
+<li><p>Try to calculate multiangles to check if the convergence is easier to reach. What are the conditions of equilibrium?</p></li>
+<li><p>Write the time dependent code, with tracks all the neutrinos at different locations and solve it. This would be the actual time evolution of the flavors. The time scale would be on ms. Will this be useful?</p></li>
 </ol>
 </div>
 <div class="warning admonition">
-<p class="first admonition-title">TODO</p>
-<ol class="last arabic simple">
-<li>Linear stability analysis.</li>
+<p class="admonition-title">TODO</p>
+<ol class="arabic simple">
+<li><p>Linear stability analysis.</p></li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="verify-results">
-<h2>1.3.2.5. Verify Results<a class="headerlink" href="#verify-results" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="verify-results">
+<h2><span class="section-number">1.3.2.5. </span>Verify Results<a class="headerlink" href="#verify-results" title="Permalink to this headline">¶</a></h2>
 <p>The equilibrium results can be verified using Mathematica solver. I simply feed in the initial conditions at <span class="math notranslate nohighlight">\(z=0\)</span> and calculate forward to the reflection surace at <span class="math notranslate nohighlight">\(z=L\)</span>. The two neutrino beams should be at the same state.</p>
 <p>Result is verified using Mathematica code.</p>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/cpp-code-validation-using-mathematica.png" src="../../_images/cpp-code-validation-using-mathematica.png" />
-<p class="caption"><span class="caption-number">Fig. 1.177 </span><span class="caption-text">C++ code validation using mathematica for <span class="math notranslate nohighlight">\(\mu=20\)</span>.</span></p>
-</div>
-</div>
-<div class="section" id="damping-in-time">
-<h2>1.3.2.6. Damping in Time<a class="headerlink" href="#damping-in-time" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 1.177 </span><span class="caption-text">C++ code validation using mathematica for <span class="math notranslate nohighlight">\(\mu=20\)</span>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="damping-in-time">
+<h2><span class="section-number">1.3.2.6. </span>Damping in Time<a class="headerlink" href="#damping-in-time" title="Permalink to this headline">¶</a></h2>
 <div class="note admonition">
-<p class="first admonition-title">The Problem</p>
+<p class="admonition-title">The Problem</p>
 <p>The problem I encountered is that some of the calculations show that approaching to equilibrium can be extremely slow due to some kind of oscillation behavior.</p>
-<div class="last"><video width="100%" controls>
+<video width="100%" controls>
 <source src="../../_static/assets/halo/halo-effect-finite-difference/halo_parallel_REFL0.200000_ITER10000000_STEPS50000_RANGE5.000000_TH_20_t2017-11-5-17-59-36.csv.mp4" type="video/mp4">
 Your browser does not support HTML5 video.
 </video>
-<p class="caption"> The system is kind of oscillatory in time. Reflection coefficient refl=0.2, mu = 1.0, within z range [0,5]. </p></div></div>
+<p class="caption"> The system is kind of oscillatory in time. Reflection coefficient refl=0.2, mu = 1.0, within z range [0,5]. </p></div>
 <p>Average the past two steps to slow down the time evolution. Maybe it can prevent the oscillations in time.</p>
 <p>The average algorithm takes on parameter <span class="math notranslate nohighlight">\(\alpha\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -666,26 +671,32 @@ Your browser does not support HTML5 video.
 <span class="pre">mu</span> <span class="pre">=</span> <span class="pre">1.0</span>
 <span class="pre">range</span> <span class="pre">=</span> <span class="pre">5</span>
 <span class="pre">`</span></code></p>
-</div>
-<div class="section" id="varying-parameters">
-<h2>1.3.2.7. Varying Parameters<a class="headerlink" href="#varying-parameters" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id3">
+</section>
+<section id="varying-parameters">
+<h2><span class="section-number">1.3.2.7. </span>Varying Parameters<a class="headerlink" href="#varying-parameters" title="Permalink to this headline">¶</a></h2>
+<figure class="align-center" id="id3">
 <img alt="../../_images/varying-relf-for-mu-1.png" src="../../_images/varying-relf-for-mu-1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.178 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=1\)</span></span></p>
-</div>
-<div class="figure align-center" id="id4">
+<figcaption>
+<p><span class="caption-number">Fig. 1.178 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=1\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
 <img alt="../../_images/varying-relf-for-mu-0.5.png" src="../../_images/varying-relf-for-mu-0.5.png" />
-<p class="caption"><span class="caption-number">Fig. 1.179 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.5\)</span></span></p>
-</div>
-<div class="figure align-center" id="id5">
+<figcaption>
+<p><span class="caption-number">Fig. 1.179 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.5\)</span></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
 <img alt="../../_images/varying-relf-for-mu-0.1.png" src="../../_images/varying-relf-for-mu-0.1.png" />
-<p class="caption"><span class="caption-number">Fig. 1.180 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.1\)</span></span></p>
-</div>
-</div>
-<div class="section" id="references-and-notes">
-<h2>1.3.2.8. References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.180 </span><span class="caption-text">Fix <span class="math notranslate nohighlight">\(\mu=0.1\)</span></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="references-and-notes">
+<h2><span class="section-number">1.3.2.8. </span>References and Notes<a class="headerlink" href="#references-and-notes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
 
 
     </div>
