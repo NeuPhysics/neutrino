@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>17.1. Basis &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/jquery-1.11.0.min.js"></script>
     <script src="../_static/js/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,7 +149,7 @@ TeX: {
      href="../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,14 +260,14 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">1.2. Collective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">1.3. Halo Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">1.4. Gravity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">1.5. Group Meeting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">WIP Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
 </ul>
 </li>
 </ul>
@@ -335,10 +336,10 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="basis">
+  <section id="basis">
 <h1><span class="section-number">17.1. </span>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h1>
 <p>Calculating neutrino oscillations requires a lot of rotations between different bases.</p>
-<div class="section" id="rotation-of-states">
+<section id="rotation-of-states">
 <h2><span class="section-number">17.1.1. </span>Rotation of States<a class="headerlink" href="#rotation-of-states" title="Permalink to this headline">¶</a></h2>
 <p>There are three most used bases, vacuum basis which diagonalizes the vacuum Hamiltonian, flavor basis where the flavor states stay, and instataneous matter basis which diagonializes the Hamiltonian with constant matter interaction or the instataneous matter interaction.</p>
 <ul>
@@ -367,8 +368,8 @@ TeX: {
 <div class="math notranslate nohighlight">
 \[\begin{split}R_{v2f2m}(\theta_v,\theta_m) = \begin{pmatrix} \cos(\theta_v - \theta_m) &amp; \sin ( \theta_v - \theta_m ) \\ -\sin (\theta_v-\theta_m) &amp; \cos (\theta_v - \theta_m) \end{pmatrix}.\end{split}\]</div>
 </div>
-</div>
-<div class="section" id="rotation-of-pauli-matrices">
+</section>
+<section id="rotation-of-pauli-matrices">
 <h2><span class="section-number">17.1.2. </span>Rotation of Pauli Matrices<a class="headerlink" href="#rotation-of-pauli-matrices" title="Permalink to this headline">¶</a></h2>
 <p>Rotate <span class="math notranslate nohighlight">\(\sigma_1\)</span> from vacuum basis to flavor basis,</p>
 <div class="math notranslate nohighlight">
@@ -379,8 +380,8 @@ TeX: {
 \[\begin{split}&amp;R_{v2f}(\theta) \sigma_3 R_{v2f}^{\dagger} \\
 =&amp;  \begin{pmatrix} \cos \theta &amp; \sin \theta \\ -\sin \theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \begin{pmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos\theta \end{pmatrix} \\
 =&amp; \cos 2\theta \sigma_3 - \sin 2\theta \sigma_1.\end{split}\]</div>
-</div>
-<div class="section" id="rotation-of-hamiltonian">
+</section>
+<section id="rotation-of-hamiltonian">
 <h2><span class="section-number">17.1.3. </span>Rotation of Hamiltonian<a class="headerlink" href="#rotation-of-hamiltonian" title="Permalink to this headline">¶</a></h2>
 <p>Given the vacuum basis Hamiltonian <span class="math notranslate nohighlight">\(H_v\)</span>, we can rotation it to flavor basis by using the rotation <span class="math notranslate nohighlight">\(R_{v2f}(\theta_v)\)</span></p>
 <div class="math notranslate nohighlight">
@@ -412,10 +413,10 @@ TeX: {
 <p class="admonition-title">Numerical Calculation of The Rotations</p>
 <p>To write clean code, it is better to define and test there rotations first.</p>
 </div>
-</div>
-<div class="section" id="examples-of-rotating-basis">
+</section>
+<section id="examples-of-rotating-basis">
 <h2><span class="section-number">17.1.4. </span>Examples of Rotating Basis<a class="headerlink" href="#examples-of-rotating-basis" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="rotate-from-vacuum-to-another-basis">
+<section id="rotate-from-vacuum-to-another-basis">
 <h3><span class="section-number">17.1.4.1. </span>Rotate From Vacuum to Another Basis<a class="headerlink" href="#rotate-from-vacuum-to-another-basis" title="Permalink to this headline">¶</a></h3>
 <p>In vacuum basis, Hamiltonian with matter interaction is</p>
 <div class="math notranslate nohighlight">
@@ -468,8 +469,8 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 <div class="math notranslate nohighlight">
 \[\begin{split}H_b &amp;= - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2} \sin 2\theta_v \begin{pmatrix} 0 &amp; e^{i 2\eta(x) x} \\ e^{ - i 2\eta(x) x} &amp; 0  \end{pmatrix} \\
 &amp; =  - \frac{\omega}{2} \sigma_3 + \frac{\lambda}{2}\sin 2\theta_v \cos ( 2\eta(x) x )\sigma_1 - \frac{\lambda}{2} \sin 2\theta_v \sin (2\eta(x) x) \sigma_2.\end{split}\]</div>
-</div>
-<div class="section" id="constant-matter-eigen-basis">
+</section>
+<section id="constant-matter-eigen-basis">
 <h3><span class="section-number">17.1.4.2. </span>Constant Matter Eigen Basis<a class="headerlink" href="#constant-matter-eigen-basis" title="Permalink to this headline">¶</a></h3>
 <p>For a Hamiltonian with matter interection,</p>
 <div class="math notranslate nohighlight">
@@ -498,12 +499,12 @@ e^{-i \eta(x) x} &amp; 0 \\  0 &amp; e^{i \eta(x) x}
 \[H_m = H_0 - i R_{f2m}^\dagger \frac{d}{dx} R_{f2m} + R_{f2m}^\dagger \lambda_1(x) R_{f2m}.\]</div>
 <p>In the case of discussion here, <span class="math notranslate nohighlight">\(\frac{d}{dx} R_{f2m}=0\)</span>.</p>
 </div>
-</div>
-</div>
-<div class="section" id="refs-notes">
+</section>
+</section>
+<section id="refs-notes">
 <h2><span class="section-number">17.1.5. </span>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>

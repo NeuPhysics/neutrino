@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>14.1. Stars as Neutrino Factories &#8212; Neutrino Notes</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootswatch-3.3.4/readable/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/jquery-1.11.0.min.js"></script>
     <script src="../_static/js/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
@@ -148,7 +149,7 @@ TeX: {
      href="../index.html">Chapters <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Table of Content</span></p>
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../preliminary/index.html">1. Preliminary</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preliminary/commonsense.html">1.1. Common Sense</a></li>
@@ -259,14 +260,14 @@ TeX: {
 <li class="toctree-l1"><a class="reference internal" href="../ref.html">18. References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../acknowledgement.html">19. Acknowledgement</a></li>
 </ul>
-<p class="caption"><span class="caption-text">WIP Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">WIP Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">1. WIP Neutrino Physics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1.1. Matter Stimulated Oscillation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">1.2. Collective</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">1.3. Halo Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">1.4. Gravity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">1.5. Group Meeting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../research-notes/index.html">WIP Neutrino Physics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/matter-stimulated/index.html">1. Matter Stimulated Oscillation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/collective/index.html">2. Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/halo/index.html">3. Halo Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/gravity/index.html">4. Gravity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research-notes/group-meeting/index.html">5. Group Meeting</a></li>
 </ul>
 </li>
 </ul>
@@ -342,10 +343,10 @@ TeX: {
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="stars-as-neutrino-factories">
+  <section id="stars-as-neutrino-factories">
 <h1><span class="section-number">14.1. </span>Stars as Neutrino Factories<a class="headerlink" href="#stars-as-neutrino-factories" title="Permalink to this headline">¶</a></h1>
 <p>Here we review the physics of solar neutrinos, with neutrino production, neutrino flavor mixing which is modified by matter interactions and thermal motion of nuclei, and finally the neutrino energy spectra of different nuclear reactions. A simple analysis of supernova neutrino spectra shows that neutrino spectra for supernova are not well understood.</p>
-<div class="section" id="neutrinos-in-astrophysics">
+<section id="neutrinos-in-astrophysics">
 <h2><span class="section-number">14.1.1. </span>Neutrinos in Astrophysics<a class="headerlink" href="#neutrinos-in-astrophysics" title="Permalink to this headline">¶</a></h2>
 <p>Neutrinos and anti-neutrinos are particles produced in many nuclear reactions such as beta decays,</p>
 <div class="math notranslate nohighlight">
@@ -353,15 +354,19 @@ TeX: {
 <p>In such reactions, charged current weak interaction plays a role which takes a down quark in neutron to a up quark while releasing electrons and anti-electron neutrino,</p>
 <div class="math notranslate nohighlight">
 \[n\to p + e^- + \bar \nu_e .\]</div>
-<div class="figure align-center" id="id16">
+<figure class="align-center" id="id16">
 <span id="fig-beta-negative-decay"></span><img alt="../_images/Beta_Negative_Decay.png" src="../_images/Beta_Negative_Decay.png" />
-<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Feynman diagram of beta decay. The charged current weak interaction boson in this case is a <span class="math notranslate nohighlight">\(W^-\)</span>. Credit: Joel Holdsworth, within public domain.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.1 </span><span class="caption-text">Feynman diagram of beta decay. The charged current weak interaction boson in this case is a <span class="math notranslate nohighlight">\(W^-\)</span>. Credit: Joel Holdsworth, within public domain.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>More generally, positron emission and electron capture are also neutrino related nuclear reactions which is explained in table <a class="reference internal" href="#table-neutrino-reactions"><span class="std std-ref">Neutrino related nuclear or leptonic reactions.</span></a>. In the context of astrophysics, (anti-)neutrinos also participate in nuclear reaction chains in stars, synthesis of heavy and rare elements and more.</p>
-<div class="figure align-center" id="id17">
+<figure class="align-center" id="id17">
 <span id="table-neutrino-reactions"></span><img alt="../_images/neutrino-related-reactions.png" src="../_images/neutrino-related-reactions.png" />
-<p class="caption"><span class="caption-number">Fig. 14.2 </span><span class="caption-text">Neutrino related nuclear or leptonic reactions.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.2 </span><span class="caption-text">Neutrino related nuclear or leptonic reactions.</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="toggle admonition">
 <p class="admonition-title">LaTeX Code for The Table</p>
 <div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[ht]
@@ -398,7 +403,7 @@ TeX: {
 </div>
 <p>Astrophysical neutrino sources such as cores of stars, AGN, Gamma-ray bursts, and supernovae, reveals a lot of information about the sources. Though neutrinos are are weakly interacting particles thus rendering them hard to detect, it is an important subject to theoretically inspect neutrino productions in astrophysical processes.</p>
 <p>One of the neutrino factories is the stellar core. Numerous nuclear reactions as well thermal neutrino production produce high number density neutrinos emissions. In this section, the nuclear reactions in stars are reviewed as well as the neutrino oscillation in the stars.</p>
-<div class="section" id="nuclear-reactions-in-sun-and-neutrino-flux">
+<section id="nuclear-reactions-in-sun-and-neutrino-flux">
 <h3><span class="section-number">14.1.1.1. </span>Nuclear Reactions in Sun and Neutrino Flux<a class="headerlink" href="#nuclear-reactions-in-sun-and-neutrino-flux" title="Permalink to this headline">¶</a></h3>
 <p>pp chain and CNO cycle are the most important nuclear reactions in a star. Through different stages of its life, a star experience different nuclear reactions. <a class="reference internal" href="#fig-pp-chain-branching"><span class="std std-numref">Fig. 14.3</span></a> shows the dominant energy source of solar mass stars. In order to calculate the neutrino spectrum we need the neutrino production rate in each reaction and the branching ratios. The processes that emits neutrinos are the red reactions in <a class="reference internal" href="#fig-pp-chain-branching"><span class="std std-numref">Fig. 14.3</span></a>, which explicitly are</p>
 <div class="math notranslate nohighlight">
@@ -408,10 +413,12 @@ TeX: {
 &amp;&amp;\qquad \text{0.384MeV for 10%} \\
 &amp;\mathrm{{}^8B \to {}^8Be^* +e^+ +\nu_e},  &amp; \mathrm{\leq 15 MeV}
 \end{align}\end{split}\]</div>
-<div class="figure align-center" id="id18">
+<figure class="align-center" id="id18">
 <span id="fig-pp-chain-branching"></span><img alt="../_images/pp-chain-branching.png" src="../_images/pp-chain-branching.png" />
-<p class="caption"><span class="caption-number">Fig. 14.3 </span><span class="caption-text">pp chain with branching ratio1</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.3 </span><span class="caption-text">pp chain with branching ratio1</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="toggle admonition">
 <p class="admonition-title">LaTeX Code for The Diagram</p>
 <div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span> <span class="nb">{</span>figure*<span class="nb">}</span><span class="c">%[!hbtp]</span>
@@ -443,10 +450,12 @@ TeX: {
 </pre></div>
 </div>
 </div>
-<div class="figure align-center" id="id19">
+<figure class="align-center" id="id19">
 <span id="fig-cno-cycle"></span><img alt="../_images/cno_cycle.png" src="../_images/cno_cycle.png" />
-<p class="caption"><span class="caption-number">Fig. 14.4 </span><span class="caption-text">CNO cycle illustration. From Adelberger 2011</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.4 </span><span class="caption-text">CNO cycle illustration. From Adelberger 2011</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Solar neutrinos are mostly produced in pp reaction, Be electron capture and B decay, which are called pp neutrinos, Be neutrinos and B neutrinos. Even without knowledge of the detailed reactions, the conservation of lepton numbers will lead to the overall neutrino production</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{4p+2e^- \to {}^4He + 2\nu_e },\]</div>
@@ -471,11 +480,11 @@ TeX: {
 <p>which has a branching ratio of <span class="math notranslate nohighlight">\(2\times 10^{-5}\%\)</span>. As a comparison, the <span class="math notranslate nohighlight">\(\mathrm{{}^3He + {}^3He}\)</span> has a branching ratio 85% and <span class="math notranslate nohighlight">\(\mathrm{{}^3He + {}^4He}\)</span> has a branching ratio 15%.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="neutrino-oscillation">
+</section>
+<section id="neutrino-oscillation">
 <h3><span class="section-number">14.1.1.2. </span>Neutrino Oscillation<a class="headerlink" href="#neutrino-oscillation" title="Permalink to this headline">¶</a></h3>
 <p>Neutrinos are special particles that their flavor eigenstates are not the propagation eigenstates, which leads to neutrino flavor oscillations. Since neutrinos with different flavor interact with matter with different cross section, we need to investigate the neutrino flavor carefully. Even though only electron flavor neutrinos are produced, what we detect on Earth is different in flavor, which depends on two phenomena, neutrino vacuum oscillation and Mikheyev–Smirnov–Wolfenstein effect.</p>
-<div class="section" id="vacuum-oscillation">
+<section id="vacuum-oscillation">
 <h4><span class="section-number">14.1.1.2.1. </span>Vacuum Oscillation<a class="headerlink" href="#vacuum-oscillation" title="Permalink to this headline">¶</a></h4>
 <p>To understand the neutrino vacuum oscillation phenomenon, we use two flavor neutrino as an example. In vacuum, propagation states are mass eigenstates, which is different from flavor eigenstates. The wave function in flavor eigenstates basis is related to wave function in mass eigenstates through an unitary matrix <span class="math notranslate nohighlight">\(\mathbf U\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -541,8 +550,8 @@ c_2(0) e^{ -i\Delta m^2 t }    \end{pmatrix} .\end{split}\]</div>
 <p class="admonition-title">Oscillation Length</p>
 <p>Need a figure about the oscillation lengh here.</p>
 </div>
-</div>
-<div class="section" id="mikheyev-smirnov-wolfenstein-effect">
+</section>
+<section id="mikheyev-smirnov-wolfenstein-effect">
 <h4><span class="section-number">14.1.1.2.2. </span>Mikheyev - Smirnov - Wolfenstein Effect<a class="headerlink" href="#mikheyev-smirnov-wolfenstein-effect" title="Permalink to this headline">¶</a></h4>
 <p>The nature of neutrino oscillation means that flavor conversion occurs as long as their propagation eigenstates are not flavor eigenstates. We expect neutrino propagation eigenstates in matter are different from flavor states in general. <a class="reference internal" href="#wolf78" id="id1"><span>[wolf78]</span></a> Using the fact that neutral current interactions between different flavor neutrinos and matter is independent of flavor, we only include the charged current, which will produce a effective potential for electron flavor. In flavor basis, the effective potential is</p>
 <div class="math notranslate nohighlight">
@@ -570,42 +579,50 @@ c_2(0) e^{ -i\Delta m^2 t }    \end{pmatrix} .\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_1 &amp;= \frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }\\
 E_2 &amp;= -\frac{\omega}{2}\sqrt{ \hat\lambda +1 -  2\hat\lambda \cos 2\theta_v }.\end{split}\]</div>
-<div class="figure align-center" id="id20">
+<figure class="align-center" id="id20">
 <span id="fig-mswenergylevels"></span><img alt="../_images/mswEnergyLevels.jpg" src="../_images/mswEnergyLevels.jpg" />
-<p class="caption"><span class="caption-number">Fig. 14.5 </span><span class="caption-text">The two energy levels in matter effect. The energy has unit <span class="math notranslate nohighlight">\(\omega/2\)</span> while the potential has unit <span class="math notranslate nohighlight">\(\omega\)</span>.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.5 </span><span class="caption-text">The two energy levels in matter effect. The energy has unit <span class="math notranslate nohighlight">\(\omega/2\)</span> while the potential has unit <span class="math notranslate nohighlight">\(\omega\)</span>.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="#fig-mswenergylevels"><span class="std std-numref">Fig. 14.5</span></a> shows the two energy levels. For very high matter density, which interact with electron neutrinos more through charged current, electron flavor is composed almost with heavy propagation eigenstate. However, as the matter density becomes lower, the heavy propagation state will be gradually transformed to the other flavors since electron flavor in vacuum is composed mostly the light mass state. The resonance, which is the closest point of energy levels, happens at density <span class="math notranslate nohighlight">\(n_e = 2\omega \cos(2\theta_v)/\sqrt{2}G_F\)</span> which depends on <span class="math notranslate nohighlight">\(\omega = \Delta m^2/2E\)</span>. Neutrinos with different energies have different resonance, which will significantly reshape the neutrino spectra for different flavors. More explicitly, the conversion of flavor is shown in
 <a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> which is taken from Smirnov. <a class="reference internal" href="#smirnov2003" id="id2"><span>[Smirnov2003]</span></a> Since we are discussion adiabatic evolution, the probability of each energy eigenstates doesn’t change, as the boxes of each energy eigenstates shown in <a class="reference internal" href="#fig-msw-and-density"><span class="std std-numref">Fig. 14.6</span></a> doesn’t change in size. The extreme dense case shows that matter converts a lot of electron flavor to muon flavor.</p>
-<div class="figure align-center" id="id21">
+<figure class="align-center" id="id21">
 <span id="fig-msw-and-density"></span><img alt="../_images/msw_and_density.png" src="../_images/msw_and_density.png" />
-<p class="caption"><span class="caption-number">Fig. 14.6 </span><span class="caption-text">Flavor mixing of large vacuum mixing angle from a dense region to vacuum. <span class="math notranslate nohighlight">\(n_e^R\)</span> is the resonance density. Yellow bar is the resonance point. In each panel, the upper color bar is for heavier eigen-energy while the lower color bar is for the lower eigen-energy. The first panel is the case of neutrino production in a region that has much larger density than resonance density. Neutrinos are produced as electron flavor in the dense region. Through adiabatic MSW effect, the flavor converts mostly the other. The other two panels shows the case of lower matter density. Figure taken from Smirnov 2003.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.6 </span><span class="caption-text">Flavor mixing of large vacuum mixing angle from a dense region to vacuum. <span class="math notranslate nohighlight">\(n_e^R\)</span> is the resonance density. Yellow bar is the resonance point. In each panel, the upper color bar is for heavier eigen-energy while the lower color bar is for the lower eigen-energy. The first panel is the case of neutrino production in a region that has much larger density than resonance density. Neutrinos are produced as electron flavor in the dense region. Through adiabatic MSW effect, the flavor converts mostly the other. The other two panels shows the case of lower matter density. Figure taken from Smirnov 2003.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In summary, even though only electron flavor neutrinos are produced in the core of a solar mass star, the neutrino flavor conversion to the other flavors is enhanced by matter interaction, in addition to the vacuum oscillation. However, the actual neutrino flavor conversion is much more complicated than just MSW effect and almost impossible to calculate without knowing the very exact matter profile of the Sun even with the time-dependent small perturbations to the density. As an approximation, MSW transition is good enough for the solar neutrinos. <a class="reference internal" href="#lopes2013a" id="id3"><span>[Lopes2013a]</span></a> In the case of the sun, the flavor conversion is calculated by Ilídio Lopes and shown in <a class="reference internal" href="#fig-solar-neutrino-flavor-conversion"><span class="std std-numref">Fig. 14.7</span></a>. <a class="reference internal" href="#lopes2013" id="id4"><span>[Lopes2013]</span></a></p>
-<div class="figure align-center" id="id22">
+<figure class="align-center" id="id22">
 <span id="fig-solar-neutrino-flavor-conversion"></span><img alt="../_images/solar_neutrino_flavor_conversion.png" src="../_images/solar_neutrino_flavor_conversion.png" />
-<p class="caption"><span class="caption-number">Fig. 14.7 </span><span class="caption-text">Neutrino flavor conversion of the Sun. Color meaning refer to <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>. <a class="reference internal" href="#lopes2013" id="id5"><span>[Lopes2013]</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="solar-neutrino-spectrum">
+<figcaption>
+<p><span class="caption-number">Fig. 14.7 </span><span class="caption-text">Neutrino flavor conversion of the Sun. Color meaning refer to <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>. <a class="reference internal" href="#lopes2013" id="id5"><span>[Lopes2013]</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="solar-neutrino-spectrum">
 <h2><span class="section-number">14.1.2. </span>Solar Neutrino Spectrum<a class="headerlink" href="#solar-neutrino-spectrum" title="Permalink to this headline">¶</a></h2>
 <p>The simplest model for the total neutrino flux generated due to solar nuclear reaction is simple linear superposition of solar neutrino flux from each reactions, since solar neutrinos are not dense enough to have a significant self-interaction. For the total neutrino flux F,</p>
 <div class="math notranslate nohighlight">
 \[F(E) = \sum_i F_\alpha (E),\]</div>
 <p>where <span class="math notranslate nohighlight">\({}_{\alpha}\)</span> stands for flavor and E is the energy of neutrinos. To generate the final solar neutrino spectra, the neutrino energy for each reaction should be examined.</p>
-</div>
-<div class="section" id="neutrino-spectrum-with-thermal-and-relativistic-modifications">
+</section>
+<section id="neutrino-spectrum-with-thermal-and-relativistic-modifications">
 <h2><span class="section-number">14.1.3. </span>Neutrino Spectrum with Thermal and Relativistic Modifications<a class="headerlink" href="#neutrino-spectrum-with-thermal-and-relativistic-modifications" title="Permalink to this headline">¶</a></h2>
 <p>For each reaction, the spectral shape of solar neutrinos are mostly spectrum inferred from lab experiments, with modifications of thermal motion and slight modifications from relativistic effect. <a class="reference internal" href="#bahcall1991" id="id6"><span>[Bahcall1991]</span></a></p>
 <p>In the lab experiments, we only have low energy nuclei and less dens environment, while in the solar core, the temperature is high and the density is large. The first question to ask is whether the neutrino production is modified by a thermal equilibrium environment or it is too fast that no equilibrium can not be maintained by the electromagnetic scattering. The answer is that the neutrino production is in equilibrium which ensures the equilibrium statistics of the neutrino spectra. <a class="reference internal" href="#bahcall1991" id="id7"><span>[Bahcall1991]</span></a> The two quantities that is related to this problem is the characteristic time of neutrino production and the characteristic electromagnetic scattering. The time scale of electromagnetic scattering is <a class="reference internal" href="#bahcall1991" id="id8"><span>[Bahcall1991]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\tau_{EM} \sim 10^{-12} \mathrm{s} \left( \frac{E}{20\mathrm{keV}} \right)^{3/2}\left( \frac{150 \mathrm{g \cdot cm^{-3}} }{\rho} \right),\]</div>
 <p>where E is the energy of ions which is in a bath of p plasma and <span class="math notranslate nohighlight">\(\rho\)</span> is the density of plasma. For the sun, this is of order <span class="math notranslate nohighlight">\(10^{-12}\mathrm{s}\)</span>. Meanwhile, the time scale of neutrino production <span class="math notranslate nohighlight">\(\tau_{\nu}\)</span> is shown in table <a class="reference internal" href="#tab-neutrino-production-characteristic-time"><span class="std std-ref">Neutrino production characteristic time. Reproduced from J. N. Bahcall, “Shapes of solar-neutrino spectra: Unconventional tests of the standard electroweak model,” (1991).</span></a>.</p>
-<div class="figure align-center" id="id23">
+<figure class="align-center" id="id23">
 <span id="tab-neutrino-production-characteristic-time"></span><img alt="../_images/neutrino_production_characteristic_time.png" src="../_images/neutrino_production_characteristic_time.png" />
-<p class="caption"><span class="caption-number">Fig. 14.8 </span><span class="caption-text">Neutrino production characteristic time. Reproduced from J. N. Bahcall, “Shapes of solar-neutrino spectra: Unconventional tests of the standard electroweak model,” (1991).</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.8 </span><span class="caption-text">Neutrino production characteristic time. Reproduced from J. N. Bahcall, “Shapes of solar-neutrino spectra: Unconventional tests of the standard electroweak model,” (1991).</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="toggle admonition">
 <p class="admonition-title">LaTeX Code for The Table</p>
 <div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[ht]
@@ -646,29 +663,37 @@ pp  <span class="nb">&amp;</span> :math:`10<span class="nb">^{</span>10<span cla
 \[F(q) = F_{lab}(q) (1 + \int_{\infty}^{v_m} f(v_z) dv_z).\]</div>
 <p>Thus the correction depends on the energy of neutrinos. The correction only plays a role when the energy of neutrino is close to endpoint energy of the beta decay. The energy of the neutrinos will be blue-shifted beyond the beta decay spectrum endpoint in lab experiments. However, the correction is as small as <span class="math notranslate nohighlight">\(10^{-6}\)</span> of the lab spectrum in the case of solar core. <a class="reference internal" href="#bahcall1991" id="id10"><span>[Bahcall1991]</span></a></p>
 <p>The other correction is due to the gravitational redshift. Combining the thermal correction and gravitational redshift, we get the neutrino spectrum that should be observed on the Earth. As an example, John Bahcall calculated the pp reaction spectrum, which is given in <a class="reference internal" href="#fig-bahcall-pp-nu-spectrum"><span class="std std-numref">Fig. 14.9</span></a>.</p>
-<div class="figure align-center" id="id24">
+<figure class="align-center" id="id24">
 <span id="fig-bahcall-pp-nu-spectrum"></span><img alt="../_images/bahcall_pp_nu_spectrum.png" src="../_images/bahcall_pp_nu_spectrum.png" />
-<p class="caption"><span class="caption-number">Fig. 14.9 </span><span class="caption-text">Comparison of pp reaction neutrino spectrum in the lab experiments and predicted solar spectrum. From Bahcall 1991. The correction is very small. The picture for this phenomenon is that the endpoint energy is the nuclear reaction energy released plus the thermal energy.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="solar-neutrino-spectra">
+<figcaption>
+<p><span class="caption-number">Fig. 14.9 </span><span class="caption-text">Comparison of pp reaction neutrino spectrum in the lab experiments and predicted solar spectrum. From Bahcall 1991. The correction is very small. The picture for this phenomenon is that the endpoint energy is the nuclear reaction energy released plus the thermal energy.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="solar-neutrino-spectra">
 <h3><span class="section-number">14.1.3.1. </span>Solar Neutrino Spectra<a class="headerlink" href="#solar-neutrino-spectra" title="Permalink to this headline">¶</a></h3>
 <p>This overall spectra are the summation of neutrinos produced at different radius where the temperature and density are different. One of them is the fact that nuclear reactions happen at different rates when the temperature changes. Adelberger et al calculated the stellar energy contribution of pp chain and CN cycle at different temperatures. <a class="reference internal" href="#adelberger2011" id="id11"><span>[Adelberger2011]</span></a></p>
-<div class="figure align-center" id="id25">
+<figure class="align-center" id="id25">
 <span id="fig-pp-chain-vs-cno"></span><img alt="../_images/pp_chain_vs_cno.png" src="../_images/pp_chain_vs_cno.png" />
-<p class="caption"><span class="caption-number">Fig. 14.10 </span><span class="caption-text">The contribution to the luminosity by pp chain and CNO cycle as a function of temperature. From Adelberger 2011. The black dot is at the solar core temperature. <span class="math notranslate nohighlight">\(L_{\odot}\)</span> is solar luminosity. In high mass stars where the temperature is high, CN cycle is the dominant source of energy. Thus for a large mass star we expect the neutrinos from CNO cycle would have a larger flux with respect to neutrinos from pp chain.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.10 </span><span class="caption-text">The contribution to the luminosity by pp chain and CNO cycle as a function of temperature. From Adelberger 2011. The black dot is at the solar core temperature. <span class="math notranslate nohighlight">\(L_{\odot}\)</span> is solar luminosity. In high mass stars where the temperature is high, CN cycle is the dominant source of energy. Thus for a large mass star we expect the neutrinos from CNO cycle would have a larger flux with respect to neutrinos from pp chain.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Standard solar model produces a complete set of neutrino spectra from different reactions, which is shown in <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>. The total neutrino spectrum we expect from the sun is the superposition of all the neutrino spectra from different reactions. From <a class="reference internal" href="#fig-pp-chain-vs-cno"><span class="std std-numref">Fig. 14.10</span></a> we expect the pp chain neutrino flux is <span class="math notranslate nohighlight">\(2\sim 3\)</span> orders of magnitude larger than CNO cycle neutrino flux, which is checked in <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>. Meanwhile, another interesting question to look into is the neutrino production at different radius. Since nuclear reaction rates depend on temperature and density, neutrino flux generated at different radius inside the Sun is very different. A calculation done by Ilídio Lopes shows that most neutrinos are produced at 0.05 radius of the Sun, which is in <a class="reference internal" href="#fig-solar-neutrino-production-radius"><span class="std std-numref">Fig. 14.12</span></a>. <a class="reference internal" href="#lopes2013" id="id12"><span>[Lopes2013]</span></a></p>
-<div class="figure align-center" id="id26">
+<figure class="align-center" id="id26">
 <span id="fig-solar-neutrino-spectra-flavor-conversion"></span><img alt="../_images/solar_neutrino_spectra_flavor_conversion.jpg" src="../_images/solar_neutrino_spectra_flavor_conversion.jpg" />
-<p class="caption"><span class="caption-number">Fig. 14.11 </span><span class="caption-text">Solar neutrino spectra with flavor conversion. Solid lines are spectra without flavor conversion while the dashed lines are spectra with flavor conversion. The difference comes from the neutrino mixing. Figure taken from Ilidio Lopes. From I. Lopes and S. Turck-Chieze 2013, I. Lopes 2013. The neutrino flavor conversion is calculated using MSW transition.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-center" id="id27">
+<figcaption>
+<p><span class="caption-number">Fig. 14.11 </span><span class="caption-text">Solar neutrino spectra with flavor conversion. Solid lines are spectra without flavor conversion while the dashed lines are spectra with flavor conversion. The difference comes from the neutrino mixing. Figure taken from Ilidio Lopes. From I. Lopes and S. Turck-Chieze 2013, I. Lopes 2013. The neutrino flavor conversion is calculated using MSW transition.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id27">
 <span id="fig-solar-neutrino-production-radius"></span><img alt="../_images/solar_neutrino_production_radius.png" src="../_images/solar_neutrino_production_radius.png" />
-<p class="caption"><span class="caption-number">Fig. 14.12 </span><span class="caption-text">Solar neutrino flux at different radius. Color meaning refer to <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="supernova-neutrinos-and-conclusion">
+<figcaption>
+<p><span class="caption-number">Fig. 14.12 </span><span class="caption-text">Solar neutrino flux at different radius. Color meaning refer to <a class="reference internal" href="#fig-solar-neutrino-spectra-flavor-conversion"><span class="std std-numref">Fig. 14.11</span></a>.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="supernova-neutrinos-and-conclusion">
 <h2><span class="section-number">14.1.4. </span>Supernova Neutrinos and Conclusion<a class="headerlink" href="#supernova-neutrinos-and-conclusion" title="Permalink to this headline">¶</a></h2>
 <p>The solar neutrino spectra is not very different from lab experiments since solar neutrino flux is not high enough to interact with solar medium significantly. However, in a supernova explosion, <span class="math notranslate nohighlight">\(10^{58}\)</span> neutrinos are released from the proto-neutron star, which is of radius <span class="math notranslate nohighlight">\(10\mathrm{km}\)</span>, in a few seconds. The huge number density of neutrinos and large density of matter have a huge effect on the neutrino spectra, especially for different flavors since matter has a huge effect on flavor conversion as we have already seen in MSW effect. The matter effect will be much more than MSW since the violent matter motion. In addition, neutrino neutrino interaction will be efficient because of the high neutrino number density.</p>
 <p>Apart from the emission of neutrinos from nuclear reactions of electron capture and positron emission in the solar interior, supernova environment also gives rise to Bremsstrahlung pair neutrino production, electron-positron neutrino pair production, which brings all three flavors and also anti-neutrinos into the spectra. However, even the with the presence of intensive interaction between neutrinos and the leptons and hadrons, which thermalize the neutrinos in the supernova core, the neutrino spectrum escaping from the supernova core is not completely Fermi-Dirac spectrum. Nonetheless, it is possible to parametrize it using nominal Fermi-Dirac distribution, <a class="reference internal" href="#raffelt2004" id="id13"><span>[raffelt2004]</span></a></p>
@@ -678,13 +703,15 @@ pp  <span class="nb">&amp;</span> :math:`10<span class="nb">^{</span>10<span cla
 <div class="math notranslate nohighlight">
 \[f(E)\propto E^\alpha \exp\left( -(\alpha+1)\frac{E}{\langle E\rangle} \right),\]</div>
 <p>where <span class="math notranslate nohighlight">\(\langle E\rangle\)</span> is the average energy, or the first moment of energy. The values from Monte Carlo simulations falls into the range <span class="math notranslate nohighlight">\(\alpha = 2.5\sim 5\)</span>, which clearly shows the spectra are pinched as explained in <a class="reference internal" href="#fig-neutrino-spectra-sn-simulations"><span class="std std-numref">Fig. 14.13</span></a>. Detection of deviation from nominal Fermi-Dirac distribution will show evidence of core-collapse information.</p>
-<div class="figure align-center" id="id28">
+<figure class="align-center" id="id28">
 <span id="fig-neutrino-spectra-sn-simulations"></span><img alt="../_images/neutrino_spectra_sn_simulations.png" src="../_images/neutrino_spectra_sn_simulations.png" />
-<p class="caption"><span class="caption-number">Fig. 14.13 </span><span class="caption-text">Alpha fit and nominal Fermi-Dirac fit comparison. The top panel is alpha fit results while the middle panel is from nominal Fermi-Dirac distribution fit. The broadest curve are for <span class="math notranslate nohighlight">\(\alpha=2\)</span>. The width <span class="math notranslate nohighlight">\(w=\sqrt{\langle E^2 \rangle - \langle E\rangle^2}\)</span> decrease 10% for each curve. The bottom panel is the ratio of the two fit functions.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 14.13 </span><span class="caption-text">Alpha fit and nominal Fermi-Dirac fit comparison. The top panel is alpha fit results while the middle panel is from nominal Fermi-Dirac distribution fit. The broadest curve are for <span class="math notranslate nohighlight">\(\alpha=2\)</span>. The width <span class="math notranslate nohighlight">\(w=\sqrt{\langle E^2 \rangle - \langle E\rangle^2}\)</span> decrease 10% for each curve. The bottom panel is the ratio of the two fit functions.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In this review, we presented the solar neutrino production, thermal modification, gravitational effect and flavor conversion, which leads to the theoretical predicted solar neutrino spectra for each reaction. Even though we understand solar neutrino well, overall the neutrino spectra of supernova are not so to our complete knowledge. Phenomena such as spectral split due to neutrino-neutrino interaction and matter effect reshape the spectra significantly. Future supernova neutrino observation data is needed to a better understanding of the supernova physics.</p>
-</div>
-<div class="section" id="refs-notes">
+</section>
+<section id="refs-notes">
 <h2><span class="section-number">14.1.5. </span>Refs &amp; Notes<a class="headerlink" href="#refs-notes" title="Permalink to this headline">¶</a></h2>
 <dl class="citation">
 <dt class="label" id="smirnov2003"><span class="brackets"><a class="fn-backref" href="#id2">Smirnov2003</a></span></dt>
@@ -740,8 +767,8 @@ pp  <span class="nb">&amp;</span> :math:`10<span class="nb">^{</span>10<span cla
 <dd><p>0M. T. Keil, Supernova Neutrino Spectra and Applications to Flavor Oscillations, Ph.D. thesis (2003), arXiv:0308228 [astro-ph].</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
